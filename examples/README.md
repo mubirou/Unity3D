@@ -6,7 +6,7 @@
 
 |No.|タイトル|内容|
 |:--:|:--|:--|
-|001| [テキスト表示](#テキスト表示)|Text|
+|001| [テキスト表示](#テキスト表示)|UIのTextを使った時間表示|
 |002|[ボールのバウンド](#ボールのバウンド)|XXXXXXXXXXXXXXXXXXXXXX|
 |003|[キーで動かす](#キーで動かす)|XXXXXXXXXXXXXXXXXXXXXX|
 |004|[マウスボタンで回転](#マウスボタンで回転)|XXXXXXXXXXXXXXXXXXXXXX|
