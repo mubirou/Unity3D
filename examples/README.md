@@ -83,7 +83,7 @@ public class TextWatchScript : MonoBehaviour {
 1. [Hierarchy] ウィンドウの [TextWatch] を選択した状態で、[Inspector] ウィンドウを確認。
 1. 上記で作成した [TextWatchScript] を [Add Component] エリアにドラッグ＆ドロップ。
     * 今回は、Text 自身にスクリプトを組み込み（紐付け）ました。
-1. [Hierarchy]-[TextWatch]-[Inspector]-[TextWatchScript(Script)] の [Text] の ⦿ をクリックし、[None(Text)] を [TextWatch] に変更します。
+1. [Hierarchy]-[TextWatch]-[Inspector]-[TextWatchScript(Script)] の [Text] の ⦿ をクリックし、[None(Text)] を [TextWatch] に変更します（分かり難く見落としがちなので注意）。
 
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
