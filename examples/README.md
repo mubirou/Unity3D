@@ -71,7 +71,7 @@ using UnityEngine.UI; //Textに必要（追加）
 using System; //DateTimeに必要（追加）
 
 public class TextWatchScript : MonoBehaviour {
-	public Text _text; //このC#ファイルに紐付けたTextを参照（追加）←特殊な考え方
+	public Text _text; //このC#ファイルを紐付けたTextを参照（追加）←特殊な考え方
 
 	void Update () {
 		_text.text = DateTime.Now.ToString(); //追加
