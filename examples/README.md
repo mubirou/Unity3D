@@ -6,7 +6,7 @@
 
 |No.|タイトル|内容|
 |:--:|:--|:--|
-|001| [テキスト表示](#テキスト表示)|XXXXXXXXXXXXXXXXXXXXXX|
+|001| [テキスト表示](#テキスト表示)|Text|
 |002|[ボールのバウンド](#ボールのバウンド)|XXXXXXXXXXXXXXXXXXXXXX|
 |003|[キーで動かす](#キーで動かす)|XXXXXXXXXXXXXXXXXXXXXX|
 |004|[マウスボタンで回転](#マウスボタンで回転)|XXXXXXXXXXXXXXXXXXXXXX|
@@ -49,33 +49,49 @@
 # <b>テキスト表示</b>
 
 ### Textオブジェクトの作成
-1. XXXXX
-1. XXXXX
-    * XXXXX
-1. XXXXX
-1. XXXXX
-* XXXXX
+1. [GameObject]-[UI]-[Text] を選択。
+1. [Hierarchy] ウィンドウに追加された [Canvas] 階層化の [Text] をダブルクリックして確認。
+    * [Canvas] は、[Text] 等のGUIの土台となるオブジェクトです。
+1. [Scene] ウィンドウ上に "New Text" という文字が表示されているのが確認できるはずです。
+1. [Inspector] ウィンドウで、名前を "Text" から "TextWatch" に変更。
+* 時どき [File]-[Save Scene] でシーンを保存しておきましょう。
 
 ### C#ファイルの作成
-1. XXXXX
-1. XXXXX
-    * XXXXX
+1. [Assets]-[Create]-[C# Script] を選択。
+1. 名前を "NewBehaviourScript" から "TextWatchScript" に変更。
+    * 同時に (プロジェクト名)/Assets/TextWatchScript.cs が生成されます。
 
 ### コードの記述
+1. VSCode等のエディタで "TextWatchScript.cs" を開きます。
+1. 次のように書き換えて保存。
 ```
-//XXX.cs
+//TextWatchScript.cs
+using UnityEngine;
+using UnityEngine.UI; //Textに必要（追加）
+using System; //DateTimeに必要（追加）
+
+public class TextWatchScript : MonoBehaviour {
+	public Text _text; //このC#ファイルに紐付けたTextを参照（追加）←特殊な考え方
+
+	void Update () {
+		_text.text = DateTime.Now.ToString(); //追加
+	}
+}
 ```
 
 ### オブジェクトとC#の紐付け
-1. XXXXX
-1. XXXXX
-    * XXXXX
-1. XXXXX
-1. XXXXX
+1. [Hierarchy] ウィンドウの [TextWatch] を選択した状態で、[Inspector] ウィンドウを確認。
+1. 上記で作成した [TextWatchScript] を [Add Component] エリアにドラッグ＆ドロップ。
+    * 今回は、Text 自身にスクリプトを組み込み（紐付け）ました。
+1. [Hierarchy]-[TextWatch]-[Inspector]-[TextWatchScript(Script)] の [Text] の ⦿ をクリックし、[None(Text)] を [TextWatch] に変更します。
+
+### 実行
+1. [再生] ボタンまたは [Edit]-[Play] を選択。
+1. [Game] ウィンドウ上に "2018/03/29 9:13:57" 等と表示されれば成功！
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
-作成日：2018年0X月XX日
+作成日：2018年03月29日
 
 
 <a name="ボールのバウンド"></a>
