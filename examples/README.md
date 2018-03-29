@@ -46,7 +46,7 @@
 ***
 
 <a name="テキスト表示"></a>
-# <b>テキスト表示</b>
+# <b>001 テキスト表示</b>
 
 ### Textオブジェクトの作成
 1. [GameObject]-[UI]-[Text] を選択。
@@ -95,7 +95,7 @@ public class TextWatchScript : MonoBehaviour {
 
 
 <a name="ボールのバウンド"></a>
-# <b>ボールのバウンド</b>
+# <b>002 ボールのバウンド</b>
 
 ### XXXXXXX
 1. XXXXX
