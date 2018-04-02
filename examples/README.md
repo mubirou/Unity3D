@@ -200,6 +200,7 @@ public class JumpBall : MonoBehaviour { //JumpBallという名前は適切では
 	}
 }
 ```
+![001](https://takashinishimura.github.io/Unity/examples/jpg/003.jpg)
 
 ### GetKey と GetKeyDown / GetKeyUp の違い
 ```
