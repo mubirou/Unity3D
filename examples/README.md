@@ -8,7 +8,7 @@
 |:--:|:--|:--|
 |001| [テキスト表示](#テキスト表示)|UIのTextを使った時間表示|
 |002|[ボールのバウンド](#ボールのバウンド)|バウンドし続けるボール|
-|003|[キーで動かす](#キーで動かす)|XXXXXXXXXXXXXXXXXXXXXX|
+|003|[キーで動かす](#キーで動かす)|キーボードのキーでボールを操作|
 |004|[マウスボタンで回転](#マウスボタンで回転)|XXXXXXXXXXXXXXXXXXXXXX|
 |005|[追跡するカメラ](#追跡するカメラ)|XXXXXXXXXXXXXXXXXXXXXX|
 |006|[物理エンジンで動かす](#物理エンジンで動かす譲)|XXXXXXXXXXXXXXXXXXXXXX|
@@ -166,3 +166,56 @@ public class JumpBall : MonoBehaviour {
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
 作成日：2018年04月02日
+
+
+<a name="キーで動かす"></a>
+# <b>003 キーで動かす</b>
+
+### C#の記述
+1. [ボールのバウンド](#ボールのバウンド)のJumpBall.csを書き換えます。
+1. 次のように書き換えて保存。
+```
+//JumpBall.cs
+using UnityEngine;
+
+public class JumpBall : MonoBehaviour { //JumpBallという名前は適切ではないですが…
+	private GameObject _ball; //ターゲットのGameObjectの参照
+
+	void Start () {
+		_ball = GameObject.Find("Ball001"); //シーンの中から任意のGameObjectを探す
+	}
+
+	void Update () {
+		if (Input.GetKey(KeyCode.UpArrow)) { //↑キーを押している間…
+			_ball.transform.Translate(transform.forward); //○.Translate(0,0,1)と同じ
+		} else if (Input.GetKey(KeyCode.DownArrow)) { //↓キーを押している間…
+			_ball.transform.Translate(-transform.forward); //○.Translate(0,0,-1)と同じ
+		} else if (Input.GetKey(KeyCode.RightArrow)) { //→キーを押している間…
+			_ball.transform.Translate(transform.right); //○.Translate(1,0,0)と同じ
+		} else if (Input.GetKey(KeyCode.LeftArrow)) { //←キーを押している間…
+			_ball.transform.Translate(-transform.right); //○.Translate(-1,0,0)と同じ
+		} else if (Input.GetKey(KeyCode.Space)) { //Spaceキーを押している間…
+			_ball.transform.Translate(transform.up); //○.Translate(0,1,0)と同じ（上昇）
+		}
+	}
+}
+```
+
+### GetKey と GetKeyDown / GetKeyUp の違い
+```
+void Update () {
+	//if (Input.GetKey(KeyCode.RightArrow)) { //→キーを押している間…
+	if (Input.GetKeyDown(KeyCode.RightArrow)) { //→キーを押す度に…
+	//if (Input.GetKeyDown("a")) { //←…KeyCodeを使わない方法もあります
+		_ball.transform.Translate(transform.right);
+	}
+}
+```
+
+### 主な KeyCode
+KeyCode.A（Aキー）、KeyCode.UpArrow（↑キー）、KeyCode.RightArrow（→キー）
+KeyCode.Space（スペースキー）、KeyCode.Return（Enterキー） など
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月03日
