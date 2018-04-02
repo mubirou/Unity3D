@@ -53,24 +53,24 @@
 1. [Hierarchy] ウィンドウに追加された [Canvas] 階層化の [Text] をダブルクリックして確認。
     * [Canvas] は、[Text] 等のGUIの土台となるオブジェクトです。
 1. [Scene] ウィンドウ上に "New Text" という文字が表示されているのが確認できるはずです。
-1. [Inspector] ウィンドウで、名前を "Text" から "TextWatch" に変更。
+1. [Inspector] ウィンドウで、名前を "Text" から "Text001" に変更。
 * 時どき [File]-[Save Scene] でシーンを保存しておきましょう。
 
 ### C#ファイルの作成
 1. [Assets]-[Create]-[C# Script] を選択。
-1. 名前を "NewBehaviourScript" から "TextWatchScript" に変更。
-    * 同時に (プロジェクト名)/Assets/TextWatchScript.cs が生成されます。
+1. 名前を "NewBehaviourScript" から "Text001Script" に変更。
+    * 同時に (プロジェクト名)/Assets/Text001Script.cs が生成されます。
 
 ### コードの記述
-1. VSCode等のエディタで "TextWatchScript.cs" を開きます。
+1. VSCode等のエディタで "Text001Script.cs" を開きます。
 1. 次のように書き換えて保存。
 ```
-//TextWatchScript.cs
+//Text001Script.cs
 using UnityEngine;
 using UnityEngine.UI; //Textに必要（追加）
 using System; //DateTimeに必要（追加）
 
-public class TextWatchScript : MonoBehaviour {
+public class Text001Script : MonoBehaviour {
 	public Text _text; //このC#ファイルを紐付けたTextを参照（追加）←特殊な考え方
 
 	void Update () {
@@ -80,19 +80,20 @@ public class TextWatchScript : MonoBehaviour {
 ```
 
 ### オブジェクトとC#の紐付け
-1. [Hierarchy] ウィンドウの [TextWatch] を選択した状態で、[Inspector] ウィンドウを確認。
-1. 上記で作成した [TextWatchScript] を [Add Component] エリアにドラッグ＆ドロップ。
+1. [Hierarchy] ウィンドウの [Text001] を選択した状態で、[Inspector] ウィンドウを確認。
+1. 上記で作成した [Text001Script] を [Add Component] エリアにドラッグ＆ドロップ。
     * 今回は、Text 自身にスクリプトを組み込み（紐付け）ました。
-1. [Hierarchy]-[TextWatch]-[Inspector]-[TextWatchScript(Script)] の [Text] の ⦿ をクリックし、[None(Text)] を [TextWatch] に変更します（分かり難く見落としがちなので注意）。
+1. [Hierarchy]-[Text001]-[Inspector]-[Text001Script(Script)] の [Text] の ⦿ をクリックし、[None(Text)] を [Text001] に変更します（分かり難く見落としがちなので注意）。
 
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
-1. [Game] ウィンドウ上に "2018/03/29 9:13:57" 等と表示されれば成功！  
+1. [Game] ウィンドウ上に "2018/04/02 8:56:35" 等と表示されれば成功！  
 ![001](https://takashinishimura.github.io/Unity/examples/jpg/001.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
-作成日：2018年03月29日
+作成日：2018年03月29日  
+更新日：2018年04月02日
 
 
 <a name="ボールのバウンド"></a>
