@@ -61,7 +61,7 @@
 1. 名前を "NewBehaviourScript" から "Text001Script" に変更。
     * 同時に (プロジェクト名)/Assets/Text001Script.cs が生成されます。
 
-### コードの記述
+### C#の記述
 1. VSCode等のエディタで "Text001Script.cs" を開きます。
 1. 次のように書き換えて保存。
 ```
@@ -87,7 +87,7 @@ public class Text001Script : MonoBehaviour {
 
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
-1. [Game] ウィンドウ上に "2018/04/02 8:56:35" 等と表示されれば成功！  
+1. [Game] ウィンドウ上に "2018/04/02 8:56:35" 等と表示されれば成功。  
 ![001](https://takashinishimura.github.io/Unity/examples/jpg/001.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
@@ -99,31 +99,70 @@ public class Text001Script : MonoBehaviour {
 <a name="ボールのバウンド"></a>
 # <b>002 ボールのバウンド</b>
 
-### XXXXXXX
-1. XXXXX
-1. XXXXX
-    * XXXXX
-1. XXXXX
-1. XXXXX
-* XXXXX
+### 床の作成
+1. [GameObject]-[3D Object]-[Cube] を選択。
+1. [Inspector] ウィンドウで、名前を "Cube" から "Floor001" に変更。
+1. [Transform] を次のように変更。
+    * Position X:0 Y:-2.5 Z:0
+    * Scale X:80 Y:5 Z:80 ←大きさ80x80m、厚さ5mの床
 
-### XXXXXXX
-1. XXXXX
-1. XXXXX
-    * XXXXX
+### ボールの作成
+1. [GameObject]-[3D Object]-[Sphere] を選択。
+1. [Inspector] ウィンドウで、名前を "Sphere" から "Ball001" に変更。
+1. [Transform] を次のように変更。
+    * Position X:0 Y:10 Z:0 ←床の上に置いてあるように配置（半径分移動）
+    * Scale X:20 Y:20 Z:20 ←直径20mの玉
 
-### XXXXXXX
+### 空のゲームオブジェクトを作成
+1. [GameObject]-[Create Empty] を選択。
+1. [Inspector] ウィンドウで、名前を "GameObject" から "God" に変更。
+
+### C#ファイルの作成
+1. [Assets]-[Create]-[C# Script] を選択。
+1. 名前を "NewBehaviourScript" から "JumpBall" に変更。
+    * 同時に (プロジェクト名)/Assets/JumpBall.cs が生成されます。
+1. 上記で作成した "God" の [Inspector]-[Add Component] エリアに上記のC#（JumpBall）をドラッグ＆ドロップ。
+* MonoBehaviourを継承したスクリプトを動作させるためには、いずれかのGameObjectにアタッチ（紐付け）する必要があります。
+
+### C#の記述
+1. VSCode等のエディタで "JumpBall.cs" を開きます。
+1. 次のように書き換えて保存。
 ```
-//XXX.cs
+//JumpBall.cs
+using UnityEngine;
+using System; //Mathに必要
+
+public class JumpBall : MonoBehaviour {
+	private GameObject _ball; //ターゲットのGameObjectの参照
+	private float _originY;
+	private float _currentY;
+	private float _count = 0f;
+
+	void Start () {
+		_ball = GameObject.Find("Ball001"); //シーンの中から任意のGameObjectを探します
+		_originY = _currentY = _ball.transform.position.y; //GameObjectのY座標位置
+	}
+	
+	void Update () {
+		_count += 0.05f;
+		float _nextY = (float)(50 * Math.Abs(Math.Cos(_count)) + _originY);
+		float _disY = _nextY - _currentY;
+		_ball.transform.Translate(0, _disY, 0); //移動させたい値（x,y,z）を指定
+		_currentY = _ball.transform.position.y;
+	}
+}
 ```
 
-### XXXXXXX
-1. XXXXX
-1. XXXXX
-    * XXXXX
-1. XXXXX
-1. XXXXX
+### カメラの調整
+[Main Camera]-[Transform] を次のように変更。
+    * Position X:0 Y:30 Z:-100
+    * Rotation: X:5 Y:0 Z:0
+
+### 実行
+1. [再生] ボタンまたは [Edit]-[Play] を選択。
+1. ボールが床にバウンドし続ければ成功。  
+![001](https://takashinishimura.github.io/Unity/examples/jpg/002.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
-作成日：2018年0X月XX日
+作成日：2018年04月02日
