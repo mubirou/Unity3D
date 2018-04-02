@@ -87,7 +87,8 @@ public class TextWatchScript : MonoBehaviour {
 
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
-1. [Game] ウィンドウ上に "2018/03/29 9:13:57" 等と表示されれば成功！
+1. [Game] ウィンドウ上に "2018/03/29 9:13:57" 等と表示されれば成功！  
+![001](https://takashinishimura.github.io/Unity/examples/jpg/001.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
