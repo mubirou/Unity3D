@@ -268,7 +268,7 @@ public class Main : MonoBehaviour {
 
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
-1. （画面のどこにカーソルがあっても）マウスカーソルのボタンを押すと立方体が回転すれば成功。  
+1. （画面のどこにカーソルがあっても）マウスカーソルのボタンを押して立方体が回転すれば成功。  
 ![004](https://takashinishimura.github.io/Unity/examples/jpg/004.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
