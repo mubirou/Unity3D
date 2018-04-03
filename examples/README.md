@@ -220,3 +220,57 @@ KeyCode.Space（スペースキー）、KeyCode.Return（Enterキー） など
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
 作成日：2018年04月03日
+
+
+<a name="マウスボタンで回転"></a>
+# <b>004 マウスボタンで回転</b>
+
+### 立方体の作成
+1. [GameObject]-[3D Object]-[Cube]を選択。
+1. 名前を "Cube" から "Cube001" に変更。
+1. Scaleは適当に調整。
+
+### 空のゲームオブジェクトを作成
+1. [GameObject]-[Create Empty] を選択。
+1. [Inspector] ウィンドウで、名前を "GameObject" から "God" に変更。
+
+### C#ファイルの作成
+1. [Assets]-[Create]-[C# Script] を選択。
+1. すかさず名前を "NewBehaviourScript" から "Main" に変更。
+    * 同時に (プロジェクト名)/Assets/Main.cs が生成されます。
+1. 上記で作成した "God" の [Inspector]-[Add Component] エリアに上記のC#（Main）をドラッグ＆ドロップ。
+
+### C#の記述
+1. VSCode等のエディタで "Main.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Main.cs
+using UnityEngine;
+
+public class Main : MonoBehaviour {
+	private GameObject _cube1; //ターゲットのGameObjectの参照
+
+	void Start () {
+		_cube1 = GameObject.Find("Cube001"); //シーンの中から任意のGameObjectを探す
+	}
+	
+	void Update () {
+		if (Input.GetMouseButton(0)) { //左ボタンを押している場合…
+			_cube1.transform.Rotate(new Vector3(0,1,0)); //上から見て時計回り
+		} else if (Input.GetMouseButton(1)) { //右ボタンを押している場合…
+			_cube1.transform.Rotate(new Vector3(0,-1,0)); //上から見て反時計回り
+		} else if (Input.GetMouseButton(2)) { //中央ボタンを押している場合…
+			_cube1.transform.Rotate(new Vector3(1,0,0)); //奥へ進むように回転
+		}
+	}
+}
+```
+
+### 実行
+1. [再生] ボタンまたは [Edit]-[Play] を選択。
+1. （画面のどこにカーソルがあっても）マウスカーソルのボタンを押すと立方体が回転すれば成功。
+![004](https://takashinishimura.github.io/Unity/examples/jpg/004.jpg)
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+更新日：2018年04月03日
