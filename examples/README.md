@@ -155,8 +155,8 @@ public class Main : MonoBehaviour {
 
 ### カメラの調整
 [Main Camera]-[Transform] を次のように変更。
-    * Position X:0 Y:30 Z:-100
-    * Rotation: X:5 Y:0 Z:0
+* Position X:0 Y:30 Z:-100
+* Rotation: X:5 Y:0 Z:0
 
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
