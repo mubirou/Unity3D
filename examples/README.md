@@ -172,7 +172,7 @@ public class JumpBall : MonoBehaviour {
 # <b>003 キーで動かす</b>
 
 ### C#の記述
-1. [002 ボールのバウンド](#ボールのバウンド)のJumpBall.csを書き換えます。
+1. 「[002 ボールのバウンド](#ボールのバウンド)」のJumpBall.csを書き換えます。
 1. 次のように書き換えて保存。
 ```
 //JumpBall.cs
