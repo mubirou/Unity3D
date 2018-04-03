@@ -119,20 +119,20 @@ public class Text001Script : MonoBehaviour {
 
 ### C#ファイルの作成
 1. [Assets]-[Create]-[C# Script] を選択。
-1. 名前を "NewBehaviourScript" から "JumpBall" に変更。
-    * 同時に (プロジェクト名)/Assets/JumpBall.cs が生成されます。
-1. 上記で作成した "God" の [Inspector]-[Add Component] エリアに上記のC#（JumpBall）をドラッグ＆ドロップ。
+1. 名前を "NewBehaviourScript" から "Main" に変更。
+    * 同時に (プロジェクト名)/Assets/Main.cs が生成されます。
+1. 上記で作成した "God" の [Inspector]-[Add Component] エリアに上記のC#（Main）をドラッグ＆ドロップ。
 * MonoBehaviourを継承したスクリプトを動作させるためには、いずれかのGameObjectにアタッチ（紐付け）する必要があります。
 
 ### C#の記述
-1. VSCode等のエディタで "JumpBall.cs" を開きます。
+1. VSCode等のエディタで "Main.cs" を開きます。
 1. 次のように書き換えて保存。
 ```
-//JumpBall.cs
+//Main.cs
 using UnityEngine;
 using System; //Mathに必要
 
-public class JumpBall : MonoBehaviour {
+public class Main : MonoBehaviour {
 	private GameObject _ball; //ターゲットのGameObjectの参照
 	private float _originY;
 	private float _currentY;
@@ -172,13 +172,13 @@ public class JumpBall : MonoBehaviour {
 # <b>003 キーで動かす</b>
 
 ### C#の記述
-1. ここでは「[002 ボールのバウンド](#ボールのバウンド)」のJumpBall.csを書き換えてみます。
+1. ここでは「[002 ボールのバウンド](#ボールのバウンド)」のMain.csを書き換えてみます。
 1. 次のように書き換えて保存。
 ```
-//JumpBall.cs
+//Main.cs
 using UnityEngine;
 
-public class JumpBall : MonoBehaviour { //JumpBallという名前は適切ではないですが…
+public class Main : MonoBehaviour {
 	private GameObject _ball; //ターゲットのGameObjectの参照
 
 	void Start () {
@@ -274,3 +274,57 @@ public class Main : MonoBehaviour {
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
 更新日：2018年04月03日
+
+
+<a name="キーで動かす"></a>
+# <b>003 キーで動かす</b>
+
+### C#の記述
+1. ここでは「[キーで動かす](#キーで動かす)」のMain.csを書き換えてみます。
+1. 次のように書き換えて保存。
+```
+//Main.cs
+using UnityEngine;
+
+public class Main : MonoBehaviour {
+	private GameObject _ball; //ターゲットのGameObjectの参照
+
+	void Start () {
+		_ball = GameObject.Find("Ball001"); //シーンの中から任意のGameObjectを探す
+	}
+
+	void Update () {
+		if (Input.GetKey(KeyCode.UpArrow)) { //↑キーを押している間…
+			_ball.transform.Translate(transform.forward); //○.Translate(0,0,1)と同じ
+		} else if (Input.GetKey(KeyCode.DownArrow)) { //↓キーを押している間…
+			_ball.transform.Translate(-transform.forward); //○.Translate(0,0,-1)と同じ
+		} else if (Input.GetKey(KeyCode.RightArrow)) { //→キーを押している間…
+			_ball.transform.Translate(transform.right); //○.Translate(1,0,0)と同じ
+		} else if (Input.GetKey(KeyCode.LeftArrow)) { //←キーを押している間…
+			_ball.transform.Translate(-transform.right); //○.Translate(-1,0,0)と同じ
+		} else if (Input.GetKey(KeyCode.Space)) { //Spaceキーを押している間…
+			_ball.transform.Translate(transform.up); //○.Translate(0,1,0)と同じ（上昇）
+		}
+	}
+}
+```
+![003](https://takashinishimura.github.io/Unity/examples/jpg/003.jpg)
+
+### GetKey と GetKeyDown / GetKeyUp の違い
+```
+void Update () {
+	//if (Input.GetKey(KeyCode.RightArrow)) { //→キーを押している間…
+	if (Input.GetKeyDown(KeyCode.RightArrow)) { //→キーを押す度に…
+	//if (Input.GetKeyDown("a")) { //←…KeyCodeを使わない方法もあります
+		_ball.transform.Translate(transform.right);
+	}
+}
+```
+
+### 主な KeyCode
+KeyCode.A（Aキー）、KeyCode.UpArrow（↑キー）、KeyCode.RightArrow（→キー）
+KeyCode.Space（スペースキー）、KeyCode.Return（Enterキー） など
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月03日
