@@ -279,12 +279,51 @@ public class Main : MonoBehaviour {
 <a name="追跡するカメラ"></a>
 # <b>005 追跡するカメラ</b>
 
+### ポイント
+1. Cameraも（Lightも）実はGameObject。シーンに登場する部品は全てGameObjectです。
+1. ①カメラが追跡するGameObjectの位置情報を取得 ②位置調整 ③カメラの位置を設定、の順で処理。
+
 ### C#の記述
 1. ここでは「[キーで動かす](#キーで動かす)」のMain.csを書き換えてみます。
 1. 次のように書き換えて保存。
 ```
+using UnityEngine;
+
+public class Main : MonoBehaviour {
+	private GameObject _ball; //カメラが追跡するGameObject
+	private GameObject _camera; //カメラの参照
+	
+	void Start () {
+		_ball = GameObject.Find("Ball001");
+		_camera = GameObject.Find("Main Camera"); //シーンの中からMain Cameraを探
+	}
+
+	void Update () {
+		//キーボードのキーを使って球体を動かします
+		if (Input.GetKey(KeyCode.UpArrow)) { //↑キーを押している間…
+			_ball.transform.Translate(transform.forward / 2);
+		} else if (Input.GetKey(KeyCode.DownArrow)) { //↓キーを押している間…
+			_ball.transform.Translate(-transform.forward / 2);
+		} else if (Input.GetKey(KeyCode.RightArrow)) { //→キーを押している間…
+			_ball.transform.Translate(transform.right / 2);
+		} else if (Input.GetKey(KeyCode.LeftArrow)) { //←キーを押している間…
+			_ball.transform.Translate(-transform.right / 2);
+		}
+
+		//①カメラが追跡するGameObjectの位置情報を取得
+		Vector3 _cameraPos = _ball.transform.position;
+
+		//②位置調整
+		_cameraPos.y += 25; //上方に移動
+		_cameraPos.z -= 50; //手前に移動
+
+		//③カメラの位置を設定
+		_camera.transform.position = _cameraPos;
+	}
+}
 ```
+![005](https://takashinishimura.github.io/Unity/examples/jpg/005.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
-作成日：2018年04月0X日
+作成日：2018年04月03日
