@@ -380,7 +380,7 @@ public class Main : MonoBehaviour {
 
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
-1. 玉が転がって落ち、スペースキーで登らせられれば成功。  
+1. 玉が転がって落ち、スペースキーを押すと登らせることが出来れば成功。  
 ![006](https://takashinishimura.github.io/Unity/examples/jpg/006.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
