@@ -161,7 +161,7 @@ public class JumpBall : MonoBehaviour {
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. ボールが床にバウンドし続ければ成功。  
-![001](https://takashinishimura.github.io/Unity/examples/jpg/002.jpg)
+![002](https://takashinishimura.github.io/Unity/examples/jpg/002.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
@@ -200,7 +200,7 @@ public class JumpBall : MonoBehaviour { //JumpBallという名前は適切では
 	}
 }
 ```
-![001](https://takashinishimura.github.io/Unity/examples/jpg/003.jpg)
+![003](https://takashinishimura.github.io/Unity/examples/jpg/003.jpg)
 
 ### GetKey と GetKeyDown / GetKeyUp の違い
 ```
