@@ -327,3 +327,62 @@ public class Main : MonoBehaviour {
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
 作成日：2018年04月03日
+
+
+<a name="物理エンジンで動かす"></a>
+# <b>006 物理エンジンで動かす</b>
+
+### 床の作成
+1. [GameObject]-[3D Object]-[Plane]を選択。
+1. [Inspector] ウィンドウで、名前を "Plane" から "Floor001" に変更。
+1. [Transform] を次のように変更。
+	* Rotation X:-20（=340）Y:0 Z:0 ←手前に20°傾斜
+
+### ボールの作成
+1. [GameObject]-[3D Object]-[Sphere] を選択。
+1. [Inspector] ウィンドウで、名前を "Sphere" から "Ball001" に変更。
+1. [Transform] を次のように変更。
+    * Position X:0 Y:5 Z:0 ←空中に浮かす
+1. [Hierarchy] で "Ball001" を選択した状態で [Component]-[Physics]-[Rigidbody] を選択。
+	* これで "Ball001" に物理的な動きを追加できました。
+
+### 空のゲームオブジェクトを作成
+1. [GameObject]-[Create Empty] を選択。
+1. [Inspector] ウィンドウで、名前を "GameObject" から "God" に変更。
+
+### C#ファイルの作成
+1. [Assets]-[Create]-[C# Script] を選択。
+1. 名前を "NewBehaviourScript" から "Main" に変更。
+    * 同時に (プロジェクト名)/Assets/Main.cs が生成されます。
+1. 上記で作成した "God" の [Inspector]-[Add Component] エリアに上記のC#（Main）をドラッグ＆ドロップ。
+
+### C#の記述
+1. VSCode等のエディタで "Main.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Main.cs
+using UnityEngine;
+
+public class Main : MonoBehaviour {
+	private GameObject _ball;
+	
+	void Start () {
+		_ball = GameObject.Find("Ball001");
+	}
+	
+	void Update () {
+		if (Input.GetKeyDown(KeyCode.Space)) { //スペースキーを押したら...
+			_ball.transform.GetComponent<Rigidbody>().AddForce(0,0,500); //奥へ押す
+		}
+	}
+}
+```
+
+### 実行
+1. [再生] ボタンまたは [Edit]-[Play] を選択。
+1. 玉が転がって落ち、スペースキーで登らせられれば成功。  
+![004](https://takashinishimura.github.io/Unity/examples/jpg/004.jpg)
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月04日
