@@ -436,3 +436,62 @@ public class Main : MonoBehaviour {
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
 作成日：2018年04月05日
+
+
+<a name="マウスに追従"></a>
+# <b>008 マウスに追従</b>
+
+### ボールの作成
+1. [GameObject]-[3D Object]-[Sphere] を選択。
+1. [Inspector] ウィンドウで、名前を "Sphere" から "Ball001" に変更。
+
+### 空のゲームオブジェクトを作成
+1. [GameObject]-[Create Empty] を選択。
+1. [Inspector] ウィンドウで、名前を "GameObject" から "God" に変更。
+
+### C#ファイルの作成
+1. [Assets]-[Create]-[C# Script] を選択。
+1. 名前を "NewBehaviourScript" から "Main" に変更。
+    * 同時に (プロジェクト名)/Assets/Main.cs が生成されます。
+1. 上記で作成した "God" の [Inspector]-[Add Component] エリアに上記のC#（Main）をドラッグ＆ドロップ。
+
+### C#の記述
+1. VSCode等のエディタで "Main.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Main.cs
+using UnityEngine;
+
+public class Main : MonoBehaviour {
+	private GameObject _ball;
+	private float _cameraPosZ; 
+
+	void Start () {
+		_ball = GameObject.Find("Ball001");
+		_cameraPosZ = Camera.main.transform.position.z; //初期値は-10
+	}
+	
+	void Update () {
+		if (Input.GetMouseButton(0)) { //左ボタンを押し続けている間...
+		//if (Input.GetMouseButtonDown(0)) { //左ボタンを押したら...
+
+			Vector3 _mousePos = Input.mousePosition; //マウスの位置を取得
+			//Debug.Log(_mousePos); //(15.0, 19.0, 0.0) ←画面左下が（0,0,0）
+
+			_mousePos.z = - _cameraPosZ; //画面上のマウスの位置を奥側に移動（-10）
+
+			//↓カメラから見た位置をシーンの絶対座標（グローバル座標）に変換
+			Vector3 _newPos = Camera.main.ScreenToWorldPoint(_mousePos);
+			_ball.transform.position = _newPos;
+		}
+	}
+}
+```
+
+### 実行
+1. [再生] ボタンまたは [Edit]-[Play] を選択。
+1. マウスの左ボタンを押し続けているとボールが追従したら成功。
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月05日
