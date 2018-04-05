@@ -554,7 +554,8 @@ public class Main : MonoBehaviour {
 
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
-1. ボールを選択すると、"RedBallを選択" または "WhiteBall" を選択と表示されたら成功。
+1. ボールを選択すると、"RedBallを選択" または "WhiteBall" を選択と表示されたら成功。  
+![009](https://takashinishimura.github.io/Unity/examples/jpg/009.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
