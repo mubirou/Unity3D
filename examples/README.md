@@ -405,7 +405,7 @@ public class Main : MonoBehaviour {
     * 同時に (プロジェクト名)/Assets/Main.cs が生成されます。
 1. 上記で作成した "God" の [Inspector]-[Add Component] エリアに上記のC#（Main）をドラッグ＆ドロップ。
 1. VSCode等のエディタで "Main.cs" を開きます。
-1. 次のように書き換えて保存。
+1. 次のように書き換えて保存（適用したい GameObject が "Ball001" の場合）。
 ```
 //Main.cs
 using UnityEngine;
