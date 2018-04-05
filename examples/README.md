@@ -386,3 +386,53 @@ public class Main : MonoBehaviour {
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
 作成日：2018年04月04日
+
+
+<a name="マテリアルの設定"></a>
+# <b>007 マテリアルの設定</b>
+
+### 方法① 手作業によるマテリアルの設定
+1. [Assets]-[Create Empty] を選択。
+1. [Inspector] ウィンドウで、[Albedo] や [Emission] などを変更。
+1. [Hierarchy] から適用したい GameObject を選択し、[Inspector] の [Add Component] エリアに、上記で作成した [Assets] 内のマテリアルをドラッグ＆ドロップ。
+
+### 方法② スクリプティングによる設定
+
+1. [GameObject]-[Create Empty] を選択。
+1. [Inspector] ウィンドウで、名前を "GameObject" から "God" に変更。
+1. [Assets]-[Create]-[C# Script] を選択。
+1. 名前を "NewBehaviourScript" から "Main" に変更。
+    * 同時に (プロジェクト名)/Assets/Main.cs が生成されます。
+1. 上記で作成した "God" の [Inspector]-[Add Component] エリアに上記のC#（Main）をドラッグ＆ドロップ。
+1. VSCode等のエディタで "Main.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Main.cs
+using UnityEngine;
+
+public class Main : MonoBehaviour {
+	private GameObject _ball; //マテリアルを適用したいGameObject
+	
+	void Start() { // Use this for initialization
+		_ball = GameObject.Find("Ball001"); //←マテリアルを適用したいGameObjectを探す
+
+		Debug.Log(_ball.GetComponent<Renderer>().material.color); 
+		//RGBA(1.000, 1.000, 1.000, 1.000)
+
+		//R:255 G:204 B:0 の色を適用する（値は0.0f〜1.0f）
+		_ball.GetComponent<Renderer>().material.color = new Color(1.0f, 0.8f, 0.0f, 1.0f);
+
+		Debug.Log(_ball.GetComponent<Renderer>().material.color); 
+		//RGBA(1.000, 0.800, 0.000, 1.000)
+	}
+}
+```
+![007](https://takashinishimura.github.io/Unity/examples/jpg/007.jpg)
+
+### 色の指定方法
+* new Color(赤, 緑, 青 [,不透明度])  
+* Color.red（赤）、Color.blue（青）、Color.green（緑）、Color.black（黒）、Color.white（白）、Color.cyan（シアン）、Color.magenta（マゼンタ）、Color.yellow（黄）、Color.gray（グレー）、Color.clear（RGBAが全て0）
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月05日
