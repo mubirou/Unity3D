@@ -14,7 +14,7 @@
 |006|[物理エンジンで動かす](#物理エンジンで動かす)|斜めの床をボールが転がり落ちる|
 |007|[マテリアルの設定](#マテリアルの設定)|オブジェクトに色を付ける|
 |008|[マウスに追従](#マウスに追従)|マウスを押している間ボールが追従する|
-|009|[ボールをクリック](#ボールをクリック)|XXXXXXXXXXXXXXXXXXXXXX|
+|009|[ボールをクリック](#ボールをクリック)|どのオブジェクトを選択したか調べる|
 |010|[アニメーションクリップ](#アニメーションクリップ)|XXXXXXXXXXXXXXXXXXXXXX|
 |011|[サウンド再生](#サウンド再生)|XXXXXXXXXXXXXXXXXXXXXX|
 |012|[当たり判定（反発）](#当たり判定（反発）)|XXXXXXXXXXXXXXXXXXXXXX|
@@ -495,3 +495,67 @@ public class Main : MonoBehaviour {
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
 作成日：2018年04月05日
+
+
+<a name="ボールをクリック"></a>
+# <b>009 ボールをクリック</b>
+
+### ２個のボールを作成
+1. [GameObject]-[3D Object]-[Sphere] を選択。
+1. [Inspector] ウィンドウで、名前を "Sphere" から "RedBall" に変更。
+1. [Transform] を次のように変更。
+    * Scale X:3 Y:3 Z:3
+4. 同様にもう1つ、"WhiteBall" を作成し、[Transform] を次のように変更。
+	* Position X:3 Y:0 Z:0
+	* Scale X:3 Y:3 Z:3
+
+### 空のゲームオブジェクトを作成
+1. [GameObject]-[Create Empty] を選択。
+1. [Inspector] ウィンドウで、名前を "GameObject" から "God" に変更。
+
+### C#ファイルの作成
+1. [Assets]-[Create]-[C# Script] を選択。
+1. 名前を "NewBehaviourScript" から "Main" に変更。
+    * 同時に (プロジェクト名)/Assets/Main.cs が生成されます。
+1. 上記で作成した "God" の [Inspector]-[Add Component] エリアに上記のC#（Main）をドラッグ＆ドロップ。
+
+### C#の記述
+1. VSCode等のエディタで "Main.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Main.cs
+using UnityEngine;
+
+public class Main : MonoBehaviour {
+	void Start () {
+		GameObject.Find("RedBall").GetComponent<Renderer>().material.color = Color.red;
+		GameObject.Find("WhiteBall").GetComponent<Renderer>().material.color = Color.white;
+	}
+
+	void Update () {
+		if (Input.GetMouseButtonDown(0)) { //①左ボタンを押したら...
+			//②選択した画面の位置をRay（光線）に変換
+			Ray _ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+			//Debug.Log(Input.mousePosition); //→(370.0, 164.0, 0.0) など
+			//Debug.Log(_ray); //→Origin: (0.0, 1.0, -9.7), Dir: (0.0, -0.1, 1.0)
+			
+			//③Rayが命中したGameObjectの情報を格納
+			RaycastHit _hit = new RaycastHit(); //RaycastHitは構造体
+			
+			//④GameObjectにRay（光線）が命中（選択）したら...
+			if (Physics.Raycast(_ray, out _hit, 100f)) {
+				Debug.Log(_hit.collider.gameObject.name + "を選択");
+			}
+		}
+	}
+}
+```
+
+### 実行
+1. [再生] ボタンまたは [Edit]-[Play] を選択。
+1. ボールを選択すると、"RedBallを選択" または "WhiteBall" を選択と表示されたら成功。
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月06日
