@@ -15,7 +15,7 @@
 |007|[マテリアルの設定](#マテリアルの設定)|オブジェクトに色を付ける|
 |008|[マウスに追従](#マウスに追従)|マウスを押している間ボールが追従する|
 |009|[ボールをクリック](#ボールをクリック)|どのオブジェクトを選択したか調べる|
-|010|[アニメーションクリップ](#アニメーションクリップ)|XXXXXXXXXXXXXXXXXXXXXX|
+|010|[アニメーションクリップ](#アニメーションクリップ)|イーズイン･イーズアウトを繰返すアニメーション|
 |011|[サウンド再生](#サウンド再生)|XXXXXXXXXXXXXXXXXXXXXX|
 |012|[当たり判定（反発）](#当たり判定（反発）)|XXXXXXXXXXXXXXXXXXXXXX|
 |013|[当たり判定（通過）](#当たり判定（通過）)|XXXXXXXXXXXXXXXXXXXXXX|
@@ -560,3 +560,77 @@ public class Main : MonoBehaviour {
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
 作成日：2018年04月06日
+
+
+<a name="アニメーションクリップ"></a>
+# <b>010 アニメーションクリップ</b>
+
+### ボールを作成とAnimationコンポーネントの追加
+1. [GameObject]-[3D Object]-[Sphere] を選択。
+1. [Inspector] ウィンドウで、名前を "Sphere" から "Ball001" に変更。
+1. "Ball001"を選んだ状態で[Component]-[Miscellaneous]-[Animation]を選択し追加。
+	* 追加しないと以下のコードを書いてもアニメーションしない。
+
+### 空のゲームオブジェクトを作成
+1. [GameObject]-[Create Empty] を選択。
+1. [Inspector] ウィンドウで、名前を "GameObject" から "God" に変更。
+
+### C#ファイルの作成
+1. [Assets]-[Create]-[C# Script] を選択。
+1. 名前を "NewBehaviourScript" から "Main" に変更。
+    * 同時に (プロジェクト名)/Assets/Main.cs が生成されます。
+1. 上記で作成した "God" の [Inspector]-[Add Component] エリアに上記のC#（Main）をドラッグ＆ドロップ。
+
+### C#の記述
+1. VSCode等のエディタで "Main.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Main.cs
+using UnityEngine;
+
+public class Main : MonoBehaviour {
+	private GameObject _ball001;
+
+	void Start () { // Use this for initialization
+		_ball001 = GameObject.Find("Ball001");
+
+		//①AnimationClipの作成
+		AnimationClip _animClip = new AnimationClip();
+
+		//②旧式な方法を可能にする
+		_animClip.legacy = true;
+		
+		//③AnimationCurveの作成（開始時間,開始値,終了時間,終了値）
+		AnimationCurve _animCurve = AnimationCurve.EaseInOut(0f, 0f, 5f, 0f);
+
+		//④キーフレームの作成と追加（時間,値）
+		Keyframe _keyframe = new Keyframe(2.5f, 10f); //2.5秒後に右へ10の地点
+		_animCurve.AddKey(_keyframe); //複数追加可能
+
+		//⑤AnimationClipへAnimationCurveを設定
+		_animClip.SetCurve("", typeof(Transform), "localPosition.x", _animCurve);
+
+		//⑥ラップモードの設定（Once/Loop/PingPong（行ったり来たり）等あり）
+		_animClip.wrapMode = WrapMode.Loop;
+
+		//⑦Cube01のanimationプロパティにAnimationClipを組み込む
+		_ball001.GetComponent<Animation>().AddClip(_animClip, "animClip01");
+
+		//⑨アニメーションの開始
+		_ball001.GetComponent<Animation>().Play("animClip01");
+		//_ball001.GetComponent<Animation>().Stop("animClip01"); //停止させる場合
+	}
+
+	void Update () { //必要なし！
+	}
+}
+```
+
+### 実行
+1. [再生] ボタンまたは [Edit]-[Play] を選択。
+1. 2.5秒後に右へ10、5秒後に元の位置へ…をイーズイン･イーズアウトしながら繰返せば成功。  
+![010](https://takashinishimura.github.io/Unity/examples/jpg/010.jpg)
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月07日
