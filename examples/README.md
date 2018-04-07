@@ -17,7 +17,7 @@
 |009|[ボールをクリック](#ボールをクリック)|どのオブジェクトを選択したか調べる|
 |010|[アニメーションクリップ](#アニメーションクリップ)|イーズイン･イーズアウトを繰り返すアニメーション|
 |011|[サウンド再生](#サウンド再生)|ループサウンドや効果音を鳴らす|
-|012|[当たり判定（反発）](#当たり判定（反発）)|XXXXXXXXXXXXXXXXXXXXXX|
+|012|[当たり判定（反発）](#当たり判定（反発）)|ボールを移動させ別のボールとの当たり判定を調べる|
 |013|[当たり判定（通過）](#当たり判定（通過）)|XXXXXXXXXXXXXXXXXXXXXX|
 |014|[パーティクル](#パーティクル)|XXXXXXXXXXXXXXXXXXXXXX|
 |015|[ハロー](#ハロー)|XXXXXXXXXXXXXXXXXXXXXX|
@@ -697,6 +697,79 @@ public class Main : MonoBehaviour {
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. 最初からBGM（"loop01.mp3"）がループ再生され、スペースキーを押すと効果音（"se01.mp3"）が1回再生（BGMは再生されたまま）。リターンキーを押すとBGMが止まり、効果音（"se02.mp3"）が鳴れば成功。  
 ![011](https://takashinishimura.github.io/Unity/examples/jpg/011.jpg)
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月07日
+
+
+<a name="当たり判定（反発）"></a>
+# <b>012 当たり判定（反発）</b>
+
+### 1つめのボール作成
+1. [GameObject]-[3D Object]-[Sphere] を選択。
+1. [Inspector] ウィンドウで、名前を "Sphere" から "Ball001" に変更。
+1. [Transform] を次のように変更。
+    * Position X:0 Y:0.5 Z:0
+
+### 2つめのボール作成
+1. 同様にもう1つ、"Ball002" を作成。
+1. [Transform] を次のように変更。
+	* Position X:2 Y:1 Z:0
+1. "Ball002" を選択した状態で [Component]-[Physics]-[Rigidbody] を選択。
+
+### 床を作成
+1. [GameObject]-[3D Object]-[Plane] を選択し「Position X:5.5 Y:0.5 Z:0」に変更。
+1. "Main Camera"の設定を「Position X:0 Y:1 Z:-5」に変更。
+
+### C#ファイルの作成
+1. [Assets]-[Create]-[C# Script] を選択。
+1. 名前を "NewBehaviourScript" から "Ball002" に変更。
+    * 同時に (プロジェクト名)/Assets/Ball002.cs が生成されます。
+1. 上記で作成した "Ball002" の [Inspector]-[Add Component] エリアに上記のC#（Ball002）をドラッグ＆ドロップ。
+
+### C#の記述
+1. VSCode等のエディタで "Main.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Ball002.cs
+using UnityEngine;
+
+public class Ball002 : MonoBehaviour { //以下thisは省略可
+	void Start () {} // 不要
+	
+	void Update () {
+		if (Input.GetKey(KeyCode.RightArrow)) { //「→」キーを押している間...
+			this.transform.GetComponent<Rigidbody>().AddForce(10,0,0); //右へ押す
+		} else if (Input.GetKey(KeyCode.LeftArrow)) { //「←」キーを押している間...
+			this.transform.GetComponent<Rigidbody>().AddForce(-10,0,0); //左へ押す
+		}
+	}
+
+	void OnCollisionEnter(Collision arg) { //衝突判定（当たり判定）イベント
+		if (arg.gameObject.name == "Ball001") { //Ball001と接触した瞬間...
+			Debug.Log("Ball001に接触");
+		}
+	}
+
+	void OnCollisionStay(Collision arg) { //衝突判定（当たり判定）イベント
+		if (arg.gameObject.name == "Ball001") { //接触し続けている場合...
+			Debug.Log("Ball001に接触し続けている");
+		}
+	}
+
+	void OnCollisionExit(Collision arg) { //衝突判定イベント
+		if (arg.gameObject.name == "Ball001") { //離れる瞬間...
+			Debug.Log("Ball001と離れた");
+		}
+	}
+}
+```
+
+### 実行
+1. [再生] ボタンまたは [Edit]-[Play] を選択。
+1. 左右の矢印キーで右側のボール（"Ball002"）が移動。"Ball001" に接触したか判定できれば成功。  
+![012](https://takashinishimura.github.io/Unity/examples/jpg/012.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
