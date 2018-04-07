@@ -634,3 +634,70 @@ public class Main : MonoBehaviour {
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
 作成日：2018年04月07日
+
+
+<a name="サウンド再生"></a>
+# <b>011 サウンド再生</b>
+
+### サウンドの用意
+1. (Project name)/Assets/ フォルダにBGM用とSE用ファイルを保存。
+	* ファイル形式は、MP3、WAV、AIFF、Ogg の何れか。
+	* 今回は "loop01.wav" "se01.mp3" "se02.mp3" の3つを用意。
+1. [Assets]-[Import New Asset...]から上記のサウンドファイルをインポート。
+
+### 空のゲームオブジェクトを作成
+1. [GameObject]-[Create Empty] を選択。
+1. [Inspector] ウィンドウで、名前を "GameObject" から "God" に変更。
+
+### ”God" に各サウンドを紐付ける
+1. "God" の [Add Component] ボタンをクリック→[Audio]-[Audio Source] を選択。
+1. [Audio Source] の [AudioClip] の ⦿ をクリックし、[None(Audio Clip)] を [loop01] に変更。
+1. その他、次の通りに設定（確認）する。
+* [Play On Awake] を✔（SE用は✔を外す）
+* [Loop] に✔（SEの場合は✔をしない）
+1. 引き続き、サウンドファイル分繰り返します。
+
+### C#ファイルの作成
+1. [Assets]-[Create]-[C# Script] を選択。
+1. 名前を "NewBehaviourScript" から "Main" に変更。
+    * 同時に (プロジェクト名)/Assets/Main.cs が生成されます。
+1. 上記で作成した "God" の [Inspector]-[Add Component] エリアに上記のC#（Main）をドラッグ＆ドロップ。
+
+### C#の記述
+1. VSCode等のエディタで "Main.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Main.cs
+using UnityEngine;
+
+public class Main : MonoBehaviour {
+	private AudioSource _loop01, _se01, _se02;
+
+	void Start () {
+		AudioSource[] _audioArray = GetComponents<AudioSource>();
+		_loop01 = _audioArray[0];
+		_se01 = _audioArray[1];
+		_se02 = _audioArray[2];
+	}
+
+	void Update () {
+		if (Input.GetKeyDown(KeyCode.Space)) {
+			//if (! _se01.isPlaying) { //再生中でなければ..を指定する場合
+				_se01.Play(); //再生
+			//}
+		} else if (Input.GetKeyDown(KeyCode.Return)) {
+			_loop01.Stop(); //停止
+			_se02.Play(); //再生
+		}
+	}
+}
+```
+
+### 実行
+1. [再生] ボタンまたは [Edit]-[Play] を選択。
+1. 最初からBGM（"loop01.mp3"）がループ再生され、スペースキーを押すと効果音（"se01.mp3"）が1回再生（BGMは再生されたまま）。リターンキーを押すとBGMが止まり、効果音（"se02.mp3"）が鳴れば成功。  
+![011](https://takashinishimura.github.io/Unity/examples/jpg/011.jpg)
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月07日
