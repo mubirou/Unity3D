@@ -840,3 +840,71 @@ public class Sphere002 : MonoBehaviour { //以下thisは省略可
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
 作成日：2018年04月08日
+
+
+<a name="パーティクル"></a>
+# <b>014 パーティクル</b>
+
+この項目は編集中の項目です。
+
+### ボール作成
+1. [GameObject]-[3D Object]-[Sphere] を選択。
+1. [Inspector] ウィンドウで、名前を "Sphere" から "Sphere001" に変更。
+
+### ボールにパーティクルを追加
+1. [Hierarchy] の "Sphere001" を選んだ状態で、[Component]-[Effects]-[Particle System] を選択。
+1. [Inspector]-[Particle System] の設定を手作業で行うのは大変なためデフォルトのまま。
+
+### アセットを利用する
+1. [Window]-[Asset Store] を選択。Pack
+1. "Simple Particle Pack"（FREE）を検索し選択。
+1. [Download] をクリック後、指示に従い [Import] を選択。
+
+### C#ファイルの作成
+1. [Assets]-[Create]-[C# Script] を選択。
+1. 名前を "NewBehaviourScript" から "Sphere001" に変更。
+    * 同時に (プロジェクト名)/Assets/Sphere001.cs が生成されます。
+1. 上記で作成した "Sphere001" の [Inspector]-[Add Component] エリアに上記のC#（Sphere001）をドラッグ＆ドロップ。
+
+### C#の記述
+1. VSCode等のエディタで "Sphere001.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Sphere002.cs
+using UnityEngine;
+
+public class Sphere002 : MonoBehaviour { //以下thisは省略可
+	void Start () { //不要
+	}
+
+	void Update () { //不要
+	}
+
+	void OnTriggerEnter(Collider arg) { //衝突判定（当たり判定）イベント
+		if (arg.gameObject.name == "Sphere001") { //Sphere001と接触した瞬間...
+			Debug.Log("Sphere001に接触");
+		}
+	}
+
+	void OnTriggerStay(Collider arg) { //衝突判定（当たり判定）イベント
+		if (arg.gameObject.name == "Sphere001") { //接触（通過）し続けている場合...
+			Debug.Log("Sphere001を通過中");
+		}
+	}
+
+	void OnTriggerExit(Collider arg) { //衝突判定（当たり判定）イベント
+		if (arg.gameObject.name == "Sphere001") { //離れる瞬間...
+			Debug.Log("Sphere001と離れた");
+		}
+	}
+}
+```
+
+### 実行
+1. [再生] ボタンまたは [Edit]-[Play] を選択。
+1. XXXXX  
+![014](https://takashinishimura.github.io/Unity/examples/jpg/014.jpg)
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月0X日
