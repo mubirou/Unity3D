@@ -18,7 +18,7 @@
 |010|[アニメーションクリップ](#アニメーションクリップ)|イーズイン･イーズアウトを繰り返すアニメーション|
 |011|[サウンド再生](#サウンド再生)|ループサウンドや効果音を鳴らす|
 |012|[当たり判定（反発）](#当たり判定（反発）)|ボールを移動させ別のボールとの当たり判定を調べる|
-|013|[当たり判定（通過）](#当たり判定（通過）)|XXXXXXXXXXXXXXXXXXXXXX|
+|013|[当たり判定（通過）](#当たり判定（通過）)|ボールを落下させ別のボールとの当たり判定を調べる|
 |014|[パーティクル](#パーティクル)|XXXXXXXXXXXXXXXXXXXXXX|
 |015|[ハロー](#ハロー)|XXXXXXXXXXXXXXXXXXXXXX|
 |016|[オブジェクトの生成](#オブジェクトの生成)|XXXXXXXXXXXXXXXXXXXXXX|
@@ -774,3 +774,69 @@ public class Ball002 : MonoBehaviour { //以下thisは省略可
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
 作成日：2018年04月07日
+
+
+<a name="当たり判定（通過）"></a>
+# <b>013 当たり判定（通過）</b>
+
+### 1つめのボール作成
+1. [GameObject]-[3D Object]-[Sphere] を選択。
+1. [Inspector] ウィンドウで、名前を "Sphere" から "Sphere001" に変更。
+
+### 2つめのボール作成
+1. 同様にもう1つ、"Sphere002" を作成。
+1. [Transform] を次のように変更。
+	* Position X:0 Y:2 Z:0
+1. "Sphere002" を選択した状態で [Component]-[Physics]-[Rigidbody] を選択。
+	* [Sphere Collider]-[Is Trigger]:✔ ←チェックすると重力はあるものの物と物が衝突しても通過
+
+
+### C#ファイルの作成
+1. [Assets]-[Create]-[C# Script] を選択。
+1. 名前を "NewBehaviourScript" から "Sphere002" に変更。
+    * 同時に (プロジェクト名)/Assets/Sphere002.cs が生成されます。
+1. 上記で作成した "Sphere002" の [Inspector]-[Add Component] エリアに上記のC#（Sphere002）をドラッグ＆ドロップ。
+
+### C#の記述
+1. VSCode等のエディタで "Main.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Sphere002.cs
+using UnityEngine;
+
+public class Sphere002 : MonoBehaviour { //以下thisは省略可
+	void Start () { //不要
+	}
+
+	void Update () { //不要
+	}
+
+	void OnTriggerEnter(Collider arg) { //衝突判定（当たり判定）イベント
+		if (arg.gameObject.name == "Sphere001") { //Sphere001と接触した瞬間...
+			Debug.Log("Sphere001に接触");
+		}
+	}
+
+	void OnTriggerStay(Collider arg) { //衝突判定（当たり判定）イベント
+		if (arg.gameObject.name == "Sphere001") { //接触（通過）し続けている場合...
+			Debug.Log("Sphere001を通過中");
+		}
+	}
+
+	void OnTriggerExit(Collider arg) { //衝突判定（当たり判定）イベント
+		if (arg.gameObject.name == "Sphere001") { //離れる瞬間...
+			Debug.Log("Sphere001と離れた");
+		}
+	}
+}
+```
+
+### 実行
+1. [再生] ボタンまたは [Edit]-[Play] を選択。
+1. ボール（"Sphere002"）が落下し、"Sphere001" を通過。その際、Consoleに "Sphere001に接触" → "Sphere001を通過中" → "Sphere001と離れた" と表示されたら成功。  
+* この方法（OnTriggerXXX）を使うと物と物が衝突してもそのまま通過します（重力あり）。
+![013](https://takashinishimura.github.io/Unity/examples/jpg/013.jpg)
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月08日
