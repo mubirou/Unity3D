@@ -847,18 +847,22 @@ public class Sphere002 : MonoBehaviour { //以下thisは省略可
 
 この項目は編集中の項目です。
 
+* 他にも Simple Particle Pack（FREE）などAsset Storeを利用する方法もあります。
+
 ### ボール作成
 1. [GameObject]-[3D Object]-[Sphere] を選択。
 1. [Inspector] ウィンドウで、名前を "Sphere" から "Sphere001" に変更。
 
 ### ボールにパーティクルを追加
 1. [Hierarchy] の "Sphere001" を選んだ状態で、[Component]-[Effects]-[Particle System] を選択。
-1. [Inspector]-[Particle System] の設定を手作業で行うのは大変なためデフォルトのまま。
-
-### アセットを利用する
-1. [Window]-[Asset Store] を選択。Pack
-1. "Simple Particle Pack"（FREE）を検索し選択。
-1. [Download] をクリック後、指示に従い [Import] を選択。
+1. [Inspector]-[Particle System] の値を次のように設定。
+	* Duration: 2.00（パーティクルのトータル時間）
+	* Looping: OFF（繰返し）
+	* Start Lifetime: 1（寿命）
+	* Start Speed: 3（初期速度）
+	* Start Size: 3（大きさ）
+	* Gravity Modifier: 0.1（重力）
+	* Play On Awake: OFF（自動実行）
 
 ### C#ファイルの作成
 1. [Assets]-[Create]-[C# Script] を選択。
@@ -870,31 +874,22 @@ public class Sphere002 : MonoBehaviour { //以下thisは省略可
 1. VSCode等のエディタで "Sphere001.cs" を開きます。
 1. 次のように書き換えて保存。
 ```
-//Sphere002.cs
+//Sphere001.cs
 using UnityEngine;
 
-public class Sphere002 : MonoBehaviour { //以下thisは省略可
+public class Sphere001 : MonoBehaviour {
+	private ParticleSystem _particle;
+
 	void Start () { //不要
 	}
+	
+	void Update () { //thisは省略可
+		if (Input.GetKey(KeyCode.Space)) { //スペースキーを押すと...
+			_particle = GetComponent<ParticleSystem>();
+			_particle.Play();
 
-	void Update () { //不要
-	}
-
-	void OnTriggerEnter(Collider arg) { //衝突判定（当たり判定）イベント
-		if (arg.gameObject.name == "Sphere001") { //Sphere001と接触した瞬間...
-			Debug.Log("Sphere001に接触");
-		}
-	}
-
-	void OnTriggerStay(Collider arg) { //衝突判定（当たり判定）イベント
-		if (arg.gameObject.name == "Sphere001") { //接触（通過）し続けている場合...
-			Debug.Log("Sphere001を通過中");
-		}
-	}
-
-	void OnTriggerExit(Collider arg) { //衝突判定（当たり判定）イベント
-		if (arg.gameObject.name == "Sphere001") { //離れる瞬間...
-			Debug.Log("Sphere001と離れた");
+			//パーティクル終了後、GameObjectを消す
+			Destroy(this.gameObject, _particle.duration);
 		}
 	}
 }
@@ -902,7 +897,7 @@ public class Sphere002 : MonoBehaviour { //以下thisは省略可
 
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
-1. XXXXX  
+1. XXXXXX  
 ![014](https://takashinishimura.github.io/Unity/examples/jpg/014.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
