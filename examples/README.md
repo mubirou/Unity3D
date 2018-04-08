@@ -729,7 +729,7 @@ public class Main : MonoBehaviour {
 1. 上記で作成した "Ball002" の [Inspector]-[Add Component] エリアに上記のC#（Ball002）をドラッグ＆ドロップ。
 
 ### C#の記述
-1. VSCode等のエディタで "Main.cs" を開きます。
+1. VSCode等のエディタで "Ball002.cs" を開きます。
 1. 次のように書き換えて保存。
 ```
 //Ball002.cs
@@ -798,7 +798,7 @@ public class Ball002 : MonoBehaviour { //以下thisは省略可
 1. 上記で作成した "Sphere002" の [Inspector]-[Add Component] エリアに上記のC#（Sphere002）をドラッグ＆ドロップ。
 
 ### C#の記述
-1. VSCode等のエディタで "Main.cs" を開きます。
+1. VSCode等のエディタで "Sphere002.cs" を開きます。
 1. 次のように書き換えて保存。
 ```
 //Sphere002.cs
