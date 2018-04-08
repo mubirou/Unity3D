@@ -834,7 +834,7 @@ public class Sphere002 : MonoBehaviour { //以下thisは省略可
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. ボール（"Sphere002"）が落下し、"Sphere001" を通過。その際、Consoleに "Sphere001に接触" → "Sphere001を通過中" → "Sphere001と離れた" と表示されたら成功。  
-* この方法（OnTriggerXXX）を使うと物と物が衝突してもそのまま通過します（重力あり）。  
+	* この方法（OnTriggerXXX）を使うと物と物が衝突してもそのまま通過します（重力あり）。  
 ![013](https://takashinishimura.github.io/Unity/examples/jpg/013.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
