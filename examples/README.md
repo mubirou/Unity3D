@@ -24,7 +24,7 @@
 |016|[オブジェクトの生成](#オブジェクトの生成)|たくさんの立方体を生成|
 |017|[オブジェクトを消す](#オブジェクトを消す)|任意の操作でオブジェクトを半透明や非表示にする|
 |018|[スライダー](#スライダー)|スライダーを使ってオブジェクとの色を変更|
-|019|[ボタン](#ボタン)|XXXXXXXXXXXXXXXXXXXXXX|
+|019|[ボタン](#ボタン)|UIのボタンを使う|
 |020|[トグルボタン](#トグルボタン)|XXXXXXXXXXXXXXXXXXXXXX|
 |021|[シーンの移動](#シーンの移動)|XXXXXXXXXXXXXXXXXXXXXX|
 |022|[シーン移動時にGameObjectを残す](#シーン移動時にGameObjectを残す)|XXXXXXXXXXXXXXXXXXXXXX|
@@ -1111,7 +1111,7 @@ public class Sphere001 : MonoBehaviour { //thisは省略可
 # <b>018 スライダー</b>
 
 ### 3つのスライダーの作成
-1. [GameObject]-[UI]-[Slider] を選択（名前を"SliderR"に変更）。
+1. [GameObject]-[UI]-[Slider] を選択（名前を "SliderR" に変更）。
 1. [Inspector] ウィンドウで、設定を次の通りにします。
 1. [Transform] を次のように変更。
 	* Pos X: 0、PosY: -100、PosZ: 0
@@ -1169,7 +1169,7 @@ public class Main : MonoBehaviour {
 }
 ```
 
-### スライダーとOnSliderChanged()メソッドのリンク
+### スライダーと "OnSliderChanged()" メソッドのリンク
 * 少し理解しにくい操作です。
 1. [Hierarchy] の "SliderR" を選択。
 1. [Inspector] の [On Value Changed] にある [+] をクリック。
@@ -1215,6 +1215,83 @@ public class Main : MonoBehaviour {
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. スライダーを動かすとボールの色が変化すれば成功。  
 ![018](https://takashinishimura.github.io/Unity/examples/jpg/018.jpg)
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月10日
+
+
+<a name="ボタン"></a>
+# <b>019 ボタン</b>
+
+### ボタンの作成
+1. [GameObject]-[UI]-[Button] を選択（名前を "Button001" に変更）。
+1. [Hierarchy] の [Canvas]-[Button001]-[Text] を選択し、[Inspector] の [Text] の値を変更（任意）。
+	* ダブルバイト文字は不可。
+
+### C#ファイルの作成
+1. [Assets]-[Create]-[C# Script] を選択。
+1. 名前を "NewBehaviourScript" から "Button001" に変更。
+    * 同時に (プロジェクト名)/Assets/Button001.cs が生成されます。
+1. 上記で作成した "God" の [Inspector]-[Add Component] エリアに上記のC#（Button001）をドラッグ＆ドロップ。
+
+### C#の追加
+1. VSCode等のエディタで "Button001.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Button001 : MonoBehaviour {
+
+	// Use this for initialization
+	void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+
+	public void OnClick() {} //←この1行を追加
+}
+```
+
+### ボタンと "OnClick()" メソッドのリンク
+* 少し理解しにくい操作です。
+1. [Hierarchy] の "Button001" を選択。
+1. [Inspector] の [On Click()] にある [+] をクリック。
+1. [None(Object)] の [⦿] をクリック。
+1. [Scene]から、上記で作成した "Button01"（GameObject）を選択。
+1. [No Function] をクリック→ [Button01]-[OnClick()] を選択。
+	* [No Function] が [Button01.OnClick] になっていればOKです。
+
+### C#の記述
+1. VSCode等のエディタで再度 "Button001.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Button001.cs
+using UnityEngine;
+
+public class Button01 : MonoBehaviour {
+	void Start () { //不要
+	}
+
+	void Update () { //不要
+	}
+
+	public void OnClick() {
+		Debug.Log("HOGEをクリックしました");
+	}
+}
+```
+
+### 実行
+1. [再生] ボタンまたは [Edit]-[Play] を選択。
+1. ボタンをクリックするとConsoleに "HOGEをクリックしました" と出力されたら成功。  
+![019](https://takashinishimura.github.io/Unity/examples/jpg/019.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
