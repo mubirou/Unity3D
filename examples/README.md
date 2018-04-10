@@ -855,14 +855,12 @@ public class Sphere002 : MonoBehaviour { //以下thisは省略可
 
 ### ボールにパーティクルを追加
 1. [Hierarchy] の "Sphere001" を選んだ状態で、[Component]-[Effects]-[Particle System] を選択。
-1. [Inspector]-[Particle System] の値を次のように設定。
-	* Duration: 2.00（パーティクルのトータル時間）
+1. [Inspector]-[Particle System] の値を次のように変更。
 	* Looping: OFF（繰返し）
-	* Start Lifetime: 1（寿命）
-	* Start Speed: 3（初期速度）
-	* Start Size: 3（大きさ）
 	* Gravity Modifier: 0.1（重力）
 	* Play On Awake: OFF（自動実行）
+	* Size over Lifetime: ✔（最初は小さく）
+	* Rotation over Lifetime: ✔（角度を付ける）
 
 ### C#ファイルの作成
 1. [Assets]-[Create]-[C# Script] を選択。
@@ -897,9 +895,9 @@ public class Sphere001 : MonoBehaviour {
 
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
-1. XXXXXX  
+1. スペースキーを押すとパーティクルが発生し、数秒でボールも含め消えれば成功。  
 ![014](https://takashinishimura.github.io/Unity/examples/jpg/014.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
-作成日：2018年04月0X日
+作成日：2018年04月10日
