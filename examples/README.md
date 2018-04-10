@@ -1478,3 +1478,9 @@ public class Scene002 : MonoBehaviour {
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
 作成日：2018年04月11日
+
+
+<a name="シーン移動時にGameObjectを残す"></a>
+# <b>022 シーン移動時にGameObjectを残す</b>
+
+* 「[021 シーンの移動](#シーンの移動)」を継承します。
