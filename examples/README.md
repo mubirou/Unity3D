@@ -23,7 +23,7 @@
 |015|[ハロー](#ハロー)|任意の操作でハローを表示させる|
 |016|[オブジェクトの生成](#オブジェクトの生成)|たくさんの立方体を生成|
 |017|[オブジェクトを消す](#オブジェクトを消す)|任意の操作でオブジェクトを半透明や非表示にする|
-|018|[スライダー](#スライダー)|XXXXXXXXXXXXXXXXXXXXXX|
+|018|[スライダー](#スライダー)|スライダーを使ってオブジェクとの色を変更|
 |019|[ボタン](#ボタン)|XXXXXXXXXXXXXXXXXXXXXX|
 |020|[トグルボタン](#トグルボタン)|XXXXXXXXXXXXXXXXXXXXXX|
 |021|[シーンの移動](#シーンの移動)|XXXXXXXXXXXXXXXXXXXXXX|
@@ -1145,7 +1145,7 @@ public class Sphere001 : MonoBehaviour { //thisは省略可
     * 同時に (プロジェクト名)/Assets/Main.cs が生成されます。
 1. 上記で作成した "God" の [Inspector]-[Add Component] エリアに上記のC#（Main）をドラッグ＆ドロップ。
 
-### C#の変更
+### C#の追加
 1. VSCode等のエディタで "Main.cs" を開きます。
 1. 次のように書き換えて保存。
 ```
@@ -1213,7 +1213,7 @@ public class Main : MonoBehaviour {
 
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
-1. スライダーバーを動かすとボールの色が変化すれば成功。  
+1. スライダーを動かすとボールの色が変化すれば成功。  
 ![018](https://takashinishimura.github.io/Unity/examples/jpg/018.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
