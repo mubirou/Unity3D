@@ -1045,7 +1045,7 @@ public class Main : MonoBehaviour { //Update()は省略
     * Scale X:3 Y:3 Z:3
 
 ### 1つめのボールにマテリアルを追加
-1. [Assets]-[Create]-[Material]を選択（名前は "Material001" に変更）。[Albedo] を赤に変更。
+1. [Assets]-[Create]-[Material] を選択（名前は "Material001" に変更）。[Albedo] を赤に変更。
 1. [Hierarchy] の "Sphere001" を選択。
 1. [Add Component]エリアに、上記で作成したAssets内のマテリアル（"Material001"）をドラッグ＆ドロップ。
 1. [Inspector]-[Material001] の値を次の通りに変更
