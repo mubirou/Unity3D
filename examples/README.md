@@ -19,7 +19,7 @@
 |011|[サウンド再生](#サウンド再生)|ループサウンドや効果音を鳴らす|
 |012|[当たり判定（反発）](#当たり判定（反発）)|ボールを移動させ別のボールとの当たり判定を調べる（反発）|
 |013|[当たり判定（通過）](#当たり判定（通過）)|ボールを落下させ別のボールとの当たり判定を調べる（通過）|
-|014|[パーティクル](#パーティクル)|XXXXXXXXXXXXXXXXXXXXXX|
+|014|[パーティクル](#パーティクル)|任意の操作でパーティクルを発生させる|
 |015|[ハロー](#ハロー)|XXXXXXXXXXXXXXXXXXXXXX|
 |016|[オブジェクトの生成](#オブジェクトの生成)|XXXXXXXXXXXXXXXXXXXXXX|
 |017|[オブジェクトを消す](#オブジェクトを消す)|XXXXXXXXXXXXXXXXXXXXXX|
@@ -845,9 +845,7 @@ public class Sphere002 : MonoBehaviour { //以下thisは省略可
 <a name="パーティクル"></a>
 # <b>014 パーティクル</b>
 
-この項目は編集中の項目です。
-
-* 他にも Simple Particle Pack（FREE）などAsset Storeを利用する方法もあります。
+* 他にも実用的な Simple Particle Pack（FREE）などAsset Storeを利用する方法もあります。
 
 ### ボール作成
 1. [GameObject]-[3D Object]-[Sphere] を選択。
