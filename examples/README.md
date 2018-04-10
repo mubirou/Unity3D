@@ -899,3 +899,73 @@ public class Sphere001 : MonoBehaviour {
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
 作成日：2018年04月10日
+
+
+<a name="ハロー"></a>
+# <b>015 ハロー</b>
+
+### ボール作成
+1. [GameObject]-[3D Object]-[Sphere] を選択。
+1. [Inspector] ウィンドウで、名前を "Sphere" から "Sphere001" に変更。
+1. [Transform] を次のように変更。
+    * Scale X:2 Y:2 Z:2
+
+### ボールにハローを追加
+1. [Hierarchy] の "Sphere001" を選んだ状態で、[Component]-[Effects]-[Halo]を選択。
+1. [Inspector]-[Particle System] の値を次のように設定。
+	* Halo: OFF（初期状態）
+	* Color: 赤
+	* Size: 2
+
+### C#ファイルの作成
+1. [Assets]-[Create]-[C# Script] を選択。
+1. 名前を "NewBehaviourScript" から "Sphere001" に変更。
+    * 同時に (プロジェクト名)/Assets/Sphere001.cs が生成されます。
+1. 上記で作成した "Sphere001" の [Inspector]-[Add Component] エリアに上記のC#（Sphere001）をドラッグ＆ドロップ。
+
+### C#の記述
+1. VSCode等のエディタで "Sphere001.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Sphere01.cs
+using UnityEngine;
+
+public class Sphere001 : MonoBehaviour { //thisは省略可
+	private Behaviour _halo;
+
+	void Start() { //不要
+	}
+
+	void Update() {
+		if (Input.GetMouseButtonDown(0)) { //①左ボタンを押したら...
+			//②クリックした画面の位置をRay（光線）に変換
+			Ray _ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+			//③Rayが命中したGameObjectの情報を格納
+			RaycastHit _hit = new RaycastHit(); //RaycastHitは構造体
+
+			//④GameObjectにRay（光線）が命中（クリック）したら...
+			if (Physics.Raycast(_ray, out _hit, 100f)) {
+				if (_hit.collider.gameObject.name == "Sphere001") {
+					//Sphere01をクリックしたら...
+					//ハローはenabledのON/OFFしかできません。色サイズも変更不可。
+					_halo = (Behaviour)this.GetComponent("Halo"); //Behaviourに変換
+					_halo.enabled = true;
+				}
+			}
+
+		} else if (Input.GetMouseButtonUp(0)) { //左ボタンをリリースしたら...
+			_halo.enabled = false;
+		}
+	}
+}
+```
+
+### 実行
+1. [再生] ボタンまたは [Edit]-[Play] を選択。
+1. ボールを選択（プレス）するとハローが発生し、話す（リリース）するとハローが消えれば成功。  
+![015](https://takashinishimura.github.io/Unity/examples/jpg/015.jpg)
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月10日
