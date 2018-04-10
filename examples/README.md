@@ -20,7 +20,7 @@
 |012|[当たり判定（反発）](#当たり判定（反発）)|ボールを移動させ別のボールとの当たり判定を調べる（反発）|
 |013|[当たり判定（通過）](#当たり判定（通過）)|ボールを落下させ別のボールとの当たり判定を調べる（通過）|
 |014|[パーティクル](#パーティクル)|任意の操作でパーティクルを発生させる|
-|015|[ハロー](#ハロー)|XXXXXXXXXXXXXXXXXXXXXX|
+|015|[ハロー](#ハロー)|任意の操作でハローを表示させる|
 |016|[オブジェクトの生成](#オブジェクトの生成)|XXXXXXXXXXXXXXXXXXXXXX|
 |017|[オブジェクトを消す](#オブジェクトを消す)|XXXXXXXXXXXXXXXXXXXXXX|
 |018|[スライダー](#スライダー)|XXXXXXXXXXXXXXXXXXXXXX|
@@ -937,14 +937,14 @@ public class Sphere001 : MonoBehaviour { //thisは省略可
 	}
 
 	void Update() {
-		if (Input.GetMouseButtonDown(0)) { //①左ボタンを押したら...
-			//②クリックした画面の位置をRay（光線）に変換
+		if (Input.GetMouseButtonDown(0)) { //① 左ボタンを押したら...
+			//② クリックした画面の位置をRay（光線）に変換
 			Ray _ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-			//③Rayが命中したGameObjectの情報を格納
+			//③ Rayが命中したGameObjectの情報を格納
 			RaycastHit _hit = new RaycastHit(); //RaycastHitは構造体
 
-			//④GameObjectにRay（光線）が命中（クリック）したら...
+			//④ GameObjectにRay（光線）が命中（クリック）したら...
 			if (Physics.Raycast(_ray, out _hit, 100f)) {
 				if (_hit.collider.gameObject.name == "Sphere001") {
 					//Sphere01をクリックしたら...
@@ -963,7 +963,7 @@ public class Sphere001 : MonoBehaviour { //thisは省略可
 
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
-1. ボールを選択（プレス）するとハローが発生し、話す（リリース）するとハローが消えれば成功。  
+1. ボールを選択（プレス）するとハローが表示し、話す（リリース）するとハローが消えれば成功。  
 ![015](https://takashinishimura.github.io/Unity/examples/jpg/015.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
