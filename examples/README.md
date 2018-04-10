@@ -1429,7 +1429,7 @@ public class Toggle001 : MonoBehaviour {
 1. ウィンドウを閉じます。
  ![021_3](https://takashinishimura.github.io/Unity/examples/jpg/021_3.jpg)
 
-### C#の記述（Scene001.cs）
+### C#の記述（シーン１のメインクラス）
 1. VSCode等のエディタで "Scene001.cs" を開きます。
 1. 次のように書き換えて保存。
 ```
@@ -1450,7 +1450,7 @@ public class Scene001 : MonoBehaviour {
 }
 ```
 
-### C#の記述（Scene002.cs）
+### C#の記述（シーン２のメインクラス）
 1. VSCode等のエディタで "Scene002.cs" を開きます。
 1. 次のように書き換えて保存。
 ```
