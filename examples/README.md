@@ -1081,7 +1081,8 @@ public class Sphere001 : MonoBehaviour { //thisは省略可
 			RaycastHit _hit = new RaycastHit();
 
 			if (Physics.Raycast(_ray, out _hit, 100f)) {
-				if (_hit.collider.gameObject.name == "Sphere001") { //Sphere01をクリックしたら
+				//Sphere01をクリックしたら
+				if (_hit.collider.gameObject.name == "Sphere001") {
 					// 非表示にする場合
 					//this.gameObject.SetActive(false); //非表示にする
 					//Debug.Log(this.gameObject.activeSelf); //False（非表示状態）
@@ -1094,6 +1095,7 @@ public class Sphere001 : MonoBehaviour { //thisは省略可
 		}
 	}
 }
+```
 
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
