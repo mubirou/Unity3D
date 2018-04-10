@@ -1372,8 +1372,7 @@ public class Toggle001 : MonoBehaviour {
 
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
-1. トグルボタンのチェックをON/OFFするとni
- "HOGEが✔されました" または "HOGEの✔が外されました" が出力されたら成功。  
+1. トグルボタンをON/OFFすると "HOGEが✔されました" または "HOGEの✔が外されました" が出力されたら成功。  
 ![020](https://takashinishimura.github.io/Unity/examples/jpg/020.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
