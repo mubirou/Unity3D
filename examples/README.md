@@ -969,3 +969,67 @@ public class Sphere001 : MonoBehaviour { //thisは省略可
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
 作成日：2018年04月10日
+
+
+<a name="オブジェクトの生成"></a>
+# <b>016 オブジェクトの生成</b>
+
+### 空のゲームオブジェクトを作成
+1. [GameObject]-[Create Empty] を選択。
+1. [Inspector] ウィンドウで、名前を "GameObject" から "God" に変更。
+
+### C#ファイルの作成
+1. [Assets]-[Create]-[C# Script] を選択。
+1. 名前を "NewBehaviourScript" から "Main" に変更。
+    * 同時に (プロジェクト名)/Assets/Main.cs が生成されます。
+1. 上記で作成した "God" の [Inspector]-[Add Component] エリアに上記のC#（Main）をドラッグ＆ドロップ。
+
+### C#の記述
+1. VSCode等のエディタで "Main.cs" を開きます。
+1. 次のように書き換えて保存。
+* 今回は次の21個のGameObjectを生成。座標は次の通りにします。  
+[-3,0,50] [0,0,50] [3,0,50]  
+[-3,0,40] [0,0,40] [3,0,40]  
+[-3,0,30] [0,0,30] [3,0,30]  
+[-3,0,20] [0,0,20] [3,0,20]  
+[-3,0,10] [0,0,10] [3,0,10]  
+[-3,0,0] [0,0,0] [3,0,0]  
+[-3,0,-10] [0,0,-10] [3,0,-10]
+
+```
+//Main.cs
+using UnityEngine;
+using System.Collections.Generic; //Listに必要
+
+public class Main : MonoBehaviour { //Update()は省略
+	private List<GameObject> _list = new List<GameObject>();
+
+	void Start () { // Use this for initialization
+		GameObject _theObject;
+		for (int i=0; i<7; i++) { //縦に7列
+			for (int j=0; j<3; j++) { //横に3列
+				//①Sphere ②Capsule ③Cylinder ④Cube ⑤Planeの5種類あり
+				_theObject = GameObject.CreatePrimitive(PrimitiveType.Cube);
+				//削除する場合はGameObject.Destroy(_theObject [,秒])
+
+				_list.Add(_theObject);
+
+				int _x = -3 + j*3; //-3,0,3
+				int _z = 50 - i*10; //50,40,30,20,10,0,-10
+
+				Vector3 _vector = new Vector3(_x, 0, _z);
+				_theObject.transform.position = _vector; //位置を設定
+			}
+		}
+	}
+}
+```
+
+### 実行
+1. [再生] ボタンまたは [Edit]-[Play] を選択。
+1. 縦7列、横3列の立方体が生成されたら成功。  
+![016](https://takashinishimura.github.io/Unity/examples/jpg/016.jpg)
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月10日
