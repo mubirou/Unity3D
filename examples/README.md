@@ -1426,7 +1426,7 @@ public class Toggle001 : MonoBehaviour {
 1. [Build Settings] 画面で [Add Open Scenes] をクリック。
 1. ①Scene01.unityと②Scene02.unityを追加します。
 	* 順番が重要（ドラックで順序を変更できます）。
-1. ウィンドウを閉じます。
+1. ウィンドウを閉じます。  
  ![021_3](https://takashinishimura.github.io/Unity/examples/jpg/021_3.jpg)
 
 ### C#の記述（シーン１のメインクラス）
