@@ -1296,3 +1296,86 @@ public class Button01 : MonoBehaviour {
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
 作成日：2018年04月10日
+
+
+<a name="トグルボタン"></a>
+# <b>020 トグルボタン</b>
+
+### トグルボタンの作成
+1. [GameObject]-[UI]-[Toggle] を選択（名前を "Toggle001" に変更）。
+1. [Hierarchy] の [Canvas]-[Toggle001]-[Label] を選択し、[Inspector] の [Text] の値を変更（任意）。
+	* ダブルバイト文字は不可。
+
+### C#ファイルの作成
+1. [Assets]-[Create]-[C# Script] を選択。
+1. 名前を "NewBehaviourScript" から "Toggle001" に変更。
+    * 同時に (プロジェクト名)/Assets/Toggle001.cs が生成されます。
+1. 上記で作成した "God" の [Inspector]-[Add Component] エリアに上記のC#（Toggle001）をドラッグ＆ドロップ。
+
+### C#の追加
+1. VSCode等のエディタで "Toggle001.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Toggle001 : MonoBehaviour {
+
+	// Use this for initialization
+	void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+
+	public void OnToggleChanged() {} //←この1行だけ追加
+}
+```
+
+### トグルボタンと "OnToggleChanged()" メソッドのリンク
+* 少し理解しにくい操作です。
+1. [Hierarchy] の "Toggle001" を選択。
+1. [Inspector] の [On Value Changed] にある [+] をクリック。
+1. [None(Object)] の [⦿] をクリック。
+1. [Scene]から、上記で作成した "Toggle001"（GameObject）を選択。
+1. [No Function] をクリック→ [Toggle001]-[OnToggleChanged()] を選択。
+	* [No Function] が [Toggle001.OnToggleChanged] になっていればOKです。
+
+### C#の記述
+1. VSCode等のエディタで再度 "Toggle001.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Toggle001.cs
+using UnityEngine;
+using UnityEngine.UI; //Toggleに必要
+
+public class Toggle001 : MonoBehaviour {
+	void Start () { //不要
+	}
+
+	void Update () { //不要
+	}
+
+	public void OnToggleChanged() { //thisは省略可
+		if (this.GetComponent<Toggle>().isOn) {
+			Debug.Log("HOGEが✔されました");
+		} else {
+			Debug.Log("HOGEの✔が外されました");
+		}
+	}
+}
+```
+
+### 実行
+1. [再生] ボタンまたは [Edit]-[Play] を選択。
+1. トグルボタンのチェックをON/OFFするとni
+ "HOGEが✔されました" または "HOGEの✔が外されました" が出力されたら成功。  
+![020](https://takashinishimura.github.io/Unity/examples/jpg/020.jpg)
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月10日
