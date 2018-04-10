@@ -22,7 +22,7 @@
 |014|[パーティクル](#パーティクル)|任意の操作でパーティクルを発生させる|
 |015|[ハロー](#ハロー)|任意の操作でハローを表示させる|
 |016|[オブジェクトの生成](#オブジェクトの生成)|たくさんの立方体を生成|
-|017|[オブジェクトを消す](#オブジェクトを消す)|XXXXXXXXXXXXXXXXXXXXXX|
+|017|[オブジェクトを消す](#オブジェクトを消す)|任意の操作でオブジェクトを半透明や非表示にする|
 |018|[スライダー](#スライダー)|XXXXXXXXXXXXXXXXXXXXXX|
 |019|[ボタン](#ボタン)|XXXXXXXXXXXXXXXXXXXXXX|
 |020|[トグルボタン](#トグルボタン)|XXXXXXXXXXXXXXXXXXXXXX|
@@ -1029,6 +1029,76 @@ public class Main : MonoBehaviour { //Update()は省略
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. 縦7列、横3列の立方体が生成されたら成功。  
 ![016](https://takashinishimura.github.io/Unity/examples/jpg/016.jpg)
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月10日
+
+
+<a name="オブジェクトを消す"></a>
+# <b>017 オブジェクトを消す</b>
+
+### 1つめのボール作成
+1. [GameObject]-[3D Object]-[Sphere] を選択。
+1. [Inspector] ウィンドウで、名前を "Sphere" から "Sphere001" に変更。
+1. [Transform] を次のように変更。
+    * Scale X:3 Y:3 Z:3
+
+### 1つめのボールにマテリアルを追加
+1. [Assets]-[Create]-[Material]を選択（名前は "Material001" に変更）。[Albedo] を赤に変更。
+1. [Hierarchy] の "Sphere001" を選択。
+1. [Add Component]エリアに、上記で作成したAssets内のマテリアル（"Material001"）をドラッグ＆ドロップ。
+1. [Inspector]-[Material001] の値を次の通りに変更
+* Rendering Mode: Transparent（初期値は "Opaque"）
+
+### 2つめのボール作成
+1. 同様にもう1つ、"Sphere002" を作成。
+1. [Transform] を次のように変更。
+	* Position Position X:2 Y:0 Z:3
+	* Scale X:3 Y:3 Z:3
+
+### C#ファイルの作成
+1. [Assets]-[Create]-[C# Script] を選択。
+1. 名前を "NewBehaviourScript" から "Sphere001" に変更。
+    * 同時に (プロジェクト名)/Assets/Sphere001.cs が生成されます。
+1. 上記で作成した "Sphere001" の [Inspector]-[Add Component] エリアに上記のC#（Sphere001）をドラッグ＆ドロップ。
+
+### C#の記述
+1. VSCode等のエディタで "Sphere001.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Sphere01.cs
+using UnityEngine;
+
+public class Sphere001 : MonoBehaviour { //thisは省略可
+	void Start() {
+		Debug.Log(this.gameObject.activeSelf); //True（表示状態）
+	}
+
+	void Update() {
+		if (Input.GetMouseButtonDown(0)) {
+			Ray _ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+			RaycastHit _hit = new RaycastHit();
+
+			if (Physics.Raycast(_ray, out _hit, 100f)) {
+				if (_hit.collider.gameObject.name == "Sphere001") { //Sphere01をクリックしたら
+					// 非表示にする場合
+					//this.gameObject.SetActive(false); //非表示にする
+					//Debug.Log(this.gameObject.activeSelf); //False（非表示状態）
+
+					// 半透明にする場合 
+					this.gameObject.GetComponent<Renderer>().material.color
+					= new Color(1, 0, 0, 0); //0.0fにしても完全には消えません
+				}
+			}
+		}
+	}
+}
+
+### 実行
+1. [再生] ボタンまたは [Edit]-[Play] を選択。
+1. 赤いボールを選択して半透明（または非表示）になったら成功。  
+![017](https://takashinishimura.github.io/Unity/examples/jpg/017.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
