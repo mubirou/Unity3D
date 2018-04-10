@@ -1105,3 +1105,117 @@ public class Sphere001 : MonoBehaviour { //thisは省略可
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
 作成日：2018年04月10日
+
+
+<a name="スライダー"></a>
+# <b>018 スライダー</b>
+
+### 3つのスライダーの作成
+1. [GameObject]-[UI]-[Slider] を選択（名前を"SliderR"に変更）。
+1. [Inspector] ウィンドウで、設定を次の通りにします。
+1. [Transform] を次のように変更。
+	* Pos X: 0、PosY: -100、PosZ: 0
+	* Width: 200、Height: 20
+1. [Hierarchy] の "SliderR" を [右クリック]→[Copy]→[Paste]。
+1. 名前を "SliderG" に変更。同じように次のように設定します。
+	* Pos X: 0、PosY: -130、PosZ: 0
+	* Width: 200、Height: 20
+5. 同様に "SliderB" を作成。設定は次の通り。
+	* Pos X: 0、PosY: -160、PosZ: 0
+	* Width: 200、Height: 20
+
+### ボール作成
+1. [GameObject]-[3D Object]-[Sphere] を選択。
+1. [Inspector] ウィンドウで、名前を "Sphere" から "Sphere001" に変更。
+1. [Transform] を次のように変更。
+    * Position X:0 Y:0.5 Z:0
+
+### ボールにマテリアルを追加
+1. [Assets]-[Create]-[Material] を選択（名前は "Material001" に変更）。[Albedo] を黒に変更。
+1. [Hierarchy] の "Sphere001" を選択。
+1. [Add Component]エリアに、上記で作成したAssets内のマテリアル（"Material001"）をドラッグ＆ドロップ。
+
+### 空のゲームオブジェクトを作成
+1. [GameObject]-[Create Empty] を選択。
+1. [Inspector] ウィンドウで、名前を "GameObject" から "God" に変更。
+
+### C#ファイルの作成
+1. [Assets]-[Create]-[C# Script] を選択。
+1. 名前を "NewBehaviourScript" から "Main" に変更。
+    * 同時に (プロジェクト名)/Assets/Main.cs が生成されます。
+1. 上記で作成した "God" の [Inspector]-[Add Component] エリアに上記のC#（Main）をドラッグ＆ドロップ。
+
+### C#の変更
+1. VSCode等のエディタで "Main.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Main : MonoBehaviour {
+
+	// Use this for initialization
+	void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+
+	public void OnSliderChanged() {} //←この1行だけ追加
+}
+```
+
+### スライダーとOnSliderChanged()メソッドのリンク
+* 少し理解しにくい操作です。
+1. [Hierarchy] の "SliderR" を選択。
+1. [Inspector] の [On Value Changed] にある [+] をクリック。
+1. [None(Object)] の [⦿] をクリック。
+1. [Scene]から、上記で作成した "God"（GameObject）を選択。
+1. [No Function] をクリック→ [Main]-[OnSliderChanged()] を選択。
+	* [No Function] が [Main.OnSliderChanged] になっていればOKです。
+1. 上記の作業を、"SliderG" と "SliderB" に対しても行ないます。
+
+### C#の記述
+1. VSCode等のエディタで再度 "Main.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Main.cs
+using UnityEngine;
+using UnityEngine.UI; //Sliderに必要
+
+public class Main : MonoBehaviour {
+	private Slider _sliderR, _sliderG, _sliderB;
+	private GameObject _sphere01;
+
+	void Start () {
+		_sphere01 = GameObject.Find("Sphere001");
+		_sliderR = GameObject.Find("SliderR").GetComponent<Slider>();
+		_sliderG = GameObject.Find("SliderG").GetComponent<Slider>();
+		_sliderB = GameObject.Find("SliderB").GetComponent<Slider>();
+	}
+
+	void Update () { //不要
+	}
+
+	// 何れかのスライダーを動かした時...
+	public void OnSliderChanged() {
+		float _R = _sliderR.value;
+		float _G = _sliderG.value;
+		float _B = _sliderB.value;
+		_sphere01.GetComponent<Renderer>().material.color = new Color(_R, _G, _B);
+	}
+}
+```
+
+### 実行
+1. [再生] ボタンまたは [Edit]-[Play] を選択。
+1. スライダーバーを動かすとボールの色が変化すれば成功。  
+![018](https://takashinishimura.github.io/Unity/examples/jpg/018.jpg)
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月10日
