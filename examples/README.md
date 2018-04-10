@@ -26,7 +26,7 @@
 |018|[スライダー](#スライダー)|UIのスライダーを使ってオブジェクとの色を変更|
 |019|[ボタン](#ボタン)|UIのボタンを使う|
 |020|[トグルボタン](#トグルボタン)|UIのトグルボタンを使う|
-|021|[シーンの移動](#シーンの移動)|XXXXXXXXXXXXXXXXXXXXXX|
+|021|[シーンの移動](#シーンの移動)|任意の操作でシーンを移動させる|
 |022|[シーン移動時にGameObjectを残す](#シーン移動時にGameObjectを残す)|XXXXXXXXXXXXXXXXXXXXXX|
 |023|[他人のメソッドの実行①](#他人のメソッドの実行①)|XXXXXXXXXXXXXXXXXXXXXX|
 |024|[他人のメソッドの実行②](#他人のメソッドの実行②)|XXXXXXXXXXXXXXXXXXXXXX|
@@ -1378,3 +1378,103 @@ public class Toggle001 : MonoBehaviour {
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
 作成日：2018年04月10日
+
+
+<a name="シーンの移動"></a>
+# <b>021 シーンの移動</b>
+
+### シーン１の作成
+1. [File]-[Save Scene] を選択。名前は "Scene001"。
+	* 同時に(Project name)/Assets/内に "Scene001.unity" ファイルが生成されます。
+
+### シーン１に床を配置
+1. [GameObject]-[3D Object]-[Plane] を選択。
+1. [Assets]-[Create]-[Material] を選択（名前は"Red"）。
+1. [Inspector]-[Albedo] を赤に変更。
+1. [Hierarchy] の Plane を選択。
+1. [Add Component] エリアに、上記で作成したAssets内のマテリアル（"Red"）をドラッグ＆ドロップ。
+
+### シーン１のメインクラスを作成
+1. [GameObject]-[Create Empty] を選択（名前は "God" に変更）。
+1. [Assets]-[Create]-[C# Script] を選択。すかさず名前を "Scene001" に変更。
+	* "Scene001.cs" ファイルが "Scene001" のメインクラスとなります。
+1. "God"（GameObject）の [Inspector]-[Add Component] エリアに上記の "Scene001"（C#）をドラッグ＆ドロップ。  ![021_1](https://takashinishimura.github.io/Unity/examples/jpg/021_1.jpg)
+
+### シーン２の作成
+1. [File]-[New Scene] を選択。
+1. [File]-[Save Scene] を選択。名前は "Scene002"。
+	* 同時に(Project name)/Assets/内に "Scene002.unity" ファイルが生成されます。
+
+### シーン２に床を配置
+1. [GameObject]-[3D Object]-[Plane] を選択。
+1. [Assets]-[Create]-[Material] を選択（名前は"Blue"）。
+1. [Inspector]-[Albedo] を青に変更。
+1. [Hierarchy] の Plane を選択。
+1. [Add Component] エリアに、上記で作成したAssets内のマテリアル（"Blue"）をドラッグ＆ドロップ。
+
+### シーン２のメインクラスを作成
+1. [GameObject]-[Create Empty] を選択（名前は "God" に変更）。
+1. [Assets]-[Create]-[C# Script] を選択。すかさず名前を "Scene002" に変更。
+	* "Scene002.cs" ファイルが "Scene002" のメインクラスとなります。
+1. "God"（GameObject）の [Inspector]-[Add Component] エリアに上記の "Scene002"（C#）をドラッグ＆ドロップ。  ![021_2](https://takashinishimura.github.io/Unity/examples/jpg/021_2.jpg)
+
+### 各シーンの登録
+1. [File]-[Build Settings...] を選択。
+1. [Assets]-[Scene001] を選択。
+1. [Build Settings] 画面で [Add Open Scenes] をクリック。
+1. [Assets]-[Scene002] を選択。
+1. [Build Settings] 画面で [Add Open Scenes] をクリック。
+1. ①Scene01.unityと②Scene02.unityを追加します。
+	* 順番が重要（ドラックで順序を変更できます）。
+1. ウィンドウを閉じます。
+ ![021_3](https://takashinishimura.github.io/Unity/examples/jpg/021_3.jpg)
+
+### C#の記述（Scene001.cs）
+1. VSCode等のエディタで "Scene001.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Scene001.cs
+using UnityEngine;
+
+public class Scene001 : MonoBehaviour {
+	void Start () { //不要
+	}
+
+	void Update () {
+		if (Input.GetKeyDown(KeyCode.Space)) {
+			Debug.Log(Application.loadedLevelName); //Scene001
+			Application.LoadLevel("Scene002");
+			//Application.LoadLevel(1); //1番目のシーンに移動（上記と同じ動作）
+		}
+	}
+}
+```
+
+### C#の記述（Scene002.cs）
+1. VSCode等のエディタで "Scene002.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Scene002.cs
+using UnityEngine;
+
+public class Scene002 : MonoBehaviour {
+	void Start () { //不要
+	}
+
+	void Update () {
+		if (Input.GetKeyDown(KeyCode.Space)) {
+			Debug.Log(Application.loadedLevelName); //Scene002
+			Application.LoadLevel("Scene001");
+			//Application.LoadLevel(0); //0番目のシーンに移動（上記と同じ動作）
+		}
+	}
+}
+```
+
+### 実行
+1. [再生] ボタンまたは [Edit]-[Play] を選択。
+1. スペースキーを押すと "Scene001" と "Scene002" が入れ替われば成功。
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月11日
