@@ -28,7 +28,7 @@
 |020|[トグルボタン](#トグルボタン)|UIのトグルボタンを使う|
 |021|[シーンの移動](#シーンの移動)|任意の操作でシーンを移動させる|
 |022|[シーン移動時にオブジェクトを残す](#シーン移動時にオブジェクトを残す)|シーン移動時にオブジェクトを残す|
-|023|[他人のメソッドの実行①](#他人のメソッドの実行①)|XXXXXXXXXXXXXXXXXXXXXX|
+|023|[他人のメソッドの実行①](#他人のメソッドの実行①)|他のオブジェクトにアタッチされたメソッドを実行|
 |024|[他人のメソッドの実行②](#他人のメソッドの実行②)|XXXXXXXXXXXXXXXXXXXXXX|
 |025|[データの保存](#データの保存)|XXXXXXXXXXXXXXXXXXXXXX|
 |026|[GameObjectの入れ子](#GameObjectの入れ子)|XXXXXXXXXXXXXXXXXXXXXX|
@@ -1570,6 +1570,67 @@ public class Scene002 : MonoBehaviour {
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. スペースキーでシーンを移動後も立方体が残れば成功（再度シーン１に戻ると立方体が2つ重なる）。  
  ![022](https://takashinishimura.github.io/Unity/examples/jpg/022.jpg)
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月11日
+
+
+<a name="他人のメソッドの実行①"></a>
+# <b>023 他人のメソッドの実行①</b>
+
+### オブジェクト（立方体）の作成
+1. [GameObject]-[3D Object]-[Cube] を選択。名前は "Cube001" に変更。
+1. [Assets]-[Create]-[C# Script]を選択。すかさず名前を "Cube001" に変更。
+	* 同時に(Project name)/Assets/内に "Cube001.cs" ファイルが生成されます。
+1. [Hierarchy]-[Cube001] の [Inspector] の [Add Component] エリアへ、[Assets]-[Cube001]（C#）をドラッグ＆ドロップ。
+
+### オブジェクト（God）の作成
+1. [GameObject]-[Create Empty] を選択（名前は "God" に変更）。
+1. [Assets]-[Create]-[C# Script] を選択。すかさず名前を "Main" に変更。
+	* 同時に(Project name)/Assets/内に "Main.cs" ファイルが生成されます。
+1. [Hierarchy]-[God] の [Inspector] の [Add Component] エリアへ、[Assets]-[Main]（C#）をドラッグ＆ドロップ。
+
+### C#の記述（Cube001.cs）
+1. VSCode等のエディタで再度 "Cube001.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Cube001.cs
+using UnityEngine;
+
+public class Cube001 : MonoBehaviour {
+	void Start () {
+		//①Cube01からGameMamagerのメソッド（Request()）を実行（引数は2つまで）
+		GameObject.Find("God").SendMessage("Request", this.gameObject);
+	}
+
+	public void Message(string arg) { 
+		Debug.Log(arg); //"Hello,Cube001"
+	}
+}
+```
+
+### C#の記述（Main.cs）
+1. VSCode等のエディタで再度 "Main.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Main.cs
+using UnityEngine;
+
+public class Main : MonoBehaviour {
+	void Start () { //不要
+	}
+
+	public void Request(GameObject arg) {
+		//②GodからCube001のメソッドを実行（引数は2つまで）
+		arg.SendMessage("Message", "Hello," + arg.name);
+	}
+}
+```
+
+### 実行
+1. [再生] ボタンまたは [Edit]-[Play] を選択。
+1. オブジェクト（God）からオブジェクト（Cube001）のメソッド（Message）を呼び出すことで、Consoleに "Hello,Cube001" と表示されたら成功。
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
