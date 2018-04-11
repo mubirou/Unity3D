@@ -28,8 +28,8 @@
 |020|[トグルボタン](#トグルボタン)|UIのトグルボタンを使う|
 |021|[シーンの移動](#シーンの移動)|任意の操作でシーンを移動させる|
 |022|[シーン移動時にオブジェクトを残す](#シーン移動時にオブジェクトを残す)|シーン移動時にオブジェクトを残す|
-|023|[他人のメソッドの実行①](#他人のメソッドの実行①)|他のオブジェクトにアタッチされたメソッドを実行|
-|024|[他人のメソッドの実行②](#他人のメソッドの実行②)|XXXXXXXXXXXXXXXXXXXXXX|
+|023|[他人のメソッドの実行①](#他人のメソッドの実行①)|他のオブジェクトのメソッドを実行する（引数2個まで）|
+|024|[他人のメソッドの実行②](#他人のメソッドの実行②)|他人のオブジェクトのメソッドを実行する（引数3個以上）|
 |025|[データの保存](#データの保存)|XXXXXXXXXXXXXXXXXXXXXX|
 |026|[GameObjectの入れ子](#GameObjectの入れ子)|XXXXXXXXXXXXXXXXXXXXXX|
 |027|[キョロキョロ](#キョロキョロ)|XXXXXXXXXXXXXXXXXXXXXX|
@@ -1603,7 +1603,7 @@ using UnityEngine;
 
 public class Cube001 : MonoBehaviour {
 	void Start () {
-		//①Cube01からGameMamagerのメソッド（Request()）を実行（引数は2つまで）
+		//①Cube01からMainのメソッド（Request()）を実行（引数は2つまで）
 		GameObject.Find("God").SendMessage("Request", this.gameObject);
 	}
 
@@ -1644,3 +1644,53 @@ public class Main : MonoBehaviour {
 # <b>024 他人のメソッドの実行②</b>
 
 * 呼び出すメソッドの引数は「2つ」までの場合、「[023 他人のメソッドの実行①](#他人のメソッドの実行①)」の方が簡単です。
+* 「[023 他人のメソッドの実行①](#他人のメソッドの実行①)」の「C#の記述」の部分のみ変更します。
+
+### C#の記述（Cube001.cs）
+1. VSCode等のエディタで再度 "Cube001.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Cube001.cs
+using UnityEngine;
+using UnityEngine.EventSystems; //ExecuteEvents.Executeに必要
+
+public class Cube001 : MonoBehaviour {
+	void Start () {
+		//Cube001からMainのメソッド（Request()）を実行（引数は2つ以上も可）
+		ExecuteEvents.Execute<IHoge>(
+				target: GameObject.Find("God"), //対象のGameObject
+				eventData: null, //決め打ち
+				functor: (target, eventData) //決め打ち（引数名は任意）
+				=> target.Request(this.gameObject, "TAKASHI", 50)
+		);
+	}
+}
+```
+
+### C#の記述（Main.cs）
+1. VSCode等のエディタで再度 "Main.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Main.cs
+using UnityEngine;
+using UnityEngine.EventSystems; //ExecuteEvents.Executeに必要
+
+public interface IHoge : IEventSystemHandler { //インターフェースの宣言
+	void Request(GameObject arg1, string arg2, int arg3); //暗黙的にpublicになる
+}
+
+public class Main : MonoBehaviour, IHoge { //インターフェースの実装
+	public void Request(GameObject arg1, string arg2, int arg3) {
+		Debug.Log(arg1); //Cube001 (UnityEngine.GameObject)
+		Debug.Log(arg2 + ":" + arg3); //"TAKASHI:50"
+	}
+}
+```
+
+### 実行
+1. [再生] ボタンまたは [Edit]-[Play] を選択。
+1. オブジェクト（God）からオブジェクト（Cube001）のメソッド（Message）を呼び出すことで、Consoleに "Cube001"、"TAKASHI:50" と表示されたら成功。
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月12日
