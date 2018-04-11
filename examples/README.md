@@ -1633,7 +1633,7 @@ public class Main : MonoBehaviour {
 
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
-1. オブジェクト（God）からオブジェクト（Cube001）のメソッド（Message）を呼び出すことで、Consoleに "Hello,Cube001" と表示されたら成功。
+1. オブジェクト（Cube001）とオブジェクト（God）間でメソッドを呼び出すことで、Consoleに "Hello,Cube001" と表示されたら成功。
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
@@ -1656,7 +1656,7 @@ using UnityEngine.EventSystems; //ExecuteEvents.Executeに必要
 
 public class Cube001 : MonoBehaviour {
 	void Start () {
-		//Cube001からMainのメソッド（Request()）を実行（引数は2つ以上も可）
+		//Cube001からMainのメソッド（Request）を実行（引数は2つ以上も可）
 		ExecuteEvents.Execute<IHoge>(
 				target: GameObject.Find("God"), //対象のGameObject
 				eventData: null, //決め打ち
@@ -1689,7 +1689,7 @@ public class Main : MonoBehaviour, IHoge { //インターフェースの実装
 
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
-1. オブジェクト（God）からオブジェクト（Cube001）のメソッド（Message）を呼び出すことで、Consoleに "Cube001"、"TAKASHI:50" と表示されたら成功。
+1. オブジェクト（Cube001）からオブジェクト（God）のメソッド（Request）を呼び出すことで、Consoleに "Cube001"、"TAKASHI:50" と表示されたら成功。
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
