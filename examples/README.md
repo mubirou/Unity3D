@@ -1483,4 +1483,94 @@ public class Scene002 : MonoBehaviour {
 <a name="シーン移動時にGameObjectを残す"></a>
 # <b>022 シーン移動時にGameObjectを残す</b>
 
-* 「[021 シーンの移動](#シーンの移動)」を継承します。
+* 「[022 シーンの移動](#シーンの移動)」を継承します。
+
+### シーン移動後に残るオブジェクトの作成
+1. [Assets] の "Scene001" をダブルクリック。
+1. [GameObject]-[3D Object]-[Cube] を選択（名前を "Cube001" に変更）。
+1. [Inspector] の設定を変更。
+	* Position X:3 Y:1 Z:0
+
+### 上記のオブジェクトに動きと色を追加
+1. [Assets]-[Create]-[C# Script]を選択。すかさず名前を "Cube001" に変更。
+1. [Hierarchy]-[Cube001] の [Inspector]-[Add Component] エリアに [Assets]-[Cube001]（C#）をドラッグ＆ドロップ。
+1. VSCodeを起動し "(Project name)/Assets/Cube001.cs" を開き、以下のようにコーディング。
+	* 動きと色を付けることで検証しやすくします。
+```
+//Cube001.cs
+using UnityEngine;
+
+public class Cube001 : MonoBehaviour { //thisは省略可
+	private int _speedX, _speedY, _speedZ;
+
+	void Start () { // Use this for initialization
+		_speedX = Random.Range(-3,3);
+		_speedY = Random.Range(-3,3);
+		_speedZ = Random.Range(-3,3);
+		this.GetComponent<Renderer>().material.color 
+		= new Color(Random.value, Random.value, Random.value); //ランダムに着色
+	}
+	
+	void Update () { // Update is called once per frame
+		this.transform.Rotate(new Vector3(_speedX,_speedY,_speedZ)); //ランダムに回転
+	}
+}
+```
+
+### C#の記述（シーン１のメインクラス）
+1. VSCode等のエディタで "Scene001.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Scene001.cs
+using UnityEngine;
+
+public class Scene001 : MonoBehaviour {
+	private GameObject _cube001;
+
+	void Start () {
+		_cube001 = GameObject.Find("Cube001");
+		DontDestroyOnLoad(_cube001); //シーンを移動しても"Cube01"を残す
+	}
+	
+	void Update () {
+		if (Input.GetKeyDown(KeyCode.Space)) {
+			Application.LoadLevel("Scene002"); //シーン"Scene02"へ移動
+		}
+	}
+	
+	void OnDestroy () {
+		//Destroy(_cube001); //"Cube001"を残さず消す場合…
+	}
+}
+```
+
+### C#の記述（シーン２のメインクラス）
+1. VSCode等のエディタで "Scene002.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Scene002.cs
+using UnityEngine;
+
+public class Scene002 : MonoBehaviour {
+
+	void Start () {
+		//前シーンから残った"Cube001"を消す（ここでも消すことが可能）
+		//Destroy(GameObject.Find("Cube001"));
+	}
+	
+	void Update () {
+		if (Input.GetKeyDown(KeyCode.Space)) {
+			Application.LoadLevel("Scene001"); //シーン"Scene01"へ移動（戻る）
+		}
+	}
+}
+```
+
+### 実行
+1. [再生] ボタンまたは [Edit]-[Play] を選択。
+1. スペースキーでシーンを移動後も立方体が残れば成功（再度シーンを戻ると立方体が2つ重なる）。  
+ ![022](https://takashinishimura.github.io/Unity/examples/jpg/022.jpg)
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月11日
