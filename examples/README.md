@@ -27,7 +27,7 @@
 |019|[ボタン](#ボタン)|UIのボタンを使う|
 |020|[トグルボタン](#トグルボタン)|UIのトグルボタンを使う|
 |021|[シーンの移動](#シーンの移動)|任意の操作でシーンを移動させる|
-|022|[シーン移動時にGameObjectを残す](#シーン移動時にGameObjectを残す)|XXXXXXXXXXXXXXXXXXXXXX|
+|022|[シーン移動時にオブジェクトを残す](#シーン移動時にオブジェクトを残す)|シーン移動時にオブジェクトを残す|
 |023|[他人のメソッドの実行①](#他人のメソッドの実行①)|XXXXXXXXXXXXXXXXXXXXXX|
 |024|[他人のメソッドの実行②](#他人のメソッドの実行②)|XXXXXXXXXXXXXXXXXXXXXX|
 |025|[データの保存](#データの保存)|XXXXXXXXXXXXXXXXXXXXXX|
@@ -1480,8 +1480,8 @@ public class Scene002 : MonoBehaviour {
 作成日：2018年04月11日
 
 
-<a name="シーン移動時にGameObjectを残す"></a>
-# <b>022 シーン移動時にGameObjectを残す</b>
+<a name="シーン移動時にオブジェクトを残す"></a>
+# <b>022 シーン移動時にオブジェクトを残す</b>
 
 * 「[022 シーンの移動](#シーンの移動)」を継承します。
 
@@ -1568,7 +1568,7 @@ public class Scene002 : MonoBehaviour {
 
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
-1. スペースキーでシーンを移動後も立方体が残れば成功（再度シーンを戻ると立方体が2つ重なる）。  
+1. スペースキーでシーンを移動後も立方体が残れば成功（再度シーン１に戻ると立方体が2つ重なる）。  
  ![022](https://takashinishimura.github.io/Unity/examples/jpg/022.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
