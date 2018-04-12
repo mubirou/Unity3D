@@ -1786,9 +1786,8 @@ public class Main : MonoBehaviour {
 	* Position X: -2 Y: 0.6 Z: -2（"Cube004"）
 
 ### 入れ子（ネスト）化
-* 上記の床と4つの立方体を、空のGameObjectに入れます。
-1. [GameObject]-[Create Empty] を選択（名前は "Cubes" に変更）。
-1. [Hierarchy]-[Cubes] の階層下に "Plane001" およびと "Cube001" 〜 "Cube004" をドラッグ＆ドロップで移動します。  
+* 上記の4つの立方体を、床（"Plane001"）の入れ子とします。
+1. [Hierarchy]-[Plane001] の階層下に "Cube001" 〜 "Cube004" をドラッグ＆ドロップで移動します。  
 ![026_1](https://takashinishimura.github.io/Unity/examples/jpg/026_1.jpg)
 
 ### 空のゲームオブジェクトを作成
@@ -1813,8 +1812,8 @@ public class Main : MonoBehaviour {
 	private GameObject _cube001; //赤のCube001
 
 	void Start () {
-		_cubes = GameObject.Find("Cubes"); //各GameObjectの上位の空のGameObject
-		_cube001 = _cubes.transform.Find("Cube001").gameObject; //入れ子のXXを検索
+		_cubes = GameObject.Find("Plane001"); //床
+		_cube001 = _cubes.transform.Find("Cube001").gameObject; //入れ子の赤い立方体を検索
 	}
 
 	void Update () { //全体が回転しても赤のCube001だけ正面を向かせる
