@@ -30,7 +30,7 @@
 |022|[シーン移動時にオブジェクトを残す](#シーン移動時にオブジェクトを残す)|シーン移動時にオブジェクトを残す|
 |023|[他人のメソッドの実行①](#他人のメソッドの実行①)|他のオブジェクトのメソッドを実行する（引数1個まで）|
 |024|[他人のメソッドの実行②](#他人のメソッドの実行②)|他のオブジェクトのメソッドを実行する（引数2個以上）|
-|025|[データの保存](#データの保存)|XXXXXXXXXXXXXXXXXXXXXX|
+|025|[データの保存](#データの保存)|任意の操作でデータ（整数値･浮動小数点数･文字列）を保存|
 |026|[GameObjectの入れ子](#GameObjectの入れ子)|XXXXXXXXXXXXXXXXXXXXXX|
 |027|[キョロキョロ](#キョロキョロ)|XXXXXXXXXXXXXXXXXXXXXX|
 |028|[クローン作成](#クローン作成)|XXXXXXXXXXXXXXXXXXXXXX|
@@ -1690,6 +1690,76 @@ public class Main : MonoBehaviour, IHoge { //インターフェースの実装
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. オブジェクト（Cube001）からオブジェクト（God）のメソッド（Request）を呼び出すことで、Consoleに "Cube001"、"TAKASHI:50" と表示されたら成功。
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月12日
+
+
+
+
+
+
+
+<a name="データの保存"></a>
+# <b>025 データの保存</b>
+
+### 空のゲームオブジェクトを作成
+1. [GameObject]-[Create Empty] を選択。
+1. [Inspector] ウィンドウで、名前を "GameObject" から "God" に変更。
+
+### C#ファイルの作成
+1. [Assets]-[Create]-[C# Script] を選択。
+1. 名前を "NewBehaviourScript" から "Main" に変更。
+    * 同時に (プロジェクト名)/Assets/Main.cs が生成されます。
+1. 上記で作成した "God" の [Inspector]-[Add Component] エリアに上記のC#（Main）をドラッグ＆ドロップ。
+
+### C#の記述
+1. VSCode等のエディタで "Main.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Main.cs
+using UnityEngine;
+
+public class Main : MonoBehaviour {
+	private int _highscore;
+	private int _count = 0;
+
+	void Start () { 
+		// 起動時にデータを読込む
+		_highscore = PlayerPrefs.GetInt("highscore"); //①整数型の場合
+		//②文字型の場合→ PlayerPrefs.GetString("name");
+		//③浮動小数点型の場合→ PlayerPrefs.GetFloat("version");
+		
+		Debug.Log("これまでの最高記録:" + _highscore);
+	}
+
+	void Update () {
+		if (Input.GetKeyDown(KeyCode.Space)) {
+			_count ++;
+			Debug.Log("途中経過:" + _count);
+		}
+	}
+
+	void OnDestroy () { //終了時にデータを保存
+		if (_count > _highscore) {
+			_highscore = _count;
+			Debug.Log("最高記録更新です！:" + _highscore);
+		} else {
+			Debug.Log("今回の記録:" + _count);
+		}
+	
+		PlayerPrefs.SetInt("highscore", _highscore); //①整数型の場合
+		
+		//②文字型の場合→ PlayerPrefs.SetString("name", "nishimura");
+		//③浮動小数点型の場合→ PlayerPrefs.SetFloat("version", 5.1f);
+	}
+}
+```
+
+### 実行
+1. [再生] ボタンまたは [Edit]-[Play] を選択。
+1. 再生するとまず "これまでの最高記録:XX" と表示され、スペースキーを押す毎に "途中経過:XX" と1ずつ更新。止めると "今回の記録:XX" または "最高記録更新です！:XXX" と表示されます。再度、再生すると最高記録が更新されているはずです。最高記録は、Unityを終了させるとリセットされます。
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
