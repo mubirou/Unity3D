@@ -32,7 +32,7 @@
 |024|[他人のメソッドの実行②](#他人のメソッドの実行②)|他のオブジェクトのメソッドを実行する（引数2個以上）|
 |025|[データの保存](#データの保存)|任意の操作でデータ（整数値･浮動小数点数･文字列）を保存|
 |026|[GameObjectの入れ子](#GameObjectの入れ子)|オブジェクトの入れ子（ネスト）|
-|027|[キョロキョロ](#キョロキョロ)|XXXXXXXXXXXXXXXXXXXXXX|
+|027|[キョロキョロ](#キョロキョロ)|オブジェクトを任意の方向に向かせる|
 |028|[クローン作成](#クローン作成)|XXXXXXXXXXXXXXXXXXXXXX|
 |029|[数秒後にメソッドを実行](#数秒後にメソッドを実行)|XXXXXXXXXXXXXXXXXXXXXX|
 |030|[二点間の距離](#二点間の距離)|XXXXXXXXXXXXXXXXXXXXXX|
@@ -1831,3 +1831,86 @@ public class Main : MonoBehaviour {
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
 作成日：2018年04月12日
+
+
+<a name="キョロキョロ"></a>
+# <b>027 キョロキョロ</b>
+
+### 立方体１を作成
+1. [GameObject]-[3D Object]-[Cube] を選択。名前は "Cube001" に変更。
+1. [Assets]-[Create]-[C# Script] を選択。すかさず名前を "Cube01" に変更。
+1. [Hierarchy]-[Cube001]-[Cube001] の [Inspector]-[Add Component] エリアに、[Assets]-[Cube001]（C#）をドラッグ＆ドロップ。
+
+### 立方体２を作成
+1. [GameObject]-[3D Object]-[Cube] を選択。名前は "Cube002" に変更。
+1. [Inspector]-[Transform] を次のように変更。
+	* Position X:1.5 Y:0 Z:0
+1. [Assets]-[Create]-[C# Script] を選択。すかさず名前を "Cube02" に変更。
+1. [Hierarchy]-[Cube001]-[Cube002] の [Inspector]-[Add Component] エリアに、[Assets]-[Cube002]（C#）をドラッグ＆ドロップ。
+
+### C#の記述（Cube001.cs）
+1. VSCode等のエディタで "Cube001.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Cube001.cs
+using UnityEngine;
+using System; //Mathに必要
+
+public class Cube001 : MonoBehaviour { //thisは省略可
+	private float _originY, _currentY, _count = 0f;
+
+	void Start () {
+		_originY = _currentY = this.transform.position.y; //GameObjectのY座標位置
+	}
+	void Update () {
+		//上下に行ったり来たり…
+		_count += 0.03f;
+		float _nextY = (float)(3 * Math.Cos(_count) + _originY);
+		float _disY = _nextY - _currentY;
+		this.transform.Translate(0,_disY,0); //移動させたい値（x,y,z）を指定
+		_currentY = this.transform.position.y;
+	}
+}
+```
+
+### C#の記述（Cube002.cs）
+1. VSCode等のエディタで "Cube001.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Cube002.cs
+using UnityEngine;
+
+public class Cube002 : MonoBehaviour { //thisは省略可
+	private GameObject _target; //ターゲットとなるCube001
+
+	void Start () { // Use this for initialization
+		_target = GameObject.Find("Cube001");
+	}
+	void Update () {
+		this.transform.LookAt(_target.transform); //Cube001の方向を向かせる
+	}
+}
+```
+
+### 実行
+1. [再生] ボタンまたは [Edit]-[Play] を選択。
+1. 上下に動く立方体（Cube001）の方向に、もう一つの立方体（Cube002）が向けば成功。  
+![027](https://takashinishimura.github.io/Unity/examples/jpg/027.jpg)
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月12日
+
+
+
+
+
+
+
+
+
+
+
+
+
+
