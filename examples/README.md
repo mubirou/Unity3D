@@ -33,7 +33,7 @@
 |025|[データの保存](#データの保存)|任意の操作でデータ（整数値･浮動小数点数･文字列）を保存|
 |026|[GameObjectの入れ子](#GameObjectの入れ子)|オブジェクトの入れ子（ネスト）|
 |027|[キョロキョロ](#キョロキョロ)|オブジェクトを任意の方向に向かせる|
-|028|[クローン作成](#クローン作成)|XXXXXXXXXXXXXXXXXXXXXX|
+|028|[クローン作成](#クローン作成)|ミサイルのように同じオブジェクトが次々と登場|
 |029|[数秒後にメソッドを実行](#数秒後にメソッドを実行)|XXXXXXXXXXXXXXXXXXXXXX|
 |030|[二点間の距離](#二点間の距離)|XXXXXXXXXXXXXXXXXXXXXX|
 |031|[他のCSファイルの参照](#他のCSファイルの参照)|XXXXXXXXXXXXXXXXXXXXXX|
@@ -1896,6 +1896,78 @@ public class Cube002 : MonoBehaviour { //thisは省略可
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. 上下に動く立方体（Cube001）の方向に、もう一つの立方体（Cube002）が向けば成功。  
 ![027](https://takashinishimura.github.io/Unity/examples/jpg/027.jpg)
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月12日
+
+
+<a name="クローン作成"></a>
+# <b>028 クローン作成</b>
+
+### 立方体を作成
+1. [GameObject]-[3D Object]-[Cube] を選択。名前は "Cube001" に変更。
+1. [Hierarchy]-[Cube001] を選択した状態で [Component]-[Physics]-[Rigidbody] を選択し物理的物体にする。
+
+### GameObjectをPrefabと入れ替える
+1. [Assets]-[Create]-[Prefab]（プレハブ）を選択。名前は "CubePrefab" に変更。
+	* Prefab（プレハブ）とは、オブジェクトを複製する機能です。
+1. 上記で作成した [Hierarchy]-[Cube001] を、[Assets]-[CubePrefab] にドラッグ＆ドロップ。
+	* "CubePrefab"が濃いグレーの矩形で囲まれます。
+1. [Hierarchy]-[Cube001] を削除（今後必要としないため）。
+1. その代わりに [Assets]-[CubePrefab] を [Hierarchy] 内にドラッグ＆ドロップ。
+
+### 床を作成（落下防止用）
+1. [GameObject]-[3D Object]-[Plane] を選択。
+1. [Inspector]-[Transform] を次のように変更。
+	* Position X:0 Y:-0.5 Z:0
+	* Scale X:0.2 Y:1 Z:0.2
+
+### 空のゲームオブジェクトを作成
+1. [GameObject]-[Create Empty] を選択。
+1. [Inspector] ウィンドウで、名前を "GameObject" から "God" に変更。
+
+### C#ファイルの作成
+1. [Assets]-[Create]-[C# Script] を選択。
+1. 名前を "NewBehaviourScript" から "Main" に変更。
+    * 同時に (プロジェクト名)/Assets/Main.cs が生成されます。
+1. 上記で作成した "God" の [Inspector]-[Add Component] エリアに上記のC#（Main）をドラッグ＆ドロップ。
+
+### C#の記述
+1. VSCode等のエディタで "Main.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Main.cs
+using UnityEngine;
+
+public class Main : MonoBehaviour {
+	private GameObject _cubePrefab;
+
+	void Start () {
+		_cubePrefab = GameObject.Find("CubePrefab");
+		_cubePrefab.gameObject.SetActive(false); //非表示にする
+	}
+
+	void Update () {
+		if (Input.GetKeyDown(KeyCode.Space)) {
+			//Instantiate(○, ○.transform.position, ○.transform.rotation)で同位置から...
+			GameObject _cloneCube = Instantiate(_cubePrefab, new Vector3(0,0,0), Quaternion.Euler(0,0,0)) 
+			as GameObject;
+			_cloneCube.gameObject.SetActive(true); //非表示→表示する
+			_cloneCube.transform.GetComponent<Rigidbody>().AddForce(0,500,1000);
+		}
+	}
+}
+```
+
+### カメラの調整
+[Main Camera]-[Transform] を次のように変更。
+* Position X:4 Y:1 Z:-10
+
+### 実行
+1. [再生] ボタンまたは [Edit]-[Play] を選択。
+1. スペースキーを押すとミサイルのように次々と登場すれば成功。  
+![028](https://takashinishimura.github.io/Unity/examples/jpg/028.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
