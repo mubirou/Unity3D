@@ -1827,7 +1827,7 @@ public class Main : MonoBehaviour {
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. 全体が回転しますが、赤い立方体だけが常に正面を向いていたら成功。  
-![026_2](https://takashinishimura.github.io/Unity/examples/jpg/0026_2.jpg)
+![026_2](https://takashinishimura.github.io/Unity/examples/jpg/026_2.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
