@@ -1786,8 +1786,8 @@ public class Main : MonoBehaviour {
 	* Position X: -2 Y: 0.6 Z: -2（"Cube004"）
 
 ### 入れ子（ネスト）化
-* 上記の4つの立方体を、床（"Plane001"）の入れ子とします。
-1. [Hierarchy]-[Plane001] の階層下に "Cube001" 〜 "Cube004" をドラッグ＆ドロップで移動します。  
+1. [Hierarchy]-[Plane001] の階層下に "Cube001" 〜 "Cube004" をドラッグ＆ドロップで移動します。
+	* 上記の4つの立方体を、床（"Plane001"）の入れ子とします。  
 ![026_1](https://takashinishimura.github.io/Unity/examples/jpg/026_1.jpg)
 
 ### 空のゲームオブジェクトを作成
