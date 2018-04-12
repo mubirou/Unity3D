@@ -1788,7 +1788,7 @@ public class Main : MonoBehaviour {
 ### 入れ子（ネスト）化
 * 上記の床と4つの立方体を、空のGameObjectに入れます。
 1. [GameObject]-[Create Empty] を選択（名前は "Cubes" に変更）。
-1. [Hierarchy]-[Cubes] の階層下に "Plane001" およびと "Cube001" 〜 "Cube004" をドラッグ＆ドロップで移動します。
+1. [Hierarchy]-[Cubes] の階層下に "Plane001" およびと "Cube001" 〜 "Cube004" をドラッグ＆ドロップで移動します。  
 ![026_1](https://takashinishimura.github.io/Unity/examples/jpg/026_1.jpg)
 
 ### 空のゲームオブジェクトを作成
