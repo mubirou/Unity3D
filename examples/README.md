@@ -31,7 +31,7 @@
 |023|[他人のメソッドの実行①](#他人のメソッドの実行①)|他のオブジェクトのメソッドを実行する（引数1個まで）|
 |024|[他人のメソッドの実行②](#他人のメソッドの実行②)|他のオブジェクトのメソッドを実行する（引数2個以上）|
 |025|[データの保存](#データの保存)|任意の操作でデータ（整数値･浮動小数点数･文字列）を保存|
-|026|[GameObjectの入れ子](#GameObjectの入れ子)|XXXXXXXXXXXXXXXXXXXXXX|
+|026|[GameObjectの入れ子](#GameObjectの入れ子)|オブジェクトの入れ子（ネスト）|
 |027|[キョロキョロ](#キョロキョロ)|XXXXXXXXXXXXXXXXXXXXXX|
 |028|[クローン作成](#クローン作成)|XXXXXXXXXXXXXXXXXXXXXX|
 |029|[数秒後にメソッドを実行](#数秒後にメソッドを実行)|XXXXXXXXXXXXXXXXXXXXXX|
@@ -1755,6 +1755,79 @@ public class Main : MonoBehaviour {
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. 再生するとConsoleに "これまでの最高記録:XX" と表示され、スペースキーを押す毎に "途中経過:XX" と1ずつ更新。止めると "今回の記録:XX" または "最高記録更新です！:XXX" と表示されます。再度、再生すると最高記録が更新されて表示されるはずです。最高記録は、Unityを終了させるとリセットされます。
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月12日
+
+
+<a name="GameObjectの入れ子"></a>
+# <b>026 GameObjectの入れ子</b>
+
+### 床の作成
+1. [GameObject]-[3D Object]-[Plane] を選択。名前は "Plane001" に変更。
+1. [Inspector]-[Transform] を次のように変更。
+	* Scale X: 0.5 Y: 0.5 Z: 0.5
+
+### 赤い立方体を作成
+1. [GameObject]-[3D Object]-[Cube] を選択。名前は "Cube001" に変更。
+1. [Inspector]-[Transform] を次のように変更。
+	* Position X: -2 Y: 0.6 Z: 2
+1. [Assets]-[Create]-[Material] を選択。名前を "Red" に変更。
+1. [Inspector]-[Albedo] を赤に変更。
+1. [Hierarchy] の "Cube001" を選択。
+1. [Add Component]エリアに、上記で作成したAssets内のマテリアル（"Red"）をドラッグ＆ドロップ。
+
+### ３つの白い立方体を作成
+1. 同様に "Cube002"、"Cube003"、"Cube004" を作成（色はそのまま）。
+1. [Inspector]-[Transform] の値をそれぞれ次のように変更。
+	* Position X: 2 Y: 0.6 Z: 2（"Cube002"）
+	* Position X: 2 Y: 0.6 Z: -2（"Cube003"）
+	* Position X: -2 Y: 0.6 Z: -2（"Cube004"）
+
+### 入れ子（ネスト）化
+* 上記の床と4つの立方体を、空のGameObjectに入れます。
+1. [GameObject]-[Create Empty] を選択（名前は "Cubes" に変更）。
+1. [Hierarchy]-[Cubes] の階層下に "Plane001" およびと "Cube001" 〜 "Cube004" をドラッグ＆ドロップで移動します。
+![026_1](https://takashinishimura.github.io/Unity/examples/jpg/026_1.jpg)
+
+### 空のゲームオブジェクトを作成
+1. [GameObject]-[Create Empty] を選択。
+1. [Inspector] ウィンドウで、名前を "GameObject" から "God" に変更。
+
+### C#ファイルの作成
+1. [Assets]-[Create]-[C# Script] を選択。
+1. 名前を "NewBehaviourScript" から "Main" に変更。
+    * 同時に (プロジェクト名)/Assets/Main.cs が生成されます。
+1. 上記で作成した "God" の [Inspector]-[Add Component] エリアに上記のC#（Main）をドラッグ＆ドロップ。
+
+### C#の記述
+1. VSCode等のエディタで "Main.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Main.cs
+using UnityEngine;
+
+public class Main : MonoBehaviour {
+	private GameObject _cubes; //Plane001とCube001〜04の上位階層の空のGameObject
+	private GameObject _cube001; //赤のCube001
+
+	void Start () {
+		_cubes = GameObject.Find("Cubes"); //各GameObjectの上位の空のGameObject
+		_cube001 = _cubes.transform.Find("Cube001").gameObject; //入れ子のXXを検索
+	}
+
+	void Update () { //全体が回転しても赤のCube001だけ正面を向かせる
+		_cubes.transform.Rotate(new Vector3(0, 0.5f, 0));
+		_cube001.transform.Rotate(new Vector3(0, -0.5f, 0));
+	}
+}
+```
+
+### 実行
+1. [再生] ボタンまたは [Edit]-[Play] を選択。
+1. 全体が回転しますが、赤い立方体だけが常に正面を向いていたら成功。  
+![026_2](https://takashinishimura.github.io/Unity/examples/jpg/0026_2.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
