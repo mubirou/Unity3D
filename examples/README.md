@@ -35,7 +35,7 @@
 |027|[キョロキョロ](#キョロキョロ)|オブジェクトを任意の方向に向かせる|
 |028|[クローン作成](#クローン作成)|ミサイルのように同じオブジェクトが次々と登場|
 |029|[数秒後にメソッドを実行](#数秒後にメソッドを実行)|数秒後にメソッドを実行|
-|030|[二点間の距離](#二点間の距離)|XXXXXXXXXXXXXXXXXXXXXX|
+|030|[二点間の距離](#二点間の距離)|三次元空間にある2つのオブジェクト間の距離を調べる|
 |031|[他のCSファイルの参照](#他のCSファイルの参照)|XXXXXXXXXXXXXXXXXXXXXX|
 |032|[万年カレンダー](#万年カレンダー)|XXXXXXXXXXXXXXXXXXXXXX|
 |033|[シーンを重ねる](#シーンを重ねる)|XXXXXXXXXXXXXXXXXXXXXX|
@@ -2015,3 +2015,65 @@ public class Main : MonoBehaviour {
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
 作成日：2018年04月12日
+
+
+<a name="二点間の距離"></a>
+# <b>030 二点間の距離</b>
+
+### 球体１を作成
+1. [GameObject]-[3D Object]-[Sphere] を選択。名前は "Sphere001" に変更。
+1. [Inspector]-[Transform] を次のように変更。
+	* Scale X:2 Y:3 Z:4
+
+### 球体２を作成
+1. [GameObject]-[3D Object]-[Sphere] を選択。名前は "Sphere002" に変更。
+1. [Inspector]-[Transform] を次のように変更。
+	* Scale X:0 Y:0 Z:0
+
+### 空のゲームオブジェクトを作成
+1. [GameObject]-[Create Empty] を選択。
+1. [Inspector] ウィンドウで、名前を "GameObject" から "God" に変更。
+
+### C#ファイルの作成
+1. [Assets]-[Create]-[C# Script] を選択。
+1. 名前を "NewBehaviourScript" から "Main" に変更。
+    * 同時に (プロジェクト名)/Assets/Main.cs が生成されます。
+1. 上記で作成した "God" の [Inspector]-[Add Component] エリアに上記のC#（Main）をドラッグ＆ドロップ。
+
+### C#の記述
+1. VSCode等のエディタで "Main.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Main.cs
+using UnityEngine;
+using System; //Mathに必要
+
+public class Main : MonoBehaviour {
+	void Start () {
+		GameObject _sphere01 = GameObject.Find("Sphere001");
+		GameObject _sphere02 = GameObject.Find("Sphere002");
+
+		// 方法① …… Vector3.Distance() による測定
+		// 2D用にVector2.Distance(Vector2 ○, Vector2 ○) も用意されています
+		float _result = Vector3.Distance(_sphere01.transform.position, _sphere02.transform.position);
+		Debug.Log(_result); //5.385165
+		
+		// 方法② …… 三平方の定理（ピタゴラスの定理）による測定
+		float _disX = _sphere01.transform.position.x - _sphere02.transform.position.x;
+		float _disY = _sphere01.transform.position.y - _sphere02.transform.position.y;
+		float _disZ = _sphere01.transform.position.z - _sphere02.transform.position.z;
+		float _disXZ = (float)Math.Sqrt(_disX*_disX + _disZ*_disZ);
+		_result = (float)Math.Sqrt(_disXZ*_disXZ + _disY*_disY);
+		Debug.Log(_result); //5.385165
+	}
+}
+```
+
+### 実行
+1. [再生] ボタンまたは [Edit]-[Play] を選択。
+1. 2つの球体の三次元空間の距離、5.385165がConsoleに出力されたら成功。  
+![030](https://takashinishimura.github.io/Unity/examples/jpg/030.jpg)
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月13日
