@@ -2094,9 +2094,9 @@ public class Main : MonoBehaviour {
 
 ### ２つ目のC#ファイルの作成
 1. [Assets]-[Create]-[C# Script] を選択。
-1. 名前を "NewBehaviourScript" から "MyClass2" に変更。
-    * 同時に (プロジェクト名)/Assets/MyClass2.cs が生成されます。
-1. 上記で作成した "God" の [Inspector]-[Add Component] エリアに上記のC#（MyClass2）をドラッグ＆ドロップ。  
+1. 名前を "NewBehaviourScript" から "MyClass" に変更。
+    * 同時に (プロジェクト名)/Assets/MyClass.cs が生成されます。
+1. 上記で作成した "God" の [Inspector]-[Add Component] エリアに上記のC#（MyClass）をドラッグ＆ドロップ。  
 ![031](https://takashinishimura.github.io/Unity/examples/jpg/031.jpg)
 
 ### C#（Main.cs）の記述
