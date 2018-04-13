@@ -36,7 +36,7 @@
 |028|[クローン作成](#クローン作成)|ミサイルのように同じオブジェクトが次々と登場|
 |029|[数秒後にメソッドを実行](#数秒後にメソッドを実行)|数秒後にメソッドを実行|
 |030|[二点間の距離](#二点間の距離)|三次元空間にある2つのオブジェクト間の距離を調べる|
-|031|[他のCSファイルの参照](#他のCSファイルの参照)|XXXXXXXXXXXXXXXXXXXXXX|
+|031|[他のC#ファイルの参照](#他のC#ファイルの参照)|XXXXXXXXXXXXXXXXXXXXXX|
 |032|[万年カレンダー](#万年カレンダー)|XXXXXXXXXXXXXXXXXXXXXX|
 |033|[シーンを重ねる](#シーンを重ねる)|XXXXXXXXXXXXXXXXXXXXXX|
 |034|[シーンの事前読込み①](#シーンの事前読込み①)|XXXXXXXXXXXXXXXXXXXXXX|
@@ -2073,6 +2073,76 @@ public class Main : MonoBehaviour {
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. 2つの球体の三次元空間の距離、5.385165がConsoleに出力されたら成功。  
 ![030](https://takashinishimura.github.io/Unity/examples/jpg/030.jpg)
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月13日
+
+
+<a name="他のC#ファイルの参照"></a>
+# <b>031 他のC#ファイルの参照</b>
+
+### 空のゲームオブジェクトを作成
+1. [GameObject]-[Create Empty] を選択。
+1. [Inspector] ウィンドウで、名前を "GameObject" から "God" に変更。
+
+### １つ目のC#ファイルの作成
+1. [Assets]-[Create]-[C# Script] を選択。
+1. 名前を "NewBehaviourScript" から "Main" に変更。
+    * 同時に (プロジェクト名)/Assets/Main.cs が生成されます。
+1. 上記で作成した "God" の [Inspector]-[Add Component] エリアに上記のC#（Main）をドラッグ＆ドロップ。
+
+### ２つ目のC#ファイルの作成
+1. [Assets]-[Create]-[C# Script] を選択。
+1. 名前を "NewBehaviourScript" から "MyClass2" に変更。
+    * 同時に (プロジェクト名)/Assets/MyClass2.cs が生成されます。
+1. 上記で作成した "God" の [Inspector]-[Add Component] エリアに上記のC#（MyClass2）をドラッグ＆ドロップ。  
+![031](https://takashinishimura.github.io/Unity/examples/jpg/031.jpg)
+
+### C#（Main.cs）の記述
+1. VSCode等のエディタで "Main.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Main.cs
+using UnityEngine;
+using System.Collections;
+
+public class Main : MonoBehaviour { //thisは省略可
+	void Start () {
+		// インスタンスの生成（≒ new MyClass()）
+		MyClass _myClass = this.GetComponent<MyClass>();
+		Debug.Log(_myClass._prop); //"MyClassのプロパティ"
+		_myClass.MyMethod(); //"MyClassのメソッド"
+	}
+
+	void Update () { //不要
+	}
+}
+```
+
+### C#（MyClass.cs）の記述
+1. VSCode等のエディタで "MyClass.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//MyClass.cs
+using UnityEngine; //必須
+using System.Collections; //今回は省略可
+
+public class MyClass : MonoBehaviour { //継承は必須
+	public string _prop = "MyClassのプロパティ"; //通常はpublicにしませんが...
+
+	public MyClass() { //コンストラクタは省略可
+	}
+
+	public void MyMethod() {
+		Debug.Log("MyClassのメソッド");
+	}
+}
+```
+
+### 実行
+1. [再生] ボタンまたは [Edit]-[Play] を選択。
+1. Consoleに"MyClassのプロパティ" と "MyClassのメソッド" が出力されたら成功。  
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
