@@ -37,7 +37,7 @@
 |029|[数秒後にメソッドを実行](#数秒後にメソッドを実行)|数秒後にメソッドを実行|
 |030|[二点間の距離](#二点間の距離)|三次元空間にある2つのオブジェクト間の距離を調べる|
 |031|[他のC#ファイルの参照](#他のC#ファイルの参照)|同一オブジェクトにアタッチしたC#ファイルを利用する|
-|032|[シーンを重ねる](#シーンを重ねる)|XXXXXXXXXXXXXXXXXXXXXX|
+|032|[シーンを重ねる](#シーンを重ねる)|シーンを重ねる|
 |033|[シーンの事前読込み①](#シーンの事前読込み①)|XXXXXXXXXXXXXXXXXXXXXX|
 |034|[シーンの事前読込み②](#シーンの事前読込み②)|XXXXXXXXXXXXXXXXXXXXXX|
 |035|[フワッと動いてスッと止まる](#フワッと動いてスッと止まる)|XXXXXXXXXXXXXXXXXXXXXX|
@@ -2146,3 +2146,83 @@ public class MyClass : MonoBehaviour { //継承は必須
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
 作成日：2018年04月13日
+
+
+<a name="シーンを重ねる"></a>
+# <b>032 シーンを重ねる</b>
+
+### シーン１の作成
+1. [File]-[Save Scene] を選択。名前は "Scene001"。
+	* 同時に(Project name)/Assets/内に "Scene001.unity" ファイルが生成されます。
+
+### シーン１に床を配置
+1. [GameObject]-[3D Object]-[Plane] を選択。
+1. [Assets]-[Create]-[Material] を選択（名前は "Red"）。
+1. [Inspector]-[Albedo] を赤に変更。
+1. [Hierarchy]-[Plane] を選択。
+1. [Add Component] エリアに、上記で作成したAssets内のマテリアル（"Red"）をドラッグ＆ドロップ。
+
+### シーン１のメインクラスを作成
+1. [GameObject]-[Create Empty] を選択（名前は "God" に変更）。
+1. [Assets]-[Create]-[C# Script] を選択。すかさず名前を "Main" に変更。
+1. "God"（GameObject）の [Inspector]-[Add Component] エリアに上記の "Main"（C#）をドラッグ＆ドロップ。
+* 注意："Main.cs" は "Scene002" を重ねた後も動作します。逆に "Scene002" ではそのメインクラスなる "Main2.cs" のようなものは作らない方が混乱を避けることができると思います。
+
+### シーン２の作成
+1. [File]-[New Scene] を選択。
+1. [File]-[Save Scene] を選択。名前は "Scene002"。
+	* 同時に(Project name)/Assets/内に "Scene002.unity" ファイルが生成されます。
+
+### シーン２に床を配置
+1. [Assets]-[Scene002] をダブルクリックして選択。
+1. [GameObject]-[3D Object]-[Plane] を選択。
+1. [Inspector]-[Transform] を次のように変更。
+	* Position X:0 Y:0 Z:10（"Scene001" の "Plane" と連続するように配置）
+1. [Assets]-[Create]-[Material] を選択（名前は "Blue"）。
+1. [Inspector]-[Albedo] を青に変更。
+1. [Hierarchy]-[Plane] を選択。
+1. [Add Component] エリアに、上記で作成したAssets内のマテリアル（"Blue"）をドラッグ＆ドロップ。
+
+### シーン２の不要なものを削除
+1. [Hierarchy]-[Main Camera] を [Delete]。
+1. [Hierarchy]-[Directional Light] も [Delete]。
+* "Main Camera" が2つになってしまう為、削除しないと「There are 2 audio listeners in the scene.…」とエラー発生。同様に "Directional Light" も重なってしまうため削除。
+
+### 各シーンの登録
+1. [File]-[Build Settings...] を選択。
+1. [Assets]-[Scene001] を選択。
+1. [Build Settings] 画面で [Add Open Scenes] をクリック。
+1. [Assets]-[Scene002] を選択。
+1. [Build Settings] 画面で [Add Open Scenes] をクリック。
+1. "Scene001" と "Scene002" を追加します。
+	* 順番が重要（ドラックで順序を変更できます）。
+1. ウィンドウを閉じます。
+
+### C#の記述
+1. VSCode等のエディタで "Main.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Main.cs
+using UnityEngine;
+
+public class Main : MonoBehaviour {
+	void Update () {
+		if (Input.GetKeyDown(KeyCode.Space)) {
+			Application.LoadLevelAdditive("Scene002"); //注意：複数回繰り返さないように
+			
+			//注意：シーンは"Scene001"のままです。繰返すと何度でも追加できてしまいます。
+			//Application.LoadLevelAdditive(1);  //上記と同じ動作（0からスタート）
+		}
+	}
+}
+```
+
+### 実行
+1. [再生] ボタンまたは [Edit]-[Play] を選択。
+1. スペースキーを押すと "Scene001" に "Scene002" が重なれば成功。
+	* 今回の場合、赤い床の先に青い床が追加されます。  
+![032](https://takashinishimura.github.io/Unity/examples/jpg/032.jpg)
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月14日
