@@ -38,7 +38,7 @@
 |030|[二点間の距離](#二点間の距離)|三次元空間にある2つのオブジェクト間の距離を調べる|
 |031|[他のC#ファイルの参照](#他のC#ファイルの参照)|同一オブジェクトにアタッチしたC#ファイルを利用する|
 |032|[シーンを重ねる](#シーンを重ねる)|シーンを重ねる|
-|033|[シーンの事前読込み①](#シーンの事前読込み①)|XXXXXXXXXXXXXXXXXXXXXX|
+|033|[シーンの事前読込み①](#シーンの事前読込み①)|ロードに時間がかかるシーンを事前に読込む|
 |034|[シーンの事前読込み②](#シーンの事前読込み②)|XXXXXXXXXXXXXXXXXXXXXX|
 |035|[フワッと動いてスッと止まる](#フワッと動いてスッと止まる)|XXXXXXXXXXXXXXXXXXXXXX|
 |036|[ユニティちゃん入門](#ユニティちゃん入門)|XXXXXXXXXXXXXXXXXXXXXX|
@@ -2226,3 +2226,81 @@ public class Main : MonoBehaviour {
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
 作成日：2018年04月14日
+
+
+================================================================================================
+<a name="シーンの事前読込み①"></a>
+# <b>033 シーンの事前読込み①</b>
+
+### シーン１の作成
+1. [File]-[Save Scene] を選択。名前は "Scene001"。
+	* 同時に(Project name)/Assets/内に "Scene001.unity" ファイルが生成されます。
+
+### シーン１に床を配置
+1. [GameObject]-[3D Object]-[Plane] を選択。
+1. [Assets]-[Create]-[Material] を選択（名前は "Red"）。
+1. [Inspector]-[Albedo] を赤に変更。
+1. [Hierarchy]-[Plane] を選択。
+1. [Add Component] エリアに、上記で作成したAssets内のマテリアル（"Red"）をドラッグ＆ドロップ。
+
+### シーン１のメインクラスを作成
+1. [GameObject]-[Create Empty] を選択（名前は "God" に変更）。
+1. [Assets]-[Create]-[C# Script] を選択。すかさず名前を "Main" に変更。
+1. "God"（GameObject）の [Inspector]-[Add Component] エリアに上記の "Main"（C#）をドラッグ＆ドロップ。
+
+### シーン２の作成
+1. [File]-[New Scene] を選択。
+1. [File]-[Save Scene] を選択。名前は "Scene002"。
+	* 同時に(Project name)/Assets/内に "Scene002.unity" ファイルが生成されます。
+
+### シーン２を作り込む
+1. [Assets]-[Scene002] をダブルクリックして選択。
+1. [Window]-[Asset Store] を選択。
+1. 任意の3Dモデル等を選択し [ダウンロード] → [Import]。
+1. [Project]-[Assets] から該当のオブジェクトを [Hierarchy] にドラッグ＆ドロップ。
+* 上記を繰り返して3Dモデルを配置（シーンを非常に重い状態にします）。
+
+### 各シーンの登録
+1. [File]-[Build Settings...] を選択。
+1. [Assets]-[Scene001] を選択。
+1. [Build Settings] 画面で [Add Open Scenes] をクリック。
+1. [Assets]-[Scene002] を選択。
+1. [Build Settings] 画面で [Add Open Scenes] をクリック。
+1. "Scene001" と "Scene002" を追加します。
+	* 順番が重要（ドラックで順序を変更できます）。
+1. ウィンドウを閉じます。
+
+### C#の記述
+1. VSCode等のエディタで "Main.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Main.cs
+using UnityEngine;
+
+public class Main : MonoBehaviour {
+	private AsyncOperation _async;
+	private bool _isLoadStart = false;
+
+	void Update () {
+		if (Input.GetKeyDown(KeyCode.Space)) {
+			_async = Application.LoadLevelAsync("Scene002"); //事前読込開始
+			//Application.LoadLevelAdditiveAsync("○")も可能
+			_isLoadStart = true;
+		}
+
+		if (_isLoadStart) { //事前読込（非同期読込）を開始している場合…
+			if (! _async.isDone) { //ロードが完了していない場合…
+				Debug.Log(_async.progress * 100 + "%");  //読込完了の%を表示
+			}
+		}
+	}
+}
+```
+
+### 実行
+1. [Assets]-[Scene001] をダブルクリックし、[再生] ボタンまたは [Edit]-[Play] を選択。
+1. スペースキーを押すとConsoleに "Scene002" の読み込み状況（%）が表示され、ロード完了後、"Scene002" が表示されたら成功。
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月15日
