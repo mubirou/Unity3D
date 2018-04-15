@@ -87,7 +87,7 @@ public class Text001Script : MonoBehaviour {
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. [Game] ウィンドウ上に "2018/04/02 8:56:35" 等と表示されれば成功。  
-![001](https://takashinishimura.github.io/Unity/examples/jpg/001.jpg)
+![001](https://takashinishimura.github.io/Unity3D/examples/jpg/001.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
@@ -160,7 +160,7 @@ public class Main : MonoBehaviour {
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. ボールが床にバウンドし続ければ成功。  
-![002](https://takashinishimura.github.io/Unity/examples/jpg/002.jpg)
+![002](https://takashinishimura.github.io/Unity3D/examples/jpg/002.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
@@ -199,7 +199,7 @@ public class Main : MonoBehaviour {
 	}
 }
 ```
-![003](https://takashinishimura.github.io/Unity/examples/jpg/003.jpg)
+![003](https://takashinishimura.github.io/Unity3D/examples/jpg/003.jpg)
 
 ### GetKey と GetKeyDown / GetKeyUp の違い
 ```
@@ -268,7 +268,7 @@ public class Main : MonoBehaviour {
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. （画面のどこにカーソルがあっても）マウスカーソルのボタンを押して立方体が回転すれば成功。  
-![004](https://takashinishimura.github.io/Unity/examples/jpg/004.jpg)
+![004](https://takashinishimura.github.io/Unity3D/examples/jpg/004.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
@@ -321,7 +321,7 @@ public class Main : MonoBehaviour {
 	}
 }
 ```
-![005](https://takashinishimura.github.io/Unity/examples/jpg/005.jpg)
+![005](https://takashinishimura.github.io/Unity3D/examples/jpg/005.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
@@ -380,7 +380,7 @@ public class Main : MonoBehaviour {
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. 玉が転がって落ち、スペースキーを押すと登らせることが出来れば成功。  
-![006](https://takashinishimura.github.io/Unity/examples/jpg/006.jpg)
+![006](https://takashinishimura.github.io/Unity3D/examples/jpg/006.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
@@ -426,7 +426,7 @@ public class Main : MonoBehaviour {
 	}
 }
 ```
-![007](https://takashinishimura.github.io/Unity/examples/jpg/007.jpg)
+![007](https://takashinishimura.github.io/Unity3D/examples/jpg/007.jpg)
 
 ### 色の指定方法
 * new Color(赤, 緑, 青 [,不透明度])  
@@ -554,7 +554,7 @@ public class Main : MonoBehaviour {
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. ボールを選択すると、"RedBallを選択" または "WhiteBall" を選択と表示されたら成功。  
-![009](https://takashinishimura.github.io/Unity/examples/jpg/009.jpg)
+![009](https://takashinishimura.github.io/Unity3D/examples/jpg/009.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
@@ -628,7 +628,7 @@ public class Main : MonoBehaviour {
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. 2.5秒後に右へ10、5秒後に元の位置へ...をイーズイン･イーズアウトしながら繰り返せば成功。  
-![010](https://takashinishimura.github.io/Unity/examples/jpg/010.jpg)
+![010](https://takashinishimura.github.io/Unity3D/examples/jpg/010.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
@@ -695,7 +695,7 @@ public class Main : MonoBehaviour {
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. 最初からBGM（"loop01.mp3"）がループ再生され、スペースキーを押すと効果音（"se01.mp3"）が1回再生（BGMは再生されたまま）。リターンキーを押すとBGMが止まり、効果音（"se02.mp3"）が鳴れば成功。  
-![011](https://takashinishimura.github.io/Unity/examples/jpg/011.jpg)
+![011](https://takashinishimura.github.io/Unity3D/examples/jpg/011.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
@@ -768,7 +768,7 @@ public class Ball002 : MonoBehaviour { //以下thisは省略可
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. 左右の矢印キーで右側のボール（"Ball002"）が移動。"Ball001" に接触したか判定できれば成功。  
-![012](https://takashinishimura.github.io/Unity/examples/jpg/012.jpg)
+![012](https://takashinishimura.github.io/Unity3D/examples/jpg/012.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
@@ -834,7 +834,7 @@ public class Sphere002 : MonoBehaviour { //以下thisは省略可
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. ボール（"Sphere002"）が落下し、"Sphere001" を通過。その際、Consoleに "Sphere001に接触" → "Sphere001を通過中" → "Sphere001と離れた" と表示されたら成功。  
 	* この方法（OnTriggerXXX）を使うと物と物が衝突してもそのまま通過します（重力あり）。  
-![013](https://takashinishimura.github.io/Unity/examples/jpg/013.jpg)
+![013](https://takashinishimura.github.io/Unity3D/examples/jpg/013.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
@@ -893,7 +893,7 @@ public class Sphere001 : MonoBehaviour {
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. スペースキーを押すとパーティクルが発生し、数秒でボールも含め消えれば成功。  
-![014](https://takashinishimura.github.io/Unity/examples/jpg/014.jpg)
+![014](https://takashinishimura.github.io/Unity3D/examples/jpg/014.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
@@ -963,7 +963,7 @@ public class Sphere001 : MonoBehaviour { //thisは省略可
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. ボールを選択（プレス）するとハローが表示し、話す（リリース）するとハローが消えれば成功。  
-![015](https://takashinishimura.github.io/Unity/examples/jpg/015.jpg)
+![015](https://takashinishimura.github.io/Unity3D/examples/jpg/015.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
@@ -1027,7 +1027,7 @@ public class Main : MonoBehaviour { //Update()は省略
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. 縦7列、横3列の立方体が生成されたら成功。  
-![016](https://takashinishimura.github.io/Unity/examples/jpg/016.jpg)
+![016](https://takashinishimura.github.io/Unity3D/examples/jpg/016.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
@@ -1099,7 +1099,7 @@ public class Sphere001 : MonoBehaviour { //thisは省略可
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. 赤いボールを選択して半透明（または非表示）になったら成功。  
-![017](https://takashinishimura.github.io/Unity/examples/jpg/017.jpg)
+![017](https://takashinishimura.github.io/Unity3D/examples/jpg/017.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
@@ -1213,7 +1213,7 @@ public class Main : MonoBehaviour {
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. スライダーを動かすとボールの色が変化すれば成功。  
-![018](https://takashinishimura.github.io/Unity/examples/jpg/018.jpg)
+![018](https://takashinishimura.github.io/Unity3D/examples/jpg/018.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
@@ -1290,7 +1290,7 @@ public class Button01 : MonoBehaviour {
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. ボタンをクリックするとConsoleに "HOGEをクリックしました" と出力されたら成功。  
-![019](https://takashinishimura.github.io/Unity/examples/jpg/019.jpg)
+![019](https://takashinishimura.github.io/Unity3D/examples/jpg/019.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
@@ -1372,7 +1372,7 @@ public class Toggle001 : MonoBehaviour {
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. トグルボタンをON/OFFするとConsoleに "HOGEが✔されました" または "HOGEの✔が外されました" と出力されたら成功。  
-![020](https://takashinishimura.github.io/Unity/examples/jpg/020.jpg)
+![020](https://takashinishimura.github.io/Unity3D/examples/jpg/020.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
@@ -1397,7 +1397,7 @@ public class Toggle001 : MonoBehaviour {
 1. [GameObject]-[Create Empty] を選択（名前は "God" に変更）。
 1. [Assets]-[Create]-[C# Script] を選択。すかさず名前を "Scene001" に変更。
 	* "Scene001.cs" ファイルが "Scene001" のメインクラスとなります。
-1. "God"（GameObject）の [Inspector]-[Add Component] エリアに上記の "Scene001"（C#）をドラッグ＆ドロップ。  ![021_1](https://takashinishimura.github.io/Unity/examples/jpg/021_1.jpg)
+1. "God"（GameObject）の [Inspector]-[Add Component] エリアに上記の "Scene001"（C#）をドラッグ＆ドロップ。  ![021_1](https://takashinishimura.github.io/Unity3D/examples/jpg/021_1.jpg)
 
 ### シーン２の作成
 1. [File]-[New Scene] を選択。
@@ -1415,7 +1415,7 @@ public class Toggle001 : MonoBehaviour {
 1. [GameObject]-[Create Empty] を選択（名前は "God" に変更）。
 1. [Assets]-[Create]-[C# Script] を選択。すかさず名前を "Scene002" に変更。
 	* "Scene002.cs" ファイルが "Scene002" のメインクラスとなります。
-1. "God"（GameObject）の [Inspector]-[Add Component] エリアに上記の "Scene002"（C#）をドラッグ＆ドロップ。  ![021_2](https://takashinishimura.github.io/Unity/examples/jpg/021_2.jpg)
+1. "God"（GameObject）の [Inspector]-[Add Component] エリアに上記の "Scene002"（C#）をドラッグ＆ドロップ。  ![021_2](https://takashinishimura.github.io/Unity3D/examples/jpg/021_2.jpg)
 
 ### 各シーンの登録
 1. [File]-[Build Settings...] を選択。
@@ -1426,7 +1426,7 @@ public class Toggle001 : MonoBehaviour {
 1. ①Scene01.unityと②Scene02.unityを追加します。
 	* 順番が重要（ドラックで順序を変更できます）。
 1. ウィンドウを閉じます。  
- ![021_3](https://takashinishimura.github.io/Unity/examples/jpg/021_3.jpg)
+ ![021_3](https://takashinishimura.github.io/Unity3D/examples/jpg/021_3.jpg)
 
 ### C#の記述（シーン１のメインクラス）
 1. VSCode等のエディタで "Scene001.cs" を開きます。
@@ -1568,7 +1568,7 @@ public class Scene002 : MonoBehaviour {
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. スペースキーでシーンを移動後も立方体が残れば成功（再度シーン１に戻ると立方体が2つ重なる）。  
- ![022](https://takashinishimura.github.io/Unity/examples/jpg/022.jpg)
+ ![022](https://takashinishimura.github.io/Unity3D/examples/jpg/022.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
@@ -1787,7 +1787,7 @@ public class Main : MonoBehaviour {
 ### 入れ子（ネスト）化
 1. [Hierarchy]-[Plane001] の階層下に "Cube001" 〜 "Cube004" をドラッグ＆ドロップで移動します。
 	* 上記の4つの立方体を、床（"Plane001"）の入れ子とします。  
-![026_1](https://takashinishimura.github.io/Unity/examples/jpg/026_1.jpg)
+![026_1](https://takashinishimura.github.io/Unity3D/examples/jpg/026_1.jpg)
 
 ### 空のゲームオブジェクトを作成
 1. [GameObject]-[Create Empty] を選択。
@@ -1825,7 +1825,7 @@ public class Main : MonoBehaviour {
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. 全体が回転しますが、赤い立方体だけが常に正面を向いていたら成功。  
-![026_2](https://takashinishimura.github.io/Unity/examples/jpg/026_2.jpg)
+![026_2](https://takashinishimura.github.io/Unity3D/examples/jpg/026_2.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
@@ -1894,7 +1894,7 @@ public class Cube002 : MonoBehaviour { //thisは省略可
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. 上下に動く立方体（Cube001）の方向に、もう一つの立方体（Cube002）が向けば成功。  
-![027](https://takashinishimura.github.io/Unity/examples/jpg/027.jpg)
+![027](https://takashinishimura.github.io/Unity3D/examples/jpg/027.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
@@ -1966,7 +1966,7 @@ public class Main : MonoBehaviour {
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. スペースキーを押すとミサイルのように次々と登場すれば成功。  
-![028](https://takashinishimura.github.io/Unity/examples/jpg/028.jpg)
+![028](https://takashinishimura.github.io/Unity3D/examples/jpg/028.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
@@ -2071,7 +2071,7 @@ public class Main : MonoBehaviour {
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. 2つの球体の三次元空間の距離、5.385165がConsoleに出力されたら成功。  
-![030](https://takashinishimura.github.io/Unity/examples/jpg/030.jpg)
+![030](https://takashinishimura.github.io/Unity3D/examples/jpg/030.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
@@ -2096,7 +2096,7 @@ public class Main : MonoBehaviour {
 1. 名前を "NewBehaviourScript" から "MyClass" に変更。
     * 同時に (プロジェクト名)/Assets/MyClass.cs が生成されます。
 1. 上記で作成した "God" の [Inspector]-[Add Component] エリアに上記のC#（MyClass）をドラッグ＆ドロップ。  
-![031](https://takashinishimura.github.io/Unity/examples/jpg/031.jpg)
+![031](https://takashinishimura.github.io/Unity3D/examples/jpg/031.jpg)
 
 ### C#（Main.cs）の記述
 1. VSCode等のエディタで "Main.cs" を開きます。
@@ -2221,7 +2221,7 @@ public class Main : MonoBehaviour {
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
 1. スペースキーを押すと "Scene001" に "Scene002" が重なれば成功。
 	* 今回の場合、赤い床の先に青い床が追加されます。  
-![032](https://takashinishimura.github.io/Unity/examples/jpg/032.jpg)
+![032](https://takashinishimura.github.io/Unity3D/examples/jpg/032.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
