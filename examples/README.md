@@ -627,7 +627,7 @@ public class Main : MonoBehaviour {
 
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
-1. 2.5秒後に右へ10、5秒後に元の位置へ…をイーズイン･イーズアウトしながら繰り返せば成功。  
+1. 2.5秒後に右へ10、5秒後に元の位置へ...をイーズイン･イーズアウトしながら繰り返せば成功。  
 ![010](https://takashinishimura.github.io/Unity/examples/jpg/010.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
@@ -1538,7 +1538,7 @@ public class Scene001 : MonoBehaviour {
 	}
 	
 	void OnDestroy () {
-		//Destroy(_cube001); //"Cube001"を残さず消す場合…
+		//Destroy(_cube001); //"Cube001"を残さず消す場合...
 	}
 }
 ```
@@ -1862,7 +1862,7 @@ public class Cube001 : MonoBehaviour { //thisは省略可
 		_originY = _currentY = this.transform.position.y; //GameObjectのY座標位置
 	}
 	void Update () {
-		//上下に行ったり来たり…
+		//上下に行ったり来たり...
 		_count += 0.03f;
 		float _nextY = (float)(3 * Math.Cos(_count) + _originY);
 		float _disY = _nextY - _currentY;
@@ -2052,12 +2052,12 @@ public class Main : MonoBehaviour {
 		GameObject _sphere01 = GameObject.Find("Sphere001");
 		GameObject _sphere02 = GameObject.Find("Sphere002");
 
-		// 方法① …… Vector3.Distance() による測定
+		// 方法① ...... Vector3.Distance() による測定
 		// 2D用にVector2.Distance(Vector2 ○, Vector2 ○) も用意されています
 		float _result = Vector3.Distance(_sphere01.transform.position, _sphere02.transform.position);
 		Debug.Log(_result); //5.385165
 		
-		// 方法② …… 三平方の定理（ピタゴラスの定理）による測定
+		// 方法② ...... 三平方の定理（ピタゴラスの定理）による測定
 		float _disX = _sphere01.transform.position.x - _sphere02.transform.position.x;
 		float _disY = _sphere01.transform.position.y - _sphere02.transform.position.y;
 		float _disZ = _sphere01.transform.position.z - _sphere02.transform.position.z;
@@ -2186,7 +2186,7 @@ public class MyClass : MonoBehaviour { //継承は必須
 ### シーン２の不要なものを削除
 1. [Hierarchy]-[Main Camera] を [Delete]。
 1. [Hierarchy]-[Directional Light] も [Delete]。
-* "Main Camera" が2つになってしまう為、削除しないと「There are 2 audio listeners in the scene.…」とエラー発生。同様に "Directional Light" も重なってしまうため削除。
+* "Main Camera" が2つになってしまう為、削除しないと「There are 2 audio listeners in the scene....」とエラー発生。同様に "Directional Light" も重なってしまうため削除。
 
 ### 各シーンの登録
 1. [File]-[Build Settings...] を選択。
@@ -2284,12 +2284,12 @@ public class Main : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.Space)) {
 			_async = Application.LoadLevelAsync("Scene002"); //事前読込開始
-			//Application.LoadLevelAdditiveAsync("○")も可能
+			//Application.LoadLevelAdditiveAsync("X")でも可能
 			_isLoadStart = true;
 		}
 
-		if (_isLoadStart) { //事前読込（非同期読込）を開始している場合…
-			if (! _async.isDone) { //ロードが完了していない場合…
+		if (_isLoadStart) { //事前読込（非同期読込）を開始している場合...
+			if (! _async.isDone) { //ロードが完了していない場合...
 				Debug.Log(_async.progress * 100 + "%");  //読込完了の%を表示
 			}
 		}
