@@ -2425,5 +2425,5 @@ public class Main : MonoBehaviour {
 	* 戻る場合は [Done] をクリック。
 1. [Inspector]-[Mapping] の各⦿をクリックして関節部分を確認。  
 	![036_1](https://takashinishimura.github.io/Unity/examples/jpg/036_1.jpg)
-
-1. [Muscles & Settings]のスライダーを動かして可動範囲を確認。
+1. [Muscles & Settings] のスライダーを動かして可動範囲を確認。  
+	![036_2](https://takashinishimura.github.io/Unity/examples/jpg/036_2.jpg)
