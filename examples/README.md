@@ -2423,7 +2423,7 @@ public class Main : MonoBehaviour {
 1. [Project]-[Assets]-[UnityChan]-[Models]-[unitychan] を選択。
 1. [Inspector]-[Rig]-[Configure...] をクリック。
 	* 戻る場合は [Done] をクリック。
-1. [Inspector]-[Mapping] の各⦿をクリックして関節部分を確認。
+1. [Inspector]-[Mapping] の各⦿をクリックして関節部分を確認。  
 	![036_1](https://takashinishimura.github.io/Unity/examples/jpg/023_1.jpg)
 
 1. [Muscles & Settings]のスライダーを動かして可動範囲を確認。
