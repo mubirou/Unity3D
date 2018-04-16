@@ -40,7 +40,7 @@
 |032|[シーンを重ねる](#シーンを重ねる)|シーンを重ねる|
 |033|[シーンの事前読込み①](#シーンの事前読込み①)|ロードに時間がかかるシーンを事前に読込む①|
 |034|[シーンの事前読込み②](#シーンの事前読込み②)|ロードに時間がかかるシーンを事前に読込む②|
-|035|[フワッと動いてスッと止まる](#フワッと動いてスッと止まる)|XXXXXXXXXXXXXXXXXXXXXX|
+|035|[フワッと動いてスッと止まる](#フワッと動いてスッと止まる)|矢印キーでフワッと動いてスッと止まる|
 |036|[ユニティちゃん入門](#ユニティちゃん入門)|XXXXXXXXXXXXXXXXXXXXXX|
 ***
 
@@ -2347,6 +2347,53 @@ public class Main : MonoBehaviour {
 ### 実行
 1. [Assets]-[Scene001] をダブルクリックし、[再生] ボタンまたは [Edit]-[Play] を選択。
 1. スペースキーを押すとConsoleに "Scene002" の読み込み状況（%）が表示され、ロード完了後、"Scene002" が表示されたら成功。
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月16日
+
+
+<a name="フワッと動いてスッと止まる"></a>
+# <b>035 フワッと動いてスッと止まる</b>
+
+### 立方体を作成
+1. [GameObject]-[3D Object]-[Cube] を選択。名前は "Cube001" に変更。
+
+### 空のゲームオブジェクトを作成
+1. [GameObject]-[Create Empty] を選択。
+1. [Inspector] ウィンドウで、名前を "GameObject" から "God" に変更。
+
+### C#ファイルの作成
+1. [Assets]-[Create]-[C# Script] を選択。
+1. 名前を "NewBehaviourScript" から "Main" に変更。
+    * 同時に (プロジェクト名)/Assets/Main.cs が生成されます。
+1. 上記で作成した "God" の [Inspector]-[Add Component] エリアに上記のC#（Main）をドラッグ＆ドロップ。
+
+### C#の記述
+1. VSCode等のエディタで "Main.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Main.cs
+using UnityEngine;
+
+public class Main : MonoBehaviour {
+	private GameObject _cube001;
+
+	void Start () {
+		_cube001 = GameObject.Find("Cube001");
+	}
+
+	void Update () {
+		float _speed = Input.GetAxis("Horizontal"); //-1〜1（浮動小数点数）
+		_cube001.transform.Translate(new Vector3(_speed,0,0));
+	}
+}
+```
+
+### 実行
+1. [再生] ボタンまたは [Edit]-[Play] を選択。
+1. 矢印キー（←→）で左右にフワッと動いてスッと止まる感じになります。
+* 参照：[Edit]-[Project Settings]-[input]-[Axes]-[Horizontal] の設定
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
