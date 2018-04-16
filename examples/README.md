@@ -2399,3 +2399,31 @@ public class Main : MonoBehaviour {
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
 作成日：2018年04月16日
+
+
+<a name="ユニティちゃん入門"></a>
+# <b>036 ユニティちゃん入門</b>
+
+### ユニティちゃんのインストール
+1. [Window]-[Asset Store] を開く。
+1. [3D モデル]-[キャラクター]-[トゥーン] から「"Unity-chan!" Model」（無料）を探し「ダウンロード」-[Import]。
+
+### とりあえず動かしてみる
+1. [Project]-[Assets]-[UnityChan]-[Scenes]-[Locomotion] をダブルクリック。
+1. [▶] ボタンで再生。
+1. 操作は次の通り。
+	* [Ctrl]（マウスの左ボタン）で正面。 
+	* [←][→] で方向。
+	* [↑][↓] で前進･後退。
+	* [Space] で伸び。
+	* [↑] + [Space] でジャンプ。
+	* [Alt]（マウスの右ボタン）で煽り。
+
+### ユニティちゃんの構造を確認
+1. [Project]-[Assets]-[UnityChan]-[Models]-[unitychan] を選択。
+1. [Inspector]-[Rig]-[Configure...] をクリック。
+	* 戻る場合は [Done] をクリック。
+1. [Inspector]-[Mapping] の各⦿をクリックして関節部分を確認。
+	![036_1](https://takashinishimura.github.io/Unity/examples/jpg/023_1.jpg)
+
+1. [Muscles & Settings]のスライダーを動かして可動範囲を確認。
