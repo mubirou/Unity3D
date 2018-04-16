@@ -38,8 +38,8 @@
 |030|[二点間の距離](#二点間の距離)|三次元空間にある2つのオブジェクト間の距離を調べる|
 |031|[他のC#ファイルの参照](#他のC#ファイルの参照)|同一オブジェクトにアタッチしたC#ファイルを利用する|
 |032|[シーンを重ねる](#シーンを重ねる)|シーンを重ねる|
-|033|[シーンの事前読込み①](#シーンの事前読込み①)|ロードに時間がかかるシーンを事前に読込む|
-|034|[シーンの事前読込み②](#シーンの事前読込み②)|XXXXXXXXXXXXXXXXXXXXXX|
+|033|[シーンの事前読込み①](#シーンの事前読込み①)|ロードに時間がかかるシーンを事前に読込む①|
+|034|[シーンの事前読込み②](#シーンの事前読込み②)|ロードに時間がかかるシーンを事前に読込む②|
 |035|[フワッと動いてスッと止まる](#フワッと動いてスッと止まる)|XXXXXXXXXXXXXXXXXXXXXX|
 |036|[ユニティちゃん入門](#ユニティちゃん入門)|XXXXXXXXXXXXXXXXXXXXXX|
 ***
@@ -2228,7 +2228,6 @@ public class Main : MonoBehaviour {
 作成日：2018年04月14日
 
 
-================================================================================================
 <a name="シーンの事前読込み①"></a>
 # <b>033 シーンの事前読込み①</b>
 
@@ -2304,3 +2303,51 @@ public class Main : MonoBehaviour {
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
 作成日：2018年04月15日
+
+
+<a name="シーンの事前読込み②"></a>
+# <b>034 シーンの事前読込み②</b>
+
+* 「[034 シーンの事前読込み①](#シーンの事前読込み①)」の "Main.cs" の記述のみ変更します。
+* 「[034 シーンの事前読込み①](#シーンの事前読込み①)」では、"Application.LoadLevelAsync()" で読込みを開始後、"Update()" でロードが完了したか否かを自分で確認しました。ここではコールーチン（co-routine）を使って、ロード完了を待つということもメソッド内で行います。
+* コード自体は直感的に分かり難いかもしれません。
+
+### C#の記述
+1. VSCode等のエディタで "Main.cs" を開きます。
+1. 次のように書き換えて保存。
+```
+//Main.cs
+using UnityEngine;
+using System.Collections; //必須
+
+public class Main : MonoBehaviour {
+	void Start () { //不要
+	}
+
+	void Update() {
+		if (Input.GetKeyDown(KeyCode.Space)) {
+			StartCoroutine("LoadScene002"); //事前読込開始の合図
+		}
+	}
+	
+	IEnumerator LoadScene002() {
+		AsyncOperation _async = Application.LoadLevelAsync("Scene002"); //実際に読込開始
+		//Application.LoadLevelAdditiveAsync("X") でも可能
+		
+		while (! _async.isDone) { //ロードが完了していない間（本当はwhile文は避けたい）
+			Debug.Log(_async.progress * 100 + "%");  //読込完了の%を表示
+			yield return new WaitForSeconds(0.01f); //0.01秒間隔でチェック
+		}
+
+		yield return null;
+	}
+}
+```
+
+### 実行
+1. [Assets]-[Scene001] をダブルクリックし、[再生] ボタンまたは [Edit]-[Play] を選択。
+1. スペースキーを押すとConsoleに "Scene002" の読み込み状況（%）が表示され、ロード完了後、"Scene002" が表示されたら成功。
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月16日
