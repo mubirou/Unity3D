@@ -2357,7 +2357,8 @@ public class Main : MonoBehaviour {
 # <b>035 フワッと動いてスッと止まる</b>
 
 ### 立方体を作成
-1. [GameObject]-[3D Object]-[Cube] を選択。名前は "Cube001" に変更。
+1. [GameObject]-[3D Object]-[Cube] を選択。
+1. 名前は "Cube001" に変更。
 
 ### 空のゲームオブジェクトを作成
 1. [GameObject]-[Create Empty] を選択。
