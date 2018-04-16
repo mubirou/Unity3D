@@ -2485,7 +2485,8 @@ void OnGUI()
 }
 */
 ```
-* 右上の"OnGUI"が消えます。
+* 右上の"OnGUI"が消えます。  
+![036_3](https://takashinishimura.github.io/Unity/examples/jpg/036_3.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
