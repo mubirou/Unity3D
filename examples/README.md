@@ -82,7 +82,7 @@ public class Text001Script : MonoBehaviour {
 1. [Hierarchy] ウィンドウの [Text001] を選択した状態で、[Inspector] ウィンドウを確認。
 1. 上記で作成した [Text001Script] を [Add Component] エリアにドラッグ＆ドロップ。
     * 今回は、Text 自身にスクリプトを組み込み（紐付け）ました。
-1. [Hierarchy]-[Text001]-[Inspector]-[Text001Script(Script)] の [Text] の ⦿ をクリックし、[None(Text)] を [Text001] に変更します（分かり難く見落としがちなので注意）。
+1. [Hierarchy]-[Text001]-[Inspector]-[Text001Script(Script)] の [Text] の [⦿] をクリックし、[None(Text)] を [Text001] に変更します（分かり難く見落としがちなので注意）。
 
 ### 実行
 1. [再生] ボタンまたは [Edit]-[Play] を選択。
@@ -650,7 +650,7 @@ public class Main : MonoBehaviour {
 
 ### ”God" に各サウンドを紐付ける
 1. "God" の [Add Component] ボタンをクリック→[Audio]-[Audio Source] を選択。
-1. [Audio Source] の [AudioClip] の ⦿ をクリックし、[None(Audio Clip)] を [loop01] に変更。
+1. [Audio Source] の [AudioClip] の [⦿] をクリックし、[None(Audio Clip)] を [loop01] に変更。
 1. その他、次の通りに設定（確認）する。
 * [Play On Awake] を✔（SE用は✔を外す）
 * [Loop] に✔（SEの場合は✔をしない）
@@ -2412,7 +2412,7 @@ public class Main : MonoBehaviour {
 1. [Project]-[Assets]-[UnityChan]-[Scenes]-[Locomotion] をダブルクリック。
 1. [▶] ボタンで再生。
 1. 操作は次の通り。
-	* [Ctrl]（マウスの左ボタン）で正面。 
+	* [Ctrl]（マウスの左ボタン）で正面。
 	* [←][→] で方向。
 	* [↑][↓] で前進･後退。
 	* [Space] で伸び。
@@ -2423,7 +2423,70 @@ public class Main : MonoBehaviour {
 1. [Project]-[Assets]-[UnityChan]-[Models]-[unitychan] を選択。
 1. [Inspector]-[Rig]-[Configure...] をクリック。
 	* 戻る場合は [Done] をクリック。
-1. [Inspector]-[Mapping] の各⦿をクリックして関節部分を確認。  
+1. [Inspector]-[Mapping] の各 [⦿] をクリックして関節部分を確認。  
 	![036_1](https://takashinishimura.github.io/Unity/examples/jpg/036_1.jpg)
 1. [Muscles & Settings] のスライダーを動かして可動範囲を確認。  
 	![036_2](https://takashinishimura.github.io/Unity/examples/jpg/036_2.jpg)
+
+### シーンを新規作成
+1. [File]-[New Scene] を選択。
+1. [File]-[Save Scene] で "Scene001" として保存。
+
+### シーンに床を配置
+1. [GameObject]-[3D Object]-[Plane] を選択。
+1. [Inspector]-[Transform] を次のように設定。
+	* Position X:0 Y:-0.5 Z:0
+	* Scale X:10 Y:1 Z:10
+
+### シーンにユニティちゃんを配置
+1. [Project]-[Assets]-[UnityChan]-[Models]-[unitychan] を [Hierarchy] にドラッグ＆ドロップ。
+1. [Hierarchy]-[unitychan]-[Inspector]-[Transform] を次のように設定。
+	* Position X:0 Y:0 Z:-8
+
+### コントローラーの設定
+1. [Hierarchy]-[unitychan] を選択。
+1. [Inspector]-[Animator]-[Controller] の [⦿] をクリック。
+1. 一覧の中から "UnityChanLocomotions" を選択。
+
+### アバダーの確認
+1. [Hierarchy]-[unitychan] を選択。
+1. [Inspector]-[Animator]-[Avatar]の [⦿] をクリック。
+1. 一覧の中から "unitychanAvatar" を選択（デフォルト）。
+
+### スクリプトの設定
+1. [Hierarchy]-[unitychan] を選択。
+1. [Component]-[Script]-[Unity Chan Control Script With Rigid Body] を選択。
+1. [▶] ボタンで再生。
+1. 操作は次の通り（カメラは固定されたままです）。
+	* [←][→] で方向。
+	* [↑][↓] で前進･後退。
+	* [Space] で伸び。
+
+### 余計な表示を消す①
+1. [Hierarchy]-[Main Camera] を選択。
+1. [Component]-[Scripts]-[Camera Controller]-[Camera Controller] を選択（追加されます）。
+1. [Inspector]-[Camera Controller(Script)]-[Show Inst Window] の [✔] を外す。
+	* 右下の"Inst Window"が消えます。
+
+### 余計な表示を消す②
+1. [Project]-[Assets]-[UnityChan]-[Scripts]-[UnityChanControlScriptWithRgidBody] を編集します。
+1. VSCodeを起動し (Project name)/Assets/UnityChan/Scripts/UnityChanControlScriptWithRgidBody.cs を開き、以下の部分（189行目等）を変更。
+```
+/* コメントアウトします
+void OnGUI()
+	{
+	GUI.Box(new Rect(Screen.width -260, 10 ,250 ,150), "Interaction");
+	GUI.Label(new Rect(Screen.width -245,30,250,30),"Up/Down Arrow : Go Forwald/Go Back");
+	GUI.Label(new Rect(Screen.width -245,50,250,30),"Left/Right Arrow : Turn Left/Turn Right");
+	GUI.Label(new Rect(Screen.width -245,70,250,30),"Hit Space key while Running : Jump");
+	GUI.Label(new Rect(Screen.width -245,90,250,30),"Hit Spase key while Stopping : Rest");
+	GUI.Label(new Rect(Screen.width -245,110,250,30),"Left Control : Front Camera");
+	GUI.Label(new Rect(Screen.width -245,130,250,30),"Alt : LookAt Camera");
+}
+*/
+```
+* 右上の"OnGUI"が消えます。
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月16日
