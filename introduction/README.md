@@ -50,7 +50,7 @@
 ![001](https://takashinishimura.github.io/Unity/introduction/jpg/001.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：夢寐郎  
+作成者：Takashi Nishimura  
 作成日：2018年04月17日  
 
-© 2018 夢寐郎
+© 2018 Takashi Nishimura

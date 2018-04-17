@@ -6,4 +6,4 @@
 * [C# with Unity 基本例](https://github.com/TakashiNishimura/Unity/tree/master/examples)
 * [Unity 入門](https://github.com/TakashiNishimura/Unity/tree/master/introduction)
 
-© 2018 夢寐郎
+© 2018 Takashi Nishimura
