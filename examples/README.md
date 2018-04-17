@@ -88,7 +88,7 @@ public class Text001Script : MonoBehaviour {
 ![001](https://takashinishimura.github.io/Unity/examples/jpg/001.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年03月29日  
 更新日：2018年04月02日
 
@@ -161,7 +161,7 @@ public class Main : MonoBehaviour {
 ![002](https://takashinishimura.github.io/Unity/examples/jpg/002.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月02日
 
 
@@ -215,7 +215,7 @@ KeyCode.A（Aキー）、KeyCode.UpArrow（↑キー）、KeyCode.RightArrow（�
 KeyCode.Space（スペースキー）、KeyCode.Return（Enterキー） など
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月03日
 
 
@@ -269,7 +269,7 @@ public class Main : MonoBehaviour {
 ![004](https://takashinishimura.github.io/Unity/examples/jpg/004.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 更新日：2018年04月03日
 
 
@@ -322,7 +322,7 @@ public class Main : MonoBehaviour {
 ![005](https://takashinishimura.github.io/Unity/examples/jpg/005.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月03日
 
 
@@ -381,7 +381,7 @@ public class Main : MonoBehaviour {
 ![006](https://takashinishimura.github.io/Unity/examples/jpg/006.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月04日
 
 
@@ -431,7 +431,7 @@ public class Main : MonoBehaviour {
 * Color.red（赤）、Color.blue（青）、Color.green（緑）、Color.black（黒）、Color.white（白）、Color.cyan（シアン）、Color.magenta（マゼンタ）、Color.yellow（黄）、Color.gray（グレー）、Color.clear（RGBAが全て0）
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月05日
 
 
@@ -490,7 +490,7 @@ public class Main : MonoBehaviour {
 1. マウスの左ボタンを押し続けているとボールが追従したら成功。
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月05日
 
 
@@ -555,7 +555,7 @@ public class Main : MonoBehaviour {
 ![009](https://takashinishimura.github.io/Unity/examples/jpg/009.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月06日
 
 
@@ -629,7 +629,7 @@ public class Main : MonoBehaviour {
 ![010](https://takashinishimura.github.io/Unity/examples/jpg/010.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月07日
 
 
@@ -696,7 +696,7 @@ public class Main : MonoBehaviour {
 ![011](https://takashinishimura.github.io/Unity/examples/jpg/011.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月07日
 
 
@@ -769,7 +769,7 @@ public class Ball002 : MonoBehaviour { //以下thisは省略可
 ![012](https://takashinishimura.github.io/Unity/examples/jpg/012.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月07日
 
 
@@ -835,7 +835,7 @@ public class Sphere002 : MonoBehaviour { //以下thisは省略可
 ![013](https://takashinishimura.github.io/Unity/examples/jpg/013.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月08日
 
 
@@ -894,7 +894,7 @@ public class Sphere001 : MonoBehaviour {
 ![014](https://takashinishimura.github.io/Unity/examples/jpg/014.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月10日
 
 
@@ -964,7 +964,7 @@ public class Sphere001 : MonoBehaviour { //thisは省略可
 ![015](https://takashinishimura.github.io/Unity/examples/jpg/015.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月10日
 
 
@@ -1028,7 +1028,7 @@ public class Main : MonoBehaviour { //Update()は省略
 ![016](https://takashinishimura.github.io/Unity/examples/jpg/016.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月10日
 
 
@@ -1100,7 +1100,7 @@ public class Sphere001 : MonoBehaviour { //thisは省略可
 ![017](https://takashinishimura.github.io/Unity/examples/jpg/017.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月10日
 
 
@@ -1214,7 +1214,7 @@ public class Main : MonoBehaviour {
 ![018](https://takashinishimura.github.io/Unity/examples/jpg/018.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月10日
 
 
@@ -1291,7 +1291,7 @@ public class Button01 : MonoBehaviour {
 ![019](https://takashinishimura.github.io/Unity/examples/jpg/019.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月10日
 
 
@@ -1373,7 +1373,7 @@ public class Toggle001 : MonoBehaviour {
 ![020](https://takashinishimura.github.io/Unity/examples/jpg/020.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月10日
 
 
@@ -1473,7 +1473,7 @@ public class Scene002 : MonoBehaviour {
 1. スペースキーを押すと "Scene001" と "Scene002" が入れ替われば成功。
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月11日
 
 
@@ -1569,7 +1569,7 @@ public class Scene002 : MonoBehaviour {
  ![022](https://takashinishimura.github.io/Unity/examples/jpg/022.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月11日
 
 
@@ -1633,7 +1633,7 @@ public class Main : MonoBehaviour {
 1. オブジェクト（Cube001）とオブジェクト（God）間でメソッドを呼び出すことで、Consoleに "Hello,Cube001" と表示されたら成功。
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月11日
 
 
@@ -1689,7 +1689,7 @@ public class Main : MonoBehaviour, IHoge { //インターフェースの実装
 1. オブジェクト（Cube001）からオブジェクト（God）のメソッド（Request）を呼び出すことで、Consoleに "Cube001"、"TAKASHI:50" と表示されたら成功。
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月12日
 
 
@@ -1754,7 +1754,7 @@ public class Main : MonoBehaviour {
 1. 再生するとConsoleに "これまでの最高記録:XX" と表示され、スペースキーを押す毎に "途中経過:XX" と1ずつ更新。止めると "今回の記録:XX" または "最高記録更新です！:XXX" と表示されます。再度、再生すると最高記録が更新されて表示されるはずです。最高記録は、Unityを終了させるとリセットされます。
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月12日
 
 
@@ -1826,7 +1826,7 @@ public class Main : MonoBehaviour {
 ![026_2](https://takashinishimura.github.io/Unity/examples/jpg/026_2.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月12日
 
 
@@ -1895,7 +1895,7 @@ public class Cube002 : MonoBehaviour { //thisは省略可
 ![027](https://takashinishimura.github.io/Unity/examples/jpg/027.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月12日
 
 
@@ -1967,7 +1967,7 @@ public class Main : MonoBehaviour {
 ![028](https://takashinishimura.github.io/Unity/examples/jpg/028.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月12日
 
 
@@ -2010,7 +2010,7 @@ public class Main : MonoBehaviour {
 1. 2.5秒後、Consoleに "MyMethod!" と表示されたら成功。
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月12日
 
 
@@ -2072,7 +2072,7 @@ public class Main : MonoBehaviour {
 ![030](https://takashinishimura.github.io/Unity/examples/jpg/030.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月13日
 
 
@@ -2142,7 +2142,7 @@ public class MyClass : MonoBehaviour { //継承は必須
 1. Consoleに"MyClassのプロパティ" と "MyClassのメソッド" が出力されたら成功。  
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月13日
 
 
@@ -2222,7 +2222,7 @@ public class Main : MonoBehaviour {
 ![032](https://takashinishimura.github.io/Unity/examples/jpg/032.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月14日
 
 
@@ -2299,7 +2299,7 @@ public class Main : MonoBehaviour {
 1. スペースキーを押すとConsoleに "Scene002" の読み込み状況（%）が表示され、ロード完了後、"Scene002" が表示されたら成功。
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月15日
 
 
@@ -2347,7 +2347,7 @@ public class Main : MonoBehaviour {
 1. スペースキーを押すとConsoleに "Scene002" の読み込み状況（%）が表示され、ロード完了後、"Scene002" が表示されたら成功。
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月16日
 
 
@@ -2395,7 +2395,7 @@ public class Main : MonoBehaviour {
 * 参照：[Edit]-[Project Settings]-[input]-[Axes]-[Horizontal] の設定
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月16日
 
 
@@ -2487,7 +2487,7 @@ void OnGUI()
 ![036_3](https://takashinishimura.github.io/Unity/examples/jpg/036_3.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：Takashi Nishimura  
+作成者：夢寐郎  
 作成日：2018年04月16日
 
-© 2018 Takashi Nishimura
+© 2018 夢寐郎
