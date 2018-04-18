@@ -10,7 +10,7 @@
 |No.|タイトル|内容|.unity|xxx|
 |:--:|:--|:--|:--:|:--:|
 |001|[プリミティブ･オブジェクト](#プリミティブ･オブジェクト)|立方体･球･カプセル･円柱･平面の利用|－|－|
-|002|Blenderからの読み込み|xxxxx|－|－|
+|002|[Blenderからの読み込み](#Blenderからの読み込み)|Blenderで加工したモデルをインポート|－|－|
 ***
 
 <a name="プリミティブ･オブジェクト"></a>
@@ -51,6 +51,33 @@
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
-作成日：2018年04月17日  
+作成日：2018年04月17日
+
+
+<a name="Blenderからの読み込み"></a>
+# <b>002 Blenderからの読み込み</b>
+
+### 3Dモデル無料素材の用意
+* [Free3D](https://free3d.com/)にアクセス。
+* 任意のモデル（.obj形式）を選択し [Download]。
+
+### Blenderでインポート〜エクスポート
+1. Blenderを起動（立方体は削除）。
+1. [ファイル]-[インポート]-[wavefront(.obj)] で上記の "xxx.obj" ファイルをインポート。
+1. 任意で修正。
+1. [ファイル]-[エクスポート]-[FBX(.fbx)] からエクスポート。
+
+### Unityにインポート
+1. Unityを起動。
+1. [Project]-[Create]-[Folder] を選び "Model001" フォルダを作成。
+1. デスクトップ等にある "xxx.fbx" ファイルを、上記のフォルダにドラッグ＆ドロップ。
+    * (Project name)/Assets/ フォルダ内に "xxx.fbx" ファイル等がコピーされます。
+1. [Project]-[Model001] 内のモデルを [Hierarchy] にドラッグ＆ドロップ。
+
+![002](https://takashinishimura.github.io/Unity/introduction/jpg/002.jpg)
+
+実行環境：Unity 2017.2 Personal、Blender 2.79、Ubuntu 16.04 LTS  
+作成者：Takashi Nishimura  
+作成日：2018年04月18日
 
 © 2018 Takashi Nishimura
