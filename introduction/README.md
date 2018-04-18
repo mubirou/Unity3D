@@ -73,6 +73,7 @@
 1. デスクトップ等にある "xxx.fbx" ファイルを、上記のフォルダにドラッグ＆ドロップ。
     * (Project name)/Assets/ フォルダ内に "xxx.fbx" ファイル等がコピーされます。
 1. [Project]-[Model001] 内のモデルを [Hierarchy] にドラッグ＆ドロップ。
+1. 必要に応じて色を変更するなど行います。
 
 ![002](https://takashinishimura.github.io/Unity/introduction/jpg/002.jpg)
 
