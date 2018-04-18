@@ -74,7 +74,7 @@
     * (Project name)/Assets/ フォルダ内に "xxx.fbx" ファイル等がコピーされます。
 1. [Project]-[Model001] 内のモデルを [Hierarchy] にドラッグ＆ドロップ。
 
-![002](https://takashinishimura.github.io/Unity/introduction/jpg/002.jpg)
+![002](https://takashinishimura.github.io/Unity/introduction/jpg/001.jpg)
 
 実行環境：Unity 2017.2 Personal、Blender 2.79、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
