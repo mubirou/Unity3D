@@ -95,6 +95,6 @@
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：Takashi Nishimura  
 作成日：2018年04月20日  
-更新日：2017年04月XX日
+更新日：2018年0X月XX日
 
 © 2018 Takashi Nishimura
