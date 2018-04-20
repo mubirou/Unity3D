@@ -90,7 +90,6 @@
 |:--|:--|:--:|
 |001|[板とボール+物理エンジン①](https://www.youtube.com/watch?v=ruAN7e4wRwg)|2018-04-20|
 |002|[板とボール+物理エンジン②（反射係数）](https://www.youtube.com/watch?v=Km8TpJ850Yo)|2018-04-20|
-|003|[板とボール+物理エンジン②（JavaScript）](https://www.youtube.com/watch?v=yVmpm9p5OJM)|2018-04-20|
 |XXX|[XXX](#XXX)|－|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
