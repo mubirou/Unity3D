@@ -49,7 +49,7 @@
     * 1x1の平面（2個の三角形で構成）。
     * 画像や動画の再生などに利用。  
 
-![001](https://takashinishimura.github.io/Unity/introduction/jpg/001.jpg)
+![001](https://mubirou.github.io/Unity/introduction/jpg/001.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：MUBIROU  
@@ -77,7 +77,7 @@
 1. [Project]-[Model001] 内のモデルを [Hierarchy] にドラッグ＆ドロップ。
 1. 必要に応じて色を変更するなど行います。
 
-![002](https://takashinishimura.github.io/Unity/introduction/jpg/002.jpg)
+![002](https://mubirou.github.io/Unity/introduction/jpg/002.jpg)
 
 実行環境：Unity 2017.2 Personal、Blender 2.79、Ubuntu 16.04 LTS  
 作成者：MUBIROU  
