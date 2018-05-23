@@ -100,12 +100,11 @@
 <a name="Unityで神になる本"></a>
 # <b>004 『Unityで神になる本。』</b>
 
-頁数は [『Unityで神になる本。／廣鉄夫著』](https://amzn.to/2s85DAv) のページです。  
-* Unityプロジェクトを開くには [Unity](https://store.unity.com/ja/) が必要です。
+頁数は [『Unityで神になる本。／廣鉄夫著』](https://amzn.to/2s85DAv) のページです。
 
-|No.|内容|頁数|プロジェクト|WebGL|参考サイト|作成日|
-|:--|:--|:--:|:--:|:--:|:--:|:--:|
-|001|天地創造。|33〜76|－|[●](https://vvestvillage.github.io/Unity/introduction/html/004_001/index.html)|[●](https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-32351)|2018-05-23|
+|No.|内容|頁数|WebGL|参考サイト|作成日|
+|:--|:--|:--:|:--:|:--:|:--:|
+|001|天地創造。|33〜76|[●](https://vvestvillage.github.io/Unity/introduction/html/004_001/index.html)|[●](https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-32351)|2018-05-23|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
