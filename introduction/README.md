@@ -177,7 +177,7 @@
 1. Android SDK等のインストール  
     ① [Edit]-[Preferences]-[External Tools] を選択  
     ② Android「SDK」を [Download] 
-1. 
+1. XXX
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
