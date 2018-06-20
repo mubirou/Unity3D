@@ -174,8 +174,8 @@
     * Use Player Log : ✔を外す（Debug.Log()を出力させなくする）
 
 ### Androidの場合
-1. Android SDK等のインストール
-    ① [Edit]-[Preferences]-[External Tools] を選択
+1. Android SDK等のインストール  
+    ① [Edit]-[Preferences]-[External Tools] を選択  
     ② Android「SDK」を [Download] 
 1. 
 
