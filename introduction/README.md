@@ -167,6 +167,10 @@
 |PS Vista|SONY PlayStation Vita向け|
 |PS4|SONY PlayStation 4向け|
 
+### Standaloneの場合
+必要最低限の設定。  
+* XXXX
+
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
 作成日：2018年06月20日  
