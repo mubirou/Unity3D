@@ -168,11 +168,11 @@
 |PS4|SONY PlayStation 4向け|
 
 ### Standaloneの場合（必要最低限の設定）  
-* Product Name：タイトル名（解像度設定のダイアログに「XXX Configuration」と表示される）
-* Default Cursor：1x1のPNGファイル（カーソルをほとんど見えなくする場合）
+* Product Name : タイトル名（解像度設定のダイアログに「XXX Configuration」と表示される）
+* Default Cursor : 1x1のPNGファイル（カーソルをほとんど見えなくする場合）
 * Standalone Player Options
-    * Display Resolution Dialog: Enabled（起動時に解像度設定のダイアログを表示したくない場合は「Disabled」）
-    * Use Player Log：✔を外す（Debug.Log()を出力させなくする）
+    * Display Resolution Dialog : Enabled（起動時に解像度設定のダイアログを表示したくない場合は「Disabled」）
+    * Use Player Log : ✔を外す（Debug.Log()を出力させなくする）
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
