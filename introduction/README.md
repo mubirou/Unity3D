@@ -152,8 +152,8 @@
 
 ### プラットフォーム
 [File]-[Build Settings] から選択。  
-|Platform|内容|
-|:--|:--|
+|マウス操作|内容|DATE|
+|:--|:--|:--:|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
