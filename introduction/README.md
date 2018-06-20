@@ -155,9 +155,7 @@
 |Platform|内容|
 |:--|:--|
 |PC, Mac & Linux Standalone|Windowsｍ･macOS･Linux用|
-|iOS|iPhone･iPad用|
-|Android|Android用|
-|Tizen|スマホ等で使われるTizen OS用|
+
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
