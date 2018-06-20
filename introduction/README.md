@@ -151,7 +151,7 @@
 # <b>007 出力</b>
 
 ### プラットフォーム
-[File]-[Build Settings] から選択。
+[File]-[Build Settings] から選択。  
 |Platform|内容|
 |:--|:--|
 |PC, Mac & Linux Standalone|Windowsｍ･macOS･Linux用|
