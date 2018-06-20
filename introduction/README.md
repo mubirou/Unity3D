@@ -12,6 +12,7 @@
 |004|[『Unityで神になる本。』](#Unityで神になる本)|参考書の勉強|[●](#Unityで神になる本)|－|
 |005|[ユーザー設定](#ユーザー設定)|初期設定では使いにくい設定を変更|－|
 |006|[マウス操作](#マウス操作)|個人的に必須のマウス操作|－|
+|007|[出力](#出力)|Unityで作成したプロジェクトを出力する方法|－|
 ***
 
 <a name="プリミティブ･オブジェクト"></a>
@@ -143,6 +144,24 @@
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
 作成日：2018年05月24日  
+更新日：2018年XX月XX日
+
+
+<a name="出力"></a>
+# <b>007 出力</b>
+
+### プラットフォーム
+[File]-[Build Settings] から選択。
+|Platform|内容|
+|:--|:--|
+|PC, Mac & Linux Standalone|Windowsｍ･macOS･Linux用|
+|iOS|iPhone･iPad用|
+|Android|Android用|
+|Tizen|スマホ等で使われるTizen OS用|
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：vvestvillage  
+作成日：2018年06月20日  
 更新日：2018年XX月XX日
 
 
