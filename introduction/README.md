@@ -159,6 +159,9 @@
 |iOS|iPhone･iPad用|
 |Android|Android用|
 |Tizen|スマホ等で使われるTizen OS用|
+|WebGL|WebGL対応ブラウザ向け|
+|Samsung TV|スマートテレビ用|
+|Facebook|（Facebookアプリ用）|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
