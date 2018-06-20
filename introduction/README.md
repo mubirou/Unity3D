@@ -168,9 +168,9 @@
 |PS4|SONY PlayStation 4向け|
 
 ### Standaloneの場合（必要最低限の設定）  
-* Company Name: XXXX
-* ProductName: XXXX
-* 
+* Product Name: タイトル名（解像度設定のダイアログに「XXX Configuration」と表示される）
+* Standalone Player Options
+    * Display Resolution Dialog: Enabled（起動時に解像度設定のダイアログを表示したくない場合は「Disabled」）
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
