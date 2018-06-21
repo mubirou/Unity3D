@@ -174,7 +174,7 @@
     * Use Player Log : ✔を外す（Debug.Log()を出力させなくする）
 
 ### Androidの場合
-1. Android SDK等のインストール（[参考サイト](http://blog.tabolog.net/entry/2017/08/11/092821)）  
+1. Android SDK（[Android Studio](https://ja.wikipedia.org/wiki/Android_Studio)）のインストール（[参考サイト](http://blog.tabolog.net/entry/2017/08/11/092821)）  
     ① [Edit]-[Preferences]-[External Tools] を選択  
     ② Android「SDK」の [Download] を選択  
     ③ [developer.android.com](https://developer.android.com/studio/#Other) の [DOWNLOAD ANDROID STUDIO] を選択  
@@ -185,10 +185,11 @@
     ```
     ⑥ [Android Studio Setup Wizard] の指示に従いインストール  
     ⑦ /home/（ユーザ名）/Android/Sdk が作成されたのを確認  
+    ⑧ Unityを起動し、[Edit]-[Preferences]-[External Tools] を選択  
+    ⑨ Android「SDK」の [Browse] を選択し、上記のパス /home/（ユーザ名）/Android/Sdk を指定する  
 
-1. UnityとAndroid SDKをリンク  
-    ① [Edit]-[Preferences]-[External Tools] を選択  
-    ② Android「SDK」の [Browse] を選択し、上記のパス /home/（ユーザ名）/Android/Sdk を指定する  
+1. [JDK](https://ja.wikipedia.org/wiki/Java_Development_Kit)のインストール  
+
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
