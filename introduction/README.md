@@ -176,19 +176,19 @@
 ### Androidの場合
 1. Android SDK等のインストール  
     ① [Edit]-[Preferences]-[External Tools] を選択  
-    ② Android「SDK」の [Download] を選択 
-    ③ developer.android.com の [DOWNLOAD ANDROID STUDIO] を選択
-    ④ ダウンロードされた android-studio-ide-XXX-linux.zip を任意の場所に展開
-    ⑤ 端末で次の通りに実行（デスクトップに展開した場合）
+    ② Android「SDK」の [Download] を選択  
+    ③ developer.android.com の [DOWNLOAD ANDROID STUDIO] を選択  
+    ④ ダウンロードされた android-studio-ide-XXX-linux.zip を任意の場所に展開  
+    ⑤ 端末で次の通りに実行（デスクトップに展開した場合）  
     ```
     $ デスクトップ/android-studio/bin/studio.sh
     ```
-    ⑥ [Android Studio Setup Wizard] の指示に従いインストール
-    ⑦ /home/（ユーザ名）/Android/Sdk が作成されたのを確認
+    ⑥ [Android Studio Setup Wizard] の指示に従いインストール  
+    ⑦ /home/（ユーザ名）/Android/Sdk が作成されたのを確認  
 
-1. UnityとAndroid SDKをリンク
-    ① [Edit]-[Preferences]-[External Tools] を選択
-    ② Android「SDK」の [Browse] を選択し、上記のパス /home/（ユーザ名）/Android/Sdk を指定する 
+1. UnityとAndroid SDKをリンク  
+    ① [Edit]-[Preferences]-[External Tools] を選択  
+    ② Android「SDK」の [Browse] を選択し、上記のパス /home/（ユーザ名）/Android/Sdk を指定する  
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
