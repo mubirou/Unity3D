@@ -189,7 +189,10 @@
     ⑨ Android「SDK」の [Browse] を選択し、上記のパス /home/（ユーザ名）/Android/Sdk を指定する  
 
 1. [JDK](https://ja.wikipedia.org/wiki/Java_Development_Kit)のインストール  
+    * 既にインストール済みの場合、Android SDKをインストールすると自動的にUnityでも利用可能になる   
+    *  Android「JDK」のパスは /usr/lib/jvm/java-1.8.0-openjdk-amd64/ （筆者環境）
 
+1. [Android NDK](https://developer.android.com/ndk/guides/?hl=ja)のインストール
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
