@@ -177,7 +177,7 @@
 1. Android SDK等のインストール（[参考サイト](http://blog.tabolog.net/entry/2017/08/11/092821)）  
     ① [Edit]-[Preferences]-[External Tools] を選択  
     ② Android「SDK」の [Download] を選択  
-    ③ developer.android.com の [DOWNLOAD ANDROID STUDIO] を選択  
+    ③ [developer.android.com](https://developer.android.com/studio/#Other) の [DOWNLOAD ANDROID STUDIO] を選択  
     ④ ダウンロードされた android-studio-ide-XXX-linux.zip を任意の場所に展開  
     ⑤ 端末で次の通りに実行（デスクトップに展開した場合）  
     ```
