@@ -180,9 +180,9 @@
     ③ [developer.android.com](https://developer.android.com/studio/#Other) の [DOWNLOAD ANDROID STUDIO] を選択  
     ④ ダウンロードされた android-studio-ide-XXX-linux.zip を任意の場所に展開  
     ⑤ 端末で次の通りに実行（デスクトップに展開した場合）  
-    ```
-    $ デスクトップ/android-studio/bin/studio.sh
-    ```
+        ```
+        $ デスクトップ/android-studio/bin/studio.sh
+        ```
     ⑥ [Android Studio Setup Wizard] の指示に従いインストール  
     ⑦ /home/（ユーザ名）/Android/Sdk が作成されたのを確認  
 
