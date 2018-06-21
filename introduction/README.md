@@ -167,7 +167,7 @@
 |PS Vista|SONY PlayStation Vita向け|
 |PS4|SONY PlayStation 4向け|
 
-### Standaloneの場合（必要最低限の設定）  
+### Linux Standaloneの場合（必要最低限の設定）  
 * Default Cursor : 1x1のPNGファイル（カーソルをほとんど見えなくする場合）
 * Standalone Player Options
     * Display Resolution Dialog : Enabled（起動時に解像度設定のダイアログを表示したくない場合は「Disabled」）
