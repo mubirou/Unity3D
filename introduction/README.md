@@ -174,7 +174,7 @@
     * Use Player Log : ✔を外す（Debug.Log()を出力させなくする）
 
 ### Androidの場合
-1. Android SDK等のインストール  
+1. Android SDK等のインストール（[参考サイト](http://blog.tabolog.net/entry/2017/08/11/092821)）  
     ① [Edit]-[Preferences]-[External Tools] を選択  
     ② Android「SDK」の [Download] を選択  
     ③ developer.android.com の [DOWNLOAD ANDROID STUDIO] を選択  
