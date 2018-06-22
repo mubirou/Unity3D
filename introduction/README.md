@@ -151,7 +151,7 @@
 # <b>007 出力</b>
 
 ### プラットフォーム
-[File]-[Build Settings] から選択。  
+[File]-[Build Settings] から選択  
 
 |Platform|内容|
 |:--|:--|
@@ -173,7 +173,7 @@
     * Display Resolution Dialog : Enabled（起動時に解像度設定のダイアログを表示したくない場合は「Disabled」）
     * Use Player Log : ✔を外す（Debug.Log()を出力させなくする）
 
-### Androidの場合
+### Androidの場合（必要最低限の設定）
 1. Android SDK（[Android Studio](https://ja.wikipedia.org/wiki/Android_Studio)）のインストール（[参考サイト](http://blog.tabolog.net/entry/2017/08/11/092821)）  
     ① [Edit]-[Preferences]-[External Tools] を選択  
     ② Android「SDK」の [Download] を選択  
@@ -197,12 +197,42 @@
     ② Android「NDK」の [Download] を選択  
     ③ ダウンロードされた android-ndk-r13b-linux-x86_64.zip を任意の場所に展開  
     ④ Unityを起動し、[Edit]-[Preferences]-[External Tools] を選択  
-    ⑤ Android「NDK」の [Browse] を選択し、展開したフォルダ android-ndk-r13b を指定
+    ⑤ Android「NDK」の [Browse] を選択し、展開したフォルダ android-ndk-r13b を指定  
+
+1. プラットフォームの変更  
+    ① [File]-[Build Settings]-[Android] を選択し [Switch Platform] を選択  
+    ② [Add Open Scenes] を押して任意のシーンを選択  
+
+1. アプリ名の設定  
+    ① [Build Settings]-[Play Settings] ボタンを押す  
+    ② [Product Name]（アプリ名）を設定（初期値はUnityのプロジェクト名）
+
+1. Keystoreファイルの作成  
+    ① [Build Settings]-[Play Settings] ボタンを押す  
+    ② [Create a new keystore] を✔  
+    ③ [Keystore password] と [Confirm Keystore password] を入力（6文字以上）  
+    ④ [Browse Keystore] ボタンを押す  
+    ⑤ 任意の場所に xxx.keystore ファイルを保存  
+
+1. その他の設定  
+    ① [Build Settings]-[Play Settings] ボタンを押す  
+    ② [Other Settings]-[Identification] の [Package Name] を com.vvestvillage 等（ユニーク値）にする
+
+1. Android端末との接続許可  
+    ① Android端末をPCに接続し [端末データへのアクセスの許可]  
+    ② Android端末上に [USBデバッグを許可] と表示されたら [OK] を選択
+
+1. ビルド  
+    ① [Build Settings]-[Build And Run] を選択  
+    ② 任意の場所に xxx.apk ファイルを保存  
+    ③ Unityの左下に [Build Completed with a result of 'Succeeded'] と表示されたら成功  
+    ④ 上記で指定した場所に xxx.apk が生成されたのを確認  
+    ⑤ Android端末上に上記で設定したアプリ名のアイコンを選択、再生されたら成功！  
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
 作成日：2018年06月20日  
-更新日：2018年06月21日
+更新日：2018年06月22日
 
 
 © 2018 vvestvillage
