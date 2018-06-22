@@ -219,7 +219,7 @@
     ② [Other Settings]-[Identification] の [Package Name] を com.vvestvillage.app001 等（ユニーク値）にする  
     ※この値が違うと別のアプリとしてAndroid端末にインストールされる
 
-1. Android端末との接続許可  
+1. Android端末との接続  
     ① Android端末をPCに接続し [端末データへのアクセスの許可]  
     ② Android端末上に [USBデバッグを許可] と表示されたら [OK] を選択
 
