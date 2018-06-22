@@ -207,16 +207,17 @@
     ① [Build Settings]-[Play Settings] ボタンを押す  
     ② [Product Name]（アプリ名）を設定（初期値はUnityのプロジェクト名）
 
-1. Keystoreファイルの作成  
+1. Keystore（証明）ファイルの作成  
     ① [Build Settings]-[Play Settings] ボタンを押す  
     ② [Create a new keystore] を✔  
     ③ [Keystore password] と [Confirm Keystore password] を入力（6文字以上）  
     ④ [Browse Keystore] ボタンを押す  
     ⑤ 任意の場所に xxx.keystore ファイルを保存  
 
-1. その他の設定  
+1. アプリケーションIDの登録  
     ① [Build Settings]-[Play Settings] ボタンを押す  
-    ② [Other Settings]-[Identification] の [Package Name] を com.vvestvillage 等（ユニーク値）にする
+    ② [Other Settings]-[Identification] の [Package Name] を com.vvestvillage.app001 等（ユニーク値）にする  
+    ※この値が違うと別のアプリとして登録される
 
 1. Android端末との接続許可  
     ① Android端末をPCに接続し [端末データへのアクセスの許可]  
