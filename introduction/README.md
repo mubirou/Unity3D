@@ -168,10 +168,29 @@
 |PS4|SONY PlayStation 4向け|
 
 ### Linux Standaloneの場合（必要最低限の設定）  
-* Default Cursor : 1x1のPNGファイル（カーソルをほとんど見えなくする場合）
-* Standalone Player Options
-    * Display Resolution Dialog : Enabled（起動時に解像度設定のダイアログを表示したくない場合は「Disabled」）
-    * Use Player Log : ✔を外す（Debug.Log()を出力させなくする）
+1. プラットフォームの変更  
+    ① [File]-[Build Settings]-[PC,Mac & Linux Standalone] を選択し [Switch Platform] を選択  
+    ② [Add Open Scenes] を押して任意のシーンを選択  
+
+1. カーソルの変更  
+    ① [File]-[Build Settings]-[Play Settings] ボタンを押す  
+    ② [Default Cursor] を1x1のPNGファイル（Inkscape等で作成）にする  
+    ※タッチパネル用にカーソルをほとんど見えなくする場合
+
+1. 起動時のダイアログ設定  
+    ① [File]-[Build Settings]-[Play Settings] ボタンを押す  
+    ② [Resolution and Presentation]-[Standalone Player Options]-[Display Resolution Dialog] を [Enabled] にする  
+    ※起動時に解像度設定のダイアログを表示したくない場合は「Disabled」  
+
+1. Debug.Log()を出力させなくする  
+    上記に引き続き [Use Player Log] の ✔ を外す
+
+1. ビルド  
+    ① [Build Settings]-[Build] を選択  
+    ② 任意の場所に xxx..x86_64 ファイルを保存  
+    ③ Unityの左下に [Build Completed with a result of 'Succeeded'] と表示されたら成功  
+    ④ 上記で指定した場所に xxx.apk が生成されたのを確認  
+    ⑤ Android端末上に生成されたアプリを選択し、再生されたら成功!!  
 
 ### Androidの場合（必要最低限の設定）
 1. Android SDK（[Android Studio](https://ja.wikipedia.org/wiki/Android_Studio)）のインストール（[参考サイト](http://blog.tabolog.net/entry/2017/08/11/092821)）  
