@@ -188,9 +188,7 @@
 1. ビルド  
     ① [Build Settings]-[Build] を選択  
     ② 任意の場所に xxx..x86_64 ファイルを保存  
-    ③ Unityの左下に [Build Completed with a result of 'Succeeded'] と表示されたら成功  
-    ④ 上記で指定した場所に xxx.apk が生成されたのを確認  
-    ⑤ Android端末上に生成されたアプリを選択し、再生されたら成功!!  
+    ③ 任意の場所に生成されたアプリを選択し、再生されたら成功!!  
 
 ### Androidの場合（必要最低限の設定）
 1. Android SDK（[Android Studio](https://ja.wikipedia.org/wiki/Android_Studio)）のインストール（[参考サイト](http://blog.tabolog.net/entry/2017/08/11/092821)）  
@@ -208,10 +206,10 @@
     ⑨ Android「SDK」の [Browse] を選択し、上記のパス /home/（ユーザ名）/Android/Sdk を指定する  
 
 1. [JDK](https://ja.wikipedia.org/wiki/Java_Development_Kit)のインストール  
-    * 既にインストール済みの場合、Android SDKをインストールすると自動的にUnityでも利用可能になる   
-    *  Android「JDK」のパスは /usr/lib/jvm/java-1.8.0-openjdk-amd64/ （筆者環境）
+    Android「JDK」のパスは /usr/lib/jvm/java-1.8.0-openjdk-amd64
+    ※既にインストール済みの場合
 
-1. [Android NDK](https://developer.android.com/ndk/guides/?hl=ja)のインストール（不要？）  
+1. [Android NDK](https://developer.android.com/ndk/guides/?hl=ja)のインストール  
     ① [Edit]-[Preferences]-[External Tools] を選択  
     ② Android「NDK」の [Download] を選択  
     ③ ダウンロードされた android-ndk-r13b-linux-x86_64.zip を任意の場所に展開  
