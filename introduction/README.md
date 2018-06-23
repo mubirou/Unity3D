@@ -250,7 +250,7 @@
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS、Android 8.0  
 作成者：vvestvillage  
 作成日：2018年06月20日  
-更新日：2018年06月22日
+更新日：2018年06月23日
 
 
 © 2018 vvestvillage
