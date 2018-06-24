@@ -186,7 +186,7 @@
     上記に引き続き [Use Player Log] の ✔ を外す
 
 1. ビルド  
-    ① [Build Settings]-[Build] を選択  
+    ① [[File]-Build Settings]-[Build] を選択  
     ② 任意の場所に xxx..x86_64 ファイルを保存  
     ③ 任意の場所に生成されたアプリを選択し、再生されたら成功!!  
 
@@ -221,18 +221,18 @@
     ② [Add Open Scenes] を押して任意のシーンを選択  
 
 1. アプリ名の設定  
-    ① [Build Settings]-[Play Settings] ボタンを押す  
+    ① [File]-[Build Settings]-[Play Settings] ボタンを押す  
     ② [Product Name]（アプリ名）を設定（初期値はUnityのプロジェクト名）
 
 1. Keystore（証明）ファイルの作成  
-    ① [Build Settings]-[Play Settings] ボタンを押す  
+    ① [File]-[Build Settings]-[Play Settings] ボタンを押す  
     ② [Create a new keystore] を✔  
     ③ [Keystore password] と [Confirm Keystore password] を入力（6文字以上）  
     ④ [Browse Keystore] ボタンを押す  
     ⑤ 任意の場所に xxx.keystore ファイルを保存  
 
 1. アプリケーションIDの登録  
-    ① [Build Settings]-[Play Settings] ボタンを押す  
+    ① [File]-[Build Settings]-[Play Settings] ボタンを押す  
     ② [Other Settings]-[Identification] の [Package Name] を com.vvestvillage.app001 等（ユニーク値）にする  
     ※この値が違うと別のアプリとしてAndroid端末にインストールされる
 
@@ -241,7 +241,7 @@
     ② Android端末上に [USBデバッグを許可] と表示されたら [OK] を選択
 
 1. ビルド  
-    ① [Build Settings]-[Build And Run] を選択  
+    ① [File]-[Build Settings]-[Build And Run] を選択  
     ② 任意の場所に xxx.apk ファイルを保存  
     ③ Unityの左下に [Build Completed with a result of 'Succeeded'] と表示されたら成功  
     ④ 上記で指定した場所に xxx.apk が生成されたのを確認  
