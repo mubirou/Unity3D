@@ -185,7 +185,7 @@
     上記に引き続き [Use Player Log] の ✔ を外す
 
 1. ビルド  
-    ① [[File]-Build Settings]-[Build] を選択  
+    ① [File]-[Build Settings]-[Build] を選択  
     ② 任意の場所に xxx..x86_64 ファイルを保存  
     ③ 任意の場所に生成されたアプリを選択し、再生されたら成功!!  
 
