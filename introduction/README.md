@@ -178,7 +178,7 @@
 
 1. 起動時のダイアログ設定  
     ① [File]-[Build Settings]-[Play Settings] ボタンを押す  
-    ② [Resolution and Presentation]-[Standalone Player Options]-[Display Resolution Dialog] を [Enabled] にする  
+    ② [Resolution and Presentation]-[Standalone Player Options]-[Display Resolution Dialog] を [Enabled] にする（初期値）  
     ※起動時に解像度設定のダイアログを表示したくない場合は「Disabled」  
 
 1. Debug.Log()を出力させなくする  
