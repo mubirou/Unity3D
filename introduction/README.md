@@ -172,10 +172,9 @@
     ① [File]-[Build Settings]-[PC,Mac & Linux Standalone] を選択し [Switch Platform] を選択  
     ② [Add Open Scenes] を押して任意のシーンを選択  
 
-1. カーソルの変更  
+1. カーソルの変更（タッチパネル用にカーソルをほとんど見えなくする場合）  
     ① [File]-[Build Settings]-[Play Settings] ボタンを押す  
     ② [Default Cursor] を1x1のPNGファイル（Inkscape等で作成）にする  
-    ※タッチパネル用にカーソルをほとんど見えなくする場合
 
 1. 起動時のダイアログ設定  
     ① [File]-[Build Settings]-[Play Settings] ボタンを押す  
