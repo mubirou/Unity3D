@@ -246,7 +246,7 @@
     ③ Unityの左下に [Build Completed with a result of 'Succeeded'] と表示されたら成功  
     ④ 上記で指定した場所に xxx.apk が生成されたのを確認  
     ⑤ Android端末上に生成されたアプリを選択し、再生されたら成功!!  
-    ※「xxx.apk」の[ダウンロード](https://vvestvillage.github.io/Unity/introduction/apk/007.apk)  
+    ※ xxx.apk の[ダウンロード](https://vvestvillage.github.io/Unity/introduction/apk/007.apk)（Android端末へのインストール用）  
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS、Android 8.0  
 作成者：vvestvillage  
