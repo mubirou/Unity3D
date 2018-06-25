@@ -237,7 +237,7 @@
 
 1. Android端末との接続  
     ① Android端末をPCに接続し [端末データへのアクセスの許可]  
-    ② Android端末上に [USBデバッグを許可] と表示されたら [OK] を選択
+    ② Android端末上に [USBデバッグを許可] と表示されたら [OK] を選択（「…常に許可する」を選択）  
 
 1. ビルド  
     ① [File]-[Build Settings]-[Build And Run] を選択  
