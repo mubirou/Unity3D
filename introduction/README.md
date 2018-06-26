@@ -258,7 +258,7 @@
 
 
 <a name="VideoPlayerコンポーネント"></a>
-# <b>008 VideoPlayerコンポーネント（検証中...）</b>
+# <b>008 VideoPlayerコンポーネント（検証中）</b>
 
 ### 概要
 * Unity 5.6（2017年3月リリース）より [VideoPlayerコンポーネント](https://docs.unity3d.com/ja/current/Manual/class-VideoPlayer.html) による動画ファイルの再生が可能
