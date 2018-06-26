@@ -268,7 +268,7 @@
 $ ffmpeg -version
 ffmpeg version 2.8.14-0ubuntu0.16.04.1 Copyright (c) 2000-2018 the FFmpeg developers
 ```
-* ffmpegによる変換例
+* ffmpegによるWebMへの変換例
 ```
 $ ffmpeg -i sample.mp4 -strict -2 sample.webm
 ```
