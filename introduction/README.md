@@ -263,12 +263,12 @@
 * Linuxの場合 [.webm](https://ja.wikipedia.org/wiki/WebM) または [.ogv](https://ja.wikipedia.org/wiki/Ogg) である必要がある（[.mp4](https://ja.wikipedia.org/wiki/MP4) は不可）（要検証）
 
 ### WebMへの変換
-* [FFmpeg](https://ja.wikipedia.org/wiki/FFmpeg) のバージョン確認  
+* [FFmpeg](https://ja.wikipedia.org/wiki/FFmpeg)のバージョン確認  
 ```
 $ ffmpeg -version
 ffmpeg version 2.8.14-0ubuntu0.16.04.1 Copyright (c) 2000-2018 the FFmpeg developers
 ```
-* ffmpegによるWebMへの変換例
+* FFmpegによるWebMへの変換例
 ```
 $ ffmpeg -i sample.mp4 -strict -2 sample.webm
 ```
