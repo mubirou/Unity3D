@@ -262,6 +262,23 @@
 * Unity 5.6（2017年3月リリース）より [VideoPlayerコンポーネント](https://docs.unity3d.com/ja/current/Manual/class-VideoPlayer.html) による動画ファイルの再生が可能
 * Linuxの場合 [.webm](https://ja.wikipedia.org/wiki/WebM) または [.ogv](https://ja.wikipedia.org/wiki/Ogg) である必要がある（[.mp4](https://ja.wikipedia.org/wiki/MP4) は不可）（要検証）
 
+### WebMへの変換
+1. ffmpegのバージョン確認  
+```
+$ ffmpeg -version
+ffmpeg version 2.8.14-0ubuntu0.16.04.1 Copyright (c) 2000-2018 the FFmpeg developers
+```
+1. ffmpegによる変換例
+```
+$ ffmpeg -i sample.mp4 -strict -2 sample.webm
+```
+1. 動画ファイルの解析例
+```
+$ ffprobe sample.webm
+Duration: 00:00:07.64, start: 0.000000, bitrate: 138 kb/s
+    Stream #0:0: Video: vp9 (Profile 0), yuv420p(tv), 640x360, SAR 1:1 DAR 16:9, 25 fps, 25 tbr, 1k tbn, 1k tbc (default)
+```
+
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
 作成日：2018年06月26日
