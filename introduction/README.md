@@ -222,10 +222,11 @@
 
 1. アプリ名の設定  
     ① [File]-[Build Settings]-[Play Settings] ボタンを押す  
-    ② [Product Name]（アプリ名）を設定（初期値はUnityのプロジェクト名）
+    ② [Product Name]（アプリ名）を設定（初期値はUnityのプロジェクト名）  
+    ※この名前がAndroid端末上のアプリ名となる（数字から始まる名前でもOK）
 
 1. Keystore（証明）ファイルの作成  
-    ① [File]-[Build Settings]-[Play Settings] ボタンを押す  
+    ① [File]-[Build Settings]-[Player Setting]-[Publishing Settings] ボタンを押す  
     ② [Create a new keystore] を✔  
     ③ [Keystore password] と [Confirm Keystore password] を入力（6文字以上）  
     ④ [Browse Keystore] ボタンを押す  
@@ -252,7 +253,7 @@
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS、Android 8.0  
 作成者：vvestvillage  
 作成日：2018年06月20日  
-更新日：2018年06月25日
+更新日：2018年06月26日
 
 
 <a name="VideoPlayerコンポーネント"></a>
