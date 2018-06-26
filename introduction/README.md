@@ -309,7 +309,7 @@
 1. [▶] ボタンを押して [Quad] 上に映像ファイルが再生されたら成功
     * Linux Standalone では動作確認済み（タッチパネル等では利用可能）
 
-実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS、Shotcut   
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS、Shotcut 18.03.06  
 作成者：vvestvillage  
 作成日：2018年06月26日
 
