@@ -263,9 +263,9 @@
 * Linuxの場合 [.webm](https://ja.wikipedia.org/wiki/WebM) または [.ogv](https://ja.wikipedia.org/wiki/Ogg) である必要がある（[.mp4](https://ja.wikipedia.org/wiki/MP4) は不可）（要検証）
 
 ### H264 / VP8 / VP9 について  
+* 2010年、H.264ライセンス利用料の無料化を発表（それだけでは不十分との意見あり）
 * 2011年、Google ChromeはH.264対応をやめWebM推進を発表
 * 2011年、GoogleはHTML5ビデオでサポートするフォーマットとしてOgg TheoraとWebM（VP8）を選択
-* 2010年、H.264ライセンス利用料の無料化を発表（それだけでは不十分との意見あり）
 * AppleはVP8ではなくH.264を支持（品質的な理由）
 * Ogg Theora（オッグ･シオラ）とはOn2VP3をベースに開発したビデオコーデック（音声コーデックにはOgg Vorbisを利用）
 * VP8はGoogleに買収されたOn2テクノロジー社が開発したビデオコーデック
