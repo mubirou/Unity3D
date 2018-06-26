@@ -262,6 +262,18 @@
 * Unity 5.6（2017年3月リリース）より [VideoPlayerコンポーネント](https://docs.unity3d.com/ja/current/Manual/class-VideoPlayer.html) による動画ファイルの再生が可能
 * Linuxの場合 [.webm](https://ja.wikipedia.org/wiki/WebM) または [.ogv](https://ja.wikipedia.org/wiki/Ogg) である必要がある（[.mp4](https://ja.wikipedia.org/wiki/MP4) は不可）（要検証）
 
+### H264 / VP8 / VP9 について  
+* 2011年、Google ChromeはH.264対応をやめWebM推進を発表
+* 2011年、GoogleはHTML5ビデオでサポートするフォーマットとしてOgg TheoraとWebM（VP8）を選択
+* H.264ライセンス利用料の無償化を発表（それだけでは不十分との意見あり）
+* AppleはVP8ではなくH.264を支持（品質的な理由）
+* Ogg Theora（オッグ･シオラ）とはOn2VP3をベースに開発したビデオコーデック（音声コーデックにはOgg Vorbisを利用）
+* VP8はGoogleに買収されたOn2テクノロジー社が開発したビデオコーデック
+* VP9はVP8の後継（VP8の半分のビットレートで同等の画質を実現、H.265よりも効率的が目標）
+* VP9はVP8より20％程度、CPUの使用率が高い
+* VP9は動きにとても強い（対VP8、H.264比）
+* UnityではVP8に対応（VP9は要調査）
+
 ### WebMへの変換（検証中...）
 * [FFmpeg](https://ja.wikipedia.org/wiki/FFmpeg) のバージョン確認  
 ```
