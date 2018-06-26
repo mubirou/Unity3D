@@ -258,9 +258,9 @@
 
 
 <a name="VideoPlayerコンポーネント"></a>
-# <b>008 VideoPlayerコンポーネント</b>
+# <b>008 VideoPlayerコンポーネント（検証中...）</b>
 
-### 概要（検証中...）
+### 概要
 * Unity 5.6（2017年3月リリース）より [VideoPlayerコンポーネント](https://docs.unity3d.com/ja/current/Manual/class-VideoPlayer.html) による動画ファイルの再生が可能
 * Linuxの場合 [.webm](https://ja.wikipedia.org/wiki/WebM) または [.ogv](https://ja.wikipedia.org/wiki/Ogg) である必要がある（[.mp4](https://ja.wikipedia.org/wiki/MP4) は不可）（要検証）
 
@@ -276,7 +276,7 @@
 * VP9は動きにとても強い（対VP8、H.264比）
 * UnityではVP8に対応（VP9は要調査）
 
-### WebMへの変換（検証中...）
+### WebMへの変換
 * [FFmpeg](https://ja.wikipedia.org/wiki/FFmpeg) のバージョン確認  
 ```
 $ ffmpeg -version
