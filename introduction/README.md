@@ -223,7 +223,8 @@
 1. アプリ名の設定  
     ① [File]-[Build Settings]-[Player Settings] ボタンを押す  
     ② [Product Name]（アプリ名）を設定（初期値はUnityのプロジェクト名）  
-    ※この名前がAndroid端末上のアプリ名となる（数字から始まる名前でもOK）
+    ※この名前がAndroid端末上のアプリ名となる（数字から始まる名前でもOK）  
+    ※下記の「アプリケーションID」の最後のドット以降と同じでなくてよい
 
 1. Keystore（証明）ファイルの作成  
     ① [File]-[Build Settings]-[Player Setting]-[Publishing Settings] ボタンを押す  
