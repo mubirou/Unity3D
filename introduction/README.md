@@ -278,7 +278,7 @@
 
 ### WebMへの変換
 1. [Ubuntuソフトウェア] を起動し [Shotcut](https://www.shotcut.org/) をインストール＆起動  
-    ※参考：最新版（18.06.02）の[ダウンロード](https://www.shotcut.org/download/)
+    ※最新版（18.06.02）が必要な場合は[ここからダウンロード](https://www.shotcut.org/download/)
 1. [ファイルを開く] で任意の動画ファイルを開く
 1. [ファイル]-[ビデオExport] を選択
 1. [ストック] の中から [WebM] を選択（「WebM VP9」ではない）
