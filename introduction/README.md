@@ -276,7 +276,7 @@ $ ffmpeg -i sample.mp4 -strict -2 sample.webm
 ```
 $ ffprobe sample.webm
 Duration: 00:00:07.64, start: 0.000000, bitrate: 138 kb/s
-    Stream #0:0: Video: vp9 (Profile 0), yuv420p(tv), 640x360, SAR 1:1 DAR 16:9, 25 fps, 25 tbr, 1k tbn, 1k tbc (default)
+    Stream #0:0: Video: vp9 (Profile 0), yuv420p(tv), 640x360, SAR 1:1 DAR 16:9, 25 fps, ...
 ```
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
