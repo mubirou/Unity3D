@@ -245,7 +245,7 @@
 
 1. ビルド  
     ① [File]-[Build Settings]-[Build And Run] を選択  
-    ② 任意の場所に xxx.apk ファイルを保存  
+    ② 任意の場所に xxx.apk ファイルを保存（アプリ名とは関係ない）  
     ③ Unityの左下に [Build Completed with a result of 'Succeeded'] と表示されたら成功  
     ④ 上記で指定した場所に xxx.apk が生成されたのを確認  
     ⑤ Android端末上に生成されたアプリを選択し、再生されたら成功!!  
