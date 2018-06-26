@@ -221,7 +221,7 @@
     ② [Add Open Scenes] を押して任意のシーンを選択  
 
 1. アプリ名の設定  
-    ① [File]-[Build Settings]-[Play Settings] ボタンを押す  
+    ① [File]-[Build Settings]-[Player Settings] ボタンを押す  
     ② [Product Name]（アプリ名）を設定（初期値はUnityのプロジェクト名）  
     ※この名前がAndroid端末上のアプリ名となる（数字から始まる名前でもOK）
 
@@ -233,7 +233,7 @@
     ⑤ 任意の場所に xxx.keystore ファイルを保存  
 
 1. アプリケーションIDの登録  
-    ① [File]-[Build Settings]-[Play Settings] ボタンを押す  
+    ① [File]-[Build Settings]-[Player Settings] ボタンを押す  
     ② [Other Settings]-[Identification] の [Package Name] を com.vvestvillage.app001 等（ユニーク値）にする  
     ※この値が違うと別のアプリとしてAndroid端末にインストールされる  
     ※数値から始まる名前は不可（要注意）
