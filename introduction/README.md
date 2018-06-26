@@ -13,6 +13,7 @@
 |005|[ユーザー設定](#ユーザー設定)|初期設定では使いにくい設定を変更|－|－|
 |006|[マウス操作](#マウス操作)|個人的に必須のマウス操作|－|－|
 |007|[出力](#出力)|Unityで作成したプロジェクトを出力する方法|－|[●](https://amzn.to/2s85DAv)|
+|008|[VideoPlayer](#VideoPlayer)|VideoPlayerによる動画再生|－|－|
 ***
 
 <a name="プリミティブ･オブジェクト"></a>
@@ -252,6 +253,18 @@
 作成者：vvestvillage  
 作成日：2018年06月20日  
 更新日：2018年06月25日
+
+
+<a name="VideoPlayer"></a>
+# <b>008 VideoPlayer</b>
+
+### 概要
+* Unity 5.6（2017年3月リリース）より [VideoPlayer](https://docs.unity3d.com/ja/current/Manual/class-VideoPlayer.html) による動画ファイルの再生が可能
+* Linuxの場合、[.webm](https://ja.wikipedia.org/wiki/WebM) または [.ogv](https://ja.wikipedia.org/wiki/Ogg) である必要がある（[.mp4](https://ja.wikipedia.org/wiki/MP4) は不可）（要検証）
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+作成者：vvestvillage  
+作成日：2018年06月26日
 
 
 © 2018 vvestvillage
