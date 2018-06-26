@@ -277,24 +277,39 @@
 * UnityではVP8に対応（VP9は要調査）
 
 ### WebMへの変換
-* [FFmpeg](https://ja.wikipedia.org/wiki/FFmpeg) のバージョン確認  
-```
-$ ffmpeg -version
-ffmpeg version 2.8.14-0ubuntu0.16.04.1 Copyright (c) 2000-2018 the FFmpeg developers
-```
-* FFmpeg による WebM への変換例
-```
-$ ffmpeg -i sample.mp4 -strict -2 sample.webm
-```
-* 動画ファイルの解析例
-```
-$ ffprobe xxx.webm
-Duration: 00:01:57.70, start: 0.000000, bitrate: 582 kb/s
-    Stream #0:0(eng): Video: vp8, yuv420p, 540x360, SAR 1:1 DAR 3:2, 23.98 fps, ...  
-    Stream #0:1(eng): Audio: vorbis, 44100 Hz, mono, fltp (default)
-```
+1. [Ubuntuソフトウェア] を起動し [Shotcut](https://www.shotcut.org/) をインストール＆起動  
+1. [ファイルを開く] で任意の動画ファイルを開く
+1. [ファイル]-[ビデオExport] を選択
+1. [ストック] の中から [WebM] を選択（「WebM VP9」ではない）
+1. [ビデオ] タブを選択し次の項目を確認
+    * 解像度
+    * アスペクトレイシオ
+    * フレーム/秒（要調査：なぜか1000fpsになってしまう）
+1. [コーデック] タブを選択し次の項目を確認
+    * コーデック：libvpx ←VP8コーデックライブラリー
+    * レートコントロール
+    * ビットレート
+1. [オーディオ] タブを選択し次の項目を確認
+    * サンプルレート
+    * コーデック：vorbis
+    * レートコントロール
+    * 品質
+1. [ファイルをExport] ボタンを選んで xxx.webm の保存場所を指定して [保存]
 
-実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+### Unityで再生
+1. Unityを起動しプロジェクトを作成
+1. [File]-[Save Scene] でシーンを保存（名前は任意）
+1. 上記で作成した xxx.webm をプロジェクトフォルダ内の [Assets] 内にコピー
+1. [GameObject]-[3D Object]-[Quad] を選択
+1. [Hierarchy] から [Quad] を選択し [Inspector] を確認
+1. [Inspector]-[Transform] の [Scale] の値を適当に調整（映像の画角に合わせる）
+    * X:8、Y:4.5、Z:1 など
+1. 引き続き [Add Component] ボタンを押し [Video]-[Video Player] を選択
+1. [Video Player] の [Video Clip] の [⦿] を選び、上記で作成した映像 xxx を選択
+1. [▶] ボタンを押して [Quad] 上に映像ファイルが再生されたら成功
+    * Linux Standalone では動作確認済み（タッチパネル等では利用可能）
+
+実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS、Shotcut   
 作成者：vvestvillage  
 作成日：2018年06月26日
 
