@@ -274,9 +274,10 @@ $ ffmpeg -i sample.mp4 -strict -2 sample.webm
 ```
 * 動画ファイルの解析例
 ```
-$ ffprobe sample.webm
-Duration: 00:00:07.64, start: 0.000000, bitrate: 138 kb/s
-    Stream #0:0: Video: vp9 (Profile 0), yuv420p(tv), 640x360, SAR 1:1 DAR 16:9, 25 fps, ...
+$ ffprobe xxx.webm
+Duration: 00:01:57.70, start: 0.000000, bitrate: 582 kb/s
+    Stream #0:0(eng): Video: vp8, yuv420p, 540x360, SAR 1:1 DAR 3:2, 23.98 fps, ...  
+    Stream #0:1(eng): Audio: vorbis, 44100 Hz, mono, fltp (default)
 ```
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
