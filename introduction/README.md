@@ -297,22 +297,6 @@
     * 品質
 1. [ファイルをExport] ボタンを選んで xxx.webm の保存場所を指定して [保存]
 
-
-
-
-1. [Lightworks](https://www.lwks.com/)（動画編集ソフト）のインストール  
-    ① https://www.lwks.com/ を開く  
-    ② [Downloads]-[Lightworks for Linux] を選択し [Download DEB] でダウンロード開始  
-    ③ ダウンロードされた lwks-14.0.0-amd64.deb をダブルクリックしインストール  
-1. Lightworksのユーザ登録  
-    ① [コンピュータを検索] から [Lightworks] を起動  
-    ② [Wellcome to Lightworks] ダイアログから [Register] タブを選択し次の情報を入力  
-        (1) Email address  
-        (2) Full name  
-        (3) Username  
-        (4) Password  
-
-
 ### Unityで再生
 1. Unityを起動しプロジェクトを作成
 1. [File]-[Save Scene] でシーンを保存（名前は任意）
