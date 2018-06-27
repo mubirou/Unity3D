@@ -318,6 +318,7 @@
 1. [Other Settings]-[Rendering] の [Multithreaded Rendering] の ✔ を外す
     ※再生時のコマ落ち防止用
 1. [Build And Run] でビルド
+※上記に加えスクリプトの記述が必要の可能性あり
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS、Shotcut 18.03.06  
 作成者：vvestvillage  
