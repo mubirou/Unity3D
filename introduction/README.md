@@ -339,8 +339,8 @@
 <a name="Unityのエディション"></a>
 ### Unityのエディション
 1. Personal（無料）……起動時の「Made with unity」ロゴを非表示できない
-1. Plus（4,200円/月）
-1. Pro（15,000円/月）
+1. Plus（4,200円/月）……Apple Store製品20％割引
+1. Pro（15,000円/月）……Apple Store製品20％割引
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
