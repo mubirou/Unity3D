@@ -338,7 +338,7 @@
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
-作成日：2018年XX月XX日  
+作成日：2018年06月28日  
 更新日：2018年XX月XX日
 
 
