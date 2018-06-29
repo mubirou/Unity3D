@@ -337,7 +337,7 @@
 |01|[Unityのエディション](#Unityのエディション)|004|－|－|[●](https://store.unity.com/ja)|2018-06-29|
 |02|[Asset Store保存場所](#AssetStore保存場所)|007|－|－|－|2018-06-29|
 |03|[Editorの設定](#Editorの設定)|008|－|－|－|2018-06-29|
-|04|マテリアルに画像を指定|022|－|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_04.apk)|2018-06-29|
+|04|マテリアルに画像を指定|022|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_04.apk)|－|2018-06-29|
 
 <a name="Unityのエディション"></a>
 ### 01 Unityのエディション
