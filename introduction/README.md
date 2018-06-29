@@ -338,20 +338,20 @@
 |003|[Editorの設定](#Editorの設定)|008|－|－|2018-06-29|
 
 <a name="Unityのエディション"></a>
-### Unityのエディション
+### 001 Unityのエディション
 1. Personal（無料）……起動時の「Made with unity」ロゴを非表示できない
 1. Plus（4,200円/月）……Apple Store製品20％割引（クリエイター向き）
 1. Pro（15,000円/月）……Apple Store製品20％割引（プロ志向）
 
 <a name="AssetStore保存場所"></a>
-### Asset Store保存場所（Ubuntuの場合）
+### 002 Asset Store保存場所（Ubuntuの場合）
 ```
 ホーム/.local/share/unity3d/Asset Store-5.x
 ```
 一度ダウンロードしてインポートしたものは上記の場所に保存され、次回からは「インポート」と表示される
 
 <a name="Editorの設定"></a>
-### Editorの設定（Visual Studio Codeの場合）
+### 003 Editorの設定（Visual Studio Codeの場合）
 ```
 /usr/share/code/code
 ```
