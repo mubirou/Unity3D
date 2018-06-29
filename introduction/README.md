@@ -333,25 +333,25 @@
 
 |No.|内容|頁数|WebGL|参考サイト|作成日|
 |:--|:--|:--:|:--:|:--:|:--:|
-|001|[Unityのエディション](#Unityのエディション)|004|－|[●](https://store.unity.com/ja)|2018-06-29|
-|002|[Asset Store保存場所](#AssetStore保存場所)|007|－|－|2018-06-29|
-|003|[Editorの設定](#Editorの設定)|008|－|－|2018-06-29|
+|01|[Unityのエディション](#Unityのエディション)|004|－|[●](https://store.unity.com/ja)|2018-06-29|
+|02|[Asset Store保存場所](#AssetStore保存場所)|007|－|－|2018-06-29|
+|03|[Editorの設定](#Editorの設定)|008|－|－|2018-06-29|
 
 <a name="Unityのエディション"></a>
-### 001 Unityのエディション
+### 01 Unityのエディション
 1. Personal（無料）……起動時の「Made with unity」ロゴを非表示できない
 1. Plus（4,200円/月）……Apple Store製品20％割引（クリエイター向き）
 1. Pro（15,000円/月）……Apple Store製品20％割引（プロ志向）
 
 <a name="AssetStore保存場所"></a>
-### 002 Asset Store保存場所（Ubuntuの場合）
+### 02 Asset Store保存場所（Ubuntuの場合）
 ```
 ホーム/.local/share/unity3d/Asset Store-5.x
 ```
 一度ダウンロードしてインポートしたものは上記の場所に保存され、次回からは「インポート」と表示される
 
 <a name="Editorの設定"></a>
-### 003 Editorの設定（Visual Studio Codeの場合）
+### 03 Editorの設定（Visual Studio Codeの場合）
 ```
 /usr/share/code/code
 ```
