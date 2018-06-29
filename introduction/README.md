@@ -243,7 +243,7 @@
 
 1. Android端末との接続  
     ① Android端末をPCに接続し [端末データへのアクセスの許可]  
-    ② Android端末上に [USBデバッグを許可] と表示されたら [OK] を選択（「…常に許可する」を選択）  
+    ② Android端末上に [USBデバッグを許可] ダイアログが表示（「このパソコンからのUSBデバッグを常に許可する」）されたら [OK] を選択  
 
 1. ビルド  
     ① [File]-[Build Settings]-[Build And Run] を選択  
@@ -256,7 +256,7 @@
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS、Android 8.0  
 作成者：vvestvillage  
 作成日：2018年06月20日  
-更新日：2018年06月26日
+更新日：2018年06月30日
 
 
 <a name="VideoPlayerコンポーネント"></a>
