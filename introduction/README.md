@@ -334,13 +334,21 @@
 |No.|内容|頁数|WebGL|参考サイト|作成日|
 |:--|:--|:--:|:--:|:--:|:--:|
 |001|[Unityのエディション](#Unityのエディション)|004|－|[●](https://store.unity.com/ja)|2018-06-29|
-|002|XXX|XXX|－|－|2018-XX-XX|
+|002|[Asset Store保存場所](#Asset Store保存場所)|007|－|－|2018-XX-XX|
 
 <a name="Unityのエディション"></a>
 ### Unityのエディション
 1. Personal（無料）……起動時の「Made with unity」ロゴを非表示できない
 1. Plus（4,200円/月）……Apple Store製品20％割引（クリエイター向き）
 1. Pro（15,000円/月）……Apple Store製品20％割引（プロ志向）
+
+<a name="Asset Store保存場所"></a>
+### Asset Store保存場所
+```
+ホーム/.local/share/unity3d/Asset Store-5.x
+```
+一度ダウンロードしてインポートしたものは上記の場所に保存され、次回からは[インポート]と表示される
+
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
