@@ -337,7 +337,8 @@
 |01|[Unityのエディション](#Unityのエディション)|004|－|－|[●](https://store.unity.com/ja)|2018-06-29|
 |02|[Asset Store保存場所](#AssetStore保存場所)|007|－|－|－|2018-06-29|
 |03|[Editorの設定](#Editorの設定)|008|－|－|－|2018-06-29|
-|04|マテリアルに画像を指定|022|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_04.apk)|－|2018-06-29|
+|04|[マテリアルに画像を指定](#マテリアルに画像を指定)|022･023|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_04.apk)|－|2018-06-29|
+|05|[空の背景の変更](#空の背景の変更)|028|－|－|－|2018-07-01|
 
 <a name="Unityのエディション"></a>
 ### 01 Unityのエディション
@@ -360,10 +361,21 @@
 ```
 従来付属していた「MonoDevelop」はサポートされなくなる
 
+<a name="マテリアルに画像を指定"></a>
+### 04 マテリアルに画像を指定
+1. デスクトップ等にある画像ファイル（.png .jpg）を [Project]-[Assets] にドラッグ＆ドロップ
+1. [Scene] 上のマテリアルを適用したいオブジェクトに上記の画像をドラッグ＆ドロップ
+
+<a name="空の背景の変更"></a>
+### 05 空の背景の変更
+1. [Window]-[Asset Store] から「Wispy SkyBox」をダウンロード＆インポート
+1. [Hierarchy]-[Main Camera] を選択し [Inspector]-[Add Component]-[Rendering]-[Skybox] を追加
+1. [Inspector]-[Skybox]-[Custom Skybox] の ⦿ を選び、任意の空の背景を選択
+
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
 作成日：2018年06月28日  
-更新日：2018年06月30日
+更新日：2018年07月01日
 
 
 © 2018 vvestvillage
