@@ -243,7 +243,7 @@
 
 1. Android端末との接続  
     ① Android端末をPCに接続し [端末データへのアクセスの許可]  
-    ② Android端末上に [USBデバッグを許可] ダイアログが表示されたら、「このパソコンからのUSBデバッグを常に許可する」を [OK]   
+    ② Android端末上に [USBデバッグを許可] ダイアログが表示されたら、「このパソコンからのUSBデバッグを常に許可する」を [OK]  
 
 1. ビルド  
     ① [File]-[Build Settings]-[Build And Run] を選択  
@@ -354,6 +354,7 @@
 
 <a name="Editorの設定"></a>
 ### 03 Editorの設定（Visual Studio Codeの場合）
+[Edit]-[Preferences]-[External Tools]-[External Script Editor] で [Browse] を選び以下のパスを指定する
 ```
 /usr/share/code/code
 ```
@@ -362,7 +363,7 @@
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
 作成日：2018年06月28日  
-更新日：2018年06月29日
+更新日：2018年06月30日
 
 
 © 2018 vvestvillage
