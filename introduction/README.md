@@ -124,14 +124,14 @@
 初期設定では使いにくい設定を変更します。
 
 1. [Edit]-[Preferences]-[Colors]
-    * [General]-[Playmode tint] をダーク系にする……再生中であることを明確にする為
+    * [General]-[Playmode tint] をダーク系（#666666FF等）にする……再生中であることを明確にする為
 
 1. XXX
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
 作成日：2018年05月24日  
-更新日：2018年XX月XX日
+更新日：2018年06月30日
 
 <a name="マウス操作"></a>
 # <b>006 マウス操作</b>
