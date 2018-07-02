@@ -342,6 +342,7 @@
 |06|[床を鏡のようにする](#床を鏡のようにする)|031|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_06.apk)|[●](http://corevale.com/unity/923)|2018-07-02|
 |07|[Planeに動画を表示](#Planeに動画を表示)|032|－|－|－|2018-07-02|
 |08|[ボールに重力を持たせる](#ボールに重力を持たせる)|030･033|－|－|－|2018-07-02|
+|09|[オブジェクトの透明化](#オブジェクトの透明化)|033|－|－|－|2018-07-02|
 
 <a name="Unityのエディション"></a>
 ### 01 Unityのエディション
@@ -415,6 +416,17 @@
 1. 同様に [Cube] を使って障害物を作成
 1. [Sphere]-[Inspector]-[Add Component]-[Physics]-[Rigidbody] を選択
 1. 再生ボタンを押すとボールが落下（障害物にぶつかると変化する）
+
+<a name="オブジェクトの透明化"></a>
+### 09 オブジェクトの透明化
+1. [Project]-[Assets] を選択し右クリック
+1. [Create]-[Folder] でフォルダを作成（名前は「Materials」とする）
+1. 作成した [Materials] フォルダを選び右クリック
+1. [Create]-[Material] でマテリアルを作成（名前は任意）
+1. 作成したマテリアルの [Inspector] の値を次の通りにする
+    * Rendering Mode : Fade
+    * Albedo : A（Apha値）を0にする
+※透明化されただけで存在はしている（衝突判定は有効）
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
