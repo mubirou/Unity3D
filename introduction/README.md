@@ -340,6 +340,7 @@
 |04|[マテリアルに画像を指定](#マテリアルに画像を指定)|022･023|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_04.apk)|－|2018-06-29|
 |05|[空の背景の変更](#空の背景の変更)|028|－|－|－|2018-07-01|
 |06|[床を鏡のようにする](#床を鏡のようにする)|031|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_06.apk)|[●](http://corevale.com/unity/923)|2018-07-02|
+|07|[Planeに動画を表示](#Planeに動画を表示)|032|－|－|－|2018-07-02|
 
 <a name="Unityのエディション"></a>
 ### 01 Unityのエディション
@@ -395,6 +396,18 @@
     * Y : -2.5（この値だけ負の値にする）
     * Z : -10
 ※Androidアプリでは鏡内のアニメーションが動作せず（要検証）
+
+<a name="Planeに動画を表示"></a>
+### 06 Planeに動画を表示
+1. [Hierarchy]-[Create]-[3D Object]-[Plane] を選択
+1. [Inscpector]-[Transform]-[Rotation] を次の通りに設定
+    * X : 90
+    * Y : 0
+    * Z : -180 
+1. [Shotcut](https://www.shotcut.org/) 等で作成した [.webm](https://ja.wikipedia.org/wiki/WebM) ファイルを、プロジェクトの [Assets] フォルダに保存
+1. 上記で作成した [Plane] の [Inspector]-[Add Component]-[Video Player] を選択
+1. [Inspector]-[Video Player]-[Video Clip] の ⦿ を選び、上記の映像を選択
+
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
