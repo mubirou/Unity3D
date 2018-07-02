@@ -339,6 +339,7 @@
 |03|[Editorの設定](#Editorの設定)|008|－|－|－|2018-06-29|
 |04|[マテリアルに画像を指定](#マテリアルに画像を指定)|022･023|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_04.apk)|－|2018-06-29|
 |05|[空の背景の変更](#空の背景の変更)|028|－|－|－|2018-07-01|
+|06|[床を鏡のようにする](#床を鏡のようにする)|031|－|－|[●](http://corevale.com/unity/923)|2018-07-XX|
 
 <a name="Unityのエディション"></a>
 ### 01 Unityのエディション
@@ -371,6 +372,14 @@
 1. [Window]-[Asset Store] から「Wispy SkyBox」をダウンロード＆インポート
 1. [Hierarchy]-[Main Camera] を選択し [Inspector]-[Add Component]-[Rendering]-[Skybox] を追加
 1. [Inspector]-[Skybox]-[Custom Skybox] の ⦿ を選び、任意の空の背景を選択
+
+<a name="床を鏡のようにする"></a>
+### 06 床を鏡のようにする
+1. [Assets]-[Materials] で右クリック → [Create]-[Material] を選択（名前は任意）
+1. [Inspector] で次の通りに設定  
+    * Metallic : 1
+    * Smoothness : 1
+1. XXX
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
