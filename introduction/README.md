@@ -341,6 +341,7 @@
 |05|[空の背景の変更](#空の背景の変更)|028|－|－|－|2018-07-01|
 |06|[床を鏡のようにする](#床を鏡のようにする)|031|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_06.apk)|[●](http://corevale.com/unity/923)|2018-07-02|
 |07|[Planeに動画を表示](#Planeに動画を表示)|032|－|－|－|2018-07-02|
+|08|[ボールに重力を持たせる](#ボールに重力を持たせる)|030･033|－|－|－|2018-07-02|
 
 <a name="Unityのエディション"></a>
 ### 01 Unityのエディション
@@ -398,7 +399,7 @@
 ※Androidアプリでは鏡内のアニメーションが動作せず（要検証）
 
 <a name="Planeに動画を表示"></a>
-### 06 Planeに動画を表示
+### 07 Planeに動画を表示
 1. [Hierarchy]-[Create]-[3D Object]-[Plane] を選択
 1. [Inscpector]-[Transform]-[Rotation] を次の通りに設定
     * X : 90
@@ -408,6 +409,12 @@
 1. 上記で作成した [Plane] の [Inspector]-[Add Component]-[Video Player] を選択
 1. [Inspector]-[Video Player]-[Video Clip] の ⦿ を選び、上記の映像を選択
 
+<a name="ボールに重力を持たせる"></a>
+### 08 ボールに重力を持たせる
+1. [GameObject]-[3D Object]-[Sphere] でボールを作成
+1. 同様に [Cube] を使って障害物を作成
+1. [Sphere]-[Inspector]-[Add Component]-[Physics]-[Rigidbody] を選択
+1. 再生ボタンを押すとボールが落下（障害物にぶつかると変化する）
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
