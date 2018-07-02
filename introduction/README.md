@@ -394,6 +394,7 @@
     * x : 0
     * Y : -2.5（この値だけ負の値にする）
     * Z : -10
+※Androidアプリでは鏡内のアニメーションが動作せず（要検証）
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
