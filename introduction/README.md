@@ -425,7 +425,7 @@
 1. [Create]-[Material] でマテリアルを作成（名前は任意）
 1. 作成したマテリアルの [Inspector] の値を次の通りにする
     * Rendering Mode : Fade
-    * Albedo : A（Apha値）を0にする
+    * Albedo : A（Apha値）を0にする  
 ※透明化されただけで存在はしている（衝突判定は有効）
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
