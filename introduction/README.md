@@ -339,7 +339,7 @@
 |03|[Editorの設定](#Editorの設定)|008|－|－|－|2018-06-29|
 |04|[マテリアルに画像を指定](#マテリアルに画像を指定)|022･023|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_04.apk)|－|2018-06-29|
 |05|[空の背景の変更](#空の背景の変更)|028|－|－|－|2018-07-01|
-|06|[床を鏡のようにする](#床を鏡のようにする)|031|－|－|[●](http://corevale.com/unity/923)|2018-07-XX|
+|06|[床を鏡のようにする](#床を鏡のようにする)|031|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_06.apk)|[●](http://corevale.com/unity/923)|2018-07-02|
 
 <a name="Unityのエディション"></a>
 ### 01 Unityのエディション
@@ -379,12 +379,26 @@
 1. [Inspector] で次の通りに設定  
     * Metallic : 1
     * Smoothness : 1
-1. XXX
+1. 床（Plane）に上記のマテリアルをドラッグ
+1. [GameObject]-[Create Empty] で空のGameObjectを作成（名前は任意）
+1. [Inscpector]-[Add Component] から「Reflection Prob」を検索して追加
+1. [Inspector]-[Reflection Probe] で次の通りに設定
+    * Type : Realtime
+    * Refresh Mode : Every frame
+    * Time Slicing : All faces at one（初期値）
+    * Box Projection : ✔
+    * Resolution : 512
+    * Clear Flags : Solid Color
+1. [Hierarchy]-[Main Camera] と床の [Inspector]-[Transform]-[Position] の値を確認
+1. [Reflection Probe] を追加した空のGameObjectの [Inspector]-[Transform]-[Position] の値を次の通りにする（[Main Camera] の [Potision] の値が「X:0」「Y:2.5」「Z:-10」、床が「X:0」「Y:0」「Z:0」の場合）
+    * x : 0
+    * Y : -2.5（この値だけ負の値にする）
+    * Z : -10
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
 作成日：2018年06月28日  
-更新日：2018年07月01日
+更新日：2018年07月02日
 
 
 © 2018 vvestvillage
