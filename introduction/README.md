@@ -334,32 +334,33 @@
 
 |No.|内容|Tips番号|WebGL|.apk|参考サイト|作成日|
 |:--|:--|:--:|:--:|:--:|:--:|:--:|
-|01|[Unityのエディション](#Unityのエディション)|004|－|－|[●](https://store.unity.com/ja)|2018-06-29|
-|02|[Asset Store保存場所](#AssetStore保存場所)|007|－|－|－|2018-06-29|
-|03|[Editorの設定](#Editorの設定)|008|－|－|－|2018-06-29|
-|04|[マテリアルに画像を指定](#マテリアルに画像を指定)|022･023|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_04.apk)|－|2018-06-29|
-|05|[空の背景の変更](#空の背景の変更)|028|－|－|－|2018-07-01|
-|06|[床を鏡のようにする](#床を鏡のようにする)|031|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_06.apk)|[●](http://corevale.com/unity/923)|2018-07-02|
-|07|[Planeに動画を表示](#Planeに動画を表示)|032|－|－|－|2018-07-02|
-|08|[ボールに重力を持たせる](#ボールに重力を持たせる)|030･033|－|－|－|2018-07-02|
-|09|[オブジェクトの透明化](#オブジェクトの透明化)|033|－|－|－|2018-07-02|
-|10|[クリックした位置にPrefabを表示](#クリックした位置にPrefabを表示)|034|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_10.apk)|－|2018-07-03|
+|001|[Unityのエディション](#Unityのエディション)|004|－|－|[●](https://store.unity.com/ja)|2018-06-29|
+|002|[Asset Store保存場所](#AssetStore保存場所)|007|－|－|－|2018-06-29|
+|003|[Editorの設定](#Editorの設定)|008|－|－|－|2018-06-29|
+|004|[マテリアルに画像を指定](#マテリアルに画像を指定)|022･023|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_04.apk)|－|2018-06-29|
+|005|[空の背景の変更](#空の背景の変更)|028|－|－|－|2018-07-01|
+|006|[床を鏡のようにする](#床を鏡のようにする)|031|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_06.apk)|[●](http://corevale.com/unity/923)|2018-07-02|
+|007|[Planeに動画を表示](#Planeに動画を表示)|032|－|－|－|2018-07-02|
+|008|[ボールに重力を持たせる](#ボールに重力を持たせる)|030･033|－|－|－|2018-07-02|
+|009|[オブジェクトの透明化](#オブジェクトの透明化)|033|－|－|－|2018-07-02|
+|010|[クリックした位置にPrefabを表示](#クリックした位置にPrefabを表示)|034|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_10.apk)|－|2018-07-03|
+|011|[MouseOverで色を変える](#MouseOverで色を変える)|035|－|－|－|2018-07-04|
 
 <a name="Unityのエディション"></a>
-### 01 Unityのエディション
+### 001 Unityのエディション
 1. Personal（無料）……起動時の「Made with unity」ロゴを非表示できない
 1. Plus（4,200円/月）……Apple Store製品20％割引（クリエイター向き）
 1. Pro（15,000円/月）……Apple Store製品20％割引（プロ志向）
 
 <a name="AssetStore保存場所"></a>
-### 02 Asset Store保存場所（Ubuntuの場合）
+### 002 Asset Store保存場所（Ubuntuの場合）
 ```
 ホーム/.local/share/unity3d/Asset Store-5.x
 ```
 一度ダウンロードしてインポートしたものは上記の場所に保存され、次回からは「インポート」と表示される
 
 <a name="Editorの設定"></a>
-### 03 Editorの設定（Visual Studio Codeの場合）
+### 003 Editorの設定（Visual Studio Codeの場合）
 [Edit]-[Preferences]-[External Tools]-[External Script Editor] で [Browse] を選び以下のパスを指定する
 ```
 /usr/share/code/code
@@ -367,18 +368,18 @@
 従来付属していた「MonoDevelop」はサポートされなくなる
 
 <a name="マテリアルに画像を指定"></a>
-### 04 マテリアルに画像を指定
+### 004 マテリアルに画像を指定
 1. デスクトップ等にある画像ファイル（.png .jpg）を [Project]-[Assets] にドラッグ＆ドロップ
 1. [Scene] 上のマテリアルを適用したいオブジェクトに上記の画像をドラッグ＆ドロップ
 
 <a name="空の背景の変更"></a>
-### 05 空の背景の変更
+### 005 空の背景の変更
 1. [Window]-[Asset Store] から「Wispy SkyBox」をダウンロード＆インポート
 1. [Hierarchy]-[Main Camera] を選択し [Inspector]-[Add Component]-[Rendering]-[Skybox] を追加
 1. [Inspector]-[Skybox]-[Custom Skybox] の ⦿ を選び、任意の空の背景を選択
 
 <a name="床を鏡のようにする"></a>
-### 06 床を鏡のようにする
+### 006 床を鏡のようにする
 1. [Assets]-[Materials] で右クリック → [Create]-[Material] を選択（名前は任意）
 1. [Inspector] で次の通りに設定  
     * Metallic : 1
@@ -401,7 +402,7 @@
 ※Androidアプリでは鏡内のアニメーションが動作せず（要検証）
 
 <a name="Planeに動画を表示"></a>
-### 07 Planeに動画を表示
+### 007 Planeに動画を表示
 1. [Hierarchy]-[Create]-[3D Object]-[Plane] を選択
 1. [Inscpector]-[Transform]-[Rotation] を次の通りに設定
     * X : 90
@@ -412,14 +413,14 @@
 1. [Inspector]-[Video Player]-[Video Clip] の ⦿ を選び、上記の映像を選択
 
 <a name="ボールに重力を持たせる"></a>
-### 08 ボールに重力を持たせる
+### 008 ボールに重力を持たせる
 1. [GameObject]-[3D Object]-[Sphere] でボールを作成
 1. 同様に [Cube] を使って障害物を作成
 1. [Sphere]-[Inspector]-[Add Component]-[Physics]-[Rigidbody] を選択
 1. 再生ボタンを押すとボールが落下（障害物にぶつかると変化する）
 
 <a name="オブジェクトの透明化"></a>
-### 09 オブジェクトの透明化
+### 009 オブジェクトの透明化
 1. [Project]-[Assets] を選択し右クリック
 1. [Create]-[Folder] でフォルダを作成（名前は「Materials」とする）
 1. 作成した [Materials] フォルダを選び右クリック
@@ -431,7 +432,7 @@
 ※透明化されただけで存在はしている（衝突判定は有効）
 
 <a name="クリックした位置にPrefabを表示"></a>
-### 10 クリックした位置にPrefabを表示
+### 010 クリックした位置にPrefabを表示
 * 「Prefab（プレハブ）」とは、オブジェクトを複製する場合に役立つ機能で、オブジェクトとそのコンポーネントやプロパティを一つに格納するものです
 1. オブジェクト（Sphere）の作成  
     [GameObject]-[3D Object]-[Sphere] を選択  
@@ -479,10 +480,42 @@
 1. 実行  
     再生ボタンで実行し、クリックしたところにSphereが次々作成されたら成功
 
+<a name="MouseOverで色を変える"></a>
+### 011 MouseOverで色を変える
+1. [GameObject]-[3D Object]-[Sphere] で球体を作成（名前は "Sphere01" に変更）
+1. [Hierarchy]-[Sphere]-[Inspector]-[Add Component]-[Net Script] で名前は "ChangeColorScript" のC#ファイルを作成
+1. [Project]-[Assets]-[ChangeColorScript]（C#）をダブルクリック
+1. Visual Studio Codeなどのエディタで次の通りに書き換える
+    ```
+    //ChangeColorScript.cs
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+
+    public class ChangeColorScript : MonoBehaviour {
+        private GameObject _sphere;
+
+        void Start() {
+            _sphere = GameObject.Find("Sphere01");
+        }
+        
+        void OnMouseOver() {
+            Debug.Log(_sphere);
+            _sphere.GetComponent<Renderer>().material.color = Color.red;
+        }
+
+        void OnMouseExit() {
+            _sphere.GetComponent<Renderer>().material.color = Color.blue;
+        }
+    }
+    ```
+1. 実行すると球体の上にマウスカーソルを乗せると赤に変わり、外すと青になれば成功
+
+
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
 作成日：2018年06月28日  
-更新日：2018年07月03日
+更新日：2018年07月04日
 
 
 © 2018 vvestvillage
