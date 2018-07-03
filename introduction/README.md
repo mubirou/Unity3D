@@ -432,6 +432,51 @@
 
 <a name="クリックした位置にPrefabを表示"></a>
 ### 10 クリックした位置にPrefabを表示
+1. オブジェクト（Sphere）の作成  
+    [GameObject]-[3D Object]-[Sphere] を選択  
+1. オブジェクトのPrefab（プレハブ）化  
+    [Hierarchy] に表示される上記のオブジェクトを [Project]-[Assets] フォルダ内にドラッグ＆ドロップ  
+    ※[Hierarchy] 内の上記のオブジェクトの文字色が青系に変わります  
+    ※[Hierarchy] 内の上記のオブジェクトはここでは消します  
+1. 空のゲームオブジェクトを作成  
+    ① [GameObject]-[Create Empty] を選択  
+    ② [Inspector] ウィンドウで、名前を "GameObject" から "God" に変更  
+1. C#ファイルの作成  
+    ① 上記の空のGameObject（God）を選択  
+    ② [Inspector]-[Add Component]-[Net Script] を選択  
+    ③ 名前を "NewBehaviourScript" から "CreateSphereScript" に変更  
+1. C#の記述  
+    ① [Project]-[Assets] 内の [CreateSphereScript]（C#）をダブルクリック  
+    ※[Editorの設定](#Editorの設定)を設定していれば外部エディタが起動します  
+    ② 次のように書き換えて保存  
+    ```
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+
+    public class CreateSphereScript : MonoBehaviour {
+        public GameObject _prefab;
+        private Vector3 _mousePosition;
+
+        void Update () {
+            if (Input.GetMouseButton(0)) {
+                _mousePosition = Input.mousePosition;
+                _mousePosition.z = 5f;
+                Instantiate(
+                    _prefab,
+                    Camera.main.ScreenToWorldPoint(_mousePosition),
+                    _prefab.transform.rotation
+                );
+            }
+        }
+    }
+    ```
+1. public変数（_prefab）とPrefabをリンク  
+    ① [Hierarycy]-[God] を選択  
+    ② [Inspector]-[CreateSphereScript（Script）] に [Prefab] プロパティが追加されているのを確認  
+    ③ ⦿を選び上記でPrefab化したオブジェクト（Sphere）を選択  
+1. 実行  
+    再生ボタンで実行し、クリックしたところにSphereが次々作成されたら成功
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
