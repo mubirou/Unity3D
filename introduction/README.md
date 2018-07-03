@@ -337,14 +337,14 @@
 |001|[Unityのエディション](#Unityのエディション)|004|－|－|[●](https://store.unity.com/ja)|2018-06-29|
 |002|[Asset Store保存場所](#AssetStore保存場所)|007|－|－|－|2018-06-29|
 |003|[Editorの設定](#Editorの設定)|008|－|－|－|2018-06-29|
-|004|[マテリアルに画像を指定](#マテリアルに画像を指定)|022･023|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_04.apk)|－|2018-06-29|
+|004|[マテリアルに画像を指定](#マテリアルに画像を指定)|022･023|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_004.apk)|－|2018-06-29|
 |005|[空の背景の変更](#空の背景の変更)|028|－|－|－|2018-07-01|
-|006|[床を鏡のようにする](#床を鏡のようにする)|031|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_06.apk)|[●](http://corevale.com/unity/923)|2018-07-02|
+|006|[床を鏡のようにする](#床を鏡のようにする)|031|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_006.apk)|[●](http://corevale.com/unity/923)|2018-07-02|
 |007|[Planeに動画を表示](#Planeに動画を表示)|032|－|－|－|2018-07-02|
 |008|[ボールに重力を持たせる](#ボールに重力を持たせる)|030･033|－|－|－|2018-07-02|
 |009|[オブジェクトの透明化](#オブジェクトの透明化)|033|－|－|－|2018-07-02|
-|010|[クリックした位置にPrefabを表示](#クリックした位置にPrefabを表示)|034|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_10.apk)|－|2018-07-03|
-|011|[MouseOverで色を変える](#MouseOverで色を変える)|035|－|－|－|2018-07-04|
+|010|[クリックした位置にPrefabを表示](#クリックした位置にPrefabを表示)|034|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_010.apk)|－|2018-07-03|
+|011|[MouseOverで色を変える](#MouseOverで色を変える)|035|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_011.apk)|－|2018-07-04|
 
 <a name="Unityのエディション"></a>
 ### 001 Unityのエディション
