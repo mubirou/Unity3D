@@ -345,6 +345,7 @@
 |009|[オブジェクトの透明化](#オブジェクトの透明化)|033|－|－|－|2018-07-02|
 |010|[クリックした位置にPrefabを表示](#クリックした位置にPrefabを表示)|034|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_010.apk)|－|2018-07-03|
 |011|[MouseOverで色を変える](#MouseOverで色を変える)|035|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_011.apk)|－|2018-07-04|
+|012|[オブジェクトをクリックで落下](#オブジェクトをクリックで落下)|036|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_012.apk)|－|2018-07-04|
 
 <a name="Unityのエディション"></a>
 ### 001 Unityのエディション
@@ -512,6 +513,28 @@
 1. 実行すると球体の上にマウスカーソルを乗せると赤に変わり、外すと青になれば成功  
     ※Androidアプリでも有効
 
+<a name="オブジェクトをクリックで落下"></a>
+### 012 オブジェクトをクリックで落下
+1. 球体（Sphere）の [Inspector]-[Add Component]-[Physics]-[Rigidbody] を追加
+1. [Inspector]-[Rigidbody]-[Use Gravity] の ✔ を外す
+1. [Hierarchy]-[Sphere]-[Inspector]-[Add Componet]-[New Script] でC#ファイルを作成（名前は "DropSphereScript"）
+1. 次の通りにコードを変更
+    ```
+    //DropSphereScript.cs
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+
+    public class DropSphereScript : MonoBehaviour {
+        void Update () {
+            if (Input.GetMouseButtonUp(0)) {
+                GetComponent<Rigidbody>().useGravity = true;
+            }
+        }
+    }
+    ```
+
+※上記の例の場合、オブジェクト以外をクリックしても落下する
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS、Android 8.0  
 作成者：vvestvillage  
