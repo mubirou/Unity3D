@@ -110,7 +110,12 @@
 |No.|内容|頁数|WebGL|参考サイト|作成日|
 |:--|:--|:--:|:--:|:--:|:--:|
 |001|天地創造。（プログラムレス）|33〜76|[●](https://vvestvillage.github.io/Unity/introduction/html/004_001/index.html)|[●](https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-32351)|2018-05-23|
-|002|XXX|XXX〜XXX|－|－|2018-XX-XX|
+|002|[考え方と構造](#考え方と構造)|77〜112|－|－|2018-XX-XX|
+
+<a name="考え方と構造"></a>
+# <b>002 考え方と構造</b>
+* [シーン](https://docs.unity3d.com/ja/current/Manual/CreatingScenes.html) : 1つのプロジェクトに作った複数のシーン間をスクリプトで移動可能（シーンは[ビルド](https://docs.unity3d.com/jp/current/Manual/PublishingBuilds.html)に含まなくても良い）
+* 
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
