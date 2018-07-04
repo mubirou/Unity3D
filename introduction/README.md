@@ -115,7 +115,7 @@
 <a name="考え方と構造"></a>
 ### 02 考え方と構造</b>
 * [シーン](https://docs.unity3d.com/ja/current/Manual/CreatingScenes.html) : 1つのプロジェクトに作った複数のシーン間をスクリプトで移動可能（シーンは[ビルド](https://docs.unity3d.com/jp/current/Manual/PublishingBuilds.html)に含まなくても良い）
-* [GameObject](https://docs.unity3d.com/jp/current/Manual/class-GameObject.html) : 世界に配置されているモノの基本単位
+* [GameObject](https://docs.unity3d.com/ja/current/Manual/GameObjects.html) : 世界に配置されているモノの基本単位（[コンポーネント](https://docs.unity3d.com/ja/current/Manual/UsingComponents.html)の入れ物）
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
