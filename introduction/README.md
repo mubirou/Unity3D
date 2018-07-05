@@ -107,10 +107,10 @@
 
 頁数は [『Unityで神になる本。／廣鉄夫著』](https://amzn.to/2s85DAv) のページです。
 
-|No.|内容|頁数|WebGL|参考サイト|作成日|
-|:--|:--|:--:|:--:|:--:|:--:|
-|01|天地創造。（プログラムレス）|33〜76|[●](https://vvestvillage.github.io/Unity/introduction/html/004_01/index.html)|[●](https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-32351)|2018-05-23|
-|02|[考え方と構造](#考え方と構造)|77〜112|－|－|2018-XX-XX|
+|No.|内容|頁数|WebGL|.apk|参考サイト|作成日|
+|:--|:--|:--:|:--:|:--:|:--:|:--:|
+|01|天地創造。（プログラムレス）|33〜76|[●](https://vvestvillage.github.io/Unity/introduction/html/004_01/index.html)|－|[●](https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-32351)|2018-05-23|
+|02|[考え方と構造](#考え方と構造)|77〜112|－|－|－|2018-XX-XX|
 
 <a name="考え方と構造"></a>
 ### 02 考え方と構造</b>
