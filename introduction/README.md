@@ -117,7 +117,7 @@
 * [シーン](https://docs.unity3d.com/ja/current/Manual/CreatingScenes.html) : 1つのプロジェクトに作った複数のシーン間をスクリプトで移動可能（シーンは[ビルド](https://docs.unity3d.com/jp/current/Manual/PublishingBuilds.html)に含まなくても良い）
 * [GameObject](https://docs.unity3d.com/ja/current/Manual/GameObjects.html) : 世界に配置されているモノの基本単位（[コンポーネント](https://docs.unity3d.com/ja/current/Manual/UsingComponents.html)の入れ物）･[Transform](https://docs.unity3d.com/ja/current/ScriptReference/Transform.html)コンポーネントがミニマム
 * [Collider（コライダー）](https://docs.unity3d.com/ja/current/Manual/CollidersOverview.html) : 衝突判定の領域（①Box ②Sphere ③Capsuleの3つあり）
-* [Rigidbody](https://docs.unity3d.com/ja/current/Manual/class-Rigidbody.html)
+* [Rigidbody](https://docs.unity3d.com/ja/current/Manual/class-Rigidbody.html) : 物体としての属性を持たせる
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
