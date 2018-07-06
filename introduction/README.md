@@ -119,6 +119,7 @@
 * [Collider（コライダー）](https://docs.unity3d.com/ja/current/Manual/CollidersOverview.html) : 衝突判定の領域（①Box ②Sphere ③Capsuleの3つあり）
 * [Rigidbody](https://docs.unity3d.com/ja/current/Manual/class-Rigidbody.html) : 物体としての属性を持たせる（[Add Component]-[Physics]-[Rigidbody]）
 * [跳ね返り効果](https://docs.unity3d.com/ja/current/Manual/class-PhysicMaterial.html)（摩擦係数と反発係数）: [Project]-[Create]-[Physics Material]-[Inspector]-[Bounciness] の値を上げる → オブジェクト（Rigidbody済）の [Inspector]-[XXX Colider] の [Material] にドラッグ
+* [Prefab（プレハブ）](https://docs.unity3d.com/jp/current/Manual/Prefabs.html) ≒ Flash MovieClip
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
