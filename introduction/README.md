@@ -152,6 +152,7 @@
     }
     ```
 * [タブのロック](https://docs.unity3d.com/ja/current/Manual/InspectorOptions.html) : [Add Tab] で複数のGameObjectの情報を同時表示可能
+* [属性のコピー](https://docs.unity3d.com/ja/current/Manual/UsingComponents.html) : [Inspector] 内の任意のComponentの⚙から [Copy Component] → [Past ...] でコピー 
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
