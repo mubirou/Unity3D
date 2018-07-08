@@ -123,7 +123,7 @@
     * [Select] : 親を開く
     * [Revert] : 元のPrefab状態に戻す
     * [Apply] : 元のPrefabを自分と同じ状態に変更
-* [スクリプト](https://docs.unity3d.com/ja/current/Manual/CreatingAndUsingScripts.html)とは?（Prefabを100個登場させる）
+* [スクリプト](https://docs.unity3d.com/ja/current/Manual/CreatingAndUsingScripts.html)とは?（Prefabを100個登場させる例文）
     ```
     //DropBox.cs
     using System.Collections;
