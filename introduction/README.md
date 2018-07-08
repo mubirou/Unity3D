@@ -123,11 +123,39 @@
     * [Select] : 親を開く
     * [Revert] : 元のPrefab状態に戻す
     * [Apply] : 元のPrefabを自分と同じ状態に変更
+* [スクリプト](https://docs.unity3d.com/ja/current/Manual/CreatingAndUsingScripts.html)とは?（Prefabを100個登場させる）
+    ```
+    //DropBox.cs
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+
+    public class DropBox : MonoBehaviour {
+        public GameObject MyCube;
+        private int _count = 0;
+
+        void Start () {
+            InvokeRepeating("HogeMethod", 0.0f, 0.1f); //0秒後から0.1秒毎に呼出す
+        }
+
+        void HogeMethod() {
+            _count ++;
+            Instantiate(
+                MyCube,
+                new Vector3(Random.Range(-2.0f, 2.0f), 10.0f, Random.Range(-2.0f, 2.0f)), 
+                Quaternion.identity
+                );
+            if (_count == 100) {
+                CancelInvoke();
+            }
+        }
+    }
+    ```
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
 作成日：2018年05月23日  
-更新日：2018年07月07日
+更新日：2018年07月08日
 
 
 <a name="ユーザー設定"></a>
