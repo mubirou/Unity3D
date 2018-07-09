@@ -174,6 +174,9 @@
     ⑤[Metasequoia](http://www.metaseq.net/jp/) : 5400円〜（アニメーションには非対応/Win専用）  
     その他、[ZBrush](https://oakcorp.net/pixologic/)、[Maya LT](https://www.autodesk.co.jp/products/maya-lt/overview)、[CINEMA 4D Prime](https://oakcorp.net/maxon/)、[LightWave](http://www.dstorm.co.jp/lw2018/)、[MODO](http://modogroup.jp/modo) 等の高額なツールもある  
     ※Unityで使うのはモデリング等の一部の機能です
+* Unity用モデリングの注意  
+    * 有効なのは「マテリアル名」と「色情報」のみ（細かな質感とは無視される）  
+    * 「UVマップ」は有効  
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
