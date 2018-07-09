@@ -166,6 +166,14 @@
 * 3Dモデリングデータの読み込み方法  
     ①汎用モデルデータ（[.fbx](https://ja.wikipedia.org/wiki/FBX)）  
     ②ネイティブデータ（Unity環境に該当3Dツールがインストールされている必要がある）  
+* おすすめ3Dツール  
+    ①[Blender](https://blender.jp/) : 無料（Linux/macOS/Win）  
+    ②[SketchUp Make](https://www.sketchup.com/ja) : 非商用は無料（macOS/Win）  
+    ③[Shade 3D for Unity](https://shade3d.jp/product/shade-3d-for-unity/index.html) : 無料（macOS/Win）  
+    ④[Cheetah3D](https://www.cheetah3d.com/) : $99（macOS専用)  
+    ⑤[Metasequoia](http://www.metaseq.net/jp/) : 5400円〜（アニメーションには非対応 / Win専用）  
+    その他、[ZBrush](https://oakcorp.net/pixologic/)、[Maya LT](https://www.autodesk.co.jp/products/maya-lt/overview)、[CINEMA 4D Prime](https://oakcorp.net/maxon/)、[LightWave](http://www.dstorm.co.jp/lw2018/)、[MODO](http://modogroup.jp/modo) 等の高額なツールもある  
+    ※Unityで使うのはモデリング等の一部の機能です
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
