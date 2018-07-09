@@ -163,6 +163,9 @@
 * 2次元画像製作。  
     Unityでは実行時に再圧縮をかけるため予め[ダウンサイジングしておく必要はない](https://docs.unity3d.com/jp/current/Manual/class-TextureImporter.html)  
     Unity 2018.1 以降であれば [SVG](https://ja.wikipedia.org/wiki/Scalable_Vector_Graphics) ファイルを[読み込む方法](http://tsubakit1.hateblo.jp/entry/2018/05/22/233000)もあるとのこと  
+* 3Dモデリングデータの読み込み方法  
+    ①汎用モデルデータ（[.fbx](https://ja.wikipedia.org/wiki/FBX)）  
+    ②ネイティブデータ（Unity環境に該当3Dツールがインストールされている必要がある）  
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
