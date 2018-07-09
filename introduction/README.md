@@ -110,10 +110,11 @@
 |No.|内容|頁数|WebGL|.apk|参考サイト|作成日|
 |:--|:--|:--:|:--:|:--:|:--:|:--:|
 |01|天地創造。（プログラムレス）|33〜76|[●](https://vvestvillage.github.io/Unity/introduction/html/004_01/index.html)|－|[●](https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-32351)|2018-05-23|
-|02|[考え方と構造](#考え方と構造)|77〜112|－|－|－|2018-XX-XX|
+|02|[考え方と構造。](#考え方と構造。)|77〜112|－|－|－|2018-07-08|
+|03|[世界を構成するもの。](#世界を構成するもの。)|113〜164|－|－|－|2018-0X-XX|
 
-<a name="考え方と構造"></a>
-### 02 考え方と構造</b>
+<a name="考え方と構造。"></a>
+### 02 考え方と構造。</b>
 * [シーン](https://docs.unity3d.com/ja/current/Manual/CreatingScenes.html) : 1つのプロジェクトに作った複数のシーン間をスクリプトで移動可能（シーンは[ビルド](https://docs.unity3d.com/jp/current/Manual/PublishingBuilds.html)に含まなくても良い）
 * [GameObject](https://docs.unity3d.com/ja/current/Manual/GameObjects.html) : 世界に配置されているモノの基本単位（[コンポーネント](https://docs.unity3d.com/ja/current/Manual/UsingComponents.html)の入れ物）･[Transform](https://docs.unity3d.com/ja/current/ScriptReference/Transform.html)コンポーネントがミニマム
 * [Collider（コライダー）](https://docs.unity3d.com/ja/current/Manual/CollidersOverview.html) : 衝突判定の領域（①Box ②Sphere ③Capsuleの3つあり）
@@ -152,12 +153,17 @@
     }
     ```
 * [タブのロック](https://docs.unity3d.com/ja/current/Manual/InspectorOptions.html) : [Add Tab] で複数のGameObjectの情報を同時表示可能
-* [属性のコピー](https://docs.unity3d.com/ja/current/Manual/UsingComponents.html) : [Inspector] 内の任意のComponentの ⚙ から [Copy Component] → [Past ...] でコピー 
+* [属性のコピー](https://docs.unity3d.com/ja/current/Manual/UsingComponents.html) : [Inspector] 内の任意のComponentの ⚙ から [Copy Component] → [Past ...] でコピー
+
+<a name="世界を構成するもの。"></a>
+### 03 世界を構成するもの。</b>
+* 音を作成する？  
+    [freesound.org](https://freesound.org/) : 無料でダウンロード可能
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
 作成日：2018年05月23日  
-更新日：2018年07月08日
+更新日：2018年07月09日
 
 
 <a name="ユーザー設定"></a>
