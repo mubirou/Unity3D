@@ -161,7 +161,7 @@
     [freesound.org](https://freesound.org/) : 無料でダウンロード可能  
     [Asset Store](https://assetstore.unity.com/categories/audio) : Unityアセットストア  
 * 2次元画像製作。  
-    Unityでは実行時に再圧縮をかけるため予めダウンサイジングしておく必要はない  
+    Unityでは実行時に再圧縮をかけるため予め[ダウンサイジングしておく必要はない](https://docs.unity3d.com/jp/current/Manual/class-TextureImporter.html)  
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
