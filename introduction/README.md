@@ -157,9 +157,11 @@
 
 <a name="世界を構成するもの。"></a>
 ### 03 世界を構成するもの。</b>
-* 音を作成する？  
+* 音を作成する？（ありものを使う）  
     [freesound.org](https://freesound.org/) : 無料でダウンロード可能  
-    [Asset Store](https://assetstore.unity.com/categories/audio) : Unityアセットストア
+    [Asset Store](https://assetstore.unity.com/categories/audio) : Unityアセットストア  
+* 2次元画像製作。  
+    Unityでは実行時に再圧縮をかけるため予めダウンサイジングしておく必要はない  
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
