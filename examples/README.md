@@ -1974,7 +1974,7 @@ public class Main : MonoBehaviour {
 <a name="数秒後にメソッドを実行"></a>
 # <b>029 数秒後にメソッドを実行</b>
 
-※外に [New timer()]https://github.com/vvestvillage/HelloWorld/blob/master/languages/C%23Unity/C%23Unity_reference.md#%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC を使う方法もあり
+※外に [New timer()](https://github.com/vvestvillage/HelloWorld/blob/master/languages/C%23Unity/C%23Unity_reference.md#%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC を使う方法もあり
 
 ### 空のゲームオブジェクトを作成
 1. [GameObject]-[Create Empty] を選択。
