@@ -116,6 +116,7 @@
 
 <a name="考え方と構造。"></a>
 ### 02 考え方と構造。</b>
+
 * [シーン](https://docs.unity3d.com/ja/current/Manual/CreatingScenes.html) : 1つのプロジェクトに作った複数のシーン間をスクリプトで移動可能（シーンは[ビルド](https://docs.unity3d.com/jp/current/Manual/PublishingBuilds.html)に含まなくても良い）
 * [GameObject](https://docs.unity3d.com/ja/current/Manual/GameObjects.html) : 世界に配置されているモノの基本単位（[コンポーネント](https://docs.unity3d.com/ja/current/Manual/UsingComponents.html)の入れ物）･[Transform](https://docs.unity3d.com/ja/current/ScriptReference/Transform.html)コンポーネントがミニマム
 * [Collider（コライダー）](https://docs.unity3d.com/ja/current/Manual/CollidersOverview.html) : 衝突判定の領域（①Box ②Sphere ③Capsuleの3つあり）
@@ -158,6 +159,7 @@
 
 <a name="世界を構成するもの。"></a>
 ### 03 世界を構成するもの。</b>
+
 * 音を作成する？（ありものを使う）  
     [freesound.org](https://freesound.org/) : 無料でダウンロード可能  
     [Asset Store](https://assetstore.unity.com/categories/audio) : Unityアセットストア  
@@ -184,7 +186,27 @@
 
 <a name="スクリプト基礎知識。"></a>
 ### 04 スクリプト基礎知識。</b>
+
 * スクリプトはシーン内のGameObjectのコンポーネントとして動作する
+* デフォルトのコード（C#）
+    ```
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+
+    public class HelloWorld : MonoBehaviour {
+
+        // Use this for initialization
+        void Start () {
+            
+        }
+        
+        // Update is called once per frame
+        void Update () {
+            
+        }
+    }
+    ```
 * XXX
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
@@ -424,6 +446,7 @@
 
 <a name="Unityのエディション"></a>
 ### 001 Unityのエディション
+
 1. Personal（無料）……起動時の「Made with unity」ロゴを非表示できない
 1. Plus（4,200円/月）……Apple Store製品20％割引（クリエイター向き）
 1. Pro（15,000円/月）……Apple Store製品20％割引（プロ志向）
@@ -445,17 +468,20 @@
 
 <a name="マテリアルに画像を指定"></a>
 ### 004 マテリアルに画像を指定
+
 1. デスクトップ等にある画像ファイル（.png .jpg）を [Project]-[Assets] にドラッグ＆ドロップ
 1. [Scene] 上のマテリアルを適用したいオブジェクトに上記の画像をドラッグ＆ドロップ
 
 <a name="空の背景の変更"></a>
 ### 005 空の背景の変更
+
 1. [Window]-[Asset Store] から「Wispy SkyBox」をダウンロード＆インポート
 1. [Hierarchy]-[Main Camera] を選択し [Inspector]-[Add Component]-[Rendering]-[Skybox] を追加
 1. [Inspector]-[Skybox]-[Custom Skybox] の ⦿ を選び、任意の空の背景を選択
 
 <a name="床を鏡のようにする"></a>
 ### 006 床を鏡のようにする
+
 1. [Assets]-[Materials] で右クリック → [Create]-[Material] を選択（名前は任意）
 1. [Inspector] で次の通りに設定  
     * Metallic : 1
@@ -479,6 +505,7 @@
 
 <a name="Planeに動画を表示"></a>
 ### 007 Planeに動画を表示
+
 1. [Hierarchy]-[Create]-[3D Object]-[Plane] を選択
 1. [Inscpector]-[Transform]-[Rotation] を次の通りに設定
     * X : 90
@@ -497,6 +524,7 @@
 
 <a name="オブジェクトの透明化"></a>
 ### 009 オブジェクトの透明化
+
 1. [Project]-[Assets] を選択し右クリック
 1. [Create]-[Folder] でフォルダを作成（名前は「Materials」とする）
 1. 作成した [Materials] フォルダを選び右クリック
@@ -509,6 +537,7 @@
 
 <a name="クリックした位置にPrefabを表示"></a>
 ### 010 クリックした位置にPrefabを表示
+
 * 「Prefab（プレハブ）」とは、オブジェクトを複製する場合に役立つ機能で、オブジェクトとそのコンポーネントやプロパティを一つに格納するものです
 1. オブジェクト（Sphere）の作成  
     [GameObject]-[3D Object]-[Sphere] を選択  
@@ -558,6 +587,7 @@
 
 <a name="MouseOverで色を変える"></a>
 ### 011 MouseOverで色を変える
+
 1. [GameObject]-[3D Object]-[Sphere] で球体を作成（名前は "Sphere01" に変更）
 1. [Hierarchy]-[Sphere]-[Inspector]-[Add Component]-[Net Script] で名前は "ChangeColorScript" のC#ファイルを作成
 1. [Project]-[Assets]-[ChangeColorScript]（C#）をダブルクリック
@@ -590,6 +620,7 @@
 
 <a name="オブジェクトをクリックで落下"></a>
 ### 012 オブジェクトをクリックで落下
+
 1. 球体（Sphere）の [Inspector]-[Add Component]-[Physics]-[Rigidbody] を追加
 1. [Inspector]-[Rigidbody]-[Use Gravity] の ✔ を外す
 1. [Hierarchy]-[Sphere]-[Inspector]-[Add Componet]-[New Script] でC#ファイルを作成（名前は "DropSphereScript"）
