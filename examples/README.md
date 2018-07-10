@@ -1974,6 +1974,8 @@ public class Main : MonoBehaviour {
 <a name="数秒後にメソッドを実行"></a>
 # <b>029 数秒後にメソッドを実行</b>
 
+※外に [New timer()]https://github.com/vvestvillage/HelloWorld/blob/master/languages/C%23Unity/C%23Unity_reference.md#%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC を使う方法もあり
+
 ### 空のゲームオブジェクトを作成
 1. [GameObject]-[Create Empty] を選択。
 1. [Inspector] ウィンドウで、名前を "GameObject" から "God" に変更。
@@ -2012,6 +2014,7 @@ public class Main : MonoBehaviour {
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
 作成日：2018年04月12日
+更新日：2018年07月10日
 
 
 <a name="二点間の距離"></a>
