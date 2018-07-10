@@ -211,14 +211,14 @@
 
 |イベント名|内容|
 |:--|:--|
-|Awake|最初に実行される|
-|Start|シーンのスタート時に一度だけ実行|
-|Update|再生中画面がアップデートされる度に実行|
-|LastUpdate|
-|OnGUI|GUIが更新される度に実行|
-|OnCollisionEnter|コライダの領域に衝突する度に実行|
-|OnTriggerEnter|OnCollisionEnterに似ている（iSTriggerがアクティブな時）|
-
+|[Awake](https://docs.unity3d.com/jp/current/ScriptReference/MonoBehaviour.Awake.html)|最初に実行される|
+|[Start](https://docs.unity3d.com/jp/current/ScriptReference/MonoBehaviour.Start.html)|シーンのスタート時に一度だけ実行|
+|[Update](https://docs.unity3d.com/ja/current/ScriptReference/MonoBehaviour.Update.html)|再生中画面がアップデートされる度に実行|
+|[LastUpdate](https://docs.unity3d.com/ScriptReference/MonoBehaviour.LateUpdate.html)|1フレーム中の描画される直前に実行|
+|[OnGUI](https://docs.unity3d.com/ja/current/ScriptReference/MonoBehaviour.OnGUI.html)|GUIが更新される度に実行|
+|[OnCollisionEnter](https://docs.unity3d.com/ja/current/ScriptReference/Collider.OnCollisionEnter.html)|コライダの領域に衝突する度に実行|
+|[OnTriggerEnter](https://docs.unity3d.com/ja/current/ScriptReference/Collider.OnTriggerEnter.html)|OnCollisionEnterに似ている（iSTriggerがアクティブな時）|
+|[OnDestroy](https://docs.unity3d.com/ja/current/ScriptReference/MonoBehaviour.OnDestroy.html)|GameObjectが消える時に実行|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
