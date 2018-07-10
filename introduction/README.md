@@ -207,7 +207,11 @@
         }
     }
     ```
-* XXX
+* 主なイベント
+|イベント名|内容||
+|:--|:--|
+|Awake|最初に実行される|
+|Start|シーンのスタート時に一度だけ実行|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
