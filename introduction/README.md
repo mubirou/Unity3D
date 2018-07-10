@@ -179,6 +179,7 @@
     * [UVマップ](http://www.blender3d.biz/texturing_uvunwrapmappingtypes.html)は有効  
     * [サブディビジョンサーフェス](http://www.blender3d.biz/simple3dcg_modeling_smoothing.html)は有効
     * リギング（IK）やアニメーションデータは「.fbx」や「.blend」の利用で有効
+    ※[Adobe mixamo](https://www.mixamo.com/#/) : 自動リギング＆アニメーションサービスあり（有料）
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
