@@ -208,10 +208,17 @@
     }
     ```
 * 主なイベント  
+
 |イベント名|内容|
 |:--|:--|
 |Awake|最初に実行される|
 |Start|シーンのスタート時に一度だけ実行|
+|Update|再生中画面がアップデートされる度に実行|
+|LastUpdate|
+|OnGUI|GUIが更新される度に実行|
+|OnCollisionEnter|コライダの領域に衝突する度に実行|
+|OnTriggerEnter|OnCollisionEnterに似ている（iSTriggerがアクティブな時）|
+
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
