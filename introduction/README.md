@@ -111,7 +111,8 @@
 |:--|:--|:--:|:--:|:--:|:--:|:--:|
 |01|天地創造。（プログラムレス）|33〜76|[●](https://vvestvillage.github.io/Unity/introduction/html/004_01/index.html)|－|[●](https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-32351)|2018-05-23|
 |02|[考え方と構造。](#考え方と構造。)|77〜112|－|－|－|2018-07-08|
-|03|[世界を構成するもの。](#世界を構成するもの。)|113〜164|－|－|－|2018-0X-XX|
+|03|[世界を構成するもの。](#世界を構成するもの。)|113〜164|－|－|－|2018-07-10|
+|04|[スクリプト基礎知識。](#スクリプト基礎知識。)|113〜164|－|－|－|2018-0X-XX|
 
 <a name="考え方と構造。"></a>
 ### 02 考え方と構造。</b>
@@ -180,6 +181,10 @@
     * [サブディビジョンサーフェス](http://www.blender3d.biz/simple3dcg_modeling_smoothing.html)は有効
     * リギング（IK）やアニメーションデータは「.fbx」や「.blend」の利用で有効  
     ※[Adobe mixamo](https://www.mixamo.com/#/) : 自動リギング＆アニメーションサービスあり（有料）
+
+<a name="スクリプト基礎知識。"></a>
+### 04 スクリプト基礎知識。</b>
+* XXXX
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
