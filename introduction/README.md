@@ -184,7 +184,8 @@
 
 <a name="スクリプト基礎知識。"></a>
 ### 04 スクリプト基礎知識。</b>
-* XXXX
+* スクリプトはシーン内のGameObjectのコンポーネントとして動作する
+* XXX
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
