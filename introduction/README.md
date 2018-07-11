@@ -221,7 +221,7 @@
 |[OnTriggerEnter](https://docs.unity3d.com/ja/current/ScriptReference/Collider.OnTriggerEnter.html)|OnCollisionEnterに似ている（iSTriggerがアクティブな時）|
 |[OnDestroy](https://docs.unity3d.com/ja/current/ScriptReference/MonoBehaviour.OnDestroy.html)|GameObjectが消える時に実行|
 
-* マテリアルを変更する。（信号機を作る）188〜189頁
+* マテリアルを変更する＝信号機を作る（188〜189頁）
     ```
     //Signal.cs
     using System.Collections;
