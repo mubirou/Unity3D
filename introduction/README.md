@@ -221,6 +221,60 @@
 |[OnTriggerEnter](https://docs.unity3d.com/ja/current/ScriptReference/Collider.OnTriggerEnter.html)|OnCollisionEnterに似ている（iSTriggerがアクティブな時）|
 |[OnDestroy](https://docs.unity3d.com/ja/current/ScriptReference/MonoBehaviour.OnDestroy.html)|GameObjectが消える時に実行|
 
+* マテリアルを変更する。（信号機を作る）188〜189頁
+```
+//Signal.cs
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEditor; //AssetDatabase.LoadAssetAtPath()に必要
+
+public class Signal : MonoBehaviour {
+	//publicの場合Inspector内で手作業で割当てる
+	public GameObject _redCube;
+	public GameObject _blueCube;
+	public Material _blueMaterial;
+	public Material _dakBlueMaterial;
+	public Material _redMaterial;
+	public Material _darkRedMaterial;
+
+	private bool _onOff = false;
+
+	void Start () {
+		/* //変数をprivateにすると以下の処理が必要
+		_redCube = GameObject.Find("RedCube"); //Hierarchy内で「GameObject」を探す
+		_blueCube = GameObject.Find("BlueCube");
+		_blueMaterial = AssetDatabase.LoadAssetAtPath("Assets/BlueMaterial.mat", typeof(Material)) as Material; //Assets内で「マテリアル」を探す
+		_dakBlueMaterial = AssetDatabase.LoadAssetAtPath("Assets/DarkBlueMaterial.mat", typeof(Material)) as Material;
+		_redMaterial = AssetDatabase.LoadAssetAtPath("Assets/RedMaterial.mat", typeof(Material)) as Material;
+		_darkRedMaterial = AssetDatabase.LoadAssetAtPath("Assets/DarkRedMaterial.mat", typeof(Material)) as Material;
+		*/
+
+		//最初の状態を作っておく
+		_redCube.GetComponent<Renderer>().material = _darkRedMaterial;
+		_blueCube.GetComponent<Renderer>().material = _blueMaterial;
+
+		InvokeRepeating("SignalLoop", 3.0f, 5.0f);
+	}
+
+	void SignalLoop() {
+		if (_onOff) {
+			_redCube.GetComponent<Renderer>().material = _redMaterial;
+			_blueCube.GetComponent<Renderer>().material = _dakBlueMaterial;
+		} else {
+			_redCube.GetComponent<Renderer>().material = _darkRedMaterial;
+			_blueCube.GetComponent<Renderer>().material = _blueMaterial;
+		}
+		_onOff = !_onOff;
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+}
+```
+
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：vvestvillage  
 作成日：2018年05月23日  
