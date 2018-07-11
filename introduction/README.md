@@ -267,11 +267,6 @@ public class Signal : MonoBehaviour {
 		}
 		_onOff = !_onOff;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
 ```
 
