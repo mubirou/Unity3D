@@ -1975,6 +1975,7 @@ public class Main : MonoBehaviour {
 # <b>029 数秒後にメソッドを実行</b>
 
 ※他に [new Timer()](https://github.com/vvestvillage/HelloWorld/blob/master/languages/C%23Unity/C%23Unity_reference.md#%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC) を使う方法もあり
+※繰返し実行可能な [MonoBehaviour.InvokeRepeating()](https://docs.unity3d.com/ja/current/ScriptReference/MonoBehaviour.InvokeRepeating.html) もあり
 
 ### 空のゲームオブジェクトを作成
 1. [GameObject]-[Create Empty] を選択。
