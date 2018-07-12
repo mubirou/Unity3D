@@ -6,7 +6,7 @@
 
 |No.|タイトル|内容|WebGL|参考資料|
 |:--:|:--|:--|:--:|:--:|
-|000|[インストール](https://github.com/vvestvillage/HelloWorld/blob/master/languages/C%23Unity/C%23Unity_linux.md)|開発環境（Linux版）の構築|－|－|
+|000|[インストール](https://github.com/mubirou/HelloWorld/blob/master/languages/C%23Unity/C%23Unity_linux.md)|開発環境（Linux版）の構築|－|－|
 |001|[プリミティブ･オブジェクト](#プリミティブ･オブジェクト)|立方体･球･カプセル･円柱･平面の利用|－|－|
 |002|[Blenderからの読み込み](#Blenderからの読み込み)|Blenderで加工したモデルをインポート|－|－|
 |003|[入門動画](#入門動画)|入門者向けの解説動画|－|－|
@@ -52,10 +52,10 @@
     * 1x1の平面（2個の三角形で構成）。
     * 画像や動画の再生などに利用。  
 
-![001](https://vvestvillage.github.io/Unity/introduction/jpg/001.jpg)
+![001](https://mubirou.github.io/Unity/introduction/jpg/001.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：vvestvillage  
+作成者：mubirou  
 作成日：2018年04月17日
 
 
@@ -80,10 +80,10 @@
 1. [Project]-[Model001] 内のモデルを [Hierarchy] にドラッグ＆ドロップ。
 1. 必要に応じて色を変更するなど行います。
 
-![002](https://vvestvillage.github.io/Unity/introduction/jpg/002.jpg)
+![002](https://mubirou.github.io/Unity/introduction/jpg/002.jpg)
 
 実行環境：Unity 2017.2 Personal、Blender 2.79、Ubuntu 16.04 LTS  
-作成者：vvestvillage  
+作成者：mubirou  
 作成日：2018年04月18日
 
 
@@ -97,7 +97,7 @@
 |XXX|[XXX](#XXX)|－|－|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：vvestvillage  
+作成者：mubirou  
 作成日：2018年04月20日  
 更新日：2018年0X月XX日
 
@@ -109,7 +109,7 @@
 
 |No.|内容|頁数|WebGL|.apk|参考サイト|作成日|
 |:--|:--|:--:|:--:|:--:|:--:|:--:|
-|01|天地創造。（プログラムレス）|33〜76|[●](https://vvestvillage.github.io/Unity/introduction/html/004_01/index.html)|－|[●](https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-32351)|2018-05-23|
+|01|天地創造。（プログラムレス）|33〜76|[●](https://mubirou.github.io/Unity/introduction/html/004_01/index.html)|－|[●](https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-32351)|2018-05-23|
 |02|[考え方と構造。](#考え方と構造。)|77〜112|－|－|－|2018-07-08|
 |03|[世界を構成するもの。](#世界を構成するもの。)|113〜164|－|－|－|2018-07-10|
 |04|[スクリプト基礎知識。](#スクリプト基礎知識。)|165〜258|－|－|－|2018-0X-XX|
@@ -271,7 +271,7 @@
     ```
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：vvestvillage  
+作成者：mubirou  
 作成日：2018年05月23日  
 更新日：2018年07月11日
 
@@ -287,7 +287,7 @@
 1. XXX
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：vvestvillage  
+作成者：mubirou  
 作成日：2018年05月24日  
 更新日：2018年06月30日
 
@@ -303,7 +303,7 @@
 |[Shift]+[中ボタン]+[ドラッグ]|視点の自由移動|2018-05-24|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：vvestvillage  
+作成者：mubirou  
 作成日：2018年05月24日  
 更新日：2018年XX月XX日
 
@@ -395,7 +395,7 @@
 
 1. アプリケーションIDの登録  
     ① [File]-[Build Settings]-[Player Settings] ボタンを押す  
-    ② [Other Settings]-[Identification] の [Package Name] を com.vvestvillage.app001 等（ユニーク値）にする  
+    ② [Other Settings]-[Identification] の [Package Name] を com.mubirou.app001 等（ユニーク値）にする  
     ※この値が違うと別のアプリとしてAndroid端末にインストールされる  
     ※数値から始まる名前は不可（要注意）
 
@@ -409,10 +409,10 @@
     ③ Unityの左下に [Build Completed with a result of 'Succeeded'] と表示されたら成功  
     ④ 上記で指定した場所に xxx.apk が生成されたのを確認  
     ⑤ Android端末上に生成されたアプリを選択し、再生されたら成功!!  
-    ※ xxx.apk の[ダウンロード](https://vvestvillage.github.io/Unity/introduction/apk/007.apk)（Android端末へのインストール用）  
+    ※ xxx.apk の[ダウンロード](https://mubirou.github.io/Unity/introduction/apk/007.apk)（Android端末へのインストール用）  
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS、Android 8.0  
-作成者：vvestvillage  
+作成者：mubirou  
 作成日：2018年06月20日  
 更新日：2018年06月30日
 
@@ -479,7 +479,7 @@
 ※上記に加えスクリプトの記述が必要の可能性あり
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS、Shotcut 18.03.06  
-作成者：vvestvillage  
+作成者：mubirou  
 作成日：2018年06月26日  
 更新日：2018年06月28日
 
@@ -495,15 +495,15 @@
 |001|[Unityのエディション](#Unityのエディション)|004|－|－|[●](https://store.unity.com/ja)|2018-06-29|
 |002|[Asset Store保存場所](#AssetStore保存場所)|007|－|－|－|2018-06-29|
 |003|[Editorの設定](#Editorの設定)|008|－|－|－|2018-06-29|
-|004|[マテリアルに画像を指定](#マテリアルに画像を指定)|022･023|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_004.apk)|－|2018-06-29|
+|004|[マテリアルに画像を指定](#マテリアルに画像を指定)|022･023|－|[●](https://mubirou.github.io/Unity/introduction/apk/009_004.apk)|－|2018-06-29|
 |005|[空の背景の変更](#空の背景の変更)|028|－|－|－|2018-07-01|
-|006|[床を鏡のようにする](#床を鏡のようにする)|031|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_006.apk)|[●](http://corevale.com/unity/923)|2018-07-02|
+|006|[床を鏡のようにする](#床を鏡のようにする)|031|－|[●](https://mubirou.github.io/Unity/introduction/apk/009_006.apk)|[●](http://corevale.com/unity/923)|2018-07-02|
 |007|[Planeに動画を表示](#Planeに動画を表示)|032|－|－|－|2018-07-02|
 |008|[ボールに重力を持たせる](#ボールに重力を持たせる)|030･033|－|－|－|2018-07-02|
 |009|[オブジェクトの透明化](#オブジェクトの透明化)|033|－|－|－|2018-07-02|
-|010|[クリックした位置にPrefabを表示](#クリックした位置にPrefabを表示)|034|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_010.apk)|－|2018-07-03|
-|011|[MouseOverで色を変える](#MouseOverで色を変える)|035|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_011.apk)|－|2018-07-04|
-|012|[オブジェクトをクリックで落下](#オブジェクトをクリックで落下)|036|－|[●](https://vvestvillage.github.io/Unity/introduction/apk/009_012.apk)|－|2018-07-04|
+|010|[クリックした位置にPrefabを表示](#クリックした位置にPrefabを表示)|034|－|[●](https://mubirou.github.io/Unity/introduction/apk/009_010.apk)|－|2018-07-03|
+|011|[MouseOverで色を変える](#MouseOverで色を変える)|035|－|[●](https://mubirou.github.io/Unity/introduction/apk/009_011.apk)|－|2018-07-04|
+|012|[オブジェクトをクリックで落下](#オブジェクトをクリックで落下)|036|－|[●](https://mubirou.github.io/Unity/introduction/apk/009_012.apk)|－|2018-07-04|
 
 <a name="Unityのエディション"></a>
 ### 001 Unityのエディション
@@ -704,9 +704,9 @@
 ※上記の例の場合、オブジェクト以外をクリックしても落下する
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS、Android 8.0  
-作成者：vvestvillage  
+作成者：mubirou  
 作成日：2018年06月28日  
 更新日：2018年07月04日
 
 
-© 2018 vvestvillage
+© 2018 mubirou
