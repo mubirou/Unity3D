@@ -254,9 +254,11 @@
             _redCube.GetComponent<Renderer>().material = _darkRedMaterial;
             _blueCube.GetComponent<Renderer>().material = _blueMaterial;
 
+            //3秒後から5秒間隔でSignalLoop()を繰返し実行
             InvokeRepeating("SignalLoop", 3.0f, 5.0f);
         }
 
+        //InvokeRepeating()によって繰返し実行される処理
         void SignalLoop() {
             if (_onOff) {
                 _redCube.GetComponent<Renderer>().material = _redMaterial;
