@@ -227,7 +227,7 @@
     using System.Collections;
     using System.Collections.Generic;
     using UnityEngine;
-    using UnityEditor; //AssetDatabase.LoadAssetAtPath()に必要
+    //using UnityEditor; //AssetDatabase.LoadAssetAtPath()に必要
 
     public class Signal : MonoBehaviour {
         //publicの場合Inspector内で手作業で割当てる
