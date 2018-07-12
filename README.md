@@ -6,4 +6,4 @@
 * [C# with Unity GameObject](https://github.com/mubirou/Unity/tree/master/examples)
 * [Unity 入門](https://github.com/mubirou/Unity/tree/master/introduction)
 
-© 2018 mubirou
+© 2018 夢寐郎
