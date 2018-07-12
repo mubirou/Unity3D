@@ -238,6 +238,7 @@
         public Material _redMaterial;
         public Material _darkRedMaterial;
 
+        //publicにしておくとInspectorで初期値の変更が可能（プレハブ化時に便利）
         private bool _onOff = false;
 
         void Start () {
