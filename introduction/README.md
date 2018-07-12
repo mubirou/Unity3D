@@ -55,7 +55,7 @@
 ![001](https://mubirou.github.io/Unity/introduction/jpg/001.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：mubirou  
+作成者：夢寐郎  
 作成日：2018年04月17日
 
 
@@ -83,7 +83,7 @@
 ![002](https://mubirou.github.io/Unity/introduction/jpg/002.jpg)
 
 実行環境：Unity 2017.2 Personal、Blender 2.79、Ubuntu 16.04 LTS  
-作成者：mubirou  
+作成者：夢寐郎  
 作成日：2018年04月18日
 
 
@@ -97,7 +97,7 @@
 |XXX|[XXX](#XXX)|－|－|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：mubirou  
+作成者：夢寐郎  
 作成日：2018年04月20日  
 更新日：2018年0X月XX日
 
@@ -271,7 +271,7 @@
     ```
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：mubirou  
+作成者：夢寐郎  
 作成日：2018年05月23日  
 更新日：2018年07月11日
 
@@ -287,7 +287,7 @@
 1. XXX
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：mubirou  
+作成者：夢寐郎  
 作成日：2018年05月24日  
 更新日：2018年06月30日
 
@@ -303,7 +303,7 @@
 |[Shift]+[中ボタン]+[ドラッグ]|視点の自由移動|2018-05-24|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
-作成者：mubirou  
+作成者：夢寐郎  
 作成日：2018年05月24日  
 更新日：2018年XX月XX日
 
@@ -412,7 +412,7 @@
     ※ xxx.apk の[ダウンロード](https://mubirou.github.io/Unity/introduction/apk/007.apk)（Android端末へのインストール用）  
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS、Android 8.0  
-作成者：mubirou  
+作成者：夢寐郎  
 作成日：2018年06月20日  
 更新日：2018年06月30日
 
@@ -479,7 +479,7 @@
 ※上記に加えスクリプトの記述が必要の可能性あり
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS、Shotcut 18.03.06  
-作成者：mubirou  
+作成者：夢寐郎  
 作成日：2018年06月26日  
 更新日：2018年06月28日
 
@@ -704,7 +704,7 @@
 ※上記の例の場合、オブジェクト以外をクリックしても落下する
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS、Android 8.0  
-作成者：mubirou  
+作成者：夢寐郎  
 作成日：2018年06月28日  
 更新日：2018年07月04日
 
