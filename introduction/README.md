@@ -292,6 +292,7 @@
     |[lossyScale](https://docs.unity3d.com/jp/current/ScriptReference/Transform-lossyScale.html)|GameObject.transform.lossyScale|UnityEngine.Vector3|―|
     |[position](https://docs.unity3d.com/ja/current/ScriptReference/Transform-position.html)|GameObject.transform.position|UnityEngine.Vector3|―|
     |[localToWorldMatrix](https://docs.unity3d.com/jp/460/ScriptReference/Transform-localToWorldMatrix.html)|GameObject.transform.localToWorldMatrix|UnityEngine.Matrix4x4|―|
+    |[worldToLocalMatrix](https://docs.unity3d.com/jp/current/ScriptReference/Transform-worldToLocalMatrix.html)|GameObject.transform.worldToLocalMatrix|UnityEngine.Matrix4x4|―|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：夢寐郎  
