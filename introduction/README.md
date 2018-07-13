@@ -309,6 +309,7 @@
     |[GUIText](https://docs.unity3d.com/jp/current/Manual/class-GUIText.html)|GameObject.GetComponent&lt;GUIText>()|UnityEngine.GUIText|アタッチされているGUIText情報（旧UI）|
     |[GUITexture](https://docs.unity3d.com/jp/current/Manual/class-GUITexture.html)|GameObject.GetComponent&lt;GUITexture>()|UnityEngine.GUITexture|アタッチされているGUITexture情報（旧UI）|
     |[HingeJoint](https://docs.unity3d.com/ja/current/ScriptReference/HingeJoint.html)|GameObject.GetComponent&lt;HingeJoint>()|UnityEngine.HingeJoint|アタッチされているHingeJoint情報|
+    |[Light](https://docs.unity3d.com/ja/current/Manual/class-Light.html)|GameObject.GetComponent&lt;Light>()|UnityEngine.Light|アタッチされているLight情報|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：夢寐郎  
