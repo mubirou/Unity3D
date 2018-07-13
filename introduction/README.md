@@ -304,6 +304,7 @@
     |[Camera](https://docs.unity3d.com/ja/current/ScriptReference/GameObject-camera.html)|GameObject.GetComponent&lt;Camera>()|UnityEngine.Camera|アタッチされているCamera情報（無ければnull）|
     |[Collider](https://docs.unity3d.com/ja/current/ScriptReference/Collider.html)|GameObject.GetComponent&lt;Collider>()|UnityEngine.BoxCollider等|アタッチされているCollider情報|
     |[Collider2D](https://docs.unity3d.com/ja/current/ScriptReference/Collider2D.html)|GameObject.GetComponent&lt;Collider2D>()|UnityEngine.Collider2D|アタッチされているCollider2D情報|
+    |[ConstantForce](https://docs.unity3d.com/ja/current/Manual/class-ConstantForce.html)|GameObject.GetComponent&lt;ConstantForce>()|UnityEngine.ConstantForce|アタッチされているConstantForce情報|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：夢寐郎  
