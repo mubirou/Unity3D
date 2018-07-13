@@ -306,6 +306,7 @@
     |[Collider2D](https://docs.unity3d.com/ja/current/ScriptReference/Collider2D.html)|GameObject.GetComponent&lt;Collider2D>()|UnityEngine.Collider2D|アタッチされているCollider2D情報|
     |[ConstantForce](https://docs.unity3d.com/ja/current/Manual/class-ConstantForce.html)|GameObject.GetComponent&lt;ConstantForce>()|UnityEngine.ConstantForce|アタッチされているConstantForce情報|
     |[GameObject](https://docs.unity3d.com/ja/current/ScriptReference/GameObject.html)|GameObject.gameObject|UnityEngine.GameObject|GameObject情報|
+    |[GUIText](https://docs.unity3d.com/jp/current/Manual/class-GUIText.html)|GameObject.GetComponent&lt;GUIText>()|UnityEngine.GUIText|アタッチされているGUIText情報（旧UI）|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：夢寐郎  
