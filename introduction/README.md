@@ -290,6 +290,7 @@
     |[localRotation](https://docs.unity3d.com/jp/460/ScriptReference/Transform-localRotation.html)|GameObject.transform.localRotation|UnityEngine.Quaternion|―|
     |[localScale](https://docs.unity3d.com/ja/current/ScriptReference/Transform-localScale.html)|GameObject.transform.localScale|UnityEngine.Vector3|―|
     |[lossyScale](https://docs.unity3d.com/jp/current/ScriptReference/Transform-lossyScale.html)|GameObject.transform.lossyScale|UnityEngine.Vector3|―|
+    |[position](https://docs.unity3d.com/ja/current/ScriptReference/Transform-position.html)|GameObject.transform.position|UnityEngine.Vector3|―|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：夢寐郎  
