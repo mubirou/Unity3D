@@ -301,6 +301,7 @@
     |:--|:--|:--|:--|
     |[Animation](https://docs.unity3d.com/ja/current/ScriptReference/Animation.html)|GameObject.GetComponent&lt;Animation>()|UnityEngine.Animation|アタッチされているAnimation情報（無ければnull）|
     |[AudioSource](https://docs.unity3d.com/ja/current/ScriptReference/AudioSource.html)|GameObject.GetComponent&lt;AudioSource>()|UnityEngine.AudioSource|アタッチされているAudioSource情報（無ければnull）|
+    |[Camera](https://docs.unity3d.com/ja/current/ScriptReference/GameObject-camera.html)|GameObject.GetComponent&lt;Camera>()|UnityEngine.Camera|アタッチされているCamera情報（無ければnull）|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：夢寐郎  
