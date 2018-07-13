@@ -279,6 +279,7 @@
     |:--|:--|:--|:--|
     |[parent](https://docs.unity3d.com/jp/current/ScriptReference/Transform-parent.html)|GameObject.transform.parent|UnityEngine.Transform|親のGameObject（無い場合はNull）|
     |[root](https://docs.unity3d.com/jp/current/ScriptReference/Transform-root.html)|GameObject.transform.root|UnityEngine.Transform|最上位の親＝GameObject|
+    |[childCount](https://docs.unity3d.com/jp/current/ScriptReference/Transform-childCount.html)|GameObject.transform.childCount|System.Int32|自分より下層のGameObjectの数（無い場合は0）|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：夢寐郎  
