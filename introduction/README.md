@@ -273,7 +273,7 @@
     }
     ```
 
-* Transform情報（全てのGameObjectに存在）
+* [Transform](https://docs.unity3d.com/ja/current/ScriptReference/Transform.html)情報（全てのGameObjectに存在）
 
     |プロパティ名|記述方法|データ型|内容|
     |:--|:--|:--|:--|
