@@ -316,7 +316,7 @@
     |[Renderer](https://docs.unity3d.com/jp/current/ScriptReference/GameObject-renderer.html)|GameObject.GetComponent&lt;Renderer>()|UnityEngine.MeshRenderer|アタッチされているRenderer情報|
     |[Rigidbody](https://docs.unity3d.com/ja/current/ScriptReference/Rigidbody.html)|GameObject.GetComponent&lt;Rigidbody>()|UnityEngine.Rigidbody|アタッチされているRigidbody情報|
     |[Rigidbody2D](https://docs.unity3d.com/ja/current/ScriptReference/Rigidbody2D.html)|GameObject.GetComponent&lt;Rigidbody2D>()|UnityEngine.Rigidbody2D|アタッチされているRigidbody2D情報|
-
+    |[tag](https://docs.unity3d.com/jp/current/ScriptReference/GameObject-tag.html)|GameObject.tag|UnityEngine.Rigidbody2D|アタッチされているタグ情報|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：夢寐郎  
