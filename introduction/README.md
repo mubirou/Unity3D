@@ -311,6 +311,7 @@
     |[HingeJoint](https://docs.unity3d.com/ja/current/ScriptReference/HingeJoint.html)|GameObject.GetComponent&lt;HingeJoint>()|UnityEngine.HingeJoint|アタッチされているHingeJoint情報|
     |[Light](https://docs.unity3d.com/ja/current/Manual/class-Light.html)|GameObject.GetComponent&lt;Light>()|UnityEngine.Light|アタッチされているLight情報|
     |[NetworkView](https://docs.unity3d.com/ja/current/Manual/class-NetworkView.html)|GameObject.GetComponent&lt;NetworkView>()|UnityEngine.NetworkView|アタッチされているNetworkView情報|
+    |[ParticleEmitter](https://docs.unity3d.com/ScriptReference/ParticleEmitter.html)|GameObject.GetComponent&lt;ParticleEmitter>()|UnityEngine.ParticleEmitter|アタッチされているParticleEmitter情報|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：夢寐郎  
