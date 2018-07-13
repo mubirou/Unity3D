@@ -283,6 +283,7 @@
     |[eulerAngles](https://docs.unity3d.com/ja/current/ScriptReference/Transform-eulerAngles.html)|GameObject.transform.eulerAngles|UnityEngine.Vector3|InspectorのRotation値 / (x,y,z) で出力|
     |[right](https://docs.unity3d.com/ja/current/ScriptReference/Transform-right.html)|GameObject.transform.right|UnityEngine.Vector3|赤軸 / (x,y,z) で出力|
     |[up](https://docs.unity3d.com/ja/current/ScriptReference/Transform-up.html)|GameObject.transform.up|UnityEngine.Vector3|緑軸 / (x,y,z) で出力|
+    |[forward](https://docs.unity3d.com/jp/current/ScriptReference/Transform-forward.html)|GameObject.transform.forward|UnityEngine.Vector3|青軸 / (x,y,z) で出力|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：夢寐郎  
