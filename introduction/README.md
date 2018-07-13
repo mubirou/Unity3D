@@ -275,14 +275,14 @@
 
 * Transform情報（全てのGameObjectに存在）
 
-    |プロパティ名|記述方法|内容|
-    |:--|:--|:--|
-    |[parent](https://docs.unity3d.com/jp/current/ScriptReference/Transform-parent.html)|GameObject.transform.parent|親のGameObject（無い場合はNull）|
+    |プロパティ名|記述方法|データ型|内容|
+    |:--|:--|:--|:--|
+    |[parent](https://docs.unity3d.com/jp/current/ScriptReference/Transform-parent.html)|GameObject.transform.parent|UnityEngine.Transform|親のGameObject（無い場合はNull）|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：夢寐郎  
 作成日：2018年05月23日  
-更新日：2018年07月12日
+更新日：2018年07月13日
 
 
 <a name="ユーザー設定"></a>
