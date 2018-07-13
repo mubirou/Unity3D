@@ -277,7 +277,7 @@
 
     |プロパティ名|記述方法|データ型|内容|
     |:--|:--|:--|:--|
-    |[parent](https://docs.unity3d.com/jp/current/ScriptReference/Transform-parent.html)|GameObject.transform.parent|UnityEngine.Transform|最上位の親＝GameObject（無い場合はNull）|
+    |[parent](https://docs.unity3d.com/jp/current/ScriptReference/Transform-parent.html)|GameObject.transform.parent|UnityEngine.Transform|親のGameObject（無い場合はNull）|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：夢寐郎  
