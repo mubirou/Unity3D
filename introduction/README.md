@@ -273,7 +273,8 @@
     }
     ```
 
-* Transform情報（全てのGameObjectに存在）  
+* Transform情報（全てのGameObjectに存在）
+
     |プロパティ名|記述方法|内容|
     |:--|:--|:--|
     |[parent](https://docs.unity3d.com/jp/current/ScriptReference/Transform-parent.html)|GameObject.transform.parent|親のGameObject（無い場合はNull）|
