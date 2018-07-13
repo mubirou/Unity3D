@@ -286,6 +286,7 @@
     |[forward](https://docs.unity3d.com/jp/current/ScriptReference/Transform-forward.html)|GameObject.transform.forward|UnityEngine.Vector3|青軸 / (x,y,z) で出力|
     |[rotation](https://docs.unity3d.com/ja/current/ScriptReference/Transform-rotation.html)|GameObject.transform.rotation|UnityEngine.Quaternion|(x,x,x,x) で出力|
     |[localEulerAngles](https://docs.unity3d.com/ja/current/ScriptReference/Transform-localEulerAngles.html)|GameObject.transform.localEulerAngles|UnityEngine.Vector3|―|
+    |[localPosition](https://docs.unity3d.com/ScriptReference/Transform-localPosition.html)|GameObject.transform.localPosition|UnityEngine.Vector3|―|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：夢寐郎  
