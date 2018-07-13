@@ -314,6 +314,7 @@
     |[ParticleEmitter](https://docs.unity3d.com/ScriptReference/ParticleEmitter.html)|GameObject.GetComponent&lt;ParticleEmitter>()|UnityEngine.ParticleEmitter|アタッチされているParticleEmitter情報|
     |[ParticleSystem](https://docs.unity3d.com/ja/current/ScriptReference/ParticleSystem.html)|GameObject.GetComponent&lt;ParticleSystem>()|UnityEngine.ParticleSystem|アタッチされているParticleSystem情報|
     |[Renderer](https://docs.unity3d.com/jp/current/ScriptReference/GameObject-renderer.html)|GameObject.GetComponent&lt;Renderer>()|UnityEngine.MeshRenderer|アタッチされているRenderer情報|
+    |[Rigidbody](https://docs.unity3d.com/ja/current/ScriptReference/Rigidbody.html)|GameObject.GetComponent&lt;Rigidbody>()|UnityEngine.Rigidbody|アタッチされているRigidbody情報|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：夢寐郎  
