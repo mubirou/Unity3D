@@ -299,7 +299,7 @@
 
     |プロパティ名|記述方法|データ型|内容|
     |:--|:--|:--|:--|
-    |[animation](https://docs.unity3d.com/ja/current/ScriptReference/Animation.html)|GameObject.GetComponent<Animation>()|UnityEngine.Animation|アタッチされているAnimation情報|
+    |[animation](https://docs.unity3d.com/ja/current/ScriptReference/Animation.html)|GameObject.GetComponent<Animation>()|UnityEngine.Animation|アタッチされているAnimation情報（無ければnull）|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：夢寐郎  
