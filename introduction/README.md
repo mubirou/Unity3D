@@ -321,10 +321,15 @@
     |[HideFlags](https://docs.unity3d.com/ja/current/ScriptReference/HideFlags.html)|GameObject.hideFlags|UnityEngine.HideFlags|―|
     |[name](https://docs.unity3d.com/ja/current/ScriptReference/Object-name.html)|GameObject.name|UnityEngine.String|GameObjectの名前|
 
+* GameObject.transform.メソッド
+
+    |メソッド名|記述方法|戻り値|内容|
+    |:--|:--|:--|:--|
+
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：夢寐郎  
 作成日：2018年05月23日  
-更新日：2018年07月13日
+更新日：2018年07月14日
 
 
 <a name="ユーザー設定"></a>
