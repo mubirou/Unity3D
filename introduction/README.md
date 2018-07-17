@@ -321,7 +321,7 @@
     |[HideFlags](https://docs.unity3d.com/ja/current/ScriptReference/HideFlags.html)|GameObject.hideFlags|UnityEngine.HideFlags|―|
     |[name](https://docs.unity3d.com/ja/current/ScriptReference/Object-name.html)|GameObject.name|UnityEngine.String|GameObjectの名前|
 
-* GameObject.transform.メソッド
+* おもなGameObject.transform.メソッド
 
     |メソッド|記述方法|戻り値|内容|記述例|
     |:--|:--|:--|:--|:--:|
