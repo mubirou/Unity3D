@@ -323,7 +323,7 @@
 
 * GameObject.transform.メソッド
 
-    |メソッド|記述方法|戻り値|内容|参考|
+    |メソッド|記述方法|戻り値|内容|記述例|
     |:--|:--|:--|:--|:--:|
     |[IsChildOf()](https://docs.unity3d.com/jp/460/ScriptReference/Transform.IsChildOf.html)|transform.IsChildOf()|bool|任意のGameObjectの子か調べる|―|
     |[LookAt()](https://unity3d.com/jp/learn/tutorials/topics/scripting/look)|transform.LookAt()|Void|任意のGameObjectオブジェクトの方向に向かせる|―|
