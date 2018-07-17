@@ -338,7 +338,7 @@
     |[down](http://tech.pjin.jp/blog/2016/02/16/unity_vector3_1/)|Vector3.down|Vector3(0,-1,0)と同じ|―|
     |[forward](http://tech.pjin.jp/blog/2016/02/16/unity_vector3_1/)|Vector3.forward|Vector3(0,0,1)と同じ|―|
     |[left](http://tech.pjin.jp/blog/2016/02/16/unity_vector3_1/)|Vector3.left|Vector3(-1,0,0)と同じ|―|
-    |[one](http://tech.pjin.jp/blog/2016/02/16/unity_vector3_1/)|Vector3.left|one(1,1,1)と同じ|―|
+    |[one](http://tech.pjin.jp/blog/2016/02/16/unity_vector3_1/)|Vector3.one|Vector3(1,1,1)と同じ|―|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：夢寐郎  
