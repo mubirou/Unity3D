@@ -325,6 +325,7 @@
 
     |メソッド|記述方法|戻り値|内容|参考|
     |:--|:--|:--|:--|:--:|
+    |[LookAt()](https://unity3d.com/jp/learn/tutorials/topics/scripting/look)|transform.LookAt()|Void|任意のオブジェクトの方向に向かせる|―|
     |[Rotate()](https://docs.unity3d.com/jp/530/ScriptReference/Transform.Rotate.html)|transform.Rotate()|Void|オブジェクトを回転させる|[●](https://github.com/mubirou/Unity/tree/master/examples#%E3%83%9E%E3%82%A6%E3%82%B9%E3%83%9C%E3%82%BF%E3%83%B3%E3%81%A7%E5%9B%9E%E8%BB%A2)|
     
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
