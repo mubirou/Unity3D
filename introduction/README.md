@@ -360,6 +360,7 @@
     |GUI名|内容|
     |:--|:--|
     |[Button](https://docs.unity3d.com/ja/current/ScriptReference/GUI.Button.html)|ボタン|
+    |[Label](https://docs.unity3d.com/jp/460/ScriptReference/GUI.Label.html)|文字|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：夢寐郎  
