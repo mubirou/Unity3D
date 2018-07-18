@@ -355,6 +355,11 @@
 <a name="GUIとAudio。"></a>
 ### 06 GUIとAudio。</b>
 
+* 主な[GUI](https://docs.unity3d.com/ja/current/ScriptReference/GUI.html)
+    |GUI名|内容|
+    |:--|:--|
+    |[Button](https://docs.unity3d.com/ja/current/ScriptReference/GUI.Button.html)|ボタン|
+
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：夢寐郎  
 作成日：2018年05月23日  
