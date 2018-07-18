@@ -806,8 +806,9 @@
 <a name="乱作"></a>
 # <b>010 乱作</b>
 
-|No.|内容|WebGL|視聴日|
+|No.|内容|WebGL|作成日|
 |:--|:--|:--:|:--:|
+|XXX|XXX|XXX|2018-XX-XX|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：夢寐郎  
