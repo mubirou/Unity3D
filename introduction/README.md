@@ -349,7 +349,7 @@
 
 * [Window]-[Animation] 上のFPSの値はあくまでキーフレームの設定用  
     ※低い値（6fps）でもカクカクしない
-* [BlendTree（ブレンドツリー）](https://docs.unity3d.com/ja/current/Manual/class-BlendTree.html) と [Transition（アニメーション遷移）](https://docs.unity3d.com/ja/current/Manual/class-Transition.html) がある
+* [Blend Tree（ブレンドツリー）](https://docs.unity3d.com/ja/current/Manual/class-BlendTree.html) と [Animation Transition（アニメーション遷移）](https://docs.unity3d.com/ja/current/Manual/class-Transition.html) がある
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：夢寐郎  
