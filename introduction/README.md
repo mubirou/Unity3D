@@ -356,6 +356,7 @@
 ### 06 GUIとAudio。</b>
 
 * 主な[GUI](https://docs.unity3d.com/ja/current/ScriptReference/GUI.html)
+
     |GUI名|内容|
     |:--|:--|
     |[Button](https://docs.unity3d.com/ja/current/ScriptReference/GUI.Button.html)|ボタン|
