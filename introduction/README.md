@@ -798,9 +798,10 @@
 
 ※上記の例の場合、オブジェクト以外をクリックしても落下する
 
-実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS、Android 8.0  
+実行環境：Unity 2017.2 Personal、Ubuntu 18.0.4.1 LTS、Android 8.0  
 作成者：夢寐郎  
 作成日：2018年06月28日  
+更新日：2018年XX月XX日 Ubuntu 16.04.4 LTS を 18.0.4.1 LTS にアップデート
 更新日：2018年07月04日
 
 <a name="乱作"></a>
