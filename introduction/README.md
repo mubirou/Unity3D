@@ -495,8 +495,8 @@
     ※数値から始まる名前は不可（要注意）
 
 1. Android端末との接続  
-    ① Android端末をPCに接続し [端末データへのアクセスの許可]  
-    ② Android端末上に [USBデバッグを許可] ダイアログが表示されたら、「このパソコンからのUSBデバッグを常に許可する」を [OK]  
+    ① Android端末の [設定]-[システム]-[開発者向けオプション]-[USBデバッグ] を有効にする  
+    ② Android端末をPCに接続し [USB使用] ダイアログで [ファイルを転送] を選択
 
 1. ビルド  
     ① [File]-[Build Settings]-[Build And Run] を選択  
@@ -506,10 +506,10 @@
     ⑤ Android端末上に生成されたアプリを選択し、再生されたら成功!!  
     ※ xxx.apk の[ダウンロード](https://mubirou.github.io/Unity/introduction/apk/007.apk)（Android端末へのインストール用）  
 
-実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS、Android 8.0  
+実行環境：Unity 2017.2 Personal、Ubuntu 18.04 LTS、Android 8.0  
 作成者：夢寐郎  
 作成日：2018年06月20日  
-更新日：2018年06月30日
+更新日：2018年09月05日
 
 
 <a name="VideoPlayerコンポーネント"></a>
