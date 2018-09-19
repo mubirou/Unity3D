@@ -804,19 +804,13 @@
 更新日：2018年XX月XX日 Ubuntu 16.04.4 LTS を 18.0.4.1 LTS にアップデート
 更新日：2018年07月04日
 
-<a name="セミナー向け"></a>
-# <b>010 セミナー向け</b>
+<a name="時計（セミナー向け）"></a>
+# <b>010 時計（セミナー向け）</b>
+BlenderとUnity（C#）を使った「Hello world」的コンテンツ
 
-|No.|タイトル|内容|WebGL|.apk|project|作成日|
-|:--|:--|:--|:--:|:--:|:--:|:--:|
-|001|[時計](#001時計)|BlenderとUnity（C#）で作る「Helle world」的コンテンツ|－|－|[●](https://mubirou.github.io/Unity/introduction/project/010_001.zip)|2018-XX-XX|
+1. Blenderを起動
 
-<a name="001時計"></a>
-
-###001 時計
-1. Unityを起動 
-
-実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
+実行環境：Unity 2017.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
 作成日：2018年0X月XX日  
 更新日：2018年0X月XX日
