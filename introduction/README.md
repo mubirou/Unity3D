@@ -16,7 +16,7 @@
 |007|[出力](#出力)|Unityで作成したプロジェクトを出力する方法|－|－|－|[●](https://amzn.to/2s85DAv)|
 |008|[VideoPlayerコンポーネント](#VideoPlayerコンポーネント)|VideoPlayerコンポーネントによる動画ファイル再生|－|－|－|－|
 |009|[『Unity 2018 逆引き大全 300の極意』](#逆引き大全)|参考書の勉強|－|[●](#逆引き大全)|－|[●](https://amzn.to/2KuNW69)|
-|010|[乱作](#乱作)|超入門･実験コンテンツ|－|－|[●](#乱作)|－|
+|010|[セミナー向け](#セミナー向け)|セミナー向けコンテンツ|－|－|[●](#セミナー向け)|－|
 ***
 
 <a name="プリミティブ･オブジェクト"></a>
@@ -804,13 +804,12 @@
 更新日：2018年XX月XX日 Ubuntu 16.04.4 LTS を 18.0.4.1 LTS にアップデート
 更新日：2018年07月04日
 
-<a name="乱作"></a>
-# <b>010 乱作</b>
-超入門･実験コンテンツ
+<a name="セミナー向け"></a>
+# <b>010 セミナー向け</b>
 
 |No.|タイトル|内容|WebGL|.apk|project|作成日|
 |:--|:--|:--|:--:|:--:|:--:|:--:|
-|XXX|XXX|XXX|－|－|[●](https://mubirou.github.io/Unity/introduction/project/010_001.zip)|2018-XX-XX|
+|001|時計|Blender,Unity,C#で作るHelle world的コンテンツ|－|－|[●](https://mubirou.github.io/Unity/introduction/project/010_001.zip)|2018-XX-XX|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：夢寐郎  
