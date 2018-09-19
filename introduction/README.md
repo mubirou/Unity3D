@@ -806,7 +806,8 @@
 
 <a name="時計（セミナー向け）"></a>
 # <b>010 時計（セミナー向け）</b>
-BlenderとUnity（C#）を使った「Hello world」的コンテンツ
+
+[Blender](https://www.blender.org/)とUnity（C#）を使った「Hello world」的コンテンツ
 
 1. Blenderを起動
 
