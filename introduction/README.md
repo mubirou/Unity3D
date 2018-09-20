@@ -886,8 +886,7 @@
     }
     ```
 
-1. Blenderで文字盤をモデリングする（ProjectのAssetsフォルダに保存）
-    * [dial.blend](https://mubirou.github.io/Unity/introduction/blend/secondHand.blend)
+1. Blenderで文字盤（[dial.blend](https://mubirou.github.io/Unity/introduction/blend/secondHand.blend)）をモデリングする（ProjectのAssetsフォルダに保存）
 
 1. [出力](#出力)の設定
 
