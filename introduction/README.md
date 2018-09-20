@@ -826,7 +826,7 @@
     }
     ```
 
-1. Blenderでモデリング（ProjectのAssetsフォルダに保存）
+1. Blenderで針をモデリングする（ProjectのAssetsフォルダに保存）
     * 秒針（[secondHand.blend](https://mubirou.github.io/Unity/introduction/blend/secondHand.blend))
     * 分針（[minuteHand.blend](https://mubirou.github.io/Unity/introduction/blend/minuteHand.blend))
     * 時針（[hourHand.blend](https://mubirou.github.io/Unity/introduction/blend/hourHand.blend)）
