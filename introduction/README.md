@@ -835,8 +835,8 @@
 
     |オブジェクト名|X|Y|Z|
     |:--|:--|:--:|:--:|
-    |secondHand|0|**0.7**|0|
-    |minuteHand|0|**0.4**|0|
+    |secondHand|0|**0.55**|0|
+    |minuteHand|0|**0.3**|0|
     |hourHand|0|0|0|
 
     ※Materialを使って秒針だけ赤にする（任意）
@@ -845,7 +845,7 @@
 
     |属性|X|Y|Z|
     |:--|:--|:--:|:--:|
-    |Position|0|**20**（任意）|**0**|
+    |Position|0|**35**（任意）|**0**|
     |Rotation|**90**|0|0|
 
 1. 上記のプログラムを書き換える（プログラムの完成）
@@ -885,6 +885,20 @@
         }
     }
     ```
+
+1. Blenderで文字盤をモデリングする（ProjectのAssetsフォルダに保存）
+    * [dial.blend](https://mubirou.github.io/Unity/introduction/blend/secondHand.blend)
+
+1. [出力](#出力)の設定
+
+1. 影が出ない問題の解決（Android端末）  
+    [Edit]-[Project Settings]-[Quality] でAndroidの「Levels」の「Default」を「Medium」→「Ultra」に変更
+
+1. 影のジャギーを解決（Android端末）
+    [Edit]-[Project Settings]-[Quality]-[Shadow Distance] を「150」→「40」程度に変更
+
+1. 縦持ち限定にする（Android端末）
+    [Edit]-[Project Settings]-[Player]-[Default Orientation] の値を「Auto Rotation」→「Portrait」に変更
 
 実行環境：Unity 2017.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
