@@ -831,13 +831,21 @@
     * 分針（[minuteHand.blend](https://mubirou.github.io/Unity/introduction/blend/minuteHand.blend))
     * 時針（[hourHand.blend](https://mubirou.github.io/Unity/introduction/blend/hourHand.blend)）
 
-1. 針をシーンビューに配置（Positionのみ変更）
+1. Sceneビューに針を配置
 
     |オブジェクト名|X|Y|Z|
     |:--|:--|:--:|:--:|
     |secondHand|0|0.7|0|
     |minuteHand|0|0.4|0|
     |hourHand|0|0|0|
+    ※Positionのみ変更
+
+1. MainCameraの位置を変更
+
+    |属性|X|Y|Z|
+    |:--|:--|:--:|:--:|
+    |Position|0|35（任意）|0|
+    |Rotation|90|0|0|
 
 実行環境：Unity 2017.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
