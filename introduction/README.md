@@ -810,6 +810,34 @@
 [Blender](https://www.blender.org/)とUnity（C#）を使った「Hello world」的コンテンツ
 
 1. Unityで時刻を取得する
+    ```
+    //Main.cs（空のGameObjectにアタッチ）
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+    using System; //DateTimeに必要
+
+    public class Main : MonoBehaviour {
+
+        // Use this for initialization
+        void Start () {
+            
+        }
+        
+        // Update is called once per frame
+        void Update () {
+            //現在の日時情報を取得
+            DateTime _now = DateTime.Now;
+
+            int _hour = _now.Hour; //0〜23（時）
+            int _minute = _now.Minute; //0〜59（分）
+            int _second = _now.Second; //0〜59（秒）
+
+            //Consoleに出力
+            Debug.Log(_hour + "時" + _minute + "分" + _second +  "秒");
+        }
+    }
+    ```
 
 1. Blenderでモデリング
     * 秒針（[secondHand.blend](https://mubirou.github.io/Unity/introduction/blend/secondHand.blend))
