@@ -809,7 +809,7 @@
 
 [Blender](https://www.blender.org/)とUnity（C#）を使った「Hello world」的コンテンツ
 
-1. Blenderで秒針（[secondHand.blend](https://mubirou.github.io/Unity/introduction/blend/secondHand.blend))、分針（[minuteHand.blend](https://mubirou.github.io/Unity/introduction/blend/minuteHand.blend))、時針（[hourHand.blend](https://mubirou.github.io/Unity/introduction/blend/hourHand.blend)）を作成する
+1. Blenderを使って、秒針（[secondHand.blend](https://mubirou.github.io/Unity/introduction/blend/secondHand.blend))、分針（[minuteHand.blend](https://mubirou.github.io/Unity/introduction/blend/minuteHand.blend))、時針（[hourHand.blend](https://mubirou.github.io/Unity/introduction/blend/hourHand.blend)）を作成する
 
 実行環境：Unity 2017.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
