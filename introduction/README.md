@@ -809,7 +809,7 @@
 
 [Blender](https://www.blender.org/)とUnity（C#）を使った「Hello world」的コンテンツ
 
-1. Unityで時刻を取得する
+1. Unityで時刻を取得（実験）
     ```
     //Main.cs（空のGameObjectにアタッチ）
     using System.Collections;
