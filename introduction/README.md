@@ -894,10 +894,10 @@
 1. 影が出ない問題の解決（Android端末）  
     [Edit]-[Project Settings]-[Quality] でAndroidの「Levels」の「Default」を「Medium」→「Ultra」に変更
 
-1. 影のジャギーを解決（Android端末）
+1. 影のジャギーを解決（Android端末）  
     [Edit]-[Project Settings]-[Quality]-[Shadow Distance] を「150」→「40」程度に変更
 
-1. 縦持ち限定にする（Android端末）
+1. 縦持ち限定にする（Android端末）  
     [Edit]-[Project Settings]-[Player]-[Default Orientation] の値を「Auto Rotation」→「Portrait」に変更
 
 実行環境：Unity 2017.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
