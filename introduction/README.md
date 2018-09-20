@@ -839,6 +839,8 @@
     |minuteHand|0|**0.4**|0|
     |hourHand|0|0|0|
 
+    ※Materialを使って秒針だけ赤にする（任意）
+
 1. MainCameraの位置を変更（真上から見下ろす状態にする）
 
     |属性|X|Y|Z|
