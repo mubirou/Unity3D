@@ -811,8 +811,10 @@
 
 1. Unityで時刻を取得する
 
-1. Blenderでモデリング（秒針･分針･時針） 
-秒針（[secondHand.blend](https://mubirou.github.io/Unity/introduction/blend/secondHand.blend))、分針（[minuteHand.blend](https://mubirou.github.io/Unity/introduction/blend/minuteHand.blend))、時針（[hourHand.blend](https://mubirou.github.io/Unity/introduction/blend/hourHand.blend)）を作成する
+1. Blenderでモデリング
+    * 秒針（[secondHand.blend](https://mubirou.github.io/Unity/introduction/blend/secondHand.blend))
+    * 分針（[minuteHand.blend](https://mubirou.github.io/Unity/introduction/blend/minuteHand.blend))
+    * 時針（[hourHand.blend](https://mubirou.github.io/Unity/introduction/blend/hourHand.blend)）
 
 実行環境：Unity 2017.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
