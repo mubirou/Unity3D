@@ -831,7 +831,7 @@
     * 分針（[minuteHand.blend](https://mubirou.github.io/Unity/introduction/blend/minuteHand.blend))
     * 時針（[hourHand.blend](https://mubirou.github.io/Unity/introduction/blend/hourHand.blend)）
 
-1. Sceneビューに針を配置（Positionのみ変更）
+1. Sceneビューに針を配置（Positionのみ変更／秒針が一番上）
 
     |オブジェクト名|X|Y|Z|
     |:--|:--|:--:|:--:|
