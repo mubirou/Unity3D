@@ -843,8 +843,46 @@
 
     |属性|X|Y|Z|
     |:--|:--|:--:|:--:|
-    |Position|0|**35**（任意）|**0**|
+    |Position|0|**20**（任意）|**0**|
     |Rotation|**90**|0|0|
+
+1. 上記のプログラムを書き換える
+    ```
+    //Main.cs
+    using UnityEngine;
+    using System; //DateTimeに必要
+
+    public class Main : MonoBehaviour {
+        //変数（ターゲットのGameObjectの参照）宣言
+        private GameObject _seconHand;
+        private GameObject _minuteHand;
+        private GameObject _hourHand;
+
+        void Start () {
+            //シーンの中から任意のGameObjectを探す
+            _seconHand = GameObject.Find("secondHand");
+            _minuteHand = GameObject.Find("minuteHand");
+            _hourHand = GameObject.Find("hourHand");
+        }
+
+        void Update () {
+            //現在の日時情報を取得
+            DateTime _now = DateTime.Now;
+
+            //時針（1分毎に更新）
+            float _hourRotation = _now.Hour * 30 + (float)(_now.Minute * 0.5);
+            _hourHand.transform.eulerAngles = new Vector3(0, _hourRotation, 0);
+
+            //分針（1秒毎に更新）
+            float _minuteRotation = _now.Minute * 6 + (float)_now.Second / 60 * 6;
+            _minuteHand.transform.eulerAngles = new Vector3(0, _minuteRotation, 0);
+
+            //秒針（1秒毎に更新）
+            int _secondRotation = _now.Second * 6; //0〜360
+            _seconHand.transform.eulerAngles = new Vector3(0, _secondRotation, 0);
+        }
+    }
+    ```
 
 実行環境：Unity 2017.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
