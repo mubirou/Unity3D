@@ -899,13 +899,14 @@
     [Edit]-[Project Settings]-[Quality]-[Shadow Distance] を「150」→「40」程度に変更
 
 1. 縦持ち限定にする（Android端末）  
-    [Edit]-[Project Settings]-[Player]-[Default Orientation] の値を「Auto Rotation」→「Portrait」に変更
+    [Edit]-[Project Settings]-[Player]-[Resolution and Presentation]-[Default Orientation] の値を「Auto Rotation」→「Portrait」に変更
 
 完成プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/010.zip)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
 作成日：2018年09月20日  
+更新日：2018年09月21日
 
 
 <a name="ドロップホール（セミナー向け）"></a>
