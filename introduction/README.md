@@ -912,7 +912,12 @@
 <a name="ドロップホール（セミナー向け）"></a>
 # <b>011 ドロップホール時計（セミナー向け）</b>
 
-1. XXX
+1. 床 + Mesh Colliderコンポーネント
+1. ボール + Rigidbodyコンポーネント
+1. ボール + 重さ（Rigidbody/Massの値）
+1. ボール + Physic Material（Bounciness 0.8）
+
+制作中プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/011.zip)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
