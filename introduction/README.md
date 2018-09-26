@@ -925,6 +925,8 @@
     * 上記を[統合]
     * [ブーリアン]を使い[円柱]でゴール地点に穴を空ける
     * [マテリアル]を使い配色
+    * [Camera]、[Lamp]等の不要物を削除
+    * [ファイル]-[エクスポート]-[FBX（.fbx）]で出力（[floor.fbx](https://mubirou.github.io/Unity/introduction/fbx/floor.fbx)）
     
 
 1. 床 + Mesh Colliderコンポーネント
