@@ -912,6 +912,8 @@
 <a name="ドロップホール（セミナー向け）"></a>
 # <b>011 ドロップホール時計（セミナー向け）</b>
 
+1. [Inkscape](https://inkscape.org)などで橋となるオブジェクトを作成し保存（[bridge.svg](https://mubirou.github.io/Unity/introduction/svg/bridge.svg)）
+
 1. 床 + Mesh Colliderコンポーネント
 1. ボール + Rigidbodyコンポーネント
 1. ボール + 重さ（Rigidbody/Massの値）
