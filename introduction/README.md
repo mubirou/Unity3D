@@ -912,7 +912,20 @@
 <a name="ドロップホール（セミナー向け）"></a>
 # <b>011 ドロップホール時計（セミナー向け）</b>
 
-1. [Inkscape](https://inkscape.org)などで橋となるオブジェクトを作成し保存（[bridge.svg](https://mubirou.github.io/Unity/introduction/svg/bridge.svg)）
+1. [Inkscape](https://inkscape.org)で平面素材（橋）を作成
+（[bridge.svg](https://mubirou.github.io/Unity/introduction/svg/bridge.svg)）
+
+1. Blenderで上記を読込み加工（[floor.blend](https://mubirou.github.io/Unity/introduction/blend/floor.blend)）
+    * [ファイル]-[インポート]-[Scalable Vector Graphics（.svg）]
+    * [編集モード]-[拡大縮小]
+    * [マテリアル]の変更
+    * [厚み付け]
+    * [カーブからメッシュに変換]
+    * [オブジェクトモード]-[立方体]の作成し加工
+    * 上記を[統合]
+    * [ブーリアン]を使い[円柱]でゴール地点に穴を空ける
+    * [マテリアル]を使い配色
+    
 
 1. 床 + Mesh Colliderコンポーネント
 1. ボール + Rigidbodyコンポーネント
