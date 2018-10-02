@@ -927,7 +927,20 @@
     * [マテリアル]を使い配色
     * [Camera]、[Lamp]等の不要物を削除
     * [ファイル]-[エクスポート]-[FBX（.fbx）]で出力（[floor.fbx](https://mubirou.github.io/Unity/introduction/fbx/floor.fbx)）
-    
+
+1. Unityで上記を読込み作業
+    * プロジェクトの[Assets]フォルダに上記のfbxファイルを保存
+    * Sceneビューに針を配置し調整
+    * [Gameビュー]のサイズを9:16（1080x1920）にする
+    * MainCameraの位置を変更（真上から見下ろす状態にする）
+        |属性|X|Y|Z|
+        |:--|:--|:--:|:--:|
+        |Position|0|**14**（任意）|**0**|
+        |Rotation|**90**|0|0|
+
+1. 出力テスト（Android）
+    * 
+
 
 1. 床 + Mesh Colliderコンポーネント
 1. ボール + Rigidbodyコンポーネント
