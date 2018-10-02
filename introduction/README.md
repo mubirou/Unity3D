@@ -954,8 +954,10 @@
 1. ボールの重さを変更する（1個の場合変化が分かりにくい）
     * [Inspector]-[Rigidbody]-[**Mass**]の値を変更する（初期値は1）
 
-1. ボール + 重さ（Rigidbody/Massの値）
-1. ボール + Physic Material（Bounciness 0.8）
+1. ボールをバウンドさせる
+    * [Project]-[Create]-[Physic Material]を選択（名前をBallにする＝任意）
+    * 上記の[Inspector]-[Bounciness]の値を0.8等にする（初期値は0）
+    * Sceneビュー上のボールにドラッグ＆ドロップ
 
 制作中プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/011.zip)
 
