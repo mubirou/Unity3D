@@ -910,7 +910,7 @@
 
 
 <a name="ドロップホール（セミナー向け）"></a>
-# <b>011 ドロップホール時計（セミナー向け）</b>
+# <b>011 ドロップホール（セミナー向け）</b>
 
 1. [Inkscape](https://inkscape.org)で平面素材（橋）を作成
 （[bridge.svg](https://mubirou.github.io/Unity/introduction/svg/bridge.svg)）
