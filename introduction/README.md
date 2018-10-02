@@ -951,8 +951,6 @@
     * 床のオブジェクトの[Inspector]-[Add Component]-[Physics]-[**Mesh Collider**]  
     ※再生させてテスト（複雑な形状の床にも衝突する）
 
-1. 床 + Mesh Colliderコンポーネント
-1. ボール + Rigidbodyコンポーネント
 1. ボール + 重さ（Rigidbody/Massの値）
 1. ボール + Physic Material（Bounciness 0.8）
 
