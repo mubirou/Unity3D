@@ -941,6 +941,12 @@
 
 1. ここで[出力](#出力)して確認
 
+1. ボールを配置し物理的に落下させる
+    * [Hierarchy]-[Create]-[3D Object]-[Sphere]
+    * [Inspector]-[Transform]-[Scale]を調整
+    * [Inspector]-[Add Component]-[Physics]-[**Rigidbody**]
+    ※再生させてテスト（床は通過してしまう）
+
 1. 床に[コライダー](https://docs.unity3d.com/jp/460/Manual/CollidersOverview.html)（衝突判定領域）を設定
     * 床のオブジェクトの[Inspector]-[Add Component]-[Physics]-[**Mesh Collider**]
 
