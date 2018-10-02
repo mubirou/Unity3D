@@ -926,7 +926,7 @@
     * [ブーリアン]を使い[円柱]でゴール地点に穴を空ける
     * [マテリアル]を使い配色
     * [Camera]、[Lamp]等の不要物を削除
-    * [ファイル]-[エクスポート]-[FBX（.fbx）]で出力（[floor.fbx](https://mubirou.github.io/Unity/introduction/fbx/floor.fbx)）
+    * [ファイル]-[エクスポート]-[**FBX（.fbx）**]で出力（[floor.fbx](https://mubirou.github.io/Unity/introduction/fbx/floor.fbx)）
 
 1. Unityで上記を読込み作業
     * プロジェクトの[Assets]フォルダに上記のfbxファイルを保存
@@ -955,8 +955,8 @@
     * [Inspector]-[Rigidbody]-[**Mass**]の値を変更する（初期値は1）
 
 1. ボールをバウンドさせる
-    * [Project]-[Create]-[Physic Material]を選択（名前をBallにする＝任意）
-    * 上記の[Inspector]-[Bounciness]の値を0.8等にする（初期値は0）
+    * [Project]-[Create]-[**Physic Material**]を選択（名前をBallにする＝任意）
+    * 上記の[Inspector]-[**Bounciness**]の値を0.8等にする（初期値は0）
     * Sceneビュー上のボールにドラッグ＆ドロップ
 
 制作中プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/011.zip)
