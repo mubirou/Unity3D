@@ -973,8 +973,27 @@
 
 1. 加速度センサーの利用
     * [Object]-[Create Empty]で空のGameObjectを作成（名前は任意）
-    * [Assets]-[Create]-[C# Script]で名前は"AccelerometerController"（加速度センサーコントローラー）とする
-    * 
+    * [Assets]-[Create]-[C# Script]で名前は"AccelerometerController"（加速度センサーコントローラー）として以下の通りに記述する
+    ```
+    //AccelerometerController.cs
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+
+    public class AccelerometerController : MonoBehaviour {
+        const float _gravity = 9.81f * 3; //重力加速度度（微調整）
+        
+        void Update () {
+            Vector3 _vector = new Vector3(); //重力ベクトルの初期化
+
+            _vector.x = Input.acceleration.x;
+            _vector.z = Input.acceleration.y;
+            _vector.y = Input.acceleration.z;
+
+            Physics.gravity = _gravity * _vector.normalized;
+        }
+    }
+    ```
     * 上記の空のGameObjectにC#（"AccelerometerController"）をドラッグ＆ドロップ
 
 制作中プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/011.zip)
