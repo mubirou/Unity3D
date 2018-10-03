@@ -969,7 +969,7 @@
 1. ボールをバウンドさせる
     * [Project]-[Create]-[**Physic Material**]を選択（名前をBallにする＝任意）
     * 上記の[Inspector]-[**Bounciness**]の値を0.8等にする（初期値は0）
-    * Sceneビュー上のボールにドラッグ＆ドロップ
+    * ボールの[Inspector]-[Sphere]-[Material]へドラッグ＆ドロップ
 
 1. 加速度センサーの利用
     * [Object]-[Create Empty]で空のGameObjectを作成（名前は任意）
@@ -994,7 +994,7 @@
         }
     }
     ```
-    * 上記の空のGameObjectにC#（"AccelerometerController"）をドラッグ＆ドロップ
+    * 上記の空のGameObject（AccelerometerController）にC#（"AccelerometerController"）をドラッグ＆ドロップ
 
 1. 水面を作成
     * [Hierarchy]-[Create]-[Plane]で作成
@@ -1008,10 +1008,48 @@
     * [Project]-[Create]-[Material]で作成（名前は"Blue"）、[Albedo]で色を指定し、上記のPlaneにドラッグ＆ドロップ
     * [Inspector]-[MEsh Collider]を無効にする（✔を外す）
 
-制作中プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/011.zip)
+1. ボールの位置の操作
+* [Object]-[Create Empty]で空のGameObjectを作成（名前は任意）
+    * [Assets]-[Create]-[C# Script]で名前は"BallController"にして次の通りに記述
+    ```
+    //BallController.cs
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+
+    public class BallController : MonoBehaviour {
+        private GameObject _ball; //ターゲットのGameObjectの参照
+        private float _originX;
+        private float _originY;
+        private float _originZ;
+
+        void Start () {
+            _ball = GameObject.Find("Ball"); //シーンの中から任意のGameObjectを探す
+            _originX = _ball.transform.position.x;
+            _originY = _ball.transform.position.y;
+            _originZ = _ball.transform.position.z;
+        }
+        
+        void Update () {
+            //ボールが水面下に落ちたら最初の位置に再登場させる
+            if (_ball.transform.position.y < -1) {
+                Vector3 _pos = _ball.transform.position;
+                _pos.x = _originX;
+                _pos.y = _originY;
+                _pos.z = _originZ;
+                _ball.transform.position = _pos;
+            }
+        }
+    }
+    ```
+    * 上記の空のGameObject（BallController）にC#（"BallController"）をドラッグ＆ドロップ
+
+1. [出力](#出力)して確認
+
+完成プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/011.zip)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
-作成日：2018年XX月XX日  
+作成日：2018年10月03日  
 
 © 2018 夢寐郎
