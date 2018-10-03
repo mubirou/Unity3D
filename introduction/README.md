@@ -944,6 +944,9 @@
 
 1. ここで[出力](#出力)して確認
 
+1. 縦持ち限定にする（Android端末）  
+    [Edit]-[Project Settings]-[Player]-[Resolution and Presentation]-[Default Orientation] の値を「Auto Rotation」→「Portrait」に変更
+
 1. ボールを配置し物理的に落下させる
     * [Hierarchy]-[Create]-[3D Object]-[Sphere]
     * [Inspector]-[Transform]-[Scale]を調整
@@ -961,6 +964,12 @@
     * [Project]-[Create]-[**Physic Material**]を選択（名前をBallにする＝任意）
     * 上記の[Inspector]-[**Bounciness**]の値を0.8等にする（初期値は0）
     * Sceneビュー上のボールにドラッグ＆ドロップ
+
+1. 加速度センサーの利用
+    * [Object]-[Create Empty]で空のGameObjectを作成（名前は任意）
+    * [Assets]-[Create]-[C# Script]で名前は"AccelerometerController"（加速度センサーコントローラー）とする
+    * 
+    * 上記の空のGameObjectにC#（"AccelerometerController"）をドラッグ＆ドロップ
 
 制作中プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/011.zip)
 
