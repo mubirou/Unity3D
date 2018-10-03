@@ -945,7 +945,13 @@
 1. ここで[出力](#出力)して確認
 
 1. 縦持ち限定にする（Android端末）  
-    [Edit]-[Project Settings]-[Player]-[Resolution and Presentation]-[Default Orientation] の値を「Auto Rotation」→「Portrait」に変更
+    * [Edit]-[Project Settings]-[Player]-[Resolution and Presentation]-[Default Orientation] の値を"Portrait"に変更（初期値は"Auto Rotation"）
+
+1. 影が出ない問題の解決（Android端末）  
+    * [Edit]-[Project Settings]-[Quality] でAndroidの「Levels」の「Default」を"Ultra"に変更（初期値は"Medium"）
+
+1. 影のジャギーを解決（Android端末）  
+    * [Edit]-[Project Settings]-[Quality]-[Shadow Distance] を"20"程度に変更（初期値は"150"）
 
 1. ボールを配置し物理的に落下させる
     * [Hierarchy]-[Create]-[3D Object]-[Sphere]
