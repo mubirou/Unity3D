@@ -1005,7 +1005,8 @@
         |Position|0|**-0.3**（要調整）|****|
         |Scale|**0.9（要調整）**|1|**1.7（要調整）**|
     
-    *
+    * [Project]-[Create]-[Material]で作成（名前は"Blue"）、[Albedo]で色を指定し、上記のPlaneにドラッグ＆ドロップ
+    * [Inspector]-[MEsh Collider]を無効にする（✔を外す）
 
 制作中プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/011.zip)
 
