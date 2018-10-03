@@ -939,7 +939,7 @@
 
         |属性|X|Y|Z|
         |:--|:--|:--:|:--:|
-        |Position|0|**14**（任意）|****|
+        |Position|0|**15**（要調整）|****|
         |Rotation|**90**|0|0|
 
 1. ここで[出力](#出力)して確認
@@ -995,6 +995,17 @@
     }
     ```
     * 上記の空のGameObjectにC#（"AccelerometerController"）をドラッグ＆ドロップ
+
+1. 水面を作成
+    * [Hierarchy]-[Create]-[Plane]で作成
+    * [Inspector]でサイズ･位置を修正
+
+        |属性|X|Y|Z|
+        |:--|:--|:--:|:--:|
+        |Position|0|**-0.3**（要調整）|****|
+        |Scale|**0.9（要調整）**|1|**1.7（要調整）**|
+    
+    *
 
 制作中プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/011.zip)
 
