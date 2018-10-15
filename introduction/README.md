@@ -1062,7 +1062,12 @@
     * [出力](#出力)の各種設定を行いビルドしてみる
     * 縦持ち限定にする：[Edit]-[Project Settings]-[Player]-[Resolution and Presentation]-[Default Orientation] の値を"Portrait"に変更
 
-1. XXX
+1. テキストの表示
+    * uGUIのTextを配置：[GameObject]-[UI]-[Text]
+    * フォントを用意：プロジェクトフォルダ-[Assets]にTrueType（.ttf）またはOpenType（.otf）ファイルを置く
+    * テキスト内容を変更：[Hierarchy]-[Canvas]-[Text]-[Inspector]-[Text]-[Text]を"New Text"→"00:00:000"に変更
+
+
 
 完成プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/012.zip)
 
