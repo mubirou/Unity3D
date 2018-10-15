@@ -1080,6 +1080,8 @@
     
     * フォントサイズの変更：[Canvas]-[Text]-[Inspector]-[Text]-[FontSize]を"14"→"24"に変更
 
+    * フォントカラーの変更：[Canvas]-[Text]-[Inspector]-[Text]-[Color]を変更
+
 
 
 完成プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/012.zip)
