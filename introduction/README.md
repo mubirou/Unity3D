@@ -1064,6 +1064,7 @@
 
 1. テキストの表示
     * uGUIのTextを配置：[GameObject]-[UI]-[Text]
+    * オブジェクト名を変更：[Inspector]の"Text"→"TextMessage"に変更
     * フォントを用意：プロジェクトフォルダ-[Assets]にTrueType（.ttf）またはOpenType（.otf）ファイルを置く
     * フォントを変更：[Hierarchy]-[Canvas]-[Text]-[Inspector]-[Text]-[Charactor]で上記のフォントを選択
     * テキスト内容を変更：[Hierarchy]-[Canvas]-[Text]-[Inspector]-[Text]-[Text]を"New Text"→"00:00:000"に変更
@@ -1107,11 +1108,147 @@
     
     * 表示文字の変更：[Hierarchy]-[Canvas]-[ClearButton]-[Text]-[Inspector]-[Text]-[Text]を"START"→"CLEAR"に変更
 
+1. START/STOP用スクリプトの記述
+    * [Assets]-[Create]-[C# Script]で名前は"StartStopButton"にして次の通りに記述し、[Hierarchy]-[Canvas]-[StartStopButton]-[Inspector]にドラッグ＆ドロップ
+    ```
+    //StartStopButton.cs
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+    using UnityEngine.UI; //Textに必要
+    using System; //DateTimeに必要
+
+
+    public class StartStopButton : MonoBehaviour {
+        private Text _textMessage;
+        private GameObject _clearButton;
+        private long _startTime;
+        private bool _isStart = false;
+        private long _currentTime;
+        private long _lapTime = 0;
+
+        // Use this for initialization
+        void Start () {
+            _textMessage = GameObject.Find("TextMessage").GetComponentInChildren<Text>();
+            _clearButton = GameObject.Find("ClearButton");
+        }
+        
+        // Update is called once per frame
+        void Update () {
+            if (_isStart) {
+                //経過時間（100ナノ秒単位）最大35999990000まで=約60分
+                _currentTime = _lapTime + DateTime.Now.Ticks - _startTime; 
+
+                //ミリ秒（000〜999）を取得
+                float _tmp = _currentTime/1000;
+                long _tmpLong = (long)(Math.Round(_tmp/10) % 1000);
+                string _millisec;
+                if (_tmpLong < 10) {
+                    _millisec = "00" + _tmpLong.ToString();
+                } else if (_tmpLong < 100) {
+                    _millisec = "0" + _tmpLong.ToString();
+                } else {
+                    _millisec = _tmpLong.ToString();
+                }
+
+                //秒（0〜59）を取得
+                _tmp = _currentTime/100000;
+                _tmpLong = (long)(Math.Floor(_tmp/100) % 60);
+                string _second;
+                if (_tmpLong < 10) {
+                    _second = "0" + _tmpLong.ToString();
+                } else {
+                    _second = _tmpLong.ToString();
+                }
+
+                //分（0〜59）を取得
+                _tmp = _currentTime/10000000;
+                _tmpLong = (long)(Math.Floor(_tmp/60));
+                if (60 <= _tmpLong) _tmpLong %= 60;
+                string _minute;
+                if (_tmpLong < 10) {
+                    _minute = "0" + _tmpLong.ToString();
+                } else {
+                    _minute = _tmpLong.ToString();
+                }
+
+                _textMessage.text = _minute + ":" + _second + ":" + _millisec;
+            }
+        }
+
+        public void OnClick() {
+            foreach(Transform _child in this.transform) {
+                if(_child.name == "Text") {
+                    if (_child.GetComponent<Text>().text == "START") {
+                        _startTime = DateTime.Now.Ticks; //100ナノ秒単位
+                        _child.GetComponent<Text>().text = "STOP";
+                        _isStart = true;
+                        //他のGameObjectにアタッチされたclassのメソッドを実行
+                        _clearButton.GetComponent<ClearButton>().Hide();
+
+                    } else if (_child.GetComponent<Text>().text == "STOP") {
+                        _child.GetComponent<Text>().text = "START";
+                        _isStart = false;
+                        _lapTime = _currentTime;
+                        //他のGameObjectにアタッチされたclassのメソッドを実行
+                        _clearButton.GetComponent<ClearButton>().Show();
+                    }
+                }
+            }
+        }
+
+        public void ResetTime() { //外部からアクセス
+            _lapTime = 0;
+        }
+    }
+    ```
+
+    * OnClick()メソッドの有効化：[Hierarchy]-[Canvas]-[StartStopButton]-[Inspector]-[Button]-[OnClick()]の[+]を選択し、[None（Object）]→[StartStopButton]に変更し、[NoFunction]→[StartStopButton]-[OnClick]を選択（StartStopButton.OnClickになる）  
+    ※非常にわかりにくい操作
+
+1. CLEAR用スクリプトの記述
+    * [Assets]-[Create]-[C# Script]で名前は"ClearButton"にして次の通りに記述し、[Hierarchy]-[Canvas]-[ClearButton]-[Inspector]にドラッグ＆ドロップ
+    ```
+    //ClearButton.cs
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+    using UnityEngine.UI;
+
+    public class ClearButton : MonoBehaviour {
+        private Text _textMessage;
+        private GameObject _startStopButton;
+
+        void Start () {
+            _textMessage = GameObject.Find("TextMessage").GetComponentInChildren<Text>();
+            _startStopButton = GameObject.Find("StartStopButton");
+        }
+
+        public void OnClick() {
+            //他のGameObjectにアタッチされたclassのメソッドを実行
+            _startStopButton.GetComponent<StartStopButton>().ResetTime();
+            _textMessage.text = "00:00:000";
+        }
+
+        public void Show() { //カスタムメソッド（外部からアクセス）
+            this.GetComponent<Button>().interactable = true;
+        }
+
+        public void Hide() { //カスタムメソッド（外部からアクセス）
+            this.GetComponent<Button>().interactable = false;
+        }
+    }
+    ```
+
+    * OnClick()メソッドの有効化：[Hierarchy]-[Canvas]-[ClearButton]-[Inspector]-[Button]-[OnClick()]の[+]を選択し、[None（Object）]→[ClearButton]に変更し、[NoFunction]→[ClearButton]-[OnClick]を選択（ClearButton.OnClickになる）  
+    ※非常にわかりにくい操作
+
+1. [再生]ボタンを押すか、[出力](#出力)して確認
 
 完成プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/012.zip)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
-作成日：2018年XX月XX日  
+作成日：2018年10月15日  
 
 © 2018 夢寐郎
