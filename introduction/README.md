@@ -1067,7 +1067,7 @@
     * フォントを用意：プロジェクトフォルダ-[Assets]にTrueType（.ttf）またはOpenType（.otf）ファイルを置く
     * フォントを変更：[Hierarchy]-[Canvas]-[Text]-[Inspector]-[Text]-[Charactor]で上記のフォントを選択
     * テキスト内容を変更：[Hierarchy]-[Canvas]-[Text]-[Inspector]-[Text]-[Text]を"New Text"→"00:00:000"に変更
-    * Canvasのスケール変更：[Hierarchy]-[Canvas]-[Inspector]-[CanvasScaler（Script）]-[ScaleFactor]を"1"→"7"に変更
+    * Canvasのスケール変更：[Hierarchy]-[Canvas]-[Inspector]-[CanvasScaler（Script）]-[ScaleFactor]を"1"→"7"に変更（**テキストがボケるのを回避するため**）
     * 位置･サイズを変更：[Hierarchy]-[Canvas]-[Text]-[Inspector]-[RectTransform]
 
         |PosX|PosY|PosZ|
@@ -1081,6 +1081,7 @@
     * フォントサイズの変更：[Canvas]-[Text]-[Inspector]-[Text]-[FontSize]を"14"→"24"に変更
 
     * フォントカラーの変更：[Canvas]-[Text]-[Inspector]-[Text]-[Color]を変更
+    * 左寄せにする：[Hierarchy]-[Canvas]-[StartStopButton]-[Inspector]-[Text]-[Paragraph]-[Alignment]を左寄せにする
 
 1. START/STOPボタンの表示
     * uGUIのButtonを配置：[GameObject]-[UI]-[Button]
@@ -1095,7 +1096,15 @@
     * サイズを調整：[Hierarchy]-[Canvas]-[StartStopButton]-[Inspector]-[Scale]を調整
 
 1. CLEARボタンの表示
-    * XXX
+    * 上記のボタンをコピー（[Edit]-[Copy]）＆ペースト（[Edit]-[Paste]）
+    * オブジェクト名を変更：[Inspector]の"StartStopButton (1)"→"ClearButton"に変更
+    * 位置を変更：[Hierarchy]-[Canvas]-[ClearButton]-[Inspector]
+
+        |PosX|PosY|PosZ|
+        |:--|:--|:--:|
+        |**0**|**-88**|0|
+    
+    * 表示文字の変更：[Hierarchy]-[Canvas]-[ClearButton]-[Text]-[Inspector]-[Text]-[Text]を"START"→"CLEAR"に変更
 
 
 完成プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/012.zip)
