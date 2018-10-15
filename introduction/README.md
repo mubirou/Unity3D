@@ -1068,13 +1068,13 @@
     * フォントを変更：[Hierarchy]-[Canvas]-[Text]-[Inspector]-[Text]-[Charactor]で上記のフォントを選択
     * テキスト内容を変更：[Hierarchy]-[Canvas]-[Text]-[Inspector]-[Text]-[Text]を"New Text"→"00:00:000"に変更
     * Canvasのスケール変更：[Hierarchy]-[Canvas]-[Inspector]-[CanvasScaler（Script）]-[ScaleFactor]を"1"→"7"に変更
-    * 位置･サイズを変更：[Canvas]-[Text]-[Inspector]-[RectTransform]
+    * 位置･サイズを変更：[Hierarchy]-[Canvas]-[Text]-[Inspector]-[RectTransform]
 
         |PosX|PosY|PosZ|
         |:--|:--|:--:|
         |**0**|**33.5**|0|
 
-        |Width|Height
+        |Width|Height|
         |:--|:--|
         |**124**|30|
     
@@ -1082,6 +1082,20 @@
 
     * フォントカラーの変更：[Canvas]-[Text]-[Inspector]-[Text]-[Color]を変更
 
+1. START/STOPボタンの表示
+    * uGUIのButtonを配置：[GameObject]-[UI]-[Button]
+    * オブジェクト名を変更：[Inspector]の"Button"→"StartStopButton"に変更
+    * 表示文字の変更：[Hierarchy]-[Canvas]-[StartStopButton]-[Text]-[Inspector]-[Text]-[Text]を"Button"→"START"に変更
+    * 位置を変更：[Hierarchy]-[Canvas]-[StartStopButton]-[Inspector]
+
+        |PosX|PosY|PosZ|
+        |:--|:--|:--:|
+        |**0**|**-50**|0|
+
+    * サイズを調整：[Hierarchy]-[Canvas]-[StartStopButton]-[Inspector]-[Scale]を調整
+
+1. CLEARボタンの表示
+    * 
 
 
 完成プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/012.zip)
