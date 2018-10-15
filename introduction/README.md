@@ -1056,6 +1056,12 @@
 <a name="StopWatch"></a>
 # <b>012 Stop Watch（セミナー向け）</b>
 
+1. 下準備（とりあえず出力までやってみる）
+    * シーンの保存：[File]-[Save Scene]
+    * 画面サイズの設定：[Gameビュー]で9:16（1080x1920）にする
+    * [出力](#出力)の各種設定を行いビルドしてみる
+    * 縦持ち限定にする：[Edit]-[Project Settings]-[Player]-[Resolution and Presentation]-[Default Orientation] の値を"Portrait"に変更
+
 1. XXX
 
 作成中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/012.zip)
