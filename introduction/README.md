@@ -1067,7 +1067,8 @@
     * フォントを用意：プロジェクトフォルダ-[Assets]にTrueType（.ttf）またはOpenType（.otf）ファイルを置く
     * フォントを変更：[Hierarchy]-[Canvas]-[Text]-[Inspector]-[Text]-[Charactor]で上記のフォントを選択
     * テキスト内容を変更：[Hierarchy]-[Canvas]-[Text]-[Inspector]-[Text]-[Text]を"New Text"→"00:00:000"に変更
-    * Canvasのスケール変更：[Hierarchy]-[Canvas]-[Inspector]-[CanvasScaler（Script）]-[ScaleFactor]を"1"→"7"に変更（**テキストがボケるのを回避するため**）
+    * Canvasのスケール変更：[Hierarchy]-[Canvas]-[Inspector]-[CanvasScaler（Script）]-[ScaleFactor]を"1"→"7"に変更
+    （**テキストがボケるのを回避するため**）
     * 位置･サイズを変更：[Hierarchy]-[Canvas]-[Text]-[Inspector]-[RectTransform]
 
         |PosX|PosY|PosZ|
