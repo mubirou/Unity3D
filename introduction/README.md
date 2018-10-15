@@ -1204,7 +1204,7 @@
     ```
 
     * OnClick()メソッドの有効化：[Hierarchy]-[Canvas]-[StartStopButton]-[Inspector]-[Button]-[OnClick()]の[+]を選択し、[None（Object）]→[StartStopButton]に変更し、[NoFunction]→[StartStopButton]-[OnClick]を選択（StartStopButton.OnClickになる）  
-    ※非常にわかりにくい操作
+    （__非常にわかりにくい操作__）
 
 1. CLEAR用スクリプトの記述
     * [Assets]-[Create]-[C# Script]で名前は"ClearButton"にして次の通りに記述し、[Hierarchy]-[Canvas]-[ClearButton]-[Inspector]にドラッグ＆ドロップ
@@ -1241,7 +1241,7 @@
     ```
 
     * OnClick()メソッドの有効化：[Hierarchy]-[Canvas]-[ClearButton]-[Inspector]-[Button]-[OnClick()]の[+]を選択し、[None（Object）]→[ClearButton]に変更し、[NoFunction]→[ClearButton]-[OnClick]を選択（ClearButton.OnClickになる）  
-    ※非常にわかりにくい操作
+    （__非常にわかりにくい操作__）
 
 1. [再生]ボタンを押すか、[出力](#出力)して確認
 
