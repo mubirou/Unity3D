@@ -1095,7 +1095,7 @@
     * サイズを調整：[Hierarchy]-[Canvas]-[StartStopButton]-[Inspector]-[Scale]を調整
 
 1. CLEARボタンの表示
-    * 
+    * XXX
 
 
 完成プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/012.zip)
