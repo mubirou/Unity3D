@@ -1247,7 +1247,7 @@
 
 完成プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/012.zip)
 
-実行環境：Unity 2017.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
+実行環境：Unity 2017.2 Personal、Ubuntu 18.0.4.1 LTS、Android 8.0  
 作成者：夢寐郎  
 作成日：2018年10月15日  
 
