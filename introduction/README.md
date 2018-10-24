@@ -1255,9 +1255,18 @@
 <a name="MouseStalker"></a>
 # <b>013 Mouse Stalker（セミナー向け）</b>
 
-1. XXX
+1. Blenderで適当なオブジェクトを作成（[piece.blend](https://mubirou.github.io/Unity/introduction/blend/piece.blend)）
+    * [ファイル]-[エクスポート]-[**FBX（.fbx）**]で出力（[piece.fbx](https://mubirou.github.io/Unity/introduction/fbx/piece.fbx)）
 
-作成途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/013.zip)
+1. Unityで上記を読込み作業
+    * プロジェクトの[Assets]フォルダに上記のfbxファイルを保存
+    * Sceneビューに針を配置し調整（任意）
+    * [Gameビュー]のサイズを9:16（1080x1920）にする
+
+1. 縦持ち限定にする（Android端末）  
+    * [Edit]-[Project Settings]-[Player]-[Resolution and Presentation]-[Default Orientation] の値を"Portrait"に変更（初期値は"Auto Rotation"）
+
+完成プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/013.zip)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
