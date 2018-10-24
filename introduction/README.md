@@ -1262,11 +1262,14 @@
     * プロジェクトの[Assets]フォルダに上記のfbxファイルを保存
     * [Hierarchy]に上記のオブジェクトをドラッグ
 
-1. [MainCamera]-[Inspector]-[Transform]-[Position]を調整
+1. カメラの位置の調整
+
+    * [MainCamera]-[Inspector]-[Transform]-[Position]
 
         |X|Y|Z|
         |:--|:--|:--:|
         |0|**0**|**-30**|
+
 
 1. XXX
 
