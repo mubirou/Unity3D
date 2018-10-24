@@ -1260,11 +1260,16 @@
 
 1. Unityで上記を読込み作業
     * プロジェクトの[Assets]フォルダに上記のfbxファイルを保存
-    * Sceneビューに針を配置し調整（任意）
-    * [Gameビュー]のサイズを9:16（1080x1920）にする
+    * [Hierarchy]に上記のオブジェクトをドラッグ
 
-1. 縦持ち限定にする（Android端末）  
-    * [Edit]-[Project Settings]-[Player]-[Resolution and Presentation]-[Default Orientation] の値を"Portrait"に変更（初期値は"Auto Rotation"）
+1. [MainCamera]-[Inspector]-[Transform]-[Position]を調整
+
+        |X|Y|Z|
+        |:--|:--|:--:|
+        |0|**0**|**-30**|
+
+1. XXX
+
 
 完成プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/013.zip)
 
