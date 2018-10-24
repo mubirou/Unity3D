@@ -1260,7 +1260,7 @@
 
 1. Unityで上記を読込み作業
     * プロジェクトの[Assets]フォルダに上記のfbxファイルを保存
-    * [Hierarchy]に上記のオブジェクトをドラッグ
+    * [Hierarchy]に上記のオブジェクト（piece）をドラッグ
 
 1. カメラの位置の調整
 
@@ -1270,14 +1270,84 @@
         |:--|:--|:--:|
         |0|**0**|**-30**|
 
+1. スクリプトの記述
+    * [Object]-[CreateEmpty]で空のGameObjectを作成（名前は任意）
+    * [Assets]-[Create]-[C# Script]で名前は"Main"とする
+    * 上記の空のGameObjectの[Inspector]に上記のC#（Main.cs）をドラッグ
+    * C#（Main.cs）を以下の通りに変更する
+    ```
+    //Main.cs
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
 
-1. XXX
+    public class Main : MonoBehaviour {
+        private GameObject _piece0;
+        private UnityEngine.Camera _mainCamera;
+        private List<GameObject> _pieceList; //動的配列の宣言
+        private uint _pieceNum = 30; //700個は可能
 
+        void Start () {
+            _piece0 = GameObject.Find("piece");
+            _mainCamera = Camera.main.GetComponent<Camera>();
+
+            _pieceList = new List<GameObject>(); //空の動的配列の作成
+
+            _pieceList.Add(_piece0); //先頭のpieceを動的配列に格納
+
+            //2つ目以降のpieceを動的配列に格納
+            for (int i=1; i<=_pieceNum; i++) { //iはfor文内のみ有効（1,2,...,_pieceNum）
+                GameObject _thePiece = Instantiate(
+                    _piece0,
+                    _piece0.transform.position,
+                    _piece0.transform.rotation
+                );
+                _pieceList.Add(_thePiece);
+            }
+
+            //先頭を見えなくする
+            _piece0.SetActive (false);
+        }
+
+        void Update () {
+            //マウスの位置を取得し、スクリーン座標→ワールド座標に変換
+            Vector3 _mousePos = Input.mousePosition;
+            _mousePos.z = 30f; //マウスの位置をカメラから遠ざける
+            Vector3 _mouseWoldPos = _mainCamera.ScreenToWorldPoint(_mousePos);
+            _piece0.transform.position = _mouseWoldPos;
+
+            for (int i=1; i<=_pieceNum; i++) { //iはfor文内のみ有効（1,2,...,_pieceNum）
+                GameObject _thePiece = _pieceList[i];
+                GameObject _frontPiece = _pieceList[i-1];
+                
+                float _disX = _frontPiece.transform.position.x - _thePiece.transform.position.x;
+                float _disY = _frontPiece.transform.position.y - _thePiece.transform.position.y;
+                float _disZ = _frontPiece.transform.position.z - _thePiece.transform.position.z;
+
+                //角度
+                _thePiece.transform.LookAt(_frontPiece.transform);
+
+                //追従させる（角度付きの場合）
+                Vector3 _thePos = _thePiece.transform.position;
+                _thePos.x += _disX/8;
+                _thePos.y += _disY/8;
+                _thePos.z += _disZ/8+0.4f;
+                _thePiece.transform.position = _thePos;
+
+                //追従させる（角度固定の場合）
+                //Vector3 _addPoint = new Vector3(_disX/4, _disY/4, _disZ/5+0.4f);
+                //_thePiece.transform.Translate(_addPoint);
+            }
+        }
+    }
+    ```
+
+1. [再生]ボタンを押すか、[出力](#出力)して確認
 
 完成プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/013.zip)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
-作成日：2018年XX月XX日  
+作成日：2018年10月24日  
 
 © 2018 夢寐郎
