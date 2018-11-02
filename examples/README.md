@@ -1261,7 +1261,7 @@ public class Button001 : MonoBehaviour {
 1. [Hierarchy] の "Button001" を選択。
 1. [Inspector] の [On Click()] にある [+] をクリック。
 1. [None(Object)] の [⦿] をクリック。
-1. [Scene]から、上記で作成した "Button01"（GameObject）を選択。
+1. [**Scene**]から、上記で作成した "Button01"（**GameObject**）を選択。
 1. [No Function] をクリック→ [Button01]-[OnClick()] を選択。
 	* [No Function] が [Button01.OnClick] になっていればOKです。
 
