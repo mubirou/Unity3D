@@ -1420,10 +1420,11 @@
 
     * 表示文字のサイズを変更：[Hierarchy]-[Canvas]-[StartStopButton]-[Text]-[Inspector]-[Text]-[Charactor]-[FontSize]を14→100
 
-* パーティクル「Unity Particle Pack」のダウンロード
+* パーティクル（爆発）の用意
     * [AssetSore]タブを選択し「Unity Particle Pack」を検索し選択
     * [インポート]ボタンをクリック
-    * **[EffectExamples]-[Fire&ExplosionEffects]-[Prefabs]-[BigExplosion.prefab]のみ選択**
+    * **[EffectExamples]-[Fire&ExplosionEffects]-[Prefabs]-[BigExplosion.prefab]**のみ選択し[Import]
+    * [Project]-[Assets]-[EffectExamples]-[Fire&ExplosionEffects]-**[Prefabs]-[BigExplosion]**を[Hierarchy]のルートにドラッグ
 
 
 
