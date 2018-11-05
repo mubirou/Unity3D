@@ -1447,9 +1447,9 @@
     [Hierarchy]-[missile]-[Inspector]-[AddComponent]-[Physics]-[Rigidbody]
 
 1. コライダ（衝突判定領域）の設置
-    * UFOに設置
+    * UFOに設置  
     [Hierarchy]-[ufo]-[Inspector]-[AddComponent]-[Physics]-[SphereCollider]（球型）
-    * ミサイルに設置
+    * ミサイルに設置  
     [Hierarchy]-[missile]]-[Inspector]-[AddComponent]-[Physics]-[CapsuleCollider]（カプセル型）
 
 1. メインスクリプト（Main.cs）の用意
