@@ -1216,7 +1216,7 @@
     using System.Collections;
     using System.Collections.Generic;
     using UnityEngine;
-    using UnityEngine.UI;
+    using UnityEngine.UI; //Buttonに必要
 
     public class ClearButton : MonoBehaviour {
         private Text _textMessage;
