@@ -1400,7 +1400,6 @@
 1. ミサイル発射ボタンを作成
     * uGUIのButtonを配置：[GameObject]-[UI]-[Button]
     * オブジェクト名を変更：[Canvas]-[Button]-[Inspector]の"Button"→"Button001"に変更
-    * 表示文字の変更：[Hierarchy]-[Canvas]-[StartStopButton]-[Text]-[Inspector]-[Text]-[Text]を"Button"→"GO"に変更
     * 位置･幅･高さを変更：[Hierarchy]-[Canvas]-[Button001]-[Inspector]
 
         |PosX|PosY|PosZ|
@@ -1416,6 +1415,17 @@
         |X|Y|Z|
         |:--|:--|:--:|
         |**0.5**|**0.5**|0|
+
+    * 表示文字の変更：[Hierarchy]-[Canvas]-[StartStopButton]-[Text]-[Inspector]-[Text]-[Text]を"Button"→"GO"に変更
+
+    * 表示文字のサイズを変更：[Hierarchy]-[Canvas]-[StartStopButton]-[Text]-[Inspector]-[Text]-[Charactor]-[FontSize]を14→100
+
+* パーティクル「Unity Particle Pack」のダウンロード
+    * [AssetSore]タブを選択し「Unity Particle Pack」を検索し選択
+    * [インポート]ボタンをクリック
+    * **[EffectExamples]-[Fire&ExplosionEffects]-[Prefabs]-[BigExplosion.prefab]のみ選択**
+
+
 
 
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/014.zip)
