@@ -1424,7 +1424,7 @@
     * [AssetSore]タブを選択し「Unity Particle Pack」を検索し選択
     * [インポート]ボタンをクリック
     * **[EffectExamples]-[Fire&ExplosionEffects]-[Prefabs]-[BigExplosion.prefab]**のみ選択し[Import]
-    * [Project]-[Assets]-[EffectExamples]-[Fire&ExplosionEffects]-**[Prefabs]-[BigExplosion]**を[Hierarchy]のルートにドラッグ
+    * [Project]-[Assets]-[EffectExamples]-[Fire&ExplosionEffects]-[Prefabs]-[BigExplosion]を[Hierarchy]のルートにドラッグ
 
 
 
