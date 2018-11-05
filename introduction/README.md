@@ -1372,7 +1372,7 @@
     * Gameビュー]のサイズを16:9（1920x1080）にする
 
 1. UFOとミサイルのマテリアルを再設定（外れている場合）
-    * [Project]-[Assets]-[missile]-[Inspector]-[Materials]で[blue]、[red]、[white]、[yellow]が "None(Material)" になっている場合、右端の[⦿]を押し、該当のマテリアルを選択し[Apply]ボタンをクリック
+    * [Project]-[Assets]-[ufo]-[Inspector]-[Materials]で[blue]、[red]、[white]、[yellow]が "None(Material)" になっている場合、右端の[⦿]を押し、該当のマテリアルを選択し[Apply]ボタンをクリック
     * 同様にmissileもマテリアルを再設定する
 
 1. UFOの位置の調整
