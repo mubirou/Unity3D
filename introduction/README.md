@@ -1367,6 +1367,29 @@
 1. Unityで上記を読込み作業
     * プロジェクトの[Assets]フォルダに上記のfbxファイルを保存
     * [Hierarchy]に上記のオブジェクト（ufo･missile）をドラッグ
+    * Gameビュー]のサイズを9:16（1080x1920）にする
+
+1. UFOの位置の調整
+
+    * [ufo]-[Inspector]-[Transform]-[Position]
+
+        |X|Y|Z|
+        |:--|:--|:--:|
+        |**-14**|**3.5**|**3**|
+
+1. ミサイルの位置･角度の調整
+
+    * [ufo]-[Inspector]-[Transform]-[Position]
+
+        |X|Y|Z|
+        |:--|:--|:--:|
+        |0|**-1**|**-6.5**|
+    
+    * [ufo]-[Inspector]-[Transform]-[Rotation]
+
+        |X|Y|Z|
+        |:--|:--|:--:|
+        |**-25**|0|0|
 
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/014.zip)
 
