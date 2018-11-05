@@ -1366,10 +1366,10 @@
 
 1. Unityで上記を読込み作業
     * プロジェクトの[Assets]フォルダに上記のfbxファイルを保存
-    * プロジェクトの[Assets]フォルダに[blender]フォルダを作成し上記のblenderファイルを保存  
-    （※本来blenderファイルは不要だがfbxファイルでマテリアルを利用するため）
+    * プロジェクトの[Assets]フォルダ内に[blender]フォルダを作成し、上記のblenderファイルを保存  
+    （※本来blenderファイルは不要だがfbxファイルのマテリアルを再設定するため）
     * [Hierarchy]に上記のオブジェクト（ufoとmissile）をドラッグ
-    * Gameビュー]のサイズを9:16（1080x1920）にする
+    * Gameビュー]のサイズを16:9（1920x1080）にする
 
 1. UFOとミサイルのマテリアルを再設定（外れている場合）
     * [Project]-[Assets]-[missile]-[Inspector]-[Materials]で[blue]、[red]、[white]、[yellow]が "None(Material)" になっている場合、右端の[⦿]を押し、該当のマテリアルを選択し[Apply]ボタンをクリック
