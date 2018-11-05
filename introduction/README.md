@@ -1457,15 +1457,15 @@
 1. メインスクリプト（Main.cs）の用意
     * [Object]-[CreateEmpty]で空のGameObjectを作成（名前は"God"など任意）
     * [Assets]-[Create]-[C# Script]で名前は"Main"とする
-    * 上記の空のGameObject（"God"）の[Inspector]に上記のC#（Main.cs）をドラッグ（アタッチ）
+    * 上記の空のGameObject（"God"）の[Inspector]に、上記のC#（Main.cs）をドラッグ（アタッチ）
 
 1. UFO用スクリプト（Ufo.cs）の用意
     * [Assets]-[Create]-[C# Script]で名前は"Ufo"とする
-    * [Hierarchy]-[ufo]-[Inspector]に上記のC#（Ufo.cs）をドラッグ（アタッチ）
+    * [Hierarchy]-[ufo]-[Inspector]に、上記のC#（Ufo.cs）をドラッグ（アタッチ）
 
 1. ボタン用スクリプト（MissileButton.cs）の用意
     * [Assets]-[Create]-[C# Script]で名前は"MissileButton"とする
-    * [Hierarchy]-[Canvas]-[Button001]-[Inspector]-[Button(Script)]の直下に上記のC#（MissileButton.cs）をドラッグ（アタッチ）
+    * [Hierarchy]-[Canvas]-[Button001]-[Inspector]-[Button(Script)]の直下に、上記のC#（MissileButton.cs）をドラッグ（アタッチ）
 
 1. Main.csの記述（変更）
     ```
