@@ -1401,7 +1401,7 @@
     * uGUIのButtonを配置：[GameObject]-[UI]-[Button]
     * オブジェクト名を変更：[Canvas]-[Button]-[Inspector]の"Button"→"Button001"に変更
     * 表示文字の変更：[Hierarchy]-[Canvas]-[StartStopButton]-[Text]-[Inspector]-[Text]-[Text]を"Button"→"GO"に変更
-    * 位置を変更：[Hierarchy]-[Canvas]-[Button001]-[Inspector]
+    * 位置･幅･高さを変更：[Hierarchy]-[Canvas]-[Button001]-[Inspector]
 
         |PosX|PosY|PosZ|
         |:--|:--|:--:|
@@ -1410,6 +1410,12 @@
         |Width|Height|
         |:--|:--|
         |**400**|**200**| 
+
+    * スケールを変更：[Hierarchy]-[Canvas]-[Button001]-[Inspector]-[Scale]
+
+        |X|Y|Z|
+        |:--|:--|:--:|
+        |**0.5**|**0.5**|0|
 
 
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/014.zip)
