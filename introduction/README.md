@@ -1357,10 +1357,11 @@
 <a name="014"></a>
 # <b>014 UFO Shooting（セミナー向け）</b>
 
-1. BlenderでUFO（[ufo].blend](https://mubirou.github.io/Unity/introduction/blend/ufo.blend)）を作成
-    * [ファイル]-[エクスポート]-[**FBX（.fbx）**]で出力（[piece.fbx](https://mubirou.github.io/Unity/introduction/fbx/ufo.fbx)）
+1. BlenderでUFOを作成（[ufo.blend](https://mubirou.github.io/Unity/introduction/blend/ufo.blend)）
+    * [ファイル]-[エクスポート]-[**FBX（.fbx）**]で出力（
+    [piece.fbx](https://mubirou.github.io/Unity/introduction/fbx/ufo.fbx)）
 
-1. Blenderでミサイル（[missile].blend](https://mubirou.github.io/Unity/introduction/blend/missile.blend)）を作成
+1. Blenderでミサイルを作成（[missile.blend](https://mubirou.github.io/Unity/introduction/blend/missile.blend)）
     * [ファイル]-[エクスポート]-[**FBX（.fbx）**]で出力（[piece.fbx](https://mubirou.github.io/Unity/introduction/fbx/missile.fbx)）
 
 1. Unityで上記を読込み作業
