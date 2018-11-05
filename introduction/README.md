@@ -1357,13 +1357,21 @@
 <a name="014"></a>
 # <b>014 UFO Shooting（セミナー向け）</b>
 
-1. XXX
+1. BlenderでUFO（[ufo].blend](https://mubirou.github.io/Unity/introduction/blend/ufo.blend)）を作成
+    * [ファイル]-[エクスポート]-[**FBX（.fbx）**]で出力（[piece.fbx](https://mubirou.github.io/Unity/introduction/fbx/ufo.fbx)）
+
+1. Blenderでミサイル（[missile].blend](https://mubirou.github.io/Unity/introduction/blend/missile.blend)）を作成
+    * [ファイル]-[エクスポート]-[**FBX（.fbx）**]で出力（[piece.fbx](https://mubirou.github.io/Unity/introduction/fbx/missile.fbx)）
+
+1. Unityで上記を読込み作業
+    * プロジェクトの[Assets]フォルダに上記のfbxファイルを保存
+    * [Hierarchy]に上記のオブジェクト（ufo･missile）をドラッグ
 
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/014.zip)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
-作成日：2018年XX月XX日  
+作成日：2018年11月05日  
 
 
 © 2018 夢寐郎
