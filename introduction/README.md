@@ -1442,12 +1442,15 @@
 
 1. 物理演算コンポーネントの設置
     * UFOに設置  
-    [Hierarchy]-[Canvas]-[Button001]-[Inspector]-[AddComponent]-[Physics]-[Rigidbody]
+    [Hierarchy]-[ufo]-[Inspector]-[AddComponent]-[Physics]-[Rigidbody]
     * ミサイルに設置  
-    [Hierarchy]-[Canvas]-[missile]-[Inspector]-[AddComponent]-[Physics]-[Rigidbody]
+    [Hierarchy]-[missile]-[Inspector]-[AddComponent]-[Physics]-[Rigidbody]
 
-1. コライダ（衝突判定）の設置
-    
+1. コライダ（衝突判定領域）の設置
+    * UFOに設置
+    [Hierarchy]-[ufo]-[Inspector]-[AddComponent]-[Physics]-[SphereCollider]（球型）
+    * ミサイルに設置
+    [Hierarchy]-[missile]]-[Inspector]-[AddComponent]-[Physics]-[CapsuleCollider]（カプセル型）
 
 1. メインスクリプト（Main.cs）の用意
     * [Object]-[CreateEmpty]で空のGameObjectを作成（名前は"God"など任意）
