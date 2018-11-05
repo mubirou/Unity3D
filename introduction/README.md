@@ -1440,13 +1440,215 @@
         * Looping：OFF
         * Play On Awake：OFF
 
-1. メインスクリプトの記述
+1. メインスクリプト（Main.cs）の用意
     * [Object]-[CreateEmpty]で空のGameObjectを作成（名前は"God"など任意）
     * [Assets]-[Create]-[C# Script]で名前は"Main"とする
-    * 上記の空のGameObjectの[Inspector]に上記のC#（Main.cs）をドラッグ
-    * C#（Main.cs）を以下の通りに変更する
+    * 上記の空のGameObject（"God"）の[Inspector]に上記のC#（Main.cs）をドラッグ
+
+1. UFO用スクリプト（Ufo.cs）の用意
+    * [Assets]-[Create]-[C# Script]で名前は"Ufo"とする
+    * [Hierarchy]-[ufo]-[Inspector]に上記のC#（Ufo.cs）をドラッグ
+
+1. ボタン用スクリプト（Missile.cs）の用意
+    * [Assets]-[Create]-[C# Script]で名前は"Missile"とする
+    * [Hierarchy]-[Canvas]-[Button001]-[Inspector]-[Button(Script)]の直下に上記のC#（Missile.cs）をドラッグ
+
+1. Main.csの記述（変更）
     ```
     //Main.cs
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+    using System; //Mathに必要
+
+    public class Main : MonoBehaviour {
+        private GameObject _ufo;
+        private GameObject _missile;
+        private GameObject _button;
+        private Vector3 _originMissilePos;
+        private Vector3 _originUfoPos;
+        private Quaternion _originUfoQuater;
+        private Quaternion _originMissileQuater;
+
+        void Start () {
+            _ufo = GameObject.Find("ufo");
+            _missile = GameObject.Find("missile");
+            _button = GameObject.Find("Button001");
+
+            //デフォルトの位置の保存
+            _originMissilePos = _missile.transform.position;
+            _originUfoPos = _ufo.transform.position;
+
+            //デフォルトの角度の保存
+            _originUfoQuater = _ufo.transform.rotation;
+            _originMissileQuater = _missile.transform.rotation;
+
+            //初期化
+            InitUFO();
+            InitMissile();
+
+            //ミサイルを落下させないようにする
+            _missile.GetComponent<Rigidbody>().useGravity = false;
+        }
+
+        void Update () {
+            //回転
+            _ufo.transform.Rotate(new Vector3(0,0,-10));
+            _missile.transform.Rotate(new Vector3(0,0,-10));
+
+            //左→右へ移動（繰返し）
+            if (_ufo.transform.position.x < 14) { //UFOが右端へ消えたら
+                Vector3 _ufoPos = _ufo.transform.position;
+                _ufoPos.x += 0.1f;
+                _ufo.transform.position = _ufoPos;
+            } else {
+                InitUFO(); //初期化
+            }
+
+            if (_ufo.transform.position.y < -25) {
+                InitUFO(); //初期化
+            }
+
+            if (_missile.transform.position.y < -25) {
+                InitMissile(); //初期化
+            }
+        }
+
+        private void InitUFO() {
+            //物理処理を削除
+            Rigidbody _ufoRigidbody = _ufo.GetComponent<Rigidbody>();
+            _ufoRigidbody.useGravity = false;
+
+            //動いてる物体を完全に止める
+            _ufoRigidbody.velocity = Vector3.zero;
+            _ufoRigidbody.angularVelocity = Vector3.zero;
+
+            //角度を元に戻す
+            _ufo.transform.rotation = _originUfoQuater;
+
+            //画面の左端に移動
+            _ufo.transform.position = _originUfoPos;
+        }
+
+        private void InitMissile() {
+            //物理処理を削除
+            Rigidbody _missileRigidbody = _missile.GetComponent<Rigidbody>();
+            _missileRigidbody.useGravity = false;
+
+            //画面の手前に移動
+            _missile.transform.position = _originMissilePos;
+
+            //角度を元に戻す
+            _missile.transform.rotation = _originMissileQuater;
+
+            //動いてる物体を完全に止める
+            _missileRigidbody.velocity = Vector3.zero;
+            _missileRigidbody.angularVelocity = Vector3.zero;
+
+            //他のオブジェクトのメソッドを実行（ボタンの有効化）
+            _button.GetComponent<MissileButton>().Show();
+        }
+
+        public void Shoot() {
+            //ミサイルの物理エンジンを有効にする
+            _missile.GetComponent<Rigidbody>().useGravity = true;
+
+            //ミサイル発射（Vector3(右,上,前)）
+            _missile.GetComponent<Rigidbody>().velocity = new Vector3(0,10,10);
+
+            //ミサイルに力を加える（ミサイル発射の代替）
+            //_missile.GetComponent<Rigidbody>().AddForce(0,500,500);
+        }
+    }
+    ```
+
+1. Ufo.csの記述（変更）
+    ```
+    //Ufo.cs
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+
+    public class Ufo : MonoBehaviour {
+        private GameObject _bigExplosion;
+        private ParticleSystem _particle;
+        private GameObject _button;
+
+        void Start () {
+            GetComponent<Rigidbody>().useGravity = false;
+            _bigExplosion = GameObject.Find("BigExplosion");
+            _particle =_bigExplosion.GetComponent<ParticleSystem>();
+            _particle.Stop();
+
+            _button = GameObject.Find("Button001");
+        }
+
+        void OnCollisionEnter(Collision arg) { //衝突判定
+            GetComponent<Rigidbody>().useGravity = true; //落下
+
+            //パーティクル再生（爆発）
+            Vector3 _thisPos = _bigExplosion.transform.position;
+            _thisPos.x = arg.transform.position.x;
+            _thisPos.y = arg.transform.position.y;
+            _bigExplosion.transform.position = _thisPos;
+            _particle.Play();
+
+            //爆発の繰返しを止める
+            Invoke("BigExplosionDepth", _particle.main.duration);
+        }
+        
+        void BigExplosionDepth() {
+            _particle.Stop();
+            _bigExplosion.SetActive(false);
+        }
+
+        public bool IsExplosionActive {
+            get { return _bigExplosion.active; } //thisは省略
+            set { _bigExplosion.SetActive(value); } //valueは決め打ち
+        }
+    }
+    ```
+
+1. MissileButton.csの記述（変更）
+    ```
+    //MissileButton.cs
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+    using UnityEngine.UI;
+
+    public class MissileButton : MonoBehaviour {
+        private GameObject _god;
+        private GameObject _ufo;
+
+        void Start () {
+            _god = GameObject.Find("God");
+            _ufo = GameObject.Find("ufo");
+        }
+
+        public void OnClick() {
+            _god.SendMessage("Shoot");
+            
+            //他のオブジェクトのメソッドを実行（ボタンの無効化）
+            GetComponent<MissileButton>().Hide();
+
+            //爆発の有効化
+            _ufo.GetComponent<Ufo>().IsExplosionActive = true;
+        }
+
+        public void Show() { //カスタムメソッド（外部からアクセス）
+            this.GetComponent<Button>().interactable = true;
+        }
+
+        public void Hide() { //カスタムメソッド（外部からアクセス）
+            this.GetComponent<Button>().interactable = false;
+        }
+    }
+    ```
+
+    * OnClick()メソッドの有効化：[Hierarchy]-[Canvas]-[Button001]-[Inspector]-[Button]-[OnClick()]の[+]を選択し、[None（Object）]→[MissileButton]に変更し、[NoFunction]→[StartStopButton]-[OnClick]を選択（StartStopButton.OnClickになる）  
+    （__非常にわかりにくい操作__）
+
 
 
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/014.zip)
