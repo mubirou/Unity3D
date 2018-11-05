@@ -1429,11 +1429,24 @@
         * [EffectExamples]-[Fire&ExplosionEffects]-[Textures]の全項目
     * [Project]-[Assets]-[EffectExamples]-[Fire&ExplosionEffects]-[Prefabs]-[BigExplosion]を[Hierarchy]のルートにドラッグ
 
-1. パーティクルの設定
-    * [Hierarchy]-[BigExplosion]
+1. パーティクルの詳細設定
+    * 位置の変更：[Hierarchy]-[BigExplosion]-[Inspector]-[Transform]
 
+        |PosX|PosY|PosZ|
+        |:--|:--|:--:|
+        |**0**|**0**|**0**|
+    
+    * 初期値の変更：[Hierarchy]-[BigExplosion]-[Inspector]-[ParicleSystem]
+        * Looping：OFF
+        * Play On Awake：OFF
 
-
+1. メインスクリプトの記述
+    * [Object]-[CreateEmpty]で空のGameObjectを作成（名前は"God"など任意）
+    * [Assets]-[Create]-[C# Script]で名前は"Main"とする
+    * 上記の空のGameObjectの[Inspector]に上記のC#（Main.cs）をドラッグ
+    * C#（Main.cs）を以下の通りに変更する
+    ```
+    //Main.cs
 
 
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/014.zip)
