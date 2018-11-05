@@ -1647,10 +1647,8 @@
     ```
 
     * OnClick()メソッドの有効化：  
-    [Hierarchy]-[Canvas]-[Button001]-[Inspector]-[Button(Script)]-[OnClick()]の[+]を選択し、[None（Object）]→[MissileButton]に変更し、[NoFunction]→[StartStopButton]-[OnClick]を選択（StartStopButton.OnClickになる）  
+    [Hierarchy]-[Canvas]-[Button001]-[Inspector]-[Button(Script)]-[OnClick()]の[+]を選択し、[None（Object）]→[Scene]-[Button001]に変更し、[NoFunction]→[MissileButton]-[OnClick]を選択（MissileButton.OnClickになる）  
     （__非常にわかりにくい操作__）
-
-
 
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/014.zip)
 
