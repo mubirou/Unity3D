@@ -1371,7 +1371,9 @@
     * Gameビュー]のサイズを9:16（1080x1920）にする
 
 1. UFOとミサイルのマテリアルを再設定（外れている場合）
-    * [Project]-[Assets]-[missile]-[Inspector]-[Materials]で[blue]、[red]、[white]、[yellow]が "None(Material)" になっている場合、右端の[⦿]を
+    * [Project]-[Assets]-[missile]-[Inspector]-[Materials]で[blue]、[red]、[white]、[yellow]が "None(Material)" になっている場合、右端の[⦿]を押し、該当のマテリアルを選択。
+    * 同様にmissileもマテリアルを再設定する
+    * 上記の作業でプロジェクトの[Assets]フォルダに保存した、blenderファイルは別フォルダに移動するなどする（blenderフォルダを作成するとよい）
 
 1. UFOの位置の調整
 
