@@ -1647,7 +1647,7 @@
     ```
 
     * OnClick()メソッドの有効化：  
-    [Hierarchy]-[Canvas]-[Button001]-[Inspector]-[Button]-[OnClick()]の[+]を選択し、[None（Object）]→[MissileButton]に変更し、[NoFunction]→[StartStopButton]-[OnClick]を選択（StartStopButton.OnClickになる）  
+    [Hierarchy]-[Canvas]-[Button001]-[Inspector]-[Button(Script)]-[OnClick()]の[+]を選択し、[None（Object）]→[MissileButton]に変更し、[NoFunction]→[StartStopButton]-[OnClick]を選択（StartStopButton.OnClickになる）  
     （__非常にわかりにくい操作__）
 
 
