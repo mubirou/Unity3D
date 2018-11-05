@@ -1449,7 +1449,8 @@
 
 1. コライダ（衝突判定領域）の設置
     * UFOに設置  
-    [Hierarchy]-[ufo]-[Inspector]-[AddComponent]-[Physics]-[SphereCollider]（球型）  ※[Inspector]-[SphereCollider]-[EditCollider]で大きさを調整
+    [Hierarchy]-[ufo]-[Inspector]-[AddComponent]-[Physics]-[SphereCollider]（球型）  
+    ※[Inspector]-[SphereCollider]-[EditCollider]で大きさを調整（任意）
     * ミサイルに設置  
     [Hierarchy]-[missile]]-[Inspector]-[AddComponent]-[Physics]-[CapsuleCollider]（カプセル型）
 
