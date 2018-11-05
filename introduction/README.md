@@ -1441,7 +1441,7 @@
         * Looping：OFF
         * Play On Awake：OFF
 
-1. 物理演算コンポーネントの設置
+1. 物理演算コンポーネント（**Rigidbody**）の設置
     * UFOに設置  
     [Hierarchy]-[ufo]-[Inspector]-[AddComponent]-[Physics]-[Rigidbody]
     * ミサイルに設置  
