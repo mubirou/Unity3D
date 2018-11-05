@@ -16,14 +16,14 @@
 |007|[出力](#出力)|Unityで作成したプロジェクトを出力する方法|－|－|－|[●](https://amzn.to/2s85DAv)|
 |008|[VideoPlayerコンポーネント](#008)|VideoPlayerコンポーネントによる動画ファイル再生|－|－|－|－|
 |009|[『Unity 2018 逆引き大全 300の極意』](#逆引き大全)|参考書の勉強|－|[●](#逆引き大全)|－|[●](https://amzn.to/2KuNW69)|
-|010|[Analog Watch（セミナー向け）](#010)|「Hello world!」的コンテンツ|－|－|[●](#010)|－|
-|011|[Drop Hole（セミナー向け）](#011)|「物理エンジン」を使ったゲーム|－|－|[●](#011)|－|
-|012|[Stop Watch（セミナー向け）](#012)|uGUI（Text･Button）と外部フォントを使用|－|－|[●](#012)|－|
-|013|[Mouse Stalker（セミナー向け）](#013)|スクリプトによるモーショングラフィックス|－|－|[●](#013)|－|
-|014|[UFO Shooting（セミナー向け）](#014)|衝突判定･パーティクルを使ったシューティング|－|[●](#014)|－|－|
-|015|Jumping Logo（セミナー向け）|－|－|－|－|－|
-|016|Puppet Control（セミナー向け）|－|－|－|－|－|
-|017|AR（セミナー向け）|－|－|－|－|－|
+|010|[Analog Watch（セミナー用）](#010)|「Hello world!」的コンテンツ|－|－|[●](#010)|－|
+|011|[Drop Hole（セミナー用）](#011)|「物理エンジン」を使ったゲーム|－|－|[●](#011)|－|
+|012|[Stop Watch（セミナー用）](#012)|uGUI（Text･Button）と外部フォントを使用|－|－|[●](#012)|－|
+|013|[Mouse Stalker（セミナー用）](#013)|スクリプトによるモーショングラフィックス|－|－|[●](#013)|－|
+|014|[UFO Shooting（セミナー用）](#014)|衝突判定･パーティクルを使ったシューティング|－|[●](#014)|－|－|
+|015|Jumping Logo（セミナー用）|－|－|－|－|－|
+|016|Puppet Control（セミナー用）|－|－|－|－|－|
+|017|AR（セミナー用）|－|－|－|－|－|
 ***
 
 <a name="プリミティブ･オブジェクト"></a>
@@ -813,7 +813,7 @@
 
 
 <a name="010"></a>
-# <b>010 Analog Watch（セミナー向け）</b>
+# <b>010 Analog Watch（セミナー用）</b>
 
 1. Unity（C#）で時刻を取得してみる（空のGameObjectにアタッチ）
     ```
@@ -916,7 +916,7 @@
 
 
 <a name="011"></a>
-# <b>011 Drop Hole（セミナー向け）</b>
+# <b>011 Drop Hole（セミナー用）</b>
 
 1. [Inkscape](https://inkscape.org)で平面素材（橋）を作成
 （[bridge.svg](https://mubirou.github.io/Unity/introduction/svg/bridge.svg)）
@@ -1057,7 +1057,7 @@
 
 
 <a name="012"></a>
-# <b>012 Stop Watch（セミナー向け）</b>
+# <b>012 Stop Watch（セミナー用）</b>
 
 1. 下準備（とりあえず出力までやってみる）
     * シーンの保存：[File]-[Save Scene]
@@ -1256,7 +1256,7 @@
 
 
 <a name="013"></a>
-# <b>013 Mouse Stalker（セミナー向け）</b>
+# <b>013 Mouse Stalker（セミナー用）</b>
 
 1. Blenderで適当なオブジェクトを作成（[piece.blend](https://mubirou.github.io/Unity/introduction/blend/piece.blend)）
     * [ファイル]-[エクスポート]-[**FBX（.fbx）**]で出力（[piece.fbx](https://mubirou.github.io/Unity/introduction/fbx/piece.fbx)）
@@ -1355,7 +1355,7 @@
 
 
 <a name="014"></a>
-# <b>014 UFO Shooting（セミナー向け）</b>
+# <b>014 UFO Shooting（セミナー用）</b>
 
 1. BlenderでUFOを作成（[ufo.blend](https://mubirou.github.io/Unity/introduction/blend/ufo.blend)）
     * [ファイル]-[エクスポート]-[**FBX（.fbx）**]で出力（
