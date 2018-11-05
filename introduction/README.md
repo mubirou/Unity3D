@@ -1664,7 +1664,7 @@
 
 完成したAndroid用インストーラ（apkファイル）は[こちら](https://mubirou.github.io/Unity/introduction/apk/014.apk)
 
-実行環境：Unity 2017.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
+実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
 作成日：2018年11月05日  
 
