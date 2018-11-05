@@ -1397,6 +1397,21 @@
         |:--|:--|:--:|
         |**-25**|0|0|
 
+1. ミサイル発射ボタンを作成
+    * uGUIのButtonを配置：[GameObject]-[UI]-[Button]
+    * オブジェクト名を変更：[Canvas]-[Button]-[Inspector]の"Button"→"Button001"に変更
+    * 表示文字の変更：[Hierarchy]-[Canvas]-[StartStopButton]-[Text]-[Inspector]-[Text]-[Text]を"Button"→"GO"に変更
+    * 位置を変更：[Hierarchy]-[Canvas]-[Button001]-[Inspector]
+
+        |PosX|PosY|PosZ|
+        |:--|:--|:--:|
+        |**0**|**-460**|0|
+
+        |Width|Height|
+        |:--|:--|
+        |**400**|**200**| 
+
+
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/014.zip)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
