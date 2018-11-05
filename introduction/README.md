@@ -1448,7 +1448,7 @@
 
 1. コライダ（衝突判定領域）の設置
     * UFOに設置  
-    [Hierarchy]-[ufo]-[Inspector]-[AddComponent]-[Physics]-[SphereCollider]（球型）
+    [Hierarchy]-[ufo]-[Inspector]-[AddComponent]-[Physics]-[SphereCollider]（球型）  ※[Inspector]-[SphereCollider]-[EditCollider]で大きさを調整
     * ミサイルに設置  
     [Hierarchy]-[missile]]-[Inspector]-[AddComponent]-[Physics]-[CapsuleCollider]（カプセル型）
 
@@ -1659,7 +1659,9 @@
     [Hierarchy]-[Canvas]-[Button001]-[Inspector]-[Button(Script)]-[OnClick()]の[+]を選択し、[None（Object）]→[Scene]-[Button001]に変更し、[NoFunction]→[MissileButton]-[OnClick]を選択（MissileButton.OnClickになる）  
     （__非常にわかりにくい操作__）
 
-制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/014.zip)
+1. [再生]ボタンを押すか、[出力](#出力)して確認
+
+完成したAndroid用インストーラ（apkファイル）は[こちら](https://mubirou.github.io/Unity/introduction/apk/014.zip)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
