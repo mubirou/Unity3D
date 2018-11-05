@@ -1427,7 +1427,8 @@
         * [EffectExamples]-[Fire&ExplosionEffects]-[Prefabs]-[BigExplosion.prefab]
         * [EffectExamples]-[Fire&ExplosionEffects]-[Materials]の全項目
         * [EffectExamples]-[Fire&ExplosionEffects]-[Textures]の全項目
-    * [Project]-[Assets]-[EffectExamples]-[Fire&ExplosionEffects]-[Prefabs]-[BigExplosion]を[Hierarchy]のルートにドラッグ
+    * [Project]-[Assets]-[EffectExamples]-[Fire&ExplosionEffects]-[Prefabs]-[BigExplosion]を[Hierarchy]のルートにドラッグ  
+    ※ufo上にドラッグすると入れ子化されます
 
 1. パーティクルの詳細設定
     * 位置の変更：[Hierarchy]-[BigExplosion]-[Inspector]-[Transform]
