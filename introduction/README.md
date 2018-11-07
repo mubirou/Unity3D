@@ -1676,7 +1676,8 @@
 
 1. XXX
 
-制作途中のプロジェクトは[こちら]  (https://mubirou.github.io/Unity/introduction/project/015.zip)
+制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/015.zip)
+
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
 作成日：2018年XX月XX日  
