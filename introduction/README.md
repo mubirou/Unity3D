@@ -1676,7 +1676,8 @@
 
 1. XXX
 
-制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/015.zip)
+制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/015_1.zip)（Animation版）
+と[こちら](https://mubirou.github.io/Unity/introduction/project/015_2.zip)（Timeline版）
 
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
