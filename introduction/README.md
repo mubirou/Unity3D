@@ -1688,8 +1688,8 @@
 
 1. 立方体②〜⑦を作成
     * 上記を[Copy]＆[Paste]しながら"Cube2"〜"Cube7"を作成
-    * 位置（X）は②から順に「**-2.6**」「**-1.3**」「**0**」「**1.3**」「**2.6**」「**3.9**」にする
-    * [Project]-[Create]-[Material]から着色してもよい（任意）
+    * 位置（X）を②から順に「**-2.6**」「**-1.3**」「**0**」「**1.3**」「**2.6**」「**3.9**」にする
+    * [Project]-[Create]-[Material]から着色するとわかりやすい（任意）
 
 1. 床を作成  
     * [Hierarchy]-[Create]-[3DObject]-[Plane]
@@ -1699,7 +1699,12 @@
     |:--|:--|:--:|
     |0|**-0.5**|0|
 
+1. Animationの設定
+    * [Window]-[Animation]-[Animation]でAnimationウインドウを開く
+    * [Animation]ウインドウ内の[Create]ボタンをクリック（名前は"AnimationCubeAll"）
+    * [AddProperty]-[Cube1]-[Transform]-[Position]を選択  
 
+![015_1](https://mubirou.github.io/Unity/introduction/jpg/015_1.jpg)
 
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/015_1.zip)（Animation版）
 と[こちら](https://mubirou.github.io/Unity/introduction/project/015_2.zip)（Timeline版）
