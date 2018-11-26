@@ -1699,7 +1699,7 @@
     |:--|:--|:--:|
     |0|**-0.5**|0|
 
-1. Animationの設定
+1. Animationの準備
     * [Window]-[Animation]-[Animation]でAnimationウインドウを開く
     * [Hierarchy]-[CubeAll]を選択
     * [Animation]ウインドウ内の[Create]ボタンをクリック（名前は"AnimationCubeAll"）
@@ -1710,6 +1710,10 @@
     * 同様にCube②〜⑦も設定  
 
     ![015_2](https://mubirou.github.io/Unity/introduction/jpg/015_2.jpg)
+
+1. Animationの設定
+    * [Animation]ウインドウにある[<font color="Red">●</font>]を選択
+    * 
 
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/015_1.zip)（Animation版）
 と[こちら](https://mubirou.github.io/Unity/introduction/project/015_2.zip)（Timeline版）
