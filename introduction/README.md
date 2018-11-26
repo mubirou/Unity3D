@@ -1672,7 +1672,22 @@
 <a name="015"></a>
 # <b>015 Timeline Anime（セミナー用）</b>
 
-1. XXX
+1. 空のGameObjectを作成
+    * [Hierarchy]-[Create]-[CreateEmpty]
+    * 名前を"GameObject"→"CubeAll"に変更（任意）
+ 
+1. 立方体を作成
+    * [Hierarchy]-[Create]-[3DObject]-[Cube]
+    * 名前を"GameObject"→"Cube1"に変更
+    * [Hierarchy]上で上記の"CubeAll"の入れ子にする
+    * 位置の変更：[Hierarchy]-[CubeAll]-[Cube1]-[Inspector]-[Transform]-[Position]
+
+    |X|Y|Z|
+    |:--|:--|:--:|
+    |**-3.9**|0|0|
+
+1. 床を作成  
+    [Hierarchy]-[Create]-[3DObject]-[Plane]
 
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/015_1.zip)（Animation版）
 と[こちら](https://mubirou.github.io/Unity/introduction/project/015_2.zip)（Timeline版）
