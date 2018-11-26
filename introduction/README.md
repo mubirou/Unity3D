@@ -1676,7 +1676,7 @@
     * [Hierarchy]-[Create]-[CreateEmpty]
     * 名前を"GameObject"→"CubeAll"に変更（任意）
  
-1. 立方体①を作成
+1. Cube①を作成
     * [Hierarchy]-[Create]-[3DObject]-[Cube]
     * 名前を"GameObject"→"Cube1"に変更
     * [Hierarchy]上で上記の"CubeAll"の入れ子にする
@@ -1686,7 +1686,7 @@
     |:--|:--|:--:|
     |**-3.9**|0|0|
 
-1. 立方体②〜⑦を作成
+1. Cube②〜⑦を作成
     * 上記を[Copy]＆[Paste]しながら"Cube2"〜"Cube7"を作成
     * 位置（X）を②から順に「**-2.6**」「**-1.3**」「**0**」「**1.3**」「**2.6**」「**3.9**」にする
     * [Project]-[Create]-[Material]から着色するとわかりやすい（任意）
@@ -1701,10 +1701,15 @@
 
 1. Animationの設定
     * [Window]-[Animation]-[Animation]でAnimationウインドウを開く
+    * [Hierarchy]-[CubeAll]を選択
     * [Animation]ウインドウ内の[Create]ボタンをクリック（名前は"AnimationCubeAll"）
-    * [AddProperty]-[Cube1]-[Transform]-[Position]を選択  
+    * [AddProperty]-[Cube1]-[Transform]-[Position]-[+]を選択  
 
-![015_1](https://mubirou.github.io/Unity/introduction/jpg/015_1.jpg)
+    ![015_1](https://mubirou.github.io/Unity/introduction/jpg/015_1.jpg)
+
+    * 同様にCube②〜⑦も設定  
+
+    ![015_2](https://mubirou.github.io/Unity/introduction/jpg/015_2.jpg)
 
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/015_1.zip)（Animation版）
 と[こちら](https://mubirou.github.io/Unity/introduction/project/015_2.zip)（Timeline版）
