@@ -1715,11 +1715,11 @@
     * [Animation]ウインドウ上部にある録音ボタン[<font color="Red">●</font>]を選択
     * [Animation]ウインドウ下部にある[Curves]ボタンを選択
     * [Animation]-[Cube1:Position]-[Position.y]を選択
-    * カーブ上のポイントを選択し[右クリック]-[Broken]に変更して調整
+    * カーブ上のポイントを選択し[右クリック]-[Broken]に変更して適当に調整
 
     ![015_3](https://mubirou.github.io/Unity/introduction/jpg/015_3.jpg)
 
-    * [Animation]ウインドウの再生ボタン[▶]で確認
+    * [Animation]ウインドウの再生ボタン[▶]で確認しながら調整を繰返す
 
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/015_1.zip)（Animation版）
 と[こちら](https://mubirou.github.io/Unity/introduction/project/015_2.zip)（Timeline版）
