@@ -1676,7 +1676,7 @@
     * [Hierarchy]-[Create]-[CreateEmpty]
     * 名前を"GameObject"→"CubeAll"に変更（任意）
  
-1. 立方体を作成
+1. 立方体①を作成
     * [Hierarchy]-[Create]-[3DObject]-[Cube]
     * 名前を"GameObject"→"Cube1"に変更
     * [Hierarchy]上で上記の"CubeAll"の入れ子にする
@@ -1686,8 +1686,20 @@
     |:--|:--|:--:|
     |**-3.9**|0|0|
 
+1. 立方体②〜⑦を作成
+    * 上記を[Copy]＆[Paste]しながら"Cube2"〜"Cube7"を作成
+    * 位置（X）は②から順に「-2.6」「-1.3」「0」「1.3」「2.6」「3.9」にする
+    * [Project]-[Create]-[Material]から着色してもよい（任意）
+
 1. 床を作成  
-    [Hierarchy]-[Create]-[3DObject]-[Plane]
+    * [Hierarchy]-[Create]-[3DObject]-[Plane]
+    * 位置の変更：[Hierarchy]-[CubeAll]-[Cube1]-[Inspector]-[Transform]-[Position]
+
+    |X|Y|Z|
+    |:--|:--|:--:|
+    |0|**-0.5**|0|
+
+
 
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/015_1.zip)（Animation版）
 と[こちら](https://mubirou.github.io/Unity/introduction/project/015_2.zip)（Timeline版）
