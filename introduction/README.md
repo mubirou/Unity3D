@@ -1693,7 +1693,7 @@
 
 1. 床を作成  
     * [Hierarchy]-[Create]-[3DObject]-[Plane]
-    * 位置の変更：[Hierarchy]-[CubeAll]-[Cube1]-[Inspector]-[Transform]-[Position]
+    * 位置の変更：[Hierarchy]-[Plne]-[Transform]-[Position]
 
     |X|Y|Z|
     |:--|:--|:--:|
