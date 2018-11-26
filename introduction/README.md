@@ -1720,6 +1720,7 @@
     ![015_3](https://mubirou.github.io/Unity/introduction/jpg/015_3.jpg)
 
     * [Animation]ウインドウの再生ボタン[▶]で確認しながら調整を繰返す
+    * 同様にCube②〜⑦も設定
 
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/015_1.zip)（Animation版）
 と[こちら](https://mubirou.github.io/Unity/introduction/project/015_2.zip)（Timeline版）
