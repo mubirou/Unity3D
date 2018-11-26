@@ -1712,7 +1712,7 @@
     ![015_2](https://mubirou.github.io/Unity/introduction/jpg/015_2.jpg)
 
 1. Animationの設定
-    * [Animation]ウインドウにある[<font color="Red">●</font>]を選択
+    * [Animation]ウインドウにある録音ボタン[<font color="Red">●</font>]を選択
     * 
 
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/015_1.zip)（Animation版）
