@@ -1672,6 +1672,7 @@
 <a name="015"></a>
 # <b>015 Timeline Anime（セミナー用）</b>
 
+<a name="015_1"></a>
 ## Animation版
 
 1. 空のGameObjectを作成
@@ -1729,7 +1730,7 @@
 
 ## Timeline版
 
-1. XXXX
+1. [Animation版](#015_1)と同じくCube①〜⑦と床を作成
 
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/015_1.zip)（Animation版）
 と[こちら](https://mubirou.github.io/Unity/introduction/project/015_2.zip)（Timeline版）
