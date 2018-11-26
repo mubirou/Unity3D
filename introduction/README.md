@@ -1732,6 +1732,16 @@
 
 1. [Animation版](#015_1)と同じくCube①〜⑦と床を作成
 
+1. Timelineの準備
+    * [Window]-[Cequencing]-[Timeline]でTimelineウインドウを開く
+    * [Hierarchy]-[CubeAll]を選択
+    * [Timeline]ウインドウ内の[Create]ボタンをクリック（名前は"CubeAllTimeline"のまま）
+    * [Hierarychy]-[CubeAll]-[Cube1]を[Timeline]上にドラッグ＆ドロップ  
+
+    ![015_5](https://mubirou.github.io/Unity/introduction/jpg/015_5.jpg)
+
+    * 最初からあった[CubeAll(Animator)]は今回は削除
+
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/015_1.zip)（Animation版）
 と[こちら](https://mubirou.github.io/Unity/introduction/project/015_2.zip)（Timeline版）
 
