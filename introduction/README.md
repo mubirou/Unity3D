@@ -1672,6 +1672,8 @@
 <a name="015"></a>
 # <b>015 Timeline Anime（セミナー用）</b>
 
+## Animation版
+
 1. 空のGameObjectを作成
     * [Hierarchy]-[Create]-[CreateEmpty]
     * 名前を"GameObject"→"CubeAll"に変更（任意）
@@ -1724,6 +1726,10 @@
     * タイミングをずらすなどして演出  
 
     ![015_4](https://mubirou.github.io/Unity/introduction/jpg/015_4.jpg)
+
+## Timeline版
+
+1. XXXX
 
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/015_1.zip)（Animation版）
 と[こちら](https://mubirou.github.io/Unity/introduction/project/015_2.zip)（Timeline版）
