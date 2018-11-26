@@ -1752,13 +1752,19 @@
 
     ![015_7](https://mubirou.github.io/Unity/introduction/jpg/015_7.jpg)
 
+    * タイミングをずらすなどして演出（シーケンスのコピーも可）  
 
-制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/015_1.zip)（Animation版）
+    ![015_8](https://mubirou.github.io/Unity/introduction/jpg/015_8.jpg)
+
+    * ループさせる場合は[Hierarchy]-[CubeAll]-[Inspector]-[PlayableDirector]-[WrapMode]を[Loop]にする
+
+
+完成したプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/015_1.zip)（Animation版）
 と[こちら](https://mubirou.github.io/Unity/introduction/project/015_2.zip)（Timeline版）
 
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
-作成日：2018年XX月XX日  
+作成日：2018年11月26日  
 
 
 © 2018 夢寐郎
