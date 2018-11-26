@@ -1742,6 +1742,17 @@
 
     * 最初からあった[CubeAll(Animator)]は今回は削除
 
+1. Timelineの設定
+    * [Timeline]ウインドウ上の[Cube1]の録音ボタン[<font color="Red">●</font>]を押して適当に調整（カーブボタンを使って微調整）  
+
+    ![015_6](https://mubirou.github.io/Unity/introduction/jpg/015_6.jpg)
+
+    * 同様にCube②〜⑦も設定（カーブ以外は同時に調整可能）
+    * [Cube1]のシーケンス上で[右クリック]-[**ConvertToClipTrack]で「アニメーションクリップ」に変換（Cube②〜⑦も同様）  
+
+    ![015_7](https://mubirou.github.io/Unity/introduction/jpg/015_7.jpg)
+
+
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/015_1.zip)（Animation版）
 と[こちら](https://mubirou.github.io/Unity/introduction/project/015_2.zip)（Timeline版）
 
