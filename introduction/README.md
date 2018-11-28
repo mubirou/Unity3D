@@ -22,7 +22,7 @@
 |013|[Mouse Stalker（セミナー用）](#013)|スクリプトによるモーショングラフィックス|－|－|[●](#013)|－|
 |014|[UFO Shooting（セミナー用）](#014)|衝突判定･パーティクルを使用|－|[●](#014)|－|－|
 |015|[Timeline Anime（セミナー用）](#015)|Animation･Timelineを使ったアニメーション|－|－|[●](#015)|－|
-|016|Puppet Control（セミナー用）|－|－|－|－|－|
+|016|[Puppet Control（セミナー用）](#016)|－|－|－|－|－|
 ***
 
 <a name="プリミティブ･オブジェクト"></a>
@@ -1766,6 +1766,18 @@
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
 作成日：2018年11月26日  
+
+
+<a name="016"></a>
+# <b>016 Puppet Control（セミナー用）</b>
+
+1. XXX
+
+制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/016.zip)
+
+実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
+作成者：夢寐郎  
+作成日：2018年XX月XX日
 
 
 © 2018 夢寐郎
