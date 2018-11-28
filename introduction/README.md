@@ -1205,7 +1205,7 @@
     }
     ```
 
-    * OnClick()メソッドの有効化：[Hierarchy]-[Canvas]-[StartStopButton]-[Inspector]-[Button]-[OnClick()]の[+]を選択し、[None（Object）]→[StartStopButton]に変更し、[NoFunction]→[StartStopButton]-[OnClick]を選択（StartStopButton.OnClickになる）  
+    * OnClick()メソッドの有効化：[Hierarchy]-[Canvas]-[StartStopButton]-[Inspector]-[Button]-[OnClick()]の[+]を選択し、[None（Object）]→[**Scebeタブ**]-[StartStopButton]に変更し、[NoFunction]→[StartStopButton]-[OnClick]を選択（StartStopButton.OnClickになる）  
     （__非常にわかりにくい操作__）
 
 1. CLEAR用スクリプトの記述
