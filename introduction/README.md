@@ -1797,7 +1797,6 @@
     |**10**|**10**|**10**|
 
 1. ロボットの位置･角度の調整
-
     * [Hierarchy]-[robot]-[Inspector]-[Transform]-[Position]
 
     |X|Y|Z|
@@ -1809,6 +1808,11 @@
     |X|Y|Z|
     |:--|:--|:--:|
     |0|**-180**|0|
+
+1. ロボットを先ずはとにかく動かす
+    * [Project]-[Create]-[AnimatorController]を選択（名前は"robotController"にする）
+    * [Hierarchy]-[robot]-[Inspector]-[Animator]-[Controller]-[⦿]で上記で作成した"robotController"を選択
+
 
 
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/016.zip)
