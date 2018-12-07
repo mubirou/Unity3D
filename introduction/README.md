@@ -1875,8 +1875,8 @@
 1. Animator Controllerにパラメータを設定
     * [Project]-[Assets]-[robotController]-[Open]を選択（**Animatorウィンドウ**が開く）
     * [Animator]-[**Parameters**]タブを選択
-    * [+]→[**Bool**]で"**isWalk**"パラメータを作成（初期値：false）
-    * [+]→[**Bool**]で"**isRun**"パラメータを作成（初期：falase）
+    * [+]→[Bool]で"**isWalk**"パラメータを作成（初期値：false）
+    * [+]→[Bool]で"**isRun**"パラメータを作成（初期：falase）
 
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/016.zip)
 
