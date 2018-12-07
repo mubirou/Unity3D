@@ -1771,7 +1771,32 @@
 <a name="016"></a>
 # <b>016 Puppet Control（セミナー用）</b>
 
-1. XXX
+1. アクション付きキャラクタの作成  
+    * [『ブレンダーからはじめよう!／原田大輔著』](https://amzn.to/2vzog2t)を参考に、①Stop ②Walk ③Runのアクション付きの[ロボット](https://mubirou.github.io/Blender/introduction/blend/013_011.blend)を作成
+    * [ファイル]-[エクスポート]-[**FBX（.fbx）**]で出力（
+    [piece.fbx](https://mubirou.github.io/Unity/introduction/fbx/ufo.fbx)）
+
+1. Blenderでミサイルを作成（[missile.blend](https://mubirou.github.io/Unity/introduction/blend/missile.blend)）
+    * [ファイル]-[エクスポート]-[**FBX（.fbx）**]で出力（[piece.fbx](https://mubirou.github.io/Unity/introduction/fbx/missile.fbx)）
+
+1. Unityで上記を読込み作業
+    * プロジェクトの[Assets]フォルダに上記のfbxファイルを保存
+    * プロジェクトの[Assets]フォルダ内に[blender]フォルダを作成し、上記のblenderファイルを保存  
+    （※本来blenderファイルは不要だがfbxファイルのマテリアルを再設定するため）
+    * [Hierarchy]に上記のオブジェクト（ufoとmissile）をドラッグ
+    * Gameビュー]のサイズを16:9（1920x1080）にする
+
+1. UFOとミサイルのマテリアルを再設定（外れている場合）
+    * [Project]-[Assets]-[ufo]-[Inspector]-[Materials]で[blue]、[red]、[white]、[yellow]が "None(Material)" になっている場合、右端の[⦿]を押し、該当のマテリアルを選択し[Apply]ボタンをクリック
+    * 同様にmissileもマテリアルを再設定する
+
+1. UFOの位置の調整
+
+
+
+
+
+
 
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/016.zip)
 
