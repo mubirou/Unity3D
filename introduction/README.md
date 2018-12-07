@@ -1814,7 +1814,8 @@
     * [Hierarchy]-[robot]-[Inspector]-[Animator]-[**Controller**]-[⦿]で上記で作成した"robotController"を選択
     * [Project]-[Assets]-[robotController]-[Inspector]-[Open]を選択（**Animatorウィンドウ**が開く）
     * [Project]-[Assets]-[robot]-[▶]の中から、①Armature|Stop ②Armature|Run ③Armature|Run を上記の[Animatorウィンドウ]にドラッグ＆ドロップ
-    * [Animatorウィンドウ]-[Armature|Stop]上で右クリック→[Maketransition]→そのまま[Armature|Walk]へドラッグ＆ドロップ（[→]を選択後[Delete]ボタンで削除可能）
+    * [Animatorウィンドウ]-[Armature|Stop]上で右クリック→[Maketransition]→そのまま[Armature|Walk]へドラッグ＆ドロップ  
+    ※[→]を選択後[Delete]ボタンで削除可能
 
 
 
