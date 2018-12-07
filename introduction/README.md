@@ -1772,7 +1772,7 @@
 # <b>016 Puppet Control（セミナー用）</b>
 
 1. アクション付きキャラクタの作成  
-    * [『ブレンダーからはじめよう!／原田大輔著』](https://amzn.to/2vzog2t)を参考に、①Stop ②Walk ③Runのアクション付きの[ロボット](https://mubirou.github.io/Blender/introduction/blend/013_011.blend)を作成
+    * [『ブレンダーからはじめよう!／原田大輔著』](https://amzn.to/2vzog2t)を参考に、①Stop ②Walk ③Runのアクション付きの[ロボット（.blend）](https://mubirou.github.io/Blender/introduction/blend/013_011.blend)を作成
     * [ファイル]-[エクスポート]-[**FBX（.fbx）**]で出力（
     [piece.fbx](https://mubirou.github.io/Unity/introduction/fbx/ufo.fbx)）
 
