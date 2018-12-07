@@ -1823,6 +1823,7 @@
     * [Project]-[Assets]-[robot]-[▶]の中から、①Armature|Stop ②Armature|Run ③Armature|Run を上記の[Animatorウィンドウ]にドラッグ＆ドロップ
     * [Animatorウィンドウ]-[Armature|Stop]上で右クリック→[Maketransition]→そのまま[Armature|Walk]へドラッグ＆ドロップ  
     ※[→]を選択後[Delete]ボタンで削除可能
+    * 下図のように①Armature|Stop ②Armature|Run ③Armature|Run を双方向で連結させる
 
     ![016_1](https://mubirou.github.io/Unity/introduction/jpg/016_1.jpg)
 
