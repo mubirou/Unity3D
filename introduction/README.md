@@ -1786,28 +1786,28 @@
     * [Hierarchy]-[Create]-[3DObject]-[Plane]
     * 位置の変更：[Hierarchy]-[Plne]-[Transform]-[Position]
 
-    |X|Y|Z|
-    |:--|:--|:--:|
-    |**0**|**0**|**0**|
+        |X|Y|Z|
+        |:--|:--|:--:|
+        |**0**|**0**|**0**|
 
     * サイズの変更：[Hierarchy]-[Plne]-[Transform]-[Scale]
 
-    |X|Y|Z|
-    |:--|:--|:--:|
-    |**10**|**10**|**10**|
+        |X|Y|Z|
+        |:--|:--|:--:|
+        |**10**|**10**|**10**|
 
 1. ロボットの位置･角度の調整
     * [Hierarchy]-[robot]-[Inspector]-[Transform]-[Position]
 
-    |X|Y|Z|
-    |:--|:--|:--:|
-    |**0**|**0**|**0**|
+        |X|Y|Z|
+        |:--|:--|:--:|
+        |**0**|**0**|**0**|
     
     * [Hierarchy]-[robot]-[Inspector]-[Transform]-[Rotation]
 
-    |X|Y|Z|
-    |:--|:--|:--:|
-    |0|**-180**|0|
+        |X|Y|Z|
+        |:--|:--|:--:|
+        |0|**-180**|0|
 
 1. カメラの位置の調整
     * [Hierarchy]-[MainCamera]-[Inspector]-[Transform]-[Position]
@@ -1849,6 +1849,13 @@
         |X|Y|Z|
         |:--|:--|:--|
         |**0.5**|**0.5**|1|
+
+    * フォントサイズの変更：[Hierarchy]-[Canvas]-[Button_Stop]-[Text]-[Inspector]-[Text]-[Character]
+
+        |Property|Value|
+        |:--|:--|
+        |FontStyle|**Bold**|
+        |FontSize|**100**|
 
 
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/016.zip)
