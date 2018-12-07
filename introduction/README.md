@@ -1772,12 +1772,10 @@
 # <b>016 Puppet Control（セミナー用）</b>
 
 1. アクション付きキャラクタの作成  
-    * [『ブレンダーからはじめよう!／原田大輔著』](https://amzn.to/2vzog2t)を参考に、①Stop ②Walk ③Runのアクション付きの[ロボット（.blend）](https://mubirou.github.io/Blender/introduction/blend/013_011.blend)を作成
+    * [『ブレンダーからはじめよう!／原田大輔著』](https://amzn.to/2vzog2t)を参考に、アクション（①Stop ②Walk ③Run）付きの[ロボット（013_011.blend）](https://mubirou.github.io/Blender/introduction/blend/013_011.blend)を作成
+    * Unityで読込んだ際に不要な、地面（平面）･Lamp･Camera･Worldを削除
     * [ファイル]-[エクスポート]-[**FBX（.fbx）**]で出力（
-    [piece.fbx](https://mubirou.github.io/Unity/introduction/fbx/ufo.fbx)）
-
-1. Blenderでミサイルを作成（[missile.blend](https://mubirou.github.io/Unity/introduction/blend/missile.blend)）
-    * [ファイル]-[エクスポート]-[**FBX（.fbx）**]で出力（[piece.fbx](https://mubirou.github.io/Unity/introduction/fbx/missile.fbx)）
+    [robot.fbx](https://mubirou.github.io/Unity/introduction/fbx/robot.fbx)）
 
 1. Unityで上記を読込み作業
     * プロジェクトの[Assets]フォルダに上記のfbxファイルを保存
