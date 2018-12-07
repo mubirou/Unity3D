@@ -1779,17 +1779,36 @@
 
 1. Unityで上記を読込み作業
     * プロジェクトの[Assets]フォルダに上記のfbxファイルを保存
-    * プロジェクトの[Assets]フォルダ内に[blender]フォルダを作成し、上記のblenderファイルを保存  
-    （※本来blenderファイルは不要だがfbxファイルのマテリアルを再設定するため）
-    * [Hierarchy]に上記のオブジェクト（ufoとmissile）をドラッグ
-    * Gameビュー]のサイズを16:9（1920x1080）にする
+    * [Hierarchy]に上記のオブジェクト（robot）をドラッグ
+    * [Gameビュー]のサイズを16:9（1920x1080）にする
 
-1. UFOとミサイルのマテリアルを再設定（外れている場合）
-    * [Project]-[Assets]-[ufo]-[Inspector]-[Materials]で[blue]、[red]、[white]、[yellow]が "None(Material)" になっている場合、右端の[⦿]を押し、該当のマテリアルを選択し[Apply]ボタンをクリック
-    * 同様にmissileもマテリアルを再設定する
+1. 床を作成  
+    * [Hierarchy]-[Create]-[3DObject]-[Plane]
+    * 位置の変更：[Hierarchy]-[Plne]-[Transform]-[Position]
 
-1. UFOの位置の調整
+    |X|Y|Z|
+    |:--|:--|:--:|
+    |**0**|**0**|**0**|
 
+    * サイズの変更：[Hierarchy]-[Plne]-[Transform]-[Scale]
+
+    |X|Y|Z|
+    |:--|:--|:--:|
+    |**10**|**10**|**10**|
+
+1. ロボットの位置･角度の調整
+
+    * [Hierarchy]-[robot]-[Inspector]-[Transform]-[Position]
+
+        |X|Y|Z|
+        |:--|:--|:--:|
+        |**0**|**0**|**0**|
+    
+    * [Hierarchy]-[robot]-[Inspector]-[Transform]-[Rotation]
+
+        |X|Y|Z|
+        |:--|:--|:--:|
+        |0|**-180**|0|
 
 
 
