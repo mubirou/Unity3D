@@ -1830,6 +1830,25 @@
     * [Hierarchy]-[robot]を選択した状態で再生ボタン[▶]で動作確認  
     ※①Stop ②Walk ③Run が連続して実行されるはずです
 
+1. STOPボタンの表示
+    * uGUIのButtonを配置：[GameObject]-[UI]-[**Button**]
+    * オブジェクト名を変更：[Inspector]の"Button"→"Button_Stop"に変更
+    * 表示文字の変更：[Hierarchy]-[Canvas]-[Button_Stop]-[Text]-[Inspector]-[Text]-[Text]を"Button"→"STOP"に変更
+    * 位置･サイズの変更：[Hierarchy]-[Canvas]-[Button_Stop]-[Inspector]-[RectTransform]
+
+        |PosX|PosY|PosZ|
+        |:--|:--|:--|
+        |**-735**|**-442**|0|
+
+        |Width|Height|
+        |:--|:--|
+        |**640**|**180**|
+
+    * スケールの変更：[Hierarchy]-[Canvas]-[Button_Stop]-[Inspector]-[RectTransform]-[Scale]
+
+        |X|Y|Z|
+        |:--|:--|:--|
+        |**0.5**|**0.5**|1|
 
 
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/016.zip)
