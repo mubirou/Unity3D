@@ -1800,19 +1800,15 @@
 
     * [Hierarchy]-[robot]-[Inspector]-[Transform]-[Position]
 
-        |X|Y|Z|
-        |:--|:--|:--:|
-        |**0**|**0**|**0**|
+    |X|Y|Z|
+    |:--|:--|:--:|
+    |**0**|**0**|**0**|
     
     * [Hierarchy]-[robot]-[Inspector]-[Transform]-[Rotation]
 
-        |X|Y|Z|
-        |:--|:--|:--:|
-        |0|**-180**|0|
-
-
-
-
+    |X|Y|Z|
+    |:--|:--|:--:|
+    |0|**-180**|0|
 
 
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/016.zip)
