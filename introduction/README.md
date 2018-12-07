@@ -1809,6 +1809,13 @@
     |:--|:--|:--:|
     |0|**-180**|0|
 
+1. カメラの位置の調整
+    * [Hierarchy]-[MainCamera]-[Inspector]-[Transform]-[Position]
+
+        |X|Y|Z|
+        |:--|:--|:--:|
+        |0|**2.75**|-10|
+
 1. ロボットを先ずはとにかく動かしてみる
     * [Project]-[Create]-[**Animator Controller**]を選択（名前は"robotController"にする）
     * [Hierarchy]-[robot]-[Inspector]-[Animator]-[**Controller**]-[⦿]で上記で作成した"robotController"を選択
@@ -1816,6 +1823,10 @@
     * [Project]-[Assets]-[robot]-[▶]の中から、①Armature|Stop ②Armature|Run ③Armature|Run を上記の[Animatorウィンドウ]にドラッグ＆ドロップ
     * [Animatorウィンドウ]-[Armature|Stop]上で右クリック→[Maketransition]→そのまま[Armature|Walk]へドラッグ＆ドロップ  
     ※[→]を選択後[Delete]ボタンで削除可能
+
+    ![016_1](https://mubirou.github.io/Unity/introduction/jpg/016_1.jpg)
+
+    * 再生ボタン[▶]で動作確認
 
 
 
