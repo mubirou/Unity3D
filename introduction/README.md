@@ -1812,6 +1812,7 @@
 1. ロボットを先ずはとにかく動かす
     * [Project]-[Create]-[**Animator Controller**]を選択（名前は"robotController"にする）
     * [Hierarchy]-[robot]-[Inspector]-[Animator]-[**Controller**]-[⦿]で上記で作成した"robotController"を選択
+    * [Project]-[Assets]-[robotController]-[Inspector]-[Open]を選択
 
 
 
