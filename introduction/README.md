@@ -1827,7 +1827,8 @@
 
     ![016_1](https://mubirou.github.io/Unity/introduction/jpg/016_1.jpg)
 
-    * 再生ボタン[▶]で動作確認
+    * [Hierarchy]-[robot]を選択した状態で再生ボタン[▶]で動作確認  
+    ※①Stop ②Walk ③Run が連続して実行されるはずです
 
 
 
