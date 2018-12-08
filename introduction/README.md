@@ -1875,12 +1875,12 @@
 1. Animator Controllerにパラメータを設定
     * [Project]-[Assets]-[robotController]-[Open]を選択（**Animatorウィンドウ**が開く）
     * [Animator]-[**Parameters**]タブを選択
-    * [+]→[Bool]で"**isWalk**"パラメータを作成（初期値：false）
-    * [+]→[Bool]で"**isRun**"パラメータを作成（初期：falase）
+    * [+]→[Bool]で "**isWalk**" パラメータを作成（初期値：✔なし = false）
+    * [+]→[Bool]で "**isRun**" パラメータを作成（初期：✔なし）
 
 1. 遷移（①Stop↔②Walk↔③Run等）の条件を設定
     1. ①Stop→②Walk
-        * [→]を選択し[Inspector]-[**Conditions**]-[+]を選択
+        * ①Stop ②Walk 間の [→] を選択し [Inspector]-[**Conditions**]-[+] を選択
         * [**isWalk**]：**true**
         * [**isRun**]：**true**
 
