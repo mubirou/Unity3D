@@ -1914,6 +1914,75 @@
     * [Assets]-[Create]-[C# Script]で名前は"RunButton"（**RunButton.cs**）とする
     * STOPボタン同様に、[Button_Walk]にC#（**WalkButton.cs**）を、[Button_Run]にC#（**RunButton.cs**）をアタッチ
 
+1. スクリプト（**StopButton.cs**）の記述
+    ```
+    //StopButton.cs
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+
+    public class StopButton : MonoBehaviour {
+        private GameObject _robot;
+        private Animator _robotAnim;
+
+        void Start () {
+            _robot = GameObject.Find("robot");
+            _robotAnim = _robot.GetComponent<Animator>();
+        }
+        
+        public void OnClick() {
+            _robotAnim.SetBool("isWalk", false);
+            _robotAnim.SetBool("isRun", false);
+        }
+    }
+    ```
+
+1. スクリプト（**WalkButton.cs**）の記述
+    ```
+    //WalkButton.cs
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+
+    public class WalkButton : MonoBehaviour {
+        private GameObject _robot;
+        private Animator _robotAnim;
+
+        void Start () {
+            _robot = GameObject.Find("robot");
+            _robotAnim = _robot.GetComponent<Animator>();
+        }
+        
+        public void OnClick() {
+            _robotAnim.SetBool("isWalk", true);
+            _robotAnim.SetBool("isRun", false);
+        }
+    }
+    ```
+
+1. スクリプト（**RunButton.cs**）の記述
+    ```
+    //RunButton.cs
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+
+    public class RunButton : MonoBehaviour {
+        private GameObject _robot;
+        private Animator _robotAnim;
+
+        void Start () {
+            _robot = GameObject.Find("robot");
+            _robotAnim = _robot.GetComponent<Animator>();
+        }
+        
+        public void OnClick() {
+            _robotAnim.SetBool("isWalk", false);
+            _robotAnim.SetBool("isRun", true);
+        }
+    }
+    ```
+
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/016.zip)
 
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
