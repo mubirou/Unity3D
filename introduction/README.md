@@ -1909,7 +1909,7 @@
     * [Assets]-[Create]-[C# Script]で名前は"StopButton"とする
     * [Hierarchy]-[Canvas]-[Button_Stop]-[Inspector]-[Button(Script)]の直下に、上記のC#（**StopButton.cs**）をドラッグ（アタッチ）
 
-1. WALK･RUNボタン用スクリプト（**StopButton.cs** / **RunButton.cs**）の用意
+1. WALK･RUNボタン用スクリプト（**WalkButton.cs** / **RunButton.cs**）の用意
     * [Assets]-[Create]-[C# Script]で名前は"WalkButton"（**WalkButton.cs**）とする
     * [Assets]-[Create]-[C# Script]で名前は"RunButton"（**RunButton.cs**）とする
     * STOPボタン同様に、[Button_Walk]にC#（**WalkButton.cs**）を、[Button_Run]にC#（**RunButton.cs**）をアタッチ
