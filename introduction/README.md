@@ -1905,6 +1905,15 @@
         * [**isWalk**]：false
         * [**isRun**]：false
 
+1. STOPボタン用スクリプト（StopButton.cs）の用意
+    * [Assets]-[Create]-[C# Script]で名前は"StopButton"とする
+    * [Hierarchy]-[Canvas]-[Button_Stop]-[Inspector]-[Button(Script)]の直下に、上記のC#（**StopButton.cs**）をドラッグ（アタッチ）
+
+1. WALK･RUNボタン用スクリプトの用意
+    * [Assets]-[Create]-[C# Script]で名前は"WalkButton"（**WalkButton.cs**）とする
+    * [Assets]-[Create]-[C# Script]で名前は"RunButton"（**RunButton.cs**）とする
+    * STOPボタン同様に、[Button_Walk]にC#（**WalkButton.cs**）を、[Button_Run]にC#（**RunButton.cs**）をアタッチ
+
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/016.zip)
 
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
