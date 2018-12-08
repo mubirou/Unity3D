@@ -2007,13 +2007,15 @@
 1. アニメーションをループさせる
     * [Project]-[Assets]-[robot]-[▶]-[Armature|**Walk**]-[Edit...]を選択
     * [Inspector]-[Animation]-[**Loop Time**]を✔
-    * 同様に[Armature|**Run**]の[**Loop Time**]も✔
+    * 同様に[Armature|**Run**]の[Loop Time]も✔
+
+1. [再生]ボタンを押すか、[出力](#出力)して確認
 
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/016.zip)
 
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
-作成日：2018年XX月XX日
+作成日：2018年12月08日
 
 
 © 2018 夢寐郎
