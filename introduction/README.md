@@ -1999,6 +1999,16 @@
     * [None（Object）]-[⦿]→[**Scebeタブ**]-[Button_Run]をダブルクリック
     * [NoFunction]→[RunButton]-[OnClick]を選択（**RunButton.OnClick**と表示される）
 
+1. 再生テスト
+    * [Hierarchy]-[robot]を選択した状態で再生ボタン[▶]で動作確認
+    * ①Stop ②Walk ③Run を選択
+    * ②Walk ③Run の動きがループしません
+
+1. アニメーションをループさせる
+    * [Project]-[Assets]-[robot]-[▶]-[Armature|**Walk**]-[Edit...]を選択
+    * [Inspector]-[Animation]-[**Loop Time**]を✔
+    * 同様に[Armature|**Run**]の[**Loop Time**]も✔
+
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/016.zip)
 
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
