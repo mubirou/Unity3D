@@ -1983,6 +1983,22 @@
     }
     ```
 
+1. OnClick()メソッドの有効化（STOPボタン用）
+    * [Hierarchy]-[Canvas]-[Button_Stop]-[Inspector]-[Button]-[OnClick()]-[+]を選択
+    * [None（Object）]-[⦿]→[**Scebeタブ**]-[Button_Stop]をダブルクリック
+    * [NoFunction]→[StopButton]-[OnClick]を選択（**StopButton.OnClick**と表示される）
+    ![016_3](https://mubirou.github.io/Unity/introduction/jpg/016_3.jpg)
+
+1. OnClick()メソッドの有効化（WALKボタン用）
+    * [Hierarchy]-[Canvas]-[Button_Walk]-[Inspector]-[Button]-[OnClick()]-[+]を選択
+    * [None（Object）]-[⦿]→[**Scebeタブ**]-[Button_Walk]をダブルクリック
+    * [NoFunction]→[WalkButton]-[OnClick]を選択（**WalkButton.OnClick**と表示される）
+
+1. OnClick()メソッドの有効化（RUNボタン用）
+    * [Hierarchy]-[Canvas]-[Button_Run]-[Inspector]-[Button]-[OnClick()]-[+]を選択
+    * [None（Object）]-[⦿]→[**Scebeタブ**]-[Button_Run]をダブルクリック
+    * [NoFunction]→[RunButton]-[OnClick]を選択（**RunButton.OnClick**と表示される）
+
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/016.zip)
 
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
