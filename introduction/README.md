@@ -1771,13 +1771,13 @@
 <a name="016"></a>
 # <b>016 Puppet Control（セミナー用）</b>
 
-1. アクション付きキャラクタの作成  
+1. アクション付きロボットの作成  
     * [『ブレンダーからはじめよう!／原田大輔著』](https://amzn.to/2vzog2t)を参考に、アクション（①Stop ②Walk ③Run）付きの[ロボット（.blend）](https://mubirou.github.io/Blender/introduction/blend/013_011.blend)を作成
     * Unityで読込んだ際に不要な、地面（平面）･Lamp･Camera･Worldを削除
     * [ファイル]-[エクスポート]-[**FBX（.fbx）**]で出力（
     [robot.fbx](https://mubirou.github.io/Unity/introduction/fbx/robot.fbx)）
 
-1. Unityで上記を読込み作業
+1. Unityにロボットを読込む
     * プロジェクトの[Assets]フォルダに上記のfbxファイルを保存
     * [Hierarchy]に上記のオブジェクト（robot）をドラッグ
     * [Gameビュー]のサイズを16:9（1920x1080）にする
@@ -1816,7 +1816,7 @@
         |:--|:--|:--:|
         |0|**2.75**|-10|
 
-1. ロボットを先ずはとにかく動かしてみる
+1. ロボットを動かしてみる
     * [Project]-[Create]-[**Animator Controller**]を選択（名前は"robotController"にする）
     * [Hierarchy]-[robot]-[Inspector]-[Animator]-[**Controller**]-[⦿]で上記で作成した"robotController"を選択
     * [Project]-[Assets]-[robotController]-[Inspector]-[Open]を選択（**Animatorウィンドウ**が開く）
