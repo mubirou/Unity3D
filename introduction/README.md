@@ -1882,7 +1882,7 @@
     1. ①Stop→②Walk
         * ①Stop ②Walk 間の [→] を選択し [Inspector]-[**Conditions**]-[+] を選択（以下同様）
         * [**isWalk**]：**true**
-        * [**isRun**]：false
+        * [**isRun**]：false  
         ![016_2](https://mubirou.github.io/Unity/introduction/jpg/016_2.jpg)
     
     1. ②Walk→③Run
