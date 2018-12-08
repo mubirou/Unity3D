@@ -1880,9 +1880,29 @@
 
 1. 遷移（①Stop↔②Walk↔③Run等）の条件を設定
     1. ①Stop→②Walk
-        * ①Stop ②Walk 間の [→] を選択し [Inspector]-[**Conditions**]-[+] を選択
+        * ①Stop ②Walk 間の [→] を選択し [Inspector]-[**Conditions**]-[+] を選択（以下同様）
         * [**isWalk**]：**true**
+        * [**isRun**]：false
+    
+    1. ②Walk→③Run
+        * [**isWalk**]：false
         * [**isRun**]：**true**
+
+    1. ③Run→①Stop
+        * [**isWalk**]：false
+        * [**isRun**]：false
+    
+    1. ①Stop→③Run
+        * [**isWalk**]：false
+        * [**isRun**]：**true**
+    
+    1. ③Run→②Walk
+        * [**isWalk**]：**true**
+        * [**isRun**]：false
+
+    1. ②Walk→①Stop
+        * [**isWalk**]：false
+        * [**isRun**]：false
 
 制作途中のプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/016.zip)
 
