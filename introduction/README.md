@@ -1986,7 +1986,7 @@
 1. OnClick()メソッドの有効化（STOPボタン用）
     * [Hierarchy]-[Canvas]-[Button_Stop]-[Inspector]-[Button]-[OnClick()]-[+]を選択
     * [None（Object）]-[⦿]→[**Scebeタブ**]-[Button_Stop]をダブルクリック
-    * [NoFunction]→[StopButton]-[OnClick]を選択（**StopButton.OnClick**と表示される）
+    * [NoFunction]→[StopButton]-[OnClick]を選択（**StopButton.OnClick**と表示される）  
     ![016_3](https://mubirou.github.io/Unity/introduction/jpg/016_3.jpg)
 
 1. OnClick()メソッドの有効化（WALKボタン用）
