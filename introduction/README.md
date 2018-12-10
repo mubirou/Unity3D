@@ -596,7 +596,7 @@ for Seminar
 * 頁数は [『現場ですぐに使える! Unity 2018 逆引き大全 300の極意／薬師寺国安著』](https://amzn.to/2KuNW69) のページです。  
 * .apk はAndroid端末へのインストール用です。  
 
-|No.|内容|Tips番号|WebGL|.apk|project|参考サイト|LastUpdate|
+|No.|内容|Tips番号|WebGL|.apk|project|参考サイト|更新日|
 |:--|:--|:--:|:--:|:--:|:--:|:--:|:--:|
 |001|[Unityのエディション](#Unityのエディション)|004|－|－|－|[●](https://store.unity.com/ja)|2018-06-29|
 |002|[Asset Store保存場所](#AssetStore保存場所)|007|－|－|－|－|2018-06-29|
