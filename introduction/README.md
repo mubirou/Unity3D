@@ -600,7 +600,7 @@ for Seminar
 |:--|:--|:--:|:--:|:--:|:--:|:--:|:--:|
 |001|[Unityのエディション](#Unityのエディション)|004|－|－|－|[●](https://store.unity.com/ja)|2018-06-29|
 |002|[Asset Store保存場所](#AssetStore保存場所)|007|－|－|－|－|2018-06-29|
-|003|[Editorの設定](#Editorの設定)|008|－|－|－|－|2018-06-29|
+|003|[Editorの設定](#Editorの設定)|008|－|－|－|－|2018-12-10|
 |004|[マテリアルに画像を指定](#マテリアルに画像を指定)|022･023|－|[●](https://mubirou.github.io/Unity/introduction/apk/009_004.apk)|－|－|2018-06-29|
 |005|[空の背景の変更](#空の背景の変更)|028|－|－|－|－|2018-07-01|
 |006|[床を鏡のようにする](#床を鏡のようにする)|031|－|[●](https://mubirou.github.io/Unity/introduction/apk/009_006.apk)|－|[●](http://corevale.com/unity/923)|2018-07-02|
@@ -631,7 +631,7 @@ for Seminar
 ```
 /usr/share/code/code
 ```
-従来付属していた「MonoDevelop」はサポートされなくなる
+従来付属していた「MonoDevelop」はサポートされない（Unity 2018.1〜）
 
 <a name="マテリアルに画像を指定"></a>
 ### 004 マテリアルに画像を指定
