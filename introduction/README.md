@@ -28,6 +28,7 @@ for Seminar
 |014|[UFO Shooting](#014)|衝突判定･パーティクルを使用|－|[●](#014)|－|－|
 |015|[Timeline Anime](#015)|Animation･Timelineを使ったアニメーション|－|－|[●](#015)|－|
 |016|[Puppet Control](#016)|アクション付の3Dモデルのコントロール|－|[●](#016)|－|－|
+|017|[XXXX](#017)|XXXX|－|[●](#017)|－|－|
 ***
 
 <a name="プリミティブ･オブジェクト"></a>
@@ -2022,5 +2023,12 @@ for Seminar
 作成者：夢寐郎  
 作成日：2018年12月08日
 
+
+<a name="017"></a>
+# <b>017 XXXX</b>
+
+1. Blenderで3つの[ポージング付きのスタンドライト](https://github.com/mubirou/Blender/tree/master/introduction#016_002)を作成  
+1. Blenderで出力した[.fbxファイル](https://mubirou.github.io/Unity/introduction/fbx/standlight.fbx)を、Unityのプロジェクタの[Assets]フォルダに保存
+1. XXX
 
 © 2018 夢寐郎
