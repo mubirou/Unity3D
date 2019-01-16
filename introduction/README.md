@@ -2029,6 +2029,6 @@ for Seminar
 
 1. Blenderで3つの[ポージング付きのスタンドライト](https://github.com/mubirou/Blender/tree/master/introduction#016_002)を作成  
 1. Blenderで出力した[.fbxファイル](https://mubirou.github.io/Unity/introduction/fbx/standlight.fbx)を、Unityのプロジェクタの[Assets]フォルダに保存
-1. XXX
+1. XXXX
 
 © 2018 夢寐郎
