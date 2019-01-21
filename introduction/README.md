@@ -28,6 +28,7 @@ for Seminar
 |014|[UFO Shooting](#014)|衝突判定･パーティクルを使用|－|[●](#014)|－|－|
 |015|[Timeline Anime](#015)|Animation･Timelineを使ったアニメーション|－|－|[●](#015)|－|
 |016|[Puppet Control](#016)|アクション付の3Dモデルのコントロール|－|[●](#016)|－|－|
+|017|[XXXX](#017)|XXXX|－|－|－|－|
 ***
 
 <a name="プリミティブ･オブジェクト"></a>
@@ -2021,5 +2022,16 @@ for Seminar
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
 作成日：2018年12月08日
+
+
+<a name="017"></a>
+# <b>017 XXXX</b>
+
+1. XXXX
+1. [Project]-[Assets]に現れた.fbxファイルを[Hierarchy]にドラッグ＆ドロップ
+1. [Project]-[Assets]に現れた.fbxファイルを選択
+1. [Inspector]-[Rig]-[AnimationType]を[Generic]→[Humanoid]に変更
+1. [Apply]（適用）を選択→[Configure...]を選択
+1. XXXX
 
 © 2018 夢寐郎
