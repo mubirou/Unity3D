@@ -2027,7 +2027,21 @@ for Seminar
 <a name="017"></a>
 # <b>017 XXXX</b>
 
+#### ◆FBXエクスポートの準備
+
+1. [オブジェクトモード]で[アーマチュア]を選択
+1. [ビュー]-[プロパティ]を開く
+1. [トランスフォーム]-[回転]を調整  
+    * X：**-90**°
+    * Y：0°
+    * Z：0°
+1. [オブジェクト]-[適用]-[回転]を選択  
+    ※上記のXの値が0になる
+
 1. XXXX
+
+#### ◆XXXXX
+
 1. [Project]-[Assets]に現れた.fbxファイルを[Hierarchy]にドラッグ＆ドロップ
 1. [Project]-[Assets]に現れた.fbxファイルを選択
 1. [Inspector]-[Rig]-[AnimationType]を[Generic]→[Humanoid]に変更
