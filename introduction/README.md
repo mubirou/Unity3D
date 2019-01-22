@@ -1668,7 +1668,7 @@ for Seminar
 
 1. [再生]ボタンを押すか、[出力](#出力)して確認
 
-完成したAndroid用インストーラ（apkファイル）は[こちら](https://mubirou.github.io/Unity/introduction/apk/014.apk)
+※完成したAndroid用インストーラ（apkファイル）は[こちら](https://mubirou.github.io/Unity/introduction/apk/014.apk)
 
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
@@ -1766,7 +1766,7 @@ for Seminar
     * ループさせる場合は[Hierarchy]-[CubeAll]-[Inspector]-[PlayableDirector]-[WrapMode]を[Loop]にする
 
 
-完成したプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/015_1.zip)（Animation版）
+※完成したプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/015_1.zip)（Animation版）
 と[こちら](https://mubirou.github.io/Unity/introduction/project/015_2.zip)（Timeline版）
 
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
@@ -2017,7 +2017,7 @@ for Seminar
 
 1. [再生]ボタンを押すか、[出力](#出力)して確認
 
-完成インストールファイル（Android用.apkファイル）は[こちら](https://mubirou.github.io/Unity/introduction/apk/016.apk)
+※完成インストールファイル（Android用.apkファイル）は[こちら](https://mubirou.github.io/Unity/introduction/apk/016.apk)
 
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
@@ -2043,7 +2043,7 @@ for Seminar
 1. [Muscles&Settings]を選択し各スライダーバーを動かしてポージングできれば成功  
     ![017_2](https://mubirou.github.io/Unity/introduction/jpg/017_2.jpg)  
 
-参考プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/017.zip)
+※参考プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/017.zip)
 
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
