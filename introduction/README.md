@@ -28,7 +28,7 @@ for Seminar
 |014|[UFO Shooting](#014)|衝突判定･パーティクルを使用|－|[●](#014)|－|－|
 |015|[Timeline Anime](#015)|Animation･Timelineを使ったアニメーション|－|－|[●](#015)|－|
 |016|[Puppet Control](#016)|アクション付の3Dモデルのコントロール|－|[●](#016)|－|－|
-|017|[XXXX](#017)|XXXX|－|－|－|－|
+|017|[Humanoid](#017)|Blenderからの連携|－|[●](#017)|－|－|
 ***
 
 <a name="プリミティブ･オブジェクト"></a>
@@ -2025,7 +2025,7 @@ for Seminar
 
 
 <a name="017"></a>
-# <b>017 XXXX</b>
+# <b>017 Humanoid</b>
 
 #### ◆XXXXX
 
