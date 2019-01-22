@@ -2037,8 +2037,8 @@ for Seminar
 1. [Project]-[Assets]-[human]を選択
 1. [Inspector]-[Rig]-[AnimationType]を[Generic]→[Humanoid]に変更
 1. [Apply]（適用）を選択→[Configure...]を選択  
-    ![017_1](https://mubirou.github.io/Unity/introduction/jpg/017_1.jpg)
-    ※Blenderと名前が一致していれば図の通りになります
+    ![017_1](https://mubirou.github.io/Unity/introduction/jpg/017_1.jpg)  
+    ※Blenderと名前が一致していれば図の通りになります  
     ※今回は[Head][LeftHand][RightHand]は省略
 1. XXXX
 
