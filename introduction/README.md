@@ -2038,8 +2038,15 @@ for Seminar
 1. [Inspector]-[Rig]-[AnimationType]を[Generic]→[Humanoid]に変更
 1. [Apply]（適用）を選択→[Configure...]を選択  
     ![017_1](https://mubirou.github.io/Unity/introduction/jpg/017_1.jpg)  
-    ※Blenderと名前が一致していれば図の通りになります  
+    ※Blenderと名前が一致していれば上図の通りになります  
     ※今回は[Head][LeftHand][RightHand]は省略
-1. XXXX
+1. [Muscles&Settings]を選択し各スライダーバーを動かしてポージングできれば成功  
+    ![017_2](https://mubirou.github.io/Unity/introduction/jpg/017_2.jpg)  
+
+参考プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/017.zip)
+
+実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
+作成者：夢寐郎  
+作成日：2019年01月22日
 
 © 2018 夢寐郎
