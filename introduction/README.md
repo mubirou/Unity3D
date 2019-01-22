@@ -2033,8 +2033,8 @@ for Seminar
 
 #### ◆人間型オブジェクトのHumanoid化
 
-1. [Project]-[Assets]に現れた.fbxファイルを[Hierarchy]にドラッグ＆ドロップ
-1. [Project]-[Assets]に現れた.fbxファイルを選択
+1. [Project]-[Assets]に現れた[human.fbx]を[Hierarchy]にドラッグ＆ドロップ
+1. [Project]-[Assets]-[human]を選択
 1. [Inspector]-[Rig]-[AnimationType]を[Generic]→[Humanoid]に変更
 1. [Apply]（適用）を選択→[Configure...]を選択
 1. XXXX
