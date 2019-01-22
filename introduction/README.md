@@ -2027,7 +2027,11 @@ for Seminar
 <a name="017"></a>
 # <b>017 Humanoid</b>
 
-#### ◆XXXXX
+#### ◆FBXファイルの読み込み
+
+1. [Blenderで作成](https://github.com/mubirou/Blender/tree/master/introduction#016_003)した[.fbx](https://mubirou.github.io/Unity/introduction/fbx/human.fbx)ファイルをUnityの[Assets]フォルダにコピーする
+
+1. 
 
 1. [Project]-[Assets]に現れた.fbxファイルを[Hierarchy]にドラッグ＆ドロップ
 1. [Project]-[Assets]に現れた.fbxファイルを選択
