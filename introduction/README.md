@@ -2101,7 +2101,7 @@ for Seminar
 
     ※ここまでの参考ファイル（.blend）は[こちら](https://mubirou.github.io/Unity/introduction/blend/018_humanoid_export.blend) 
 
-1.FBXエクスポート
+1. FBXエクスポート
     1. Blender上で[ファイル]-[エクスポート]-[FBX（.fbx）]を選択
     1. [FBXをエクスポート]設定で[アーマチュア][メッシュ]のみ選択  
 
