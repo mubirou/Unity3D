@@ -2061,6 +2061,8 @@ for Seminar
     ![018_1](https://mubirou.github.io/Unity/introduction/jpg/018_1.jpg)  
     ※ここまでのBlenderファイル（.blend）は[こちら](https://mubirou.github.io/Unity/introduction/blend/018_humanoid_edit.blend)  
 
-1. XXXX
+1. Blender上で[細分化]を適用  
+    ![018_1](https://mubirou.github.io/Unity/introduction/jpg/018_2.jpg)  
+    ※ここまでのBlenderファイル（.blend）は[こちら](https://mubirou.github.io/Unity/introduction/blend/018_humanoid_fix.blend) 
 
 © 2018-2019 夢寐郎
