@@ -2063,7 +2063,7 @@ for Seminar
 
 1. Blender上で[細分化]を適用  
     ![018_2](https://mubirou.github.io/Unity/introduction/jpg/018_2.jpg)  
-    ※ここまでのBlenderファイル（.blend）は[こちら](https://mubirou.github.io/Unity/introduction/blend/018_humanoid_fix.blend) 
+    ※ここまでのBlenderファイル（.blend）は[こちら](https://mubirou.github.io/Unity/introduction/blend/018_humanoid_fix.blend)
 
 1. Blenderのヘッダ部分に表示されている三角面が**5000**ポリゴン以下（推奨）になっているか確認（上部のオブジェクトは2,838ポリゴン）
 
@@ -2099,7 +2099,7 @@ for Seminar
             * Y：**0**°
             * Z：**0**°
 
-    ※ここまでの参考ファイル（.blend）は[こちら](https://mubirou.github.io/Unity/introduction/blend/018_humanoid_export.blend) 
+    ※ここまでの参考ファイル（.blend）は[こちら](https://mubirou.github.io/Unity/introduction/blend/018_humanoid_export.blend)
 
 1. FBXエクスポート
     1. Blender上で[ファイル]-[エクスポート]-[FBX（.fbx）]を選択
