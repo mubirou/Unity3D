@@ -2056,7 +2056,7 @@ for Seminar
 
 #### ◆Blenderで編集
 
-1. [Blenderで作成](https://github.com/mubirou/Blender/tree/master/introduction#014_009)したものにアーマチュアを設定し調整する
+1. [Blenderで作成](https://github.com/mubirou/Blender/tree/master/introduction#014_009)したものにアーマチュアを設定し調整する  
     ※ここまでのBlenderファイル（.blend）は[こちら](https://mubirou.github.io/Unity/introduction/blend/018_humanoid_edit.blend)  
 
 1. XXXX
