@@ -29,6 +29,7 @@ for Seminar
 |015|[Timeline Anime](#015)|Animation･Timelineを使ったアニメーション|－|－|[●](#015)|－|
 |016|[Puppet Control](#016)|アクション付の3Dモデルのコントロール|－|[●](#016)|－|－|
 |017|[Humanoid](#017)|Blenderからの連携の基本（人間型）|－|－|[●](#017)|－|
+|018|[XXXX](#018)|XXXXX|－|－|[●](#018)|－|
 ***
 
 <a name="プリミティブ･オブジェクト"></a>
@@ -2048,5 +2049,16 @@ for Seminar
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
 作成日：2019年01月22日
+
+
+<a name="018"></a>
+# <b>018 XXXX</b>
+
+#### ◆Blenderで編集
+
+1. [Blenderで作成](https://github.com/mubirou/Blender/tree/master/introduction#014_009)したものにアーマチュアを設定し調整する
+    ※ここまでのBlenderファイル（.blend）は[こちら](https://mubirou.github.io/Unity/introduction/blend/018_humanoid_edit.blend)  
+
+1. XXXX
 
 © 2018-2019 夢寐郎
