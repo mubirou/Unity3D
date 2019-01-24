@@ -2062,7 +2062,7 @@ for Seminar
     ※ここまでのBlenderファイル（.blend）は[こちら](https://mubirou.github.io/Unity/introduction/blend/018_humanoid_edit.blend)  
 
 1. Blender上で[細分化]を適用  
-    ![018_1](https://mubirou.github.io/Unity/introduction/jpg/018_2.jpg)  
+    ![018_2](https://mubirou.github.io/Unity/introduction/jpg/018_2.jpg)  
     ※ここまでのBlenderファイル（.blend）は[こちら](https://mubirou.github.io/Unity/introduction/blend/018_humanoid_fix.blend) 
 
 1. Blenderのヘッダ部分に表示されている三角面が**5000**ポリゴン以下（推奨）になっているか確認（上部のオブジェクトは2,838ポリゴン）
