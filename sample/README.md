@@ -11,7 +11,7 @@
 <a name="001"></a>
 ### 001 キャラクター（9ポーズ）制御
 
-アニメーターコントローラー（[Project]-[Create]-[AnimatorController]）  
+アニメーターコントローラーの作成（[Project]-[Create]-[AnimatorController]）  
 ![sample001_01](https://mubirou.github.io/Unity/sample/jpg/sample001_01.jpg)  
 
 パラメーターの設定（[AnimatorController]-[open]-[Parameters]）
