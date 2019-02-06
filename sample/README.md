@@ -11,21 +11,21 @@
 <a name="001"></a>
 ### 001 キャラクター（9ポーズ）制御
 
-アニメーターコントローラーの作成（[Project]-[Create]-[AnimatorController]）  
+1. アニメーターコントローラーの作成（[Project]-[Create]-[AnimatorController]）  
 ![sample001_01](https://mubirou.github.io/Unity/sample/jpg/sample001_01.jpg)  
 
-パラメーターの設定（[AnimatorController]-[open]-[Parameters]）  
+1. パラメーターの設定（[AnimatorController]-[open]-[Parameters]）  
 ![sample001_02](https://mubirou.github.io/Unity/sample/jpg/sample001_02.jpg)  
 
-遷移条件の設定（ポーズ間の[→]-[Inspector]-[Conditions]）  
+1. 遷移条件の設定（ポーズ間の[→]-[Inspector]-[Conditions]）  
 ![sample001_03](https://mubirou.github.io/Unity/sample/jpg/sample001_03.jpg)  
 
-ボタンの配置（[Hierarchy]-[Create]-[UI]-[Button]）  
+1. ボタンの配置（[Hierarchy]-[Create]-[UI]-[Button]）  
 ![sample001_04](https://mubirou.github.io/Unity/sample/jpg/sample001_04.jpg)  
 ※ボタン以外の文字はTextMesh-Pro（[Hierarychy]-[Create]-[UI]-[TextMesh-Pro]）を使用  
 ※フォントは[1001 FREE FONTS](https://www.1001freefonts.com/)を利用
 
-各ポーズ用のスクリプトを記述（[Assets]-[Create]-[C#Script]）
+1. 各ポーズ用のスクリプトを記述（[Assets]-[Create]-[C#Script]）
 ```
 //ActionButton.cs
 using System.Collections;
