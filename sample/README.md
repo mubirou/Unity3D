@@ -13,7 +13,7 @@
 
 #### ◆アニメーターコントローラー
 
-* [Project]-[Create]-[AnimatorController]から設定
+* [Project]-[Create]-[AnimatorController]
 
 ![sample001_01](https://mubirou.github.io/Unity/sample/jpg/sample001_01.jpg)  
 
