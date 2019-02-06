@@ -24,7 +24,7 @@
 ![sample001_04](https://mubirou.github.io/Unity/sample/jpg/sample001_04.jpg)  
 ボタン以外の文字はTextMesh-Pro（[Hierarychy]-[Create]-[UI]-[TextMesh-Pro]）を使用  
 
-XXXX
+XXXX  
 
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
