@@ -17,7 +17,7 @@
 1. パラメーターの設定（[AnimatorController]-[open]-[Parameters]）  
 ![sample001_02](https://mubirou.github.io/Unity/sample/jpg/sample001_02.jpg)  
 
-1. 遷移条件の設定（ポーズ間の[→]-[Inspector]-[Conditions]）  
+1. 遷移条件の設定（ポーズ間の[→]-[Inspector]-[Conditions]）👈72x2+α本必要  
 ![sample001_03](https://mubirou.github.io/Unity/sample/jpg/sample001_03.jpg)  
 
 1. ボタンの配置（[Hierarchy]-[Create]-[UI]-[Button]）  
