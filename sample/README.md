@@ -11,6 +11,8 @@
 <a name="001"></a>
 ### 001 キャラクター（9ポーズ）制御
 
+1. [モデリング＆アニメーション](https://github.com/mubirou/Blender/tree/master/sample#001)
+
 1. アニメーターコントローラーの作成（[Project]-[Create]-[AnimatorController]）  
 ![sample001_01](https://mubirou.github.io/Unity/sample/jpg/sample001_01.jpg)  
 
