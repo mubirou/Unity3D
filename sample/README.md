@@ -88,6 +88,76 @@
     }
     ```
 
+1. RANDOM用のスクリプトを記述（[Assets]-[Create]-[C#Script]）
+    ```
+    //RandomButton.cs
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+    using UnityEngine.UI; //for Button
+
+    public class RandomButton : MonoBehaviour {
+        private GameObject _mubirou;
+        private Animator _mubirouAnim;
+        private List<string> _poseList 
+        = new List<string>() {"Idle","Fly","Jump","Run","Walk","Rove","Death","Break","Attack"};
+
+        void Start () {
+            _mubirou = GameObject.Find("mubirou");
+            _mubirouAnim = _mubirou.GetComponent<Animator>();
+        }
+        
+        public void OnClick() {
+            _mubirouAnim.SetBool("isIdle", false);
+            _mubirouAnim.SetBool("isFly", false);
+            _mubirouAnim.SetBool("isJump", false);
+            _mubirouAnim.SetBool("isRun", false);
+            _mubirouAnim.SetBool("isWalk", false);
+            _mubirouAnim.SetBool("isRove", false);
+            _mubirouAnim.SetBool("isDeath", false);
+            _mubirouAnim.SetBool("isBreak", false);
+            _mubirouAnim.SetBool("isAttack", false);
+            
+            //現在再生中のアニメーションクリップ名（"アーマチュア|Idle"など）
+            string _currentClipName = _mubirouAnim.GetCurrentAnimatorClipInfo(0)[0].clip.name;
+
+            //アニメーションクリップ名から余計な文字（"アーマチュア|"）を除く
+            string _currentPoseName = _currentClipName.Substring(7);
+
+            //次のポーズをランダムに決める（"Walk"など）
+            string _nextPoseName = _poseList[Random.Range(0,_poseList.Count)];
+
+            //現在再生中のポーズと次のポーズが別になるようにする
+            while (_currentPoseName == _nextPoseName) {
+                _nextPoseName = _poseList[Random.Range(0,_poseList.Count)];
+            }
+
+            //ポーズの変更
+            _mubirouAnim.SetBool("is" + _nextPoseName, true);
+
+            //ボタンの色の変更
+            GameObject _canvas = GameObject.Find("Canvas");
+            foreach (Transform _child in _canvas.transform){
+                //選択したポーズボタンを#FFCC00に変更
+                if(_child.name == "Button_" + _nextPoseName){
+                    Button _nextButton = _child.gameObject.GetComponent<Button>();
+                    ColorBlock _colors = _nextButton.colors;
+                    _colors.normalColor = new Color(1.0f, 0.8f, 0.0f, 1.0f);
+                    _nextButton.colors = _colors;
+                } else {
+                    if (_child.name != "Button_Random"){
+                        //その他のボタンを#FFFFFFに戻す
+                        Button _otherButton = _child.gameObject.GetComponent<Button>();
+                        ColorBlock _colors = _otherButton.colors;
+                        _colors.normalColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+                        _otherButton.colors = _colors;
+                    }
+                }
+            }
+        }
+    }
+    ```
+
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
 作成日：2019年02月XX日
