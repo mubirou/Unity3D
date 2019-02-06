@@ -15,7 +15,7 @@
 
 * [Project]-[Create]-[AnimatorController]
 
-![sample001_01](https://mubirou.github.io/Unity/sample/jpg/sample001_01.jpg)  
+    ![sample001_01](https://mubirou.github.io/Unity/sample/jpg/sample001_01.jpg)  
 
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
