@@ -11,8 +11,11 @@
 <a name="001"></a>
 ### 001 キャラクター（9ポーズ）制御
 
-[Project]-[Create]-[AnimatorController]  
+アニメーターコントローラー（[Project]-[Create]-[AnimatorController]）  
 ![sample001_01](https://mubirou.github.io/Unity/sample/jpg/sample001_01.jpg)  
+
+パラメーターの設定（[AnimatorController]-[open]-[Parameters]）
+![sample001_02](https://mubirou.github.io/Unity/sample/jpg/sample001_02.jpg)  
 
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
