@@ -195,7 +195,7 @@
     ※中心となる空のオブジェクト（[GameObject]-[CreateEmpty]）にアタッチ
 
 1. ボタンにスクリプトをアタッチ＆有効化
-    1. ボタンの[Inspector]にドラッグ
+    1. ボタンの[Inspector]に上記のボタン用のスクリプトをドラッグ
     1. 引き続き[Inspector]-[Button]-[OnClick()]-[+]を選択
     1. [None（Object）]-[⦿]→[Sceneタブ]-[（該当のボタン）]をダブルクリック
     1. [NoFunction]→[WalkButton]-[OnClick]を選択（(該当のボタン).OnClickと表示される）  
