@@ -1212,7 +1212,7 @@ for Seminar
     }
     ```
 
-    * OnClick()メソッドの有効化：[Hierarchy]-[Canvas]-[StartStopButton]-[Inspector]-[Button]-[OnClick()]の[+]を選択し、[None（Object）]→[**Scebeタブ**]-[StartStopButton]に変更し、[NoFunction]→[StartStopButton]-[OnClick]を選択（StartStopButton.OnClickになる）  
+    * OnClick()メソッドの有効化：[Hierarchy]-[Canvas]-[StartStopButton]-[Inspector]-[Button]-[OnClick()]の[+]を選択し、[None（Object）]→[**Sceneタブ**]-[StartStopButton]に変更し、[NoFunction]→[StartStopButton]-[OnClick]を選択（StartStopButton.OnClickになる）  
     （__非常にわかりにくい操作__）
 
 1. CLEAR用スクリプトの記述
@@ -1992,18 +1992,18 @@ for Seminar
 
 1. OnClick()メソッドの有効化（STOPボタン用）
     * [Hierarchy]-[Canvas]-[Button_Stop]-[Inspector]-[Button]-[OnClick()]-[+]を選択
-    * [None（Object）]-[⦿]→[**Scebeタブ**]-[Button_Stop]をダブルクリック
+    * [None（Object）]-[⦿]→[**Sceneタブ**]-[Button_Stop]をダブルクリック
     * [NoFunction]→[StopButton]-[OnClick]を選択（**StopButton.OnClick**と表示される）  
     ![016_3](https://mubirou.github.io/Unity/introduction/jpg/016_3.jpg)
 
 1. OnClick()メソッドの有効化（WALKボタン用）
     * [Hierarchy]-[Canvas]-[Button_Walk]-[Inspector]-[Button]-[OnClick()]-[+]を選択
-    * [None（Object）]-[⦿]→[**Scebeタブ**]-[Button_Walk]をダブルクリック
+    * [None（Object）]-[⦿]→[**Sceneタブ**]-[Button_Walk]をダブルクリック
     * [NoFunction]→[WalkButton]-[OnClick]を選択（**WalkButton.OnClick**と表示される）
 
 1. OnClick()メソッドの有効化（RUNボタン用）
     * [Hierarchy]-[Canvas]-[Button_Run]-[Inspector]-[Button]-[OnClick()]-[+]を選択
-    * [None（Object）]-[⦿]→[**Scebeタブ**]-[Button_Run]をダブルクリック
+    * [None（Object）]-[⦿]→[**Sceneタブ**]-[Button_Run]をダブルクリック
     * [NoFunction]→[RunButton]-[OnClick]を選択（**RunButton.OnClick**と表示される）
 
 1. 再生テスト

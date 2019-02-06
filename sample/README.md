@@ -194,6 +194,13 @@
     ```
     ※中心となる空のオブジェクト（[GameObject]-[CreateEmpty]）にアタッチ
 
+1. ボタンにスクリプトをアタッチ＆有効化
+    1. ボタンの[Inspector]にドラッグ
+    1. 引き続き[Inspector]-[Button]-[OnClick()]-[+]を選択
+    1. [None（Object）]-[⦿]→[Sceneタブ]-[（該当のボタン）]をダブルクリック
+    1. [NoFunction]→[WalkButton]-[OnClick]を選択（(該当のボタン).OnClickと表示される）  
+    ![sample001_05](https://mubirou.github.io/Unity/sample/jpg/sample001_05.jpg)  
+
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
 作成日：2019年02月XX日
