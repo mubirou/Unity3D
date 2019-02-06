@@ -158,6 +158,40 @@
     }
     ```
 
+1. Mainクラスを記述（[Assets]-[Create]-[C#Script]）
+    ```
+    //Main.cs
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+    using UnityEngine.UI; //for Button
+
+    public class Main : MonoBehaviour {
+        private GameObject _floor;
+
+        void Start () {
+            _floor = GameObject.Find("floor");
+
+            //ボタンの色の変更
+            GameObject _canvas = GameObject.Find("Canvas");
+            foreach (Transform _child in _canvas.transform){
+                //IDLEボタンを#FFCC00に変更
+                if(_child.name == "Button_Idle"){
+                    Button _theButton = _child.gameObject.GetComponent<Button>();
+                    ColorBlock _colors = _theButton.colors;
+                    _colors.normalColor = new Color(1.0f, 0.8f, 0.0f, 1.0f);
+                    _theButton.colors = _colors;
+                }
+            }
+        }
+        
+        void Update () {
+            _floor.transform.Rotate(new Vector3(0,1,0));
+        }
+    }
+    ```
+    ※中心となる空のオブジェクト（[GameObject]-[CreateEmpty]）にアタッチ
+
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
 作成日：2019年02月XX日
