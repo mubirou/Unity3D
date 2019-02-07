@@ -1671,6 +1671,8 @@ for Seminar
 
 ※完成したAndroid用インストーラ（apkファイル）は[こちら](https://mubirou.github.io/Unity/introduction/apk/014.apk)
 
+※完成プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/014.zip)
+
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
 作成日：2018年11月05日  
@@ -2019,6 +2021,8 @@ for Seminar
 1. [再生]ボタンを押すか、[出力](#出力)して確認
 
 ※完成インストールファイル（Android用.apkファイル）は[こちら](https://mubirou.github.io/Unity/introduction/apk/016.apk)
+
+※完成プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/016.zip)
 
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
