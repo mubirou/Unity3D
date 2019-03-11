@@ -5,7 +5,7 @@
 |No.|内容|WebGL|.apk|project|作成日|更新日|
 |:--:|:--|:--:|:--:|:--:|:--:|:--:|
 |[001](#001)|キャラクター（9ポーズ）制御|―|[●](https://github.com/mubirou/Unity/blob/master/sample/apk/sample001.apk)|[●](https://github.com/mubirou/Unity/blob/master/sample/project/sample001.zip)|2019-02-05|―|
-|[002](#002)|―|―|―|―|―|―|
+|[002](#002)|Avoid missile|―|[●](https://github.com/mubirou/Unity/blob/master/sample/apk/sample002.apk)|[●](https://github.com/mubirou/Unity/blob/master/sample/project/sample002.zip)|2019-03-11|―|
 
 
 <a name="001"></a>
@@ -206,5 +206,14 @@
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
 作成日：2019年02月06日
+
+
+<a name="002"></a>
+### 002 Avoid missile
+
+実行環境：Unity 2018.3 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
+作成者：夢寐郎  
+作成日：2019年03月11日
+
 
 © 2019 夢寐郎
