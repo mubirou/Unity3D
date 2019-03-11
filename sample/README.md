@@ -211,9 +211,14 @@
 <a name="002"></a>
 ### 002 Avoid missile
 
+1. Blenderで[モデリング＆アニメーション](https://github.com/mubirou/Blender/tree/master/sample#001)
+
+1. アニメーターコントローラーの作成（[Project]-[Create]-[AnimatorController]）  
+![sample002_01](https://mubirou.github.io/Unity/sample/jpg/sample002_01.jpg)  
+
 実行環境：Unity 2018.3 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
-作成日：2019年03月11日
+作成日：2019年03月12日
 
 
 © 2019 夢寐郎
