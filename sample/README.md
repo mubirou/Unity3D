@@ -229,6 +229,10 @@
     public class Missile : MonoBehaviour {
         private float _speedX; //ミサイルの速度
 
+        void Start () {
+            Init();
+        }
+
         void Update() {
             //常にミサイルを回転させる
             transform.Rotate(new Vector3(0,0,-25));
@@ -236,7 +240,7 @@
             //Position（左から右へ移動を繰り返す）
             if (transform.position.x < 10) {
                 Vector3 _missilePos = transform.position;
-                _missilePos.x += 0.5f;
+                _missilePos.x += _speedX;
                 transform.position = _missilePos;
             } else {
                 Init();
@@ -252,22 +256,21 @@
 
             //Position（位置）
             Vector3 _missilePos = transform.position;
-            _missilePos.x = -10;
+            _missilePos.x = -11;
             _missilePos.y = UnityEngine.Random.Range(0.5f, 2.3f);
             _missilePos.z = 0;
             transform.position = _missilePos;
 
             //Rotation（角度）
             transform.rotation = Quaternion.Euler(0.0f, 90.0f, -90.0f);
-            transform.GetComponent<Rigidbody>().angularVelocity = Vector3.zero; //現時点では不要
-            transform.GetComponent<Rigidbody>().velocity = Vector3.zero; //現時点では不要
+            //transform.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+            //transform.GetComponent<Rigidbody>().velocity = Vector3.zero;
 
             //Speed（速度）
             _speedX = UnityEngine.Random.Range(0.35f, 0.5f);
         }
     }
     ```
-
 
 1. **SAColliderBuilder** 
 
