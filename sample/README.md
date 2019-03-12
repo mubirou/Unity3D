@@ -220,8 +220,9 @@
     * [Inspector]-[Camera]-[FieldofView] を35に変更（35mm換算70mm弱）
     * [Inspector]-[Transform]-[Position]-[Z] を-18に変更
 
-1. ミサイルを横切らせる（コードの肝は以下の通り）  
+1. ミサイルを横切らせるコードの肝（Missileオブジェクトにアタッチ） 
     ```
+    //Missile.cs
     using System.Collections;
     using System.Collections.Generic;
     using UnityEngine;
