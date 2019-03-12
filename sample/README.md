@@ -216,9 +216,64 @@
 1. アニメーターコントローラーの作成（[Project]-[Create]-[AnimatorController]）  
 ![sample002_01](https://mubirou.github.io/Unity/sample/jpg/sample002_01.jpg)  
 
+1. カメラ（Main Camera）の設定
+    * [Inspector]-[Camera]-[FieldofView] を35に変更（35mm換算70mm弱）
+    * [Inspector]-[Transform]-[Position]-[Z] を-18に変更
+
+1. ミサイルを横切らせる（コードの肝は以下の通り）  
+    ```
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+
+    public class Missile : MonoBehaviour {
+        private float _speedX; //ミサイルの速度
+
+        void Update() {
+            //常にミサイルを回転させる
+            transform.Rotate(new Vector3(0,0,-25));
+
+            //Position（左から右へ移動を繰り返す）
+            if (transform.position.x < 10) {
+                Vector3 _missilePos = transform.position;
+                _missilePos.x += 0.5f;
+                transform.position = _missilePos;
+            } else {
+                Init();
+            }
+        }
+
+        //ミサイルの初期化（どんな状態でも元に戻す）
+        void Init () {
+            //Visible（何かタイミングで消えている場合…）
+            if (! gameObject.activeSelf) { //非表示の場合
+                gameObject.SetActive(true); //表示する
+            }
+
+            //Position（位置）
+            Vector3 _missilePos = transform.position;
+            _missilePos.x = -10;
+            _missilePos.y = UnityEngine.Random.Range(0.5f, 2.3f);
+            _missilePos.z = 0;
+            transform.position = _missilePos;
+
+            //Rotation（角度）
+            transform.rotation = Quaternion.Euler(0.0f, 90.0f, -90.0f);
+            transform.GetComponent<Rigidbody>().angularVelocity = Vector3.zero; //現時点では不要
+            transform.GetComponent<Rigidbody>().velocity = Vector3.zero; //現時点では不要
+
+            //Speed（速度）
+            _speedX = UnityEngine.Random.Range(0.35f, 0.5f);
+        }
+    }
+    ```
+
+
+1. **SAColliderBuilder** 
+
 実行環境：Unity 2018.3 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
-作成日：2019年03月11日
+作成日：2019年03月12日
 
 
 © 2019 夢寐郎
