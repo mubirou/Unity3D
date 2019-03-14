@@ -285,8 +285,7 @@
             * Use Gravity：なし
             * Is Kinematic：なし
 
-1. 
-    1. キャラクターに [SAColliderBuilder] を追加
+1. キャラクターに [SAColliderBuilder] を追加
     1. [Window]-[AssetStore] で "SAColliderBuilder" を検索→[Import]
     1. 全て✔した状態で [Import]
     1. [Hierarchy]-[Mubirou]-[Inspector] に [Project] 内の [SAColliderBuilder]-[Editor]-[SABoneColliderBuilderInspector] をドラッグ
