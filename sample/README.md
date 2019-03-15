@@ -302,12 +302,26 @@
             * Is Kinematic：なし
     1. [Process] ボタンをクリック
 
+1. スクリプトで衝突判定を検知
+```
+//Missile.cs
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-**SAColliderBuilder** 
+public class Missile : MonoBehaviour {
+    ………
+    ………
+	void OnCollisionEnter(Collision _target) {
+		//gameObject.SetActive(false); //ミサイルを消す場合
+		Debug.Log("命中");
+	}
+}
+```
 
 実行環境：Unity 2018.3 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
-作成日：2019年03月12日
+作成日：2019年03月15日
 
 
 © 2019 夢寐郎
