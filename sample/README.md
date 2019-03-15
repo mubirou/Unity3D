@@ -285,11 +285,23 @@
             * Use Gravity：なし
             * Is Kinematic：なし
 
-1. キャラクターに [SAColliderBuilder] を追加
+1. ミサイルにコライダー（Capsule Collider）を追加
+    1. [Hierarchy]-[Missile]-[Inspector]-[AddComponent]-[Physics]-[CapsuleCollider] を選択
+    1. [Inspector]-[CapsuleCollider]-[EditCollider] で調整
+
+1. キャラクターにコライダー（SABoneColliderBuilder）を追加
     1. [Window]-[AssetStore] で "SAColliderBuilder" を検索→[Import]
     1. 全て✔した状態で [Import]
-    1. [Hierarchy]-[Mubirou]-[Inspector] に [Project] 内の [SAColliderBuilder]-[**Script**]-[SABoneColliderBuilder] をドラッグ
-    1. 
+    1. [Hierarchy]-[**Mubirou**]-[Inspector] に [Project] 内の [SAColliderBuilder]-[**Script**]-[SABoneColliderBuilder] をドラッグ
+    1. [Inspector]-[SABoneColliderBuilder] の設定は次の通り  
+        * Reducer
+            * Shape Type：Capsule
+            * Fit Type：Inner
+        * Rigidbody
+            * Is Create：なし
+            * Is Kinematic：なし
+    1. [Process] ボタンをクリック
+
 
 **SAColliderBuilder** 
 
