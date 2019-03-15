@@ -333,28 +333,28 @@
         1. [Assets]-[Create]-[C#Script] を選択、名前を"Main"に変更
         1. [Hierarychy]-[Main]-[Inspector] に上記の"Main"（C#）ドラッグ＆ドロップ
     1. スクリプトを記述  
-    ```
-    //Main.cs
-    using System.Collections;
-    using System.Collections.Generic;
-    using UnityEngine;
-    using TMPro; //TextMeshPro用
-    using System; //Int32用
+        ```
+        //Main.cs
+        using System.Collections;
+        using System.Collections.Generic;
+        using UnityEngine;
+        using TMPro; //TextMeshPro用
+        using System; //Int32用
 
-    public class Main : MonoBehaviour {
-        private TextMeshPro _currentScore;
+        public class Main : MonoBehaviour {
+            private TextMeshPro _currentScore;
 
-        void Start() {
-            _currentScore = GameObject.Find("CurrentScore").GetComponent<TextMeshPro>();
+            void Start() {
+                _currentScore = GameObject.Find("CurrentScore").GetComponent<TextMeshPro>();
+            }
+
+            void Update() {
+                int _now = Int32.Parse(_currentScore.text.Substring(7));
+                int _new = _now - 2; //減点し続ける場合
+                _currentScore.text = "SCORE: " + _new;
+            }
         }
-
-        void Update() {
-            int _now = Int32.Parse(_currentScore.text.Substring(7));
-            int _new = _now - 2; //減点し続ける場合
-            _currentScore.text = "SCORE: " + _new;
-        }
-    }
-    ```
+        ```
 
 1. XXX
 
