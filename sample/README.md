@@ -321,7 +321,42 @@
         ```
         ここまでの[プロジェクト](https://github.com/mubirou/Unity/blob/master/sample/project/sample002_1.zip)（.zipファイル）
 
-1. XXXX
+1. カウンターを表示するポイント
+    1. [Hierarchy]-[Create]-[3DObject]-[TextMeshPro-Text] を選択
+    1. [TMPImporter] ダイアログで [ImportTMPEssentials] ボタンをクリック
+    1. 名前を"CurrentScore"に変更
+    1. [Inspector]-[TextMeshPro] を変更
+        * FontSize：任意
+        * Text："SCORE: 0"
+    1. 空をGameObject（MainObject）を作成
+        1. [GameObject]-[CreateEmpty] を選択、名前を"Main"に変更
+        1. [Assets]-[Create]-[C#Script] を選択、名前を"Main"に変更
+        1. [Hierarychy]-[Main]-[Inspector] に上記の"Main"（C#）ドラッグ＆ドロップ
+    1. スクリプトを記述  
+    ```
+    //Main.cs
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+    using TMPro; //TextMeshPro用
+    using System; //Int32用
+
+    public class Main : MonoBehaviour {
+        private TextMeshPro _currentScore;
+
+        void Start() {
+            _currentScore = GameObject.Find("CurrentScore").GetComponent<TextMeshPro>();
+        }
+
+        void Update() {
+            int _now = Int32.Parse(_currentScore.text.Substring(7));
+            int _new = _now - 2; //減点し続ける場合
+            _currentScore.text = "SCORE: " + _new;
+        }
+    }
+    ```
+
+1. XXX
 
 実行環境：Unity 2018.3 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
