@@ -290,7 +290,8 @@
         1. [Hierarchy]-[Missile]-[Inspector]-[AddComponent]-[Physics]-[CapsuleCollider] を選択
         1. [Inspector]-[CapsuleCollider]-[EditCollider] で調整
 
-    1. キャラクターにコライダー（**SABoneColliderBuilder**）を追加
+    1. キャラクターにコライダー（**SABoneColliderBuilder**）を追加  
+        ![sample002_02](https://mubirou.github.io/Unity/sample/jpg/sample002_02.jpg)  
         1. [Window]-[AssetStore] で "SAColliderBuilder" を検索→[Import]
         1. 全て✔した状態で [Import]
         1. [Hierarchy]-[**Mubirou**]-[Inspector] に [Project] 内の [SAColliderBuilder]-[**Script**]-[SABoneColliderBuilder] をドラッグ
