@@ -303,7 +303,7 @@
                 * Is Kinematic：なし
         1. [Process] ボタンをクリック
 
-    1. スクリプトで衝突判定を検知
+    1. スクリプトで衝突判定を検知（上記のコード参照）
         ```
         //Missile.cs
         using System.Collections;
