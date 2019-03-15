@@ -321,7 +321,7 @@
         ```
         ここまでの[プロジェクト](https://github.com/mubirou/Unity/blob/master/sample/project/sample002_1.zip)（.zipファイル）
 
-1. カウンターを表示するポイント
+1. カウンターの表示
     1. [Hierarchy]-[Create]-[3DObject]-[TextMeshPro-Text] を選択
     1. [TMPImporter] ダイアログで [ImportTMPEssentials] ボタンをクリック
     1. 名前を"CurrentScore"に変更
