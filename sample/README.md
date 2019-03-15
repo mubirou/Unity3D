@@ -273,51 +273,54 @@
     }
     ```
 
-1. キャラクターとミサイルに **Rigidbody** を追加
-    1. キャラクターに [Rigidbody] を追加  
-        * [Hierarchy]-[Mubirou]-[Inspector]-[AddComponent]-[Physics]-[Rigidbody] を選択
-        * [Inspector]-[Rigidboby] を次通りに設定  
-            * Use Gravity：✔
-            * Is Kinematic：✔
-    1. ミサイルに [Rigidbody] を追加  
-        * [Hierarchy]-[Mubirou]-[Inspector]-[AddComponent]-[Physics]-[Rigidbody] を選択
-        * [Inspector]-[Rigidboby] を次通りに設定  
-            * Use Gravity：なし
-            * Is Kinematic：なし
+1. キャラクターとミサイルの複雑な衝突判定
+    1. キャラクターとミサイルに **Rigidbody** を追加
+        1. キャラクターに [Rigidbody] を追加  
+            * [Hierarchy]-[Mubirou]-[Inspector]-[AddComponent]-[Physics]-[Rigidbody] を選択
+            * [Inspector]-[Rigidboby] を次通りに設定  
+                * Use Gravity：✔
+                * Is Kinematic：✔
+        1. ミサイルに [Rigidbody] を追加  
+            * [Hierarchy]-[Mubirou]-[Inspector]-[AddComponent]-[Physics]-[Rigidbody] を選択
+            * [Inspector]-[Rigidboby] を次通りに設定  
+                * Use Gravity：なし
+                * Is Kinematic：なし
 
-1. ミサイルにコライダー（**Capsule Collider**）を追加
-    1. [Hierarchy]-[Missile]-[Inspector]-[AddComponent]-[Physics]-[CapsuleCollider] を選択
-    1. [Inspector]-[CapsuleCollider]-[EditCollider] で調整
+    1. ミサイルにコライダー（**Capsule Collider**）を追加
+        1. [Hierarchy]-[Missile]-[Inspector]-[AddComponent]-[Physics]-[CapsuleCollider] を選択
+        1. [Inspector]-[CapsuleCollider]-[EditCollider] で調整
 
-1. キャラクターにコライダー（**SABoneColliderBuilder**）を追加
-    1. [Window]-[AssetStore] で "SAColliderBuilder" を検索→[Import]
-    1. 全て✔した状態で [Import]
-    1. [Hierarchy]-[**Mubirou**]-[Inspector] に [Project] 内の [SAColliderBuilder]-[**Script**]-[SABoneColliderBuilder] をドラッグ
-    1. [Inspector]-[SABoneColliderBuilder] の設定は次の通り  
-        * Reducer
-            * Shape Type：Capsule
-            * Fit Type：Inner
-        * Rigidbody
-            * Is Create：なし
-            * Is Kinematic：なし
-    1. [Process] ボタンをクリック
+    1. キャラクターにコライダー（**SABoneColliderBuilder**）を追加
+        1. [Window]-[AssetStore] で "SAColliderBuilder" を検索→[Import]
+        1. 全て✔した状態で [Import]
+        1. [Hierarchy]-[**Mubirou**]-[Inspector] に [Project] 内の [SAColliderBuilder]-[**Script**]-[SABoneColliderBuilder] をドラッグ
+        1. [Inspector]-[SABoneColliderBuilder] の設定は次の通り  
+            * Reducer
+                * Shape Type：Capsule
+                * Fit Type：Inner
+            * Rigidbody
+                * Is Create：なし
+                * Is Kinematic：なし
+        1. [Process] ボタンをクリック
 
-1. スクリプトで衝突判定を検知
-    ```
-    //Missile.cs
-    using System.Collections;
-    using System.Collections.Generic;
-    using UnityEngine;
+    1. スクリプトで衝突判定を検知
+        ```
+        //Missile.cs
+        using System.Collections;
+        using System.Collections.Generic;
+        using UnityEngine;
 
-    public class Missile : MonoBehaviour {
-        …省略…
-        void OnCollisionEnter(Collision _target) {
-            //gameObject.SetActive(false); //ミサイルを消す場合
-            Debug.Log("命中");
+        public class Missile : MonoBehaviour {
+            …省略…
+            void OnCollisionEnter(Collision _target) {
+                //gameObject.SetActive(false); //ミサイルを消す場合
+                Debug.Log("命中");
+            }
         }
-    }
-    ```
-    ここまでの[プロジェクト](https://github.com/mubirou/Unity/blob/master/sample/project/sample002_1.zip)（.zipファイル）
+        ```
+        ここまでの[プロジェクト](https://github.com/mubirou/Unity/blob/master/sample/project/sample002_1.zip)（.zipファイル）
+
+1. XXXX
 
 実行環境：Unity 2018.3 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
