@@ -310,8 +310,7 @@
     using UnityEngine;
 
     public class Missile : MonoBehaviour {
-        ………
-        ………
+        …省略…
         void OnCollisionEnter(Collision _target) {
             //gameObject.SetActive(false); //ミサイルを消す場合
             Debug.Log("命中");
