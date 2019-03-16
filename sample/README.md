@@ -5,7 +5,7 @@
 |No.|内容|WebGL|.apk|project|作成日|更新日|
 |:--:|:--|:--:|:--:|:--:|:--:|:--:|
 |[001](#001)|キャラクター（9ポーズ）制御|―|[●](https://github.com/mubirou/Unity/blob/master/sample/apk/sample001.apk)|[●](https://github.com/mubirou/Unity/blob/master/sample/project/sample001.zip)|2019-02-05|―|
-|[002](#002)|Avoid missile|―|[●](https://github.com/mubirou/Unity/blob/master/sample/apk/sample002.apk)|[●](https://github.com/mubirou/Unity/blob/master/sample/project/sample002.zip)（未リファクタリング）|2019-03-11|―|
+|[002](#002)|Avoid missile（複雑な衝突判定）|―|[●](https://github.com/mubirou/Unity/blob/master/sample/apk/sample002.apk)|[●](https://github.com/mubirou/Unity/blob/master/sample/project/sample002.zip)（未リファクタリング）|2019-03-11|―|
 
 
 <a name="001"></a>
