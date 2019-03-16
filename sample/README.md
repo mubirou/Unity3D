@@ -209,7 +209,7 @@
 
 
 <a name="002"></a>
-# 002 Avoid missile
+# 002 Avoid missile（複雑な衝突判定）
 
 1. Blenderで[モデリング＆アニメーション](https://github.com/mubirou/Blender/tree/master/sample#001)
 
