@@ -211,6 +211,8 @@
 <a name="002"></a>
 # 002 Avoid missile（複雑な衝突判定）
 
+![sample002_03](https://mubirou.github.io/Unity/sample/jpg/sample002_03.jpg)  
+
 1. Blenderで[モデリング＆アニメーション](https://github.com/mubirou/Blender/tree/master/sample#001)
 
 1. アニメーターコントローラーの作成（[Project]-[Create]-[AnimatorController]）  
