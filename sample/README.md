@@ -359,372 +359,372 @@
         ```
 
 1. 全ソースコード（未リファクタリング）
-```
-//Main.cs（未リファクタリング）
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using TMPro; //for TextMeshPro
-using System; //for Math
+    ```
+    //Main.cs（未リファクタリング）
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+    using TMPro; //for TextMeshPro
+    using System; //for Math
 
-public class Main : MonoBehaviour {
-    private GameObject _missile;
-    private Missile _missileScript;
-    private TextMeshPro _currentScore;
-    private GameObject _mubirou;
-    private Mubirou _mubirouScript;
-    private bool _isDeath = false;
+    public class Main : MonoBehaviour {
+        private GameObject _missile;
+        private Missile _missileScript;
+        private TextMeshPro _currentScore;
+        private GameObject _mubirou;
+        private Mubirou _mubirouScript;
+        private bool _isDeath = false;
 
-    void Awake() {
-        //framerate
-        QualitySettings.vSyncCount = 0;
-        Application.targetFrameRate = 24;
-    }
+        void Awake() {
+            //framerate
+            QualitySettings.vSyncCount = 0;
+            Application.targetFrameRate = 24;
+        }
 
-    void Start() {
-        //highScore
-        TextMeshPro _highScore = GameObject.Find("HighScore").GetComponent<TextMeshPro>();
-        _highScore.text = "HIGH SCORE: " + HighScore.ToString();
-		_missile = GameObject.Find("Missile");
-		_missileScript = _missile.GetComponent<Missile>();
-        _missileScript.AddPointEvent += PointHandler;
+        void Start() {
+            //highScore
+            TextMeshPro _highScore = GameObject.Find("HighScore").GetComponent<TextMeshPro>();
+            _highScore.text = "HIGH SCORE: " + HighScore.ToString();
+            _missile = GameObject.Find("Missile");
+            _missileScript = _missile.GetComponent<Missile>();
+            _missileScript.AddPointEvent += PointHandler;
 
-        //currentScore
-        _currentScore = GameObject.Find("CurrentScore").GetComponent<TextMeshPro>();
-        //Debug.Log(_currentScore.text);
+            //currentScore
+            _currentScore = GameObject.Find("CurrentScore").GetComponent<TextMeshPro>();
+            //Debug.Log(_currentScore.text);
 
-        //mubirouEvent
-        _mubirou = GameObject.Find("Mubirou");
-        _mubirouScript = _mubirou.GetComponent<Mubirou>();
-        _mubirouScript.ComebackEvent += ComebackHandler;
-        _mubirouScript.DeathEvent += DeathHandler;
-    }
+            //mubirouEvent
+            _mubirou = GameObject.Find("Mubirou");
+            _mubirouScript = _mubirou.GetComponent<Mubirou>();
+            _mubirouScript.ComebackEvent += ComebackHandler;
+            _mubirouScript.DeathEvent += DeathHandler;
+        }
 
-    void Update() {
-        if (_isDeath) {
+        void Update() {
+            if (_isDeath) {
+                int _now = Int32.Parse(_currentScore.text.Substring(7));
+                int _new = _now - 2; //減点
+                _currentScore.text = "SCORE: " + _new;
+            }
+            
+            //highScore
+            HighScore = Int32.Parse(_currentScore.text.Substring(7));
+            TextMeshPro _highScore = GameObject.Find("HighScore").GetComponent<TextMeshPro>();
+            _highScore.text = "HIGH SCORE: " + HighScore.ToString();
+        }
+
+        /***************************
+        Missile.PointEvent()
+        ***************************/
+        private void PointHandler (object arg) {
             int _now = Int32.Parse(_currentScore.text.Substring(7));
-            int _new = _now - 2; //減点
+            int _add = (int)GameObject.Find("Mubirou").GetComponent<Mubirou>().Point;
+            int _new = _now + _add;
             _currentScore.text = "SCORE: " + _new;
         }
-        
-        //highScore
-        HighScore = Int32.Parse(_currentScore.text.Substring(7));
-        TextMeshPro _highScore = GameObject.Find("HighScore").GetComponent<TextMeshPro>();
-        _highScore.text = "HIGH SCORE: " + HighScore.ToString();
-    }
 
-	/***************************
-	Missile.PointEvent()
-	***************************/
-	private void PointHandler (object arg) {
-        int _now = Int32.Parse(_currentScore.text.Substring(7));
-        int _add = (int)GameObject.Find("Mubirou").GetComponent<Mubirou>().Point;
-        int _new = _now + _add;
-        _currentScore.text = "SCORE: " + _new;
-    }
+        void OnApplicationQuit() {
+            //Debug.Log("fisish");
+            HighScore = Int32.Parse(_currentScore.text.Substring(7));
+        }
 
-    void OnApplicationQuit() {
-        //Debug.Log("fisish");
-        HighScore = Int32.Parse(_currentScore.text.Substring(7));
-    }
-
-    public int HighScore {
-        get { return PlayerPrefs.GetInt("highScore"); }
-        set {
-            if (PlayerPrefs.GetInt("highScore") < value) {
-                PlayerPrefs.SetInt("highScore", value);
+        public int HighScore {
+            get { return PlayerPrefs.GetInt("highScore"); }
+            set {
+                if (PlayerPrefs.GetInt("highScore") < value) {
+                    PlayerPrefs.SetInt("highScore", value);
+                }
             }
         }
-    }
 
-	private void ComebackHandler(object arg) {
-		_isDeath = false;
-	}
+        private void ComebackHandler(object arg) {
+            _isDeath = false;
+        }
 
-    private void DeathHandler(object arg) {
-        _isDeath = true;
-    }
-}
-```
-
-```
-// Mubirou.cs（未リファクタリング）
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System; //for Math
-
-public class Mubirou : MonoBehaviour {
-    private Animator _mubirouAnim;
-    private string _status = "Run";
-    private float _count = 0.0f;
-    private float _originX;
-    private float _originY;
-    private float _originZ;
-    //private float _currentX;
-    private float _currentY;
-    //private float _currentZ;
-    public delegate void MyDelegate(object arg); //customEvent
-    public event MyDelegate ComebackEvent; //customEvent
-    public event MyDelegate DeathEvent; //customEvent
-    private int _addPoint;
-
-    void Start () {
-        _mubirouAnim = GetComponent<Animator>();
-        _originX = transform.position.x;
-        _originY = _currentY = transform.position.y;
-        _originZ = transform.position.z;
-    }
-
-    void Update () {
-        if (_status == "Jump") {
-            if (_count < Math.PI) { //0-180d
-                _count += 0.25f;
-                float _nextY = (float)(3 * Math.Abs(Math.Sin(_count)) + _originY);
-                float _disY = _nextY - _currentY;
-                transform.Translate(0, _disY, 0); //(x,y,z）
-                _currentY = transform.position.y;
-            } else {
-                _status = "Run";
-                _count = 0f;
-                _mubirouAnim.SetBool("isJump", false);
-                _mubirouAnim.SetBool("isRun", true);
-                Vector3 _thisPos = transform.position;
-                _thisPos.x = _originX;
-                _thisPos.y = _originY;
-                _thisPos.z = _originZ;
-                transform.position = _thisPos;
-            }
+        private void DeathHandler(object arg) {
+            _isDeath = true;
         }
     }
+    ```
 
-    public void Run () {
-        _status = "Run";
-        _mubirouAnim.SetBool("isBreak", false);
-        _mubirouAnim.SetBool("isDeath", false);
-        _mubirouAnim.SetBool("isJump", false);
-        _mubirouAnim.SetBool("isRun", true);
+    ```
+    // Mubirou.cs（未リファクタリング）
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+    using System; //for Math
+
+    public class Mubirou : MonoBehaviour {
+        private Animator _mubirouAnim;
+        private string _status = "Run";
+        private float _count = 0.0f;
+        private float _originX;
+        private float _originY;
+        private float _originZ;
+        //private float _currentX;
+        private float _currentY;
+        //private float _currentZ;
+        public delegate void MyDelegate(object arg); //customEvent
+        public event MyDelegate ComebackEvent; //customEvent
+        public event MyDelegate DeathEvent; //customEvent
+        private int _addPoint;
+
+        void Start () {
+            _mubirouAnim = GetComponent<Animator>();
+            _originX = transform.position.x;
+            _originY = _currentY = transform.position.y;
+            _originZ = transform.position.z;
+        }
+
+        void Update () {
+            if (_status == "Jump") {
+                if (_count < Math.PI) { //0-180d
+                    _count += 0.25f;
+                    float _nextY = (float)(3 * Math.Abs(Math.Sin(_count)) + _originY);
+                    float _disY = _nextY - _currentY;
+                    transform.Translate(0, _disY, 0); //(x,y,z）
+                    _currentY = transform.position.y;
+                } else {
+                    _status = "Run";
+                    _count = 0f;
+                    _mubirouAnim.SetBool("isJump", false);
+                    _mubirouAnim.SetBool("isRun", true);
+                    Vector3 _thisPos = transform.position;
+                    _thisPos.x = _originX;
+                    _thisPos.y = _originY;
+                    _thisPos.z = _originZ;
+                    transform.position = _thisPos;
+                }
+            }
+        }
+
+        public void Run () {
+            _status = "Run";
+            _mubirouAnim.SetBool("isBreak", false);
+            _mubirouAnim.SetBool("isDeath", false);
+            _mubirouAnim.SetBool("isJump", false);
+            _mubirouAnim.SetBool("isRun", true);
+        }
+
+        public void Jump () {
+            _status = "Jump";
+            _mubirouAnim.SetBool("isBreak", false);
+            _mubirouAnim.SetBool("isDeath", false);
+            _mubirouAnim.SetBool("isJump", true);
+            _mubirouAnim.SetBool("isRun", false);
+
+            //missileDistance
+            GameObject _missile = GameObject.Find("Missile");
+            float _disZ = -(_missile.transform.position.z - transform.position.z);
+            float _missileY = _missile.transform.position.y;
+            _addPoint = (int)(Math.Round(_missileY * _disZ * 10));
+        }
+
+        public void Death () {
+            _status = "Death";
+            _mubirouAnim.SetBool("isBreak", false);
+            _mubirouAnim.SetBool("isDeath", true);
+            _mubirouAnim.SetBool("isJump", false);
+            _mubirouAnim.SetBool("isRun", false);
+            //Position
+            Vector3 _thisPos = transform.position;
+            _thisPos.x = _originX;
+            _thisPos.y = _originY;
+            _thisPos.z = _originZ;
+            transform.position = _thisPos;
+
+            Invoke("InvokeComeback", 1f);
+            DeathEvent(this);
+        }
+
+        private void InvokeComeback () {
+            Run();
+            ComebackEvent(this); //eventHandler
+        }
+
+        public float Point {
+            get { return _addPoint; }
+            private set {} //readOnly
+        }
     }
+    ```
 
-    public void Jump () {
-        _status = "Jump";
-        _mubirouAnim.SetBool("isBreak", false);
-        _mubirouAnim.SetBool("isDeath", false);
-        _mubirouAnim.SetBool("isJump", true);
-        _mubirouAnim.SetBool("isRun", false);
+    ```
+    // Missile.cs（未リファクタリング）
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
 
-        //missileDistance
-        GameObject _missile = GameObject.Find("Missile");
-        float _disZ = -(_missile.transform.position.z - transform.position.z);
-        float _missileY = _missile.transform.position.y;
-        _addPoint = (int)(Math.Round(_missileY * _disZ * 10));
+    public class Missile : MonoBehaviour {
+        private BigExplosion _bigExplosion;
+        private bool _isBomb = false;
+        private bool _isDeath = false;
+        private float _speedZ;
+        private GameObject _mubirou;
+        private Mubirou _mubirouScript;
+        private JumpButton _jumpButtonScript;
+        public delegate void MyEventHandler(object arg); //customEvent
+        public event MyEventHandler AddPointEvent; //customEvent
+
+        //Missile.Start()
+        void Start () {
+            Init();
+
+            //bigExplosion
+            GameObject _theGameObject = GameObject.Find("BigExplosion");
+            _bigExplosion = _theGameObject.GetComponent<BigExplosion>();
+            _bigExplosion.EndEvent += EndHandler;
+
+            //mubirou
+            _mubirou = GameObject.Find("Mubirou");
+            _mubirouScript = _mubirou.GetComponent<Mubirou>();
+
+            //jumpButton
+            _theGameObject = GameObject.Find("JumpButton");
+            _jumpButtonScript = _theGameObject.GetComponent<JumpButton>();
+        }
+
+        //Missile.EndHandler()
+        private void EndHandler (object arg) {
+            _isBomb = false;
+            Init();
+            _jumpButtonScript.Enabled = true;
+        }
+
+        void Update () {
+            if (!_isBomb) {
+                if (!_isDeath) {
+                    //Rotation
+                    transform.Rotate(new Vector3(0,0,-25));
+                    //Position
+                    if (transform.position.z < 6.8) {
+                        Vector3 _missilePos = transform.position;
+                        _missilePos.z += _speedZ;
+                        transform.position = _missilePos;
+                    } else {
+                        Init();
+                        AddPointEvent(this); //eventHandler
+                    }
+                }
+            }
+        }
+
+        void Init () {
+            //visible
+            if (! gameObject.activeSelf) {
+                gameObject.SetActive(true);
+            }
+            //position
+            Vector3 _missilePos = transform.position;
+            _missilePos.x = 0;
+            _missilePos.y = UnityEngine.Random.Range(0.5f, 2.3f);
+            _missilePos.z = -14;
+            transform.position = _missilePos;
+            //rotation
+            transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
+            transform.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+            transform.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            //speed
+            _speedZ = UnityEngine.Random.Range(0.35f, 0.5f);
+        }
+
+        void OnCollisionEnter(Collision _target) {
+            _isBomb = true;
+            gameObject.SetActive(false); //Visible
+
+            Vector3 _thisPos = transform.position;
+            _bigExplosion.Begin(_thisPos.x, _thisPos.y, _thisPos.z);
+
+            _mubirouScript.Death();
+            _mubirouScript.ComebackEvent += ComebackHandler;
+            _isDeath = true;
+
+            _jumpButtonScript.Enabled = false;
+        }
+
+        private void ComebackHandler (object arg) {
+            _isDeath = false;
+        }
+
+        public float Speed {
+            get { return _speedZ; }
+            private set {} //readOnly
+        }
     }
+    ```
 
-    public void Death () {
-        _status = "Death";
-        _mubirouAnim.SetBool("isBreak", false);
-        _mubirouAnim.SetBool("isDeath", true);
-        _mubirouAnim.SetBool("isJump", false);
-        _mubirouAnim.SetBool("isRun", false);
-        //Position
-        Vector3 _thisPos = transform.position;
-        _thisPos.x = _originX;
-        _thisPos.y = _originY;
-        _thisPos.z = _originZ;
-        transform.position = _thisPos;
+    ```
+    // BigExplosion.cs（未リファクタリング）
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
 
-        Invoke("InvokeComeback", 1f);
-        DeathEvent(this);
+    public class BigExplosion : MonoBehaviour {
+        private ParticleSystem _particle;
+        public delegate void MyDelegate(object arg); //customEvent
+        public event MyDelegate EndEvent; //customEvent
+
+        void Start () {
+            _particle = GetComponent<ParticleSystem>();
+            //_particle.gameObject.SetActive(false);
+        }
+
+        public void Begin (float _x, float _y, float _z) {
+            _particle.gameObject.SetActive(true);
+            if (! _particle.gameObject.activeSelf) {
+                _particle.gameObject.SetActive(true);
+            }
+            Vector3 _thisPos = transform.position;
+            _thisPos.x = _x;
+            _thisPos.y = _y;
+            _thisPos.z = _z;
+            transform.position = _thisPos;
+            _particle.Play();
+            Invoke("InvokeMethod", _particle.main.duration);
+        }
+
+        private void InvokeMethod () {
+            _particle.Stop();
+            _particle.gameObject.SetActive(false);
+            if (EndEvent != null) { EndEvent(this); }
+            CancelInvoke();
+        }
+
+        public bool Visible {
+            get { return gameObject.activeSelf; }
+            set { gameObject.SetActive(value); }
+        }
     }
+    ```
 
-    private void InvokeComeback () {
-        Run();
-        ComebackEvent(this); //eventHandler
+    ```
+    // JumpButton.cs（未リファクタリング）
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+    using UnityEngine.UI;
+
+    public class JumpButton : MonoBehaviour {
+        private Mubirou _mubirou;
+        //private bool _enabled = true;
+        private Button _button;
+
+        void Start () {
+            GameObject _theGameObject = GameObject.Find("Mubirou");
+            _mubirou = _theGameObject.GetComponent<Mubirou>();
+            _button = GetComponent<Button>();
+        }
+
+        public void OnClick() {
+            _mubirou.Jump();
+        }
+
+        public bool Enabled {
+            get { return _button.interactable; }
+            set { _button.interactable = value; }
+        }
     }
-
-    public float Point {
-        get { return _addPoint; }
-        private set {} //readOnly
-    }
-}
-```
-
-```
-// Missile.cs（未リファクタリング）
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Missile : MonoBehaviour {
-	private BigExplosion _bigExplosion;
-	private bool _isBomb = false;
-	private bool _isDeath = false;
-	private float _speedZ;
-	private GameObject _mubirou;
-	private Mubirou _mubirouScript;
-	private JumpButton _jumpButtonScript;
-    public delegate void MyEventHandler(object arg); //customEvent
-    public event MyEventHandler AddPointEvent; //customEvent
-
-	//Missile.Start()
-	void Start () {
-		Init();
-
-		//bigExplosion
-		GameObject _theGameObject = GameObject.Find("BigExplosion");
-		_bigExplosion = _theGameObject.GetComponent<BigExplosion>();
-		_bigExplosion.EndEvent += EndHandler;
-
-		//mubirou
-		_mubirou = GameObject.Find("Mubirou");
-		_mubirouScript = _mubirou.GetComponent<Mubirou>();
-
-		//jumpButton
-		_theGameObject = GameObject.Find("JumpButton");
-		_jumpButtonScript = _theGameObject.GetComponent<JumpButton>();
-	}
-
-	//Missile.EndHandler()
-	private void EndHandler (object arg) {
-		_isBomb = false;
-		Init();
-		_jumpButtonScript.Enabled = true;
-	}
-
-	void Update () {
-		if (!_isBomb) {
-			if (!_isDeath) {
-				//Rotation
-				transform.Rotate(new Vector3(0,0,-25));
-				//Position
-				if (transform.position.z < 6.8) {
-					Vector3 _missilePos = transform.position;
-					_missilePos.z += _speedZ;
-					transform.position = _missilePos;
-				} else {
-					Init();
-					AddPointEvent(this); //eventHandler
-				}
-			}
-		}
-	}
-
-	void Init () {
-		//visible
-		if (! gameObject.activeSelf) {
-			gameObject.SetActive(true);
-		}
-		//position
-		Vector3 _missilePos = transform.position;
-		_missilePos.x = 0;
-		_missilePos.y = UnityEngine.Random.Range(0.5f, 2.3f);
-		_missilePos.z = -14;
-		transform.position = _missilePos;
-		//rotation
-		transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
-		transform.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-		transform.GetComponent<Rigidbody>().velocity = Vector3.zero;
-		//speed
-		_speedZ = UnityEngine.Random.Range(0.35f, 0.5f);
-	}
-
-	void OnCollisionEnter(Collision _target) {
-		_isBomb = true;
-		gameObject.SetActive(false); //Visible
-
-		Vector3 _thisPos = transform.position;
-		_bigExplosion.Begin(_thisPos.x, _thisPos.y, _thisPos.z);
-
-		_mubirouScript.Death();
-		_mubirouScript.ComebackEvent += ComebackHandler;
-		_isDeath = true;
-
-		_jumpButtonScript.Enabled = false;
-	}
-
-	private void ComebackHandler (object arg) {
-		_isDeath = false;
-	}
-
-	public float Speed {
-        get { return _speedZ; }
-        private set {} //readOnly
-    }
-}
-```
-
-```
-// BigExplosion.cs（未リファクタリング）
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class BigExplosion : MonoBehaviour {
-	private ParticleSystem _particle;
-	public delegate void MyDelegate(object arg); //customEvent
-	public event MyDelegate EndEvent; //customEvent
-
-	void Start () {
-		_particle = GetComponent<ParticleSystem>();
-		//_particle.gameObject.SetActive(false);
-	}
-
-	public void Begin (float _x, float _y, float _z) {
-		_particle.gameObject.SetActive(true);
-		if (! _particle.gameObject.activeSelf) {
-			_particle.gameObject.SetActive(true);
-		}
-		Vector3 _thisPos = transform.position;
-		_thisPos.x = _x;
-		_thisPos.y = _y;
-		_thisPos.z = _z;
-		transform.position = _thisPos;
-		_particle.Play();
-		Invoke("InvokeMethod", _particle.main.duration);
-	}
-
-	private void InvokeMethod () {
-		_particle.Stop();
-		_particle.gameObject.SetActive(false);
-		if (EndEvent != null) { EndEvent(this); }
-		CancelInvoke();
-	}
-
-	public bool Visible {
-		get { return gameObject.activeSelf; }
-		set { gameObject.SetActive(value); }
-	}
-}
-```
-
-```
-// JumpButton.cs（未リファクタリング）
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-
-public class JumpButton : MonoBehaviour {
-    private Mubirou _mubirou;
-    //private bool _enabled = true;
-    private Button _button;
-
-    void Start () {
-        GameObject _theGameObject = GameObject.Find("Mubirou");
-        _mubirou = _theGameObject.GetComponent<Mubirou>();
-        _button = GetComponent<Button>();
-    }
-
-    public void OnClick() {
-        _mubirou.Jump();
-    }
-
-    public bool Enabled {
-        get { return _button.interactable; }
-        set { _button.interactable = value; }
-    }
-}
-```
+    ```
 
 実行環境：Unity 2018.3 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
