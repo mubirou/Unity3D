@@ -359,7 +359,7 @@
         ```
 
 1. 全ソースコード（未リファクタリング）
-    * Mainクラス
+    1. Mainクラス
         ```
         //Main.cs（未リファクタリング）
         using System.Collections;
@@ -446,7 +446,7 @@
         }
         ```
 
-    * Mubirouクラス（未リファクタリング）
+    2. Mubirouクラス（未リファクタリング）
         ```
         // Mubirou.cs
         using System.Collections;
@@ -549,7 +549,7 @@
         }
         ```
 
-    * Missileクラス（未リファクタリング）
+    3. Missileクラス（未リファクタリング）
         ```
         // Missile.cs
         using System.Collections;
@@ -654,7 +654,7 @@
         }
         ```
 
-    * BigExplosionクラス（未リファクタリング）
+    4. BigExplosionクラス（未リファクタリング）
         ```
         // BigExplosion.cs
         using System.Collections;
@@ -699,7 +699,7 @@
         }
         ```
 
-    * JumpButton（未リファクタリング）
+    5. JumpButton（未リファクタリング）
         ```
         // JumpButton.cs
         using System.Collections;
