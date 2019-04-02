@@ -738,7 +738,8 @@
 <a name="003"></a>
 # 003 XXXX
 
-1. 
+1. Unityでプロジェクトを作成（Templateは「3D」）
+1. [Window]-[AssetStore]
 
 実行環境：Unity 2018.3 Personal、Ubuntu 18.0.4 LTS、Blender 2.8、Android 8.0  
 作成者：夢寐郎  
