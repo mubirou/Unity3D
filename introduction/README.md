@@ -913,7 +913,7 @@ for Seminar
 1. 縦持ち限定にする（Android端末）  
     [Edit]-[Project Settings]-[Player]-[Resolution and Presentation]-[Default Orientation] の値を「Auto Rotation」→「Portrait」に変更
 
-完成プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/010.zip)
+完成プロジェクトを[ダウンロード](https://mubirou.github.io/Unity/introduction/project/010.zip)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
@@ -1055,7 +1055,7 @@ for Seminar
 
 1. [出力](#出力)して確認
 
-完成プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/011.zip)
+完成プロジェクトを[ダウンロード](https://mubirou.github.io/Unity/introduction/project/011.zip)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
@@ -1254,7 +1254,7 @@ for Seminar
 
 1. [再生]ボタンを押すか、[出力](#出力)して確認
 
-完成プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/012.zip)
+完成プロジェクトを[ダウンロード](https://mubirou.github.io/Unity/introduction/project/012.zip)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 18.0.4.1 LTS、Android 8.0  
 作成者：夢寐郎  
@@ -1353,7 +1353,7 @@ for Seminar
 
 1. [再生]ボタンを押すか、[出力](#出力)して確認
 
-完成プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/013.zip)
+完成プロジェクトを[ダウンロード](https://mubirou.github.io/Unity/introduction/project/013.zip)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
@@ -1671,7 +1671,7 @@ for Seminar
 
 ※完成したAndroid用インストーラ（apkファイル）は[こちら](https://mubirou.github.io/Unity/introduction/apk/014.apk)
 
-※完成プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/014.zip)
+※完成プロジェクトを[ダウンロード](https://mubirou.github.io/Unity/introduction/project/014.zip)
 
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
@@ -2022,7 +2022,7 @@ for Seminar
 
 ※完成インストールファイル（Android用.apkファイル）は[こちら](https://mubirou.github.io/Unity/introduction/apk/016.apk)
 
-※完成プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/016.zip)
+※完成プロジェクトを[ダウンロード](https://mubirou.github.io/Unity/introduction/project/016.zip)
 
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
