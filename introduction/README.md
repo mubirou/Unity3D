@@ -24,7 +24,7 @@
 |015|[Timeline Anime](#015)|Animation･Timelineを使ったアニメーション|－|－|[●](#015)|－|
 |016|[Puppet Control](#016)|アクション付の3Dモデルのコントロール|－|[●](#016)|[●](#016)|－|
 |017|[Humanoid](#017)|Blenderからの連携の基本（人間型）|－|－|[●](#017)|－|
-|018|[AR入門](#018)|HelloAR|－|－|[●](#018)|[●](https://amzn.to/2VY0ZSr)|
+|018|[AR入門](#018)|HelloAR|－|－|－|[●](https://amzn.to/2VY0ZSr)|
 ***
 
 <a name="プリミティブ･オブジェクト"></a>
