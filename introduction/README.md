@@ -24,7 +24,7 @@
 |015|[Timeline Anime](#015)|Animation･Timelineを使ったアニメーション|－|－|[●](#015)|－|
 |016|[Puppet Control](#016)|アクション付の3Dモデルのコントロール|－|[●](#016)|[●](#016)|－|
 |017|[Humanoid](#017)|Blenderからの連携の基本（人間型）|－|－|[●](#017)|－|
-|018|[XXXX](#018)|XXXXX|－|－|[●](#018)|－|
+|018|[AR入門](#018)|HelloAR|－|－|[●](#018)|[●](https://amzn.to/2VY0ZSr)|
 ***
 
 <a name="プリミティブ･オブジェクト"></a>
@@ -2051,61 +2051,9 @@
 
 
 <a name="018"></a>
-# <b>018 XXXX</b>
+# <b>018 AR入門</b>
 
 #### ◆Blenderで編集
 
-1. [Blenderで作成](https://github.com/mubirou/Blender/tree/master/introduction#014_009)したものに[ア
-ーマチュア](https://github.com/mubirou/Blender/tree/master/introduction#016_003)を設定し調整する  
-    ![018_1](https://mubirou.github.io/Unity/introduction/jpg/018_1.jpg)  
-    ※ここまでのBlenderファイル（.blend）は[こちら](https://mubirou.github.io/Unity/introduction/blend/018_humanoid_edit.blend)  
-
-1. Blender上で[細分化]を適用  
-    ![018_2](https://mubirou.github.io/Unity/introduction/jpg/018_2.jpg)  
-    ※ここまでのBlenderファイル（.blend）は[こちら](https://mubirou.github.io/Unity/introduction/blend/018_humanoid_fix.blend)
-
-1. Blenderのヘッダ部分に表示されている三角面が**5000**ポリゴン以下（推奨）になっているか確認（上部のオブジェクトは2,838ポリゴン）
-
-1. BlenderとUnityの座標系を合わせるために以下の処理を実行
-    1. [オブジェクトモード]で[アーマチュア]を選択
-    1. [ビュー]-[プロパティ]を開く
-    1. [トランスフォーム]-[回転]を調整
-        * X：**-90**° ←マイナス値
-        * Y：0°
-        * Z：0°
-    1. [オブジェクト]-[適用]-[回転]を選択  
-        ※上記のXの値が0になる
-    1. [トランスフォーム]-[位置]を調整
-        * X：0.00000
-        * Y：0.00000
-        * Z：**0.00000**
-    1. そのまま[アーマチュア]を選択した状態で[トランスフォーム]-[回転]を調整
-        * X：**90**°
-        * Y：0°
-        * Z：**180**°
-    1. [オブジェクト]を選択（オブジェクトモード）  
-        ※[回転]のXの値が **-90**° になっているのを確認
-    1. [オブジェクト]-[適用]-[回転]を選択  
-        ※上記のXの値が **0**° になる
-    1. [エクスポート]をするための最終確認をする
-        1. 正面（フロント）から見た状態で後ろ向きに立っている状態であること
-        1. [アーマチュア]（オブジェクトモード）-[トランスフォーム]-[回転]の値を確認
-            * X：**90**°
-            * Y：**0**°
-            * Z：**180**°
-        1. [オブジェクト]（オブジェクトモード）-[トランスフォーム]-[回転]の値を確認
-            * X：**0**°
-            * Y：**0**°
-            * Z：**0**°
-
-    ※ここまでの参考ファイル（.blend）は[こちら](https://mubirou.github.io/Unity/introduction/blend/018_humanoid_export.blend)
-
-1. FBXエクスポート
-    1. Blender上で[ファイル]-[エクスポート]-[FBX（.fbx）]を選択
-    1. [FBXをエクスポート]設定で[アーマチュア][メッシュ]のみ選択  
-
-    ※エクスポートファイル（.fbx）は[こちら](https://mubirou.github.io/Unity/introduction/fbx/018_humanoid.fbx)
-
-1. XXX
 
 © 2018-2019 夢寐郎
