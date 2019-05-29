@@ -2053,7 +2053,33 @@
 <a name="018"></a>
 # <b>018 AR入門</b>
 
-#### ◆Blenderで編集
+事前に Android の場合の[出力](https://github.com/mubirou/Unity/tree/master/introduction#%E5%87%BA%E5%8A%9B)設定をしておきます
 
+1. ARCore SDK for Unity のダウンロード  
+    1. https://github.com/google-ar/arcore-unity-sdk/releases にアクセス
+    1. 最新版の [arcore-unity-sdk-vX.X.X.unitypackage] をダウンロード
+
+1. Unity を起動し、Project を保存
+1. [Assets]-[ImportPackage]-[CustomPackage...] から上記の [.unitypackage] ファイルをインポート
+1. [Project]-[Assets]-[GoogleARCore]-[Examples]-[ComputerVision]-[Scenes]-[ComputerVision] を開く
+1. [File]-[BuildSettings...]-[AddOpenScenes] ボタンを押して [GoogleARCore/Examples/ComputerVision/Scenes/ComputerVision] をビルドの対象とします
+1. [PlaySEttings...] を選択し各種設定
+    * Other Settings  
+        * Multithreaded Rendering : ✔を外す
+        * Package Name : com.mubirou.app001 等
+        * Minimum API Level : Andoid 7.0 "Nougat"(API Leve... 等
+    * XR Settings  
+        * ARCore Supported : ✔
+1. [File]-[BuildSettings...]-[Build] ボタンを押して出力
+1. Android 端末とPCを接続して、上記で作成した [.apk] ファイルをインストール
+1. インストール途中、[ARCorebyGoogle] のダウンロードが要求されたら支持に従います  
+
+（注意）  
+[ARCore対応端末一覧](https://qiita.com/namiwavess/items/088605ffdd9062d57bd8)に無い端末の場合、[ARCorebyGoogle] のイントール途中、「お使いのデバイスはこのバージョンに対応していません。」と表示されます（HUAWEI Mate9 は対象外）
+
+
+実行環境：Unity 2018.3 Personal、Ubuntu 18.0.4 LTS、Android 9.0  
+作成者：夢寐郎  
+作成日：2019年05月29日
 
 © 2018-2019 夢寐郎
