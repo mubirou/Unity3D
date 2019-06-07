@@ -3,7 +3,7 @@
 ### <b>INDEX</b>
 
 * [MACアドレスの取得](#MACアドレスの取得)
-* [XXX](#)
+* [ビルドの基本](#ビルドの基本)
 ***
 
 
@@ -37,7 +37,36 @@
     ↑XX:XX:XX:XX:XX:XX がQuestのMACアドレス
     ```
 
-実行環境：Ubuntu 18.0.4 LTS、Oculus Quest  
+実行環境：Ubuntu 18.04.2 LTS、Oculus Quest  
+作成者：夢寐郎  
+作成日：2019年06月07日  
+
+
+<a name="ビルドの基本"></a>
+# <b>ビルドの基本</b>
+
+### ビルドの基本
+
+1. Oculus Quest を開発モードにする  
+    1. スマホ上の [Oculusアプリ](https://bit.ly/2KuxKEu) を起動
+    1. [設定] を選び「近くにあります」という表示される "Oculus Quest XXX…" を選択し接続
+    1. [設定]-[その他の設定]-[開発者モード] を ON にする
+1. コンピュータ（Ubuntu）と Oculus Quest を USB 接続  
+    （Oculus Quest 画面に英語で「このコンピュータを信頼するか？」という主旨の表示）
+1. Unity のメニューから [File]-[BuildSettings] を選ぶ
+1. [AddOpenScnes] を押してビルドするシーンを登録
+1. [Platform] を [Android] に変更
+1. [PlaySettings] を選択
+1. [OtherSEttings] を次の通りに設定  
+    * Package Name：com.mubiorou.sample001（名前は任意）
+    * Minimum API Level：Android 4.4 "KitKat"（API level 19）
+1. [XRSettings] を次の通りに設定
+    * Virtual Reality Supported：✔
+    * [Virtual Reality SDKs]-[+]-[Oculus] を選択
+1. [BuildAndRun] ボタンを押す
+1. Oclusu Quest の [ホーム画面]-[ライブラリ]-[提供元不明のアプリ] から上記でビルドされたアプリを選択し起動  
+
+実行環境：Ubuntu 18.04.2 LTS、Unity 2018.3.0f2 Personal、Oculus Quest  
 作成者：夢寐郎  
 作成日：2019年06月07日  
 
