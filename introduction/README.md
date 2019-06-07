@@ -2062,7 +2062,7 @@
 1. Unity を起動し、Project を保存
 1. [Assets]-[ImportPackage]-[CustomPackage...] から上記の [.unitypackage] ファイルをインポート
 1. [Project]-[Assets]-[GoogleARCore]-[Examples]-[ComputerVision]-[Scenes]-[ComputerVision] を開く
-1. [File]-[BuildSettings...]-[AddOpenScenes] ボタンを押して [GoogleARCore/Examples/ComputerVision/Scenes/ComputerVision] をビルドの対象とします
+1. [File]-[BuildSettings...]-[AddOpenScenes] ボタンを押して [GoogleARCore/Examples/ComputerVision/Scenes/ComputerVision] をビルドの対象とする
 1. [PlaySEttings...] を選択し各種設定
     * Other Settings  
         * Multithreaded Rendering : ✔を外す
@@ -2072,7 +2072,7 @@
         * ARCore Supported : ✔
 1. [File]-[BuildSettings...]-[Build] ボタンを押して出力
 1. Android 端末とPCを接続して、上記で作成した [.apk] ファイルをインストール
-1. インストール途中、[ARCorebyGoogle] のダウンロードが要求されたら支持に従います  
+1. インストール途中、[ARCorebyGoogle] のダウンロードが要求されたら支持に従う
 
 （注意）  
 [ARCore対応端末一覧](https://qiita.com/namiwavess/items/088605ffdd9062d57bd8)に無い端末の場合、[ARCorebyGoogle] のイントール途中、「お使いのデバイスはこのバージョンに対応していません。」と表示されます（HUAWEI Mate9 は対象外）
