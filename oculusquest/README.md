@@ -29,12 +29,12 @@
     …
     $ adb devices  ←コンピュータに接続されているデバイスを確認
     List of devices attached
-    XXXXXXXXXXXXXX device ←ケーブルを抜差してこれが Quest であることを突き止める
+    XXXXXXXXXXXXXX device ←ケーブルを抜差してQuestであることを突き止める
 
     $ adb -s XXXXXXXXXXXXXX shell ip addr show wlan0
     ……
     link/ether XX:XX:XX:XX:XX:XX brd ff:ff:ff:ff:ff:ff
-    ↑XX:XX:XX:XX:XX:XX が Quest の MAC アドレス
+    ↑XX:XX:XX:XX:XX:XX がQuestのMACアドレス
     ```
 
 実行環境：Ubuntu 18.0.4 LTS、Oculus Quest  
