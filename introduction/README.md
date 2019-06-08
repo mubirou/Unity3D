@@ -458,10 +458,10 @@
     ① [Edit]-[Preferences]-[External Tools] を選択  
     ② Android「SDK」の [Download] を選択  
     ③ [developer.android.com](https://developer.android.com/studio/#Other) の [DOWNLOAD ANDROID STUDIO] を選択  
-    ④ ダウンロードされた android-studio-ide-XXX-linux.zip を任意の場所に展開  
+    ④ ダウンロードされた android-studio-ide-XXX-linux.tar.gz を任意の場所に展開  
     ⑤ 端末で次の通りに実行（デスクトップに展開した場合）  
     ```
-    $ デスクトップ/android-studio/bin/studio.sh
+    $ /home/（ユーザ名）/デスクトップ/android-studio/bin/studio.sh
     ```
     ⑥ [Android Studio Setup Wizard] の指示に従いインストール  
     ⑦ /home/（ユーザ名）/Android/Sdk が作成されたのを確認  
@@ -517,7 +517,7 @@
 実行環境：Unity 2017.2 Personal、Ubuntu 18.04 LTS、Android 8.0  
 作成者：夢寐郎  
 作成日：2018年06月20日  
-更新日：2018年09月05日
+更新日：2019年06月08日「Androidの場合」を一部修正
 
 
 <a name="008"></a>
