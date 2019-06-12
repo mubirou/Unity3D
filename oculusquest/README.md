@@ -71,10 +71,10 @@
 * Unityで [BuildAndRun] を実行する際、<b>"emulator-5554 shell getprop"</b> と Console に表示され、PC と USB 接続した Android 端末（Oculus Quest）にビルドできないことがあります。その場合、Unity を起動した状態、および PC と Android 端末と接続した状態で、Ubuntu の「端末」で次の通りに処理します。尚、Android SDK のパスは、Unity の [Edit]-[Preferencese]-[ExternalTools] の Android SDK のパスを参照します。
 
 ```
-$ adb devices ←現在接続されているエミュレータを確認
+$ adb devices   ←現在接続されているエミュレータを確認
 List of devices attached
-XXXXXXXXXXXXXXXX	device ←Android端末（Oculus Quest）
-emulator-5554	offline ←これが余計でエラーが発生
+XXXXXXXXXXXXXXXX  device   ←Android端末（Oculus Quest）
+emulator-5554  offline   ←これが余計でエラーが発生
 
 $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb kill-server
 ```
