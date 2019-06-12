@@ -45,7 +45,7 @@
 <a name="ビルドの基本"></a>
 # <b>ビルドの基本</b>
 
-### ビルドの基本
+### ビルドの手順
 
 1. Oculus Quest を開発モードにする  
     1. スマホ上の [Oculusアプリ](https://bit.ly/2KuxKEu) を起動
@@ -66,8 +66,17 @@
 1. [BuildAndRun] ボタンを押す
 1. Oclusu Quest の [ホーム画面]-[ライブラリ]-[提供元不明のアプリ] から上記でビルドされたアプリを選択し起動  
 
+### emulator-5554 shell getprop エラー対策
+
+* Unityで [BuildAndRun] を実行する際、<b>"emulator-5554 shell getprop"</b> と Console に表示され、PC と USB 接続した Android 端末（Oculus Quest）にビルドできないことがあります。その場合、Unity を起動した状態、PC と Android 端末と接続した状態で、Ubuntu の端末で次の通りに処理します。尚、Android SDK のパスは、Unity の [Edit]-[Preferencese]-[ExternalTools] の Android SDK のパスを参照します。
+
+```
+$ /home/（ユーザ名）/Android/Sdk/platform-tools/adb kill-server
+```
+
 実行環境：Ubuntu 18.04.2 LTS、Unity 2018.3.0f2 Personal、Oculus Quest  
 作成者：夢寐郎  
 作成日：2019年06月07日  
+更新日：2019年06月12日 エラー対策
 
 © 2019 夢寐郎
