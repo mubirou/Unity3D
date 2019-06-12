@@ -79,7 +79,7 @@ emulator-5554	offline ←これが余計でエラーが発生
 $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb kill-server
 ```
 
-尚、adb を起動する場合は次の通りにします。
+尚、adb を再起動する場合は次の通りにします。
 
 ```
 $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb start-server
