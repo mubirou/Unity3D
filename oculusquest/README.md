@@ -68,7 +68,7 @@
 
 ### emulator-5554 shell getprop エラー対策
 
-* Unityで [BuildAndRun] を実行する際、<b>"emulator-5554 shell getprop"</b> と Console に表示され、PC と USB 接続した Android 端末（Oculus Quest）にビルドできないことがあります。その場合、Unity を起動した状態および PC と Android 端末と接続した状態で、Ubuntu の端末で次の通りに処理します。尚、Android SDK のパスは、Unity の [Edit]-[Preferencese]-[ExternalTools] の Android SDK のパスを参照します。
+* Unityで [BuildAndRun] を実行する際、<b>"emulator-5554 shell getprop"</b> と Console に表示され、PC と USB 接続した Android 端末（Oculus Quest）にビルドできないことがあります。その場合、Unity を起動した状態、および PC と Android 端末と接続した状態で、Ubuntu の端末で次の通りに処理します。尚、Android SDK のパスは、Unity の [Edit]-[Preferencese]-[ExternalTools] の Android SDK のパスを参照します。
 
 ```
 $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb kill-server
