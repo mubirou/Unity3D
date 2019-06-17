@@ -4,7 +4,7 @@
 
 * [MACアドレスの取得](#MACアドレスの取得)
 * [ビルドの基本](#ビルドの基本)
-* [XXXX](#XXXXX)
+* [提供元不明アプリの削除方法](#提供元不明アプリの削除方法)
 ***
 
 
@@ -90,5 +90,35 @@ $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb start-server
 作成者：夢寐郎  
 作成日：2019年06月07日  
 更新日：2019年06月12日 エラー対策
+
+
+<a name="提供元不明アプリの削除方法"></a>
+# <b>提供元不明アプリの削除方法</b>
+
+### 提供元不明アプリの削除方法
+
+1. Oculus Quest 上のメニューから [ナビゲーション]-[ライブラリ]-[提供元不明アプリ] から削除したいアプリを確認  
+    * Procut Name
+    * Package Name  
+    …が表示されています
+
+1. Ubuntu の端末上でパッケージを探す  
+    ```
+    $ adb shell pm list package
+    ……
+    package:com.mubirou.XXXXXX ←Unityで設定したpackage Name
+
+1. 引き続き端末上でパッケージを削除
+    ```
+    $ adb uninstall com.mubirou.XXXXXX ←上記で探したパッケージを指定
+    ```
+
+1. Oculus Quest 上のメニューから [ナビゲーション]-[ライブラリ]-[提供元不明アプリ] を再表示し、削除されているのを確認
+
+
+実行環境：Ubuntu 18.04.2 LTS、Unity 2018.3.0f2 Personal、Oculus Quest  
+作成者：夢寐郎  
+作成日：2019年06月17日  
+
 
 © 2019 夢寐郎
