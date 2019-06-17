@@ -489,12 +489,10 @@
     ※この名前がAndroid端末上のアプリ名となる（数字から始まる名前でもOK）  
     ※下記の「アプリケーションID」の最後のドット以降と同じでなくてよい
 
-1. Keystore（証明）ファイルの作成  
-    ① [File]-[Build Settings]-[Player Setting]-[Publishing Settings] ボタンを押す  
-    ② [Create a new keystore] を ✔  
-    ③ [Keystore password] と [Confirm Keystore password] を入力（6文字以上）  
-    ④ [Browse Keystore] ボタンを押す  
-    ⑤ 任意の場所に xxx.keystore ファイルを保存  
+1. Keystore（証明）ファイルの作成
+    1. [File]-[Build Settings]-[Player Setting]-[Publishing Settings] ボタンを押す  
+    1. [Keystore Manager] ボタンを選択すると [Keystore Manager] が現れます
+    1. [Keystore...] ボタンを選択、[Create New]-[Anywhere] で保存先と名前（xxx.keystore）を決定
 
 1. アプリケーションIDの登録  
     ① [File]-[Build Settings]-[Player Settings] ボタンを押す  
@@ -515,10 +513,10 @@
     ⑤ Android端末上に生成されたアプリを選択し、再生されたら成功!!  
     ※ xxx.apk の[ダウンロード](https://mubirou.github.io/Unity/introduction/apk/007.apk)（Android端末へのインストール用）  
 
-実行環境：Unity 2017.2 Personal、Ubuntu 18.04 LTS、Android 9.0  
+実行環境：Unity 2019.1 Personal、Ubuntu 18.04 LTS、Android 9.0  
 作成者：夢寐郎  
 作成日：2018年06月20日  
-更新日：2019年06月08日「Androidの場合」を一部修正
+更新日：2019年06月17日 [Keystoreファイルの作成] を Unity 2019.1 に対応
 
 
 <a name="008"></a>
