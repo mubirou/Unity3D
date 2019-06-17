@@ -97,10 +97,9 @@ $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb start-server
 
 ### 提供元不明アプリの削除方法
 
-1. Oculus Quest 上のメニューから [ナビゲーション]-[ライブラリ]-[提供元不明アプリ] から削除したいアプリを確認  
+1. Oculus Quest 上のメニューから [ナビゲーション]-[ライブラリ]-[提供元不明アプリ] から削除したいアプリを確認（アプリ毎に Unity で設定した次の情報が表示されます）  
     * Procut Name
     * Package Name  
-    …が表示されています
 
 1. Ubuntu の端末上でパッケージを探す  
     ```
