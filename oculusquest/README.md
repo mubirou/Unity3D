@@ -6,13 +6,14 @@
 * [ビルドの基本](#ビルドの基本)
 * [提供元不明アプリの削除方法](#提供元不明アプリの削除方法)
 * [Facebookのハンドルネーム登録](#Facebookのハンドルネーム登録)
+* [OculusTouchの基本](#OculusTouchの基本)
 ***
 
 
 <a name="MACアドレスの取得"></a>
 # <b>MACアドレスの取得</b>
 
-### MACアドレスの取得
+### MACアドレスの取得①
 
 1. Oculus デベロッパー登録をする  
     https://dashboard.oculus.com/
@@ -39,9 +40,17 @@
     ↑XX:XX:XX:XX:XX:XX がQuestのMACアドレス
     ```
 
-実行環境：Ubuntu 18.04.2 LTS、Oculus Quest  
+### MACアドレスの取得②
+
+1. Play ストアから [Oculus](https://play.google.com/store/apps/details?id=com.oculus.twilight) アプリをダウンロード
+1. [Oculus] アプリを起動→[⚙設定]→対象の Oculus Quest を選択し接続
+1. 接続済みの Oculus Quest をタップ→ [...その他の設定]→[このヘッドセットについて] を選択
+1. [MACアドレス] に表示される XX:XX:XX:XX:XX:XX がQuestのMACアドレス
+
+実行環境：Ubuntu 18.04.2 LTS、Oculus Quest、Android 9.0.1、Oculus 25.0  
 作成者：夢寐郎  
 作成日：2019年06月07日  
+更新日：2019年06月28日  
 
 
 <a name="ビルドの基本"></a>
@@ -120,5 +129,29 @@ $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb start-server
 作成者：夢寐郎  
 作成日：2019年06月17日  
 
+
+<a name="OculusTouchの基本"></a>
+# <b>Oculus Touchの基本</b>
+
+### この項目は書きかけです
+
+### パッケージのインポート
+
+1. [ここ](https://developer.oculus.com/downloads/package/oculus-utilities-for-unity-5/) から "Oculus Utilities for Unity" をダウンロードし展開
+1. Unity を起動
+1. [Assets]-[ImportPackage]-[CustomPackge] から上記でダウンロードした "OculusUtilities.unitypackage" を選択しインポート
+
+1. Asset Store から "Oculus Integration" をインポート  
+    または [Oculus](https://developer.oculus.com/downloads/package/unity-integration/) サイトから [Download the Oculus Integration] を選択
+
+
+1. Unity の [Window]-[AssetStore] を開く
+1. [SignIn] から
+1. [OculusIntegration](https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022) を検索し [Download]
+1. 
+
+実行環境：Ubuntu 18.04.2 LTS、Unity 2019.1.0f2 Personal、Oculus Quest  
+作成者：夢寐郎  
+作成日：2019年06月XX日  
 
 © 2019 夢寐郎
