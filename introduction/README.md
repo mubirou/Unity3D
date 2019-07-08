@@ -25,6 +25,7 @@
 |016|[Puppet Control](#016)|アクション付の3Dモデルのコントロール|－|[●](#016)|[●](#016)|－|
 |017|[Humanoid](#017)|Blenderからの連携の基本（人間型）|－|－|[●](#017)|－|
 |018|[AR入門](#018)|HelloAR|－|－|－|[●](https://amzn.to/2VY0ZSr)|
+|019|[SQLite操作](#019)|Unity C#からSQLiteを操作|－|－|－|－|
 ***
 
 <a name="プリミティブ･オブジェクト"></a>
@@ -2080,5 +2081,62 @@
 実行環境：Unity 2018.3 Personal、Ubuntu 18.0.4 LTS、Android 9.0  
 作成者：夢寐郎  
 作成日：2019年05月29日
+
+
+<a name="019"></a>
+# <b>019 SQLite操作</b>
+
+この項目は書きかけの項目です。
+
+1. **SQLiteUnityKit** のダウンロード  
+    1. https://github.com/Busta117/SQLiteUnityKit にアクセス
+    1. [Clone of download] ボタン→ [Download ZIP] を選択
+    1. ダウンロードした [SQLiteUnityKit-master.zip] ファイルを展開
+    1. 展開した [SQLiteUnityKit-master] フォルダ内の [libsqlite3.so] を次の場所に移動（フォルダは自作）  
+        ```
+        （プロジェクト名）/Assets/Plugin/Android/libsqlite3.so
+        ```
+    1. 同じく [SQLiteUnityKit-master] フォルダ内の [DataTable.cs] と [SqliteDatabase.cs] を次の場所に移動  
+        ```
+         （プロジェクタ名）/Assets/Script/SQLite/
+        ```
+
+1. 端末でデータベースを作成  
+    ```
+    $ cd /home/（ユーザ名）/デスクトップ/（プロジェクト名）/Assets/StreamingAssets
+    $ sqlite3 sample.db
+    sqlite> CREATE TABLE IF NOT EXISTS ranking_tb(name TEXT, point INTEGER); ←ここでファイルが生成
+    sqlite> INSERT INTO ranking_tb VALUES('MUBIROU', 1234);
+    sqlite> .exit
+    ```
+
+1. Unityのプロジェクタを作成  
+    （今回は /home/（ユーザ名）/デスクトップ/UnitySQLite とする）
+1. 以下のスクリプトを作成して実行  
+    ```
+    //Assets/Script/Main.cs
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+
+    public class Main : MonoBehaviour {
+        void Start() {
+            SqliteDatabase _db = new SqliteDatabase("sample.db");
+
+            string _sql = "SELECT * FROM ranking_tb";
+            DataTable _data = _db.ExecuteQuery(_sql);
+
+            foreach (DataRow _tmp in  _data.Rows) {
+                Debug.Log(_tmp["name"]);
+                Debug.Log(_tmp["point"]);
+            }
+        }
+    }
+    ```
+
+実行環境：Unity 2019.1 Personal、Ubuntu 18.0.4 LTS、Android 9.0  
+作成者：夢寐郎  
+作成日：2019年0X月XX日
+
 
 © 2018-2019 夢寐郎
