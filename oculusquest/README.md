@@ -109,7 +109,7 @@ $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb kill-server
 $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb start-server
 ```
 
-実行環境：Ubuntu 18.04.2 LTS、Unity 2018.3.0f2 Personal、Oculus Quest  
+実行環境：Ubuntu 18.04.2 LTS、Unity 2019.1.0f2 Personal、Oculus Quest
 作成者：夢寐郎  
 作成日：2019年06月07日  
 更新日：2019年07月19日 KeyStore作成関連事項を追記
