@@ -2499,6 +2499,23 @@ void OnGUI()
 <a name="外部クラスの利用"></a>
 # <b>037 外部クラスの利用</b>
 
+### ◆ポイント
+* オブジェクトに複数の C# をアタッチできる
+* 最後にアタッチした C# から順に実行される（MoveUpしても変化なし）
+* オブジェクトにアタッチ＆実行すると C#（クラス）の**インスタンスが生成**される
+* アタッチ済みの C#（クラス）の**インスタンスを参照**する方法  
+	```
+	MyClass _myClass = GetComponent<MyClass>();
+	```
+* 未アタッチの C#（クラス）の**インスタンスを生成**する方法  
+	```
+	MyClass _myClass = gameObject.AddComponent<MyClass>() as MyClass;
+	```
+* 静的変数（クラス変数）の参照方法
+	```
+	Debug.Log(MyClass.NAME);
+	```
+
 ### ◆アタッチ済みの外部クラス（C#ファイル）の利用
 1. 外部クラスの用意  
 	1. [Assets]-[Create]-[C#Script] を選択
