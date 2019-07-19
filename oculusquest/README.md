@@ -67,8 +67,10 @@
 1. [AddOpenScnes] を押してビルドするシーンを登録
 1. [Platform] を [Android] に変更
 1. [PlaySettings] を選択
+1. [Player] を次の通りに設定  
+    * Product Name：saple001（アプリ名･Quest上に表示）
 1. [OtherSEttings] を次の通りに設定  
-    * Package Name：com.mubiorou.sample001（名前は任意）
+    * Package Name：com.mubiorou.sample001（これでアプリを識別･Quest上に表示）
     * Minimum API Level：Android 4.4 "KitKat"（API level 19）
 1. [XRSettings] を次の通りに設定
     * Virtual Reality Supported：✔
