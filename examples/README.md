@@ -40,6 +40,7 @@
 |034|[シーンの事前読込み②](#シーンの事前読込み②)|ロードに時間がかかるシーンを事前に読込む②|
 |035|[フワッと動いてスッと止まる](#フワッと動いてスッと止まる)|矢印キーでフワッと動いてスッと止まる|
 |036|[ユニティちゃん入門](#ユニティちゃん入門)|ユニティちゃんを動かしてみる|
+|037|[外部クラスの利用](#外部クラスの利用)|外部クラス（C#ファイル）の利用|
 ***
 
 <a name="テキスト表示"></a>
@@ -2492,6 +2493,95 @@ void OnGUI()
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：夢寐郎  
-作成日：2018年04月16日
+作成日：2018年04月16日  
 
-© 2018 夢寐郎
+
+<a name="外部クラスの利用"></a>
+# <b>037 外部クラスの利用</b>
+
+### アタッチ済みの外部クラス（C#ファイル）の利用
+1. 外部クラスの用意  
+	1. [Assets]-[Create]-[C#Script] を選択
+	1. C#ファイル名を○○（クラス名）とする
+	1. スクリプトを記述する  
+	```
+	//MyClass.cs
+	using System.Collections;
+	using System.Collections.Generic;
+	using UnityEngine;
+
+	public class MyClass : MonoBehaviour {
+		public static string NAME = "MUBIROU";
+		private int _age = 51; //privateは省略
+
+		void Start() {}
+
+		public int Age {
+			get { return _age; } //thisは省略
+			set { _age = value; } //thisは省略 ←valueは予め定義された変数（決め打ち）
+		}
+
+		public void Message(string arg) {
+			Debug.Log("MyClass.Message: " + arg);
+		}
+	}
+	```
+
+1. メインクラスの用意  
+	1. [GameObject]-[CreateEmpty] を選択し名前を Main に変更
+	1. [Assets]-[Create]-[C#Script] を選択し名前を Main（.cs）に変更
+	1. GameObject（Main）に C# スクリプト（Main.cs）をアタッチ
+	1. スクリプトを記述する  
+	```
+	//Main.cs
+	using System.Collections;
+	using System.Collections.Generic;
+	using UnityEngine;
+
+	public class Main : MonoBehaviour {
+		void Start() {
+			//インスタンスの「参照」←アタッチ＆実行した段階でインスタンスが「生成」
+			MyClass _myClass = GetComponent<MyClass>();
+			_myClass.Age = 52;
+			Debug.Log(_myClass.Age); //-> 52
+
+			// クラス変数（静的変数）のアクセス
+			Debug.Log(MyClass.NAME); //-> "MUBIROU"
+
+			// メソッドの実行
+			_myClass.Message("Hello!"); //-> "MyClass.Message: Hello!"
+		}
+	}
+	```
+
+### 未アタッチの外部クラス（C#ファイル）の利用
+	* 上記と異なり GameObject（Main）に以下のスクリプトをアタッチしません
+	* Main.cs のサンプルは次の通り
+	```
+	//Main.cs
+	using System.Collections;
+	using System.Collections.Generic;
+	using UnityEngine;
+
+	public class Main : MonoBehaviour {
+		void Start() {
+			//インスタンスの「生成」（new MyClass() は不可）
+			MyClass _myClass = gameObject.AddComponent<MyClass>() as MyClass;
+			_myClass.Age = 52;
+			Debug.Log(_myClass.Age); //-> 52
+
+			// クラス変数（静的変数）のアクセス
+			Debug.Log(MyClass.NAME); //-> "MUBIROU"
+
+			// メソッドの実行
+			_myClass.Message("Hello!"); //-> "MyClass.Message: Hello!"
+		}
+	}
+	```
+
+実行環境：Unity 2019.1 Personal、Ubuntu 18.04 LTS  
+作成者：夢寐郎  
+作成日：2019年07月19日  
+
+
+© 2018-2019 夢寐郎
