@@ -65,12 +65,12 @@
     （Oculus Quest 画面に英語で「このコンピュータを信頼するか？」という主旨の表示）
 1. Unity のメニューから [File]-[BuildSettings] を選ぶ
 1. [AddOpenScnes] を押してビルドするシーンを登録
-1. [Platform] を [Android] に変更
+1. [Platform] を [**Android**] に変更
 1. [PlaySettings] を選択
 1. [Publishing Settings] を次の通りに設定  
     1. [KeystoreManager...] を選択
     1. [Keystore...]-[CreateNew]-[Anywhere] を選択
-    1. 名前を "mubirou.keystore" 等に変更
+    1. 名前を "**mubirou.keystore**" 等に変更
     1. [KeystoreManager] に戻り次の通りに設定し [AddKey] をクリック  
         * Password：XXXX
         * Confirm password：XXXX
@@ -78,15 +78,15 @@
         * Password：XXXX
         * Confirm password：XXXX
 1. [Player] を次の通りに設定  
-    * Product Name：saple001（アプリ名･Quest上に表示）
+    * Product Name：**saple001**（アプリ名･Quest上に表示）
 1. [OtherSEttings] を次の通りに設定  
-    * Package Name：com.mubiorou.sample001（これでアプリを識別･Quest上に表示）
+    * Package Name：**com.mubiorou.sample001**（これでアプリを識別･Quest上に表示）
     * Minimum API Level：Android 4.4 "KitKat"（API level 19）
 1. [XRSettings] を次の通りに設定
     * Virtual Reality Supported：✔
     * [Virtual Reality SDKs]-[+]-[Oculus] を選択
 1. [BuildAndRun] ボタンを押す
-1. saple001.apk と名前（任意）を付けて [保存] を選択
+1. **saple001.apk** と名前（任意）を付けて [保存] を選択
 1. 途中 "Android device emulator-5554 is not responding!" 等々のダイアログが表示された場合 [Ok] を押す（下記のエラー対策をしてもよい）
 1. Oclusu Quest の [ホーム画面]-[ライブラリ]-[提供元不明のアプリ] から上記でビルドされたアプリを選択し起動  
 
