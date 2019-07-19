@@ -2502,16 +2502,16 @@ void OnGUI()
 ### ◆ポイント
 * GameObject には複数の C#（.csファイル）をアタッチできる
 * 最後にアタッチした C# から順に実行される（MoveUpしても変化なし）
-* オブジェクトにアタッチ＆実行すると自動的に C#（クラス）の「インスタンスが生成」される
-* アタッチ済みの C#（クラス）の「インスタンスを参照」する方法  
+* オブジェクトにアタッチ＆実行すると自動的に C#（クラス）のインスタンスが「生成」される
+* アタッチ済みの C#（クラス）のインスタンスを「参照」する方法  
 	```
 	MyClass _myClass = GetComponent<MyClass>();
 	```
-* 未アタッチの C#（クラス）の「インスタンスを生成」する方法  
+* 未アタッチの C#（クラス）のインスタンスを「生成」する方法  
 	```
 	MyClass _myClass = gameObject.AddComponent<MyClass>() as MyClass;
 	```
-* 「静的変数（クラス変数）」の参照方法
+* 静的変数（クラス変数）の参照方法
 	```
 	Debug.Log(MyClass.NAME);
 	```
@@ -2557,7 +2557,7 @@ void OnGUI()
 
 	public class Main : MonoBehaviour {
 		void Start() {
-			//インスタンスの「参照」←アタッチ＆実行した段階でインスタンスが「生成」
+			//インスタンスの「参照」←アタッチ＆実行で自動的にインスタンスが「生成」
 			MyClass _myClass = GetComponent<MyClass>(); //ポイント!!
 			_myClass.Age = 52;
 			Debug.Log(_myClass.Age); //-> 52
