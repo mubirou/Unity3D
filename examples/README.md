@@ -2541,7 +2541,7 @@ void OnGUI()
 	public class Main : MonoBehaviour {
 		void Start() {
 			//インスタンスの「参照」←アタッチ＆実行した段階でインスタンスが「生成」
-			MyClass _myClass = GetComponent<MyClass>();
+			MyClass _myClass = GetComponent<MyClass>(); //ポイント!!
 			_myClass.Age = 52;
 			Debug.Log(_myClass.Age); //-> 52
 
@@ -2556,7 +2556,7 @@ void OnGUI()
 
 ### 未アタッチの外部クラス（C#ファイル）の利用
 	* 上記と異なり GameObject（Main）に以下のスクリプトをアタッチしません
-	* Main.cs のサンプルは次の通り
+	* Main.cs のサンプルは次の通り  
 	```
 	//Main.cs
 	using System.Collections;
@@ -2566,7 +2566,7 @@ void OnGUI()
 	public class Main : MonoBehaviour {
 		void Start() {
 			//インスタンスの「生成」（new MyClass() は不可）
-			MyClass _myClass = gameObject.AddComponent<MyClass>() as MyClass;
+			MyClass _myClass = gameObject.AddComponent<MyClass>() as MyClass; //ポイント!!
 			_myClass.Age = 52;
 			Debug.Log(_myClass.Age); //-> 52
 
