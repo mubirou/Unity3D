@@ -2555,8 +2555,8 @@ void OnGUI()
 	```
 
 ### 未アタッチの外部クラス（C#ファイル）の利用
-	* 上記と異なり GameObject（Main）に以下のスクリプトをアタッチしません
-	* Main.cs のサンプルは次の通り  
+1. 上記と異なり GameObject（Main）に以下のスクリプトをアタッチしません
+1. Main.cs のサンプルは次の通り  
 	```
 	//Main.cs
 	using System.Collections;
