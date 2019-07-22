@@ -5,7 +5,7 @@
 * [MACアドレスの取得](#MACアドレスの取得)
 * [ビルドの基本](#ビルドの基本)
 * [提供元不明アプリの削除方法](#提供元不明アプリの削除方法)
-* [OculusTouchの基本](#OculusTouchの基本)
+* [OculusTouchのイロハ](#OculusTouchのイロハ)
 ***
 
 
@@ -147,8 +147,8 @@ $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb start-server
 作成日：2019年06月17日  
 
 
-<a name="OculusTouchの基本"></a>
-# <b>Oculus Touchの基本</b>
+<a name="OculusTouchのイロハ"></a>
+# <b>Oculus Touchのイロハ</b>
 
 ### Oculus Utilities for Unity のインポート
 
