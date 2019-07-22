@@ -148,20 +148,20 @@ $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb start-server
 
 ### この項目は書きかけです
 
-### パッケージのインポート
+### Oculus Utilities for Unity のインポート
 
 1. [ここ](https://developer.oculus.com/downloads/package/oculus-utilities-for-unity-5/) から "Oculus Utilities for Unity" をダウンロードし展開
 1. Unity を起動
-1. [Assets]-[ImportPackage]-[CustomPackge] から上記でダウンロードした "OculusUtilities.unitypackage" を選択しインポート
-
+1. [Assets]-[ImportPackage]-[CustomPackge] から上記でダウンロードした [OclulusUtilities] 内の "**OculusUtilities.unitypackage**" を選択し [開く]-[Import]
 1. Asset Store から "Oculus Integration" をインポート  
     または [Oculus](https://developer.oculus.com/downloads/package/unity-integration/) サイトから [Download the Oculus Integration] を選択
 
+### 
 
-1. Unity の [Window]-[AssetStore] を開く
-1. [SignIn] から
-1. [OculusIntegration](https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022) を検索し [Download]
-1. 
+
+
+
+
 
 実行環境：Ubuntu 18.04.2 LTS、Unity 2019.1.0f2 Personal、Oculus Quest  
 作成者：夢寐郎  
