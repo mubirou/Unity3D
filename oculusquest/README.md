@@ -146,8 +146,6 @@ $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb start-server
 <a name="OculusTouchの基本"></a>
 # <b>Oculus Touchの基本</b>
 
-### この項目は書きかけです
-
 ### Oculus Utilities for Unity のインポート
 
 1. [ここ](https://developer.oculus.com/downloads/package/oculus-utilities-for-unity-5/) から "Oculus Utilities for Unity" をダウンロードし展開
@@ -156,15 +154,40 @@ $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb start-server
 1. Asset Store から "Oculus Integration" をインポート  
     または [Oculus](https://developer.oculus.com/downloads/package/unity-integration/) サイトから [Download the Oculus Integration] を選択
 
-### 
+### カメラの変更
 
+1. [Hierarchy]-[MainCamera] を削除
+1. [Project]-[Assets]-[Oculus]-[VR]-[Prefabs]-[OVRCameraRig] を [Hierarchy] にドラッグ
+1. [Inspector]-[Transform] の値を次の通りに変更  
+    * X：0
+    * Y：2.5
+    * Z：-6
 
+### オブジェクトの配置
 
+1. [GameObject]-[CreateEmpty] を選択し、名前を "Main" に変更
+1. [Assets]-[Create]-[C#Script] を選択し、名前を "Main" に変更（"Main.cs"の生成）
+1. 3D空間上に Oculus Touch の代わりに表示する左右のオブジェクトを生成
+    1. [GameObject]-[3DObject]-[Cylinder] を選択し、名前を "OculusTouchR" とする
+    1. [Inspector]-[Scale] の値を次の通りに変更  
+        * X：0.1
+        * Y：0.2
+        * Z：0.1
+    1. 同様に "OculusTouchL" も作成
+    1. 位置は以下の床に隠れないように配置（任意）
+1. [GameObject]-[3DObject]-[Plane]（床）を作成（設定は次の通り）
+    * X：0
+    * Y：0.1
+    * Z：0
+
+### スクリプティング
+
+### （注意）この項目は書きかけの項目です
 
 
 
 実行環境：Ubuntu 18.04.2 LTS、Unity 2019.1.0f2 Personal、Oculus Quest  
 作成者：夢寐郎  
-作成日：2019年06月XX日  
+作成日：2019年0X月XX日  
 
 © 2019 夢寐郎
