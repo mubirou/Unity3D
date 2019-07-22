@@ -65,7 +65,7 @@
     （Oculus Quest 画面に英語で「このコンピュータを信頼するか？」という主旨の表示）
 1. Unity のメニューから [File]-[BuildSettings] を選ぶ
 1. [AddOpenScnes] を押してビルドするシーンを登録
-1. [Platform] を [Android] に変更
+1. [Platform] を [Android] に変更し [SwitchPlatform] をクリック
 1. [PlaySettings] を選択
 1. [OtherSEttings] を次の通りに設定  
     * Package Name：com.mubiorou.sample001（名前は任意）
