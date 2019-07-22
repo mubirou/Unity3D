@@ -85,7 +85,11 @@
 1. [XRSettings] を次の通りに設定
     * Virtual Reality Supported：✔
     * [Virtual Reality SDKs]-[+]-[Oculus] を選択
-1. [BuildAndRun] ボタンを押す
+1. 画質向上のために次の設定を行います  
+    * [Edit]-[ProjectSettings]-[Quality] の上部の GUI で Android の Levels の [Default] を「Ultra」に変更
+    * [Edit]-[ProjectSettings]-[Quality]-[ShadowDistance] を 150→40 程度に変更
+1. [BuildAndRun] ボタンを押す  
+    * 必要に応じて [PlayerSettings...] から上記で設定したパスワードの入力をする
 1. **saple001.apk** と名前（任意）を付けて [保存] を選択
 1. 途中 "Android device emulator-5554 is not responding!" 等々のダイアログが表示された場合 [Ok] を押す（下記のエラー対策をしてもよい）
 1. Oclusu Quest の [ホーム画面]-[ライブラリ]-[提供元不明のアプリ] から上記でビルドされたアプリを選択し起動  
@@ -167,12 +171,17 @@ $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb start-server
 
 1. [GameObject]-[CreateEmpty] を選択し、名前を "Main" に変更
 1. [Assets]-[Create]-[C#Script] を選択し、名前を "Main" に変更（"Main.cs"の生成）
+1. 上記の空の GameObject（Main）に C#（Main.cs）をアタッチ
 1. 3D空間上に Oculus Touch の代わりに表示する左右のオブジェクトを生成
     1. [GameObject]-[3DObject]-[Cylinder] を選択し、名前を "OculusTouchR" とする
     1. [Inspector]-[Scale] の値を次の通りに変更  
-        * X：0.1
-        * Y：0.2
-        * Z：0.1
+        * X：0.05
+        * Y：0.1
+        * Z：0.05
+    1. [Inspector]-[Rotation] の値を次の通りに変更
+        * X：-45
+        * Y：0
+        * Z：0
     1. 同様に "OculusTouchL" も作成
     1. 位置は以下の床に隠れないように配置（任意）
 1. [GameObject]-[3DObject]-[Plane]（床）を作成（設定は次の通り）
@@ -182,12 +191,48 @@ $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb start-server
 
 ### スクリプティング
 
-### （注意）この項目は書きかけの項目です
+1. 上記の "Main.cs" の内容を変更します
+    ```
+    //Main.cs
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
 
+    public class Main : MonoBehaviour {
+        private GameObject _oculusTouchR;
+        private GameObject _oculusTouchL;
+        private GameObject _leftHandAnchor;
+        private GameObject _rightHandAnchor;
 
+        void Start() {
+            _oculusTouchR = GameObject.Find("OculusTouchR");
+            _oculusTouchL = GameObject.Find("OculusTouchL");
+            GameObject _ovrCameraRig = GameObject.Find("OVRCameraRig");
+            GameObject _trackingSpace = _ovrCameraRig.transform.Find("TrackingSpace").gameObject;
+            _leftHandAnchor = _trackingSpace.transform.Find("LeftHandAnchor").gameObject;
+            _rightHandAnchor = _trackingSpace.transform.Find("RightHandAnchor").gameObject;
+        }
+
+        void Update() {
+            //position
+            Vector3 _oculusTouchPosL = _leftHandAnchor.transform.position;
+            Vector3 _oculusTouchPosR = _rightHandAnchor.transform.position;
+            _oculusTouchL.transform.position = _oculusTouchPosL;
+            _oculusTouchR.transform.position = _oculusTouchPosR;
+
+            //rotation
+            Quaternion _oculusTouchRotationL = _leftHandAnchor.transform.rotation;
+            Quaternion _oculusTouchRotationR = _rightHandAnchor.transform.rotation;
+            _oculusTouchL.transform.rotation = _oculusTouchRotationL;
+            _oculusTouchR.transform.rotation = _oculusTouchRotationR;
+        }
+    }
+    ```
+
+1. [ビルド](#ビルドの基本) します
 
 実行環境：Ubuntu 18.04.2 LTS、Unity 2019.1.0f2 Personal、Oculus Quest  
 作成者：夢寐郎  
-作成日：2019年0X月XX日  
+作成日：2019年07月22日  
 
 © 2019 夢寐郎
