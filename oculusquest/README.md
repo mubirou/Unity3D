@@ -176,12 +176,8 @@ $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb start-server
     1. [GameObject]-[3DObject]-[Cylinder] を選択し、名前を "OculusTouchR" とする
     1. [Inspector]-[Scale] の値を次の通りに変更  
         * X：0.05
-        * Y：0.1
+        * Y：0.05
         * Z：0.05
-    1. [Inspector]-[Rotation] の値を次の通りに変更
-        * X：-45
-        * Y：0
-        * Z：0
     1. 同様に "OculusTouchL" も作成
     1. 位置は以下の床に隠れないように配置（任意）
 1. [GameObject]-[3DObject]-[Plane]（床）を作成（設定は次の通り）
@@ -189,9 +185,9 @@ $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb start-server
     * Y：0.1
     * Z：0
 
-### スクリプティング
+### スクリプティング＆実行
 
-1. 上記の "Main.cs" の内容を変更します
+1. [Project]-[Assets]-[Main]（C#）の内容を変更する
     ```
     //Main.cs
     using System.Collections;
@@ -229,7 +225,7 @@ $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb start-server
     }
     ```
 
-1. [ビルド](#ビルドの基本) します
+1. [ビルド](#ビルドの基本) して実行
 
 実行環境：Ubuntu 18.04.2 LTS、Unity 2019.1.0f2 Personal、Oculus Quest  
 作成者：夢寐郎  
