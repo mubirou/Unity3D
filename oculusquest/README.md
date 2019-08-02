@@ -227,6 +227,32 @@ $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb start-server
 
 1. [ビルド](#ビルドの基本) して実行
 
+### 以下、修正書換え中
+
+1. [Unity Forums](https://forum.unity.com/threads/unity-hub-v2-0-0-release.677485/) から [Hub 2.0.0 for Linux] を選択し「UnityHubSetup.AppImage」ファイルをダウンロード
+
+1. Linux の端末で次の通りに処理  
+    ```
+    $ cd デスクトップ ←ダウンロードした場所を指定
+    $ chmod 755 UnityHubSetup.AppImage ←権限の変更
+    $ ./UnityHubSetup.AppImage
+    ```
+
+1. 途中「Agree」「Yes」を選択後、インストール画面で「**Unity バージョンがありません**」と表示されたら、[リストに追加] を選び、使用している Unity Editor の実行ファイルを選び（ユーザ名/Unity-2019.1.0f2/Editor/Unity など）[Select Editor] をクリック→[インストール]
+
+1. 「Unity バージョンを加える」画面で最新正式リリースを選択し [次へ]
+
+1. 「Unity 2019.2.0f1 にモジュールを追加」と表示されたら、次の項目を✔して [実行]  
+    * Android Build Support
+    * WebGL Build Support
+    * Documentation
+    * 日本語
+
+1. 初期設定では /home/Unity/Hub/Editor/2019.2.0f1/ がインストールされる  
+    （名前を変更して移動してもよい）
+
+1. Unity を起動する場合、上記の作業で作成されたデスクトップ上の UnityHubSetup.AppImage アイコンをダブルクリックする
+
 実行環境：Ubuntu 18.04.2 LTS、Unity 2019.1.0f2 Personal、Oculus Quest  
 作成者：夢寐郎  
 作成日：2019年07月22日  
