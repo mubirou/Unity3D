@@ -16,7 +16,7 @@ public class Console : MonoBehaviour {
 
     public void Log(string arg) {
         _logList.Add(arg);
-        if (_logList.Count > 50) { //100行まで表示
+        if (_logList.Count > 50) { //50行まで表示
             _logList.RemoveAt(0);
         }
         GetComponent<TextMesh>().text = "";

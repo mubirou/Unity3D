@@ -107,6 +107,9 @@ public class OculusTouch : MonoBehaviour {
     private LineRenderer _lineRendererL = null;
     private LineRenderer _lineRendererR = null;
 
+    //アクティブなコントローラ
+    private string _activeController = "right";
+
     //レーザーポインタが反応するGameObjectのリスト
     private List<GameObject> _targetObjects = new List<GameObject>();
 
@@ -185,16 +188,15 @@ public class OculusTouch : MonoBehaviour {
         //コントローラーのレーザーポイントを表示する
         _lineRendererL = _oculusTouchL.GetComponent<LineRenderer>();
         _lineRendererL.enabled = true;
-        _lineRendererL.SetColors(Color.blue,Color.red); //機能していない
-
-        _lineRendererR = _oculusTouchL.GetComponent<LineRenderer>();
+        _lineRendererL.startWidth = _lineRendererL.endWidth = 0.001f;
+        _lineRendererR = _oculusTouchR.GetComponent<LineRenderer>();
         _lineRendererR.enabled = true;
-        _lineRendererR.SetColors(Color.blue,Color.red); //機能していない
+        _lineRendererR.startWidth = _lineRendererR.endWidth = 0.006f;
     }
 
-    /******************************************************************************************
+    /*****************************************************************************
      * OculucTouch.Update()
-     ******************************************************************************************/
+     *****************************************************************************/
     void Update() {
         //位置
         Vector3 _oculusTouchPosL = _leftHandAnchor.transform.position;
@@ -215,6 +217,9 @@ public class OculusTouch : MonoBehaviour {
         if (OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger)) {
             LIndexTriggerDown();
             _isLIndexTriggerDown = true;
+            _activeController = "left";
+            _lineRendererL.startWidth = _lineRendererL.endWidth = 0.006f;
+            _lineRendererR.startWidth = _lineRendererR.endWidth = 0.001f;
         }
         if (OVRInput.GetUp(OVRInput.RawButton.LIndexTrigger)) {
             LIndexTriggerUp();
@@ -223,6 +228,9 @@ public class OculusTouch : MonoBehaviour {
         if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger)) {
             RIndexTriggerDown();
             _isRIndexTriggerDown = true;
+            _activeController = "right";
+            _lineRendererL.startWidth = _lineRendererL.endWidth = 0.001f;
+            _lineRendererR.startWidth = _lineRendererR.endWidth = 0.006f;
         }
         if (OVRInput.GetUp(OVRInput.RawButton.RIndexTrigger)) {
             RIndexTriggerUp();
@@ -344,11 +352,16 @@ public class OculusTouch : MonoBehaviour {
         if (OVRInput.GetDown(OVRInput.RawNearTouch.LIndexTrigger)) LIndexTriggerRawNearTouch();
         if (OVRInput.GetDown(OVRInput.RawNearTouch.RIndexTrigger)) RIndexTriggerRawNearTouch();
 
-        //レーザー //NEW
+        //レーザー
         if (_enabledLaserL) {
-            Ray _ray = new Ray(_oculusTouchL.transform.position, _oculusTouchL.transform.forward);
-            _lineRendererL.SetPosition(0, _ray.origin);
-            _lineRendererL.SetPosition(1, _ray.origin + _ray.direction * 500.0f);
+            Ray _rayL = new Ray(_oculusTouchL.transform.position, _oculusTouchL.transform.forward);
+            _lineRendererL.SetPosition(0, _rayL.origin);
+            _lineRendererL.SetPosition(1, _rayL.origin + _rayL.direction * 500.0f);
+        }
+        if (_enabledLaserR) {
+            Ray _rayR = new Ray(_oculusTouchR.transform.position, _oculusTouchR.transform.forward);
+            _lineRendererR.SetPosition(0, _rayR.origin);
+            _lineRendererR.SetPosition(1, _rayR.origin + _rayR.direction * 500.0f);
         }
     }
 
@@ -464,21 +477,19 @@ public class OculusTouch : MonoBehaviour {
         private set {} //Read Only
     }
 
-    //レーザーポインタが反応するGameObjectのリスト
-    public List<GameObject> TargetObjects {
-        get { return _targetObjects; }
-        set { _targetObjects = value; }
-    }
-
-    //レーザーを表示するか //NEW
+    //レーザーを表示するか
     public bool EnabledLaserL {
         get { return _enabledLaserL; }
         set { _enabledLaserL = value; }
     }
-
-    //レーザーを表示するか //NEW
     public bool EnabledLaserR {
         get { return _enabledLaserR; }
         set { _enabledLaserR = value; }
+    }
+
+    //レーザーポインタが反応するGameObjectのリスト
+    public List<GameObject> TargetObjects {
+        get { return _targetObjects; }
+        set { _targetObjects = value; }
     }
 }
