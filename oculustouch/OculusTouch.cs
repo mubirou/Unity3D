@@ -109,6 +109,9 @@ public class OculusTouch : MonoBehaviour {
 
     //アクティブなコントローラ
     private string _activeController = "right";
+    //バイブレーション
+    private bool _isVibrationL = false;
+    private bool _isVibrationR = false;
 
     //レーザーポインタが反応するGameObjectのリスト
     private List<GameObject> _targetObjects = new List<GameObject>();
@@ -191,7 +194,7 @@ public class OculusTouch : MonoBehaviour {
         _lineRendererL.startWidth = _lineRendererL.endWidth = 0.001f;
         _lineRendererR = _oculusTouchR.GetComponent<LineRenderer>();
         _lineRendererR.enabled = true;
-        _lineRendererR.startWidth = _lineRendererR.endWidth = 0.006f;
+        _lineRendererR.startWidth = _lineRendererR.endWidth = 0.007f;
     }
 
     /*****************************************************************************
@@ -218,7 +221,7 @@ public class OculusTouch : MonoBehaviour {
             LIndexTriggerDown();
             _isLIndexTriggerDown = true;
             _activeController = "left";
-            _lineRendererL.startWidth = _lineRendererL.endWidth = 0.006f;
+            _lineRendererL.startWidth = _lineRendererL.endWidth = 0.007f;
             _lineRendererR.startWidth = _lineRendererR.endWidth = 0.001f;
         }
         if (OVRInput.GetUp(OVRInput.RawButton.LIndexTrigger)) {
@@ -230,7 +233,7 @@ public class OculusTouch : MonoBehaviour {
             _isRIndexTriggerDown = true;
             _activeController = "right";
             _lineRendererL.startWidth = _lineRendererL.endWidth = 0.001f;
-            _lineRendererR.startWidth = _lineRendererR.endWidth = 0.006f;
+            _lineRendererR.startWidth = _lineRendererR.endWidth = 0.007f;
         }
         if (OVRInput.GetUp(OVRInput.RawButton.RIndexTrigger)) {
             RIndexTriggerUp();
@@ -352,21 +355,89 @@ public class OculusTouch : MonoBehaviour {
         if (OVRInput.GetDown(OVRInput.RawNearTouch.LIndexTrigger)) LIndexTriggerRawNearTouch();
         if (OVRInput.GetDown(OVRInput.RawNearTouch.RIndexTrigger)) RIndexTriggerRawNearTouch();
 
-        //レーザー
+        //===========================================================
+        //レーザー（左）表示
+        //===========================================================
         if (_enabledLaserL) {
             Ray _rayL = new Ray(_oculusTouchL.transform.position, _oculusTouchL.transform.forward);
             _lineRendererL.SetPosition(0, _rayL.origin);
             _lineRendererL.SetPosition(1, _rayL.origin + _rayL.direction * 500.0f);
+            //オブジェクトにヒット
+            RaycastHit _hitInfoL = new RaycastHit(); //構造体
+            if (Physics.Raycast(_rayL, out _hitInfoL, 500.0f)) {
+                //ヒットしたらレーザをそこまでで止める
+                _lineRendererL.SetPosition(1, _hitInfoL.point);
+
+                if (_activeController == "left") { //非アクティブの場合振動なし
+                    //ヒットしたGameObject
+                    GameObject _hitObjectL = _hitInfoL.collider.gameObject;
+                    // CheckAndVibration(_hitObjectL, OVRInput.Controller.LTouch, _isVibrationL);
+                    foreach (GameObject _tmp in _targetObjects) {
+                        //ヒットしたGameObjectが登録済オブジェクトであれば
+                        if (_tmp == _hitObjectL) {
+                            if (!_isVibrationL) {
+                                //振動させる（周波数0〜1.0f,振幅0〜1.0f）
+                                OVRInput.SetControllerVibration(1.0f, 0.2f, OVRInput.Controller.LTouch);
+                                //0.05秒後に "StopVibration()" を実行
+                                Invoke("StopVibrationL", 0.05f); 
+                                _isVibrationL = true;
+                            }
+                        }
+                    }
+                }
+            } else { //選択オブジェクトの領域を外した時
+                _isVibrationL = false;
+            }
         }
+
+        //===========================================================
+        //レーザー（右）表示
+        //===========================================================
         if (_enabledLaserR) {
             Ray _rayR = new Ray(_oculusTouchR.transform.position, _oculusTouchR.transform.forward);
             _lineRendererR.SetPosition(0, _rayR.origin);
             _lineRendererR.SetPosition(1, _rayR.origin + _rayR.direction * 500.0f);
+            //オブジェクトにヒット
+            RaycastHit _hitInfoR = new RaycastHit(); //構造体
+            if (Physics.Raycast(_rayR, out _hitInfoR, 500.0f)) {
+                //ヒットしたらレーザをそこまでで止める
+                _lineRendererR.SetPosition(1, _hitInfoR.point);
+
+                if (_activeController == "right") { //非アクティブの場合振動なし
+                    //ヒットしたGameObject
+                    GameObject _hitObjectR = _hitInfoR.collider.gameObject;
+                    // CheckAndVibration(_hitObjectR, OVRInput.Controller.RTouch, _isVibrationR); //汎用メソッド
+                    foreach (GameObject _tmp in _targetObjects) {
+                        //ヒットしたGameObjectが登録済オブジェクトであれば
+                        if (_tmp == _hitObjectR) {
+                            if (!_isVibrationR) {
+                                //振動させる（周波数0〜1.0f,振幅0〜1.0f）
+                                OVRInput.SetControllerVibration(1.0f, 0.2f, OVRInput.Controller.RTouch);
+                                //0.05秒後に "StopVibration()" を実行
+                                Invoke("StopVibrationR", 0.05f); 
+                                _isVibrationR = true;
+                            }
+                        }
+                    }
+                }
+            } else { //選択オブジェクトの領域を外した時
+                _isVibrationR = false;
+            }
         }
     }
 
     //=====================================
     // Private Method
+    //=====================================
+    private void StopVibrationL() {
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch); //END
+    }
+    private void StopVibrationR() {
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch); //END
+    }
+
+    //=====================================
+    // Public Method
     //=====================================
     public List<GameObject> AddTargetObjects(GameObject arg) {
         if (_targetObjects.IndexOf(arg) == -1) { //複数登録の回避
