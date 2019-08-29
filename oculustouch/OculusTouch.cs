@@ -1,5 +1,5 @@
 ﻿/***************************************************************************
- * OculusTouch.cs (ver.2019-08-16T11:18)
+ * OculusTouch.cs (ver.2019-08-29T10:49)
  * © 2019 夢寐郎
  ***************************************************************************/
 using System.Collections;
@@ -10,8 +10,8 @@ using System; //Mathに必要
 /******************************************************************************
  * OculusTouch Class
  *  <Public Method>
- *      AddTargetObjects(GameObject) ←NEW
- *      RemoveTargetObjects(GameObject) ←NEW
+ *      AddTargetObjects(GameObject)
+ *      RemoveTargetObjects(GameObject)
  *
  *  <Public Property>
  *      IsLHandTriggerDown（Read Only）
@@ -26,7 +26,7 @@ using System; //Mathに必要
  *      RHandTrigger（Read Only）
  *      RIndexTrigger（Read Only）
  *      RThumbstickRotate（Read Only）
- *      TargetObjects ←NEW
+ *      TargetObjects
  *
  *  <Event>
  *      ADown
@@ -191,7 +191,7 @@ public class OculusTouch : MonoBehaviour {
         //コントローラーのレーザーポイントを表示する
         _lineRendererL = _oculusTouchL.GetComponent<LineRenderer>();
         _lineRendererL.enabled = true;
-        _lineRendererL.startWidth = _lineRendererL.endWidth = 0.001f;
+        _lineRendererL.startWidth = _lineRendererL.endWidth = 0.0005f;
         _lineRendererR = _oculusTouchR.GetComponent<LineRenderer>();
         _lineRendererR.enabled = true;
         _lineRendererR.startWidth = _lineRendererR.endWidth = 0.007f;

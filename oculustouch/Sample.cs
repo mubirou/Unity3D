@@ -137,6 +137,7 @@ public class Main : MonoBehaviour {
 
         //コンソールの参照（冗長すぎね？）
         _console = _oculusTouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
+        //_console = GameObject.Find("Console").gameObject.GetComponent<Console>();
     }
 
     //=========================
