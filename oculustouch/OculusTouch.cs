@@ -209,6 +209,12 @@ public class OculusTouch : MonoBehaviour {
     //ヒットしたオブジェクト
     private GameObject _hitObjectL = null;
     private GameObject _hitObjectR = null;
+
+    //レーザービーム用
+    private Ray _rayL;
+    private Ray _rayR;
+    private RaycastHit _hitInfoL;
+    private RaycastHit _hitInfoR;
     
     void Start() {
         GameObject _ovrCameraRig = GameObject.Find("OVRCameraRig");
@@ -246,24 +252,34 @@ public class OculusTouch : MonoBehaviour {
         //===========================
         //人差し指トリガー
         if (OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger)) {
-            LIndexTriggerDown();
-            if (_hitObjectL != null) LLaserDown(_hitObjectL); //イベント発生
             _isLIndexTriggerDown = true;
             _activeController = "left";
             _lineRendererL.startWidth = _lineRendererL.endWidth = 0.007f;
             _lineRendererR.startWidth = _lineRendererR.endWidth = 0.001f;
+            LIndexTriggerDown();
+            if (_enabledLaserL) { //レーザービームを表示している場合
+                GameObject _hitObject = HitTestL(); //ヒットテスト
+                if (_hitObject != null) {
+                    LLaserDown(_hitObject); //イベント発生
+                }
+            }
         }
         if (OVRInput.GetUp(OVRInput.RawButton.LIndexTrigger)) {
             LIndexTriggerUp();
             _isLIndexTriggerDown = false;
         }
         if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger)) {
-            RIndexTriggerDown();
-            if (_hitObjectR != null) RLaserDown(_hitObjectR); //イベント発生
             _isRIndexTriggerDown = true;
             _activeController = "right";
             _lineRendererL.startWidth = _lineRendererL.endWidth = 0.001f;
             _lineRendererR.startWidth = _lineRendererR.endWidth = 0.007f;
+            RIndexTriggerDown();
+            if (_enabledLaserR) { //レーザービームを表示している場合
+                GameObject _hitObject = HitTestR(); //ヒットテスト
+                if (_hitObject != null) {
+                    RLaserDown(_hitObject); //イベント発生
+                }
+            }
         }
         if (OVRInput.GetUp(OVRInput.RawButton.RIndexTrigger)) {
             RIndexTriggerUp();
@@ -389,31 +405,34 @@ public class OculusTouch : MonoBehaviour {
         //レーザー（左）表示
         //===========================================================
         if (_enabledLaserL) {
-            Ray _rayL = new Ray(_oculusTouchL.transform.position, _oculusTouchL.transform.forward);
+            _rayL = new Ray(_oculusTouchL.transform.position, _oculusTouchL.transform.forward);
             _lineRendererL.SetPosition(0, _rayL.origin);
             _lineRendererL.SetPosition(1, _rayL.origin + _rayL.direction * 500.0f);
-            //オブジェクトにヒット
-            RaycastHit _hitInfoL = new RaycastHit(); //構造体
-            if (Physics.Raycast(_rayL, out _hitInfoL, 500.0f)) {
-                //ヒットしたらレーザをそこまでで止める
-                _lineRendererL.SetPosition(1, _hitInfoL.point);
-                if (_activeController == "left") { //非アクティブの場合振動なし
-                    _hitObjectL = _hitInfoL.collider.gameObject; //ヒットしたGameObject
-                    foreach (GameObject _tmp in _targetObjects) {
-                        //ヒットしたGameObjectが登録済オブジェクトであれば
-                        if (_tmp == _hitObjectL) {
-                            if (!_isVibrationL) {
-                                LLaserOver(_hitObjectL); //イベント発生
-                                //振動させる（周波数0〜1.0f,振幅0〜1.0f）
-                                OVRInput.SetControllerVibration(1.0f, 0.2f, OVRInput.Controller.LTouch);
-                                //0.05秒後に "StopVibration()" を実行
-                                Invoke("StopVibrationL", 0.05f); 
-                                _isVibrationL = true;
-                            }
-                        }
-                    }
-                }
-            } else { //選択オブジェクトの領域を外した時
+            HitTestL(); //ヒットテスト
+            // //ヒットテスト
+            // RaycastHit _hitInfoL = new RaycastHit(); //構造体
+            // if (Physics.Raycast(_rayL, out _hitInfoL, 500.0f)) {
+            //     //ヒットしたらレーザをそこまでで止める
+            //     _lineRendererL.SetPosition(1, _hitInfoL.point);
+            //     if (_activeController == "left") { //非アクティブの場合振動なし
+            //         _hitObjectL = _hitInfoL.collider.gameObject; //ヒットしたGameObject
+            //         foreach (GameObject _tmp in _targetObjects) {
+            //             //ヒットしたGameObjectが登録済オブジェクトであれば
+            //             if (_tmp == _hitObjectL) {
+            //                 if (!_isVibrationL) {
+            //                     LLaserOver(_hitObjectL); //イベント発生
+            //                     //振動させる（周波数0〜1.0f,振幅0〜1.0f）
+            //                     OVRInput.SetControllerVibration(1.0f, 0.2f, OVRInput.Controller.LTouch);
+            //                     //0.05秒後に "StopVibration()" を実行
+            //                     Invoke("StopVibrationL", 0.05f); 
+            //                     _isVibrationL = true;
+            //                 }
+            //             }
+            //         }
+            //     }
+            // }
+            //選択オブジェクトの領域を外した時
+            if (!Physics.Raycast(_rayL, out _hitInfoL, 500.0f)) { 
                 _isVibrationL = false;
                 LLaserOut(_hitObjectL); //イベント発生
                 _hitObjectL = null;
@@ -424,31 +443,34 @@ public class OculusTouch : MonoBehaviour {
         //レーザー（右）表示
         //===========================================================
         if (_enabledLaserR) {
-            Ray _rayR = new Ray(_oculusTouchR.transform.position, _oculusTouchR.transform.forward);
+            _rayR = new Ray(_oculusTouchR.transform.position, _oculusTouchR.transform.forward);
             _lineRendererR.SetPosition(0, _rayR.origin);
             _lineRendererR.SetPosition(1, _rayR.origin + _rayR.direction * 500.0f);
-            //オブジェクトにヒット
-            RaycastHit _hitInfoR = new RaycastHit(); //構造体
-            if (Physics.Raycast(_rayR, out _hitInfoR, 500.0f)) {
-                //ヒットしたらレーザをそこまでで止める
-                _lineRendererR.SetPosition(1, _hitInfoR.point);
-                if (_activeController == "right") { //非アクティブの場合振動なし
-                    _hitObjectR = _hitInfoR.collider.gameObject; //ヒットしたGameObject
-                    foreach (GameObject _tmp in _targetObjects) {
-                        //ヒットしたGameObjectが登録済オブジェクトであれば
-                        if (_tmp == _hitObjectR) {
-                            if (!_isVibrationR) {
-                                RLaserOver(_hitObjectR); //イベント発生
-                                //振動させる（周波数0〜1.0f,振幅0〜1.0f）
-                                OVRInput.SetControllerVibration(1.0f, 0.2f, OVRInput.Controller.RTouch);
-                                //0.05秒後に "StopVibration()" を実行
-                                Invoke("StopVibrationR", 0.05f); 
-                                _isVibrationR = true;
-                            }
-                        }
-                    }
-                }
-            } else { //選択オブジェクトの領域を外した時
+            HitTestR(); //ヒットテスト
+            // //ヒットテスト
+            // RaycastHit _hitInfoR = new RaycastHit(); //構造体
+            // if (Physics.Raycast(_rayR, out _hitInfoR, 500.0f)) {
+            //     //ヒットしたらレーザをそこまでで止める
+            //     _lineRendererR.SetPosition(1, _hitInfoR.point);
+            //     if (_activeController == "right") { //非アクティブの場合振動なし
+            //         _hitObjectR = _hitInfoR.collider.gameObject; //ヒットしたGameObject
+            //         foreach (GameObject _tmp in _targetObjects) {
+            //             //ヒットしたGameObjectが登録済オブジェクトであれば
+            //             if (_tmp == _hitObjectR) {
+            //                 if (!_isVibrationR) {
+            //                     RLaserOver(_hitObjectR); //イベント発生
+            //                     //振動させる（周波数0〜1.0f,振幅0〜1.0f）
+            //                     OVRInput.SetControllerVibration(1.0f, 0.2f, OVRInput.Controller.RTouch);
+            //                     //0.05秒後に "StopVibration()" を実行
+            //                     Invoke("StopVibrationR", 0.05f); 
+            //                     _isVibrationR = true;
+            //                 }
+            //             }
+            //         }
+            //     }
+            // }
+            //選択オブジェクトの領域を外した時
+            if (!Physics.Raycast(_rayR, out _hitInfoR, 500.0f)) { 
                 _isVibrationR = false;
                 RLaserOut(_hitObjectR); //イベント発生
                 _hitObjectR = null;
@@ -459,6 +481,56 @@ public class OculusTouch : MonoBehaviour {
     //=====================================
     // Private Method
     //=====================================
+    private GameObject HitTestL() { //ヒットテスト
+        _hitInfoL = new RaycastHit(); //構造体
+        if (Physics.Raycast(_rayL, out _hitInfoL, 500.0f)) {
+            //ヒットしたらレーザをそこまでで止める
+            _lineRendererL.SetPosition(1, _hitInfoL.point);
+            if (_activeController == "left") { //非アクティブの場合振動なし
+                _hitObjectL = _hitInfoL.collider.gameObject; //ヒットしたGameObject
+                foreach (GameObject _tmp in _targetObjects) {
+                    //ヒットしたGameObjectが登録済オブジェクトであれば
+                    if (_tmp == _hitObjectL) {
+                        if (!_isVibrationL) {
+                            LLaserOver(_hitObjectL); //イベント発生
+                            //振動させる（周波数0〜1.0f,振幅0〜1.0f）
+                            OVRInput.SetControllerVibration(1.0f, 0.2f, OVRInput.Controller.LTouch);
+                            //0.05秒後に "StopVibration()" を実行
+                            Invoke("StopVibrationL", 0.05f); 
+                            _isVibrationL = true;
+                        }
+                    }
+                }
+                return _hitObjectL; //NEW
+            }
+        }
+        return null;
+    }
+    private GameObject HitTestR() { //ヒットテスト
+        _hitInfoR = new RaycastHit(); //構造体
+        if (Physics.Raycast(_rayR, out _hitInfoR, 500.0f)) {
+            //ヒットしたらレーザをそこまでで止める
+            _lineRendererR.SetPosition(1, _hitInfoR.point);
+            if (_activeController == "right") { //非アクティブの場合振動なし
+                _hitObjectR = _hitInfoR.collider.gameObject; //ヒットしたGameObject
+                foreach (GameObject _tmp in _targetObjects) {
+                    //ヒットしたGameObjectが登録済オブジェクトであれば
+                    if (_tmp == _hitObjectR) {
+                        if (!_isVibrationR) {
+                            RLaserOver(_hitObjectR); //イベント発生
+                            //振動させる（周波数0〜1.0f,振幅0〜1.0f）
+                            OVRInput.SetControllerVibration(1.0f, 0.2f, OVRInput.Controller.RTouch);
+                            //0.05秒後に "StopVibration()" を実行
+                            Invoke("StopVibrationR", 0.05f); 
+                            _isVibrationR = true;
+                        }
+                    }
+                }
+                return _hitObjectR;
+            }
+        }
+        return null;
+    }
     private void StopVibrationL() {
         OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch); //END
     }

@@ -136,6 +136,8 @@ public class Main : MonoBehaviour {
         _oculusTouch.RLaserOver += RLaserOverHandler;
         _oculusTouch.LLaserOut += LLaserOutHandler;
         _oculusTouch.RLaserOut += RLaserOutHandler;
+        _oculusTouch.LLaserDown += LLaserDownHandler;
+        _oculusTouch.RLaserDown += RLaserDownHandler;
 
         //レーザーの有効化（初期値は無効）
         _oculusTouch.EnabledLaserL = true;
@@ -338,6 +340,12 @@ public class Main : MonoBehaviour {
     }
     private void RLaserOutHandler(GameObject arg) {
         _console.Log("右レーザーが" + arg.name + "をアウト");
+    }
+    private void LLaserDownHandler(GameObject arg) {
+        _console.Log("左レーザーが" + arg.name + "を↓");
+    }
+    private void RLaserDownHandler(GameObject arg) {
+        _console.Log("右レーザーが" + arg.name + "を↓");
     }
 
     void Update() {
