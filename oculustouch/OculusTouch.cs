@@ -1,5 +1,5 @@
 ﻿/***************************************************************************
- * OculusTouch.cs (ver.2019-08-29T14:17)
+ * OculusTouch.cs (ver.2019-08-29T15:04)
  * © 2019 夢寐郎
  ***************************************************************************/
 using System.Collections;
@@ -247,6 +247,7 @@ public class OculusTouch : MonoBehaviour {
         //人差し指トリガー
         if (OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger)) {
             LIndexTriggerDown();
+            if (_hitObjectL != null) LLaserDown(_hitObjectL); //イベント発生
             _isLIndexTriggerDown = true;
             _activeController = "left";
             _lineRendererL.startWidth = _lineRendererL.endWidth = 0.007f;
@@ -258,6 +259,7 @@ public class OculusTouch : MonoBehaviour {
         }
         if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger)) {
             RIndexTriggerDown();
+            if (_hitObjectR != null) RLaserDown(_hitObjectR); //イベント発生
             _isRIndexTriggerDown = true;
             _activeController = "right";
             _lineRendererL.startWidth = _lineRendererL.endWidth = 0.001f;
