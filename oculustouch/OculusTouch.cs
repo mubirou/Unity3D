@@ -1,5 +1,5 @@
 ﻿/***************************************************************************
- * OculusTouch.cs (ver.2019-08-29T10:49)
+ * OculusTouch.cs (ver.2019-08-29T14:17)
  * © 2019 夢寐郎
  ***************************************************************************/
 using System.Collections;
@@ -41,6 +41,11 @@ using System; //Mathに必要
  *      LIndexTriggerRawNearTouch
  *      LIndexTriggerRawTouch
  *      LIndexTriggerUp
+ *      LLaserDown //<-----NEW
+ *      LLaserOut //<-----NEW
+ *      LLaserOver //<-----NEW
+ *      LLaserUp //<-----NEW
+ *      LLsserUpOutside //<-----NEW
  *      LThumbstickDown
  *      LThumbstickDownDown
  *      LThumbstickDownUp
@@ -58,6 +63,11 @@ using System; //Mathに必要
  *      RIndexTriggerRawNearTouch
  *      RIndexTriggerRawTouch
  *      RIndexTriggerUp
+ *      RLaserDown //<-----NEW
+ *      RLaserOut //<-----NEW
+ *      RLaserOver //<-----NEW
+ *      RLaserUp //<-----NEW
+ *      RLsserUpOutside //<-----NEW
  *      RThumbstickDown
  *      RThumbstickDownDown
  *      RThumbstickDownUp
@@ -116,71 +126,89 @@ public class OculusTouch : MonoBehaviour {
     //レーザーポインタが反応するGameObjectのリスト
     private List<GameObject> _targetObjects = new List<GameObject>();
 
-    public delegate void Delegate(); //①デリゲート宣言
+    //①デリゲート宣言
+    public delegate void BodyDelegate(); //OculusTouch本体ボタン用
+    public delegate void LaserDelegate(GameObject arg); //レーザーポイント用
 
     //===================================================
     // イベントハンドラを格納するデリゲート（現在48個）
     //===================================================
     //人差し指トリガー（Down、Up）
-    public event Delegate LIndexTriggerDown;
-    public event Delegate LIndexTriggerUp;
-    public event Delegate RIndexTriggerDown;
-    public event Delegate RIndexTriggerUp;
+    public event BodyDelegate LIndexTriggerDown;
+    public event BodyDelegate LIndexTriggerUp;
+    public event BodyDelegate RIndexTriggerDown;
+    public event BodyDelegate RIndexTriggerUp;
     //中指トリガー
-    public event Delegate LHandTriggerDown;
-    public event Delegate LHandTriggerUp;
-    public event Delegate RHandTriggerDown;
-    public event Delegate RHandTriggerUp;
+    public event BodyDelegate LHandTriggerDown;
+    public event BodyDelegate LHandTriggerUp;
+    public event BodyDelegate RHandTriggerDown;
+    public event BodyDelegate RHandTriggerUp;
     //Aボタン
-    public event Delegate ADown;
-    public event Delegate AUp;
+    public event BodyDelegate ADown;
+    public event BodyDelegate AUp;
     //Bボタン
-    public event Delegate BDown;
-    public event Delegate BUp;
+    public event BodyDelegate BDown;
+    public event BodyDelegate BUp;
     //Xボタン
-    public event Delegate XDown;
-    public event Delegate XUp;
+    public event BodyDelegate XDown;
+    public event BodyDelegate XUp;
     //Yボタン
-    public event Delegate YDown;
-    public event Delegate YUp;
+    public event BodyDelegate YDown;
+    public event BodyDelegate YUp;
     //Startボタン
-    public event Delegate StartDown;
-    public event Delegate StartUp;
+    public event BodyDelegate StartDown;
+    public event BodyDelegate StartUp;
     //親指スティック
-    public event Delegate LThumbstickDown;
-    public event Delegate LThumbstickUp;
-    public event Delegate RThumbstickDown;
-    public event Delegate RThumbstickUp;
+    public event BodyDelegate LThumbstickDown;
+    public event BodyDelegate LThumbstickUp;
+    public event BodyDelegate RThumbstickDown;
+    public event BodyDelegate RThumbstickUp;
     //親指スティック上下左右（↓）
-    public event Delegate LThumbstickUpDown;
-    public event Delegate LThumbstickDownDown;
-    public event Delegate LThumbstickLeftDown;
-    public event Delegate LThumbstickRightDown;
-    public event Delegate RThumbstickUpDown;
-    public event Delegate RThumbstickDownDown;
-    public event Delegate RThumbstickLeftDown;
-    public event Delegate RThumbstickRightDown;
+    public event BodyDelegate LThumbstickUpDown;
+    public event BodyDelegate LThumbstickDownDown;
+    public event BodyDelegate LThumbstickLeftDown;
+    public event BodyDelegate LThumbstickRightDown;
+    public event BodyDelegate RThumbstickUpDown;
+    public event BodyDelegate RThumbstickDownDown;
+    public event BodyDelegate RThumbstickLeftDown;
+    public event BodyDelegate RThumbstickRightDown;
     //親指スティック上下左右（↑）
-    public event Delegate LThumbstickUpUp;
-    public event Delegate LThumbstickDownUp;
-    public event Delegate LThumbstickLeftUp;
-    public event Delegate LThumbstickRightUp;
-    public event Delegate RThumbstickUpUp;
-    public event Delegate RThumbstickDownUp;
-    public event Delegate RThumbstickLeftUp;
-    public event Delegate RThumbstickRightUp;
+    public event BodyDelegate LThumbstickUpUp;
+    public event BodyDelegate LThumbstickDownUp;
+    public event BodyDelegate LThumbstickLeftUp;
+    public event BodyDelegate LThumbstickRightUp;
+    public event BodyDelegate RThumbstickUpUp;
+    public event BodyDelegate RThumbstickDownUp;
+    public event BodyDelegate RThumbstickLeftUp;
+    public event BodyDelegate RThumbstickRightUp;
     //タッチ（RawTouch）
-    public event Delegate LIndexTriggerRawTouch;
-    public event Delegate RIndexTriggerRawTouch;
-    public event Delegate LThumbstickRawTouch;
-    public event Delegate RThumbstickRawTouch;
-    public event Delegate ARawTouch;
-    public event Delegate BRawTouch;
-    public event Delegate XRawTouch;
-    public event Delegate YRawTouch;
+    public event BodyDelegate LIndexTriggerRawTouch;
+    public event BodyDelegate RIndexTriggerRawTouch;
+    public event BodyDelegate LThumbstickRawTouch;
+    public event BodyDelegate RThumbstickRawTouch;
+    public event BodyDelegate ARawTouch;
+    public event BodyDelegate BRawTouch;
+    public event BodyDelegate XRawTouch;
+    public event BodyDelegate YRawTouch;
     //近接（RawNearTouch）
-    public event Delegate LIndexTriggerRawNearTouch;
-    public event Delegate RIndexTriggerRawNearTouch;
+    public event BodyDelegate LIndexTriggerRawNearTouch;
+    public event BodyDelegate RIndexTriggerRawNearTouch;
+
+    //オブジェクト選択
+    public event LaserDelegate LLaserDown; //<-----NEW
+    public event LaserDelegate LLaserOut; //<-----NEW
+    public event LaserDelegate LLaserOver; //<-----NEW
+    public event LaserDelegate LLaserUp; //<-----NEW
+    public event LaserDelegate LLsserUpOutside; //<-----NEW
+    public event LaserDelegate RLaserDown; //<-----NEW
+    public event LaserDelegate RLaserOut; //<-----NEW
+    public event LaserDelegate RLaserOver; //<-----NEW
+    public event LaserDelegate RLaserUp; //<-----NEW
+    public event LaserDelegate RLsserUpOutside; //<-----NEW
+
+    //ヒットしたオブジェクト
+    private GameObject _hitObjectL = null;
+    private GameObject _hitObjectR = null;
     
     void Start() {
         GameObject _ovrCameraRig = GameObject.Find("OVRCameraRig");
@@ -367,15 +395,13 @@ public class OculusTouch : MonoBehaviour {
             if (Physics.Raycast(_rayL, out _hitInfoL, 500.0f)) {
                 //ヒットしたらレーザをそこまでで止める
                 _lineRendererL.SetPosition(1, _hitInfoL.point);
-
                 if (_activeController == "left") { //非アクティブの場合振動なし
-                    //ヒットしたGameObject
-                    GameObject _hitObjectL = _hitInfoL.collider.gameObject;
-                    // CheckAndVibration(_hitObjectL, OVRInput.Controller.LTouch, _isVibrationL);
+                    _hitObjectL = _hitInfoL.collider.gameObject; //ヒットしたGameObject
                     foreach (GameObject _tmp in _targetObjects) {
                         //ヒットしたGameObjectが登録済オブジェクトであれば
                         if (_tmp == _hitObjectL) {
                             if (!_isVibrationL) {
+                                LLaserOver(_hitObjectL); //イベント発生
                                 //振動させる（周波数0〜1.0f,振幅0〜1.0f）
                                 OVRInput.SetControllerVibration(1.0f, 0.2f, OVRInput.Controller.LTouch);
                                 //0.05秒後に "StopVibration()" を実行
@@ -387,6 +413,8 @@ public class OculusTouch : MonoBehaviour {
                 }
             } else { //選択オブジェクトの領域を外した時
                 _isVibrationL = false;
+                LLaserOut(_hitObjectL); //イベント発生
+                _hitObjectL = null;
             }
         }
 
@@ -402,15 +430,13 @@ public class OculusTouch : MonoBehaviour {
             if (Physics.Raycast(_rayR, out _hitInfoR, 500.0f)) {
                 //ヒットしたらレーザをそこまでで止める
                 _lineRendererR.SetPosition(1, _hitInfoR.point);
-
                 if (_activeController == "right") { //非アクティブの場合振動なし
-                    //ヒットしたGameObject
-                    GameObject _hitObjectR = _hitInfoR.collider.gameObject;
-                    // CheckAndVibration(_hitObjectR, OVRInput.Controller.RTouch, _isVibrationR); //汎用メソッド
+                    _hitObjectR = _hitInfoR.collider.gameObject; //ヒットしたGameObject
                     foreach (GameObject _tmp in _targetObjects) {
                         //ヒットしたGameObjectが登録済オブジェクトであれば
                         if (_tmp == _hitObjectR) {
                             if (!_isVibrationR) {
+                                RLaserOver(_hitObjectR); //イベント発生
                                 //振動させる（周波数0〜1.0f,振幅0〜1.0f）
                                 OVRInput.SetControllerVibration(1.0f, 0.2f, OVRInput.Controller.RTouch);
                                 //0.05秒後に "StopVibration()" を実行
@@ -422,6 +448,8 @@ public class OculusTouch : MonoBehaviour {
                 }
             } else { //選択オブジェクトの領域を外した時
                 _isVibrationR = false;
+                RLaserOut(_hitObjectR); //イベント発生
+                _hitObjectR = null;
             }
         }
     }

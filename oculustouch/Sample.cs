@@ -131,6 +131,12 @@ public class Main : MonoBehaviour {
         _oculusTouch.AddTargetObjects(_cube3);
         //Debug.Log(_oculusTouch.TargetObjects);
 
+        //オブジェクト選択
+        _oculusTouch.LLaserOver += LLaserOverHandler;
+        _oculusTouch.RLaserOver += RLaserOverHandler;
+        _oculusTouch.LLaserOut += LLaserOutHandler;
+        _oculusTouch.RLaserOut += RLaserOutHandler;
+
         //レーザーの有効化（初期値は無効）
         _oculusTouch.EnabledLaserL = true;
         _oculusTouch.EnabledLaserR = true;
@@ -319,6 +325,20 @@ public class Main : MonoBehaviour {
     //近接（RawNearTouch）
     private void LIndexTriggerRawNearTouchHandler() {_console.Log("左人差し指トリガーに近接");}
     private void RIndexTriggerRawNearTouchHandler() {_console.Log("右人差し指トリガーに近接");}
+
+    //オブジェクト選択
+    private void LLaserOverHandler(GameObject arg) {
+        _console.Log("左レーザーが" + arg.name + "にヒット");
+    }
+    private void RLaserOverHandler(GameObject arg) {
+        _console.Log("右レーザーが" + arg.name + "にヒット");
+    }
+    private void LLaserOutHandler(GameObject arg) {
+        _console.Log("左レーザーが" + arg.name + "をアウト");
+    }
+    private void RLaserOutHandler(GameObject arg) {
+        _console.Log("右レーザーが" + arg.name + "をアウト");
+    }
 
     void Update() {
         //人差し指トリガー
