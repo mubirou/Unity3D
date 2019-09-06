@@ -158,10 +158,12 @@ public class Main : MonoBehaviour {
     //人差し指トリガー
     private void LIndexTriggerDownHandler() {
         _console.Log("左人差し指トリガー↓");
+        AllObjectClear();
         _indexTriggerL.GetComponent<Renderer>().material.color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
     }
     private void LIndexTriggerUpHandler() {
         _console.Log("左人差し指トリガー↑");
+        AllObjectClear();
         _indexTriggerL.GetComponent<Renderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
     }
     private void RIndexTriggerDownHandler() {
