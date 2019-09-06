@@ -1,5 +1,5 @@
 ﻿/***************************************************************************
- * OculusTouch.cs (ver.2019-09-06T11:20)
+ * OculusTouch.cs (ver.2019-09-06T14:26)
  * © 2019 夢寐郎
  ***************************************************************************/
 using System.Collections;
@@ -438,7 +438,7 @@ public class OculusTouch : MonoBehaviour {
             _lineRendererL.SetPosition(1, _rayL.origin + _rayL.direction * 500.0f);
             HitTestL(true); //ヒットテスト
             //選択オブジェクトの領域を外した時
-            if (!Physics.Raycast(_rayL, out _hitInfoL, 500.0f)) { 
+            if (!Physics.Raycast(_rayL, out _hitInfoL, 500.0f)) {
                 _isVibrationL = false;
                 LLaserOut(_hitObjectL); //イベント発生
                 _hitObjectL = null;
