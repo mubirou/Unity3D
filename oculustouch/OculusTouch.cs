@@ -1,5 +1,5 @@
 ﻿/***************************************************************************
- * OculusTouch.cs (ver.2019-09-06T14:26)
+ * OculusTouch.cs (ver.2019-09-06T15:32) alpha1
  * © 2019 夢寐郎
  ***************************************************************************/
 using System.Collections;
@@ -258,7 +258,7 @@ public class OculusTouch : MonoBehaviour {
         //===========================
         // イベントハンドラの呼出し
         //===========================
-        //人差し指トリガー
+        //人差し指トリガー（Down）
         if (OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger)) {
             _isLIndexTriggerDown = true;
             _activeController = "left";
@@ -269,22 +269,13 @@ public class OculusTouch : MonoBehaviour {
                 _isRLaserDown = false; //逆（右）のレーザーの≒MouseDownを解除
                 _hitObjectL = HitTestL(true); //ヒットテスト
                 if (_hitObjectL != null) {
-                    LLaserDown(_hitObjectL); //イベント発生
-                    _selectObjectL = _hitObjectL; //選択したオブジェクトを記録 NEW
+                    if (IsTargetObject(_hitObjectL)) {
+                        LLaserDown(_hitObjectL); //イベント発生
+                        _selectObjectL = _hitObjectL; //選択したオブジェクトを記録 NEW
+                    }
                     _isLLaserDown = true;
                 }
             }
-        }
-        if (OVRInput.GetUp(OVRInput.RawButton.LIndexTrigger)) {
-            LIndexTriggerUp();
-            _isLIndexTriggerDown = false;
-            if (HitTestL(false) == _selectObjectL) { //ヒットテスト NEW
-                LLaserUp(_selectObjectL); //≒MouseUp, Click
-            } else {
-                LLaserUpOutside(_selectObjectL); //≒MouseUpOutside NEW
-            }
-            _isLLaserDown = false;
-            _selectObjectL = null;
         }
         if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger)) {
             _isRIndexTriggerDown = true;
@@ -296,23 +287,42 @@ public class OculusTouch : MonoBehaviour {
                 _isLLaserDown = false; //逆（右）のレーザーの≒MouseDownを解除
                 _hitObjectR = HitTestR(true); //ヒットテスト
                 if (_hitObjectR != null) {
-                    RLaserDown(_hitObjectR); //イベント発生
-                    _selectObjectR = _hitObjectR; //選択したオブジェクトを記録 NEW
+                    if (IsTargetObject(_hitObjectR)) {
+                        RLaserDown(_hitObjectR); //イベント発生
+                        _selectObjectR = _hitObjectR; //選択したオブジェクトを記録 NEW
+                    }
                     _isRLaserDown = true;
                 }
             }
+        }
+        //人差し指トリガー（Up）
+        if (OVRInput.GetUp(OVRInput.RawButton.LIndexTrigger)) {
+            LIndexTriggerUp();
+            _isLIndexTriggerDown = false;
+            if (HitTestL(false) == _selectObjectL) { //ヒットテスト NEW
+                if (IsTargetObject(_hitObjectL)) {
+                    LLaserUp(_selectObjectL); //≒MouseUp, Click
+                }
+            } else {
+                LLaserUpOutside(_selectObjectL); //≒MouseUpOutside NEW
+            }
+            _isLLaserDown = false;
+            _selectObjectL = null;
         }
         if (OVRInput.GetUp(OVRInput.RawButton.RIndexTrigger)) {
             RIndexTriggerUp();
             _isRIndexTriggerDown = false;
             if (HitTestR(false) == _selectObjectR) { //ヒットテスト NEW
-                RLaserUp(_selectObjectR); //≒MouseUp, Click
+                if (IsTargetObject(_hitObjectR)) {
+                    RLaserUp(_selectObjectR); //≒MouseUp, Click
+                }
             } else {
                 RLaserUpOutside(_selectObjectR); //≒MouseUpOutside
             }
             _isRLaserDown = false;
             _selectObjectR = null;
         }
+
         //中指トリガー
         if (OVRInput.GetDown(OVRInput.RawButton.LHandTrigger)) {
             LHandTriggerDown();
@@ -440,7 +450,9 @@ public class OculusTouch : MonoBehaviour {
             //選択オブジェクトの領域を外した時
             if (!Physics.Raycast(_rayL, out _hitInfoL, 500.0f)) {
                 _isVibrationL = false;
-                LLaserOut(_hitObjectL); //イベント発生
+                if (IsTargetObject(_hitObjectL)) {
+                    LLaserOut(_hitObjectL); //イベント発生
+                }
                 _hitObjectL = null;
             }
         }
@@ -456,7 +468,9 @@ public class OculusTouch : MonoBehaviour {
             //選択オブジェクトの領域を外した時
             if (!Physics.Raycast(_rayR, out _hitInfoR, 500.0f)) { 
                 _isVibrationR = false;
-                RLaserOut(_hitObjectR); //イベント発生
+                if (IsTargetObject(_hitObjectR)) {
+                    RLaserOut(_hitObjectR); //イベント発生
+                }
                 _hitObjectR = null;
             }
         }
@@ -465,7 +479,18 @@ public class OculusTouch : MonoBehaviour {
     //=====================================
     // Private Method
     //=====================================
-    private GameObject HitTestL(bool arg) { //ヒットテスト
+    //指定のGameObjectがボタンとして反応するGameObjectか否か
+    private bool IsTargetObject(GameObject arg) {
+        foreach (GameObject _tmp in _targetObjects) {
+            if (_tmp == arg) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    //ヒットテスト（左）
+    private GameObject HitTestL(bool arg) {
         _hitInfoL = new RaycastHit(); //構造体
         if (Physics.Raycast(_rayL, out _hitInfoL, 500.0f)) {
             //ヒットしたらレーザをそこまでで止める
@@ -492,7 +517,9 @@ public class OculusTouch : MonoBehaviour {
         }
         return null;
     }
-    private GameObject HitTestR(bool arg) { //ヒットテスト
+
+    //ヒットテスト（右）
+    private GameObject HitTestR(bool arg) {
         _hitInfoR = new RaycastHit(); //構造体
         if (Physics.Raycast(_rayR, out _hitInfoR, 500.0f)) {
             //ヒットしたらレーザをそこまでで止める

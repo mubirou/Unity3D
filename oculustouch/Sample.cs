@@ -335,15 +335,23 @@ public class Main : MonoBehaviour {
     //オブジェクト選択
     private void LLaserOverHandler(GameObject arg) {
         _console.Log("左レーザーが" + arg.name + "にヒット");
+        //選択したボタンの色を#FFFF00に変更
+        arg.GetComponent<Renderer>().material.color = new Color(1.0f, 1.0f, 0.0f, 1.0f);
     }
     private void RLaserOverHandler(GameObject arg) {
         _console.Log("右レーザーが" + arg.name + "にヒット");
+        //選択したボタンの色を#FFFF00に変更
+        arg.GetComponent<Renderer>().material.color = new Color(1.0f, 1.0f, 0.0f, 1.0f);
     }
     private void LLaserOutHandler(GameObject arg) {
         _console.Log("左レーザーが" + arg.name + "をアウト");
+        //選択したボタンの色を白に変更
+        arg.GetComponent<Renderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
     }
     private void RLaserOutHandler(GameObject arg) {
         _console.Log("右レーザーが" + arg.name + "をアウト");
+        //選択したボタンの色を白に変更
+        arg.GetComponent<Renderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1.0f); 
     }
     private void LLaserDownHandler(GameObject arg) {
         _console.Log("左レーザーが" + arg.name + "を↓");
@@ -353,9 +361,15 @@ public class Main : MonoBehaviour {
     }
     private void LLaserUpHandler(GameObject arg) {
         _console.Log("左レーザーが" + arg.name + "を↑");
+        AllObjectClear(); //一度全てのボタンの色を白にする
+        //選択したボタンの色を赤に変更
+        arg.GetComponent<Renderer>().material.color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
     }
     private void RLaserUpHandler(GameObject arg) {
         _console.Log("右レーザーが" + arg.name + "を↑");
+        AllObjectClear(); //一度全てのボタンの色を白にする
+        //選択したボタンの色を赤に変更
+        arg.GetComponent<Renderer>().material.color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
     }
     private void LLaserUpOutsideHandler(GameObject arg) {
         _console.Log("左レーザーが" + arg.name + "の外で↑");
@@ -448,5 +462,12 @@ public class Main : MonoBehaviour {
         _textHandTriggerL = _oculusTouchL.transform.Find("HandTriggerLtext").gameObject;
         _textIndexTriggerR = _oculusTouchR.transform.Find("IndexTriggerRtext").gameObject;
         _textHandTriggerR = _oculusTouchR.transform.Find("HandTriggerRtext").gameObject;
+    }
+
+    private void AllObjectClear() { //選択オブジェクトの色を通常に戻す
+        List<GameObject> _targetObjects = _oculusTouch.TargetObjects;
+        foreach (GameObject _tmp in _targetObjects) {
+            _tmp.GetComponent<Renderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+        }
     }
 }
