@@ -1,11 +1,11 @@
 ﻿/***************************************************************************
- * OculusTouch.cs (ver.2019-09-04T14:02)
+ * OculusTouch.cs (ver.2019-09-06T11:20)
  * © 2019 夢寐郎
  ***************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System; //Mathに必要
+using System; //for Math
 
 /******************************************************************************
  * OculusTouch Class
@@ -41,11 +41,11 @@ using System; //Mathに必要
  *      LIndexTriggerRawNearTouch
  *      LIndexTriggerRawTouch
  *      LIndexTriggerUp
- *      LLaserDown //<-----NEW
- *      LLaserOut //<-----NEW
- *      LLaserOver //<-----NEW
- *      LLaserUp //<-----NEW
- *      LLsserUpOutside //<-----NEW
+ *      LLaserDown
+ *      LLaserOut
+ *      LLaserOver
+ *      LLaserUp
+ *      LLsserUpOutside
  *      LThumbstickDown
  *      LThumbstickDownDown
  *      LThumbstickDownUp
@@ -63,11 +63,11 @@ using System; //Mathに必要
  *      RIndexTriggerRawNearTouch
  *      RIndexTriggerRawTouch
  *      RIndexTriggerUp
- *      RLaserDown //<-----NEW
- *      RLaserOut //<-----NEW
- *      RLaserOver //<-----NEW
- *      RLaserUp //<-----NEW
- *      RLsserUpOutside //<-----NEW
+ *      RLaserDown
+ *      RLaserOut
+ *      RLaserOver
+ *      RLaserUp
+ *      RLsserUpOutside
  *      RThumbstickDown
  *      RThumbstickDownDown
  *      RThumbstickDownUp
@@ -195,20 +195,24 @@ public class OculusTouch : MonoBehaviour {
     public event BodyDelegate RIndexTriggerRawNearTouch;
 
     //オブジェクト選択
-    public event LaserDelegate LLaserDown; //<-----NEW
-    public event LaserDelegate LLaserOut; //<-----NEW
-    public event LaserDelegate LLaserOver; //<-----NEW
-    public event LaserDelegate LLaserUp; //<-----NEW
-    public event LaserDelegate LLaserUpOutside; //<-----NEW
-    public event LaserDelegate RLaserDown; //<-----NEW
-    public event LaserDelegate RLaserOut; //<-----NEW
-    public event LaserDelegate RLaserOver; //<-----NEW
-    public event LaserDelegate RLaserUp; //<-----NEW
-    public event LaserDelegate RLaserUpOutside; //<-----NEW
+    public event LaserDelegate LLaserDown;
+    public event LaserDelegate LLaserOut;
+    public event LaserDelegate LLaserOver;
+    public event LaserDelegate LLaserUp;
+    public event LaserDelegate LLaserUpOutside;
+    public event LaserDelegate RLaserDown;
+    public event LaserDelegate RLaserOut;
+    public event LaserDelegate RLaserOver;
+    public event LaserDelegate RLaserUp;
+    public event LaserDelegate RLaserUpOutside;
 
-    //ヒットしたオブジェクト
+    //ヒットしたオブジェクト（レーザーがヒットしたオブジェクト）
     private GameObject _hitObjectL = null;
     private GameObject _hitObjectR = null;
+
+    //レーザーで選択した（LaserMouseDown）したオブジェクト
+    private GameObject _selectObjectL = null; //NEW
+    private GameObject _selectObjectR = null; //NEW
 
     //レーザービーム用
     private Ray _rayL;
@@ -217,9 +221,8 @@ public class OculusTouch : MonoBehaviour {
     private RaycastHit _hitInfoR;
     private float _lineWidth1 = 0.007f;
     private float _lineWidth2 = 0.0005f;
-    private bool _isLLaserDown = false; //NEW
-    private bool _isRLaserDown = false; //NEW
-    //private GameObject _hitObjectL = false; //NEW（レーザービームで選択したGameObjectを記録）
+    private bool _isLLaserDown = false;
+    private bool _isRLaserDown = false;
     
     void Start() {
         GameObject _ovrCameraRig = GameObject.Find("OVRCameraRig");
@@ -267,19 +270,21 @@ public class OculusTouch : MonoBehaviour {
                 _hitObjectL = HitTestL(true); //ヒットテスト
                 if (_hitObjectL != null) {
                     LLaserDown(_hitObjectL); //イベント発生
-                    _isLLaserDown = true; //NEW
+                    _selectObjectL = _hitObjectL; //選択したオブジェクトを記録 NEW
+                    _isLLaserDown = true;
                 }
             }
         }
         if (OVRInput.GetUp(OVRInput.RawButton.LIndexTrigger)) {
             LIndexTriggerUp();
             _isLIndexTriggerDown = false;
-            if (HitTestL(false) == _hitObjectL) { //ヒットテスト
-                LLaserUp(_hitObjectL); //≒MouseUp, Click
+            if (HitTestL(false) == _selectObjectL) { //ヒットテスト NEW
+                LLaserUp(_selectObjectL); //≒MouseUp, Click
             } else {
-                LLaserUpOutside(_hitObjectL); //≒MouseUpOutside
+                LLaserUpOutside(_selectObjectL); //≒MouseUpOutside NEW
             }
-            _isLLaserDown = false; //NEW
+            _isLLaserDown = false;
+            _selectObjectL = null;
         }
         if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger)) {
             _isRIndexTriggerDown = true;
@@ -292,19 +297,21 @@ public class OculusTouch : MonoBehaviour {
                 _hitObjectR = HitTestR(true); //ヒットテスト
                 if (_hitObjectR != null) {
                     RLaserDown(_hitObjectR); //イベント発生
-                    _isRLaserDown = true; //NEW
+                    _selectObjectR = _hitObjectR; //選択したオブジェクトを記録 NEW
+                    _isRLaserDown = true;
                 }
             }
         }
         if (OVRInput.GetUp(OVRInput.RawButton.RIndexTrigger)) {
             RIndexTriggerUp();
             _isRIndexTriggerDown = false;
-            if (HitTestR(false) == _hitObjectR) { //ヒットテスト
-                RLaserUp(_hitObjectR); //≒MouseUp, Click
+            if (HitTestR(false) == _selectObjectR) { //ヒットテスト NEW
+                RLaserUp(_selectObjectR); //≒MouseUp, Click
             } else {
-                RLaserUpOutside(_hitObjectR); //≒MouseUpOutside
+                RLaserUpOutside(_selectObjectR); //≒MouseUpOutside
             }
-            _isRLaserDown = false; //NEW
+            _isRLaserDown = false;
+            _selectObjectR = null;
         }
         //中指トリガー
         if (OVRInput.GetDown(OVRInput.RawButton.LHandTrigger)) {
@@ -480,7 +487,7 @@ public class OculusTouch : MonoBehaviour {
                         }
                     }
                 }
-                return _hitObjectL; //NEW
+                return _hitObjectL;
             }
         }
         return null;

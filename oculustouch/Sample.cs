@@ -367,26 +367,26 @@ public class Main : MonoBehaviour {
     void Update() {
         //人差し指トリガー
         if (_oculusTouch.IsLIndexTriggerDown) {
-            _console.Log(_oculusTouch.LIndexTrigger.ToString());
+            //_console.Log(_oculusTouch.LIndexTrigger.ToString()); //値を出力
             _textIndexTriggerL.GetComponent<TextMesh>().text = Math.Round((OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger)*100)).ToString(); //テキストに表示
         } else {
             _textIndexTriggerL.GetComponent<TextMesh>().text = "0";
         }
         if (_oculusTouch.IsRIndexTriggerDown) {
-            _console.Log(_oculusTouch.RIndexTrigger.ToString());
+            //_console.Log(_oculusTouch.RIndexTrigger.ToString()); //値を出力
             _textIndexTriggerR.GetComponent<TextMesh>().text = Math.Round((OVRInput.Get(OVRInput.RawAxis1D.RIndexTrigger)*100)).ToString(); //テキストに表示
         } else {
             _textIndexTriggerR.GetComponent<TextMesh>().text = "0";
         }
         //中指トリガー
         if (_oculusTouch.IsLHandTriggerDown) {
-            _console.Log(_oculusTouch.LHandTrigger.ToString());
+            //_console.Log(_oculusTouch.LHandTrigger.ToString()); //値を出力
             _textHandTriggerL.GetComponent<TextMesh>().text = Math.Round((OVRInput.Get(OVRInput.RawAxis1D.LHandTrigger)*100)).ToString(); //テキスト表示
         } else {
             _textHandTriggerL.GetComponent<TextMesh>().text = "0";
         }
         if (_oculusTouch.IsRHandTriggerDown) {
-            _console.Log(_oculusTouch.RHandTrigger.ToString());
+            //_console.Log(_oculusTouch.RHandTrigger.ToString()); //値を出力
             _textHandTriggerR.GetComponent<TextMesh>().text = Math.Round((OVRInput.Get(OVRInput.RawAxis1D.RHandTrigger)*100)).ToString(); //テキスト表示
         } else {
             _textHandTriggerR.GetComponent<TextMesh>().text = "0";
@@ -398,7 +398,7 @@ public class Main : MonoBehaviour {
             _thumbstickL.transform.Rotate(0.0f, -_currentThumbStickRotateL, 0.0f);
             _thumbstickL.transform.Rotate(0.0f, _LThumbstickRotate, 0.0f);
             _currentThumbStickRotateL = _LThumbstickRotate;
-            _console.Log(_LThumbstickRotate.ToString()); //Console
+            //_console.Log(_LThumbstickRotate.ToString()); //値を出力
             _thumbstickMarkL.SetActive(true);
         } else {
             _thumbstickMarkL.SetActive(false);
@@ -408,7 +408,7 @@ public class Main : MonoBehaviour {
             _thumbstickR.transform.Rotate(0.0f, -_currentThumbStickRotateR, 0.0f);
             _thumbstickR.transform.Rotate(0.0f, _RThumbstickRotate, 0.0f);
             _currentThumbStickRotateR = _RThumbstickRotate;
-            _console.Log(_RThumbstickRotate.ToString()); //Console
+            //_console.Log(_RThumbstickRotate.ToString()); //値を出力
             _thumbstickMarkR.SetActive(true);
         } else {
             _thumbstickMarkR.SetActive(false);
