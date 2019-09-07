@@ -8,6 +8,6 @@
     * [Oculus Quest](https://www.oculus.com/quest/?locale=ja_JP) 8.0
 * Version 0.2 Build 147（2018年05月18日リリース）
 * [Oculus Quest](https://www.oculus.com/quest/?locale=ja_JP) 付属の Oculus Touch を C# で制御するための自作ライブラリ
-* [**Reference Manual （リファレンスマニュアル）**]()...作成中
+* [**Reference Manual （リファレンスマニュアル）**]()...制作予定
 
 © 2019 夢寐郎
