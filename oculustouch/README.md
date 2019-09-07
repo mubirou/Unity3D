@@ -1,4 +1,4 @@
-# Oculus Touch Controller
+# Oculus Touch Controller（自作ライブラリ）
 
 * Version Alpha1（2019年09月06日リリース）
 * [Oculus Quest](https://www.oculus.com/quest/?locale=ja_JP) 付属の左右の Oculus Touch を [C#](https://unity3d.com/jp/learning-c-sharp-in-unity-for-beginners?gq=C%23) で制御するための自作ライブラリ
