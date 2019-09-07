@@ -1,6 +1,6 @@
 # Oculus Touch Controller
 
-* [Oculus Quest](https://www.oculus.com/quest/?locale=ja_JP) 付属の Oculus Touch を C# で制御するための自作ライブラリ
+* [Oculus Quest](https://www.oculus.com/quest/?locale=ja_JP) 付属の左右の Oculus Touch を [C#](https://unity3d.com/jp/learning-c-sharp-in-unity-for-beginners?gq=C%23) で制御するための自作ライブラリ
 * Version Alpha1（2019年09月06日リリース）
 * 動作確認
     * [Ubuntu](https://www.ubuntulinux.jp/) 18.04.3 LTS（Windows, MacOS は動作未確認）
