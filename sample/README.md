@@ -4,29 +4,29 @@
 
 |No.|内容|WebGL|.apk|project|作成日|更新日|
 |:--:|:--|:--:|:--:|:--:|:--:|:--:|
-|[001](#001)|キャラクター（9ポーズ）制御|[●](https://mubirou.github.io/Unity/sample/html/sample001/index.html)|[●](https://github.com/mubirou/Unity/blob/master/sample/apk/sample001.apk)|[●](https://github.com/mubirou/Unity/blob/master/sample/project/sample001.zip)|2019-02-05|―|
-|[002](#002)|Avoid missile（複雑な衝突判定）|[●](https://mubirou.github.io/Unity/sample/html/sample002/index.html)|[●](https://github.com/mubirou/Unity/blob/master/sample/apk/sample002.apk)|[●](https://github.com/mubirou/Unity/blob/master/sample/project/sample002.zip)（未リファクタリング）|2019-03-11|―|
+|[001](#001)|キャラクター（9ポーズ）制御|[●](https://mubirou.github.io/Unity3D/sample/html/sample001/index.html)|[●](https://github.com/mubirou/Unity/blob/master/sample/apk/sample001.apk)|[●](https://github.com/mubirou/Unity/blob/master/sample/project/sample001.zip)|2019-02-05|―|
+|[002](#002)|Avoid missile（複雑な衝突判定）|[●](https://mubirou.github.io/Unity3D/sample/html/sample002/index.html)|[●](https://github.com/mubirou/Unity/blob/master/sample/apk/sample002.apk)|[●](https://github.com/mubirou/Unity/blob/master/sample/project/sample002.zip)（未リファクタリング）|2019-03-11|―|
 |[003](#003)|XXXX|―|―|―|2019-XX-XX|―|
 
 
 <a name="001"></a>
 # 001 キャラクター（9ポーズ）制御
 
-![sample001_06](https://mubirou.github.io/Unity/sample/jpg/sample001_06.jpg)  
+![sample001_06](https://mubirou.github.io/Unity3D/sample/jpg/sample001_06.jpg)  
 
 1. Blenderで[モデリング＆アニメーション](https://github.com/mubirou/Blender/tree/master/sample#001)
 
 1. アニメーターコントローラーの作成（[Project]-[Create]-[AnimatorController]）  
-![sample001_01](https://mubirou.github.io/Unity/sample/jpg/sample001_01.jpg)  
+![sample001_01](https://mubirou.github.io/Unity3D/sample/jpg/sample001_01.jpg)  
 
 1. パラメーターの設定（[AnimatorController]-[open]-[Parameters]）  
-![sample001_02](https://mubirou.github.io/Unity/sample/jpg/sample001_02.jpg)  
+![sample001_02](https://mubirou.github.io/Unity3D/sample/jpg/sample001_02.jpg)  
 
 1. 遷移条件の設定（ポーズ間の[→]-[Inspector]-[Conditions]）👈9ポーズX8x往復+α本分💦  
-![sample001_03](https://mubirou.github.io/Unity/sample/jpg/sample001_03.jpg)  
+![sample001_03](https://mubirou.github.io/Unity3D/sample/jpg/sample001_03.jpg)  
 
 1. ボタンの配置（[Hierarchy]-[Create]-[UI]-[Button]）  
-![sample001_04](https://mubirou.github.io/Unity/sample/jpg/sample001_04.jpg)  
+![sample001_04](https://mubirou.github.io/Unity3D/sample/jpg/sample001_04.jpg)  
 ※ボタン以外の文字はTextMesh-Pro（[Hierarychy]-[Create]-[UI]-[TextMesh-Pro]）を使用  
 ※フォントは[1001 FREE FONTS](https://www.1001freefonts.com/)を利用
 
@@ -202,7 +202,7 @@
     1. 引き続き[Inspector]-[Button]-[OnClick()]-[+]を選択
     1. [None（Object）]-[⦿]→[Sceneタブ]-[（該当のボタン）]をダブルクリック
     1. [NoFunction]→[WalkButton]-[OnClick]を選択（(該当のボタン).OnClickと表示される）  
-    ![sample001_05](https://mubirou.github.io/Unity/sample/jpg/sample001_05.jpg)  
+    ![sample001_05](https://mubirou.github.io/Unity3D/sample/jpg/sample001_05.jpg)  
 
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
@@ -212,12 +212,12 @@
 <a name="002"></a>
 # 002 Avoid missile（複雑な衝突判定）
 
-![sample002_03](https://mubirou.github.io/Unity/sample/jpg/sample002_03.jpg)  
+![sample002_03](https://mubirou.github.io/Unity3D/sample/jpg/sample002_03.jpg)  
 
 1. Blenderで[モデリング＆アニメーション](https://github.com/mubirou/Blender/tree/master/sample#001)
 
 1. アニメーターコントローラーの作成（[Project]-[Create]-[AnimatorController]）  
-![sample002_01](https://mubirou.github.io/Unity/sample/jpg/sample002_01.jpg)  
+![sample002_01](https://mubirou.github.io/Unity3D/sample/jpg/sample002_01.jpg)  
 
 1. カメラ（Main Camera）の設定
     * [Inspector]-[Camera]-[FieldofView] を35に変更（35mm換算70mm弱）
@@ -294,7 +294,7 @@
         1. [Inspector]-[CapsuleCollider]-[EditCollider] で調整
 
     1. キャラクターにコライダー（**SABoneColliderBuilder**）を追加  
-        ![sample002_02](https://mubirou.github.io/Unity/sample/jpg/sample002_02.jpg)  
+        ![sample002_02](https://mubirou.github.io/Unity3D/sample/jpg/sample002_02.jpg)  
         1. [Window]-[AssetStore] で "SAColliderBuilder" を検索→[Import]
         1. 全て✔した状態で [Import]
         1. [Hierarchy]-[**Mubirou**]-[Inspector] に [Project] 内の [SAColliderBuilder]-[**Script**]-[SABoneColliderBuilder] をドラッグ
