@@ -83,7 +83,7 @@ Version Alpha1（2019年09月06日リリース） 対応
 
 ***
 
-<a name="AddTargetObjects()"></a>
+<a name="AddTargetObjects"></a>
 # OculusTouch.AddTargetObjects()
 
 ### ◆構文
