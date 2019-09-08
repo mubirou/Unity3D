@@ -16,7 +16,7 @@ Version Alpha1（2019年09月06日リリース） 対応
 	1. [Project]-[Assets]-[GameManager]（C# スクリプト）を上記の [Inspector] エリアにドラッグ＆ドロップ  
 
 1. OculusTouchSeigyo クラスのアタッチ
-	1. [OculusTouchSeigyo.cs](https://raw.githubusercontent.com/mubirou/Unity3D/master/oculustouch/OculusTouch.cs) ファイルをプロジェクト内の Assets フォルダ内に保存
+	1. [OculusTouchSeigyo.cs](https://raw.githubusercontent.com/mubirou/Unity3D/master/oculustouch/OculusTouchSeigyo.cs) ファイルをプロジェクト内の Assets フォルダ内に保存
 	1. [Project]-[Assets]-[OculusTouchSeigyo]（C# スクリプト）を上記の [Inspector] エリアにドラッグ＆ドロップ  
 
 1. OculusTouchSeigyo を使ったミニマルな GameManager（C# スクリプト）
