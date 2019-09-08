@@ -42,7 +42,7 @@ Version Alpha1（2019年09月06日リリース） 対応
 			}
 		}
 		```
-	1. 上記に **OculusTouch** クラスのコンストラクタである [**new OculusTouch()**](#OculusTouch) を記述することがこの **Oculus Touch コントローラ** のを利用する第一歩です
+	1. 上記に OculusTouch クラスのコンストラクタである [new OculusTouch()](#OculusTouch) を記述することがこの Oculus Touch コントローラを利用する第一歩です
 
 
 ## ◆コンストラクタ
