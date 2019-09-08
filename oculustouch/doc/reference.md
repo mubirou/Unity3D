@@ -19,32 +19,21 @@ Version Alpha1（2019年09月06日リリース） 対応
 	1. [OculusTouch.cs](https://raw.githubusercontent.com/mubirou/Unity3D/master/oculustouch/OculusTouch.cs) ファイルをプロジェクト内の Assets フォルダ内に保存
 	1. [Project]-[Assets]-[OculusTouch]（C# スクリプト）を上記の [Inspector] エリアにドラッグ＆ドロップ  
 
-1. GameManager クラスの変更
-	1. GameManager（C# スクリプト）は初期設定は次の通り  
-		```
-		using System.Collections;
-		using System.Collections.Generic;
-		using UnityEngine;
+1. OculusTouch を使ったミニマルな GameManager（C# スクリプト）
+	```
+	//GameManager.cs
+	using UnityEngine;
 
-		public class GameManager : MonoBehaviour
-		{
-			// Start is called before the first frame update
-			void Start()
-			{
-				
-			}
-
-			// Update is called once per frame
-			void Update()
-			{
-				
-			}
+	public class GameManager : MonoBehaviour {
+		void Start() {
+			OculusTouch _oculusTouch = GetComponent<OculusTouch>();
+			_oculusTouch.L = GameObject.Find("OculusTouchL");
+			_oculusTouch.R = GameObject.Find("OculusTouchR");
 		}
-		```
-	1. 上記に [new OculusTouch()](#OculusTouch) 記述する
-
-# ◆コンストラクタ
-* [new OculusTouch()](#OculusTouch) : 
+	}
+	```
+	参照  
+	[GetComponent](https://docs.unity3d.com/ja/current/ScriptReference/GameObject.GetComponent.html)、[AddComponent](https://docs.unity3d.com/ja/current/ScriptReference/GameObject.AddComponent.html)、[GameObject.Find()](https://docs.unity3d.com/ja/current/ScriptReference/GameObject.Find.html)
 
 
 # ◆メソッド一覧
@@ -130,32 +119,23 @@ Version Alpha1（2019年09月06日リリース） 対応
 
 ***
 
-<a name="OculusTouch"></a>
+<a name="L"></a>
 
-# new OculusTouch()
+# OculusTouch.L
 
 ### ◆構文
-new OculusTouch()
+XXXX
 
 ### ◆引数
-なし  
+XXXX  
 
 ### ◆説明
-コンストラクタ。Oculus Touchを制御するためのクラス。
+XXXX
 
 ### ◆例文
 ```
 //GameManager.cs
-using UnityEngine;
-
-public class GameManager : MonoBehaviour {
-    void Start() {
-        OculusTouch _oculusTouch = GetComponent<OculusTouch>();
-        _oculusTouch.L = GameObject.Find("OculusTouchL");
-        _oculusTouch.R = GameObject.Find("OculusTouchR");
-    }
-}
 ```
 
 ### ◆参照
-[GetComponent](https://docs.unity3d.com/ja/current/ScriptReference/GameObject.GetComponent.html)
+XXXX
