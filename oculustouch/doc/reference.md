@@ -21,7 +21,7 @@ Version Alpha1（2019年09月06日リリース） 対応
 	1. GameManager（C# スクリプト）と同様に、[Project] ウィンドウ内の [Assets] フォルダの OculusTouch（C# スクリプト）を上記の [Inspector] エリアにドラッグ＆ドロップ  
 
 1. GameManager クラスの変更
-	1. GameManager（C# スクリプト）は次の通りです  
+	1. GameManager（C# スクリプト）は初期設定は次の通りです  
 		```
 		using System.Collections;
 		using System.Collections.Generic;
