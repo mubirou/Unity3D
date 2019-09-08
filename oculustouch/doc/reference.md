@@ -1,4 +1,4 @@
-# Oculus Touch コントローラ･マニュアル
+# Oculus Touch Seigyo マニュアル
 Version Alpha1（2019年09月06日リリース） 対応  
 © 2019 夢寐郎
 
@@ -15,20 +15,20 @@ Version Alpha1（2019年09月06日リリース） 対応
 	1. [Hierarchy]-[GameManager]（GameObject）-[Inspector] を開く
 	1. [Project]-[Assets]-[GameManager]（C# スクリプト）を上記の [Inspector] エリアにドラッグ＆ドロップ  
 
-1. OculusTouch クラスのアタッチ
-	1. [OculusTouch.cs](https://raw.githubusercontent.com/mubirou/Unity3D/master/oculustouch/OculusTouch.cs) ファイルをプロジェクト内の Assets フォルダ内に保存
-	1. [Project]-[Assets]-[OculusTouch]（C# スクリプト）を上記の [Inspector] エリアにドラッグ＆ドロップ  
+1. OculusTouchSeigyo クラスのアタッチ
+	1. [OculusTouchSeigyo.cs](https://raw.githubusercontent.com/mubirou/Unity3D/master/oculustouch/OculusTouch.cs) ファイルをプロジェクト内の Assets フォルダ内に保存
+	1. [Project]-[Assets]-[OculusTouchSeigyo]（C# スクリプト）を上記の [Inspector] エリアにドラッグ＆ドロップ  
 
-1. OculusTouch コントローラを使ったミニマルな GameManager（C# スクリプト）
+1. OculusTouchSeigyo を使ったミニマルな GameManager（C# スクリプト）
 	```
 	//GameManager.cs
 	using UnityEngine;
 
 	public class GameManager : MonoBehaviour {
 		void Start() {
-			OculusTouch _oculusTouch = GetComponent<OculusTouch>();
-			_oculusTouch.L = GameObject.Find("OculusTouchL");
-			_oculusTouch.R = GameObject.Find("OculusTouchR");
+			OculusTouchSeigyo _ots = GetComponent<OculusTouchSeigyo>();
+			_ots.L = GameObject.Find("OculusTouchL");
+			_ots.R = GameObject.Find("OculusTouchR");
 		}
 	}
 	```
@@ -122,6 +122,25 @@ Version Alpha1（2019年09月06日リリース） 対応
 <a name="L"></a>
 
 # OculusTouch.L
+
+### ◆構文
+<em>oculusTouch</em>.L
+
+### ◆説明
+Oculus Touch（右用のGameObject
+
+### ◆例文
+```
+//GameManager.cs
+```
+
+### ◆参照
+XXXX
+
+
+<a name="XXXX"></a>
+
+# XXXX
 
 ### ◆構文
 XXXX
