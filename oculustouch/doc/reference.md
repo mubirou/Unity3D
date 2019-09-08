@@ -2,6 +2,9 @@
 Version Alpha1（2019年09月06日リリース） 対応  
 © 2019 夢寐郎
 
+### ◆コンストラクタ
+* [new OculusTouch()](#OculusTouch) : 
+
 ### ◆メソッド一覧
 * [AddTargetObjects()](#AddTargetObjects) : 指定のGameObjectをレーザーポインタに反応させるリストに追加する
 * [RemoveTargetObjects()](#RemoveTargetObjects) : 指定のGameObjectをレーザーポインタに反応させるリストから削除する
