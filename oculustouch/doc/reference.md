@@ -19,7 +19,7 @@ Version Alpha1（2019年09月06日リリース） 対応
 	1. [OculusTouch.cs](https://raw.githubusercontent.com/mubirou/Unity3D/master/oculustouch/OculusTouch.cs) ファイルをプロジェクト内の Assets フォルダ内に保存
 	1. [Project]-[Assets]-[OculusTouch]（C# スクリプト）を上記の [Inspector] エリアにドラッグ＆ドロップ  
 
-1. OculusTouch を使ったミニマルな GameManager（C# スクリプト）
+1. OculusTouch コントローラを使ったミニマルな GameManager（C# スクリプト）
 	```
 	//GameManager.cs
 	using UnityEngine;
