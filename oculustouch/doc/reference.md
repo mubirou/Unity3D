@@ -2,7 +2,7 @@
 Version Alpha1（2019年09月06日リリース） 対応  
 © 2019 夢寐郎
 
-## ◆入門
+# ◆入門
 1. GameManager オブジェクトの作成  
 	1. [GameObject]-[Create Empty] を選択し空の GameObject を作成
 	1. 名前を "GameObject"→"GameManager" に変更  
@@ -45,16 +45,16 @@ Version Alpha1（2019年09月06日リリース） 対応
 	1. 上記に OculusTouch クラスのコンストラクタである [new OculusTouch()](#OculusTouch) を記述することがこの Oculus Touch コントローラを利用する第一歩です
 
 
-## ◆コンストラクタ
+# ◆コンストラクタ
 * [new OculusTouch()](#OculusTouch) : 
 
 
-## ◆メソッド一覧
+# ◆メソッド一覧
 * [AddTargetObjects()](#AddTargetObjects) : 
 * [RemoveTargetObjects()](#RemoveTargetObjects) : 
 
 
-## ◆プロパティ
+# ◆プロパティ
 * [IsLHandTriggerDown](#IsLHandTriggerDown) : 
 * [IsLIndexTriggerDown](#IsLIndexTriggerDown) : 
 * [IsRHandTriggerDown](#IsRHandTriggerDown) : 
@@ -70,7 +70,7 @@ Version Alpha1（2019年09月06日リリース） 対応
 * [TargetObjects](#TargetObjects) : 
 
 
-## ◆イベント
+# ◆イベント
 * [ADown](#) : 
 * [ARawTouch](#) : 
 * [AUp](#) : 
@@ -133,6 +133,7 @@ Version Alpha1（2019年09月06日リリース） 対応
 ***
 
 <a name="OculusTouch"></a>
+
 # new OculusTouch()
 
 ### ◆構文
