@@ -2,7 +2,7 @@
 Version Alpha1（2019年09月06日リリース） 対応  
 © 2019 夢寐郎
 
-# ◆入門
+# 入門
 1. GameManager オブジェクトの作成  
 	1. [GameObject]-[Create Empty] を選択（空の GameObject の作成）
 	1. 名前を "GameObject"→"GameManager" に変更  
@@ -36,12 +36,12 @@ Version Alpha1（2019年09月06日リリース） 対応
 	[GetComponent](https://docs.unity3d.com/ja/current/ScriptReference/GameObject.GetComponent.html)、[AddComponent](https://docs.unity3d.com/ja/current/ScriptReference/GameObject.AddComponent.html)、[GameObject.Find()](https://docs.unity3d.com/ja/current/ScriptReference/GameObject.Find.html)
 
 
-# ◆メソッド一覧
+# メソッド一覧
 * [AddTargetObjects()](#AddTargetObjects) : 
 * [RemoveTargetObjects()](#RemoveTargetObjects) : 
 
 
-# ◆プロパティ
+# プロパティ
 * [IsLHandTriggerDown](#IsLHandTriggerDown) : 
 * [IsLIndexTriggerDown](#IsLIndexTriggerDown) : 
 * [IsRHandTriggerDown](#IsRHandTriggerDown) : 
@@ -57,7 +57,7 @@ Version Alpha1（2019年09月06日リリース） 対応
 * [TargetObjects](#TargetObjects) : 
 
 
-# ◆イベント
+# イベント
 * [ADown](#) : 
 * [ARawTouch](#) : 
 * [AUp](#) : 
