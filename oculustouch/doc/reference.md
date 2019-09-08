@@ -17,7 +17,7 @@ Version Alpha1（2019年09月06日リリース） 対応
 	1. [Project] ウィンドウ内の [Assets] フォルダの GameManager（C# スクリプト）を上記の [Inspector] エリアにドラッグ＆ドロップ  
 
 1. OculusTouch クラスのアタッチ
-	1. [**OculusTouch.cs**](https://raw.githubusercontent.com/mubirou/Unity3D/master/oculustouch/OculusTouch.cs) ファイルをプロジェクト内の Assets フォルダ内に保存
+	1. [OculusTouch.cs](https://raw.githubusercontent.com/mubirou/Unity3D/master/oculustouch/OculusTouch.cs) ファイルをプロジェクト内の Assets フォルダ内に保存
 	1. GameManager（C# スクリプト）と同様に、[Project] ウィンドウ内の [Assets] フォルダの OculusTouch（C# スクリプト）を上記の [Inspector] エリアにドラッグ＆ドロップ  
 
 1. GameManager クラスの変更
