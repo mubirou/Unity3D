@@ -5,17 +5,21 @@ Version Alpha1（2019年09月06日リリース） 対応
 ### ◆入門
 1. GameManager オブジェクトの作成  
 	1. [GameObject]-[Create Empty] を選択し空の GameObject を作成
-	1. 名前を "GameObject"→"**GameManager**" に変更
+	1. 名前を "GameObject"→"**GameManager**" に変更  
+
 1. GameManager クラスの作成
 	1. [Assets]-[Create]-[C# Script] を選択し C# スクリプトを作成
 	1. 名前を "NewBehaviourScript"→"**GameManager**" に変更
-	1. プロジェクト内の Assets フォルダに **GameManager.cs** ファイルが生成されました
+	1. プロジェクト内の Assets フォルダに **GameManager.cs** ファイルが生成されました  
+
 1. GameManager クラスのアタッチ
 	1. [Hierarchy] ウィンドウ内の **GameManager**（GameObject）を選択し [Inspector] ウィンドウを開く
-	1. [Project] ウィンドウ内の [Assets] フォルダの **GameManager**（C# スクリプト）を上記の [Inspector] エリアにドラッグ＆ドロップ
+	1. [Project] ウィンドウ内の [Assets] フォルダの **GameManager**（C# スクリプト）を上記の [Inspector] エリアにドラッグ＆ドロップ  
+
 1. OculusTouch クラスのアタッチ
 	1. [**OculusTouch.cs**](https://raw.githubusercontent.com/mubirou/Unity3D/master/oculustouch/OculusTouch.cs) ファイルをプロジェクト内の Assets フォルダ内に保存
-	1. **GameManager**（C# スクリプト）と同様に、[Project] ウィンドウ内の [Assets] フォルダの **OculusTouch**（C# スクリプト）を上記の [Inspector] エリアにドラッグ＆ドロップ
+	1. **GameManager**（C# スクリプト）と同様に、[Project] ウィンドウ内の [Assets] フォルダの **OculusTouch**（C# スクリプト）を上記の [Inspector] エリアにドラッグ＆ドロップ  
+
 1. GameManager クラスの変更
 	1. **GameManager**（C# スクリプト）は次の通りです  
 		```
@@ -40,12 +44,15 @@ Version Alpha1（2019年09月06日リリース） 対応
 		```
 	1. 上記に **OculusTouch** クラスのコンストラクタである [**new OculusTouch()**](#OculusTouch) を記述することがこの **Oculus Touch コントローラ** のを利用する第一歩です
 
+
 ### ◆コンストラクタ
 * [new OculusTouch()](#OculusTouch) : 
+
 
 ### ◆メソッド一覧
 * [AddTargetObjects()](#AddTargetObjects) : 
 * [RemoveTargetObjects()](#RemoveTargetObjects) : 
+
 
 ### ◆プロパティ
 * [IsLHandTriggerDown](#IsLHandTriggerDown) : 
@@ -61,6 +68,7 @@ Version Alpha1（2019年09月06日リリース） 対応
 * [RIndexTrigger](#RIndexTrigger) : 
 * [RThumbstickRotate](#RThumbstickRotate) : 
 * [TargetObjects](#TargetObjects) : 
+
 
 ### ◆イベント
 * [ADown](#) : 
