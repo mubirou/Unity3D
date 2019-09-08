@@ -145,8 +145,17 @@ new OculusTouch()
 
 ### ◆例文
 ```
-//
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    void Start() {
+        OculusTouch _oculusTouch = GetComponent<OculusTouch>();
+        _oculusTouch.L = GameObject.Find("OculusTouchL");
+        _oculusTouch.R = GameObject.Find("OculusTouchR");
+    }
+}
 ```
 
 ### ◆参照
-XXX
+[GetComponent](https://docs.unity3d.com/ja/current/ScriptReference/GameObject.GetComponent.html)
