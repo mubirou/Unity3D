@@ -1,4 +1,4 @@
-# Oculus Touch Seigyo マニュアル
+# OTouch リファレンスマニュアル
 Version Alpha1（2019年09月06日リリース） 対応  
 © 2019 夢寐郎
 

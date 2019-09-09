@@ -1,5 +1,5 @@
 ﻿/***************************************************************************
- * OculusTouchSeigyo.cs (ver.2019-09-08T20:22) alpha1
+ * OTouch.cs (ver.2019-09-08T21:30) alpha1
  * © 2019 夢寐郎
  ***************************************************************************/
 using System.Collections;
@@ -8,7 +8,7 @@ using UnityEngine;
 using System; //for Math
 
 /******************************************************************************
- * OculusTouchSeigyo Class
+ * OTouch Class
  *  <Public Method>
  *      AddTargetObjects(GameObject)
  *      RemoveTargetObjects(GameObject)
@@ -90,7 +90,7 @@ using System; //for Math
  *
  *****************************************************************************/
  
-public class OculusTouchSeigyo : MonoBehaviour {
+public class OTouch : MonoBehaviour {
     private GameObject _oculusTouchL = null;
     private GameObject _oculusTouchR = null;
     private GameObject _leftHandAnchor;
