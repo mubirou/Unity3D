@@ -15,20 +15,20 @@ Version Alpha1（2019年09月06日リリース） 対応
 	1. [Hierarchy]-[GameManager]（GameObject）-[Inspector] を開く
 	1. [Project]-[Assets]-[GameManager]（C# スクリプト）を上記の [Inspector] エリアにドラッグ＆ドロップ  
 
-1. OculusTouchSeigyo クラスのアタッチ
-	1. [OculusTouchSeigyo.cs](https://raw.githubusercontent.com/mubirou/Unity3D/master/oculustouch/OculusTouchSeigyo.cs) ファイルをプロジェクト内の Assets フォルダ内に保存
-	1. [Project]-[Assets]-[OculusTouchSeigyo]（C# スクリプト）を上記の [Inspector] エリアにドラッグ＆ドロップ  
+1. OTouch クラスのアタッチ
+	1. [OTouch.cs](https://raw.githubusercontent.com/mubirou/Unity3D/master/oculustouch/OTouch.cs) ファイルをプロジェクト内の Assets フォルダ内に保存
+	1. [Project]-[Assets]-[OTouch]（C# スクリプト）を上記の [Inspector] エリアにドラッグ＆ドロップ  
 
-1. OculusTouchSeigyo を使ったミニマルな GameManager（C# スクリプト）
+1. OTouch を使ったミニマルな GameManager（C# スクリプト）
 	```
 	//GameManager.cs
 	using UnityEngine;
 
 	public class GameManager : MonoBehaviour {
 		void Start() {
-			OculusTouchSeigyo _ots = GetComponent<OculusTouchSeigyo>();
-			_ots.L = GameObject.Find("OculusTouchL");
-			_ots.R = GameObject.Find("OculusTouchR");
+			OTouch _otouch = GetComponent<OTouch>();
+			_otouch.L = GameObject.Find("OculusTouchL");
+			_otouch.R = GameObject.Find("OculusTouchR");
 		}
 	}
 	```
