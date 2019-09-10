@@ -1,13 +1,13 @@
-﻿//Main.cs
+﻿//GameManager.cs
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System; //for Math
 
-public class Main : MonoBehaviour {
+public class GameManager : MonoBehaviour {
     private GameObject _oculusTouchL;
     private GameObject _oculusTouchR;
-    private OculusTouch _oculusTouch;
+    private OTouch _otouch;
     private Console _console; //Consoleクラス（Console.cs）のインスタンス
     
     //--------------------------------------------------------
@@ -52,103 +52,103 @@ public class Main : MonoBehaviour {
         ForDummy(); //ダミーのあれこれ
 
         //OculusTcouchをコントロールするクラス（インスタンスの参照）
-        _oculusTouch = GetComponent<OculusTouch>();
-        _oculusTouch.L = _oculusTouchL; //OculusTouchの右用のGameObject
-        _oculusTouch.R = _oculusTouchR; //OculusTouchの左用のGameObject
+        _otouch = GetComponent<OTouch>();
+        _otouch.L = _oculusTouchL; //OculusTouchの右用のGameObject
+        _otouch.R = _oculusTouchR; //OculusTouchの左用のGameObject
 
         //=========================
         // イベントハンドラの登録
         //=========================
         //人差し指トリガー（Down、Up）
-        _oculusTouch.LIndexTriggerDown += LIndexTriggerDownHandler;
-        _oculusTouch.LIndexTriggerUp += LIndexTriggerUpHandler;
-        _oculusTouch.RIndexTriggerDown += RIndexTriggerDownHandler;
-        _oculusTouch.RIndexTriggerUp += RIndexTriggerUpHandler;
+        _otouch.LIndexTriggerDown += LIndexTriggerDownHandler;
+        _otouch.LIndexTriggerUp += LIndexTriggerUpHandler;
+        _otouch.RIndexTriggerDown += RIndexTriggerDownHandler;
+        _otouch.RIndexTriggerUp += RIndexTriggerUpHandler;
         //人差し指トリガー（RawTouch）
 
         //中指トリガー
-        _oculusTouch.LHandTriggerDown += LHandTriggerDownHandler;
-        _oculusTouch.LHandTriggerUp += LHandTriggerUpHandler;
-        _oculusTouch.RHandTriggerDown += RHandTriggerDownHandler;
-        _oculusTouch.RHandTriggerUp += RHandTriggerUpHandler;
+        _otouch.LHandTriggerDown += LHandTriggerDownHandler;
+        _otouch.LHandTriggerUp += LHandTriggerUpHandler;
+        _otouch.RHandTriggerDown += RHandTriggerDownHandler;
+        _otouch.RHandTriggerUp += RHandTriggerUpHandler;
         //Aボタン
-        _oculusTouch.ADown += ADownHandler;
-        _oculusTouch.AUp += AUpHandler;
+        _otouch.ADown += ADownHandler;
+        _otouch.AUp += AUpHandler;
         //Bボタン
-        _oculusTouch.BDown += BDownHandler;
-        _oculusTouch.BUp += BUpHandler;
+        _otouch.BDown += BDownHandler;
+        _otouch.BUp += BUpHandler;
         //Xボタン
-        _oculusTouch.XDown += XDownHandler;
-        _oculusTouch.XUp += XUpHandler;
+        _otouch.XDown += XDownHandler;
+        _otouch.XUp += XUpHandler;
         //Yボタン
-        _oculusTouch.YDown += YDownHandler;
-        _oculusTouch.YUp += YUpHandler;
+        _otouch.YDown += YDownHandler;
+        _otouch.YUp += YUpHandler;
         //Startボタン
-        _oculusTouch.StartDown += StartDownHandler;
-        _oculusTouch.StartUp += StartUpHandler;
+        _otouch.StartDown += StartDownHandler;
+        _otouch.StartUp += StartUpHandler;
         //親指スティック
-        _oculusTouch.LThumbstickDown += LThumbstickDownHandler;
-        _oculusTouch.LThumbstickUp += LThumbstickUpHandler;
-        _oculusTouch.RThumbstickDown += RThumbstickDownHandler;
-        _oculusTouch.RThumbstickUp += RThumbstickUpHandler;
+        _otouch.LThumbstickDown += LThumbstickDownHandler;
+        _otouch.LThumbstickUp += LThumbstickUpHandler;
+        _otouch.RThumbstickDown += RThumbstickDownHandler;
+        _otouch.RThumbstickUp += RThumbstickUpHandler;
         //親指スティック上下左右（Down）
-        _oculusTouch.LThumbstickUpDown += LThumbstickUpDownHandler;
-        _oculusTouch.LThumbstickDownDown += LThumbstickDownDownHandler;
-        _oculusTouch.LThumbstickLeftDown += LThumbstickLeftDownHandler;
-        _oculusTouch.LThumbstickRightDown += LThumbstickRightDownHandler;
-        _oculusTouch.RThumbstickUpDown += RThumbstickUpDownHandler;
-        _oculusTouch.RThumbstickDownDown += RThumbstickDownDownHandler;
-        _oculusTouch.RThumbstickLeftDown += RThumbstickLeftDownHandler;
-        _oculusTouch.RThumbstickRightDown += RThumbstickRightDownHandler;
+        _otouch.LThumbstickUpDown += LThumbstickUpDownHandler;
+        _otouch.LThumbstickDownDown += LThumbstickDownDownHandler;
+        _otouch.LThumbstickLeftDown += LThumbstickLeftDownHandler;
+        _otouch.LThumbstickRightDown += LThumbstickRightDownHandler;
+        _otouch.RThumbstickUpDown += RThumbstickUpDownHandler;
+        _otouch.RThumbstickDownDown += RThumbstickDownDownHandler;
+        _otouch.RThumbstickLeftDown += RThumbstickLeftDownHandler;
+        _otouch.RThumbstickRightDown += RThumbstickRightDownHandler;
         //親指スティック上下左右（Up）
-        _oculusTouch.LThumbstickUpUp += LThumbstickUpUpHandler;
-        _oculusTouch.LThumbstickDownUp += LThumbstickDownUpHandler;
-        _oculusTouch.LThumbstickLeftUp += LThumbstickLeftUpHandler;
-        _oculusTouch.LThumbstickRightUp += LThumbstickRightUpHandler;
-        _oculusTouch.RThumbstickUpUp += RThumbstickUpUpHandler;
-        _oculusTouch.RThumbstickDownUp += RThumbstickDownUpHandler;
-        _oculusTouch.RThumbstickLeftUp += RThumbstickLeftUpHandler;
-        _oculusTouch.RThumbstickRightUp += RThumbstickRightUpHandler;
+        _otouch.LThumbstickUpUp += LThumbstickUpUpHandler;
+        _otouch.LThumbstickDownUp += LThumbstickDownUpHandler;
+        _otouch.LThumbstickLeftUp += LThumbstickLeftUpHandler;
+        _otouch.LThumbstickRightUp += LThumbstickRightUpHandler;
+        _otouch.RThumbstickUpUp += RThumbstickUpUpHandler;
+        _otouch.RThumbstickDownUp += RThumbstickDownUpHandler;
+        _otouch.RThumbstickLeftUp += RThumbstickLeftUpHandler;
+        _otouch.RThumbstickRightUp += RThumbstickRightUpHandler;
         //タッチ（RawTouch）
-        _oculusTouch.LIndexTriggerRawTouch += LIndexTriggerRawTouchHandler;
-        _oculusTouch.RIndexTriggerRawTouch += RIndexTriggerRawTouchHandler;
-        _oculusTouch.LThumbstickRawTouch += LThumbstickRawTouchHandler;
-        _oculusTouch.RThumbstickRawTouch += RThumbstickRawTouchHandler;
-        _oculusTouch.ARawTouch += ARawTouchHandler;
-        _oculusTouch.BRawTouch += BRawTouchHandler;
-        _oculusTouch.XRawTouch += XRawTouchHandler;
-        _oculusTouch.YRawTouch += YRawTouchHandler;
+        _otouch.LIndexTriggerRawTouch += LIndexTriggerRawTouchHandler;
+        _otouch.RIndexTriggerRawTouch += RIndexTriggerRawTouchHandler;
+        _otouch.LThumbstickRawTouch += LThumbstickRawTouchHandler;
+        _otouch.RThumbstickRawTouch += RThumbstickRawTouchHandler;
+        _otouch.ARawTouch += ARawTouchHandler;
+        _otouch.BRawTouch += BRawTouchHandler;
+        _otouch.XRawTouch += XRawTouchHandler;
+        _otouch.YRawTouch += YRawTouchHandler;
         //近接（RawNearTouch）
-        _oculusTouch.LIndexTriggerRawNearTouch += LIndexTriggerRawNearTouchHandler;
-        _oculusTouch.RIndexTriggerRawNearTouch += RIndexTriggerRawNearTouchHandler;
+        _otouch.LIndexTriggerRawNearTouch += LIndexTriggerRawNearTouchHandler;
+        _otouch.RIndexTriggerRawNearTouch += RIndexTriggerRawNearTouchHandler;
 
         //選択オブジェクト
         GameObject _cube1 = GameObject.Find("Cube1");
         GameObject _cube2 = GameObject.Find("Cube2");
         GameObject _cube3 = GameObject.Find("Cube3");
-        _oculusTouch.AddTargetObjects(_cube1);
-        _oculusTouch.AddTargetObjects(_cube2);
-        _oculusTouch.AddTargetObjects(_cube3);
-        //Debug.Log(_oculusTouch.TargetObjects);
+        _otouch.AddTargetObjects(_cube1);
+        _otouch.AddTargetObjects(_cube2);
+        _otouch.AddTargetObjects(_cube3);
+        //Debug.Log(_otouch.TargetObjects);
 
         //オブジェクト選択
-        _oculusTouch.LLaserOver += LLaserOverHandler;
-        _oculusTouch.RLaserOver += RLaserOverHandler;
-        _oculusTouch.LLaserOut += LLaserOutHandler;
-        _oculusTouch.RLaserOut += RLaserOutHandler;
-        _oculusTouch.LLaserDown += LLaserDownHandler;
-        _oculusTouch.RLaserDown += RLaserDownHandler;
-        _oculusTouch.LLaserUp += LLaserUpHandler;
-        _oculusTouch.RLaserUp += RLaserUpHandler;
-        _oculusTouch.LLaserUpOutside += LLaserUpOutsideHandler;
-        _oculusTouch.RLaserUpOutside += RLaserUpOutsideHandler;
+        _otouch.LLaserOver += LLaserOverHandler;
+        _otouch.RLaserOver += RLaserOverHandler;
+        _otouch.LLaserOut += LLaserOutHandler;
+        _otouch.RLaserOut += RLaserOutHandler;
+        _otouch.LLaserDown += LLaserDownHandler;
+        _otouch.RLaserDown += RLaserDownHandler;
+        _otouch.LLaserUp += LLaserUpHandler;
+        _otouch.RLaserUp += RLaserUpHandler;
+        _otouch.LLaserUpOutside += LLaserUpOutsideHandler;
+        _otouch.RLaserUpOutside += RLaserUpOutsideHandler;
 
         //レーザーの有効化（初期値は無効）
-        _oculusTouch.EnabledLaserL = true;
-        _oculusTouch.EnabledLaserR = true;
+        _otouch.EnabledLaserL = true;
+        _otouch.EnabledLaserR = true;
 
         //コンソールの参照（冗長すぎね？）
-        _console = _oculusTouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
         //_console = GameObject.Find("Console").gameObject.GetComponent<Console>();
     }
 
@@ -382,35 +382,35 @@ public class Main : MonoBehaviour {
 
     void Update() {
         //人差し指トリガー
-        if (_oculusTouch.IsLIndexTriggerDown) {
-            //_console.Log(_oculusTouch.LIndexTrigger.ToString()); //値を出力
+        if (_otouch.IsLIndexTriggerDown) {
+            //_console.Log(_otouch.LIndexTrigger.ToString()); //値を出力
             _textIndexTriggerL.GetComponent<TextMesh>().text = Math.Round((OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger)*100)).ToString(); //テキストに表示
         } else {
             _textIndexTriggerL.GetComponent<TextMesh>().text = "0";
         }
-        if (_oculusTouch.IsRIndexTriggerDown) {
-            //_console.Log(_oculusTouch.RIndexTrigger.ToString()); //値を出力
+        if (_otouch.IsRIndexTriggerDown) {
+            //_console.Log(_otouch.RIndexTrigger.ToString()); //値を出力
             _textIndexTriggerR.GetComponent<TextMesh>().text = Math.Round((OVRInput.Get(OVRInput.RawAxis1D.RIndexTrigger)*100)).ToString(); //テキストに表示
         } else {
             _textIndexTriggerR.GetComponent<TextMesh>().text = "0";
         }
         //中指トリガー
-        if (_oculusTouch.IsLHandTriggerDown) {
-            //_console.Log(_oculusTouch.LHandTrigger.ToString()); //値を出力
+        if (_otouch.IsLHandTriggerDown) {
+            //_console.Log(_otouch.LHandTrigger.ToString()); //値を出力
             _textHandTriggerL.GetComponent<TextMesh>().text = Math.Round((OVRInput.Get(OVRInput.RawAxis1D.LHandTrigger)*100)).ToString(); //テキスト表示
         } else {
             _textHandTriggerL.GetComponent<TextMesh>().text = "0";
         }
-        if (_oculusTouch.IsRHandTriggerDown) {
-            //_console.Log(_oculusTouch.RHandTrigger.ToString()); //値を出力
+        if (_otouch.IsRHandTriggerDown) {
+            //_console.Log(_otouch.RHandTrigger.ToString()); //値を出力
             _textHandTriggerR.GetComponent<TextMesh>().text = Math.Round((OVRInput.Get(OVRInput.RawAxis1D.RHandTrigger)*100)).ToString(); //テキスト表示
         } else {
             _textHandTriggerR.GetComponent<TextMesh>().text = "0";
         }
 
         //親指スティック
-        if (_oculusTouch.IsLThumbstickMove) {
-            float _LThumbstickRotate = _oculusTouch.LThumbstickRotate;
+        if (_otouch.IsLThumbstickMove) {
+            float _LThumbstickRotate = _otouch.LThumbstickRotate;
             _thumbstickL.transform.Rotate(0.0f, -_currentThumbStickRotateL, 0.0f);
             _thumbstickL.transform.Rotate(0.0f, _LThumbstickRotate, 0.0f);
             _currentThumbStickRotateL = _LThumbstickRotate;
@@ -419,8 +419,8 @@ public class Main : MonoBehaviour {
         } else {
             _thumbstickMarkL.SetActive(false);
         }
-        if (_oculusTouch.IsRThumbstickMove) {
-            float _RThumbstickRotate = _oculusTouch.RThumbstickRotate;
+        if (_otouch.IsRThumbstickMove) {
+            float _RThumbstickRotate = _otouch.RThumbstickRotate;
             _thumbstickR.transform.Rotate(0.0f, -_currentThumbStickRotateR, 0.0f);
             _thumbstickR.transform.Rotate(0.0f, _RThumbstickRotate, 0.0f);
             _currentThumbStickRotateR = _RThumbstickRotate;
@@ -467,7 +467,7 @@ public class Main : MonoBehaviour {
     }
 
     private void AllObjectClear() { //選択オブジェクトの色を通常に戻す
-        List<GameObject> _targetObjects = _oculusTouch.TargetObjects;
+        List<GameObject> _targetObjects = _otouch.TargetObjects;
         foreach (GameObject _tmp in _targetObjects) {
             _tmp.GetComponent<Renderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
         }

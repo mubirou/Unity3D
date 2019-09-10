@@ -68,7 +68,7 @@ Version Alpha1（2019年09月06日リリース） 対応
 * [BUp](#) : 
 * [LHandTriggerDown](#) : 
 * [LHandTriggerUp](#) : 
-* [LIndexTriggerDown](#) : 
+* [LIndexTriggerDown](#LIndexTriggerDown) : 
 * [LIndexTriggerRawNearTouch](#) : 
 * [LIndexTriggerRawTouch](#) : 
 * [LIndexTriggerUp](#) : 
@@ -123,10 +123,10 @@ Version Alpha1（2019年09月06日リリース） 対応
 
 <a name="L"></a>
 
-# OculusTouch.L
+# OTouch.L
 
 ### ◆構文
-<em>oculusTouch</em>.L
+<em>otouch</em>.L
 
 ### ◆説明
 プロパティ。
@@ -136,19 +136,40 @@ Oculus Touch コントローラー（左手側）の動きに連動する GameOb
 ```
 OTouch _otouch = GetComponent<OTouch>();
 _otouch.L = GameObject.Find("OculusTouchL");
-_otouch.R = GameObject.Find("OculusTouchR");
 ```
 
 ### ◆参照
-[OculusTouch.R](#R)
+[OTouch.R](#R)
 
+***
+
+<a name="LIndexTriggerDown"></a>
+
+# OTouch.LIndexTriggerDown
+
+### ◆構文
+<em>otouch</em>.LIndexTriggerDown
+
+### ◆説明
+イベントハンドラの登録、または削除を行うことができます。
+
+### ◆例文
+```
+//GameManager.cs
+XXXXX
+```
+
+### ◆参照
+XXXX
+
+***
 
 <a name="R"></a>
 
-# OculusTouch.R
+# OTouch.R
 
 ### ◆構文
-<em>oculusTouch</em>.R
+<em>otouch</em>.R
 
 ### ◆説明
 プロパティ。
@@ -157,13 +178,13 @@ Oculus Touch コントローラー（右手側）の動きに連動する GameOb
 ### ◆例文
 ```
 OTouch _otouch = GetComponent<OTouch>();
-_otouch.L = GameObject.Find("OculusTouchL");
 _otouch.R = GameObject.Find("OculusTouchR");
 ```
 
 ### ◆参照
-[OculusTouch.L](#L)
+[OTouch.L](#L)
 
+***
 
 <a name="XXXX"></a>
 
