@@ -128,7 +128,7 @@ Version Alpha1（2019年09月06日リリース） 対応
 
 ### ◆説明
 プロパティ。
-Oculus Touch コントローラー（右手側）の動きに連動する GameObject を指定したり、調べることができます。
+Oculus Touch コントローラー（左手側）の動きに連動する GameObject を指定したり、調べることができます。
 
 ### ◆例文
 ```
@@ -139,6 +139,28 @@ _otouch.R = GameObject.Find("OculusTouchR");
 
 ### ◆参照
 [OculusTouch.R](#R)
+
+
+<a name="R"></a>
+
+# OculusTouch.R
+
+### ◆構文
+<em>oculusTouch</em>.R
+
+### ◆説明
+プロパティ。
+Oculus Touch コントローラー（右手側）の動きに連動する GameObject を指定したり、調べることができます。
+
+### ◆例文
+```
+OTouch _otouch = GetComponent<OTouch>();
+_otouch.L = GameObject.Find("OculusTouchL");
+_otouch.R = GameObject.Find("OculusTouchR");
+```
+
+### ◆参照
+[OculusTouch.L](#L)
 
 
 <a name="XXXX"></a>
