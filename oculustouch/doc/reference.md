@@ -127,15 +127,18 @@ Version Alpha1（2019年09月06日リリース） 対応
 <em>oculusTouch</em>.L
 
 ### ◆説明
-Oculus Touch（右用のGameObject
+プロパティ。
+Oculus Touch コントローラー（右手側）の動きに連動する GameObject を指定したり、調べることができます。
 
 ### ◆例文
 ```
-//GameManager.cs
+OTouch _otouch = GetComponent<OTouch>();
+_otouch.L = GameObject.Find("OculusTouchL");
+_otouch.R = GameObject.Find("OculusTouchR");
 ```
 
 ### ◆参照
-XXXX
+[OculusTouch.R](#R)
 
 
 <a name="XXXX"></a>
