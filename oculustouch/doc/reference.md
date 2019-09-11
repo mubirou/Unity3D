@@ -151,6 +151,7 @@ _otouch.L = GameObject.Find("OculusTouchL");
 <em>otouch</em>.LIndexTriggerDown
 
 ### ◆説明
+
 イベントハンドラの登録、または削除を行うことができます。
 
 ### ◆例文
