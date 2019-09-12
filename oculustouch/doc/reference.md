@@ -152,7 +152,7 @@ _otouch.L = GameObject.Find("OculusTouchL");
 <em>otouch</em>.LIndexTriggerDown -= <em>SomeMethodHandler</em>
 
 ### ◆説明
-左人差し指トリガーを押した時のイベントハンドラの登録、または削除を行うことができます。
+「左人差し指トリガーを押した時」のイベントハンドラの登録、または削除を行うことができます。
 
 ### ◆例文
 ```
