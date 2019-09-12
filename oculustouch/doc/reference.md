@@ -35,7 +35,9 @@ Version Alpha1（2019年09月12日リリース） 対応
 	}
 	```
 	参照  
-	[GetComponent](https://docs.unity3d.com/ja/current/ScriptReference/GameObject.GetComponent.html)、[AddComponent](https://docs.unity3d.com/ja/current/ScriptReference/GameObject.AddComponent.html)、[GameObject.Find()](https://docs.unity3d.com/ja/current/ScriptReference/GameObject.Find.html)
+	[GetComponent](https://docs.unity3d.com/ja/current/ScriptReference/GameObject.GetComponent.html)  
+	[AddComponent](https://docs.unity3d.com/ja/current/ScriptReference/GameObject.AddComponent.html)  
+	[GameObject.Find()](https://docs.unity3d.com/ja/current/ScriptReference/GameObject.Find.html)
 
 
 # メソッド一覧
