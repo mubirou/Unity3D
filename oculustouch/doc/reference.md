@@ -175,10 +175,10 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◆参照
-[OTouch.LIndexTriggerUp](#RIndexTriggerUp)  
-[OTouch.RIndexTriggerDown](#RIndexTriggerDown)
+[OTouch.RIndexTriggerDown](#RIndexTriggerDown)  
+[OTouch.LIndexTriggerUp](#LIndexTriggerUp)  
 
-***
+**
 
 <a name="R"></a>
 
@@ -199,6 +199,44 @@ _otouch.R = GameObject.Find("OculusTouchR");
 
 ### ◆参照
 [OTouch.L](#L)
+
+***
+
+
+<a name="RIndexTriggerDown"></a>
+
+# OTouch.RIndexTriggerDown
+
+### ◆構文
+<em>otouch</em>.RIndexTriggerDown += <em>SomeMethodHandler</em>  
+<em>otouch</em>.RIndexTriggerDown -= <em>SomeMethodHandler</em>
+
+### ◆説明
+「右人差し指トリガーを押した時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◆例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.R = GameObject.Find("OculusTouchR");
+        _otouch.RIndexTriggerDown += RIndexTriggerDownHandler; // イベントハンドラの登録
+    }
+
+    private void RIndexTriggerDownHandler() { //イベントハンドラ
+        //ここに右人差し指トリガーを押した時の処理を記述
+    }
+}
+```
+
+### ◆参照
+[OTouch.LIndexTriggerDown](#LIndexTriggerDown)  
+[OTouch.RIndexTriggerUp](#RIndexTriggerUp)  
 
 ***
 
