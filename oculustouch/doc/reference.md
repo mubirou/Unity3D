@@ -175,7 +175,8 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◆参照
-[OTouch.LIndexTriggerUp](#RIndexTriggerUp)、[OTouch.RIndexTriggerDown](#RIndexTriggerDown)
+[OTouch.LIndexTriggerUp](#RIndexTriggerUp)  
+[OTouch.RIndexTriggerDown](#RIndexTriggerDown)
 
 ***
 
