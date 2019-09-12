@@ -90,7 +90,7 @@ Version Alpha1（2019年09月12日リリース） 対応
 * [LThumbstickUpDown](#) : 
 * [RHandTriggerDown](#) : 
 * [RHandTriggerUp](#) : 
-* [RIndexTriggerDown](#) : 
+* [RIndexTriggerDown](#RIndexTriggerDown) : 「右人差し指トリガーを押した時」のイベントハンドラの登録や削除
 * [RIndexTriggerRawNearTouch](#) : 
 * [RIndexTriggerRawTouch](#) : 
 * [RIndexTriggerUp](#) : 
