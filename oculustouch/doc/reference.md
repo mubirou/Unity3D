@@ -68,7 +68,7 @@ Version Alpha1（2019年09月12日リリース） 対応
 * [BUp](#) : 
 * [LHandTriggerDown](#) : 
 * [LHandTriggerUp](#) : 
-* [LIndexTriggerDown](#LIndexTriggerDown) : 左人差し指トリガーを押した時のイベントハンドラの登録等
+* [LIndexTriggerDown](#LIndexTriggerDown) : 「左人差し指トリガーを押した時」のイベントハンドラの登録や削除
 * [LIndexTriggerRawNearTouch](#) : 
 * [LIndexTriggerRawTouch](#) : 
 * [LIndexTriggerUp](#) : 
@@ -152,7 +152,7 @@ _otouch.L = GameObject.Find("OculusTouchL");
 <em>otouch</em>.LIndexTriggerDown -= <em>SomeMethodHandler</em>
 
 ### ◆説明
-「左人差し指トリガーを押した時」のイベントハンドラの登録、または削除を行うことができます。
+「左人差し指トリガーを押した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◆例文
 ```
@@ -175,7 +175,7 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◆参照
-XXXX
+[OTouch.RIndexTriggerDown](#RIndexTriggerDown)
 
 ***
 
