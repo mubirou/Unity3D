@@ -1,5 +1,5 @@
 # OTouch リファレンスマニュアル
-Version Alpha1（2019年09月06日リリース） 対応  
+Version Alpha1（2019年09月12日リリース） 対応  
 © 2019 夢寐郎
 
 # 入門
@@ -148,16 +148,30 @@ _otouch.L = GameObject.Find("OculusTouchL");
 # OTouch.LIndexTriggerDown
 
 ### ◆構文
-<em>otouch</em>.LIndexTriggerDown
+<em>otouch</em>.LIndexTriggerDown += <em>SomeMethodHandler</em>
+<em>otouch</em>.LIndexTriggerDown -= <em>SomeMethodHandler</em>
 
 ### ◆説明
-
-イベントハンドラの登録、または削除を行うことができます。
+左人差し指トリガーを押した時のイベントハンドラの登録、または削除を行うことができます。
 
 ### ◆例文
 ```
 //GameManager.cs
-XXXXX
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.R = GameObject.Find("OculusTouchR");
+        _otouch.LIndexTriggerDown += LIndexTriggerDownHandler; //イベントハンドラの登録
+    }
+
+    private void LIndexTriggerDownHandler() { //イベントハンドラ
+        //ここに左人差し指トリガーを押した時の処理を記述
+    }
+}
 ```
 
 ### ◆参照
