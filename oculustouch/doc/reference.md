@@ -68,7 +68,7 @@ Version Alpha1（2019年09月12日リリース） 対応
 * [BUp](#) : 
 * [LHandTriggerDown](#) : 
 * [LHandTriggerUp](#) : 
-* [LIndexTriggerDown](#LIndexTriggerDown) : 
+* [LIndexTriggerDown](#LIndexTriggerDown) : 左人差し指トリガーを押した時のイベントハンドラの登録等
 * [LIndexTriggerRawNearTouch](#) : 
 * [LIndexTriggerRawTouch](#) : 
 * [LIndexTriggerUp](#) : 
@@ -148,7 +148,7 @@ _otouch.L = GameObject.Find("OculusTouchL");
 # OTouch.LIndexTriggerDown
 
 ### ◆構文
-<em>otouch</em>.LIndexTriggerDown += <em>SomeMethodHandler</em>
+<em>otouch</em>.LIndexTriggerDown += <em>SomeMethodHandler</em>  
 <em>otouch</em>.LIndexTriggerDown -= <em>SomeMethodHandler</em>
 
 ### ◆説明
