@@ -179,7 +179,7 @@ public class GameManager : MonoBehaviour {
 [OTouch.RIndexTriggerDown](#RIndexTriggerDown)  
 [OTouch.LIndexTriggerUp](#LIndexTriggerUp)  
 
-**
+***
 
 <a name="LIndexTriggerUp"></a>
 
