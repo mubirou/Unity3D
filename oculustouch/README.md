@@ -4,7 +4,7 @@
 * Version Alpha1（2019年09月08日リリース）
 * 開発環境（Windows、macOS は動作未確認）
     * [Ubuntu](https://www.ubuntulinux.jp/) 18.04.3 LTS
-    * [Unity 2020.1.0a3](https://unity3d.com/jp/unity/alpha/2020.1.0a3)
+    * [Unity 2020.1.0a3 Personal](https://unity3d.com/jp/unity/alpha/2020.1.0a3)
     * [Unity Hub](https://forum.unity.com/threads/unity-hub-v2-0-0-release.677485/) 2.1.1 for Linux
     * [Oculus Integration](https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022) 1.39
     * [Oculus Quest](https://www.oculus.com/quest/?locale=ja_JP) 8.0
