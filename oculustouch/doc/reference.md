@@ -182,6 +182,43 @@ public class GameManager : MonoBehaviour {
 
 **
 
+<a name="LIndexTriggerUp"></a>
+
+# OTouch.LIndexTriggerUp
+
+### ◆構文
+<em>otouch</em>.LIndexTriggerUp += <em>SomeMethodHandler</em>  
+<em>otouch</em>.LIndexTriggerUp -= <em>SomeMethodHandler</em>
+
+### ◆説明
+「左人差し指トリガーを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◆例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.R = GameObject.Find("OculusTouchR");
+        _otouch.LIndexTriggerUp += LIndexTriggerUpHandler; // イベントハンドラの登録
+    }
+
+    private void LIndexTriggerUpHandler() { // イベントハンドラ
+        //ここに「左人差し指トリガーを押した後、離した時」の処理を記述
+    }
+}
+```
+
+### ◆参照
+[OTouch.RIndexTriggerUp](#RIndexTriggerUp)  
+[OTouch.LIndexTriggerDown](#LIndexTriggerDown)  
+
+***
+
 <a name="R"></a>
 
 # OTouch.R
