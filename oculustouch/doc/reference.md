@@ -50,11 +50,12 @@ Version Alpha1（2019年09月13日リリース） 対応
 * [IsLIndexTriggerDown](#IsLIndexTriggerDown) : 
 * [IsRHandTriggerDown](#IsRHandTriggerDown) : 
 * [IsRIndexTriggerDown](#IsRIndexTriggerDown) : 
-* [L](#L) : 
+* [L](#L) : 左手側の Oculus Touch コントローラーの動きに連動する GameObject を指定
 * [LHandTrigger](#LHandTrigger) : 
 * [LIndexTrigger](#LIndexTrigger) : 
 * [LThumbstickRotate](#LThumbstickRotate) : 
-* [R](#R) : 
+* [R](#R) : 右手側の Oculus Touch コントローラーの動きに連動する GameObject を指定
+* [LHandTrigger](#LHandTrigger) : 
 * [RHandTrigger](#RHandTrigger) : 
 * [RIndexTrigger](#RIndexTrigger) : 
 * [RThumbstickRotate](#RThumbstickRotate) : 
