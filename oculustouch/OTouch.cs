@@ -1,5 +1,5 @@
 ﻿/***************************************************************************
- * OTouch.cs (ver.2019-09-12T07:42) alpha1
+ * OTouch alpha1(ver.2019-09-13T18:41)
  * © 2019 夢寐郎
  ***************************************************************************/
 using System.Collections;
@@ -243,17 +243,22 @@ public class OTouch : MonoBehaviour {
      * OculucTouch.Update()
      *****************************************************************************/
     void Update() {
-        //位置
-        Vector3 _oculusTouchPosL = _leftHandAnchor.transform.position;
-        Vector3 _oculusTouchPosR = _rightHandAnchor.transform.position;
-        _oculusTouchL.transform.position = _oculusTouchPosL;
-        _oculusTouchR.transform.position = _oculusTouchPosR;
-
-        //角度
-        Quaternion _oculusTouchRotationL = _leftHandAnchor.transform.rotation;
-        Quaternion _oculusTouchRotationR = _rightHandAnchor.transform.rotation;
-        _oculusTouchL.transform.rotation = _oculusTouchRotationL;
-        _oculusTouchR.transform.rotation = _oculusTouchRotationR;
+        if (_oculusTouchL != null) { //左側
+            //位置
+            Vector3 _oculusTouchPosL = _leftHandAnchor.transform.position;
+            _oculusTouchL.transform.position = _oculusTouchPosL;
+            //角度
+            Quaternion _oculusTouchRotationL = _leftHandAnchor.transform.rotation;
+            _oculusTouchL.transform.rotation = _oculusTouchRotationL;
+        }
+        if (_oculusTouchR != null) { //右側
+            //位置
+            Vector3 _oculusTouchPosR = _rightHandAnchor.transform.position;
+            _oculusTouchR.transform.position = _oculusTouchPosR;
+            //角度
+            Quaternion _oculusTouchRotationR = _rightHandAnchor.transform.rotation;
+            _oculusTouchR.transform.rotation = _oculusTouchRotationR;
+        }
 
         //===========================
         // イベントハンドラの呼出し
