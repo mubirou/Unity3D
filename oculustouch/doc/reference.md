@@ -73,7 +73,7 @@ Version Alpha1（2019年09月12日リリース） 対応
 * [LIndexTriggerDown](#LIndexTriggerDown) : 「左人差し指トリガーを押した時」のイベントハンドラの登録や削除
 * [LIndexTriggerRawNearTouch](#) : 
 * [LIndexTriggerRawTouch](#) : 
-* [LIndexTriggerUp](#) : 
+* [LIndexTriggerUp](#LIndexTriggerUp) : 「左人差し指トリガーを押した後、離した時」のイベントハンドラの登録や削除
 * [LLaserDown](#) : 
 * [LLaserOut](#) : 
 * [LLaserOver](#) : 
@@ -95,7 +95,7 @@ Version Alpha1（2019年09月12日リリース） 対応
 * [RIndexTriggerDown](#RIndexTriggerDown) : 「右人差し指トリガーを押した時」のイベントハンドラの登録や削除
 * [RIndexTriggerRawNearTouch](#) : 
 * [RIndexTriggerRawTouch](#) : 
-* [RIndexTriggerUp](#) : 
+* [RIndexTriggerUp](#RIndexTriggerUp) : 「右人差し指トリガーを押した後、離した時」のイベントハンドラの登録や削除
 * [RLaserDown](#) : 
 * [RLaserOut](#) : 
 * [RLaserOver](#) : 
@@ -171,7 +171,7 @@ public class GameManager : MonoBehaviour {
     }
 
     private void LIndexTriggerDownHandler() { //イベントハンドラ
-        //ここに左人差し指トリガーを押した時の処理を記述
+        //ここに「左人差し指トリガーを押した時」の処理を記述
     }
 }
 ```
@@ -231,7 +231,7 @@ public class GameManager : MonoBehaviour {
     }
 
     private void RIndexTriggerDownHandler() { //イベントハンドラ
-        //ここに右人差し指トリガーを押した時の処理を記述
+        //ここに「右人差し指トリガーを押した時」の処理を記述
     }
 }
 ```
@@ -239,6 +239,43 @@ public class GameManager : MonoBehaviour {
 ### ◆参照
 [OTouch.LIndexTriggerDown](#LIndexTriggerDown)  
 [OTouch.RIndexTriggerUp](#RIndexTriggerUp)  
+
+***
+
+<a name="RIndexTriggerUp"></a>
+
+# OTouch.RIndexTriggerUp
+
+### ◆構文
+<em>otouch</em>.RIndexTriggerUp += <em>SomeMethodHandler</em>  
+<em>otouch</em>.RIndexTriggerUp -= <em>SomeMethodHandler</em>
+
+### ◆説明
+「右人差し指トリガーを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◆例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.R = GameObject.Find("OculusTouchR");
+        _otouch.RIndexTriggerUp += RIndexTriggerUpHandler; // イベントハンドラの登録
+    }
+
+    private void RIndexTriggerUpHandler() { // イベントハンドラ
+        //ここに「右人差し指トリガーを押した後、離した時」の処理を記述
+    }
+}
+```
+
+### ◆参照
+[OTouch.LIndexTriggerUp](#LIndexTriggerUp)  
+[OTouch.RIndexTriggerDown](#RIndexTriggerDown)  
 
 ***
 
