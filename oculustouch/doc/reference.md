@@ -4,7 +4,7 @@ Version Alpha1（2019年09月13日リリース） 対応
 
 ***
 
-# 準備
+# OTouch の準備
 1. [開発環境](https://github.com/mubirou/Unity3D/tree/master/oculustouch)を準備する
 （Windows、macOS は動作未確認）
 1. GameManager オブジェクトの作成  
