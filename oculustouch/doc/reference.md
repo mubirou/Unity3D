@@ -45,7 +45,7 @@ Version Alpha1（2019年09月13日リリース） 対応
 
 ## ◇コンソールの準備
 * 概要
-    * Unity Editor の Console 的なものを VR 上に表示させます
+    * Unity Editor の Console 的なものを VR 上に表示させます（デバッグ用）
     * Unity Editor の Console に出力する "Debug.Log()" の代わりに "Console.Log()" コマンドを使います
 1. パッケージ（[Console.unitypackage](https://github.com/mubirou/Unity3D/blob/master/oculustouch/Console.unitypackage)）を [Download]
 1. Unity Editor の [Assets]-[Import]-[Custom Package] から上記の Console.unitypackage を選択
