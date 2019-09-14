@@ -69,7 +69,7 @@ Version Alpha1（2019年09月13日リリース） 対応
         }
 
         private void RIndexTriggerUpHandler() {
-            _console.Log("右人差し指トリガー↓");
+            _console.Log("右人差し指トリガー↓"); //コンソールに文字列を表示する
         }
     }
     ```
