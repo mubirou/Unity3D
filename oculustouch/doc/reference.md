@@ -2,7 +2,7 @@
 Version Alpha1（2019年09月13日リリース） 対応  
 © 2019 夢寐郎
 
-# 入門
+# 準備
 1. [開発環境](https://github.com/mubirou/Unity3D/tree/master/oculustouch)を準備する
 （Windows、macOS は動作未確認）
 1. GameManager オブジェクトの作成  
@@ -39,6 +39,11 @@ Version Alpha1（2019年09月13日リリース） 対応
 	[AddComponent](https://docs.unity3d.com/ja/current/ScriptReference/GameObject.AddComponent.html)  
 	[GameObject.Find()](https://docs.unity3d.com/ja/current/ScriptReference/GameObject.Find.html)
 
+# コンソールの利用
+* 概要
+    * Unity Editor の Console 的なものを VR 上に表示させます
+    * Unity Editor の Console に出力する "Debug.Log()" の代わりに "Console.Log()" コマンドを使います
+1. パッケージ（[Console.unitypackage]）の読込み
 
 # メソッド一覧
 * [AddTargetObjects()](#AddTargetObjects) : 
