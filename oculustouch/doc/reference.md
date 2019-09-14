@@ -2,6 +2,8 @@
 Version Alpha1（2019年09月13日リリース） 対応  
 © 2019 夢寐郎
 
+***
+
 # 準備
 1. [開発環境](https://github.com/mubirou/Unity3D/tree/master/oculustouch)を準備する
 （Windows、macOS は動作未確認）
@@ -38,6 +40,8 @@ Version Alpha1（2019年09月13日リリース） 対応
 	[GetComponent](https://docs.unity3d.com/ja/current/ScriptReference/GameObject.GetComponent.html)  
 	[AddComponent](https://docs.unity3d.com/ja/current/ScriptReference/GameObject.AddComponent.html)  
 	[GameObject.Find()](https://docs.unity3d.com/ja/current/ScriptReference/GameObject.Find.html)
+
+***
 
 # コンソールの準備
 * 概要
