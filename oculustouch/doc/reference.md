@@ -59,7 +59,7 @@ Version Alpha1（2019年09月13日リリース） 対応
 * [RemoveTargetObjects()](#RemoveTargetObjects) : 
 
 
-## ◆プロパティ
+## ◆プロパティ一覧
 * [IsLHandTriggerDown](#IsLHandTriggerDown) : 
 * [IsLIndexTriggerDown](#IsLIndexTriggerDown) : 
 * [IsRHandTriggerDown](#IsRHandTriggerDown) : 
@@ -76,7 +76,7 @@ Version Alpha1（2019年09月13日リリース） 対応
 * [TargetObjects](#TargetObjects) : 
 
 
-## ◆イベント
+## ◆イベント一覧
 * [ADown](#) : 
 * [ARawTouch](#) : 
 * [AUp](#) : 
