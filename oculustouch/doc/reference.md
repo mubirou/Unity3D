@@ -39,11 +39,16 @@ Version Alpha1（2019年09月13日リリース） 対応
 	[AddComponent](https://docs.unity3d.com/ja/current/ScriptReference/GameObject.AddComponent.html)  
 	[GameObject.Find()](https://docs.unity3d.com/ja/current/ScriptReference/GameObject.Find.html)
 
-# コンソールの利用
+# コンソールの準備
 * 概要
     * Unity Editor の Console 的なものを VR 上に表示させます
     * Unity Editor の Console に出力する "Debug.Log()" の代わりに "Console.Log()" コマンドを使います
-1. パッケージ（[Console.unitypackage]）の読込み
+1. パッケージ（[Console.unitypackage](https://github.com/mubirou/Unity3D/blob/master/oculustouch/Console.unitypackage)）を [Download]
+1. Unity Editor の [Assets]-[Import]-[Custom Package] から上記の Console.unitypackage を選択
+1. [Project]-[Assets]-[Console（Prefab Asset）] を左手側の Oculus Touch コントローラーの動きに連動する GameObject の入れ子にする
+1. Console（Prefab Asset）を入れ子にした GameObject を Prefab 化
+
+***
 
 # メソッド一覧
 * [AddTargetObjects()](#AddTargetObjects) : 
