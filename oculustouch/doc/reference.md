@@ -54,12 +54,12 @@ Version Alpha1（2019年09月13日リリース） 対応
 
 ***
 
-## メソッド一覧
+## ◆メソッド一覧
 * [AddTargetObjects()](#AddTargetObjects) : 
 * [RemoveTargetObjects()](#RemoveTargetObjects) : 
 
 
-## プロパティ
+## ◆プロパティ
 * [IsLHandTriggerDown](#IsLHandTriggerDown) : 
 * [IsLIndexTriggerDown](#IsLIndexTriggerDown) : 
 * [IsRHandTriggerDown](#IsRHandTriggerDown) : 
@@ -76,7 +76,7 @@ Version Alpha1（2019年09月13日リリース） 対応
 * [TargetObjects](#TargetObjects) : 
 
 
-## イベント
+## ◆イベント
 * [ADown](#) : 
 * [ARawTouch](#) : 
 * [AUp](#) : 
