@@ -68,8 +68,8 @@ Version Alpha1（2019年09月13日リリース） 対応
             _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
         }
 
-        private void RIndexTriggerUpHandler() {
-            _console.Log("右人差し指トリガー↓"); //コンソールに文字列を表示する
+        private void LIndexTriggerDownHandler() {
+            _console.Log("右人差し指トリガー↓");
         }
     }
     ```
