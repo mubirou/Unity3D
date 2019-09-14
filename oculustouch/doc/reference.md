@@ -4,7 +4,7 @@ Version Alpha1（2019年09月13日リリース） 対応
 
 ***
 
-# OTouch の準備
+## OTouch の準備
 1. [開発環境](https://github.com/mubirou/Unity3D/tree/master/oculustouch)を準備する
 （Windows、macOS は動作未確認）
 1. GameManager オブジェクトの作成  
@@ -43,7 +43,7 @@ Version Alpha1（2019年09月13日リリース） 対応
 
 ***
 
-# コンソールの準備
+## コンソールの準備
 * 概要
     * Unity Editor の Console 的なものを VR 上に表示させます
     * Unity Editor の Console に出力する "Debug.Log()" の代わりに "Console.Log()" コマンドを使います
@@ -54,12 +54,12 @@ Version Alpha1（2019年09月13日リリース） 対応
 
 ***
 
-# メソッド一覧
+## メソッド一覧
 * [AddTargetObjects()](#AddTargetObjects) : 
 * [RemoveTargetObjects()](#RemoveTargetObjects) : 
 
 
-# プロパティ
+## プロパティ
 * [IsLHandTriggerDown](#IsLHandTriggerDown) : 
 * [IsLIndexTriggerDown](#IsLIndexTriggerDown) : 
 * [IsRHandTriggerDown](#IsRHandTriggerDown) : 
@@ -76,7 +76,7 @@ Version Alpha1（2019年09月13日リリース） 対応
 * [TargetObjects](#TargetObjects) : 
 
 
-# イベント
+## イベント
 * [ADown](#) : 
 * [ARawTouch](#) : 
 * [AUp](#) : 
