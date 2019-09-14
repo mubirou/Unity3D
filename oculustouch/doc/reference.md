@@ -49,17 +49,38 @@ Version Alpha1（2019年09月13日リリース） 対応
     * Unity Editor の Console に出力する "Debug.Log()" の代わりに "Console.Log()" コマンドを使います
 1. パッケージ（[Console.unitypackage](https://github.com/mubirou/Unity3D/blob/master/oculustouch/Console.unitypackage)）を [Download]
 1. Unity Editor の [Assets]-[Import]-[Custom Package] から上記の Console.unitypackage を選択
-1. [Project]-[Assets]-[Console（Prefab Asset）] を左手側の Oculus Touch コントローラーの動きに連動する GameObject の入れ子にする
+1. [Project]-[Assets]-[Console（Prefab Asset）] を左手側の Oculus Touch コントローラー（左手側）の動きに連動する GameObject の入れ子にして、位置を微調整する
 1. Console（Prefab Asset）を入れ子にした GameObject を Prefab 化
+1. サンプルコード
+    ```
+    //GameManager.cs
+    using UnityEngine;
 
+    public class GameManager : MonoBehaviour {
+        private Console _console;
+
+        void Start() {
+            OTouch _otouch = GetComponent<OTouch>();
+            _otouch.L = GameObject.Find("OculusTouchL");
+            _otouch.LIndexTriggerDown += LIndexTriggerDownHandler;
+
+            //入れ子状態のConsoleをさがす
+            _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
+        }
+
+        private void RIndexTriggerUpHandler() {
+            _console.Log("右人差し指トリガー↓");
+        }
+    }
+    ```
 ***
 
-## ◆メソッド一覧
+## ◆ OTouch クラスのメソッド一覧
 * [AddTargetObjects()](#AddTargetObjects) : 
 * [RemoveTargetObjects()](#RemoveTargetObjects) : 
 
 
-## ◆プロパティ一覧
+## ◆ OTouch クラスのプロパティ一覧
 * [IsLHandTriggerDown](#IsLHandTriggerDown) : 
 * [IsLIndexTriggerDown](#IsLIndexTriggerDown) : 
 * [IsRHandTriggerDown](#IsRHandTriggerDown) : 
@@ -76,7 +97,7 @@ Version Alpha1（2019年09月13日リリース） 対応
 * [TargetObjects](#TargetObjects) : 
 
 
-## ◆イベント一覧
+## ◆ OTouch クラスのイベント一覧
 * [ADown](#) : 
 * [ARawTouch](#) : 
 * [AUp](#) : 
