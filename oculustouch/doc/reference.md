@@ -196,9 +196,23 @@ _otouch.L = GameObject.Find("OculusTouchL");
 ### ◆例文
 ```
 //GameManager.cs
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.LHandTriggerDown += LHandTriggerDownHandler; // イベントハンドラの登録
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    private void LHandTriggerDownHandler() { // イベントハンドラ
+        //ここに「左中指トリガーを押した時」の処理を記述
+        _console.Log("左中指トリガー↓"); //DEBUG用
+    }
+}
 ```
 
 ### ◆参照
@@ -229,11 +243,11 @@ public class GameManager : MonoBehaviour {
     void Start() {
         OTouch _otouch = GetComponent<OTouch>();
         _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.LHandTriggerUp += RHandTriggerUpHandler; // イベントハンドラの登録
+        _otouch.LHandTriggerUp += LHandTriggerUpHandler; // イベントハンドラの登録
         _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
-    private void RHandTriggerUpHandler() { // イベントハンドラ
+    private void LHandTriggerUpHandler() { // イベントハンドラ
         //ここに「左中指トリガーを押した後、離した時」の処理を記述
         _console.Log("左中指トリガー↑"); //DEBUG用
     }
