@@ -196,12 +196,39 @@ _otouch.L = GameObject.Find("OculusTouchL");
 ### ◆例文
 ```
 //GameManager.cs
-
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
 ### ◆参照
 [OTouch.RHandTriggerDown](#RHandTriggerDown)  
 [OTouch.LHandTriggerUp](#LHandTriggerUp)  
+
+***
+
+<a name="LHandTriggerUp"></a>
+
+# OTouch.LHandTriggerUp
+
+### ◆構文
+<em>otouch</em>.LHandTriggerUp += <em>SomeMethodHandler</em>  
+<em>otouch</em>.LHandTriggerUp -= <em>SomeMethodHandler</em>
+
+### ◆説明
+「左中指トリガーを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◆例文
+```
+//GameManager.cs
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+```
+
+### ◆参照
+[OTouch.RHandTriggerUp](#RHandTriggerUp)  
+[OTouch.LHandTriggerDown](#LHandTriggerDown)  
 
 ***
 
@@ -305,6 +332,55 @@ _otouch.R = GameObject.Find("OculusTouchR");
 
 ***
 
+<a name="RHandTriggerDown"></a>
+
+# OTouch.RHandTriggerDown
+
+### ◆構文
+<em>otouch</em>.RHandTriggerDown += <em>SomeMethodHandler</em>  
+<em>otouch</em>.RHandTriggerDown -= <em>SomeMethodHandler</em>
+
+### ◆説明
+「右中指トリガーを押した時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◆例文
+```
+//GameManager.cs
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+```
+
+### ◆参照
+[OTouch.LHandTriggerDown](#LHandTriggerDown)  
+[OTouch.RHandTriggerUp](#RHandTriggerUp)  
+
+***
+
+<a name="RHandTriggerUp"></a>
+
+# OTouch.RHandTriggerUp
+
+### ◆構文
+<em>otouch</em>.RHandTriggerUp += <em>SomeMethodHandler</em>  
+<em>otouch</em>.RHandTriggerUp -= <em>SomeMethodHandler</em>
+
+### ◆説明
+「右中指トリガーを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◆例文
+```
+//GameManager.cs
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+```
+
+### ◆参照
+[OTouch.LHandTriggerUp](#LHandTriggerUp)  
+[OTouch.RHandTriggerDown](#RHandTriggerDown)  
+
+***
 
 <a name="RIndexTriggerDown"></a>
 
