@@ -68,7 +68,7 @@ Version Alpha1（2019年09月13日リリース） 対応
         }
 
         private void LIndexTriggerDownHandler() {
-            _console.Log("右人差し指用トリガー↓");
+            _console.Log("右人差し指トリガー↓");
         }
     }
     ```
@@ -105,12 +105,12 @@ Version Alpha1（2019年09月13日リリース） 対応
 * [BDown](#) : 
 * [BRawTouch](#) : 
 * [BUp](#) : 
-* [LHandTriggerDown](#) : 
-* [LHandTriggerUp](#) : 
-* [LIndexTriggerDown](#LIndexTriggerDown) : 「右人差し指用トリガーを押した時」のイベントハンドラの登録や削除
+* [LHandTriggerDown](#LHandTriggerDown) : 「左中指トリガーを押した時」のイベントハンドラの登録や削除
+* [LHandTriggerUp](#LHandTriggerUp) : 「左中指トリガーを押した後、離した時」のイベントハンドラの登録や削除
+* [LIndexTriggerDown](#LIndexTriggerDown) : 「左人差し指トリガーを押した時」のイベントハンドラの登録や削除
 * [LIndexTriggerRawNearTouch](#) : 
 * [LIndexTriggerRawTouch](#) : 
-* [LIndexTriggerUp](#LIndexTriggerUp) : 「右人差し指用トリガーを押した後、離した時」のイベントハンドラの登録や削除
+* [LIndexTriggerUp](#LIndexTriggerUp) : 「左人差し指トリガーを押した後、離した時」のイベントハンドラの登録や削除
 * [LLaserDown](#) : 
 * [LLaserOut](#) : 
 * [LLaserOver](#) : 
@@ -127,12 +127,12 @@ Version Alpha1（2019年09月13日リリース） 対応
 * [LThumbstickUp](#) : 
 * [LThumbstickUpUp](#) : 
 * [LThumbstickUpDown](#) : 
-* [RHandTriggerDown](#) : 
-* [RHandTriggerUp](#) : 
-* [RIndexTriggerDown](#RIndexTriggerDown) : 「右人差し指用トリガーを押した時」のイベントハンドラの登録や削除
+* [RHandTriggerDown](#RHandTriggerDown) : 「右中指トリガーを押した時」のイベントハンドラの登録や削除
+* [RHandTriggerUp](#RHandTriggerUp) : 「右中指トリガーを押した後、離した時」のイベントハンドラの登録や削除
+* [RIndexTriggerDown](#RIndexTriggerDown) : 「右人差し指トリガーを押した時」のイベントハンドラの登録や削除
 * [RIndexTriggerRawNearTouch](#) : 
 * [RIndexTriggerRawTouch](#) : 
-* [RIndexTriggerUp](#RIndexTriggerUp) : 「右人差し指用トリガーを押した後、離した時」のイベントハンドラの登録や削除
+* [RIndexTriggerUp](#RIndexTriggerUp) : 「右人差し指トリガーを押した後、離した時」のイベントハンドラの登録や削除
 * [RLaserDown](#) : 
 * [RLaserOut](#) : 
 * [RLaserOver](#) : 
@@ -182,6 +182,29 @@ _otouch.L = GameObject.Find("OculusTouchL");
 
 ***
 
+<a name="LHandTriggerDown"></a>
+
+# OTouch.LHandTriggerDown
+
+### ◆構文
+<em>otouch</em>.LHandTriggerDown += <em>SomeMethodHandler</em>  
+<em>otouch</em>.LHandTriggerDown -= <em>SomeMethodHandler</em>
+
+### ◆説明
+「左中指トリガーを押した時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◆例文
+```
+//GameManager.cs
+
+```
+
+### ◆参照
+[OTouch.RHandTriggerDown](#RHandTriggerDown)  
+[OTouch.LHandTriggerUp](#LHandTriggerUp)  
+
+***
+
 <a name="LIndexTriggerDown"></a>
 
 # OTouch.LIndexTriggerDown
@@ -191,7 +214,7 @@ _otouch.L = GameObject.Find("OculusTouchL");
 <em>otouch</em>.LIndexTriggerDown -= <em>SomeMethodHandler</em>
 
 ### ◆説明
-「右人差し指用トリガーを押した時」のイベントハンドラの登録や削除を行うことができます。
+「左人差し指トリガーを押した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◆例文
 ```
@@ -209,8 +232,8 @@ public class GameManager : MonoBehaviour {
     }
 
     private void LIndexTriggerDownHandler() { //イベントハンドラ
-        //ここに「右人差し指用トリガーを押した時」の処理を記述
-        _console.Log("右人差し指用トリガー↓"); //DEBUG用
+        //ここに「左人差し指トリガーを押した時」の処理を記述
+        _console.Log("左人差し指トリガー↓"); //DEBUG用
     }
 }
 ```
@@ -230,7 +253,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.LIndexTriggerUp -= <em>SomeMethodHandler</em>
 
 ### ◆説明
-「右人差し指用トリガーを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
+「左人差し指トリガーを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◆例文
 ```
@@ -248,8 +271,8 @@ public class GameManager : MonoBehaviour {
     }
 
     private void LIndexTriggerUpHandler() { // イベントハンドラ
-        //ここに「右人差し指用トリガーを押した後、離した時」の処理を記述
-        _console.Log("右人差し指用トリガー↑"); //DEBUG用
+        //ここに「左人差し指トリガーを押した後、離した時」の処理を記述
+        _console.Log("右人差し指トリガー↑"); //DEBUG用
     }
 }
 ```
@@ -292,7 +315,7 @@ _otouch.R = GameObject.Find("OculusTouchR");
 <em>otouch</em>.RIndexTriggerDown -= <em>SomeMethodHandler</em>
 
 ### ◆説明
-「右人差し指用トリガーを押した時」のイベントハンドラの登録や削除を行うことができます。
+「右人差し指トリガーを押した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◆例文
 ```
@@ -311,8 +334,8 @@ public class GameManager : MonoBehaviour {
     }
 
     private void RIndexTriggerDownHandler() { // イベントハンドラ
-        //ここに「右人差し指用トリガーを押した時」の処理を記述
-        _console.Log("右人差し指用トリガー↓"); //DEBUG用
+        //ここに「右人差し指トリガーを押した時」の処理を記述
+        _console.Log("右人差し指トリガー↓"); //DEBUG用
     }
 }
 ```
@@ -332,7 +355,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.RIndexTriggerUp -= <em>SomeMethodHandler</em>
 
 ### ◆説明
-「右人差し指用トリガーを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
+「右人差し指トリガーを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◆例文
 ```
@@ -351,8 +374,8 @@ public class GameManager : MonoBehaviour {
     }
 
     private void RIndexTriggerUpHandler() { // イベントハンドラ
-        //ここに「右人差し指用トリガーを押した後、離した時」の処理を記述
-        _console.Log("右人差し指用トリガー↑"); //DEBUG用
+        //ここに「右人差し指トリガーを押した後、離した時」の処理を記述
+        _console.Log("右人差し指トリガー↑"); //DEBUG用
     }
 }
 ```
