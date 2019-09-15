@@ -336,15 +336,19 @@ public class GameManager : MonoBehaviour {
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
 
     void Start() {
         OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
         _otouch.R = GameObject.Find("OculusTouchR");
         _otouch.RIndexTriggerUp += RIndexTriggerUpHandler; // イベントハンドラの登録
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void RIndexTriggerUpHandler() { // イベントハンドラ
         //ここに「右人差し指トリガーを押した後、離した時」の処理を記述
+        _console.Log("右人差し指トリガー↑"); //DEBUG用
     }
 }
 ```
