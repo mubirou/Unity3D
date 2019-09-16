@@ -81,8 +81,8 @@ Version Alpha1（2019年09月13日リリース） 対応
 
 
 ## ◆ OTouch クラスのプロパティ一覧
-* [IsLHandTriggerDown](#IsLHandTriggerDown) : 「左人差し指トリガーを押している」か否かを調べる
-* [IsLIndexTriggerDown](#IsLIndexTriggerDown) : 
+* [IsLHandTriggerDown](#IsLHandTriggerDown) : 
+* [IsLIndexTriggerDown](#IsLIndexTriggerDown) : 「左人差し指トリガーを押している」か否かを調べる
 * [IsRHandTriggerDown](#IsRHandTriggerDown) : 
 * [IsRIndexTriggerDown](#IsRIndexTriggerDown) : 
 * [L](#L) : 左手側の Oculus Touch コントローラーの動きに連動する GameObject を指定
@@ -159,12 +159,12 @@ Version Alpha1（2019年09月13日リリース） 対応
 
 ***
 
-<a name="IsLHandTriggerDown"></a>
+<a name="IsLIndexTriggerDown"></a>
 
-# OTouch.IsLHandTriggerDown
+# OTouch.IsLIndexTriggerDown
 
 ### ◆構文
-<em>otouch</em>.IsLHandTriggerDown
+<em>otouch</em>.IsLIndexTriggerDown
 
 ### ◆説明
 プロパティ。
@@ -187,14 +187,14 @@ public class GameManager : MonoBehaviour {
 
     void Update() {
         if (_otouch.IsLIndexTriggerDown) {
-            _console.Log("左中指トリガー↓"); //DEBUG用
+            _console.Log("左人差し指トリガー↓"); //DEBUG用
         }
     }
 }
 ```
 
 ### ◆参照
-[OTouch.IsRHandTriggerDown](#IsRHandTriggerDown)  
+[OTouch.IsRIndexTriggerDown](#IsRIndexTriggerDown)  
 [OTouch.LIndexTriggerDown](#LIndexTriggerDown)  
 
 ***
