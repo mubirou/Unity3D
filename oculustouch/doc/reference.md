@@ -6,7 +6,6 @@ Version Alpha1（2019年09月13日リリース） 対応
 
 ## ◇OTouch の準備（必須）
 1. [開発環境](https://github.com/mubirou/Unity3D/tree/master/oculustouch)を準備する
-（Windows、macOS は動作未確認）
 1. GameManager オブジェクトの作成  
 	1. [GameObject]-[Create Empty] を選択（空の GameObject の作成）
 	1. 名前を "GameObject"→"GameManager" に変更  
