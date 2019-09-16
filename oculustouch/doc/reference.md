@@ -81,7 +81,7 @@ Version Alpha1（2019年09月13日リリース） 対応
 
 
 ## ◆ OTouch クラスのプロパティ一覧
-* [IsLHandTriggerDown](#IsLHandTriggerDown) : 
+* [IsLHandTriggerDown](#IsLHandTriggerDown) : 「左人差し指トリガーを押している」か否かを調べる
 * [IsLIndexTriggerDown](#IsLIndexTriggerDown) : 
 * [IsRHandTriggerDown](#IsRHandTriggerDown) : 
 * [IsRIndexTriggerDown](#IsRIndexTriggerDown) : 
@@ -156,6 +156,46 @@ Version Alpha1（2019年09月13日リリース） 対応
 * [YDown](#) : 
 * [YRawTouch](#) : 
 * [YUp](#) : 
+
+***
+
+<a name="IsLHandTriggerDown"></a>
+
+# OTouch.IsLHandTriggerDown
+
+### ◆構文
+<em>otouch</em>.IsLHandTriggerDown
+
+### ◆説明
+プロパティ。
+「左人差し指トリガーを押している」か否かを示すブール値（読み取り専用）。
+
+### ◆例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private OTouch _otouch;
+    private Console _console; //DEBUG用
+
+    void Start() {
+        _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    void Update() {
+        if (_otouch.IsLIndexTriggerDown) {
+            _console.Log("左中指トリガー↓"); //DEBUG用
+        }
+    }
+}
+```
+
+### ◆参照
+[OTouch.IsRHandTriggerDown](#IsRHandTriggerDown)  
+[OTouch.LIndexTriggerDown](#LIndexTriggerDown)  
 
 ***
 
