@@ -74,8 +74,8 @@ Version Alpha1.201909171011 対応
 * [RThumbstickUp](#RThumbstickUp) : 
 * [RThumbstickUpUp](#RThumbstickUpUp) : 
 * [RThumbstickUpDown](#RThumbstickUpDown) : 
-* [StartDown](#StartDown) : 
-* [StartUp](#StartUp) : 
+* [StartDown](#StartDown) : 「スタートボタン（Xボタンの下）を押した時」のイベントハンドラの登録や削除
+* [StartUp](#StartUp) : 「スタートボタン（Xボタンの下）を押した後、離した時」のイベントハンドラの登録や削除
 * [XDown](#XDown) : 「Xボタンを押した時」のイベントハンドラの登録や削除
 * [XRawTouch](#XRawTouch) : 「Xボタンに触れた時」のイベントハンドラの登録や削除
 * [XUp](#XUp) : 「Xボタンを押した後、離した時」のイベントハンドラの登録や削除
@@ -1032,6 +1032,82 @@ public class GameManager : MonoBehaviour {
 ### ◇ 参照
 [OTouch.LIndexTriggerUp](#LIndexTriggerUp)  
 [OTouch.RIndexTriggerDown](#RIndexTriggerDown)  
+
+***
+
+<a name="StartDown"></a>
+
+# OTouch.StartDown
+
+### ◇ 構文
+<em>otouch</em>.StartDown += <em>SomeMethodHandler</em>  
+<em>otouch</em>.StartDown -= <em>SomeMethodHandler</em>
+
+### ◇ 説明
+「メニューボタン（Xボタンの下）を押した時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.StartDown += StartDownHandler; // イベントハンドラの登録
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    private void StartDownHandler() { // イベントハンドラ
+        //ここに「メニューボタンを押した時」の処理を記述
+        _console.Log("メニューボタン↓"); //DEBUG用
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.StartUp](#StartUp)  
+
+***
+
+<a name="StartUp"></a>
+
+# OTouch.StartUp
+
+### ◇ 構文
+<em>otouch</em>.StartUp += <em>SomeMethodHandler</em>  
+<em>otouch</em>.StartUp -= <em>SomeMethodHandler</em>
+
+### ◇ 説明
+「メニューボタン（Xボタンの下）を押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.StartUp += StartUpHandler; // イベントハンドラの登録
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    private void StartUpHandler() { // イベントハンドラ
+        //ここに「メニューボタンを押した後、離した時」の処理を記述
+        _console.Log("メニューボタン↑"); //DEBUG用
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.StartDown](#StartDown)  
 
 ***
 
