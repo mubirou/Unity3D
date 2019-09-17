@@ -94,6 +94,7 @@ Version Alpha1.201909171011 対応
 <em>otouch</em>.ADown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
+イベント。
 「Aボタンを押した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
@@ -134,6 +135,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.ARawTouch -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
+イベント。
 「Aボタンに触れた時」（触れている間ではなく、最初に触れた瞬間）のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
@@ -174,6 +176,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.AUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
+イベント。
 「Aボタンを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
@@ -214,6 +217,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.BDown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
+イベント。
 「Bボタンを押した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
@@ -254,6 +258,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.BRawTouch -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
+イベント。
 「Bボタンに触れた時」（触れている間ではなく、最初に触れた瞬間）のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
@@ -294,6 +299,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.BUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
+イベント。
 「Bボタンを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
@@ -562,6 +568,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.LHandTriggerDown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
+イベント。
 「左中指トリガーを押した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
@@ -602,6 +609,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.LHandTriggerUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
+イベント。
 「左中指トリガーを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
@@ -683,6 +691,7 @@ public class GameManager : MonoBehaviour{
 <em>otouch</em>.LIndexTriggerDown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
+イベント。
 「左人差し指トリガーを押した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
@@ -723,6 +732,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.LIndexTriggerUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
+イベント。
 「左人差し指トリガーを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
@@ -826,6 +836,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.RHandTriggerDown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
+イベント。
 「右中指トリガーを押した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
@@ -867,6 +878,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.RHandTriggerUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
+イベント。
 「右中指トリガーを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
@@ -949,6 +961,7 @@ public class GameManager : MonoBehaviour{
 <em>otouch</em>.RIndexTriggerDown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
+イベント。
 「右人差し指トリガーを押した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
@@ -990,6 +1003,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.RIndexTriggerUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
+イベント。
 「右人差し指トリガーを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
