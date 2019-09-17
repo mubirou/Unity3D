@@ -2,7 +2,7 @@
 Version Alpha 1.201909170944 対応  
 © 2019 夢寐郎
 
-## ◇OTouch の準備（必須）
+## ◆OTouch の準備（必須）
 1. [開発環境](https://github.com/mubirou/Unity3D/tree/master/oculustouch)を準備する
 1. GameManager オブジェクトの作成  
 	1. [GameObject]-[Create Empty] を選択（空の GameObject の作成）
@@ -38,7 +38,7 @@ Version Alpha 1.201909170944 対応
 	[GameObject.Find()](https://docs.unity3d.com/ja/current/ScriptReference/GameObject.Find.html)
 
 
-## ◇コンソールの準備（推奨）
+## ◆コンソールの準備（推奨）
 * 概要
     * Unity Editor の Console 的なものを VR 上に表示させます（デバッグ用）
     * Unity Editor の Console に出力する "Debug.Log()" の代わりに "Console.Log()" コマンドを使います
