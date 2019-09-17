@@ -270,6 +270,47 @@ _otouch.L = GameObject.Find("OculusTouchL");
 
 ***
 
+<a name="LHandTrigger"></a>
+
+# OTouch.LHandTrigger
+
+### ◇ 構文
+<em>otouch</em>.LHandTrigger
+
+### ◇ 説明
+プロパティ。
+「左中指トリガーを押しているトリガー量」（0〜1 まで小数点以下15桁で表示）。読み取り専用。
+0〜100までの整数値を求める場合、Math.Round((<em>otouch</em>.LHandTrigger*100)) とします。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private OTouch _otouch;
+    private Console _console; //DEBUG用
+
+    void Start() {
+        _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    void Update() {
+        if (_otouch.IsLHandTriggerDown ) {
+            _console.Log(_otouch.LHandTrigger.ToString());
+        }
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.RHandTrigger](#RHandTrigger)  
+[OTouch.IsLHandTriggerDown](#IsLHandTriggerDown)  
+
+***
+
 <a name="LHandTriggerDown"></a>
 
 # OTouch.LHandTriggerDown
