@@ -1,5 +1,5 @@
 # OTouch スタート
-Version Alpha 1.201909170944 対応  
+Version Alpha 1.201909171011 対応  
 © 2019 夢寐郎
 
 ## ◆OTouch の準備（必須）

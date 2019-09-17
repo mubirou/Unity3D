@@ -1,5 +1,5 @@
 ﻿/***************************************************************************
- * OTouch alpha 1.201909170944
+ * OTouch Alpha1.201909171011
  * © 2019 夢寐郎
  ***************************************************************************/
 using System.Collections;
@@ -267,12 +267,10 @@ public class OTouch : MonoBehaviour {
         if (OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger)) {
             _isLIndexTriggerDown = true;
             _activeController = "left";
-            // _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth1; //09120735
-            // _lineRendererR.startWidth = _lineRendererR.endWidth = _lineWidth2; //09120735
             LIndexTriggerDown();
             if (_enabledLaserL) { //レーザービームを表示している場合
-                _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth1; //09120735
-                _lineRendererR.startWidth = _lineRendererR.endWidth = _lineWidth2; //09120735
+                _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth1;
+                _lineRendererR.startWidth = _lineRendererR.endWidth = _lineWidth2;
                 _isRLaserDown = false; //逆（右）のレーザーの≒MouseDownを解除
                 _hitObjectL = HitTestL(true); //ヒットテスト
                 if (_hitObjectL != null) {
@@ -287,12 +285,10 @@ public class OTouch : MonoBehaviour {
         if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger)) {
             _isRIndexTriggerDown = true;
             _activeController = "right";
-            // _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth2; //09120735
-            // _lineRendererR.startWidth = _lineRendererR.endWidth = _lineWidth1; //09120735
             RIndexTriggerDown();
             if (_enabledLaserR) { //レーザービームを表示している場合
-                _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth2; //09120735
-                _lineRendererR.startWidth = _lineRendererR.endWidth = _lineWidth1; //09120735
+                _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth2;
+                _lineRendererR.startWidth = _lineRendererR.endWidth = _lineWidth1;
                 _isLLaserDown = false; //逆（右）のレーザーの≒MouseDownを解除
                 _hitObjectR = HitTestR(true); //ヒットテスト
                 if (_hitObjectR != null) {
@@ -334,20 +330,20 @@ public class OTouch : MonoBehaviour {
 
         //中指トリガー
         if (OVRInput.GetDown(OVRInput.RawButton.LHandTrigger)) {
-            LHandTriggerDown();
             _isLHandTriggerDown = true;
+            LHandTriggerDown();
         }
         if (OVRInput.GetUp(OVRInput.RawButton.LHandTrigger)) {
-            LHandTriggerUp();
             _isLHandTriggerDown = false;
+            LHandTriggerUp();
         }
         if (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger)) {
-            RHandTriggerDown();
             _isRHandTriggerDown = true;
+            RHandTriggerDown();
         }
         if (OVRInput.GetUp(OVRInput.RawButton.RHandTrigger)) {
-            RHandTriggerUp();
             _isRHandTriggerDown = false;
+            RHandTriggerUp();
         }
         //Aボタン
         if (OVRInput.GetDown(OVRInput.RawButton.A)) ADown();
