@@ -199,6 +199,47 @@ public class GameManager : MonoBehaviour {
 
 ***
 
+<a name="IsRIndexTriggerDown"></a>
+
+# OTouch.IsRIndexTriggerDown
+
+### ◆構文
+<em>otouch</em>.IsRIndexTriggerDown
+
+### ◆説明
+プロパティ。
+「右人差し指トリガーを押している」か否かを示すブール値（読み取り専用）。
+
+### ◆例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private OTouch _otouch;
+    private Console _console; //DEBUG用
+
+    void Start() {
+        _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.R = GameObject.Find("OculusTouchR");
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    void Update() {
+        if (_otouch.IsRIndexTriggerDown) {
+            _console.Log("右中指トリガー↓"); //DEBUG用
+        }
+    }
+}
+```
+
+### ◆参照
+[OTouch.IsLIndexTriggerDown](#IsLIndexTriggerDown)  
+[OTouch.RIndexTriggerDown](#RIndexTriggerDown)  
+
+***
+
 <a name="L"></a>
 
 # OTouch.L
