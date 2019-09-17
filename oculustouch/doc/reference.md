@@ -94,7 +94,7 @@ Version Alpha1.201909171011 対応
 <em>otouch</em>.ADown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
-イベント。
+イベント。  
 「Aボタンを押した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
@@ -135,7 +135,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.ARawTouch -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
-イベント。
+イベント。  
 「Aボタンに触れた時」（触れている間ではなく、最初に触れた瞬間）のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
@@ -176,7 +176,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.AUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
-イベント。
+イベント。  
 「Aボタンを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
@@ -217,7 +217,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.BDown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
-イベント。
+イベント。  
 「Bボタンを押した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
@@ -258,7 +258,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.BRawTouch -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
-イベント。
+イベント。  
 「Bボタンに触れた時」（触れている間ではなく、最初に触れた瞬間）のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
@@ -299,7 +299,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.BUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
-イベント。
+イベント。  
 「Bボタンを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
@@ -339,7 +339,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.IsLHandTriggerDown
 
 ### ◇ 説明
-プロパティ。
+プロパティ。  
 「左中指トリガーを押している」か否かを示すブール値（読み取り専用）。
 
 ### ◇ 例文
@@ -380,7 +380,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.IsLIndexTriggerDown
 
 ### ◇ 説明
-プロパティ。
+プロパティ。  
 「左人差し指トリガーを押している」か否かを示すブール値（読み取り専用）。
 
 ### ◇ 例文
@@ -421,7 +421,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.IsRHandTriggerDown
 
 ### ◇ 説明
-プロパティ。
+プロパティ。  
 「右中指トリガーを押している」か否かを示すブール値（読み取り専用）。
 
 ### ◇ 例文
@@ -463,7 +463,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.IsRIndexTriggerDown
 
 ### ◇ 説明
-プロパティ。
+プロパティ。  
 「右人差し指トリガーを押している」か否かを示すブール値（読み取り専用）。
 
 ### ◇ 例文
@@ -504,7 +504,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.L
 
 ### ◇ 説明
-プロパティ。
+プロパティ。  
 Oculus Touch コントローラー（左手側）の動きに連動する GameObject を指定したり、調べることができます。
 
 ### ◇ 例文
@@ -526,7 +526,7 @@ _otouch.L = GameObject.Find("OculusTouchL");
 <em>otouch</em>.LHandTrigger
 
 ### ◇ 説明
-プロパティ。
+プロパティ。  
 「左中指トリガーを押しているトリガー量」（0〜1 まで小数点以下15桁で表示）。読み取り専用。  
 0〜100までの整数値を求める場合、Math.Round((<em>otouch</em>.LHandTrigger*100)) とします。
 
@@ -568,7 +568,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.LHandTriggerDown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
-イベント。
+イベント。  
 「左中指トリガーを押した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
@@ -609,7 +609,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.LHandTriggerUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
-イベント。
+イベント。  
 「左中指トリガーを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
@@ -648,7 +648,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.LIndexTrigger
 
 ### ◇ 説明
-プロパティ。
+プロパティ。  
 「左人差し指トリガーを押しているトリガー量」（0〜1 まで小数点以下15桁で表示）。読み取り専用。  
 0〜100までの整数値を求める場合、Math.Round((<em>otouch</em>.LIndexTrigger*100)) とします。
 
@@ -691,7 +691,7 @@ public class GameManager : MonoBehaviour{
 <em>otouch</em>.LIndexTriggerDown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
-イベント。
+イベント。  
 「左人差し指トリガーを押した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
@@ -732,7 +732,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.LIndexTriggerUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
-イベント。
+イベント。  
 「左人差し指トリガーを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
@@ -771,7 +771,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.R
 
 ### ◇ 説明
-プロパティ。
+プロパティ。  
 Oculus Touch コントローラー（右手側）の動きに連動する GameObject を指定したり、調べることができます。
 
 ### ◇ 例文
@@ -793,7 +793,7 @@ _otouch.R = GameObject.Find("OculusTouchR");
 <em>otouch</em>.RHandTrigger
 
 ### ◇ 説明
-プロパティ。
+プロパティ。  
 「右中指トリガーを押しているトリガー量」（0〜1 まで小数点以下15桁で表示）。読み取り専用。  
 0〜100までの整数値を求める場合、Math.Round((<em>otouch</em>.RHandTrigger*100)) とします。
 
@@ -836,7 +836,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.RHandTriggerDown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
-イベント。
+イベント。  
 「右中指トリガーを押した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
@@ -878,7 +878,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.RHandTriggerUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
-イベント。
+イベント。  
 「右中指トリガーを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
@@ -918,7 +918,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.RIndexTrigger
 
 ### ◇ 説明
-プロパティ。
+プロパティ。  
 「右人差し指トリガーを押しているトリガー量」（0〜1 まで小数点以下15桁で表示）。読み取り専用。  
 0〜100までの整数値を求める場合、Math.Round((<em>otouch</em>.RIndexTrigger*100)) とします。
 
@@ -961,7 +961,7 @@ public class GameManager : MonoBehaviour{
 <em>otouch</em>.RIndexTriggerDown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
-イベント。
+イベント。  
 「右人差し指トリガーを押した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
@@ -1003,7 +1003,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.RIndexTriggerUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
-イベント。
+イベント。  
 「右人差し指トリガーを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
