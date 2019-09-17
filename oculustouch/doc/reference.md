@@ -25,7 +25,7 @@ Version Alpha1.201909171011 対応
 
 ## ◆ イベント一覧
 * [ADown](#ADown) : 「Aボタンを押した時」のイベントハンドラの登録や削除
-* [ARawTouch](#) : 
+* [ARawTouch](#ARawTouch) : 「Aボタンに触れた時」のイベントハンドラの登録や削除
 * [AUp](#AUp) : 「Aボタンを押した後、離した時」のイベントハンドラの登録や削除
 * [BDown](#) : 
 * [BRawTouch](#) : 
@@ -122,6 +122,46 @@ public class GameManager : MonoBehaviour {
 ### ◇ 参照
 [OTouch.AUp](#AUp)  
 [OTouch.ARawTouch](#ARawTouch)  
+
+***
+
+<a name="ARawTouch"></a>
+
+# OTouch.ARawTouch
+
+### ◇ 構文
+<em>otouch</em>.ARawTouch += <em>SomeMethodHandler</em>  
+<em>otouch</em>.ARawTouch -= <em>SomeMethodHandler</em>
+
+### ◇ 説明
+「Aボタンに触れた時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.R = GameObject.Find("OculusTouchR");
+        _otouch.ARawTouch += ARawTouchHandler; // イベントハンドラの登録
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    private void ARawTouchHandler() { // イベントハンドラ
+        //ここに「Aボタンに触れた時」の処理を記述
+        _console.Log("Aボタンにタッチ"); //DEBUG用
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.ADown](#ADown)  
+[OTouch.AUp](#AUp)  
 
 ***
 
