@@ -306,6 +306,7 @@ public class GameManager : MonoBehaviour {
 ### ◆参照
 [OTouch.RHandTriggerDown](#RHandTriggerDown)  
 [OTouch.LHandTriggerUp](#LHandTriggerUp)  
+[OTouch.IsLHandTriggerDown](#IsLHandTriggerDown)  
 
 ***
 
@@ -384,6 +385,7 @@ public class GameManager : MonoBehaviour {
 ### ◆参照
 [OTouch.RIndexTriggerDown](#RIndexTriggerDown)  
 [OTouch.LIndexTriggerUp](#LIndexTriggerUp)  
+[OTouch.IsLIndexTriggerDown](#IsLIndexTriggerDown)  
 
 ***
 
@@ -485,6 +487,7 @@ public class GameManager : MonoBehaviour {
 ### ◆参照
 [OTouch.LHandTriggerDown](#LHandTriggerDown)  
 [OTouch.RHandTriggerUp](#RHandTriggerUp)  
+[OTouch.IsRHandTriggerDown](#IsRHandTriggerDown)  
 
 ***
 
@@ -565,6 +568,7 @@ public class GameManager : MonoBehaviour {
 ### ◆参照
 [OTouch.LIndexTriggerDown](#LIndexTriggerDown)  
 [OTouch.RIndexTriggerUp](#RIndexTriggerUp)  
+[OTouch.IsRIndexTriggerDown](#IsRIndexTriggerDown)  
 
 ***
 
