@@ -3,9 +3,6 @@
 * [Oculus Quest](https://www.oculus.com/quest/?locale=ja_JP) 付属の左右の Oculus Touch を [C#](https://unity3d.com/jp/learning-c-sharp-in-unity-for-beginners?gq=C%23) で制御するための自作ライブラリ
 * Version Alpha 1.201909171011
 * 開発環境（Windows、macOS は動作未確認）  
-    |カテゴリ|ソフトウェア|リリース|
-    |:--:|:--:|:--:|
-    |OS|Ubuntu 18.04.2 LTS|2019年02月|
 
     |ソフト･ハードウェア|
     |:--|
@@ -14,6 +11,7 @@
     |[Unity Hub](https://forum.unity.com/threads/unity-hub-v2-0-0-release.677485/) 2.1.1 for Linux|
     |[Oculus Integration](https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022) 1.39|
     |[Oculus Quest](https://www.oculus.com/quest/?locale=ja_JP) 8.0|
+
 * [OTouch スタート](https://github.com/mubirou/Unity3D/blob/master/oculustouch/doc/start.md)
 * [OTouch リファレンスマニュアル](https://github.com/mubirou/Unity3D/blob/master/oculustouch/doc/reference.md)
 
