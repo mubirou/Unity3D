@@ -18,7 +18,7 @@ Version Alpha1.201909171011 対応
 * [LThumbstickRotate](#LThumbstickRotate) : 
 * [R](#R) : 右手側の Oculus Touch コントローラーの動きに連動する GameObject を指定
 * [RHandTrigger](#RHandTrigger) : 「右中指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁で表示）
-* [RIndexTrigger](#RIndexTrigger) : 
+* [RIndexTrigger](#RIndexTrigger) : 「右人差し指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁で表示）
 * [RThumbstickRotate](#RThumbstickRotate) : 
 * [TargetObjects](#TargetObjects) : 
 
@@ -409,26 +409,23 @@ public class GameManager : MonoBehaviour {
 //GameManager.cs
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
-{
+public class GameManager : MonoBehaviour{
     private OTouch _otouch;
     private Console _console; //DEBUG用
 
-    void Start()
-    {
+    void Start() {
         _otouch = GetComponent<OTouch>();
         _otouch.L = GameObject.Find("OculusTouchL");
         _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
-    void Update()
-    {
-        if (_otouch.IsLIndexTriggerDown)
-        {
+    void Update() {
+        if (_otouch.IsLIndexTriggerDown) {
             _console.Log(_otouch.LIndexTrigger.ToString());
         }
     }
 }
+
 ```
 
 ### ◇ 参照
@@ -658,6 +655,48 @@ public class GameManager : MonoBehaviour {
 ### ◇ 参照
 [OTouch.LHandTriggerUp](#LHandTriggerUp)  
 [OTouch.RHandTriggerDown](#RHandTriggerDown)  
+
+***
+
+<a name="RIndexTrigger"></a>
+
+# OTouch.RIndexTrigger
+
+### ◇ 構文
+<em>otouch</em>.RIndexTrigger
+
+### ◇ 説明
+プロパティ。
+「右人差し指トリガーを押しているトリガー量」（0〜1 まで小数点以下15桁で表示）。読み取り専用。  
+0〜100までの整数値を求める場合、Math.Round((<em>otouch</em>.RIndexTrigger*100)) とします。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour{
+    private OTouch _otouch;
+    private Console _console; //DEBUG用
+
+    void Start() {
+        _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.R = GameObject.Find("OculusTouchR");
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    void Update() {
+        if (_otouch.IsRIndexTriggerDown) {
+            _console.Log(_otouch.RIndexTrigger.ToString());
+        }
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.LIndexTrigger](#LIndexTrigger)  
+[OTouch.IsRIndexTriggerDown](#IsRIndexTriggerDown)  
 
 ***
 
