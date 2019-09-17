@@ -33,55 +33,55 @@ Version Alpha1.201909171011 対応
 * [LHandTriggerDown](#LHandTriggerDown) : 「左中指トリガーを押した時」のイベントハンドラの登録や削除
 * [LHandTriggerUp](#LHandTriggerUp) : 「左中指トリガーを押した後、離した時」のイベントハンドラの登録や削除
 * [LIndexTriggerDown](#LIndexTriggerDown) : 「左人差し指トリガーを押した時」のイベントハンドラの登録や削除
-* [LIndexTriggerRawNearTouch](#) : 
-* [LIndexTriggerRawTouch](#) : 
+* [LIndexTriggerRawNearTouch](#LIndexTriggerRawNearTouch) : 
+* [LIndexTriggerRawTouch](#LIndexTriggerRawTouch) : 
 * [LIndexTriggerUp](#LIndexTriggerUp) : 「左人差し指トリガーを押した後、離した時」のイベントハンドラの登録や削除
-* [LLaserDown](#) : 
-* [LLaserOut](#) : 
-* [LLaserOver](#) : 
-* [LLaserUp](#) : 
-* [LLsserUpOutside](#) : 
-* [LThumbstickDown](#) : 
-* [LThumbstickDownDown](#) : 
-* [LThumbstickDownUp](#) : 
-* [LThumbstickLeftDown](#) : 
-* [LThumbstickLeftUp](#) : 
-* [LThumbstickRawTouch](#) : 
-* [LThumbstickRightDown](#) : 
-* [LThumbstickRightUp](#) : 
-* [LThumbstickUp](#) : 
-* [LThumbstickUpUp](#) : 
-* [LThumbstickUpDown](#) : 
+* [LLaserDown](#LLaserDown) : 
+* [LLaserOut](#LLaserOut) : 
+* [LLaserOver](#LLaserOver) : 
+* [LLaserUp](#LLaserUp) : 
+* [LLsserUpOutside](#LLsserUpOutside) : 
+* [LThumbstickDown](#LThumbstickDown) : 
+* [LThumbstickDownDown](#LThumbstickDownDown) : 
+* [LThumbstickDownUp](#LThumbstickDownUp) : 
+* [LThumbstickLeftDown](#LThumbstickLeftDown) : 
+* [LThumbstickLeftUp](#LThumbstickLeftUp) : 
+* [LThumbstickRawTouch](#LThumbstickRawTouch) : 
+* [LThumbstickRightDown](#LThumbstickRightDown) : 
+* [LThumbstickRightUp](#LThumbstickRightUp) : 
+* [LThumbstickUp](#LThumbstickUp) : 
+* [LThumbstickUpUp](#LThumbstickUpUp) : 
+* [LThumbstickUpDown](#LThumbstickUpDown) : 
 * [RHandTriggerDown](#RHandTriggerDown) : 「右中指トリガーを押した時」のイベントハンドラの登録や削除
 * [RHandTriggerUp](#RHandTriggerUp) : 「右中指トリガーを押した後、離した時」のイベントハンドラの登録や削除
 * [RIndexTriggerDown](#RIndexTriggerDown) : 「右人差し指トリガーを押した時」のイベントハンドラの登録や削除
-* [RIndexTriggerRawNearTouch](#) : 
-* [RIndexTriggerRawTouch](#) : 
+* [RIndexTriggerRawNearTouch](#RIndexTriggerRawNearTouch) : 
+* [RIndexTriggerRawTouch](#RIndexTriggerRawTouch) : 
 * [RIndexTriggerUp](#RIndexTriggerUp) : 「右人差し指トリガーを押した後、離した時」のイベントハンドラの登録や削除
-* [RLaserDown](#) : 
-* [RLaserOut](#) : 
-* [RLaserOver](#) : 
-* [RLaserUp](#) : 
-* [RLsserUpOutside](#) : 
-* [RThumbstickDown](#) : 
-* [RThumbstickDownDown](#) : 
-* [RThumbstickDownUp](#) : 
-* [RThumbstickLeftDown](#) : 
-* [RThumbstickLeftUp](#) : 
-* [RThumbstickRawTouch](#) : 
-* [RThumbstickRightDown](#) : 
-* [RThumbstickRightUp](#) : 
-* [RThumbstickUp](#) : 
-* [RThumbstickUpUp](#) : 
-* [RThumbstickUpDown](#) : 
-* [StartDown](#) : 
-* [StartUp](#) : 
-* [XDown](#) : 
-* [XRawTouch](#) : 
-* [XUp](#) : 
-* [YDown](#) : 
-* [YRawTouch](#) : 
-* [YUp](#) : 
+* [RLaserDown](#RLaserDown) : 
+* [RLaserOut](#RLaserOut) : 
+* [RLaserOver](#RLaserOver) : 
+* [RLaserUp](#RLaserUp) : 
+* [RLsserUpOutside](#RLsserUpOutside) : 
+* [RThumbstickDown](#RThumbstickDown) : 
+* [RThumbstickDownDown](#RThumbstickDownDown) : 
+* [RThumbstickDownUp](#RThumbstickDownUp) : 
+* [RThumbstickLeftDown](#RThumbstickLeftDown) : 
+* [RThumbstickLeftUp](#RThumbstickLeftUp) : 
+* [RThumbstickRawTouch](#RThumbstickRawTouch) : 
+* [RThumbstickRightDown](#RThumbstickRightDown) : 
+* [RThumbstickRightUp](#RThumbstickRightUp) : 
+* [RThumbstickUp](#RThumbstickUp) : 
+* [RThumbstickUpUp](#RThumbstickUpUp) : 
+* [RThumbstickUpDown](#RThumbstickUpDown) : 
+* [StartDown](#StartDown) : 
+* [StartUp](#StartUp) : 
+* [XDown](#XDown) : 「Xボタンを押した時」のイベントハンドラの登録や削除
+* [XRawTouch](#XRawTouch) : 「Xボタンに触れた時」のイベントハンドラの登録や削除
+* [XUp](#XUp) : 「Xボタンを押した後、離した時」のイベントハンドラの登録や削除
+* [YDown](#YDown) : 
+* [YRawTouch](#YRawTouch) : 
+* [YUp](#YUp) : 
 
 ***
 
@@ -1032,6 +1032,126 @@ public class GameManager : MonoBehaviour {
 ### ◇ 参照
 [OTouch.LIndexTriggerUp](#LIndexTriggerUp)  
 [OTouch.RIndexTriggerDown](#RIndexTriggerDown)  
+
+***
+
+<a name="XDown"></a>
+
+# OTouch.XDown
+
+### ◇ 構文
+<em>otouch</em>.XDown += <em>SomeMethodHandler</em>  
+<em>otouch</em>.XDown -= <em>SomeMethodHandler</em>
+
+### ◇ 説明
+「Xボタンを押した時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.R = GameObject.Find("OculusTouchR");
+        _otouch.XDown += XDownHandler; // イベントハンドラの登録
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    private void XDownHandler() { // イベントハンドラ
+        //ここに「Xボタンを押した時」の処理を記述
+        _console.Log("Xボタン↓"); //DEBUG用
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.XUp](#XUp)  
+[OTouch.XRawTouch](#XRawTouch)  
+
+***
+
+<a name="XRawTouch"></a>
+
+# OTouch.XRawTouch
+
+### ◇ 構文
+<em>otouch</em>.XRawTouch += <em>SomeMethodHandler</em>  
+<em>otouch</em>.XRawTouch -= <em>SomeMethodHandler</em>
+
+### ◇ 説明
+「Xボタンに触れた時」（触れている間ではなく、最初に触れた瞬間）のイベントハンドラの登録や削除を行うことができます。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.R = GameObject.Find("OculusTouchR");
+        _otouch.XRawTouch += XRawTouchHandler; // イベントハンドラの登録
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    private void XRawTouchHandler() { // イベントハンドラ
+        //ここに「Xボタンに触れた時」の処理を記述
+        _console.Log("Xボタンにタッチ"); //DEBUG用
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.XDown](#XDown)  
+[OTouch.XUp](#XUp)  
+
+***
+
+<a name="XUp"></a>
+
+# OTouch.XUp
+
+### ◇ 構文
+<em>otouch</em>.XUp += <em>SomeMethodHandler</em>  
+<em>otouch</em>.XUp -= <em>SomeMethodHandler</em>
+
+### ◇ 説明
+「Xボタンを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.R = GameObject.Find("OculusTouchR");
+        _otouch.XUp += XUpHandler; // イベントハンドラの登録
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    private void XUpHandler() { // イベントハンドラ
+        //ここに「Xボタンを押した後、離した時」の処理を記述
+        _console.Log("Xボタン↑"); //DEBUG用
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.XDown](#XDown)  
+[OTouch.XRawTouch](#XRawTouch)  
 
 ***
 
