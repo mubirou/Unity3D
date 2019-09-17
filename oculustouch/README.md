@@ -1,7 +1,7 @@
 # OTouch（自作ライブラリ）
 
 * [Oculus Quest](https://www.oculus.com/quest/?locale=ja_JP) 付属の左右の Oculus Touch を [C#](https://unity3d.com/jp/learning-c-sharp-in-unity-for-beginners?gq=C%23) で制御するための自作ライブラリ
-* Version Alpha1.201909170944
+* Version Alpha 1.201909170944
 * 開発環境（Windows、macOS は動作未確認）
     * [Ubuntu](https://www.ubuntulinux.jp/) 18.04.3 LTS
     * [Unity 2020.1.0a3 Personal](https://unity3d.com/jp/unity/alpha/2020.1.0a3)
