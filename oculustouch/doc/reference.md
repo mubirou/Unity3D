@@ -13,11 +13,11 @@ Version Alpha1.201909171011 対応
 * [IsRHandTriggerDown](#IsRHandTriggerDown) : 「右中指トリガーを押している」か否かを調べる
 * [IsRIndexTriggerDown](#IsRIndexTriggerDown) : 「右人差し指トリガーを押している」か否かを調べる
 * [L](#L) : 左手側の Oculus Touch コントローラーの動きに連動する GameObject を指定
-* [LHandTrigger](#LHandTrigger) : 「左中指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁で表示）
+* [LHandTrigger](#LHandTrigger) : 
 * [LIndexTrigger](#LIndexTrigger) : 
 * [LThumbstickRotate](#LThumbstickRotate) : 
 * [R](#R) : 右手側の Oculus Touch コントローラーの動きに連動する GameObject を指定
-* [RHandTrigger](#RHandTrigger) : 
+* [RHandTrigger](#RHandTrigger) : 「右中指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁で表示）
 * [RIndexTrigger](#RIndexTrigger) : 
 * [RThumbstickRotate](#RThumbstickRotate) : 
 * [TargetObjects](#TargetObjects) : 
