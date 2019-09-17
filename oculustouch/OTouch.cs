@@ -1,5 +1,5 @@
 ﻿/***************************************************************************
- * OTouch alpha1(ver.2019-09-13T18:41)
+ * OTouch alpha1.201909170944
  * © 2019 夢寐郎
  ***************************************************************************/
 using System.Collections;
@@ -306,8 +306,8 @@ public class OTouch : MonoBehaviour {
         }
         //人差し指トリガー（Up）
         if (OVRInput.GetUp(OVRInput.RawButton.LIndexTrigger)) {
-            LIndexTriggerUp();
             _isLIndexTriggerDown = false;
+            LIndexTriggerUp();
             if (HitTestL(false) == _selectObjectL) { //ヒットテスト NEW
                 if (IsTargetObject(_hitObjectL)) {
                     LLaserUp(_selectObjectL); //≒MouseUp, Click
@@ -319,8 +319,8 @@ public class OTouch : MonoBehaviour {
             _selectObjectL = null;
         }
         if (OVRInput.GetUp(OVRInput.RawButton.RIndexTrigger)) {
-            RIndexTriggerUp();
             _isRIndexTriggerDown = false;
+            RIndexTriggerUp();
             if (HitTestR(false) == _selectObjectR) { //ヒットテスト NEW
                 if (IsTargetObject(_hitObjectR)) {
                     RLaserUp(_selectObjectR); //≒MouseUp, Click
