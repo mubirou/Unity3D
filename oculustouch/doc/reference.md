@@ -1156,13 +1156,13 @@ public class GameManager : MonoBehaviour {
 
 ***
 
-<a name="LThumbstickUp"></a>
+<a name="RThumbstickUp"></a>
 
-# OTouch.LThumbstickUp
+# OTouch.RThumbstickUp
 
 ### ◇ 構文
-<em>otouch</em>.LThumbstickUp += <em>SomeMethodHandler</em>  
-<em>otouch</em>.LThumbstickUp -= <em>SomeMethodHandler</em>
+<em>otouch</em>.RThumbstickUp += <em>SomeMethodHandler</em>  
+<em>otouch</em>.RThumbstickUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -1180,11 +1180,11 @@ public class GameManager : MonoBehaviour {
         OTouch _otouch = GetComponent<OTouch>();
         _otouch.L = GameObject.Find("OculusTouchL");
         _otouch.R = GameObject.Find("OculusTouchR");
-        _otouch.LThumbstickUp += LThumbstickUpHandler; // イベントハンドラの登録
+        _otouch.RThumbstickUp += RThumbstickUpHandler; // イベントハンドラの登録
         _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
-    private void LThumbstickUpHandler() { // イベントハンドラ
+    private void RThumbstickUpHandler() { // イベントハンドラ
         //ここに「右親指スティックを押した後、離した時」の処理を記述
         _console.Log("右親指スティック↑"); //DEBUG用
     }
@@ -1192,8 +1192,8 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.RThumbstickUp](#RThumbstickUp)  
-[OTouch.LThumbstickDown](#LThumbstickDown)  
+[OTouch.LThumbstickUp](#LThumbstickUp)  
+[OTouch.RThumbstickDown](#RThumbstickDown)  
 
 ***
 
