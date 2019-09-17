@@ -1057,7 +1057,6 @@ public class GameManager : MonoBehaviour {
     void Start() {
         OTouch _otouch = GetComponent<OTouch>();
         _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
         _otouch.XDown += XDownHandler; // イベントハンドラの登録
         _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -1097,7 +1096,6 @@ public class GameManager : MonoBehaviour {
     void Start() {
         OTouch _otouch = GetComponent<OTouch>();
         _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
         _otouch.XRawTouch += XRawTouchHandler; // イベントハンドラの登録
         _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -1137,7 +1135,6 @@ public class GameManager : MonoBehaviour {
     void Start() {
         OTouch _otouch = GetComponent<OTouch>();
         _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
         _otouch.XUp += XUpHandler; // イベントハンドラの登録
         _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
