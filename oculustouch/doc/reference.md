@@ -24,7 +24,7 @@ Version Alpha1.201909171011 対応
 
 
 ## ◆ イベント一覧
-* [ADown](#) : 
+* [ADown](#) : 「Aボタンを押した時」のイベントハンドラの登録や削除
 * [ARawTouch](#) : 
 * [AUp](#) : 
 * [BDown](#) : 
@@ -82,6 +82,46 @@ Version Alpha1.201909171011 対応
 * [YDown](#) : 
 * [YRawTouch](#) : 
 * [YUp](#) : 
+
+***
+
+<a name="ADown"></a>
+
+# OTouch.ADown
+
+### ◇ 構文
+<em>otouch</em>.ADown += <em>SomeMethodHandler</em>  
+<em>otouch</em>.ADown -= <em>SomeMethodHandler</em>
+
+### ◇ 説明
+「Aボタンを押した時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.R = GameObject.Find("OculusTouchR");
+        _otouch.ADown += ADownHandler; // イベントハンドラの登録
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    private void ADownHandler() { // イベントハンドラ
+        //ここに「Aボタンを押した時」の処理を記述
+        _console.Log("Aボタン↓"); //DEBUG用
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.AUp](#AUp)  
+[OTouch.ARawTouch](#ARawTouch)  
 
 ***
 
