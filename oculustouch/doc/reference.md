@@ -122,6 +122,7 @@ public class GameManager : MonoBehaviour {
 ### ◇ 参照
 [OTouch.IsRHandTriggerDown](#IsRHandTriggerDown)  
 [OTouch.LHandTriggerDown](#LHandTriggerDown)  
+[OTouch.LHandTrigger](#LHandTrigger)  
 
 ***
 
