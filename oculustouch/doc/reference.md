@@ -14,7 +14,7 @@ Version Alpha1.201909171011 対応
 * [IsRIndexTriggerDown](#IsRIndexTriggerDown) : 「右人差し指トリガーを押している」か否かを調べる
 * [L](#L) : 左手側の Oculus Touch コントローラーの動きに連動する GameObject を指定
 * [LHandTrigger](#LHandTrigger) : 「左中指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁で表示）
-* [LIndexTrigger](#LIndexTrigger) : 
+* [LIndexTrigger](#LIndexTrigger) : 「左人差し指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁で表示）
 * [LThumbstickRotate](#LThumbstickRotate) : 
 * [R](#R) : 右手側の Oculus Touch コントローラーの動きに連動する GameObject を指定
 * [RHandTrigger](#RHandTrigger) : 「右中指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁で表示）
@@ -388,6 +388,51 @@ public class GameManager : MonoBehaviour {
 ### ◇ 参照
 [OTouch.RHandTriggerUp](#RHandTriggerUp)  
 [OTouch.LHandTriggerDown](#LHandTriggerDown)  
+
+***
+
+<a name="LIndexTrigger"></a>
+
+# OTouch.LIndexTrigger
+
+### ◇ 構文
+<em>otouch</em>.LIndexTrigger
+
+### ◇ 説明
+プロパティ。
+「左人差し指トリガーを押しているトリガー量」（0〜1 まで小数点以下15桁で表示）。読み取り専用。
+0〜100までの整数値を求める場合、Math.Round((<em>otouch</em>.LIndexTrigger*100)) とします。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour
+{
+    private OTouch _otouch;
+    private Console _console; //DEBUG用
+
+    void Start()
+    {
+        _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    void Update()
+    {
+        if (_otouch.IsLIndexTriggerDown)
+        {
+            _console.Log(_otouch.LIndexTrigger.ToString());
+        }
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.RIndexTrigger](#RIndexTrigger)  
+[OTouch.IsLIndexTriggerDown](#IsLIndexTriggerDown)  
 
 ***
 
