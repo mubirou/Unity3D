@@ -27,9 +27,9 @@ Version Alpha1.201909171011 対応
 * [ADown](#ADown) : 「Aボタンを押した時」のイベントハンドラの登録や削除
 * [ARawTouch](#ARawTouch) : 「Aボタンに触れた時」のイベントハンドラの登録や削除
 * [AUp](#AUp) : 「Aボタンを押した後、離した時」のイベントハンドラの登録や削除
-* [BDown](#) : 
-* [BRawTouch](#) : 
-* [BUp](#) : 
+* [BDown](#BDown) : 「Bボタンを押した時」のイベントハンドラの登録や削除
+* [BRawTouch](#BRawTouch) : 「Bボタンに触れた時」のイベントハンドラの登録や削除
+* [BUp](#BUp) : 「Bボタンを押した後、離した時」のイベントハンドラの登録や削除
 * [LHandTriggerDown](#LHandTriggerDown) : 「左中指トリガーを押した時」のイベントハンドラの登録や削除
 * [LHandTriggerUp](#LHandTriggerUp) : 「左中指トリガーを押した後、離した時」のイベントハンドラの登録や削除
 * [LIndexTriggerDown](#LIndexTriggerDown) : 「左人差し指トリガーを押した時」のイベントハンドラの登録や削除
@@ -202,6 +202,126 @@ public class GameManager : MonoBehaviour {
 ### ◇ 参照
 [OTouch.ADown](#ADown)  
 [OTouch.ARawTouch](#ARawTouch)  
+
+***
+
+<a name="BDown"></a>
+
+# OTouch.BDown
+
+### ◇ 構文
+<em>otouch</em>.BDown += <em>SomeMethodHandler</em>  
+<em>otouch</em>.BDown -= <em>SomeMethodHandler</em>
+
+### ◇ 説明
+「Bボタンを押した時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.R = GameObject.Find("OculusTouchR");
+        _otouch.BDown += BDownHandler; // イベントハンドラの登録
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    private void BDownHandler() { // イベントハンドラ
+        //ここに「Bボタンを押した時」の処理を記述
+        _console.Log("Bボタン↓"); //DEBUG用
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.BUp](#BUp)  
+[OTouch.BRawTouch](#BRawTouch)  
+
+***
+
+<a name="BRawTouch"></a>
+
+# OTouch.BRawTouch
+
+### ◇ 構文
+<em>otouch</em>.BRawTouch += <em>SomeMethodHandler</em>  
+<em>otouch</em>.BRawTouch -= <em>SomeMethodHandler</em>
+
+### ◇ 説明
+「Bボタンに触れた時」（触れている間ではなく、最初に触れた瞬間）のイベントハンドラの登録や削除を行うことができます。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.R = GameObject.Find("OculusTouchR");
+        _otouch.BRawTouch += BRawTouchHandler; // イベントハンドラの登録
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    private void BRawTouchHandler() { // イベントハンドラ
+        //ここに「Bボタンに触れた時」の処理を記述
+        _console.Log("Bボタンにタッチ"); //DEBUG用
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.BDown](#BDown)  
+[OTouch.BUp](#BUp)  
+
+***
+
+<a name="BUp"></a>
+
+# OTouch.BUp
+
+### ◇ 構文
+<em>otouch</em>.BUp += <em>SomeMethodHandler</em>  
+<em>otouch</em>.BUp -= <em>SomeMethodHandler</em>
+
+### ◇ 説明
+「Bボタンを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.R = GameObject.Find("OculusTouchR");
+        _otouch.BUp += BUpHandler; // イベントハンドラの登録
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    private void BUpHandler() { // イベントハンドラ
+        //ここに「Bボタンを押した後、離した時」の処理を記述
+        _console.Log("Bボタン↑"); //DEBUG用
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.BDown](#BDown)  
+[OTouch.BRawTouch](#BRawTouch)  
 
 ***
 
