@@ -79,9 +79,9 @@ Version Alpha1.201909171011 対応
 * [XDown](#XDown) : 「Xボタンを押した時」のイベントハンドラの登録や削除
 * [XRawTouch](#XRawTouch) : 「Xボタンに触れた時」のイベントハンドラの登録や削除
 * [XUp](#XUp) : 「Xボタンを押した後、離した時」のイベントハンドラの登録や削除
-* [YDown](#YDown) : 
-* [YRawTouch](#YRawTouch) : 
-* [YUp](#YUp) : 
+* [YDown](#YDown) : 「Yボタンを押した時」のイベントハンドラの登録や削除
+* [YRawTouch](#YRawTouch) : 「Yボタンに触れた時」のイベントハンドラの登録や削除
+* [YUp](#YUp) : 「Yボタンを押した後、離した時」のイベントハンドラの登録や削除
 
 ***
 
@@ -1149,6 +1149,123 @@ public class GameManager : MonoBehaviour {
 ### ◇ 参照
 [OTouch.XDown](#XDown)  
 [OTouch.XRawTouch](#XRawTouch)  
+
+***
+
+<a name="YDown"></a>
+
+# OTouch.YDown
+
+### ◇ 構文
+<em>otouch</em>.YDown += <em>SomeMethodHandler</em>  
+<em>otouch</em>.YDown -= <em>SomeMethodHandler</em>
+
+### ◇ 説明
+「Yボタンを押した時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.YDown += YDownHandler; // イベントハンドラの登録
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    private void YDownHandler() { // イベントハンドラ
+        //ここに「Yボタンを押した時」の処理を記述
+        _console.Log("Yボタン↓"); //DEBUG用
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.YUp](#YUp)  
+[OTouch.YRawTouch](#YRawTouch)  
+
+***
+
+<a name="YRawTouch"></a>
+
+# OTouch.YRawTouch
+
+### ◇ 構文
+<em>otouch</em>.YRawTouch += <em>SomeMethodHandler</em>  
+<em>otouch</em>.YRawTouch -= <em>SomeMethodHandler</em>
+
+### ◇ 説明
+「Yボタンに触れた時」（触れている間ではなく、最初に触れた瞬間）のイベントハンドラの登録や削除を行うことができます。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.YRawTouch += YRawTouchHandler; // イベントハンドラの登録
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    private void YRawTouchHandler() { // イベントハンドラ
+        //ここに「Yボタンに触れた時」の処理を記述
+        _console.Log("Yボタンにタッチ"); //DEBUG用
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.YDown](#YDown)  
+[OTouch.YUp](#YUp)  
+
+***
+
+<a name="YUp"></a>
+
+# OTouch.YUp
+
+### ◇ 構文
+<em>otouch</em>.YUp += <em>SomeMethodHandler</em>  
+<em>otouch</em>.YUp -= <em>SomeMethodHandler</em>
+
+### ◇ 説明
+「Yボタンを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.YUp += YUpHandler; // イベントハンドラの登録
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    private void YUpHandler() { // イベントハンドラ
+        //ここに「Yボタンを押した後、離した時」の処理を記述
+        _console.Log("Yボタン↑"); //DEBUG用
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.YDown](#YDown)  
+[OTouch.YRawTouch](#YRawTouch)  
 
 ***
 
