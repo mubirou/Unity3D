@@ -163,6 +163,7 @@ public class GameManager : MonoBehaviour {
 ### ◇ 参照
 [OTouch.IsRIndexTriggerDown](#IsRIndexTriggerDown)  
 [OTouch.LIndexTriggerDown](#LIndexTriggerDown)  
+[OTouch.LIndexTrigger](#LIndexTrigger)  
 
 ***
 
