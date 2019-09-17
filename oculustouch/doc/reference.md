@@ -13,11 +13,10 @@ Version Alpha1.201909171011 対応
 * [IsRHandTriggerDown](#IsRHandTriggerDown) : 「右中指トリガーを押している」か否かを調べる
 * [IsRIndexTriggerDown](#IsRIndexTriggerDown) : 「右人差し指トリガーを押している」か否かを調べる
 * [L](#L) : 左手側の Oculus Touch コントローラーの動きに連動する GameObject を指定
-* [LHandTrigger](#LHandTrigger) : 
+* [LHandTrigger](#LHandTrigger) : 「左中指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁で表示）
 * [LIndexTrigger](#LIndexTrigger) : 
 * [LThumbstickRotate](#LThumbstickRotate) : 
 * [R](#R) : 右手側の Oculus Touch コントローラーの動きに連動する GameObject を指定
-* [LHandTrigger](#LHandTrigger) : 
 * [RHandTrigger](#RHandTrigger) : 
 * [RIndexTrigger](#RIndexTrigger) : 
 * [RThumbstickRotate](#RThumbstickRotate) : 
@@ -267,6 +266,47 @@ _otouch.L = GameObject.Find("OculusTouchL");
 
 ### ◆参照
 [OTouch.R](#R)
+
+***
+
+<a name="RHandTrigger"></a>
+
+# OTouch.RHandTrigger
+
+### ◆構文
+<em>otouch</em>.RHandTrigger
+
+### ◆説明
+プロパティ。
+「右中指トリガーを押しているトリガー量」（0〜1 まで小数点以下15桁で表示）。読み取り専用。
+
+### ◆例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private OTouch _otouch;
+    private Console _console; //DEBUG用
+
+    void Start() {
+        _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.R = GameObject.Find("OculusTouchR");
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    void Update() {
+        if (_otouch.IsRHandTriggerDown ) {
+            _console.Log(_otouch.RHandTrigger.ToString());
+        }
+    }
+}
+```
+
+### ◆参照
+[OTouch.LHandTrigger](#LHandTrigger)  
+[OTouch.IsRHandTriggerDown](#IsRHandTriggerDown)  
 
 ***
 
