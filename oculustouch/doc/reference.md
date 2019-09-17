@@ -8,10 +8,10 @@ Version Alpha1.201909171011 対応
 
 
 ## ◆ プロパティ一覧
-* [IsLHandTriggerDown](#IsLHandTriggerDown) : 「左中指トリガーを押している」か否かを調べる
-* [IsLIndexTriggerDown](#IsLIndexTriggerDown) : 「左人差し指トリガーを押している」か否かを調べる
-* [IsRHandTriggerDown](#IsRHandTriggerDown) : 「右中指トリガーを押している」か否かを調べる
-* [IsRIndexTriggerDown](#IsRIndexTriggerDown) : 「右人差し指トリガーを押している」か否かを調べる
+* [IsLHandTriggerDown](#IsLHandTriggerDown) : 「左中指トリガーを押している」か否か
+* [IsLIndexTriggerDown](#IsLIndexTriggerDown) : 「左人差し指トリガーを押している」か否か
+* [IsRHandTriggerDown](#IsRHandTriggerDown) : 「右中指トリガーを押している」か否か
+* [IsRIndexTriggerDown](#IsRIndexTriggerDown) : 「右人差し指トリガーを押している」か否か
 * [L](#L) : 左手側の Oculus Touch コントローラーの動きに連動する GameObject を指定
 * [LHandTrigger](#LHandTrigger) : 「左中指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁で表示）
 * [LIndexTrigger](#LIndexTrigger) : 「左人差し指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁で表示）
