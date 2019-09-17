@@ -89,14 +89,14 @@ Version Alpha1.201909171011 対応
 
 # OTouch.IsLHandTriggerDown
 
-### ◆構文
+### ◇ 構文
 <em>otouch</em>.IsLHandTriggerDown
 
-### ◆説明
+### ◇ 説明
 プロパティ。
 「左中指トリガーを押している」か否かを示すブール値（読み取り専用）。
 
-### ◆例文
+### ◇ 例文
 ```
 //GameManager.cs
 using UnityEngine;
@@ -119,7 +119,7 @@ public class GameManager : MonoBehaviour {
 }
 ```
 
-### ◆参照
+### ◇ 参照
 [OTouch.IsRHandTriggerDown](#IsRHandTriggerDown)  
 [OTouch.LHandTriggerDown](#LHandTriggerDown)  
 
@@ -129,14 +129,14 @@ public class GameManager : MonoBehaviour {
 
 # OTouch.IsLIndexTriggerDown
 
-### ◆構文
+### ◇ 構文
 <em>otouch</em>.IsLIndexTriggerDown
 
-### ◆説明
+### ◇ 説明
 プロパティ。
 「左人差し指トリガーを押している」か否かを示すブール値（読み取り専用）。
 
-### ◆例文
+### ◇ 例文
 ```
 //GameManager.cs
 using UnityEngine;
@@ -159,7 +159,7 @@ public class GameManager : MonoBehaviour {
 }
 ```
 
-### ◆参照
+### ◇ 参照
 [OTouch.IsRIndexTriggerDown](#IsRIndexTriggerDown)  
 [OTouch.LIndexTriggerDown](#LIndexTriggerDown)  
 
@@ -169,14 +169,14 @@ public class GameManager : MonoBehaviour {
 
 # OTouch.IsRHandTriggerDown
 
-### ◆構文
+### ◇ 構文
 <em>otouch</em>.IsRHandTriggerDown
 
-### ◆説明
+### ◇ 説明
 プロパティ。
 「右中指トリガーを押している」か否かを示すブール値（読み取り専用）。
 
-### ◆例文
+### ◇ 例文
 ```
 //GameManager.cs
 using UnityEngine;
@@ -200,7 +200,7 @@ public class GameManager : MonoBehaviour {
 }
 ```
 
-### ◆参照
+### ◇ 参照
 [OTouch.IsLHandTriggerDown](#IsLHandTriggerDown)  
 [OTouch.RHandTriggerDown](#RHandTriggerDown)  
 [OTouch.RHandTrigger](#RHandTrigger)  
@@ -211,14 +211,14 @@ public class GameManager : MonoBehaviour {
 
 # OTouch.IsRIndexTriggerDown
 
-### ◆構文
+### ◇ 構文
 <em>otouch</em>.IsRIndexTriggerDown
 
-### ◆説明
+### ◇ 説明
 プロパティ。
 「右人差し指トリガーを押している」か否かを示すブール値（読み取り専用）。
 
-### ◆例文
+### ◇ 例文
 ```
 //GameManager.cs
 using UnityEngine;
@@ -242,7 +242,7 @@ public class GameManager : MonoBehaviour {
 }
 ```
 
-### ◆参照
+### ◇ 参照
 [OTouch.IsLIndexTriggerDown](#IsLIndexTriggerDown)  
 [OTouch.RIndexTriggerDown](#RIndexTriggerDown)  
 
@@ -252,20 +252,20 @@ public class GameManager : MonoBehaviour {
 
 # OTouch.L
 
-### ◆構文
+### ◇ 構文
 <em>otouch</em>.L
 
-### ◆説明
+### ◇ 説明
 プロパティ。
 Oculus Touch コントローラー（左手側）の動きに連動する GameObject を指定したり、調べることができます。
 
-### ◆例文
+### ◇ 例文
 ```
 OTouch _otouch = GetComponent<OTouch>();
 _otouch.L = GameObject.Find("OculusTouchL");
 ```
 
-### ◆参照
+### ◇ 参照
 [OTouch.R](#R)
 
 ***
@@ -274,14 +274,14 @@ _otouch.L = GameObject.Find("OculusTouchL");
 
 # OTouch.RHandTrigger
 
-### ◆構文
+### ◇ 構文
 <em>otouch</em>.RHandTrigger
 
-### ◆説明
+### ◇ 説明
 プロパティ。
 「右中指トリガーを押しているトリガー量」（0〜1 まで小数点以下15桁で表示）。読み取り専用。
 
-### ◆例文
+### ◇ 例文
 ```
 //GameManager.cs
 using UnityEngine;
@@ -305,7 +305,7 @@ public class GameManager : MonoBehaviour {
 }
 ```
 
-### ◆参照
+### ◇ 参照
 [OTouch.LHandTrigger](#LHandTrigger)  
 [OTouch.IsRHandTriggerDown](#IsRHandTriggerDown)  
 
@@ -315,14 +315,14 @@ public class GameManager : MonoBehaviour {
 
 # OTouch.LHandTriggerDown
 
-### ◆構文
+### ◇ 構文
 <em>otouch</em>.LHandTriggerDown += <em>SomeMethodHandler</em>  
 <em>otouch</em>.LHandTriggerDown -= <em>SomeMethodHandler</em>
 
-### ◆説明
+### ◇ 説明
 「左中指トリガーを押した時」のイベントハンドラの登録や削除を行うことができます。
 
-### ◆例文
+### ◇ 例文
 ```
 //GameManager.cs
 using UnityEngine;
@@ -344,7 +344,7 @@ public class GameManager : MonoBehaviour {
 }
 ```
 
-### ◆参照
+### ◇ 参照
 [OTouch.RHandTriggerDown](#RHandTriggerDown)  
 [OTouch.LHandTriggerUp](#LHandTriggerUp)  
 [OTouch.IsLHandTriggerDown](#IsLHandTriggerDown)  
@@ -355,14 +355,14 @@ public class GameManager : MonoBehaviour {
 
 # OTouch.LHandTriggerUp
 
-### ◆構文
+### ◇ 構文
 <em>otouch</em>.LHandTriggerUp += <em>SomeMethodHandler</em>  
 <em>otouch</em>.LHandTriggerUp -= <em>SomeMethodHandler</em>
 
-### ◆説明
+### ◇ 説明
 「左中指トリガーを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
 
-### ◆例文
+### ◇ 例文
 ```
 //GameManager.cs
 using UnityEngine;
@@ -384,7 +384,7 @@ public class GameManager : MonoBehaviour {
 }
 ```
 
-### ◆参照
+### ◇ 参照
 [OTouch.RHandTriggerUp](#RHandTriggerUp)  
 [OTouch.LHandTriggerDown](#LHandTriggerDown)  
 
@@ -394,14 +394,14 @@ public class GameManager : MonoBehaviour {
 
 # OTouch.LIndexTriggerDown
 
-### ◆構文
+### ◇ 構文
 <em>otouch</em>.LIndexTriggerDown += <em>SomeMethodHandler</em>  
 <em>otouch</em>.LIndexTriggerDown -= <em>SomeMethodHandler</em>
 
-### ◆説明
+### ◇ 説明
 「左人差し指トリガーを押した時」のイベントハンドラの登録や削除を行うことができます。
 
-### ◆例文
+### ◇ 例文
 ```
 //GameManager.cs
 using UnityEngine;
@@ -423,7 +423,7 @@ public class GameManager : MonoBehaviour {
 }
 ```
 
-### ◆参照
+### ◇ 参照
 [OTouch.RIndexTriggerDown](#RIndexTriggerDown)  
 [OTouch.LIndexTriggerUp](#LIndexTriggerUp)  
 [OTouch.IsLIndexTriggerDown](#IsLIndexTriggerDown)  
@@ -434,14 +434,14 @@ public class GameManager : MonoBehaviour {
 
 # OTouch.LIndexTriggerUp
 
-### ◆構文
+### ◇ 構文
 <em>otouch</em>.LIndexTriggerUp += <em>SomeMethodHandler</em>  
 <em>otouch</em>.LIndexTriggerUp -= <em>SomeMethodHandler</em>
 
-### ◆説明
+### ◇ 説明
 「左人差し指トリガーを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
 
-### ◆例文
+### ◇ 例文
 ```
 //GameManager.cs
 using UnityEngine;
@@ -463,7 +463,7 @@ public class GameManager : MonoBehaviour {
 }
 ```
 
-### ◆参照
+### ◇ 参照
 [OTouch.RIndexTriggerUp](#RIndexTriggerUp)  
 [OTouch.LIndexTriggerDown](#LIndexTriggerDown)  
 
@@ -473,20 +473,20 @@ public class GameManager : MonoBehaviour {
 
 # OTouch.R
 
-### ◆構文
+### ◇ 構文
 <em>otouch</em>.R
 
-### ◆説明
+### ◇ 説明
 プロパティ。
 Oculus Touch コントローラー（右手側）の動きに連動する GameObject を指定したり、調べることができます。
 
-### ◆例文
+### ◇ 例文
 ```
 OTouch _otouch = GetComponent<OTouch>();
 _otouch.R = GameObject.Find("OculusTouchR");
 ```
 
-### ◆参照
+### ◇ 参照
 [OTouch.L](#L)
 
 ***
@@ -495,14 +495,14 @@ _otouch.R = GameObject.Find("OculusTouchR");
 
 # OTouch.RHandTriggerDown
 
-### ◆構文
+### ◇ 構文
 <em>otouch</em>.RHandTriggerDown += <em>SomeMethodHandler</em>  
 <em>otouch</em>.RHandTriggerDown -= <em>SomeMethodHandler</em>
 
-### ◆説明
+### ◇ 説明
 「右中指トリガーを押した時」のイベントハンドラの登録や削除を行うことができます。
 
-### ◆例文
+### ◇ 例文
 ```
 //GameManager.cs
 using UnityEngine;
@@ -525,7 +525,7 @@ public class GameManager : MonoBehaviour {
 }
 ```
 
-### ◆参照
+### ◇ 参照
 [OTouch.LHandTriggerDown](#LHandTriggerDown)  
 [OTouch.RHandTriggerUp](#RHandTriggerUp)  
 [OTouch.IsRHandTriggerDown](#IsRHandTriggerDown)  
@@ -536,14 +536,14 @@ public class GameManager : MonoBehaviour {
 
 # OTouch.RHandTriggerUp
 
-### ◆構文
+### ◇ 構文
 <em>otouch</em>.RHandTriggerUp += <em>SomeMethodHandler</em>  
 <em>otouch</em>.RHandTriggerUp -= <em>SomeMethodHandler</em>
 
-### ◆説明
+### ◇ 説明
 「右中指トリガーを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
 
-### ◆例文
+### ◇ 例文
 ```
 //GameManager.cs
 using UnityEngine;
@@ -566,7 +566,7 @@ public class GameManager : MonoBehaviour {
 }
 ```
 
-### ◆参照
+### ◇ 参照
 [OTouch.LHandTriggerUp](#LHandTriggerUp)  
 [OTouch.RHandTriggerDown](#RHandTriggerDown)  
 
@@ -576,14 +576,14 @@ public class GameManager : MonoBehaviour {
 
 # OTouch.RIndexTriggerDown
 
-### ◆構文
+### ◇ 構文
 <em>otouch</em>.RIndexTriggerDown += <em>SomeMethodHandler</em>  
 <em>otouch</em>.RIndexTriggerDown -= <em>SomeMethodHandler</em>
 
-### ◆説明
+### ◇ 説明
 「右人差し指トリガーを押した時」のイベントハンドラの登録や削除を行うことができます。
 
-### ◆例文
+### ◇ 例文
 ```
 //GameManager.cs
 using UnityEngine;
@@ -606,7 +606,7 @@ public class GameManager : MonoBehaviour {
 }
 ```
 
-### ◆参照
+### ◇ 参照
 [OTouch.LIndexTriggerDown](#LIndexTriggerDown)  
 [OTouch.RIndexTriggerUp](#RIndexTriggerUp)  
 [OTouch.IsRIndexTriggerDown](#IsRIndexTriggerDown)  
@@ -617,14 +617,14 @@ public class GameManager : MonoBehaviour {
 
 # OTouch.RIndexTriggerUp
 
-### ◆構文
+### ◇ 構文
 <em>otouch</em>.RIndexTriggerUp += <em>SomeMethodHandler</em>  
 <em>otouch</em>.RIndexTriggerUp -= <em>SomeMethodHandler</em>
 
-### ◆説明
+### ◇ 説明
 「右人差し指トリガーを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
 
-### ◆例文
+### ◇ 例文
 ```
 //GameManager.cs
 using UnityEngine;
@@ -647,7 +647,7 @@ public class GameManager : MonoBehaviour {
 }
 ```
 
-### ◆参照
+### ◇ 参照
 [OTouch.LIndexTriggerUp](#LIndexTriggerUp)  
 [OTouch.RIndexTriggerDown](#RIndexTriggerDown)  
 
@@ -657,19 +657,19 @@ public class GameManager : MonoBehaviour {
 
 # XXXX
 
-### ◆構文
+### ◇ 構文
 XXXX
 
-### ◆引数
+### ◇ 引数
 XXXX  
 
-### ◆説明
+### ◇ 説明
 XXXX
 
-### ◆例文
+### ◇ 例文
 ```
 //GameManager.cs
 ```
 
-### ◆参照
+### ◇ 参照
 XXXX
