@@ -10,7 +10,7 @@ Version Alpha1.201909171011 対応
 ## ◆ OTouch クラスのプロパティ一覧
 * [IsLHandTriggerDown](#IsLHandTriggerDown) : 「左中指トリガーを押している」か否かを調べる
 * [IsLIndexTriggerDown](#IsLIndexTriggerDown) : 「左人差し指トリガーを押している」か否かを調べる
-* [IsRHandTriggerDown](#IsRHandTriggerDown) : 
+* [IsRHandTriggerDown](#IsRHandTriggerDown) : 「右中指トリガーを押している」か否かを調べる
 * [IsRIndexTriggerDown](#IsRIndexTriggerDown) : 「右人差し指トリガーを押している」か否かを調べる
 * [L](#L) : 左手側の Oculus Touch コントローラーの動きに連動する GameObject を指定
 * [LHandTrigger](#LHandTrigger) : 
@@ -122,7 +122,7 @@ public class GameManager : MonoBehaviour {
 
 ### ◆参照
 [OTouch.IsRHandTriggerDown](#IsRHandTriggerDown)  
-[OTouch.RHandTriggerDown](#RHandTriggerDown)  
+[OTouch.LHandTriggerDown](#LHandTriggerDown)  
 
 ***
 
@@ -163,6 +163,47 @@ public class GameManager : MonoBehaviour {
 ### ◆参照
 [OTouch.IsRIndexTriggerDown](#IsRIndexTriggerDown)  
 [OTouch.LIndexTriggerDown](#LIndexTriggerDown)  
+
+***
+
+<a name="IsRHandTriggerDown"></a>
+
+# OTouch.IsRHandTriggerDown
+
+### ◆構文
+<em>otouch</em>.IsRHandTriggerDown
+
+### ◆説明
+プロパティ。
+「右中指トリガーを押している」か否かを示すブール値（読み取り専用）。
+
+### ◆例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private OTouch _otouch;
+    private Console _console; //DEBUG用
+
+    void Start() {
+        _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.R = GameObject.Find("OculusTouchR");
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    void Update() {
+        if (_otouch.IsRHandTriggerDown ) {
+            _console.Log("右中指トリガー↓"); //DEBUG用
+        }
+    }
+}
+```
+
+### ◆参照
+[OTouch.IsLHandTriggerDown](#IsLHandTriggerDown)  
+[OTouch.RHandTriggerDown](#RHandTriggerDown)  
 
 ***
 
