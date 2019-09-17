@@ -37,7 +37,6 @@ Version Alpha 1.201909170944 対応
 	[AddComponent](https://docs.unity3d.com/ja/current/ScriptReference/GameObject.AddComponent.html)  
 	[GameObject.Find()](https://docs.unity3d.com/ja/current/ScriptReference/GameObject.Find.html)
 
-***
 
 ## ◇コンソールの準備（推奨）
 * 概要
