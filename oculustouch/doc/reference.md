@@ -49,7 +49,7 @@ Version Alpha1.201909171011 対応
 * [LThumbstickRawTouch](#LThumbstickRawTouch) : 
 * [LThumbstickRightDown](#LThumbstickRightDown) : 
 * [LThumbstickRightUp](#LThumbstickRightUp) : 
-* [LThumbstickUp](#LThumbstickUp) : 
+* [LThumbstickUp](#LThumbstickUp) : 「左親指スティックを押した後、離した時」のイベントハンドラの登録や削除
 * [LThumbstickUpUp](#LThumbstickUpUp) : 
 * [LThumbstickUpDown](#LThumbstickUpDown) : 
 * [RHandTriggerDown](#RHandTriggerDown) : 「右中指トリガーを押した時」のイベントハンドラの登録や削除
@@ -800,6 +800,46 @@ public class GameManager : MonoBehaviour {
 ### ◇ 参照
 [OTouch.RThumbstickDown](#RThumbstickDown)  
 [OTouch.LThumbstickUp](#LThumbstickUp)  
+
+***
+
+<a name="LThumbstickUp"></a>
+
+# OTouch.LThumbstickUp
+
+### ◇ 構文
+<em>otouch</em>.LThumbstickUp += <em>SomeMethodHandler</em>  
+<em>otouch</em>.LThumbstickUp -= <em>SomeMethodHandler</em>
+
+### ◇ 説明
+イベント。  
+「左親指スティックを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.LThumbstickUp += LThumbstickUpHandler; // イベントハンドラの登録
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    private void LThumbstickUpHandler() { // イベントハンドラ
+        //ここに「左親指スティックを押した後、離した時」の処理を記述
+        _console.Log("左親指スティック↑"); //DEBUG用
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.RThumbstickUp](#RThumbstickUp)  
+[OTouch.LThumbstickDown](#LThumbstickDown)  
 
 ***
 
