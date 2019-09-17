@@ -134,7 +134,7 @@ public class GameManager : MonoBehaviour {
 <em>otouch</em>.ARawTouch -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
-「Aボタンに触れた時」のイベントハンドラの登録や削除を行うことができます。
+「Aボタンに触れた時」（触れている間ではなく、最初に触れた瞬間）のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
 ```
