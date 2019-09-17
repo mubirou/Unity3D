@@ -2,12 +2,12 @@
 Version Alpha1.201909171011 対応  
 © 2019 夢寐郎
 
-## ◆ OTouch クラスのメソッド一覧
+## ◆ メソッド一覧
 * [AddTargetObjects()](#AddTargetObjects) : 
 * [RemoveTargetObjects()](#RemoveTargetObjects) : 
 
 
-## ◆ OTouch クラスのプロパティ一覧
+## ◆ プロパティ一覧
 * [IsLHandTriggerDown](#IsLHandTriggerDown) : 「左中指トリガーを押している」か否かを調べる
 * [IsLIndexTriggerDown](#IsLIndexTriggerDown) : 「左人差し指トリガーを押している」か否かを調べる
 * [IsRHandTriggerDown](#IsRHandTriggerDown) : 「右中指トリガーを押している」か否かを調べる
@@ -23,7 +23,7 @@ Version Alpha1.201909171011 対応
 * [TargetObjects](#TargetObjects) : 
 
 
-## ◆ OTouch クラスのイベント一覧
+## ◆ イベント一覧
 * [ADown](#) : 
 * [ARawTouch](#) : 
 * [AUp](#) : 
