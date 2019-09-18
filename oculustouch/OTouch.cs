@@ -16,8 +16,10 @@ using System; //for Math
  *  <Public Property>
  *      IsLHandTriggerDown（Read Only）
  *      IsLIndexTriggerDown（Read Only）
+ *      IsLThumbstickMove（Read Only）
  *      IsRHandTriggerDown（Read Only）
  *      IsRIndexTriggerDown（Read Only）
+ *      IsRThumbstickMove（Read Only）
  *      L
  *      LHandTrigger（Read Only）
  *      LIndexTrigger（Read Only）
