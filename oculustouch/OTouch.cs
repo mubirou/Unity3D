@@ -1,5 +1,5 @@
 ﻿/***************************************************************************
- * OTouch Alpha1.201909181816
+ * OTouch Alpha1.201909190843
  * © 2019 夢寐郎
  ***************************************************************************/
 using System.Collections;
@@ -634,6 +634,12 @@ public class OTouch : MonoBehaviour {
                 return true;
             } else if (_isLThumbstickRightDown) {
                 return true;
+            } else if (RThumbstickRotate == 0) { //????? (20190919)
+                _isLThumbstickUpDown = false;
+                _isLThumbstickDownDown = false;
+                _isLThumbstickLeftDown = false;
+                _isLThumbstickRightDown = false;
+                return false;
             } else {
                 return false;
             }
