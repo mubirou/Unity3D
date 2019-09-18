@@ -1,5 +1,5 @@
 # OTouch リファレンスマニュアル
-Version Alpha1.201909171011 対応  
+Version Alpha1.201909181816 対応  
 © 2019 夢寐郎
 
 ## ◆ メソッド一覧
@@ -401,17 +401,60 @@ public class GameManager : MonoBehaviour {
     }
 
     void Update() {
-        if (_otouch.IsLIndexTriggerDown) {
-            _console.Log("左人差し指トリガー↓"); //DEBUG用
+        if (_otouch.IsLThumbstickMove) {
+            _console.Log("左親指スティック↻"); //DEBUG用
         }
     }
 }
 ```
 
 ### ◇ 参照
-[OTouch.IsRIndexTriggerDown](#IsRIndexTriggerDown)  
+[OTouch.IsLIndexTriggerDown](#IsRIndexTriggerDown)  
 [OTouch.LIndexTriggerDown](#LIndexTriggerDown)  
 [OTouch.LIndexTrigger](#LIndexTrigger)  
+
+***
+
+<a name="IsLThumbstickMove"></a>
+
+# OTouch.IsLThumbstickMove
+
+### ◇ 構文
+<em>otouch</em>.IsLThumbstickMove
+
+### ◇ 説明
+プロパティ。  
+「左親指スティックを動かしている」か否かを示すブール値（読み取り専用）。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private OTouch _otouch;
+    private Console _console; //DEBUG用
+
+    void Start() {
+        _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    void Update() {
+        if (_otouch.IsLThumbstickMove) {
+            _console.Log("左親指スティック↻"); //DEBUG用
+        }
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.IsRThumbstickMove](#IsRThumbstickMove)  
+[OTouch.LThumbstickUpDown](#LThumbstickUpDown)  
+[OTouch.LThumbstickDownDown](#LThumbstickDownDown)  
+[OTouch.LThumbstickLeftDown](#LThumbstickLeftDown)  
+[OTouch.LThumbstickRightDown](#LThumbstickRightDown)  
 
 ***
 

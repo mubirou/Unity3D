@@ -1,5 +1,5 @@
 ﻿/***************************************************************************
- * OTouch Alpha1.201909171011
+ * OTouch Alpha1.201909181816
  * © 2019 夢寐郎
  ***************************************************************************/
 using System.Collections;
@@ -345,6 +345,7 @@ public class OTouch : MonoBehaviour {
             _isRHandTriggerDown = false;
             RHandTriggerUp();
         }
+
         //Aボタン
         if (OVRInput.GetDown(OVRInput.RawButton.A)) ADown();
         if (OVRInput.GetUp(OVRInput.RawButton.A)) AUp();
@@ -365,72 +366,75 @@ public class OTouch : MonoBehaviour {
         if (OVRInput.GetUp(OVRInput.RawButton.LThumbstick)) LThumbstickUp();
         if (OVRInput.GetDown(OVRInput.RawButton.RThumbstick)) RThumbstickDown();
         if (OVRInput.GetUp(OVRInput.RawButton.RThumbstick)) RThumbstickUp();
+
         //親指スティック上下左右（↓）
         if (OVRInput.GetDown(OVRInput.RawButton.LThumbstickUp)) {
-            LThumbstickUpDown();
             _isLThumbstickUpDown = true;
+            LThumbstickUpDown();
         }
         if (OVRInput.GetDown(OVRInput.RawButton.LThumbstickDown)) {
-            LThumbstickDownDown();
             _isLThumbstickDownDown = true;
+            LThumbstickDownDown();
         }
         if (OVRInput.GetDown(OVRInput.RawButton.LThumbstickLeft)) {
-            LThumbstickLeftDown();
             _isLThumbstickLeftDown = true;
+            LThumbstickLeftDown();
         }
         if (OVRInput.GetDown(OVRInput.RawButton.LThumbstickRight)) {
-            LThumbstickRightDown();
             _isLThumbstickRightDown = true;
+            LThumbstickRightDown();
         }
         if (OVRInput.GetDown(OVRInput.RawButton.RThumbstickUp)) {
-            RThumbstickUpDown();
             _isRThumbstickUpDown = true;
+            RThumbstickUpDown();
         }
         if (OVRInput.GetDown(OVRInput.RawButton.RThumbstickDown)) {
-            RThumbstickDownDown();
             _isRThumbstickDownDown = true;
+            RThumbstickDownDown();
         }
         if (OVRInput.GetDown(OVRInput.RawButton.RThumbstickLeft)) {
-            RThumbstickLeftDown();
             _isRThumbstickLeftDown = true;
+            RThumbstickLeftDown();
         }
         if (OVRInput.GetDown(OVRInput.RawButton.RThumbstickRight)) {
-            RThumbstickRightDown();
             _isRThumbstickRightDown = true;
+            RThumbstickRightDown();
         }
+
         //親指スティック上下左右（↑）
         if (OVRInput.GetUp(OVRInput.RawButton.LThumbstickUp)) {
-            LThumbstickUpUp();
             _isLThumbstickUpDown = false;
+            LThumbstickUpUp();
         }
         if (OVRInput.GetUp(OVRInput.RawButton.LThumbstickDown)) {
-            LThumbstickDownUp();
             _isLThumbstickDownDown = false;
+            LThumbstickDownUp();
         }
         if (OVRInput.GetUp(OVRInput.RawButton.LThumbstickLeft)) {
-            LThumbstickLeftUp();
             _isLThumbstickLeftDown = false;
+            LThumbstickLeftUp();
         }
         if (OVRInput.GetUp(OVRInput.RawButton.LThumbstickRight)) {
-            LThumbstickRightUp();
             _isLThumbstickRightDown = false;
+            LThumbstickRightUp();
         }
         if (OVRInput.GetUp(OVRInput.RawButton.RThumbstickUp)) {
-            RThumbstickUpUp();
             _isRThumbstickUpDown = false;
+            RThumbstickUpUp();
         }
         if (OVRInput.GetUp(OVRInput.RawButton.RThumbstickDown)) {
-            RThumbstickDownUp();
             _isRThumbstickDownDown = false;
+            RThumbstickDownUp();
         }
         if (OVRInput.GetUp(OVRInput.RawButton.RThumbstickLeft)) {
-            RThumbstickLeftUp();
             _isRThumbstickLeftDown = false;
+            RThumbstickLeftUp();
         }
         if (OVRInput.GetUp(OVRInput.RawButton.RThumbstickRight)) {
-            RThumbstickRightUp();
             _isRThumbstickRightDown = false;
+            RThumbstickRightUp();
         }
+
         //タッチ（RawTouch）
         if (OVRInput.GetDown(OVRInput.RawTouch.LIndexTrigger)) LIndexTriggerRawTouch();
         if (OVRInput.GetDown(OVRInput.RawTouch.RIndexTrigger)) RIndexTriggerRawTouch();
@@ -440,6 +444,7 @@ public class OTouch : MonoBehaviour {
         if (OVRInput.GetDown(OVRInput.RawTouch.B)) BRawTouch();
         if (OVRInput.GetDown(OVRInput.RawTouch.X)) XRawTouch();
         if (OVRInput.GetDown(OVRInput.RawTouch.Y)) YRawTouch();
+
         //近接（RawNearTouch）
         if (OVRInput.GetDown(OVRInput.RawNearTouch.LIndexTrigger)) LIndexTriggerRawNearTouch();
         if (OVRInput.GetDown(OVRInput.RawNearTouch.RIndexTrigger)) RIndexTriggerRawNearTouch();
