@@ -541,6 +541,50 @@ public class GameManager : MonoBehaviour {
 
 ***
 
+<a name="IsRThumbstickMove"></a>
+
+# OTouch.IsRThumbstickMove
+
+### ◇ 構文
+<em>otouch</em>.IsRThumbstickMove
+
+### ◇ 説明
+プロパティ。  
+「右親指スティックを動かしている」か否かを示すブール値（読み取り専用）。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private OTouch _otouch;
+    private Console _console; //DEBUG用
+
+    void Start() {
+        _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.R = GameObject.Find("OculusTouchR");
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    void Update() {
+        if (_otouch.IsRThumbstickMove) {
+            _console.Log("右親指スティック↻"); //DEBUG用
+        }
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.IsLThumbstickMove](#IsLThumbstickMove)  
+[OTouch.RThumbstickUpDown](#RThumbstickUpDown)  
+[OTouch.RThumbstickDownDown](#RThumbstickDownDown)  
+[OTouch.RThumbstickLeftDown](#RThumbstickLeftDown)  
+[OTouch.RThumbstickRightDown](#RThumbstickRightDown)  
+
+***
+
 <a name="L"></a>
 
 # OTouch.L
