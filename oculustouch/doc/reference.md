@@ -920,7 +920,7 @@ public class GameManager : MonoBehaviour {
 
     void Update() {
         if (_otouch.IsLThumbstickMove) { //左親指スティックを動かしている時
-            _console.Log(_otouch.LThumbstickRotate);
+            _console.Log(_otouch.LThumbstickRotate.ToString());
         }
     }
 }
