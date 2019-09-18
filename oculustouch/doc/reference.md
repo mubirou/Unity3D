@@ -17,7 +17,7 @@ Version Alpha1.201909181816 対応
 * [L](#L) : 左手側の Oculus Touch コントローラーの動きに連動する GameObject を指定
 * [LHandTrigger](#LHandTrigger) : 「左中指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁で表示）
 * [LIndexTrigger](#LIndexTrigger) : 「左人差し指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁で表示）
-* [LThumbstickRotate](#LThumbstickRotate) : 
+* [LThumbstickRotate](#LThumbstickRotate) : 「左親指スティックの角度」（度数法）
 * [R](#R) : 右手側の Oculus Touch コントローラーの動きに連動する GameObject を指定
 * [RHandTrigger](#RHandTrigger) : 「右中指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁で表示）
 * [RIndexTrigger](#RIndexTrigger) : 「右人差し指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁で表示）
@@ -919,7 +919,7 @@ public class GameManager : MonoBehaviour {
     }
 
     void Update() {
-        if (_otouch.IsLThumbstickMove) { 左親指スティックを動かしている時
+        if (_otouch.IsLThumbstickMove) { //左親指スティックを動かしている時
             _console.Log(_otouch.LThumbstickRotate);
         }
     }
