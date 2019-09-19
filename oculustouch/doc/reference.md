@@ -21,7 +21,7 @@ Version Alpha1.201909181816 対応
 * [R](#R) : 右手側の Oculus Touch コントローラーの動きに連動する GameObject を指定
 * [RHandTrigger](#RHandTrigger) : 「右中指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁で表示）
 * [RIndexTrigger](#RIndexTrigger) : 「右人差し指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁で表示）
-* [RThumbstickRotate](#RThumbstickRotate) : 
+* [RThumbstickRotate](#RThumbstickRotate) : 「右親指スティックの角度」（度数法）
 * [TargetObjects](#TargetObjects) : 
 
 
