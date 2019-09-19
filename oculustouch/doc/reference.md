@@ -1285,6 +1285,47 @@ public class GameManager : MonoBehaviour {
 
 ***
 
+<a name="RThumbstickRotate"></a>
+
+# OTouch.RThumbstickRotate 
+
+### ◇ 構文
+<em>otouch</em>.RThumbstickRotate
+
+### ◇ 説明
+プロパティ。  
+「右親指スティックの角度（度数法）」（読み取り専用）。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private OTouch _otouch;
+    private Console _console; //DEBUG用
+
+    void Start() {
+        _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.R = GameObject.Find("OculusTouchR");
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    void Update() {
+        if (_otouch.IsRThumbstickMove) { //右親指スティックを動かしている時
+            _console.Log(_otouch.RThumbstickRotate.ToString());
+        }
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.LThumbstickRotate](#LThumbstickRotate)  
+[OTouch.IsRThumbstickMove](#IsRThumbstickMove)  
+
+***
+
 <a name="RThumbstickUp"></a>
 
 # OTouch.RThumbstickUp
