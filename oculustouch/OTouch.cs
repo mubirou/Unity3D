@@ -1,5 +1,5 @@
 ﻿/***************************************************************************
- * OTouch Alpha1.201909191957
+ * OTouch Alpha1.201909192008
  * © 2019 夢寐郎
  ***************************************************************************/
 using System.Collections;
@@ -453,17 +453,9 @@ public class OTouch : MonoBehaviour {
         if (OVRInput.GetDown(OVRInput.RawTouch.LIndexTrigger)) LIndexTriggerRawTouch();
         if (OVRInput.GetDown(OVRInput.RawTouch.RIndexTrigger)) RIndexTriggerRawTouch();
         if (OVRInput.GetDown(OVRInput.RawTouch.LThumbstick)) {
-            // _isLThumbstickUpDown = false;
-            // _isLThumbstickDownDown = false;
-            // _isLThumbstickLeftDown = false;
-            // _isLThumbstickRightDown = false;
             LThumbstickRawTouch();
         }
         if (OVRInput.GetDown(OVRInput.RawTouch.RThumbstick)) {
-            // _isRThumbstickUpDown = false;
-            // _isRThumbstickDownDown = false;
-            // _isRThumbstickLeftDown = false;
-            // _isRThumbstickRightDown = false;
             RThumbstickRawTouch();
         }
         if (OVRInput.GetDown(OVRInput.RawTouch.A)) ARawTouch();
@@ -650,7 +642,7 @@ public class OTouch : MonoBehaviour {
     //親指スティックを動かしているか
     public bool IsLThumbstickMove {
         get {
-            if (LThumbstickRotate == 0) return false; //NEW 201909191957
+            if (LThumbstickRotate == 0) return false;
             if (_isLThumbstickUpDown) {
                 return true;
             } else if (_isLThumbstickDownDown) {
@@ -667,7 +659,7 @@ public class OTouch : MonoBehaviour {
     }
     public bool IsRThumbstickMove {
         get {
-            if (LThumbstickRotate == 0) return false; //NEW 201909191957
+            if (RThumbstickRotate == 0) return false;
             if (_isRThumbstickUpDown) {
                 return true;
             } else if (_isRThumbstickDownDown) {
