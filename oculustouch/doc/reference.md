@@ -8,6 +8,8 @@ Version Alpha1.201909192008 対応
 
 
 ## ◆ プロパティ一覧
+* [EnabledLaserL](#EnabledLaserL) : 左手側のレーザーポインタを表示するか否か
+* [EnabledLaserR](#EnabledLaserR) : 右手側のレーザーポインタを表示するか否か
 * [IsLHandTriggerDown](#IsLHandTriggerDown) : 「左中指トリガーを押している」か否か
 * [IsLIndexTriggerDown](#IsLIndexTriggerDown) : 「左人差し指トリガーを押している」か否か
 * [IsLThumbstickMove](#IsLThumbstickMove) : 「左親指スティックを動かしている」か否か
