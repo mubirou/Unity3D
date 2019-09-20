@@ -53,7 +53,7 @@ Version Alpha1.201909192008 対応
 * [LThumbstickRightUp](#LThumbstickRightUp) : 
 * [LThumbstickUp](#LThumbstickUp) : 「左親指スティックを押した後、離した時」のイベントハンドラの登録や削除
 * [LThumbstickUpUp](#LThumbstickUpUp) : 
-* [LThumbstickUpDown](#LThumbstickUpDown) : 
+* [LThumbstickUpDown](#LThumbstickUpDown) : 「左親指スティックを上に倒した時」のイベントハンドラの登録や削除
 * [RHandTriggerDown](#RHandTriggerDown) : 「右中指トリガーを押した時」のイベントハンドラの登録や削除
 * [RHandTriggerUp](#RHandTriggerUp) : 「右中指トリガーを押した後、離した時」のイベントハンドラの登録や削除
 * [RIndexTriggerDown](#RIndexTriggerDown) : 「右人差し指トリガーを押した時」のイベントハンドラの登録や削除
