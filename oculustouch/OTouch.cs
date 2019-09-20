@@ -1,5 +1,5 @@
 ﻿/***************************************************************************
- * OTouch Alpha1.201909192008
+ * OTouch Alpha1.201909202132
  * © 2019 夢寐郎
  ***************************************************************************/
 using System.Collections;
@@ -231,14 +231,6 @@ public class OTouch : MonoBehaviour {
         GameObject _trackingSpace = _ovrCameraRig.transform.Find("TrackingSpace").gameObject;
         _leftHandAnchor = _trackingSpace.transform.Find("LeftHandAnchor").gameObject;
         _rightHandAnchor = _trackingSpace.transform.Find("RightHandAnchor").gameObject;
-
-        //コントローラーのレーザーポイントを表示する
-        _lineRendererL = _oculusTouchL.GetComponent<LineRenderer>();
-        _lineRendererL.enabled = true;
-        _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth2;
-        _lineRendererR = _oculusTouchR.GetComponent<LineRenderer>();
-        _lineRendererR.enabled = true;
-        _lineRendererR.startWidth = _lineRendererR.endWidth = _lineWidth1;
     }
 
     /*****************************************************************************
@@ -600,11 +592,23 @@ public class OTouch : MonoBehaviour {
     //=====================================
     public GameObject L {
         get { return _oculusTouchL; }
-        set { _oculusTouchL = value; }
+        set {
+            _oculusTouchL = value;
+            //コントローラーのレーザーポイントを表示する
+            _lineRendererL = _oculusTouchL.GetComponent<LineRenderer>();
+            _lineRendererL.enabled = true;
+            _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth2;
+        }
     }
     public GameObject R {
         get { return _oculusTouchR; }
-        set { _oculusTouchR = value; }
+        set {
+            _oculusTouchR = value;
+            //コントローラーのレーザーポイントを表示する
+            _lineRendererR = _oculusTouchR.GetComponent<LineRenderer>();
+            _lineRendererR.enabled = true;
+            _lineRendererR.startWidth = _lineRendererR.endWidth = _lineWidth1;
+        }
     }
     public double LIndexTrigger {
         get { return OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger); }
