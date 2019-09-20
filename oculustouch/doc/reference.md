@@ -74,7 +74,7 @@ Version Alpha1.201909192008 対応
 * [RThumbstickRightDown](#RThumbstickRightDown) : 
 * [RThumbstickRightUp](#RThumbstickRightUp) : 
 * [RThumbstickUp](#RThumbstickUp) : 「右親指スティックを押した後、離した時」のイベントハンドラの登録や削除
-* [RThumbstickUpDown](#RThumbstickUpDown) : 
+* [RThumbstickUpDown](#RThumbstickUpDown) : 「右親指スティックを上に倒した時」のイベントハンドラの登録や削除
 * [RThumbstickUpUp](#RThumbstickUpUp) : 
 * [StartDown](#StartDown) : 「スタートボタン（Xボタンの下）を押した時」のイベントハンドラの登録や削除
 * [StartUp](#StartUp) : 「スタートボタン（Xボタンの下）を押した後、離した時」のイベントハンドラの登録や削除
@@ -1953,6 +1953,50 @@ public class GameManager : MonoBehaviour {
 ### ◇ 参照
 [OTouch.LThumbstickUp](#LThumbstickUp)  
 [OTouch.RThumbstickDown](#RThumbstickDown)  
+
+***
+
+<a name="RThumbstickUpDown"></a>
+
+# OTouch.RThumbstickUpDown
+
+### ◇ 構文
+<em>otouch</em>.RThumbstickUpDown += <em>SomeMethodHandler</em>  
+<em>otouch</em>.RThumbstickUpDown -= <em>SomeMethodHandler</em>
+
+### ◇ 説明
+イベント。  
+「右親指スティックを上に倒した時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.R = GameObject.Find("OculusTouchR");
+        _otouch.RThumbstickUpDown += RThumbstickUpDownHandler; // イベントハンドラの登録
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    private void RThumbstickUpDownHandler() { // イベントハンドラ
+        //ここに「右親指スティックを上に倒した時」の処理を記述
+        _console.Log("右親指スティックを上に↓"); //DEBUG用
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.LThumbstickUpDown](#LThumbstickUpDown)  
+[OTouch.RThumbstickUpUp](#RThumbstickUpUp)  
+[OTouch.RThumbstickDownDown](#RThumbstickDownDown)  
+[OTouch.RThumbstickLeftDown](#RThumbstickLeftDown)  
+[OTouch.RThumbstickRightDown](#RThumbstickRightDown)  
 
 ***
 
