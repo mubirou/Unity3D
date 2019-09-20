@@ -72,7 +72,7 @@ Version Alpha1.201909192008 対応
 * [RThumbstickLeftUp](#RThumbstickLeftUp) : 「右親指スティックを左に倒した後、離した時」のイベントハンドラの登録や削除
 * [RThumbstickRawTouch](#RThumbstickRawTouch) : 「右親指スティックにタッチした時」のイベントハンドラの登録や削除
 * [RThumbstickRightDown](#RThumbstickRightDown) : 「右親指スティックを右に倒した時」のイベントハンドラの登録や削除
-* [RThumbstickRightUp](#RThumbstickRightUp) : 
+* [RThumbstickRightUp](#RThumbstickRightUp) : 「右親指スティックを右に倒した後、離した時」のイベントハンドラの登録や削除
 * [RThumbstickUp](#RThumbstickUp) : 「右親指スティックを押した後、離した時」のイベントハンドラの登録や削除
 * [RThumbstickUpDown](#RThumbstickUpDown) : 「右親指スティックを上に倒した時」のイベントハンドラの登録や削除
 * [RThumbstickUpUp](#RThumbstickUpUp) : 「右親指スティックを上に倒した後、離した時」のイベントハンドラの登録や削除
@@ -2091,6 +2091,50 @@ public class GameManager : MonoBehaviour {
 [OTouch.RThumbstickUpDown](#RThumbstickUpDown)  
 [OTouch.RThumbstickDownDown](#RThumbstickDownDown)  
 [OTouch.RThumbstickLeftDown](#RThumbstickLeftDown)  
+
+***
+
+<a name="RThumbstickRightUp"></a>
+
+# OTouch.RThumbstickRightUp
+
+### ◇ 構文
+<em>otouch</em>.RThumbstickRightUp += <em>SomeMethodHandler</em>  
+<em>otouch</em>.RThumbstickRightUp -= <em>SomeMethodHandler</em>
+
+### ◇ 説明
+イベント。  
+「右親指スティックを右に倒した後、離した時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.R = GameObject.Find("OculusTouchR");
+        _otouch.RThumbstickRightUp += RThumbstickRightUpHandler; // イベントハンドラの登録
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    private void RThumbstickRightUpHandler() { // イベントハンドラ
+        //ここに「右親指スティックを右に倒した後、離した時」の処理を記述
+        _console.Log("右親指スティックを右に↓の後↑"); //DEBUG用
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.LThumbstickRightUp](#LThumbstickRightUp)  
+[OTouch.RThumbstickRightDown](#RThumbstickRightDown)  
+[OTouch.RThumbstickUpUp](#RThumbstickUpUp)  
+[OTouch.RThumbstickDownUp](#RThumbstickDownUp)  
+[OTouch.RThumbstickLeftUp](#RThumbstickLeftUp)  
 
 ***
 
