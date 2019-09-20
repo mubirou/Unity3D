@@ -57,7 +57,7 @@ Version Alpha1.201909192008 対応
 * [RHandTriggerDown](#RHandTriggerDown) : 「右中指トリガーを押した時」のイベントハンドラの登録や削除
 * [RHandTriggerUp](#RHandTriggerUp) : 「右中指トリガーを押した後、離した時」のイベントハンドラの登録や削除
 * [RIndexTriggerDown](#RIndexTriggerDown) : 「右人差し指トリガーを押した時」のイベントハンドラの登録や削除
-* [RIndexTriggerRawNearTouch](#RIndexTriggerRawNearTouch) : 
+* [RIndexTriggerRawNearTouch](#RIndexTriggerRawNearTouch) : 「右人差し指トリガーに近接した時」のイベントハンドラの登録や削除
 * [RIndexTriggerRawTouch](#RIndexTriggerRawTouch) : 「右人差し指トリガーにタッチした時」のイベントハンドラの登録や削除
 * [RIndexTriggerUp](#RIndexTriggerUp) : 「右人差し指トリガーを押した後、離した時」のイベントハンドラの登録や削除
 * [RLaserDown](#RLaserDown) : 
@@ -1240,6 +1240,47 @@ public class GameManager : MonoBehaviour {
 [OTouch.LIndexTriggerDown](#LIndexTriggerDown)  
 [OTouch.RIndexTriggerUp](#RIndexTriggerUp)  
 [OTouch.IsRIndexTriggerDown](#IsRIndexTriggerDown)  
+
+***
+
+<a name="RIndexTriggerRawNearTouch"></a>
+
+# OTouch.RIndexTriggerRawNearTouch
+
+### ◇ 構文
+<em>otouch</em>.RIndexTriggerRawNearTouch += <em>SomeMethodHandler</em>  
+<em>otouch</em>.RIndexTriggerRawNearTouch -= <em>SomeMethodHandler</em>
+
+### ◇ 説明
+イベント。  
+「右人差し指トリガーに近接した時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.R = GameObject.Find("OculusTouchR");
+        _otouch.RIndexTriggerRawNearTouch += RIndexTriggerRawNearTouchHandler; //イベントハンドラの登録
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    private void RIndexTriggerRawNearTouchHandler() { //イベントハンドラ
+        //ここに「右人差し指トリガーに近接した時」の処理を記述
+        _console.Log("右人差し指トリガーに近接"); //DEBUG用
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.LIndexTriggerRawNearTouch](#LIndexTriggerRawNearTouch)  
+[OTouch.RIndexTriggerRawTouch ](#RIndexTriggerRawTouch)  
 
 ***
 
