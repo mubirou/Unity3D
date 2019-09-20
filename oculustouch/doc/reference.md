@@ -1103,7 +1103,7 @@ public class GameManager : MonoBehaviour {
 
 ### ◇ 説明
 イベント。  
-「左親指スティックを押した時」のイベントハンドラの登録や削除を行うことができます。
+「左親指スティックを上に倒した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
 ```
@@ -1121,8 +1121,8 @@ public class GameManager : MonoBehaviour {
     }
 
     private void LThumbstickUpDownHandler() { // イベントハンドラ
-        //ここに「左親指スティックを上に押した時」の処理を記述
-        _console.Log("左親指スティック（上）↓"); //DEBUG用
+        //ここに「左親指スティックを上に倒した時」の処理を記述
+        _console.Log("左親指スティックを上に↓"); //DEBUG用
     }
 }
 ```
