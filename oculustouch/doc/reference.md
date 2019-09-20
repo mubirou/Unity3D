@@ -50,7 +50,7 @@ Version Alpha1.201909192008 対応
 * [LThumbstickLeftUp](#LThumbstickLeftUp) : 「左親指スティックを左に倒した後、離した時」のイベントハンドラの登録や削除
 * [LThumbstickRawTouch](#LThumbstickRawTouch) : 「左親指スティックにタッチした時」のイベントハンドラの登録や削除
 * [LThumbstickRightDown](#LThumbstickRightDown) : 「左親指スティックを右に倒した時」のイベントハンドラの登録や削除
-* [LThumbstickRightUp](#LThumbstickRightUp) : 
+* [LThumbstickRightUp](#LThumbstickRightUp) : 「左親指スティックを右に倒した後、離した時」のイベントハンドラの登録や削除
 * [LThumbstickUp](#LThumbstickUp) : 「左親指スティックを押した後、離した時」のイベントハンドラの登録や削除
 * [LThumbstickUpDown](#LThumbstickUpDown) : 「左親指スティックを上に倒した時」のイベントハンドラの登録や削除
 * [LThumbstickUpUp](#LThumbstickUpUp) : 「左親指スティックを上に倒した後、離した時」のイベントハンドラの登録や削除
@@ -1225,6 +1225,49 @@ public class GameManager : MonoBehaviour {
 [OTouch.LThumbstickUpDown](#LThumbstickUpDown)  
 [OTouch.LThumbstickDownDown](#LThumbstickDownDown)  
 [OTouch.LThumbstickLeftDown](#LThumbstickLeftDown)  
+
+***
+
+<a name="LThumbstickRightUp"></a>
+
+# OTouch.LThumbstickRightUp
+
+### ◇ 構文
+<em>otouch</em>.LThumbstickRightUp += <em>SomeMethodHandler</em>  
+<em>otouch</em>.LThumbstickRightUp -= <em>SomeMethodHandler</em>
+
+### ◇ 説明
+イベント。  
+「左親指スティックを右に倒した後、離した時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.LThumbstickRightUp += LThumbstickRightUpHandler; // イベントハンドラの登録
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    private void LThumbstickRightUpHandler() { // イベントハンドラ
+        //ここに「左親指スティックを右に倒した後、離した時」の処理を記述
+        _console.Log("左親指スティックを右に↓の後↑"); //DEBUG用
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.RThumbstickRightUp](#RThumbstickRightUp)  
+[OTouch.LThumbstickRightDown](#LThumbstickRightDown)  
+[OTouch.LThumbstickUpUp](#LThumbstickUpUp)  
+[OTouch.LThumbstickDownUp](#LThumbstickDownUp)  
+[OTouch.LThumbstickLeftUp](#LThumbstickLeftUp)  
 
 ***
 
