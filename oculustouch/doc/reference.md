@@ -973,6 +973,49 @@ public class GameManager : MonoBehaviour {
 
 ***
 
+<a name="LThumbstickDownDown"></a>
+
+# OTouch.LThumbstickDownDown
+
+### ◇ 構文
+<em>otouch</em>.LThumbstickDownDown += <em>SomeMethodHandler</em>  
+<em>otouch</em>.LThumbstickDownDown -= <em>SomeMethodHandler</em>
+
+### ◇ 説明
+イベント。  
+「左親指スティックを下に倒した時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.LThumbstickDownDown += LThumbstickDownDownHandler; // イベントハンドラの登録
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    private void LThumbstickDownDownHandler() { // イベントハンドラ
+        //ここに「左親指スティックを下に倒した時」の処理を記述
+        _console.Log("左親指スティックを下に↓"); //DEBUG用
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.RThumbstickDownDown](#RThumbstickDownDown)  
+[OTouch.LThumbstickDownUp](#LThumbstickDownUp)  
+[OTouch.RThumbstickUpDown](#RThumbstickUpDown)  
+[OTouch.RThumbstickLeftDown](#RThumbstickLeftDown)  
+[OTouch.RThumbstickRightDown](#RThumbstickRightDown)  
+
+***
+
 <a name="LThumbstickRawTouch"></a>
 
 # OTouch.LThumbstickRawTouch
