@@ -969,6 +969,7 @@ public class GameManager : MonoBehaviour {
 ### ◇ 参照
 [OTouch.RThumbstickDown](#RThumbstickDown)  
 [OTouch.LThumbstickUp](#LThumbstickUp)  
+[OTouch.LThumbstickRawTouch](#LThumbstickRawTouch)  
 
 ***
 
