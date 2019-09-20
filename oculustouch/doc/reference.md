@@ -69,7 +69,7 @@ Version Alpha1.201909192008 対応
 * [RThumbstickDownDown](#RThumbstickDownDown) : 「右親指スティックを下に倒した時」のイベントハンドラの登録や削除
 * [RThumbstickDownUp](#RThumbstickDownUp) : 「右親指スティックを下に倒した後、離した時」のイベントハンドラの登録や削除
 * [RThumbstickLeftDown](#RThumbstickLeftDown) : 「右親指スティックを左に倒した時」のイベントハンドラの登録や削除
-* [RThumbstickLeftUp](#RThumbstickLeftUp) : 
+* [RThumbstickLeftUp](#RThumbstickLeftUp) : 「右親指スティックを左に倒した後、離した時」のイベントハンドラの登録や削除
 * [RThumbstickRawTouch](#RThumbstickRawTouch) : 「右親指スティックにタッチした時」のイベントハンドラの登録や削除
 * [RThumbstickRightDown](#RThumbstickRightDown) : 「右親指スティックを右に倒した時」のイベントハンドラの登録や削除
 * [RThumbstickRightUp](#RThumbstickRightUp) : 
@@ -1962,6 +1962,50 @@ public class GameManager : MonoBehaviour {
 [OTouch.RThumbstickUpDown](#RThumbstickUpDown)  
 [OTouch.RThumbstickDownDown](#RThumbstickDownDown)  
 [OTouch.RThumbstickRightDown](#RThumbstickRightDown)  
+
+***
+
+<a name="RThumbstickLeftUp"></a>
+
+# OTouch.RThumbstickLeftUp
+
+### ◇ 構文
+<em>otouch</em>.RThumbstickLeftUp += <em>SomeMethodHandler</em>  
+<em>otouch</em>.RThumbstickLeftUp -= <em>SomeMethodHandler</em>
+
+### ◇ 説明
+イベント。  
+「右親指スティックを左に倒した後、離した時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.R = GameObject.Find("OculusTouchR");
+        _otouch.RThumbstickLeftUp += RThumbstickLeftUpHandler; // イベントハンドラの登録
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    private void RThumbstickLeftUpHandler() { // イベントハンドラ
+        //ここに「右親指スティックを左に倒した後、離した時」の処理を記述
+        _console.Log("右親指スティックを左に↓の後↑"); //DEBUG用
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.LThumbstickLeftUp](#LThumbstickLeftUp)  
+[OTouch.RThumbstickLeftDown](#RThumbstickLeftDown)  
+[OTouch.RThumbstickUpUp](#RThumbstickUpUp)  
+[OTouch.RThumbstickDownUp](#RThumbstickDownUp)  
+[OTouch.RThumbstickRightUp](#RThumbstickRightUp)  
 
 ***
 
