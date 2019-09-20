@@ -47,7 +47,7 @@ Version Alpha1.201909192008 対応
 * [LThumbstickDownDown](#LThumbstickDownDown) : 「左親指スティックを下に倒した時」のイベントハンドラの登録や削除
 * [LThumbstickDownUp](#LThumbstickDownUp) : 「左親指スティックを下に倒した後、離した時」のイベントハンドラの登録や削除
 * [LThumbstickLeftDown](#LThumbstickLeftDown) : 「左親指スティックを左に倒した時」のイベントハンドラの登録や削除
-* [LThumbstickLeftUp](#LThumbstickLeftUp) : 
+* [LThumbstickLeftUp](#LThumbstickLeftUp) : 「左親指スティックを左に倒した後、離した時」のイベントハンドラの登録や削除
 * [LThumbstickRawTouch](#LThumbstickRawTouch) : 「左親指スティックにタッチした時」のイベントハンドラの登録や削除
 * [LThumbstickRightDown](#LThumbstickRightDown) : 「左親指スティックを右に倒した時」のイベントハンドラの登録や削除
 * [LThumbstickRightUp](#LThumbstickRightUp) : 
@@ -1099,6 +1099,49 @@ public class GameManager : MonoBehaviour {
 [OTouch.LThumbstickUpDown](#LThumbstickUpDown)  
 [OTouch.LThumbstickDownDown](#LThumbstickDownDown)  
 [OTouch.LThumbstickRightDown](#LThumbstickRightDown)  
+
+***
+
+<a name="LThumbstickLeftUp"></a>
+
+# OTouch.LThumbstickLeftUp
+
+### ◇ 構文
+<em>otouch</em>.LThumbstickLeftUp += <em>SomeMethodHandler</em>  
+<em>otouch</em>.LThumbstickLeftUp -= <em>SomeMethodHandler</em>
+
+### ◇ 説明
+イベント。  
+「左親指スティックを左に倒した後、離した時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.LThumbstickLeftUp += LThumbstickLeftUpHandler; // イベントハンドラの登録
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    private void LThumbstickLeftUpHandler() { // イベントハンドラ
+        //ここに「左親指スティックを左に倒した後、離した時」の処理を記述
+        _console.Log("左親指スティックを左に↓の後↑"); //DEBUG用
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.RThumbstickLeftUp](#RThumbstickLeftUp)  
+[OTouch.LThumbstickLeftDown](#LThumbstickLeftDown)  
+[OTouch.LThumbstickUpUp](#LThumbstickUpUp)  
+[OTouch.LThumbstickDownUp](#LThumbstickDownUp)  
+[OTouch.LThumbstickRightUp](#LThumbstickRightUp)  
 
 ***
 
