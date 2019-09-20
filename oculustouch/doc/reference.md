@@ -46,7 +46,7 @@ Version Alpha1.201909192008 対応
 * [LThumbstickDown](#LThumbstickDown) : 「左親指スティックを押した時」のイベントハンドラの登録や削除
 * [LThumbstickDownDown](#LThumbstickDownDown) : 「左親指スティックを下に倒した時」のイベントハンドラの登録や削除
 * [LThumbstickDownUp](#LThumbstickDownUp) : 
-* [LThumbstickLeftDown](#LThumbstickLeftDown) : 
+* [LThumbstickLeftDown](#LThumbstickLeftDown) : 「左親指スティックを左に倒した時」のイベントハンドラの登録や削除
 * [LThumbstickLeftUp](#LThumbstickLeftUp) : 
 * [LThumbstickRawTouch](#LThumbstickRawTouch) : 「左親指スティックにタッチした時」のイベントハンドラの登録や削除
 * [LThumbstickRightDown](#LThumbstickRightDown) : 
@@ -1012,6 +1012,49 @@ public class GameManager : MonoBehaviour {
 [OTouch.LThumbstickDownUp](#LThumbstickDownUp)  
 [OTouch.LThumbstickUpDown](#LThumbstickUpDown)  
 [OTouch.LThumbstickLeftDown](#LThumbstickLeftDown)  
+[OTouch.LThumbstickRightDown](#LThumbstickRightDown)  
+
+***
+
+<a name="LThumbstickLeftDown"></a>
+
+# OTouch.LThumbstickLeftDown
+
+### ◇ 構文
+<em>otouch</em>.LThumbstickLeftDown += <em>SomeMethodHandler</em>  
+<em>otouch</em>.LThumbstickLeftDown -= <em>SomeMethodHandler</em>
+
+### ◇ 説明
+イベント。  
+「左親指スティックを左に倒した時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.LThumbstickLeftDown += LThumbstickLeftDownHandler; // イベントハンドラの登録
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    private void LThumbstickLeftDownHandler() { // イベントハンドラ
+        //ここに「左親指スティックを左に倒した時」の処理を記述
+        _console.Log("左親指スティックを左に↓"); //DEBUG用
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.RThumbstickLeftDown](#RThumbstickLeftDown)  
+[OTouch.LThumbstickLeftUp](#LThumbstickLeftUp)  
+[OTouch.LThumbstickUpDown](#LThumbstickUpDown)  
+[OTouch.LThumbstickDownDown](#LThumbstickDownDown)  
 [OTouch.LThumbstickRightDown](#LThumbstickRightDown)  
 
 ***
