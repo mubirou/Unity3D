@@ -36,7 +36,7 @@ Version Alpha1.201909192008 対応
 * [LHandTriggerUp](#LHandTriggerUp) : 「左中指トリガーを押した後、離した時」のイベントハンドラの登録や削除
 * [LIndexTriggerDown](#LIndexTriggerDown) : 「左人差し指トリガーを押した時」のイベントハンドラの登録や削除
 * [LIndexTriggerRawNearTouch](#LIndexTriggerRawNearTouch) : 
-* [LIndexTriggerRawTouch](#LIndexTriggerRawTouch) : 
+* [LIndexTriggerRawTouch](#LIndexTriggerRawTouch) : 「左人差し指トリガーにタッチした時」のイベントハンドラの登録や削除
 * [LIndexTriggerUp](#LIndexTriggerUp) : 「左人差し指トリガーを押した後、離した時」のイベントハンドラの登録や削除
 * [LLaserDown](#LLaserDown) : 
 * [LLaserOut](#LLaserOut) : 
@@ -809,6 +809,46 @@ public class GameManager : MonoBehaviour {
 [OTouch.RIndexTriggerDown](#RIndexTriggerDown)  
 [OTouch.LIndexTriggerUp](#LIndexTriggerUp)  
 [OTouch.IsLIndexTriggerDown](#IsLIndexTriggerDown)  
+
+***
+
+<a name="LIndexTriggerRawTouch"></a>
+
+# OTouch.LIndexTriggerRawTouch
+
+### ◇ 構文
+<em>otouch</em>.LIndexTriggerRawTouch += <em>SomeMethodHandler</em>  
+<em>otouch</em>.LIndexTriggerRawTouch -= <em>SomeMethodHandler</em>
+
+### ◇ 説明
+イベント。  
+「左人差し指トリガーにタッチした時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.LIndexTriggerRawTouch += LIndexTriggerRawTouchHandler; //イベントハンドラの登録
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    private void LIndexTriggerRawTouchHandler() { //イベントハンドラ
+        //ここに「左人差し指トリガーにタッチした時」の処理を記述
+        _console.Log("左人差し指トリガーにタッチ"); //DEBUG用
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.RIndexTriggerRawTouch](#RIndexTriggerRawTouch)  
+[OTouch.LIndexTriggerRawNearTouch](#LIndexTriggerRawNearTouch)  
 
 ***
 
