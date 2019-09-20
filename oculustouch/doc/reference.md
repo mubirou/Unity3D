@@ -44,7 +44,7 @@ Version Alpha1.201909192008 対応
 * [LLaserUp](#LLaserUp) : 
 * [LLsserUpOutside](#LLsserUpOutside) : 
 * [LThumbstickDown](#LThumbstickDown) : 「左親指スティックを押した時」のイベントハンドラの登録や削除
-* [LThumbstickDownDown](#LThumbstickDownDown) : 
+* [LThumbstickDownDown](#LThumbstickDownDown) : 「左親指スティックを下に倒した時」のイベントハンドラの登録や削除
 * [LThumbstickDownUp](#LThumbstickDownUp) : 
 * [LThumbstickLeftDown](#LThumbstickLeftDown) : 
 * [LThumbstickLeftUp](#LThumbstickLeftUp) : 
