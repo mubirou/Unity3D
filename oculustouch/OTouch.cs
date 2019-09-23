@@ -1,5 +1,5 @@
 ﻿/***************************************************************************
- * OTouch Alpha1.201909202132
+ * OTouch Alpha1.201909232114 with Bug
  * © 2019 夢寐郎
  ***************************************************************************/
 using System.Collections;
@@ -597,16 +597,25 @@ public class OTouch : MonoBehaviour {
             //コントローラーのレーザーポイントを表示する
             _lineRendererL = _oculusTouchL.GetComponent<LineRenderer>();
             _lineRendererL.enabled = true;
-            _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth2;
+            if (_oculusTouchR == null) { //Rを使わない場合
+                _activeController = "left";
+                _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth1;
+            } else { //Rを使う場合
+                _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth2;
+            }
         }
     }
     public GameObject R {
         get { return _oculusTouchR; }
         set {
             _oculusTouchR = value;
+            _activeController = "right";
             //コントローラーのレーザーポイントを表示する
             _lineRendererR = _oculusTouchR.GetComponent<LineRenderer>();
             _lineRendererR.enabled = true;
+            if (_oculusTouchL != null) {
+                _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth2;
+            }
             _lineRendererR.startWidth = _lineRendererR.endWidth = _lineWidth1;
         }
     }
