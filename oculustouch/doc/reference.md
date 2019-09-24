@@ -1023,6 +1023,8 @@ public class GameManager : MonoBehaviour {
         OTouch _otouch = GetComponent<OTouch>();
         _otouch.L = GameObject.Find("OculusTouchL");
 
+        //レーザーポインタの表示
+        _otouch.EnabledLaserL = true;
         //レーザーポインタで選択するオブジェクトの登録
         _otouch.AddTargetObjects(GameObject.Find("Button1"));
         //イベントハンドラの登録
