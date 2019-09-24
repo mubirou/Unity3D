@@ -40,7 +40,7 @@ Version Alpha1.201909240954 対応
 * [LIndexTriggerRawNearTouch](#LIndexTriggerRawNearTouch) : 「左人差し指トリガーに近接した時」のイベントハンドラの登録や削除
 * [LIndexTriggerRawTouch](#LIndexTriggerRawTouch) : 「左人差し指トリガーにタッチした時」のイベントハンドラの登録や削除
 * [LIndexTriggerUp](#LIndexTriggerUp) : 「左人差し指トリガーを押した後、離した時」のイベントハンドラの登録や削除
-* [LLaserDown](#LLaserDown) : 「左手側のレーザーポインタでオブジェクトを押した時」のイベントハンドラの登録や削除 ★★★デバッグ中★★★
+* [LLaserDown](#LLaserDown) : 「左手側のレーザーポインタでオブジェクトを押した時」のイベントハンドラの登録や削除 ★デバッグ中★
 * [LLaserOut](#LLaserOut) : 
 * [LLaserOver](#LLaserOver) : 
 * [LLaserUp](#LLaserUp) : 
