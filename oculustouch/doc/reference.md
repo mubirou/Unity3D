@@ -8,8 +8,8 @@ Version Alpha1.201909202132 対応
 
 
 ## ◆ プロパティ一覧
-* [EnabledLaserL](#EnabledLaserL) : （左手側のレーザーポインタを表示するか否か）
-* [EnabledLaserR](#EnabledLaserR) : （右手側のレーザーポインタを表示するか否か）
+* [EnabledLaserL](#EnabledLaserL) : 左手側のレーザーポインタを表示するか否か
+* [EnabledLaserR](#EnabledLaserR) : 右手側のレーザーポインタを表示するか否か
 * [IsLHandTriggerDown](#IsLHandTriggerDown) : 「左中指トリガーを押している」か否か
 * [IsLIndexTriggerDown](#IsLIndexTriggerDown) : 「左人差し指トリガーを押している」か否か
 * [IsLThumbstickMove](#IsLThumbstickMove) : 「左親指スティックを動かしている」か否か
@@ -332,6 +332,70 @@ public class GameManager : MonoBehaviour {
 ### ◇ 参照
 [OTouch.BDown](#BDown)  
 [OTouch.BRawTouch](#BRawTouch)  
+
+***
+
+<a name="EnabledLaserL"></a>
+
+# OTouch.EnabledLaserL
+
+### ◇ 構文
+<em>otouch</em>.EnabledLaserL
+
+### ◇ 説明
+プロパティ。  
+左手側のレーザーポインタを表示するか否かを示すブール値
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.EnabledLaserL = true;
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.EnabledLaserR](#EnabledLaserR)  
+
+***
+
+<a name="EnabledLaserR"></a>
+
+# OTouch.EnabledLaserR
+
+### ◇ 構文
+<em>otouch</em>.EnabledLaserR
+
+### ◇ 説明
+プロパティ。  
+右手側のレーザーポインタを表示するか否かを示すブール値
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.R = GameObject.Find("OculusTouchR");
+        _otouch.EnabledLaserR = true;
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.EnabledLaserL](#EnabledLaserL)  
 
 ***
 
