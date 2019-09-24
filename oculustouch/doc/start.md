@@ -73,4 +73,4 @@ Version Alpha 1.201909192008 対応
 
 ## ◆ レーザーポインタの準備 
 * 概要
-	* [OTouch.EnabledLaserL](#EnabledLaserL)、[OTouch.EnabledLaserR](#EnabledLaserR) を使用する前に必要になります
+	* [OTouch.EnabledLaserL](https://github.com/mubirou/Unity3D/blob/master/oculustouch/doc/reference.md#EnabledLaserL)、[OTouch.EnabledLaserR](https://github.com/mubirou/Unity3D/blob/master/oculustouch/doc/reference.md#EnabledLaserR) を使用する前に必要になります
