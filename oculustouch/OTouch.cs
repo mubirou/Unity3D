@@ -1,5 +1,5 @@
 ﻿/***************************************************************************
- * OTouch Alpha1.201909241649 with Bug
+ * OTouch Alpha1.201909242219 with Bug
  * © 2019 夢寐郎
  ***************************************************************************/
 using System.Collections;
@@ -260,7 +260,6 @@ public class OTouch : MonoBehaviour {
         //人差し指トリガー（Down）
         if (OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger)) {
             _isLIndexTriggerDown = true;
-            LIndexTriggerDown(); //if文の後ろ?
             _activeController = "left";
             if (_enabledLaserL) { //レーザービームを表示している場合
                 if (_lineRendererR != null) { //Rを表示中の時
@@ -277,10 +276,10 @@ public class OTouch : MonoBehaviour {
                     //_isLLaserDown = true;
                 }
             }
+            LIndexTriggerDown(); //if文の後ろ?
         }
         if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger)) {
             _isRIndexTriggerDown = true;
-            RIndexTriggerDown(); //if文の後ろ?
             _activeController = "right";
             if (_enabledLaserR) { //レーザービームを表示している場合
                 if (_lineRendererL != null) { //Lを表示中の時
@@ -297,6 +296,7 @@ public class OTouch : MonoBehaviour {
                     //_isRLaserDown = true;
                 }
             }
+            RIndexTriggerDown(); //if文の後ろ?
         }
         //人差し指トリガー（Up）
         if (OVRInput.GetUp(OVRInput.RawButton.LIndexTrigger)) {
