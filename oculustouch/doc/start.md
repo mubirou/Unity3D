@@ -2,7 +2,7 @@
 Version Alpha 1.201909192008 対応  
 © 2019 夢寐郎
 
-## ◆ OTouch の準備（必須）
+## ◆ OTouch の準備
 1. [開発環境](https://github.com/mubirou/Unity3D/tree/master/oculustouch)を準備する
 1. GameManager オブジェクトの作成  
 	1. [GameObject]-[Create Empty] を選択（空の GameObject の作成）
@@ -38,7 +38,7 @@ Version Alpha 1.201909192008 対応
 	[GameObject.Find()](https://docs.unity3d.com/ja/current/ScriptReference/GameObject.Find.html)
 
 
-## ◆ コンソールの準備
+## ◆ コンソールの準備（任意）
 * 概要
     * Unity Editor の Console 的なものを VR 上に表示させます（デバッグ用）
     * Unity Editor の Console に出力する "Debug.Log()" の代わりに "Console.Log()" コマンドを使います
@@ -73,6 +73,6 @@ Version Alpha 1.201909192008 対応
 
 <a name="LaserPointer"></a>
 
-## ◆ レーザーポインタの準備 
+## ◆ レーザーポインタの準備（任意）
 * 概要
 	* [OTouch.EnabledLaserL](https://github.com/mubirou/Unity3D/blob/master/oculustouch/doc/reference.md#EnabledLaserL)、[OTouch.EnabledLaserR](https://github.com/mubirou/Unity3D/blob/master/oculustouch/doc/reference.md#EnabledLaserR) を使用する前に必要になります
