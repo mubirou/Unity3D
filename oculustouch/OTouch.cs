@@ -1,5 +1,5 @@
 ﻿/***************************************************************************
- * OTouch Alpha1.201909240954
+ * OTouch Alpha1.201909241451 with Bug
  * © 2019 夢寐郎
  ***************************************************************************/
 using System.Collections;
@@ -223,8 +223,8 @@ public class OTouch : MonoBehaviour {
     private RaycastHit _hitInfoR;
     private float _lineWidth1 = 0.007f;
     private float _lineWidth2 = 0.0005f;
-    private bool _isLLaserDown = false;
-    private bool _isRLaserDown = false;
+    //private bool _isLLaserDown = false;
+    //private bool _isRLaserDown = false;
     
     void Start() {
         GameObject _ovrCameraRig = GameObject.Find("OVRCameraRig");
@@ -264,14 +264,14 @@ public class OTouch : MonoBehaviour {
             if (_enabledLaserL) { //レーザービームを表示している場合
                 _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth1;
                 _lineRendererR.startWidth = _lineRendererR.endWidth = _lineWidth2;
-                _isRLaserDown = false; //逆（右）のレーザーの≒MouseDownを解除
+                //_isRLaserDown = false; //逆（右）のレーザーの≒MouseDownを解除
                 _hitObjectL = HitTestL(true); //ヒットテスト
                 if (_hitObjectL != null) {
                     if (IsTargetObject(_hitObjectL)) {
                         LLaserDown(_hitObjectL); //イベント発生
                         _selectObjectL = _hitObjectL; //選択したオブジェクトを記録 NEW
                     }
-                    _isLLaserDown = true;
+                    //_isLLaserDown = true;
                 }
             }
             LIndexTriggerDown();
@@ -282,14 +282,14 @@ public class OTouch : MonoBehaviour {
             if (_enabledLaserR) { //レーザービームを表示している場合
                 _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth2;
                 _lineRendererR.startWidth = _lineRendererR.endWidth = _lineWidth1;
-                _isLLaserDown = false; //逆（右）のレーザーの≒MouseDownを解除
+                //_isLLaserDown = false; //逆（右）のレーザーの≒MouseDownを解除
                 _hitObjectR = HitTestR(true); //ヒットテスト
                 if (_hitObjectR != null) {
                     if (IsTargetObject(_hitObjectR)) {
                         RLaserDown(_hitObjectR); //イベント発生
                         _selectObjectR = _hitObjectR; //選択したオブジェクトを記録 NEW
                     }
-                    _isRLaserDown = true;
+                    //_isRLaserDown = true;
                 }
             }
             RIndexTriggerDown();
@@ -305,7 +305,7 @@ public class OTouch : MonoBehaviour {
             } else {
                 LLaserUpOutside(_selectObjectL); //≒MouseUpOutside NEW
             }
-            _isLLaserDown = false;
+            //_isLLaserDown = false;
             _selectObjectL = null;
         }
         if (OVRInput.GetUp(OVRInput.RawButton.RIndexTrigger)) {
@@ -318,7 +318,7 @@ public class OTouch : MonoBehaviour {
             } else {
                 RLaserUpOutside(_selectObjectR); //≒MouseUpOutside
             }
-            _isRLaserDown = false;
+            //_isRLaserDown = false;
             _selectObjectR = null;
         }
 
