@@ -40,7 +40,7 @@ Version Alpha1.201909240954 対応
 * [LIndexTriggerRawNearTouch](#LIndexTriggerRawNearTouch) : 「左人差し指トリガーに近接した時」のイベントハンドラの登録や削除
 * [LIndexTriggerRawTouch](#LIndexTriggerRawTouch) : 「左人差し指トリガーにタッチした時」のイベントハンドラの登録や削除
 * [LIndexTriggerUp](#LIndexTriggerUp) : 「左人差し指トリガーを押した後、離した時」のイベントハンドラの登録や削除
-* [LLaserDown](#LLaserDown) : 
+* [LLaserDown](#LLaserDown) : 「左手側のレーザーポインタでオブジェクトを押した時」のイベントハンドラの登録や削除
 * [LLaserOut](#LLaserOut) : 
 * [LLaserOver](#LLaserOver) : 
 * [LLaserUp](#LLaserUp) : 
@@ -344,7 +344,7 @@ public class GameManager : MonoBehaviour {
 
 ### ◇ 説明
 プロパティ。  
-左手側のレーザーポインタを表示するか否かを示すブール値
+左手側のレーザーポインタを表示するか否かを示すブール値。
 
 ### ◇ 例文
 ```
@@ -377,7 +377,7 @@ public class GameManager : MonoBehaviour {
 
 ### ◇ 説明
 プロパティ。  
-右手側のレーザーポインタを表示するか否かを示すブール値
+右手側のレーザーポインタを表示するか否かを示すブール値。
 
 ### ◇ 例文
 ```
@@ -997,6 +997,54 @@ public class GameManager : MonoBehaviour {
 ### ◇ 参照
 [OTouch.RIndexTriggerUp](#RIndexTriggerUp)  
 [OTouch.LIndexTriggerDown](#LIndexTriggerDown)  
+
+***
+
+<a name="LLaserDown"></a>
+
+# OTouch.LLaserDown
+
+### ◇ 構文
+<em>otouch</em>.LLaserDown
+
+### ◇ 説明
+イベント。 
+[OTouch.AddTargetObjects()](#AddTargetObjects) で登録済みのオブジェクトを「左手側のレーザーポインタ」で押した時（左人差し指トリガーを押した時）のイベントハンドラの登録や削除を行うことができます。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+
+        //レーザーポインタで選択するオブジェクトの登録
+        _otouch.AddTargetObjects(GameObject.Find("Button1"));
+        //イベントハンドラの登録
+        _otouch.LLaserDown += LLaserDownHandler;
+
+        //DEBUG用
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
+    }
+
+    //イベントハンドラ
+    private void LLaserDownHandler(GameObject arg) {
+        _console.Log("左レーザーが" + arg.name + "を↓"); //DEBUG用
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.RLaserDown](#RLaserDown)  
+[OTouch.LLaserOver](#LLaserOver)  
+[OTouch.LLaserOut](#LLaserOut)  
+[OTouch.LLaserUp](#LLaserUp)  
+[OTouch.LLsserUpOutside](#LLaserOver)  
 
 ***
 
