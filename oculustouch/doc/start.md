@@ -74,5 +74,13 @@ Version Alpha 1.201909192008 対応
 <a name="LaserPointer"></a>
 
 ## ◆ レーザーポインタの準備（任意）
-* 概要
-	* [OTouch.EnabledLaserL](https://github.com/mubirou/Unity3D/blob/master/oculustouch/doc/reference.md#EnabledLaserL)、[OTouch.EnabledLaserR](https://github.com/mubirou/Unity3D/blob/master/oculustouch/doc/reference.md#EnabledLaserR) を使用する前に必要になります
+* [OTouch.EnabledLaserL](https://github.com/mubirou/Unity3D/blob/master/oculustouch/doc/reference.md#EnabledLaserL)、[OTouch.EnabledLaserR](https://github.com/mubirou/Unity3D/blob/master/oculustouch/doc/reference.md#EnabledLaserR) を使用する前に必要になります
+
+1. マテリアルの作成
+	1. [Window]-[General]-[Project]-[+]-[Material] を選択
+	1. 名前を "New Material"→"ColorLine" 等に変更
+	1. [Inspector]-[Shader] を [Oculus]-[Texture2D Blit] に変更
+1. ラインレダラーの追加
+	1. 左手側の Oculus Touch コントローラーの動きに連動する GameObject を選択し [Inspector] を開く
+	1. [Add Component] ボタンを押して "**Line Rendere**" を検索し追加する
+	1. [MAterials]-[Element 0]-[⦿] から上記の "ColorLine" を選択
