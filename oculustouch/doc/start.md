@@ -38,7 +38,7 @@ Version Alpha 1.201909192008 対応
 	[GameObject.Find()](https://docs.unity3d.com/ja/current/ScriptReference/GameObject.Find.html)
 
 
-## ◆ コンソールの準備（推奨）
+## ◆ コンソールの準備
 * 概要
     * Unity Editor の Console 的なものを VR 上に表示させます（デバッグ用）
     * Unity Editor の Console に出力する "Debug.Log()" の代わりに "Console.Log()" コマンドを使います
@@ -69,3 +69,8 @@ Version Alpha 1.201909192008 対応
     }
     ```
     * 上記のサンプルコードのほかに、①コンソールに表示されている文字を消す **Console.Rest()** メソッドと、②コンソールの表示･非表示を調べる（設定可能） **Console.Enabled** プロパティがあります
+
+
+## ◆ レーザーポインタの準備 
+* 概要
+	* [OTouch.EnabledLaserL](#EnabledLaserL)、[OTouch.EnabledLaserR](#EnabledLaserR) を使用する前に必要になります
