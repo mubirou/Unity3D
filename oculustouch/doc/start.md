@@ -71,6 +71,8 @@ Version Alpha 1.201909192008 対応
     * 上記のサンプルコードのほかに、①コンソールに表示されている文字を消す **Console.Rest()** メソッドと、②コンソールの表示･非表示を調べる（設定可能） **Console.Enabled** プロパティがあります
 
 
+<a name="LaserPointer"></a>
+
 ## ◆ レーザーポインタの準備 
 * 概要
 	* [OTouch.EnabledLaserL](https://github.com/mubirou/Unity3D/blob/master/oculustouch/doc/reference.md#EnabledLaserL)、[OTouch.EnabledLaserR](https://github.com/mubirou/Unity3D/blob/master/oculustouch/doc/reference.md#EnabledLaserR) を使用する前に必要になります
