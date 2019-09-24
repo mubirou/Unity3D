@@ -83,4 +83,4 @@ Version Alpha 1.201909192008 対応
 1. ラインレダラーの追加
 	1. 左手側の Oculus Touch コントローラーの動きに連動する GameObject を選択し [Inspector] を開く
 	1. [Add Component] ボタンを押して "**Line Rendere**" を検索し追加する
-	1. [MAterials]-[Element 0]-[⦿] から上記の "ColorLine" を選択
+	1. [MAterials]-[Element 0]-[⦿] から上記で作成した "ColorLine" を選択
