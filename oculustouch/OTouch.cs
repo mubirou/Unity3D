@@ -1,5 +1,5 @@
 ﻿/***************************************************************************
- * OTouch Alpha1.201909242219 with Bug
+ * OTouch Alpha1.201909271156 with Bug
  * © 2019 夢寐郎
  ***************************************************************************/
 using System.Collections;
@@ -48,6 +48,7 @@ using System; //for Math
  *      LLaserOver
  *      LLaserUp
  *      LLsserUpOutside
+ *      Log（for DEBUG）
  *      LThumbstickDown
  *      LThumbstickDownDown
  *      LThumbstickDownUp
@@ -131,6 +132,7 @@ public class OTouch : MonoBehaviour {
     //①デリゲート宣言
     public delegate void BodyDelegate(); //OculusTouch本体ボタン用
     public delegate void LaserDelegate(GameObject arg); //レーザーポイント用
+    public delegate void DebugDelegate(string arg); //DEBUG用
 
     //===================================================
     // イベントハンドラを格納するデリゲート（現在48個）
@@ -207,6 +209,9 @@ public class OTouch : MonoBehaviour {
     public event LaserDelegate RLaserOver;
     public event LaserDelegate RLaserUp;
     public event LaserDelegate RLaserUpOutside;
+
+    //DEBUG用
+    public event DebugDelegate Log;
 
     //ヒットしたオブジェクト（レーザーがヒットしたオブジェクト）
     private GameObject _hitObjectL = null;
