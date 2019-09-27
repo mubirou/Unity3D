@@ -1,4 +1,46 @@
-﻿//GameManager.cs
+﻿/*
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.R = GameObject.Find("OculusTouchR");
+
+        //レーザーポインタの表示
+        _otouch.EnabledLaserL = true;
+        _otouch.EnabledLaserR = true;
+        //レーザーポインタで選択するオブジェクトの登録
+        _otouch.AddTargetObjects(GameObject.Find("Button1"));
+        //イベントハンドラの登録
+        _otouch.LLaserDown += LLaserDownHandler;
+        _otouch.LLaserOver += LLaserOverHandler;
+        _otouch.LIndexTriggerDown += LIndexTriggerDownHandler; //DEBUG
+        _otouch.Log += LogHandler; //DEBUG
+        //DEBUG用
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
+    }
+
+    //イベントハンドラ
+    private void LLaserOverHandler(GameObject arg) { //DEBUG
+        _console.Log("左レーザーが" + arg.name + "にヒット"); //DEBUG
+    }
+    private void LLaserDownHandler(GameObject arg) {
+        _console.Log("左レーザーが" + arg.name + "を↓"); //DEBUG用
+    }
+    private void LIndexTriggerDownHandler() { //DEBUG
+        _console.Log("左人差し指トリガー↓"); //DEBUG用
+    }
+    private void LogHandler(string arg) { //DEBUG
+        _console.Log(arg); //DEBUG用
+    }
+}
+*/
+
+//GameManager.cs
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
