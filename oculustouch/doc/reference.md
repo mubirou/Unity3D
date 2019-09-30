@@ -1,5 +1,5 @@
 # OTouch リファレンスマニュアル
-Version Alpha1.201909271156 対応  
+Version Alpha1.201909301918 対応  
 © 2019 夢寐郎
 
 ## ◆ メソッド一覧
@@ -40,7 +40,7 @@ Version Alpha1.201909271156 対応
 * [LIndexTriggerRawNearTouch](#LIndexTriggerRawNearTouch) : 「左人差し指トリガーに近接した時」のイベントハンドラの登録や削除
 * [LIndexTriggerRawTouch](#LIndexTriggerRawTouch) : 「左人差し指トリガーにタッチした時」のイベントハンドラの登録や削除
 * [LIndexTriggerUp](#LIndexTriggerUp) : 「左人差し指トリガーを押した後、離した時」のイベントハンドラの登録や削除
-* [LLaserDown](#LLaserDown) : 「左手側のレーザーポインタでオブジェクトを押した時」のイベントハンドラの登録や削除 ★デバッグ中★
+* [LLaserDown](#LLaserDown) : 「左手側のレーザーポインタでオブジェクトを押した時」のイベントハンドラの登録や削除
 * [LLaserOut](#LLaserOut) : 
 * [LLaserOver](#LLaserOver) : 
 * [LLaserUp](#LLaserUp) : 
@@ -62,7 +62,7 @@ Version Alpha1.201909271156 対応
 * [RIndexTriggerRawNearTouch](#RIndexTriggerRawNearTouch) : 「右人差し指トリガーに近接した時」のイベントハンドラの登録や削除
 * [RIndexTriggerRawTouch](#RIndexTriggerRawTouch) : 「右人差し指トリガーにタッチした時」のイベントハンドラの登録や削除
 * [RIndexTriggerUp](#RIndexTriggerUp) : 「右人差し指トリガーを押した後、離した時」のイベントハンドラの登録や削除
-* [RLaserDown](#RLaserDown) : 
+* [RLaserDown](#RLaserDown) : 「右手側のレーザーポインタでオブジェクトを押した時」のイベントハンドラの登録や削除
 * [RLaserOut](#RLaserOut) : 
 * [RLaserOver](#RLaserOver) : 
 * [RLaserUp](#RLaserUp) : 
@@ -1046,7 +1046,7 @@ public class GameManager : MonoBehaviour {
 [OTouch.LLaserOver](#LLaserOver)  
 [OTouch.LLaserOut](#LLaserOut)  
 [OTouch.LLaserUp](#LLaserUp)  
-[OTouch.LLsserUpOutside](#LLaserOver)  
+[OTouch.LLaserUpOutside](#LLaserUpOutside)  
 
 ***
 
@@ -1906,6 +1906,57 @@ public class GameManager : MonoBehaviour {
 ### ◇ 参照
 [OTouch.LIndexTriggerUp](#LIndexTriggerUp)  
 [OTouch.RIndexTriggerDown](#RIndexTriggerDown)  
+
+***
+
+<a name="RLaserDown"></a>
+
+# OTouch.RLaserDown
+
+### ◇ 構文
+<em>otouch</em>.RLaserDown
+
+### ◇ 説明
+イベント。 
+[OTouch.AddTargetObjects()](#AddTargetObjects) で登録済みのオブジェクトを「右手側のレーザーポインタ」で押した時（右人差し指トリガーを押した時）のイベントハンドラの登録や削除を行うことができます。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.R = GameObject.Find("OculusTouchR");
+
+        //レーザーポインタの表示
+        _otouch.EnabledLaserR = true;
+        //レーザーポインタで選択するオブジェクトの登録
+        _otouch.AddTargetObjects(GameObject.Find("Button1"));
+        //イベントハンドラの登録
+        _otouch.RLaserDown += RLaserDownHandler;
+
+        //DEBUG用
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
+    }
+
+    //イベントハンドラ
+    private void RLaserDownHandler(GameObject arg) {
+        _console.Log("右レーザーが" + arg.name + "を↓"); //DEBUG用
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.LLaserDown](#LLaserDown)  
+[OTouch.RLaserOver](#RLaserOver)  
+[OTouch.RLaserOut](#RLaserOut)  
+[OTouch.RLaserUp](#RLaserUp)  
+[OTouch.RLsserUpOutside](#RLsserUpOutside)  
 
 ***
 

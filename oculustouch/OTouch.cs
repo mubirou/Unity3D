@@ -1,5 +1,5 @@
 ﻿/***************************************************************************
- * OTouch Alpha1.201909271636 with Bug
+ * OTouch Alpha1.201909301918
  * © 2019 夢寐郎
  ***************************************************************************/
 using System.Collections;
@@ -530,6 +530,7 @@ public class OTouch : MonoBehaviour {
                     //ヒットしたGameObjectが登録済オブジェクトであれば
                     if (_tmp == _hitObjectL) {
                         if (!_isVibrationL) {
+                            if (LLaserOver != null) LLaserOver(_hitObjectL); //イベント発生
                             if (arg) {
                                 //振動させる（周波数0〜1.0f,振幅0〜1.0f）
                                 OVRInput.SetControllerVibration(1.0f, 0.3f, OVRInput.Controller.LTouch);
@@ -537,11 +538,7 @@ public class OTouch : MonoBehaviour {
                                 Invoke("StopVibrationL", 0.05f); 
                                 _isVibrationL = true;
                             }
-
-                            //BUG：LLaserOverをイベントハンドラを設定していないとここで止まる
-                            LLaserOver(_hitObjectL); //イベント発生（2019-09-27移動）
                         }
-                        break; //ループを終了（2019-09-27追加）
                     }
                 }
                 return _hitObjectL;
@@ -562,6 +559,7 @@ public class OTouch : MonoBehaviour {
                     //ヒットしたGameObjectが登録済オブジェクトであれば
                     if (_tmp == _hitObjectR) {
                         if (!_isVibrationR) {
+                            if (RLaserOver != null) RLaserOver(_hitObjectR); //イベント発生
                             if (arg) {
                                 //振動させる（周波数0〜1.0f,振幅0〜1.0f）
                                 OVRInput.SetControllerVibration(1.0f, 0.3f, OVRInput.Controller.RTouch);
@@ -569,9 +567,7 @@ public class OTouch : MonoBehaviour {
                                 Invoke("StopVibrationR", 0.05f); 
                                 _isVibrationR = true;
                             }
-                            RLaserOver(_hitObjectR); //イベント発生（2019-09-27移動）
                         }
-                        break; //ループを終了（2019-09-27追加）
                     }
                 }
                 return _hitObjectR;
