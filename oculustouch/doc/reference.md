@@ -1627,6 +1627,52 @@ _otouch.R = GameObject.Find("OculusTouchR");
 
 ***
 
+<a name="RemoveTargetObject"></a>
+
+# OTouch.RemoveTargetObject()
+
+### ◇ 構文
+<em>otouch</em>.RemoveTargetObject(<em>someGameObject</em>)
+
+### ◇ 説明
+メソッド。  
+右、もしくは左手側のレーザーポインタに反応させるオブジェクトを削除します。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.EnabledLaserL = true;
+
+        //レーザーポインタで選択するオブジェクトの登録
+        _otouch.AddTargetObject(GameObject.Find("Button1"));
+        _otouch.AddTargetObject(GameObject.Find("Button2"));
+        _otouch.AddTargetObject(GameObject.Find("Button3"));
+
+        _otouch.LLaserDown += LLaserDownHandler;
+
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
+    }
+
+    private void LLaserDownHandler(GameObject arg) {
+        _console.Log("左レーザーが" + arg.name + "を↓");
+        _otouch.RemoveTargetObject(arg); //一度選択したものは選べなくする場合
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.AddTargetObject()](#AddTargetObject)  
+
+***
+
 <a name="RHandTrigger"></a>
 
 # OTouch.RHandTrigger
