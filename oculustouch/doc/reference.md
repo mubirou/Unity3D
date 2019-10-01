@@ -1262,6 +1262,59 @@ public class GameManager : MonoBehaviour {
 
 ***
 
+<a name="LLsserUpOutside"></a>
+
+# OTouch.LLsserUpOutside
+
+### ◇ 構文
+<em>otouch</em>.LLsserUpOutside
+
+### ◇ 説明
+イベント。 
+[OTouch.AddTargetObject()](#AddTargetObject) 等で登録済みのオブジェクトを [OTouch.RLaserDown](#RLaserDown) 後、「選択したオブジェクトの領域外で左人差し指トリガーを離した時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+
+        //レーザーポインタの表示
+        _otouch.EnabledLaserL = true;
+
+        //レーザーポインタで選択するオブジェクトの登録
+        _otouch.AddTargetObject(GameObject.Find("Button1"));
+
+        //イベントハンドラの登録
+        _otouch.LLsserUpOutside += LLsserUpOutsideHandler;
+
+        //DEBUG用
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
+    }
+
+    //イベントハンドラ
+    private void LLsserUpOutsideHandler(GameObject arg) {
+        _console.Log("左レーザーが" + arg.name + "の外で↑"); //DEBUG用
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.RLaserUpOutside](#RLaserUp)  
+[OTouch.LLaserUp](#LLaserUp)  
+[OTouch.LLaserDown](#LLaserDown)  
+[OTouch.LLaserOver](#LLaserOver)  
+[OTouch.LLaserOut](#LLaserOut)  
+[OTouch.AddTargetObject()](#AddTargetObject)
+
+***
+
 <a name="LThumbstickDown"></a>
 
 # OTouch.LThumbstickDown
