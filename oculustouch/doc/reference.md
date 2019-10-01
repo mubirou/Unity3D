@@ -41,7 +41,7 @@ Version Alpha1.201910011038 対応
 * [LIndexTriggerRawTouch](#LIndexTriggerRawTouch) : 「左人差し指トリガーにタッチした時」のイベントハンドラの登録や削除
 * [LIndexTriggerUp](#LIndexTriggerUp) : 「左人差し指トリガーを押した後、離した時」のイベントハンドラの登録や削除
 * [LLaserDown](#LLaserDown) : 「左手側のレーザーポインタでオブジェクトを押した時」のイベントハンドラの登録や削除
-* [LLaserOut](#LLaserOut) : 
+* [LLaserOut](#LLaserOut) : 「左手側のレーザーポインタがアウトした時」のイベントハンドラの登録や削除
 * [LLaserOver](#LLaserOver) : 「左手側のレーザーポインタでヒットした時」のイベントハンドラの登録や削除
 * [LLaserUp](#LLaserUp) : 
 * [LLsserUpOutside](#LLsserUpOutside) : 
@@ -1097,6 +1097,59 @@ public class GameManager : MonoBehaviour {
 [OTouch.RLaserDown](#RLaserDown)  
 [OTouch.LLaserOver](#LLaserOver)  
 [OTouch.LLaserOut](#LLaserOut)  
+[OTouch.LLaserUp](#LLaserUp)  
+[OTouch.LLaserUpOutside](#LLaserUpOutside)  
+[OTouch.AddTargetObject()](#AddTargetObject)
+
+***
+
+<a name="LLaserOut"></a>
+
+# OTouch.LLaserOut
+
+### ◇ 構文
+<em>otouch</em>.LLaserOut
+
+### ◇ 説明
+イベント。 
+[OTouch.AddTargetObject()](#AddTargetObject) 等で登録済みのオブジェクトから「左手側のレーザーポインタが出た時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+
+        //レーザーポインタの表示
+        _otouch.EnabledLaserL = true;
+
+        //レーザーポインタで選択するオブジェクトの登録
+        _otouch.AddTargetObject(GameObject.Find("Button1"));
+
+        //イベントハンドラの登録
+        _otouch.LLaserOut += LLaserOutHandler;
+
+        //DEBUG用
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
+    }
+
+    //イベントハンドラ
+    private void LLaserOutHandler(GameObject arg) {
+        _console.Log("左レーザーが" + arg.name + "をアウト"); //DEBUG用
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.RLaserOut](#RLaserOut)  
+[OTouch.LLaserOver](#LLaserOver)  
+[OTouch.LLaserDown](#LLaserDown)  
 [OTouch.LLaserUp](#LLaserUp)  
 [OTouch.LLaserUpOutside](#LLaserUpOutside)  
 [OTouch.AddTargetObject()](#AddTargetObject)
