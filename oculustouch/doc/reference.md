@@ -4,7 +4,7 @@ Version Alpha1.201909301918 対応
 
 ## ◆ メソッド一覧
 * [AddTargetObject()](#AddTargetObject) : レーザーポインタに反応させるオブジェクトの登録
-* [RemoveTargetObject()](#RemoveTargetObject) : 
+* [RemoveTargetObject()](#RemoveTargetObject) : レーザーポインタに反応させるオブジェクトの削除
 
 
 ## ◆ プロパティ一覧
@@ -98,7 +98,7 @@ Version Alpha1.201909301918 対応
 
 ### ◇ 説明
 メソッド。  
-左、もしくは右手側のレーザーポインタに反応させるオブジェクトの登録を行います。
+左、もしくは右手側のレーザーポインタに反応させるオブジェクトの登録をします。
 
 ### ◇ 例文
 ```
