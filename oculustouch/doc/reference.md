@@ -1096,6 +1096,7 @@ public class GameManager : MonoBehaviour {
 [OTouch.LLaserOut](#LLaserOut)  
 [OTouch.LLaserUp](#LLaserUp)  
 [OTouch.LLaserUpOutside](#LLaserUpOutside)  
+[AddTargetObjects()](#AddTargetObjects)
 
 ***
 
@@ -2006,6 +2007,7 @@ public class GameManager : MonoBehaviour {
 [OTouch.RLaserOut](#RLaserOut)  
 [OTouch.RLaserUp](#RLaserUp)  
 [OTouch.RLsserUpOutside](#RLsserUpOutside)  
+[AddTargetObjects()](#AddTargetObjects)
 
 ***
 
