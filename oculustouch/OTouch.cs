@@ -1,5 +1,5 @@
 ﻿/***************************************************************************
- * OTouch Alpha 2.20191001508
+ * OTouch Alpha 2.20191001900（レーザーポインタの表示非表示で非合理的）
  * © 2019 夢寐郎
  ***************************************************************************/
 using System.Collections;
@@ -595,14 +595,15 @@ public class OTouch : MonoBehaviour {
         get { return _oculusTouchL; }
         set {
             _oculusTouchL = value;
-            //コントローラーのレーザーポイントを表示する
+
+            //コントローラーのレーザーポイントを表示する ???
             _lineRendererL = _oculusTouchL.GetComponent<LineRenderer>();
             _lineRendererL.enabled = true;
             if (_oculusTouchR == null) { //Rを使わない場合
                 _activeController = "left";
-                _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth1;
+                _lineRendererL.startWidth = _lineRendererL.endWidth = 0.0f;
             } else { //Rを使う場合
-                _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth2;
+                _lineRendererL.startWidth = _lineRendererL.endWidth = 0.0f;
             }
         }
     }
@@ -611,13 +612,14 @@ public class OTouch : MonoBehaviour {
         set {
             _oculusTouchR = value;
             _activeController = "right";
-            //コントローラーのレーザーポイントを表示する
+            
+            //コントローラーのレーザーポイントを表示する ???
             _lineRendererR = _oculusTouchR.GetComponent<LineRenderer>();
             _lineRendererR.enabled = true;
             if (_oculusTouchL != null) {
-                _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth2;
+                _lineRendererL.startWidth = _lineRendererL.endWidth = 0.0f;
             }
-            _lineRendererR.startWidth = _lineRendererR.endWidth = _lineWidth1;
+            _lineRendererR.startWidth = _lineRendererR.endWidth = 0.0f;
         }
     }
     public double LIndexTrigger {
@@ -712,11 +714,35 @@ public class OTouch : MonoBehaviour {
     //レーザーを表示するか
     public bool EnabledLaserL {
         get { return _enabledLaserL; }
-        set { _enabledLaserL = value; }
+        set {
+            _enabledLaserL = value;
+            if (_enabledLaserL) {
+                //コントローラーのレーザーポイントを表示する ???
+                _lineRendererL = _oculusTouchL.GetComponent<LineRenderer>();
+                _lineRendererL.enabled = true;
+                if (_oculusTouchR == null) { //Rを使わない場合
+                    _activeController = "left";
+                    _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth1;
+                } else { //Rを使う場合
+                    _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth2;
+                }
+            }
+            }
     }
     public bool EnabledLaserR {
         get { return _enabledLaserR; }
-        set { _enabledLaserR = value; }
+        set {
+            _enabledLaserR = value;
+            if (_enabledLaserR) {
+                //コントローラーのレーザーポイントを表示する ???
+                _lineRendererR = _oculusTouchR.GetComponent<LineRenderer>();
+                _lineRendererR.enabled = true;
+                if (_oculusTouchL != null) {
+                    _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth2;
+                }
+                _lineRendererR.startWidth = _lineRendererR.endWidth = _lineWidth1;
+            }
+            }
     }
 
     //レーザーポインタが反応するGameObjectのリスト
