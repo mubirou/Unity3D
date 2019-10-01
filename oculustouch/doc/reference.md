@@ -2117,6 +2117,61 @@ public class GameManager : MonoBehaviour {
 
 ***
 
+<a name="RLaserOut"></a>
+
+# OTouch.RLaserOut
+
+### ◇ 構文
+<em>otouch</em>.RLaserOut
+
+### ◇ 説明
+イベント。 
+[OTouch.AddTargetObject()](#AddTargetObject) 等で登録済みのオブジェクトから「右手側のレーザーポインタが出た時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.R = GameObject.Find("OculusTouchR");
+
+        //レーザーポインタの表示
+        _otouch.EnabledLaserL = true;
+        _otouch.EnabledLaserR = true;
+
+        //レーザーポインタで選択するオブジェクトの登録
+        _otouch.AddTargetObject(GameObject.Find("Button1"));
+
+        //イベントハンドラの登録
+        _otouch.RLaserOut += RLaserOutHandler;
+
+        //DEBUG用
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
+    }
+
+    //イベントハンドラ
+    private void RLaserOutHandler(GameObject arg) {
+        _console.Log("右レーザーが" + arg.name + "をアウト"); //DEBUG用
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.LLaserOut](#LLaserOut)  
+[OTouch.RLaserOver](#RLaserOver)  
+[OTouch.RLaserDown](#RLaserDown)  
+[OTouch.RLaserUp](#RLaserUp)  
+[OTouch.RLaserUpOutside](#RLaserUpOutside)  
+[OTouch.AddTargetObject()](#AddTargetObject)
+
+***
+
 <a name="RLaserOver"></a>
 
 # OTouch.RLaserOver
