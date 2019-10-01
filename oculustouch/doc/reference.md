@@ -1644,10 +1644,11 @@ _otouch.R = GameObject.Find("OculusTouchR");
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
+    private OTouch _otouch;
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
+        _otouch = GetComponent<OTouch>();
         _otouch.L = GameObject.Find("OculusTouchL");
         _otouch.EnabledLaserL = true;
 
