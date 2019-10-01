@@ -3,8 +3,8 @@ Version Alpha1.201909301918 対応
 © 2019 夢寐郎
 
 ## ◆ メソッド一覧
-* [AddTargetObjects()](#AddTargetObjects) : レーザーポインタに反応させるオブジェクトの登録
-* [RemoveTargetObjects()](#RemoveTargetObjects) : 
+* [AddTargetObject()](#AddTargetObject) : レーザーポインタに反応させるオブジェクトの登録
+* [RemoveTargetObject()](#RemoveTargetObject) : 
 
 
 ## ◆ プロパティ一覧
@@ -89,12 +89,12 @@ Version Alpha1.201909301918 対応
 
 ***
 
-<a name="AddTargetObjects"></a>
+<a name="AddTargetObject"></a>
 
-# OTouch.AddTargetObjects()
+# OTouch.AddTargetObject()
 
 ### ◇ 構文
-<em>otouch</em>.AddTargetObjects(<em>someGameObject</em>)
+<em>otouch</em>.AddTargetObject(<em>someGameObject</em>)
 
 ### ◇ 説明
 メソッド。  
@@ -114,9 +114,9 @@ public class GameManager : MonoBehaviour {
         _otouch.EnabledLaserL = true;
 
         //レーザーポインタで選択するオブジェクトの登録
-        _otouch.AddTargetObjects(GameObject.Find("Button1"));
-        _otouch.AddTargetObjects(GameObject.Find("Button2"));
-        _otouch.AddTargetObjects(GameObject.Find("Button3"));
+        _otouch.AddTargetObject(GameObject.Find("Button1"));
+        _otouch.AddTargetObject(GameObject.Find("Button2"));
+        _otouch.AddTargetObject(GameObject.Find("Button3"));
 
         _otouch.LLaserDown += LLaserDownHandler;
 
@@ -130,7 +130,7 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.RemoveTargetObjects()](#RemoveTargetObjects)  
+[OTouch.RemoveTargetObject()](#RemoveTargetObject)  
 [OTouch.LLaserDown](#LLaserDown)  
 [OTouch.RLaserDown](#RLaserDown)  
 [OTouch.LLaserOver](#LLaserOver)  
@@ -1058,7 +1058,7 @@ public class GameManager : MonoBehaviour {
 
 ### ◇ 説明
 イベント。 
-[OTouch.AddTargetObjects()](#AddTargetObjects) で登録済みのオブジェクトを「左手側のレーザーポインタ」で押した時（左人差し指トリガーを押した時）のイベントハンドラの登録や削除を行うことができます。
+[OTouch.AddTargetObject()](#AddTargetObject) で登録済みのオブジェクトを「左手側のレーザーポインタ」で押した時（左人差し指トリガーを押した時）のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
 ```
@@ -1075,7 +1075,7 @@ public class GameManager : MonoBehaviour {
         //レーザーポインタの表示
         _otouch.EnabledLaserL = true;
         //レーザーポインタで選択するオブジェクトの登録
-        _otouch.AddTargetObjects(GameObject.Find("Button1"));
+        _otouch.AddTargetObject(GameObject.Find("Button1"));
         //イベントハンドラの登録
         _otouch.LLaserDown += LLaserDownHandler;
 
@@ -1096,7 +1096,7 @@ public class GameManager : MonoBehaviour {
 [OTouch.LLaserOut](#LLaserOut)  
 [OTouch.LLaserUp](#LLaserUp)  
 [OTouch.LLaserUpOutside](#LLaserUpOutside)  
-[OTouch.AddTargetObjects()](#AddTargetObjects)
+[OTouch.AddTargetObject()](#AddTargetObject)
 
 ***
 
@@ -1968,7 +1968,7 @@ public class GameManager : MonoBehaviour {
 
 ### ◇ 説明
 イベント。 
-[OTouch.AddTargetObjects()](#AddTargetObjects) で登録済みのオブジェクトを「右手側のレーザーポインタ」で押した時（右人差し指トリガーを押した時）のイベントハンドラの登録や削除を行うことができます。
+[OTouch.AddTargetObject()](#AddTargetObject) で登録済みのオブジェクトを「右手側のレーザーポインタ」で押した時（右人差し指トリガーを押した時）のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
 ```
@@ -1986,7 +1986,7 @@ public class GameManager : MonoBehaviour {
         //レーザーポインタの表示
         _otouch.EnabledLaserR = true;
         //レーザーポインタで選択するオブジェクトの登録
-        _otouch.AddTargetObjects(GameObject.Find("Button1"));
+        _otouch.AddTargetObject(GameObject.Find("Button1"));
         //イベントハンドラの登録
         _otouch.RLaserDown += RLaserDownHandler;
 
@@ -2007,7 +2007,7 @@ public class GameManager : MonoBehaviour {
 [OTouch.RLaserOut](#RLaserOut)  
 [OTouch.RLaserUp](#RLaserUp)  
 [OTouch.RLsserUpOutside](#RLsserUpOutside)  
-[OTouch.AddTargetObjects()](#AddTargetObjects)
+[OTouch.AddTargetObject()](#AddTargetObject)
 
 ***
 
