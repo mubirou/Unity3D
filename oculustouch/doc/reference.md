@@ -65,7 +65,7 @@ Version Alpha1.201910011038 対応
 * [RLaserDown](#RLaserDown) : 「右手側のレーザーポインタでオブジェクトを押した時」のイベントハンドラの登録や削除
 * [RLaserOut](#RLaserOut) : 「右手側のレーザーポインタがアウトした時」のイベントハンドラの登録や削除
 * [RLaserOver](#RLaserOver) : 「右手側のレーザーポインタでヒットした時」のイベントハンドラの登録や削除
-* [RLaserUp](#RLaserUp) : 
+* [RLaserUp](#RLaserUp) : 「右手側のレーザーポインタを選択オブジェクト上で離した時」のイベントハンドラの登録や削除
 * [RLsserUpOutside](#RLsserUpOutside) : 
 * [RThumbstickDown](#RThumbstickDown) : 「右親指スティックを押した時」のイベントハンドラの登録や削除
 * [RThumbstickDownDown](#RThumbstickDownDown) : 「右親指スティックを下に倒した時」のイベントハンドラの登録や削除
@@ -2382,6 +2382,61 @@ public class GameManager : MonoBehaviour {
 [OTouch.RLaserDown](#RLaserDown)  
 [OTouch.RLaserUp](#RLaserUp)  
 [OTouch.RLaserUpOutside](#RLaserUpOutside)  
+[OTouch.AddTargetObject()](#AddTargetObject)
+
+***
+
+<a name="RLaserUp"></a>
+
+# OTouch.RLaserUp
+
+### ◇ 構文
+<em>otouch</em>.RLaserUp
+
+### ◇ 説明
+イベント。 
+[OTouch.AddTargetObject()](#AddTargetObject) 等で登録済みのオブジェクトを [OTouch.RLaserDown](#RLaserDown) 後、「同じオブジェクトの領域で右人差し指トリガーを離した時」のイベントハンドラの登録や削除を行うことができます。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL")
+        _otouch.R = GameObject.Find("OculusTouchR");
+
+        //レーザーポインタの表示
+        _otouch.EnabledLaserL = true;
+        _otouch.EnabledLaserR = true;
+
+        //レーザーポインタで選択するオブジェクトの登録
+        _otouch.AddTargetObject(GameObject.Find("Button1"));
+
+        //イベントハンドラの登録
+        _otouch.RLaserUp += RLaserUpHandler;
+
+        //DEBUG用
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
+    }
+
+    //イベントハンドラ
+    private void RLaserUpHandler(GameObject arg) {
+        _console.Log("右レーザーが" + arg.name + "を↑"); //DEBUG用
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.LLaserUp](#LLaserUp)  
+[OTouch.RLaserDown](#RLaserDown)  
+[OTouch.RLaserUpOutside](#RLaserUpOutside)  
+[OTouch.RLaserOver](#RLaserOver)  
+[OTouch.RLaserOut](#RLaserOut)  
 [OTouch.AddTargetObject()](#AddTargetObject)
 
 ***
