@@ -131,6 +131,7 @@ public class GameManager : MonoBehaviour {
 
 ### ◇ 参照
 [OTouch.RemoveTargetObject()](#RemoveTargetObject)  
+[OTouch.TargetObjects](#TargetObjects)  
 [OTouch.LLaserDown](#LLaserDown)  
 [OTouch.RLaserDown](#RLaserDown)  
 [OTouch.LLaserOver](#LLaserOver)  
@@ -1671,6 +1672,7 @@ public class GameManager : MonoBehaviour {
 
 ### ◇ 参照
 [OTouch.AddTargetObject()](#AddTargetObject)  
+[OTouch.TargetObjects](#TargetObjects)  
 
 ***
 
