@@ -2661,7 +2661,7 @@ public class GameManager : MonoBehaviour {
 ### ◇ 説明
 プロパティ。  
 左、もしくは右手側のレーザーポインタに反応させるオブジェクト（GameObject）のリスト。  
-登録する方法には次の２つの方法があります。  
+登録するには次の２つの方法があります。  
 ① [OTouch.AddTargetObject()](#AddTargetObject) を使う  
 ② [OTouch.TargetObjects](#TargetObjects) プロパティに[動的配列](https://github.com/mubirou/HelloWorld/blob/master/languages/C%23Unity/C%23Unity_reference.md#%E5%8B%95%E7%9A%84%E9%85%8D%E5%88%97%EF%BC%88List%EF%BC%89) を代入する  
 
