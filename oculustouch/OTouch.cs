@@ -1,5 +1,5 @@
 ﻿/***************************************************************************
- * OTouch Alpha1.201909301918
+ * OTouch Alpha1.201910011038
  * © 2019 夢寐郎
  ***************************************************************************/
 using System.Collections;
@@ -10,8 +10,8 @@ using System; //for Math
 /******************************************************************************
  * OTouch Class
  *  <Public Method>
- *      AddTargetObjects(GameObject)
- *      RemoveTargetObjects(GameObject)
+ *      AddTargetObject(GameObject)
+ *      RemoveTargetObject(GameObject)
  *
  *  <Public Property>
  *      IsLHandTriggerDown（Read Only）
@@ -585,14 +585,14 @@ public class OTouch : MonoBehaviour {
     //=====================================
     // Public Method
     //=====================================
-    public List<GameObject> AddTargetObjects(GameObject arg) {
+    public List<GameObject> AddTargetObject(GameObject arg) {
         if (_targetObjects.IndexOf(arg) == -1) { //複数登録の回避
             _targetObjects.Add(arg);
         }
         return _targetObjects;
     }
-    public List<GameObject> RemoveTargetObjects(GameObject arg) {
-        _targetObjects.Add(arg);
+    public List<GameObject> RemoveTargetObject(GameObject arg) {
+        _targetObjects.Remove(arg);
         return _targetObjects;
     }
 
