@@ -66,7 +66,7 @@ Version Alpha1.201910011038 対応
 * [RLaserOut](#RLaserOut) : 「右手側のレーザーポインタがアウトした時」のイベントハンドラの登録や削除
 * [RLaserOver](#RLaserOver) : 「右手側のレーザーポインタでヒットした時」のイベントハンドラの登録や削除
 * [RLaserUp](#RLaserUp) : 「右手側のレーザーポインタを選択オブジェクト上で離した時」のイベントハンドラの登録や削除
-* [RLsserUpOutside](#RLsserUpOutside) : 「右手側のレーザーポインタを選択オブジェクト外で離した時」のイベントハンドラの登録や削除
+* [RLaserUpOutside](#RLaserUpOutside) : 「右手側のレーザーポインタを選択オブジェクト外で離した時」のイベントハンドラの登録や削除
 * [RThumbstickDown](#RThumbstickDown) : 「右親指スティックを押した時」のイベントハンドラの登録や削除
 * [RThumbstickDownDown](#RThumbstickDownDown) : 「右親指スティックを下に倒した時」のイベントハンドラの登録や削除
 * [RThumbstickDownUp](#RThumbstickDownUp) : 「右親指スティックを下に倒した後、離した時」のイベントハンドラの登録や削除
@@ -2269,7 +2269,7 @@ public class GameManager : MonoBehaviour {
 ### ◇ 参照
 [OTouch.LLaserDown](#LLaserDown)  
 [OTouch.RLaserUp](#RLaserUp)  
-[OTouch.RLsserUpOutside](#RLsserUpOutside)  
+[OTouch.RLaserUpOutside](#RLaserUpOutside)  
 [OTouch.RLaserOver](#RLaserOver)  
 [OTouch.RLaserOut](#RLaserOut)  
 [OTouch.AddTargetObject()](#AddTargetObject)
