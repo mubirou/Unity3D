@@ -44,7 +44,7 @@ Version Alpha1.201910011038 対応
 * [LLaserOut](#LLaserOut) : 「左手側のレーザーポインタがアウトした時」のイベントハンドラの登録や削除
 * [LLaserOver](#LLaserOver) : 「左手側のレーザーポインタでヒットした時」のイベントハンドラの登録や削除
 * [LLaserUp](#LLaserUp) : 「左手側のレーザーポインタを選択オブジェクト上で離した時」のイベントハンドラの登録や削除
-* [LLsserUpOutside](#LLsserUpOutside) : 「左手側のレーザーポインタを選択オブジェクト外で離した時」のイベントハンドラの登録や削除
+* [LLaserUpOutside](#LLaserUpOutside) : 「左手側のレーザーポインタを選択オブジェクト外で離した時」のイベントハンドラの登録や削除
 * [LThumbstickDown](#LThumbstickDown) : 「左親指スティックを押した時」のイベントハンドラの登録や削除
 * [LThumbstickDownDown](#LThumbstickDownDown) : 「左親指スティックを下に倒した時」のイベントハンドラの登録や削除
 * [LThumbstickDownUp](#LThumbstickDownUp) : 「左親指スティックを下に倒した後、離した時」のイベントハンドラの登録や削除
@@ -1262,12 +1262,12 @@ public class GameManager : MonoBehaviour {
 
 ***
 
-<a name="LLsserUpOutside"></a>
+<a name="LLaserUpOutside"></a>
 
-# OTouch.LLsserUpOutside
+# OTouch.LLaserUpOutside
 
 ### ◇ 構文
-<em>otouch</em>.LLsserUpOutside
+<em>otouch</em>.LLaserUpOutside
 
 ### ◇ 説明
 イベント。 
@@ -1292,14 +1292,14 @@ public class GameManager : MonoBehaviour {
         _otouch.AddTargetObject(GameObject.Find("Button1"));
 
         //イベントハンドラの登録
-        _otouch.LLsserUpOutside += LLsserUpOutsideHandler;
+        _otouch.LLaserUpOutside += LLaserUpOutsideHandler;
 
         //DEBUG用
         _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
     }
 
     //イベントハンドラ
-    private void LLsserUpOutsideHandler(GameObject arg) {
+    private void LLaserUpOutsideHandler(GameObject arg) {
         _console.Log("左レーザーが" + arg.name + "の外で↑"); //DEBUG用
     }
 }
