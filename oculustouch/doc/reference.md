@@ -43,8 +43,8 @@ Version Alpha1.201910011038 対応
 * [LLaserDown](#LLaserDown) : 「左手側のレーザーポインタでオブジェクトを押した時」のイベントハンドラの登録や削除
 * [LLaserOut](#LLaserOut) : 「左手側のレーザーポインタがアウトした時」のイベントハンドラの登録や削除
 * [LLaserOver](#LLaserOver) : 「左手側のレーザーポインタでヒットした時」のイベントハンドラの登録や削除
-* [LLaserUp](#LLaserUp) : 「左手側のレーザーポインタでオブジェクトを離した時」のイベントハンドラの登録や削除
-* [LLsserUpOutside](#LLsserUpOutside) : 
+* [LLaserUp](#LLaserUp) : 「左手側のレーザーポインタを選択オブジェクト上で離した時」のイベントハンドラの登録や削除
+* [LLsserUpOutside](#LLsserUpOutside) : 「左手側のレーザーポインタを選択オブジェクト外で離した時」のイベントハンドラの登録や削除
 * [LThumbstickDown](#LThumbstickDown) : 「左親指スティックを押した時」のイベントハンドラの登録や削除
 * [LThumbstickDownDown](#LThumbstickDownDown) : 「左親指スティックを下に倒した時」のイベントハンドラの登録や削除
 * [LThumbstickDownUp](#LThumbstickDownUp) : 「左親指スティックを下に倒した後、離した時」のイベントハンドラの登録や削除
