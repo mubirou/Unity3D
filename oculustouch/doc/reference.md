@@ -63,9 +63,9 @@ Version Alpha1.201910011038 対応
 * [RIndexTriggerRawTouch](#RIndexTriggerRawTouch) : 「右人差し指トリガーにタッチした時」のイベントハンドラの登録や削除
 * [RIndexTriggerUp](#RIndexTriggerUp) : 「右人差し指トリガーを押した後、離した時」のイベントハンドラの登録や削除
 * [RLaserDown](#RLaserDown) : 「右手側のレーザーポインタでオブジェクトを押した時」のイベントハンドラの登録や削除
-* [RLaserOut](#RLaserOut) : 
+* [RLaserOut](#RLaserOut) : 「右手側のレーザーポインタがアウトした時」のイベントハンドラの登録や削除
 * [RLaserOver](#RLaserOver) : 「右手側のレーザーポインタでヒットした時」のイベントハンドラの登録や削除
-* [RLaserUp](#RLaserUp) : 「右手側のレーザーポインタがアウトした時」のイベントハンドラの登録や削除
+* [RLaserUp](#RLaserUp) : 
 * [RLsserUpOutside](#RLsserUpOutside) : 
 * [RThumbstickDown](#RThumbstickDown) : 「右親指スティックを押した時」のイベントハンドラの登録や削除
 * [RThumbstickDownDown](#RThumbstickDownDown) : 「右親指スティックを下に倒した時」のイベントハンドラの登録や削除
