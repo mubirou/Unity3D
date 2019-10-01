@@ -24,7 +24,7 @@ Version Alpha1.201910011038 対応
 * [RHandTrigger](#RHandTrigger) : 「右中指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁で表示）
 * [RIndexTrigger](#RIndexTrigger) : 「右人差し指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁で表示）
 * [RThumbstickRotate](#RThumbstickRotate) : 「右親指スティックの角度」（度数法）
-* [TargetObjects](#TargetObjects) : 
+* [TargetObjects](#TargetObjects) : レーザーポインタに反応させるオブジェクトのリスト
 
 
 ## ◆ イベント一覧
