@@ -1,5 +1,5 @@
 ﻿/***************************************************************************
- * OTouch Alpha1.201910011038
+ * OTouch Alpha 2.20191001508
  * © 2019 夢寐郎
  ***************************************************************************/
 using System.Collections;
@@ -275,7 +275,7 @@ public class OTouch : MonoBehaviour {
                 _hitObjectL = HitTestL(true); //ヒットテスト
                 if (_hitObjectL != null) {
                     if (IsTargetObject(_hitObjectL)) {
-                        LLaserDown(_hitObjectL); //イベント発生
+                        if (LLaserDown != null) LLaserDown(_hitObjectL); //イベント発生 20191001
                         _selectObjectL = _hitObjectL; //選択したオブジェクトを記録 NEW
                     }
                     //_isLLaserDown = true;
@@ -295,7 +295,7 @@ public class OTouch : MonoBehaviour {
                 _hitObjectR = HitTestR(true); //ヒットテスト
                 if (_hitObjectR != null) {
                     if (IsTargetObject(_hitObjectR)) {
-                        RLaserDown(_hitObjectR); //イベント発生
+                        if (RLaserDown != null) RLaserDown(_hitObjectR); //イベント発生 20191001
                         _selectObjectR = _hitObjectR; //選択したオブジェクトを記録 NEW
                     }
                     //_isRLaserDown = true;
@@ -306,26 +306,26 @@ public class OTouch : MonoBehaviour {
         //人差し指トリガー（Up）
         if (OVRInput.GetUp(OVRInput.RawButton.LIndexTrigger)) {
             _isLIndexTriggerDown = false;
-            LIndexTriggerUp();
+            if (LIndexTriggerUp != null) LIndexTriggerUp(); //20191001
             if (HitTestL(false) == _selectObjectL) { //ヒットテスト NEW
                 if (IsTargetObject(_hitObjectL)) {
-                    LLaserUp(_selectObjectL); //≒MouseUp, Click
+                    if (LLaserUp != null) LLaserUp(_selectObjectL); //≒MouseUp, Click 20191001
                 }
             } else {
-                LLaserUpOutside(_selectObjectL); //≒MouseUpOutside NEW
+                if (LLaserUpOutside != null) LLaserUpOutside(_selectObjectL); //≒MouseUpOutside 20191001
             }
             //_isLLaserDown = false;
             _selectObjectL = null;
         }
         if (OVRInput.GetUp(OVRInput.RawButton.RIndexTrigger)) {
             _isRIndexTriggerDown = false;
-            RIndexTriggerUp();
+            if (RIndexTriggerUp != null) RIndexTriggerUp(); //20191001
             if (HitTestR(false) == _selectObjectR) { //ヒットテスト NEW
                 if (IsTargetObject(_hitObjectR)) {
-                    RLaserUp(_selectObjectR); //≒MouseUp, Click
+                    if (RLaserUp != null) RLaserUp(_selectObjectR); //≒MouseUp, Click 20191001
                 }
             } else {
-                RLaserUpOutside(_selectObjectR); //≒MouseUpOutside
+                if (RLaserUpOutside != null) RLaserUpOutside(_selectObjectR); //≒MouseUpOutside 20191001
             }
             //_isRLaserDown = false;
             _selectObjectR = null;
@@ -367,18 +367,10 @@ public class OTouch : MonoBehaviour {
         //親指スティック
         if (OVRInput.GetDown(OVRInput.RawButton.LThumbstick)) LThumbstickDown();
         if (OVRInput.GetUp(OVRInput.RawButton.LThumbstick)) {
-            // _isLThumbstickUpDown = false;
-            // _isLThumbstickDownDown = false;
-            // _isLThumbstickLeftDown = false;
-            // _isLThumbstickRightDown = false;
             LThumbstickUp();
         }
         if (OVRInput.GetDown(OVRInput.RawButton.RThumbstick)) RThumbstickDown();
         if (OVRInput.GetUp(OVRInput.RawButton.RThumbstick)) {
-            // _isRThumbstickUpDown = false;
-            // _isRThumbstickDownDown = false;
-            // _isRThumbstickLeftDown = false;
-            // _isRThumbstickRightDown = false;
             RThumbstickUp();
         }
 

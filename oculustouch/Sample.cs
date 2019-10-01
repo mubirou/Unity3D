@@ -3,34 +3,36 @@
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
-    private Console _console;
+    private Console _console; //DEBUG用
 
     void Start() {
         OTouch _otouch = GetComponent<OTouch>();
         _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.R = GameObject.Find("OculusTouchL");
 
+        //レーザーポインタの表示
         _otouch.EnabledLaserL = true;
-        
-        _otouch.AddTargetObjects(GameObject.Find("Button1"));
-        
-        //"OVER"単独はオケ。"DOWN"単独はNG。
-        //_otouch.LLaserOver += LLaserOverHandler;
-        _otouch.LLaserDown += LLaserDownHandler;
+        _otouch.EnabledLaserR = true;
 
+        //レーザーポインタで選択するオブジェクトの登録
+        _otouch.AddTargetObject(GameObject.Find("Button1"));
+
+        //イベントハンドラの登録
+        _otouch.RLaserUpOutside += RLaserUpOutsideHandler;
+
+        //DEBUG用
         _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
     }
 
-
-    // private void LLaserOverHandler(GameObject arg) {
-    //     _console.Log("左レーザーが" + arg.name + "にヒット");
-    // }
-    private void LLaserDownHandler(GameObject arg) {
-        _console.Log("左レーザーが" + arg.name + "を↓");
+    //イベントハンドラ
+    private void RLaserUpOutsideHandler(GameObject arg) {
+        _console.Log("右レーザーが" + arg.name + "の外で↑"); //DEBUG用
     }
 }
 */
 
-//GameManager.cs
+
+//GameManager.cs（20191001_1510） with OTouch Alpha 2.20191001508
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -155,12 +157,12 @@ public class GameManager : MonoBehaviour {
         _otouch.RIndexTriggerRawNearTouch += RIndexTriggerRawNearTouchHandler;
 
         //選択オブジェクト
-        GameObject _cube1 = GameObject.Find("Cube1");
-        GameObject _cube2 = GameObject.Find("Cube2");
-        GameObject _cube3 = GameObject.Find("Cube3");
-        _otouch.AddTargetObjects(_cube1);
-        _otouch.AddTargetObjects(_cube2);
-        _otouch.AddTargetObjects(_cube3);
+        GameObject _button1 = GameObject.Find("Button1");
+        GameObject _button2 = GameObject.Find("Button2");
+        GameObject _button3 = GameObject.Find("Button3");
+        _otouch.AddTargetObject(_button1);
+        _otouch.AddTargetObject(_button2);
+        _otouch.AddTargetObject(_button3);
         //Debug.Log(_otouch.TargetObjects);
 
         //オブジェクト選択
@@ -199,11 +201,11 @@ public class GameManager : MonoBehaviour {
         _indexTriggerL.GetComponent<Renderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
     }
     private void RIndexTriggerDownHandler() {
-        _console.Log("右人差し指トリガー↓");
+        _console.Log("右人差し用指トリガー↓");
         _indexTriggerR.GetComponent<Renderer>().material.color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
     }
     private void RIndexTriggerUpHandler() {
-        _console.Log("右人差し指トリガー↑");
+        _console.Log("右人差し用指トリガー↑");
         _indexTriggerR.GetComponent<Renderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
     }
     //中指トリガー
@@ -355,7 +357,7 @@ public class GameManager : MonoBehaviour {
 
     //タッチ（RawTouch）
     private void LIndexTriggerRawTouchHandler() {_console.Log("左人差し指トリガーにタッチ");}
-    private void RIndexTriggerRawTouchHandler() {_console.Log("右人差し指トリガーにタッチ");}
+    private void RIndexTriggerRawTouchHandler() {_console.Log("右人差し用指トリガーにタッチ");}
     private void LThumbstickRawTouchHandler() {_console.Log("左親指スティックにタッチ");}
     private void RThumbstickRawTouchHandler() {_console.Log("右親指スティックにタッチ");}
     private void ARawTouchHandler() {_console.Log("Aボタンにタッチ");}
@@ -364,7 +366,7 @@ public class GameManager : MonoBehaviour {
     private void YRawTouchHandler() {_console.Log("Yボタンにタッチ");}
     //近接（RawNearTouch）
     private void LIndexTriggerRawNearTouchHandler() {_console.Log("左人差し指トリガーに近接");}
-    private void RIndexTriggerRawNearTouchHandler() {_console.Log("右人差し指トリガーに近接");}
+    private void RIndexTriggerRawNearTouchHandler() {_console.Log("右人差し用指トリガーに近接");}
 
     //オブジェクト選択
     private void LLaserOverHandler(GameObject arg) {
