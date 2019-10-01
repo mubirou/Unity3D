@@ -2407,7 +2407,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL")
+        _otouch.L = GameObject.Find("OculusTouchL");
         _otouch.R = GameObject.Find("OculusTouchR");
 
         //レーザーポインタの表示
