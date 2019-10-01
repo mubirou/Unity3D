@@ -65,7 +65,7 @@ Version Alpha1.201910011038 対応
 * [RLaserDown](#RLaserDown) : 「右手側のレーザーポインタでオブジェクトを押した時」のイベントハンドラの登録や削除
 * [RLaserOut](#RLaserOut) : 
 * [RLaserOver](#RLaserOver) : 「右手側のレーザーポインタでヒットした時」のイベントハンドラの登録や削除
-* [RLaserUp](#RLaserUp) : 
+* [RLaserUp](#RLaserUp) : 「右手側のレーザーポインタがアウトした時」のイベントハンドラの登録や削除
 * [RLsserUpOutside](#RLsserUpOutside) : 
 * [RThumbstickDown](#RThumbstickDown) : 「右親指スティックを押した時」のイベントハンドラの登録や削除
 * [RThumbstickDownDown](#RThumbstickDownDown) : 「右親指スティックを下に倒した時」のイベントハンドラの登録や削除
@@ -2126,7 +2126,7 @@ public class GameManager : MonoBehaviour {
 
 ### ◇ 説明
 イベント。 
-[OTouch.AddTargetObject()](#AddTargetObject) 等で登録済みのオブジェクトから「右手側のレーザーポインタが出た時」のイベントハンドラの登録や削除を行うことができます。
+[OTouch.AddTargetObject()](#AddTargetObject) 等で登録済みのオブジェクトから「右手側のレーザーポインタがアウトした（領域から出た）時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
 ```
