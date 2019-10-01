@@ -2651,6 +2651,55 @@ public class GameManager : MonoBehaviour {
 
 ***
 
+<a name="TargetObjects"></a>
+
+# OTouch.TargetObjects
+
+### ◇ 構文
+<em>otouch</em>.TargetObjects
+
+### ◇ 説明
+プロパティ。読み取り専用。  
+左、もしくは右手側のレーザーポインタに反応させるオブジェクト（GameObject）のリスト（）。
+
+### ◇ 例文（一つずつ登録する方法）
+```
+OTouch _otouch = GetComponent<OTouch>();
+
+//一つずつ登録する場合
+_otouch.AddTargetObject(GameObject.Find("Button1"));
+_otouch.AddTargetObject(GameObject.Find("Button2"));
+_otouch.AddTargetObject(GameObject.Find("Button3"));
+
+foreach (GameObject value in _otouch.TargetObjects) {
+    Debug.Log(value.name); //"Button1"→"Button2"→"Button3"
+}
+```
+
+### ◇ 例文（一度に複数登録する方法）
+```
+OTouch _otouch = GetComponent<OTouch>();
+
+// 一度に複数のオブジェクトを登録する場合
+_otouch.TargetObjects = new System.Collections.Generic.List<GameObject>() {
+    GameObject.Find("Button1"),
+    GameObject.Find("Button2"),
+    GameObject.Find("Button3")
+};
+
+foreach (GameObject value in _otouch.TargetObjects) {
+    Debug.Log(value.name); //"Button1"→"Button2"→"Button3"
+}
+```
+
+### ◇ 参照
+[OTouch.AddTargetObject()](#AddTargetObject)  
+[OTouch.RemoveTargetObject()](#RemoveTargetObject)  
+[動的配列](https://github.com/mubirou/HelloWorld/blob/master/languages/C%23Unity/C%23Unity_reference.md#%E5%8B%95%E7%9A%84%E9%85%8D%E5%88%97%EF%BC%88List%EF%BC%89)  
+
+***
+
+
 <a name="XDown"></a>
 
 # OTouch.XDown
