@@ -89,6 +89,55 @@ Version Alpha1.201909301918 対応
 
 ***
 
+<a name="AddTargetObjects"></a>
+
+# OTouch.AddTargetObjects()
+
+### ◇ 構文
+<em>otouch</em>.AddTargetObjects(<em>someGameObject</em>)
+
+### ◇ 説明
+メソッド。  
+右、もしくは左手側のレーザーポインタに反応させるオブジェクトの登録を行います。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.EnabledLaserL = true;
+
+        //レーザーポインタで選択するオブジェクトの登録
+        _otouch.AddTargetObjects(GameObject.Find("Button1"));
+        _otouch.AddTargetObjects(GameObject.Find("Button2"));
+        _otouch.AddTargetObjects(GameObject.Find("Button3"));
+
+        _otouch.LLaserDown += LLaserDownHandler;
+
+        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
+    }
+
+    private void LLaserDownHandler(GameObject arg) {
+        _console.Log("左レーザーが" + arg.name + "を↓");
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.RemoveTargetObjects()](#RemoveTargetObjects)  
+[OTouch.LLaserDown](#LLaserDown)  
+[OTouch.RLaserDown](#RLaserDown)  
+[OTouch.LLaserOver](#LLaserOver)  
+[OTouch.RLaserOver](#RLaserOver)  
+
+***
+
 <a name="ADown"></a>
 
 # OTouch.ADown
