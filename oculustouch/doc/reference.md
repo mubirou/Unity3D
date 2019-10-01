@@ -1131,7 +1131,7 @@ public class GameManager : MonoBehaviour {
 
         //レーザーポインタで選択するオブジェクトの登録
         _otouch.AddTargetObject(GameObject.Find("Button1"));
-        
+
         //イベントハンドラの登録
         _otouch.LLaserOver += LLaserOverHandler;
 
@@ -2139,7 +2139,7 @@ public class GameManager : MonoBehaviour {
     void Start() {
         OTouch _otouch = GetComponent<OTouch>();
         _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchL");
+        _otouch.R = GameObject.Find("OculusTouchR");
 
         //レーザーポインタの表示
         _otouch.EnabledLaserL = true;
@@ -3048,26 +3048,3 @@ public class GameManager : MonoBehaviour {
 ### ◇ 参照
 [OTouch.YDown](#YDown)  
 [OTouch.YRawTouch](#YRawTouch)  
-
-***
-
-<a name="XXXX"></a>
-
-# XXXX
-
-### ◇ 構文
-XXXX
-
-### ◇ 引数
-XXXX  
-
-### ◇ 説明
-XXXX
-
-### ◇ 例文
-```
-//GameManager.cs
-```
-
-### ◇ 参照
-XXXX
