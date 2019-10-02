@@ -704,6 +704,41 @@ public class GameManager : MonoBehaviour {
 
 ***
 
+<a name="IsVibration"></a>
+
+# OTouch.IsVibration
+
+### ◇ 構文
+<em>otouch</em>.IsVibration
+
+### ◇ 説明
+プロパティ。  
+[OTouch.LLaserOver](#LLaserOver) や [OTouch.RLaserOver](#RLaserOver) 時のバイブレーションが有効か否かを示すブール値。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OTouch _otouch = GetComponent<OTouch>();
+        _otouch.L = GameObject.Find("OculusTouchL");
+        _otouch.EnabledLaserL = true;
+        _otouch.AddTargetObject(GameObject.Find("Button1"));
+        _otouch.IsVibration = false;
+    }
+}
+```
+
+### ◇ 参照
+[OTouch.LLaserOver](#LLaserOver)  
+[OTouch.RLaserOver](#RLaserOver)  
+
+***
+
 <a name="L"></a>
 
 # OTouch.L
