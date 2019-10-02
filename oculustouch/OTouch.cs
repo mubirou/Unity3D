@@ -1,5 +1,5 @@
 ﻿/***************************************************************************
- * OTouch Alpha 2.20191001900（レーザーポインタの表示非表示で非合理的）
+ * OTouch Alpha 2.201910021907（レーザーポインタの表示非表示で非合理的）
  * © 2019 夢寐郎
  ***************************************************************************/
 using System.Collections;
@@ -14,6 +14,7 @@ using System; //for Math
  *      RemoveTargetObject(GameObject)
  *
  *  <Public Property>
+ *      IsVibration
  *      IsLHandTriggerDown（Read Only）
  *      IsLIndexTriggerDown（Read Only）
  *      IsLThumbstickMove（Read Only）
@@ -125,6 +126,7 @@ public class OTouch : MonoBehaviour {
     //バイブレーション
     private bool _isVibrationL = false;
     private bool _isVibrationR = false;
+    private bool _isVibration = true; //バイブーションの有効化
 
     //レーザーポインタが反応するGameObjectのリスト
     public List<GameObject> _targetObjects = new List<GameObject>(); //本来はprivate
@@ -524,10 +526,12 @@ public class OTouch : MonoBehaviour {
                         if (!_isVibrationL) {
                             if (LLaserOver != null) LLaserOver(_hitObjectL); //イベント発生
                             if (arg) {
-                                //振動させる（周波数0〜1.0f,振幅0〜1.0f）
-                                OVRInput.SetControllerVibration(1.0f, 0.3f, OVRInput.Controller.LTouch);
-                                //0.05秒後に "StopVibration()" を実行
-                                Invoke("StopVibrationL", 0.05f); 
+                                if (_isVibration) { //バイブレーションの有効時
+                                    //振動させる（周波数0〜1.0f,振幅0〜1.0f）
+                                    OVRInput.SetControllerVibration(1.0f, 0.3f, OVRInput.Controller.LTouch);
+                                    //0.05秒後に "StopVibration()" を実行
+                                    Invoke("StopVibrationL", 0.05f); 
+                                }
                                 _isVibrationL = true;
                             }
                         }
@@ -553,10 +557,12 @@ public class OTouch : MonoBehaviour {
                         if (!_isVibrationR) {
                             if (RLaserOver != null) RLaserOver(_hitObjectR); //イベント発生
                             if (arg) {
-                                //振動させる（周波数0〜1.0f,振幅0〜1.0f）
-                                OVRInput.SetControllerVibration(1.0f, 0.3f, OVRInput.Controller.RTouch);
-                                //0.05秒後に "StopVibration()" を実行
-                                Invoke("StopVibrationR", 0.05f); 
+                                if (_isVibration) { //バイブレーションの有効時
+                                    //振動させる（周波数0〜1.0f,振幅0〜1.0f）
+                                    OVRInput.SetControllerVibration(1.0f, 0.3f, OVRInput.Controller.RTouch);
+                                    //0.05秒後に "StopVibration()" を実行
+                                    Invoke("StopVibrationR", 0.05f); 
+                                }
                                 _isVibrationR = true;
                             }
                         }
@@ -749,5 +755,11 @@ public class OTouch : MonoBehaviour {
     public List<GameObject> TargetObjects {
         get { return _targetObjects; }
         set { _targetObjects = value; }
+    }
+
+    //バイブレーションの有効化
+    public bool IsVibration {
+        get { return _isVibration; }
+        set { _isVibration = value; }
     }
 }
