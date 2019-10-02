@@ -1207,7 +1207,7 @@ public class GameManager : MonoBehaviour {
 [OTouch.LLaserUp](#LLaserUp)  
 [OTouch.LLaserUpOutside](#LLaserUpOutside)  
 [OTouch.AddTargetObject()](#AddTargetObject)  
-[IsVibration](#IsVibration)  
+[OTouch.IsVibration](#IsVibration)  
 
 ***
 
@@ -2385,7 +2385,7 @@ public class GameManager : MonoBehaviour {
 [OTouch.RLaserUp](#RLaserUp)  
 [OTouch.RLaserUpOutside](#RLaserUpOutside)  
 [OTouch.AddTargetObject()](#AddTargetObject)  
-[IsVibration](#IsVibration)  
+[OTouch.IsVibration](#IsVibration)  
 
 ***
 
