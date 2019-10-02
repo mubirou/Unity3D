@@ -99,7 +99,8 @@ Version Alpha 2.201910021907 対応
 
 ### ◇ 説明
 メソッド。  
-左、もしくは右手側のレーザーポインタに反応させるオブジェクトの登録をします。
+左、もしくは右手側のレーザーポインタに反応させるオブジェクトの登録をします。  
+追加されたオブジェクトに [OTouch.LLaserOver](#LLaserOver) または [OTouch.RLaserOver](#RLaserOver) のイベントが発生すると、バイブレーションが実行されます（初期値）。
 
 ### ◇ 例文
 ```
@@ -137,6 +138,7 @@ public class GameManager : MonoBehaviour {
 [OTouch.RLaserDown](#RLaserDown)  
 [OTouch.LLaserOver](#LLaserOver)  
 [OTouch.RLaserOver](#RLaserOver)  
+[OTouch.IsVibration](#IsVibration)  
 
 ***
 
