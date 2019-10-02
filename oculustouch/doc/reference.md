@@ -10,20 +10,20 @@ Version Alpha 2.20191001900 対応
 ## ◆ プロパティ一覧
 * [EnabledLaserL](#EnabledLaserL) : 左手側のレーザーポインタを表示するか否か
 * [EnabledLaserR](#EnabledLaserR) : 右手側のレーザーポインタを表示するか否か
-* [IsLHandTriggerDown](#IsLHandTriggerDown) : 「左中指トリガーを押している」か否か
-* [IsLIndexTriggerDown](#IsLIndexTriggerDown) : 「左人差し指トリガーを押している」か否か
-* [IsLThumbstickMove](#IsLThumbstickMove) : 「左親指スティックを動かしている」か否か
-* [IsRHandTriggerDown](#IsRHandTriggerDown) : 「右中指トリガーを押している」か否か
-* [IsRIndexTriggerDown](#IsRIndexTriggerDown) : 「右人差し指トリガーを押している」か否か
-* [IsRThumbstickMove](#IsRThumbstickMove) : 「左親指スティックを動かしている」か否か
+* [IsLHandTriggerDown](#IsLHandTriggerDown) : 左中指トリガーを押しているか否か
+* [IsLIndexTriggerDown](#IsLIndexTriggerDown) : 左人差し指トリガーを押しているか否か
+* [IsLThumbstickMove](#IsLThumbstickMove) : 左親指スティックを動かしているか否か
+* [IsRHandTriggerDown](#IsRHandTriggerDown) : 右中指トリガーを押しているか否か
+* [IsRIndexTriggerDown](#IsRIndexTriggerDown) : 右人差し指トリガーを押しているか否か
+* [IsRThumbstickMove](#IsRThumbstickMove) : 左親指スティックを動かしているか否か
 * [L](#L) : 左手側の Oculus Touch コントローラーの動きに連動する GameObject を指定
-* [LHandTrigger](#LHandTrigger) : 「左中指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁表示）
-* [LIndexTrigger](#LIndexTrigger) : 「左人差し指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁表示）
-* [LThumbstickRotate](#LThumbstickRotate) : 「左親指スティックの角度」（度数法）
+* [LHandTrigger](#LHandTrigger) : 左中指トリガーを押しているトリガー量（0〜1まで小数点以下15桁表示）
+* [LIndexTrigger](#LIndexTrigger) : 左人差し指トリガーを押しているトリガー量（0〜1まで小数点以下15桁表示）
+* [LThumbstickRotate](#LThumbstickRotate) : 左親指スティックの角度（度数法）
 * [R](#R) : 右手側の Oculus Touch コントローラーの動きに連動する GameObject を指定
-* [RHandTrigger](#RHandTrigger) : 「右中指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁表示）
-* [RIndexTrigger](#RIndexTrigger) : 「右人差し指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁表示）
-* [RThumbstickRotate](#RThumbstickRotate) : 「右親指スティックの角度」（度数法）
+* [RHandTrigger](#RHandTrigger) : 右中指トリガーを押しているトリガー量（0〜1まで小数点以下15桁表示）
+* [RIndexTrigger](#RIndexTrigger) : 右人差し指トリガーを押しているトリガー量（0〜1まで小数点以下15桁表示）
+* [RThumbstickRotate](#RThumbstickRotate) : 右親指スティックの角度（度数法）
 * [TargetObjects](#TargetObjects) : レーザーポインタに反応させるオブジェクトのリスト
 
 
