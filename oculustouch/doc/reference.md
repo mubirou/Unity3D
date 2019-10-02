@@ -1,5 +1,5 @@
 # OTouch リファレンスマニュアル
-Version Alpha 2.20191001508 対応  
+Version Alpha 2.20191001900 対応  
 © 2019 夢寐郎
 
 ## ◆ メソッド一覧
@@ -17,75 +17,75 @@ Version Alpha 2.20191001508 対応
 * [IsRIndexTriggerDown](#IsRIndexTriggerDown) : 「右人差し指トリガーを押している」か否か
 * [IsRThumbstickMove](#IsRThumbstickMove) : 「左親指スティックを動かしている」か否か
 * [L](#L) : 左手側の Oculus Touch コントローラーの動きに連動する GameObject を指定
-* [LHandTrigger](#LHandTrigger) : 「左中指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁で表示）
-* [LIndexTrigger](#LIndexTrigger) : 「左人差し指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁で表示）
+* [LHandTrigger](#LHandTrigger) : 「左中指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁表示）
+* [LIndexTrigger](#LIndexTrigger) : 「左人差し指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁表示）
 * [LThumbstickRotate](#LThumbstickRotate) : 「左親指スティックの角度」（度数法）
 * [R](#R) : 右手側の Oculus Touch コントローラーの動きに連動する GameObject を指定
-* [RHandTrigger](#RHandTrigger) : 「右中指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁で表示）
-* [RIndexTrigger](#RIndexTrigger) : 「右人差し指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁で表示）
+* [RHandTrigger](#RHandTrigger) : 「右中指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁表示）
+* [RIndexTrigger](#RIndexTrigger) : 「右人差し指トリガーを押しているトリガー量」（0〜1まで小数点以下15桁表示）
 * [RThumbstickRotate](#RThumbstickRotate) : 「右親指スティックの角度」（度数法）
 * [TargetObjects](#TargetObjects) : レーザーポインタに反応させるオブジェクトのリスト
 
 
 ## ◆ イベント一覧
-* [ADown](#ADown) : 「Aボタンを押した時」のイベントハンドラの登録や削除
-* [ARawTouch](#ARawTouch) : 「Aボタンに触れた時」のイベントハンドラの登録や削除
-* [AUp](#AUp) : 「Aボタンを押した後、離した時」のイベントハンドラの登録や削除
-* [BDown](#BDown) : 「Bボタンを押した時」のイベントハンドラの登録や削除
-* [BRawTouch](#BRawTouch) : 「Bボタンに触れた時」のイベントハンドラの登録や削除
-* [BUp](#BUp) : 「Bボタンを押した後、離した時」のイベントハンドラの登録や削除
-* [LHandTriggerDown](#LHandTriggerDown) : 「左中指トリガーを押した時」のイベントハンドラの登録や削除
-* [LHandTriggerUp](#LHandTriggerUp) : 「左中指トリガーを押した後、離した時」のイベントハンドラの登録や削除
-* [LIndexTriggerDown](#LIndexTriggerDown) : 「左人差し指トリガーを押した時」のイベントハンドラの登録や削除
-* [LIndexTriggerRawNearTouch](#LIndexTriggerRawNearTouch) : 「左人差し指トリガーに近接した時」のイベントハンドラの登録や削除
-* [LIndexTriggerRawTouch](#LIndexTriggerRawTouch) : 「左人差し指トリガーにタッチした時」のイベントハンドラの登録や削除
-* [LIndexTriggerUp](#LIndexTriggerUp) : 「左人差し指トリガーを押した後、離した時」のイベントハンドラの登録や削除
-* [LLaserDown](#LLaserDown) : 「左手側のレーザーポインタでオブジェクトを押した時」のイベントハンドラの登録や削除
-* [LLaserOut](#LLaserOut) : 「左手側のレーザーポインタがアウトした時」のイベントハンドラの登録や削除
-* [LLaserOver](#LLaserOver) : 「左手側のレーザーポインタでヒットした時」のイベントハンドラの登録や削除
-* [LLaserUp](#LLaserUp) : 「左手側のレーザーポインタを選択オブジェクト上で離した時」のイベントハンドラの登録や削除
-* [LLaserUpOutside](#LLaserUpOutside) : 「左手側のレーザーポインタを選択オブジェクト外で離した時」のイベントハンドラの登録や削除
-* [LThumbstickDown](#LThumbstickDown) : 「左親指スティックを押した時」のイベントハンドラの登録や削除
-* [LThumbstickDownDown](#LThumbstickDownDown) : 「左親指スティックを下に倒した時」のイベントハンドラの登録や削除
-* [LThumbstickDownUp](#LThumbstickDownUp) : 「左親指スティックを下に倒した後、離した時」のイベントハンドラの登録や削除
-* [LThumbstickLeftDown](#LThumbstickLeftDown) : 「左親指スティックを左に倒した時」のイベントハンドラの登録や削除
-* [LThumbstickLeftUp](#LThumbstickLeftUp) : 「左親指スティックを左に倒した後、離した時」のイベントハンドラの登録や削除
-* [LThumbstickRawTouch](#LThumbstickRawTouch) : 「左親指スティックにタッチした時」のイベントハンドラの登録や削除
-* [LThumbstickRightDown](#LThumbstickRightDown) : 「左親指スティックを右に倒した時」のイベントハンドラの登録や削除
-* [LThumbstickRightUp](#LThumbstickRightUp) : 「左親指スティックを右に倒した後、離した時」のイベントハンドラの登録や削除
-* [LThumbstickUp](#LThumbstickUp) : 「左親指スティックを押した後、離した時」のイベントハンドラの登録や削除
-* [LThumbstickUpDown](#LThumbstickUpDown) : 「左親指スティックを上に倒した時」のイベントハンドラの登録や削除
-* [LThumbstickUpUp](#LThumbstickUpUp) : 「左親指スティックを上に倒した後、離した時」のイベントハンドラの登録や削除
-* [RHandTriggerDown](#RHandTriggerDown) : 「右中指トリガーを押した時」のイベントハンドラの登録や削除
-* [RHandTriggerUp](#RHandTriggerUp) : 「右中指トリガーを押した後、離した時」のイベントハンドラの登録や削除
-* [RIndexTriggerDown](#RIndexTriggerDown) : 「右人差し指トリガーを押した時」のイベントハンドラの登録や削除
-* [RIndexTriggerRawNearTouch](#RIndexTriggerRawNearTouch) : 「右人差し指トリガーに近接した時」のイベントハンドラの登録や削除
-* [RIndexTriggerRawTouch](#RIndexTriggerRawTouch) : 「右人差し指トリガーにタッチした時」のイベントハンドラの登録や削除
-* [RIndexTriggerUp](#RIndexTriggerUp) : 「右人差し指トリガーを押した後、離した時」のイベントハンドラの登録や削除
-* [RLaserDown](#RLaserDown) : 「右手側のレーザーポインタでオブジェクトを押した時」のイベントハンドラの登録や削除
-* [RLaserOut](#RLaserOut) : 「右手側のレーザーポインタがアウトした時」のイベントハンドラの登録や削除
-* [RLaserOver](#RLaserOver) : 「右手側のレーザーポインタでヒットした時」のイベントハンドラの登録や削除
-* [RLaserUp](#RLaserUp) : 「右手側のレーザーポインタを選択オブジェクト上で離した時」のイベントハンドラの登録や削除
-* [RLaserUpOutside](#RLaserUpOutside) : 「右手側のレーザーポインタを選択オブジェクト外で離した時」のイベントハンドラの登録や削除
-* [RThumbstickDown](#RThumbstickDown) : 「右親指スティックを押した時」のイベントハンドラの登録や削除
-* [RThumbstickDownDown](#RThumbstickDownDown) : 「右親指スティックを下に倒した時」のイベントハンドラの登録や削除
-* [RThumbstickDownUp](#RThumbstickDownUp) : 「右親指スティックを下に倒した後、離した時」のイベントハンドラの登録や削除
-* [RThumbstickLeftDown](#RThumbstickLeftDown) : 「右親指スティックを左に倒した時」のイベントハンドラの登録や削除
-* [RThumbstickLeftUp](#RThumbstickLeftUp) : 「右親指スティックを左に倒した後、離した時」のイベントハンドラの登録や削除
-* [RThumbstickRawTouch](#RThumbstickRawTouch) : 「右親指スティックにタッチした時」のイベントハンドラの登録や削除
-* [RThumbstickRightDown](#RThumbstickRightDown) : 「右親指スティックを右に倒した時」のイベントハンドラの登録や削除
-* [RThumbstickRightUp](#RThumbstickRightUp) : 「右親指スティックを右に倒した後、離した時」のイベントハンドラの登録や削除
-* [RThumbstickUp](#RThumbstickUp) : 「右親指スティックを押した後、離した時」のイベントハンドラの登録や削除
-* [RThumbstickUpDown](#RThumbstickUpDown) : 「右親指スティックを上に倒した時」のイベントハンドラの登録や削除
-* [RThumbstickUpUp](#RThumbstickUpUp) : 「右親指スティックを上に倒した後、離した時」のイベントハンドラの登録や削除
-* [StartDown](#StartDown) : 「スタートボタン（Xボタンの下）を押した時」のイベントハンドラの登録や削除
-* [StartUp](#StartUp) : 「スタートボタン（Xボタンの下）を押した後、離した時」のイベントハンドラの登録や削除
-* [XDown](#XDown) : 「Xボタンを押した時」のイベントハンドラの登録や削除
-* [XRawTouch](#XRawTouch) : 「Xボタンに触れた時」のイベントハンドラの登録や削除
-* [XUp](#XUp) : 「Xボタンを押した後、離した時」のイベントハンドラの登録や削除
-* [YDown](#YDown) : 「Yボタンを押した時」のイベントハンドラの登録や削除
-* [YRawTouch](#YRawTouch) : 「Yボタンに触れた時」のイベントハンドラの登録や削除
-* [YUp](#YUp) : 「Yボタンを押した後、離した時」のイベントハンドラの登録や削除
+* [ADown](#ADown) : Aボタンを押した時
+* [ARawTouch](#ARawTouch) : Aボタンに触れた時
+* [AUp](#AUp) : Aボタンを押した後、離した時
+* [BDown](#BDown) : Bボタンを押した時
+* [BRawTouch](#BRawTouch) : Bボタンに触れた時
+* [BUp](#BUp) : Bボタンを押した後、離した時
+* [LHandTriggerDown](#LHandTriggerDown) : 左中指トリガーを押した時
+* [LHandTriggerUp](#LHandTriggerUp) : 左中指トリガーを押した後、離した時
+* [LIndexTriggerDown](#LIndexTriggerDown) : 左人差し指トリガーを押した時
+* [LIndexTriggerRawNearTouch](#LIndexTriggerRawNearTouch) : 左人差し指トリガーに近接した時
+* [LIndexTriggerRawTouch](#LIndexTriggerRawTouch) : 左人差し指トリガーにタッチした時
+* [LIndexTriggerUp](#LIndexTriggerUp) : 左人差し指トリガーを押した後、離した時
+* [LLaserDown](#LLaserDown) : 左手側のレーザーポインタでオブジェクトを押した時
+* [LLaserOut](#LLaserOut) : 左手側のレーザーポインタがアウトした時
+* [LLaserOver](#LLaserOver) : 左手側のレーザーポインタでヒットした時
+* [LLaserUp](#LLaserUp) : 左手側のレーザーポインタを選択オブジェクト上で離した時
+* [LLaserUpOutside](#LLaserUpOutside) : 左手側のレーザーポインタを選択オブジェクト外で離した時
+* [LThumbstickDown](#LThumbstickDown) : 左親指スティックを押した時
+* [LThumbstickDownDown](#LThumbstickDownDown) : 左親指スティックを下に倒した時
+* [LThumbstickDownUp](#LThumbstickDownUp) : 左親指スティックを下に倒した後、離した時
+* [LThumbstickLeftDown](#LThumbstickLeftDown) : 左親指スティックを左に倒した時
+* [LThumbstickLeftUp](#LThumbstickLeftUp) : 左親指スティックを左に倒した後、離した時
+* [LThumbstickRawTouch](#LThumbstickRawTouch) : 左親指スティックにタッチした時
+* [LThumbstickRightDown](#LThumbstickRightDown) : 左親指スティックを右に倒した時
+* [LThumbstickRightUp](#LThumbstickRightUp) : 左親指スティックを右に倒した後、離した時
+* [LThumbstickUp](#LThumbstickUp) : 左親指スティックを押した後、離した時
+* [LThumbstickUpDown](#LThumbstickUpDown) : 左親指スティックを上に倒した時
+* [LThumbstickUpUp](#LThumbstickUpUp) : 左親指スティックを上に倒した後、離した時
+* [RHandTriggerDown](#RHandTriggerDown) : 右中指トリガーを押した時
+* [RHandTriggerUp](#RHandTriggerUp) : 右中指トリガーを押した後、離した時
+* [RIndexTriggerDown](#RIndexTriggerDown) : 右人差し指トリガーを押した時
+* [RIndexTriggerRawNearTouch](#RIndexTriggerRawNearTouch) : 右人差し指トリガーに近接した時
+* [RIndexTriggerRawTouch](#RIndexTriggerRawTouch) : 右人差し指トリガーにタッチした時
+* [RIndexTriggerUp](#RIndexTriggerUp) : 右人差し指トリガーを押した後、離した時
+* [RLaserDown](#RLaserDown) : 右手側のレーザーポインタでオブジェクトを押した時
+* [RLaserOut](#RLaserOut) : 右手側のレーザーポインタがアウトした時
+* [RLaserOver](#RLaserOver) : 右手側のレーザーポインタでヒットした時
+* [RLaserUp](#RLaserUp) : 右手側のレーザーポインタを選択オブジェクト上で離した時
+* [RLaserUpOutside](#RLaserUpOutside) : 右手側のレーザーポインタを選択オブジェクト外で離した時
+* [RThumbstickDown](#RThumbstickDown) : 右親指スティックを押した時
+* [RThumbstickDownDown](#RThumbstickDownDown) : 右親指スティックを下に倒した時
+* [RThumbstickDownUp](#RThumbstickDownUp) : 右親指スティックを下に倒した後、離した時
+* [RThumbstickLeftDown](#RThumbstickLeftDown) : 右親指スティックを左に倒した時
+* [RThumbstickLeftUp](#RThumbstickLeftUp) : 右親指スティックを左に倒した後、離した時
+* [RThumbstickRawTouch](#RThumbstickRawTouch) : 右親指スティックにタッチした時
+* [RThumbstickRightDown](#RThumbstickRightDown) : 右親指スティックを右に倒した時
+* [RThumbstickRightUp](#RThumbstickRightUp) : 右親指スティックを右に倒した後、離した時
+* [RThumbstickUp](#RThumbstickUp) : 右親指スティックを押した後、離した時
+* [RThumbstickUpDown](#RThumbstickUpDown) : 右親指スティックを上に倒した時
+* [RThumbstickUpUp](#RThumbstickUpUp) : 右親指スティックを上に倒した後、離した時
+* [StartDown](#StartDown) : スタートボタン（Xボタンの下）を押した時
+* [StartUp](#StartUp) : スタートボタン（Xボタンの下）を押した後、離した時
+* [XDown](#XDown) : Xボタンを押した時
+* [XRawTouch](#XRawTouch) : Xボタンに触れた時
+* [XUp](#XUp) : Xボタンを押した後、離した時
+* [YDown](#YDown) : Yボタンを押した時
+* [YRawTouch](#YRawTouch) : Yボタンに触れた時
+* [YUp](#YUp) : Yボタンを押した後、離した時
 
 ***
 
@@ -734,7 +734,7 @@ _otouch.L = GameObject.Find("OculusTouchL");
 
 ### ◇ 説明
 プロパティ。  
-「左中指トリガーを押しているトリガー量」（0〜1 まで小数点以下15桁で表示）。読み取り専用。  
+「左中指トリガーを押しているトリガー量」（0〜1 まで小数点以下15桁表示）。読み取り専用。  
 0〜100までの整数値を求める場合、Math.Round((<em>otouch</em>.LHandTrigger*100)) とします。
 
 ### ◇ 例文
@@ -856,7 +856,7 @@ public class GameManager : MonoBehaviour {
 
 ### ◇ 説明
 プロパティ。  
-「左人差し指トリガーを押しているトリガー量」（0〜1 まで小数点以下15桁で表示）。読み取り専用。  
+「左人差し指トリガーを押しているトリガー量」（0〜1 まで小数点以下15桁表示）。読み取り専用。  
 0〜100までの整数値を求める場合、Math.Round((<em>otouch</em>.LIndexTrigger*100)) とします。
 
 ### ◇ 例文
@@ -1899,7 +1899,7 @@ public class GameManager : MonoBehaviour {
 
 ### ◇ 説明
 プロパティ。  
-「右中指トリガーを押しているトリガー量」（0〜1 まで小数点以下15桁で表示）。読み取り専用。  
+「右中指トリガーを押しているトリガー量」（0〜1 まで小数点以下15桁表示）。読み取り専用。  
 0〜100までの整数値を求める場合、Math.Round((<em>otouch</em>.RHandTrigger*100)) とします。
 
 ### ◇ 例文
@@ -2024,7 +2024,7 @@ public class GameManager : MonoBehaviour {
 
 ### ◇ 説明
 プロパティ。  
-「右人差し指トリガーを押しているトリガー量」（0〜1 まで小数点以下15桁で表示）。読み取り専用。  
+「右人差し指トリガーを押しているトリガー量」（0〜1 まで小数点以下15桁表示）。読み取り専用。  
 0〜100までの整数値を求める場合、Math.Round((<em>otouch</em>.RIndexTrigger*100)) とします。
 
 ### ◇ 例文
