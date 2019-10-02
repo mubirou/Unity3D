@@ -736,6 +736,7 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
+[OTouch.AddTargetObject()](#AddTargetObject)  
 [OTouch.LLaserOver](#LLaserOver)  
 [OTouch.RLaserOver](#RLaserOver)  
 
