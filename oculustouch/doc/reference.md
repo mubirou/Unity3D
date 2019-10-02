@@ -713,7 +713,7 @@ public class GameManager : MonoBehaviour {
 
 ### ◇ 説明
 プロパティ。  
-[OTouch.LLaserOver](#LLaserOver) や [OTouch.RLaserOver](#RLaserOver) 時のバイブレーションが有効か否かを示すブール値。
+[OTouch.LLaserOver](#LLaserOver) や [OTouch.RLaserOver](#RLaserOver) 時のバイブレーションを有効にするか否かを示すブール値。
 
 ### ◇ 例文
 ```
