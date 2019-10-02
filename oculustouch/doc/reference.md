@@ -723,8 +723,6 @@ public class GameManager : MonoBehaviour {
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
-    private Console _console; //DEBUG用
-
     void Start() {
         OTouch _otouch = GetComponent<OTouch>();
         _otouch.L = GameObject.Find("OculusTouchL");
