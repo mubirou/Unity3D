@@ -10,6 +10,7 @@ Version Alpha 2.20191001900 対応
 ## ◆ プロパティ一覧
 * [EnabledLaserL](#EnabledLaserL) : 左手側のレーザーポインタを表示するか否か
 * [EnabledLaserR](#EnabledLaserR) : 右手側のレーザーポインタを表示するか否か
+* [IsVibration](#IsVibration) : LLaserOver/RLaserOver時のバイブレーションの有効化
 * [IsLHandTriggerDown](#IsLHandTriggerDown) : 左中指トリガーを押しているか否か
 * [IsLIndexTriggerDown](#IsLIndexTriggerDown) : 左人差し指トリガーを押しているか否か
 * [IsLThumbstickMove](#IsLThumbstickMove) : 左親指スティックを動かしているか否か
