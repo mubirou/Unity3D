@@ -1,5 +1,5 @@
 # OQtouch スタート
-Version Alpha 1.201909192008 対応  
+Version Alpha 3.201910031905 対応  
 © 2019 夢寐郎
 
 ## ◆ OQtouch の準備
@@ -27,8 +27,8 @@ Version Alpha 1.201909192008 対応
 
 	public class GameManager : MonoBehaviour {
 		void Start() {
-			OQtouch _otouch = GetComponent<OQtouch>();
-			_otouch.R = GameObject.Find("OculusTouchR");
+			OQtouch _oqt = GetComponent<OQtouch>();
+			_oqt.R = GameObject.Find("OculusTouchR");
 		}
 	}
 	```
@@ -55,12 +55,12 @@ Version Alpha 1.201909192008 対応
         private Console _console;
 
         void Start() {
-            OQtouch _otouch = GetComponent<OQtouch>();
-            _otouch.L = GameObject.Find("OculusTouchL");
-            _otouch.LIndexTriggerDown += LIndexTriggerDownHandler;
+            OQtouch _oqt = GetComponent<OQtouch>();
+            _oqt.L = GameObject.Find("OculusTouchL");
+            _oqt.LIndexTriggerDown += LIndexTriggerDownHandler;
 
             //入れ子状態のConsoleをさがす
-            _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
+            _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
         }
 
         private void LIndexTriggerDownHandler() {
