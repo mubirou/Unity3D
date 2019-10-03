@@ -416,7 +416,7 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[レーザーポインタの準備](https://github.com/mubirou/Unity3D/blob/master/oculustouch/doc/start.md#LaserPointer)  
+[レーザーポインタの準備](https://github.com/mubirou/Unity3D/blob/master/oqtouch/doc/start.md#LaserPointer)  
 [OQtouch.EnabledLaserR](#EnabledLaserR)  
 
 ***
@@ -449,7 +449,7 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[レーザーポインタの準備](https://github.com/mubirou/Unity3D/blob/master/oculustouch/doc/start.md#LaserPointer)  
+[レーザーポインタの準備](https://github.com/mubirou/Unity3D/blob/master/oqtouch/doc/start.md#LaserPointer)  
 [OQtouch.EnabledLaserL](#EnabledLaserL)  
 
 ***

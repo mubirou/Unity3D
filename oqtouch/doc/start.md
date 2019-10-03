@@ -42,7 +42,7 @@ Version Alpha 3.201910031905 対応
 * 概要
     * Unity Editor の Console 的なものを VR 上に表示させます（デバッグ用）
     * Unity Editor の Console に出力する "Debug.Log()" の代わりに "Console.Log()" コマンドを使います
-1. パッケージ（[Console.unitypackage](https://github.com/mubirou/Unity3D/blob/master/oculustouch/Console.unitypackage)）を [Download]
+1. パッケージ（[Console.unitypackage](https://github.com/mubirou/Unity3D/blob/master/oqtouch/Console.unitypackage)）を [Download]
 1. Unity Editor の [Assets]-[Import]-[Custom Package] から上記の Console.unitypackage を選択
 1. [Project]-[Assets]-[Console（Prefab Asset）] を左手側の Oculus Touch コントローラー（左手側）の動きに連動する GameObject の入れ子にして、位置を微調整する
 1. Console（Prefab Asset）を入れ子にした GameObject を Prefab 化
@@ -74,7 +74,7 @@ Version Alpha 3.201910031905 対応
 <a name="LaserPointer"></a>
 
 ## ◆ レーザーポインタの準備（任意）
-* [OQtouch.EnabledLaserL](https://github.com/mubirou/Unity3D/blob/master/oculustouch/doc/reference.md#EnabledLaserL)、[OQtouch.EnabledLaserR](https://github.com/mubirou/Unity3D/blob/master/oculustouch/doc/reference.md#EnabledLaserR) を使用する前に必要になります
+* [OQtouch.EnabledLaserL](https://github.com/mubirou/Unity3D/blob/master/oqtouch/doc/reference.md#EnabledLaserL)、[OQtouch.EnabledLaserR](https://github.com/mubirou/Unity3D/blob/master/oqtouch/doc/reference.md#EnabledLaserR) を使用する前に必要になります
 
 1. マテリアルの作成
 	1. [Window]-[General]-[Project]-[+]-[Material] を選択

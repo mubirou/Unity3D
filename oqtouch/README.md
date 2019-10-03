@@ -11,7 +11,7 @@
 |[Oculus Integration](https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022) 1.39|
 |[Oculus Quest](https://www.oculus.com/quest/?locale=ja_JP) 8.0|
 
-* [OQtouch スタート](https://github.com/mubirou/Unity3D/blob/master/oculustouch/doc/start.md)
-* [OQtouch リファレンスマニュアル](https://github.com/mubirou/Unity3D/blob/master/oculustouch/doc/reference.md)
+* [OQtouch スタート](https://github.com/mubirou/Unity3D/blob/master/oqtouch/doc/start.md)
+* [OQtouch リファレンスマニュアル](https://github.com/mubirou/Unity3D/blob/master/oqtouch/doc/reference.md)
 
 © 2019 夢寐郎
