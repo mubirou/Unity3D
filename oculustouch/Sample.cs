@@ -6,22 +6,39 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchL");
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.EnabledLaserL = true;
+        _oqt.AddTargetObject(GameObject.Find("Button1"));
+        _oqt.IsVibration = false;
+    }
+}
+*/
+
+/*
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private Console _console; //DEBUG用
+
+    void Start() {
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
 
         //レーザーポインタの表示
-        _otouch.EnabledLaserL = true;
-        _otouch.EnabledLaserR = true;
+        _oqt.EnabledLaserL = true;
+        _oqt.EnabledLaserR = true;
 
         //レーザーポインタで選択するオブジェクトの登録
-        _otouch.AddTargetObject(GameObject.Find("Button1"));
+        _oqt.AddTargetObject(GameObject.Find("Button1"));
 
         //イベントハンドラの登録
-        _otouch.RLaserUpOutside += RLaserUpOutsideHandler;
+        _oqt.RLaserUpOutside += RLaserUpOutsideHandler;
 
         //DEBUG用
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
     }
 
     //イベントハンドラ
@@ -32,7 +49,7 @@ public class GameManager : MonoBehaviour {
 */
 
 
-//GameManager.cs（20191001_1510） with OTouch Alpha 2.20191001508
+//GameManager.cs（Version 20191001_1510）
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -41,7 +58,7 @@ using System; //for Math
 public class GameManager : MonoBehaviour {
     private GameObject _oculusTouchL;
     private GameObject _oculusTouchR;
-    private OTouch _otouch;
+    private OQtouch _oqt;
     private Console _console; //Consoleクラス（Console.cs）のインスタンス
     
     //--------------------------------------------------------
@@ -86,103 +103,103 @@ public class GameManager : MonoBehaviour {
         ForDummy(); //ダミーのあれこれ
 
         //OculusTcouchをコントロールするクラス（インスタンスの参照）
-        _otouch = GetComponent<OTouch>();
-        _otouch.L = _oculusTouchL; //OculusTouchの右用のGameObject
-        _otouch.R = _oculusTouchR; //OculusTouchの左用のGameObject
+        _oqt = GetComponent<OQtouch>();
+        _oqt.L = _oculusTouchL; //OculusTouchの右用のGameObject
+        _oqt.R = _oculusTouchR; //OculusTouchの左用のGameObject
 
         //=========================
         // イベントハンドラの登録
         //=========================
         //人差し指トリガー（Down、Up）
-        _otouch.LIndexTriggerDown += LIndexTriggerDownHandler;
-        _otouch.LIndexTriggerUp += LIndexTriggerUpHandler;
-        _otouch.RIndexTriggerDown += RIndexTriggerDownHandler;
-        _otouch.RIndexTriggerUp += RIndexTriggerUpHandler;
+        _oqt.LIndexTriggerDown += LIndexTriggerDownHandler;
+        _oqt.LIndexTriggerUp += LIndexTriggerUpHandler;
+        _oqt.RIndexTriggerDown += RIndexTriggerDownHandler;
+        _oqt.RIndexTriggerUp += RIndexTriggerUpHandler;
         //人差し指トリガー（RawTouch）
 
         //中指トリガー
-        _otouch.LHandTriggerDown += LHandTriggerDownHandler;
-        _otouch.LHandTriggerUp += LHandTriggerUpHandler;
-        _otouch.RHandTriggerDown += RHandTriggerDownHandler;
-        _otouch.RHandTriggerUp += RHandTriggerUpHandler;
+        _oqt.LHandTriggerDown += LHandTriggerDownHandler;
+        _oqt.LHandTriggerUp += LHandTriggerUpHandler;
+        _oqt.RHandTriggerDown += RHandTriggerDownHandler;
+        _oqt.RHandTriggerUp += RHandTriggerUpHandler;
         //Aボタン
-        _otouch.ADown += ADownHandler;
-        _otouch.AUp += AUpHandler;
+        _oqt.ADown += ADownHandler;
+        _oqt.AUp += AUpHandler;
         //Bボタン
-        _otouch.BDown += BDownHandler;
-        _otouch.BUp += BUpHandler;
+        _oqt.BDown += BDownHandler;
+        _oqt.BUp += BUpHandler;
         //Xボタン
-        _otouch.XDown += XDownHandler;
-        _otouch.XUp += XUpHandler;
+        _oqt.XDown += XDownHandler;
+        _oqt.XUp += XUpHandler;
         //Yボタン
-        _otouch.YDown += YDownHandler;
-        _otouch.YUp += YUpHandler;
+        _oqt.YDown += YDownHandler;
+        _oqt.YUp += YUpHandler;
         //Startボタン
-        _otouch.StartDown += StartDownHandler;
-        _otouch.StartUp += StartUpHandler;
+        _oqt.StartDown += StartDownHandler;
+        _oqt.StartUp += StartUpHandler;
         //親指スティック
-        _otouch.LThumbstickDown += LThumbstickDownHandler;
-        _otouch.LThumbstickUp += LThumbstickUpHandler;
-        _otouch.RThumbstickDown += RThumbstickDownHandler;
-        _otouch.RThumbstickUp += RThumbstickUpHandler;
+        _oqt.LThumbstickDown += LThumbstickDownHandler;
+        _oqt.LThumbstickUp += LThumbstickUpHandler;
+        _oqt.RThumbstickDown += RThumbstickDownHandler;
+        _oqt.RThumbstickUp += RThumbstickUpHandler;
         //親指スティック上下左右（Down）
-        _otouch.LThumbstickUpDown += LThumbstickUpDownHandler;
-        _otouch.LThumbstickDownDown += LThumbstickDownDownHandler;
-        _otouch.LThumbstickLeftDown += LThumbstickLeftDownHandler;
-        _otouch.LThumbstickRightDown += LThumbstickRightDownHandler;
-        _otouch.RThumbstickUpDown += RThumbstickUpDownHandler;
-        _otouch.RThumbstickDownDown += RThumbstickDownDownHandler;
-        _otouch.RThumbstickLeftDown += RThumbstickLeftDownHandler;
-        _otouch.RThumbstickRightDown += RThumbstickRightDownHandler;
+        _oqt.LThumbstickUpDown += LThumbstickUpDownHandler;
+        _oqt.LThumbstickDownDown += LThumbstickDownDownHandler;
+        _oqt.LThumbstickLeftDown += LThumbstickLeftDownHandler;
+        _oqt.LThumbstickRightDown += LThumbstickRightDownHandler;
+        _oqt.RThumbstickUpDown += RThumbstickUpDownHandler;
+        _oqt.RThumbstickDownDown += RThumbstickDownDownHandler;
+        _oqt.RThumbstickLeftDown += RThumbstickLeftDownHandler;
+        _oqt.RThumbstickRightDown += RThumbstickRightDownHandler;
         //親指スティック上下左右（Up）
-        _otouch.LThumbstickUpUp += LThumbstickUpUpHandler;
-        _otouch.LThumbstickDownUp += LThumbstickDownUpHandler;
-        _otouch.LThumbstickLeftUp += LThumbstickLeftUpHandler;
-        _otouch.LThumbstickRightUp += LThumbstickRightUpHandler;
-        _otouch.RThumbstickUpUp += RThumbstickUpUpHandler;
-        _otouch.RThumbstickDownUp += RThumbstickDownUpHandler;
-        _otouch.RThumbstickLeftUp += RThumbstickLeftUpHandler;
-        _otouch.RThumbstickRightUp += RThumbstickRightUpHandler;
+        _oqt.LThumbstickUpUp += LThumbstickUpUpHandler;
+        _oqt.LThumbstickDownUp += LThumbstickDownUpHandler;
+        _oqt.LThumbstickLeftUp += LThumbstickLeftUpHandler;
+        _oqt.LThumbstickRightUp += LThumbstickRightUpHandler;
+        _oqt.RThumbstickUpUp += RThumbstickUpUpHandler;
+        _oqt.RThumbstickDownUp += RThumbstickDownUpHandler;
+        _oqt.RThumbstickLeftUp += RThumbstickLeftUpHandler;
+        _oqt.RThumbstickRightUp += RThumbstickRightUpHandler;
         //タッチ（RawTouch）
-        _otouch.LIndexTriggerRawTouch += LIndexTriggerRawTouchHandler;
-        _otouch.RIndexTriggerRawTouch += RIndexTriggerRawTouchHandler;
-        _otouch.LThumbstickRawTouch += LThumbstickRawTouchHandler;
-        _otouch.RThumbstickRawTouch += RThumbstickRawTouchHandler;
-        _otouch.ARawTouch += ARawTouchHandler;
-        _otouch.BRawTouch += BRawTouchHandler;
-        _otouch.XRawTouch += XRawTouchHandler;
-        _otouch.YRawTouch += YRawTouchHandler;
+        _oqt.LIndexTriggerRawTouch += LIndexTriggerRawTouchHandler;
+        _oqt.RIndexTriggerRawTouch += RIndexTriggerRawTouchHandler;
+        _oqt.LThumbstickRawTouch += LThumbstickRawTouchHandler;
+        _oqt.RThumbstickRawTouch += RThumbstickRawTouchHandler;
+        _oqt.ARawTouch += ARawTouchHandler;
+        _oqt.BRawTouch += BRawTouchHandler;
+        _oqt.XRawTouch += XRawTouchHandler;
+        _oqt.YRawTouch += YRawTouchHandler;
         //近接（RawNearTouch）
-        _otouch.LIndexTriggerRawNearTouch += LIndexTriggerRawNearTouchHandler;
-        _otouch.RIndexTriggerRawNearTouch += RIndexTriggerRawNearTouchHandler;
+        _oqt.LIndexTriggerRawNearTouch += LIndexTriggerRawNearTouchHandler;
+        _oqt.RIndexTriggerRawNearTouch += RIndexTriggerRawNearTouchHandler;
 
         //選択オブジェクト
         GameObject _button1 = GameObject.Find("Button1");
         GameObject _button2 = GameObject.Find("Button2");
         GameObject _button3 = GameObject.Find("Button3");
-        _otouch.AddTargetObject(_button1);
-        _otouch.AddTargetObject(_button2);
-        _otouch.AddTargetObject(_button3);
-        //Debug.Log(_otouch.TargetObjects);
+        _oqt.AddTargetObject(_button1);
+        _oqt.AddTargetObject(_button2);
+        _oqt.AddTargetObject(_button3);
+        //Debug.Log(_oqt.TargetObjects);
 
         //オブジェクト選択
-        _otouch.LLaserOver += LLaserOverHandler;
-        _otouch.RLaserOver += RLaserOverHandler;
-        _otouch.LLaserOut += LLaserOutHandler;
-        _otouch.RLaserOut += RLaserOutHandler;
-        _otouch.LLaserDown += LLaserDownHandler;
-        _otouch.RLaserDown += RLaserDownHandler;
-        _otouch.LLaserUp += LLaserUpHandler;
-        _otouch.RLaserUp += RLaserUpHandler;
-        _otouch.LLaserUpOutside += LLaserUpOutsideHandler;
-        _otouch.RLaserUpOutside += RLaserUpOutsideHandler;
+        _oqt.LLaserOver += LLaserOverHandler;
+        _oqt.RLaserOver += RLaserOverHandler;
+        _oqt.LLaserOut += LLaserOutHandler;
+        _oqt.RLaserOut += RLaserOutHandler;
+        _oqt.LLaserDown += LLaserDownHandler;
+        _oqt.RLaserDown += RLaserDownHandler;
+        _oqt.LLaserUp += LLaserUpHandler;
+        _oqt.RLaserUp += RLaserUpHandler;
+        _oqt.LLaserUpOutside += LLaserUpOutsideHandler;
+        _oqt.RLaserUpOutside += RLaserUpOutsideHandler;
 
         //レーザーの有効化（初期値は無効）
-        _otouch.EnabledLaserL = true;
-        _otouch.EnabledLaserR = true;
+        _oqt.EnabledLaserL = true;
+        _oqt.EnabledLaserR = true;
 
         //コンソールの参照（冗長すぎね？）
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
         //_console = GameObject.Find("Console").gameObject.GetComponent<Console>();
     }
 
@@ -416,35 +433,35 @@ public class GameManager : MonoBehaviour {
 
     void Update() {
         //人差し指トリガー
-        if (_otouch.IsLIndexTriggerDown) {
-            //_console.Log(_otouch.LIndexTrigger.ToString()); //値を出力
+        if (_oqt.IsLIndexTriggerDown) {
+            //_console.Log(_oqt.LIndexTrigger.ToString()); //値を出力
             _textIndexTriggerL.GetComponent<TextMesh>().text = Math.Round((OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger)*100)).ToString(); //テキストに表示
         } else {
             _textIndexTriggerL.GetComponent<TextMesh>().text = "0";
         }
-        if (_otouch.IsRIndexTriggerDown) {
-            //_console.Log(_otouch.RIndexTrigger.ToString()); //値を出力
+        if (_oqt.IsRIndexTriggerDown) {
+            //_console.Log(_oqt.RIndexTrigger.ToString()); //値を出力
             _textIndexTriggerR.GetComponent<TextMesh>().text = Math.Round((OVRInput.Get(OVRInput.RawAxis1D.RIndexTrigger)*100)).ToString(); //テキストに表示
         } else {
             _textIndexTriggerR.GetComponent<TextMesh>().text = "0";
         }
         //中指トリガー
-        if (_otouch.IsLHandTriggerDown) {
-            //_console.Log(_otouch.LHandTrigger.ToString()); //値を出力
+        if (_oqt.IsLHandTriggerDown) {
+            //_console.Log(_oqt.LHandTrigger.ToString()); //値を出力
             _textHandTriggerL.GetComponent<TextMesh>().text = Math.Round((OVRInput.Get(OVRInput.RawAxis1D.LHandTrigger)*100)).ToString(); //テキスト表示
         } else {
             _textHandTriggerL.GetComponent<TextMesh>().text = "0";
         }
-        if (_otouch.IsRHandTriggerDown) {
-            //_console.Log(_otouch.RHandTrigger.ToString()); //値を出力
+        if (_oqt.IsRHandTriggerDown) {
+            //_console.Log(_oqt.RHandTrigger.ToString()); //値を出力
             _textHandTriggerR.GetComponent<TextMesh>().text = Math.Round((OVRInput.Get(OVRInput.RawAxis1D.RHandTrigger)*100)).ToString(); //テキスト表示
         } else {
             _textHandTriggerR.GetComponent<TextMesh>().text = "0";
         }
 
         //親指スティック
-        if (_otouch.IsLThumbstickMove) {
-            float _LThumbstickRotate = _otouch.LThumbstickRotate;
+        if (_oqt.IsLThumbstickMove) {
+            float _LThumbstickRotate = _oqt.LThumbstickRotate;
             _thumbstickL.transform.Rotate(0.0f, -_currentThumbStickRotateL, 0.0f);
             _thumbstickL.transform.Rotate(0.0f, _LThumbstickRotate, 0.0f);
             _currentThumbStickRotateL = _LThumbstickRotate;
@@ -453,8 +470,8 @@ public class GameManager : MonoBehaviour {
         } else {
             _thumbstickMarkL.SetActive(false);
         }
-        if (_otouch.IsRThumbstickMove) {
-            float _RThumbstickRotate = _otouch.RThumbstickRotate;
+        if (_oqt.IsRThumbstickMove) {
+            float _RThumbstickRotate = _oqt.RThumbstickRotate;
             _thumbstickR.transform.Rotate(0.0f, -_currentThumbStickRotateR, 0.0f);
             _thumbstickR.transform.Rotate(0.0f, _RThumbstickRotate, 0.0f);
             _currentThumbStickRotateR = _RThumbstickRotate;
@@ -501,7 +518,7 @@ public class GameManager : MonoBehaviour {
     }
 
     private void AllObjectClear() { //選択オブジェクトの色を通常に戻す
-        List<GameObject> _targetObjects = _otouch.TargetObjects;
+        List<GameObject> _targetObjects = _oqt.TargetObjects;
         foreach (GameObject _tmp in _targetObjects) {
             _tmp.GetComponent<Renderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
         }

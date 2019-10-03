@@ -1,5 +1,5 @@
 ﻿/***************************************************************************
- * OTouch Alpha 2.201910021907（レーザーポインタの表示非表示で非合理的）
+ * OQtouch Alpha 3.201910031905
  * © 2019 夢寐郎
  ***************************************************************************/
 using System.Collections;
@@ -8,7 +8,7 @@ using UnityEngine;
 using System; //for Math
 
 /******************************************************************************
- * OTouch Class
+ * OQtouch Class
  *  <Public Method>
  *      AddTargetObject(GameObject)
  *      RemoveTargetObject(GameObject)
@@ -94,7 +94,7 @@ using System; //for Math
  *
  *****************************************************************************/
  
-public class OTouch : MonoBehaviour {
+public class OQtouch : MonoBehaviour {
     private GameObject _oculusTouchL = null;
     private GameObject _oculusTouchR = null;
     private GameObject _leftHandAnchor;

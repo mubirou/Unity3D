@@ -1,5 +1,5 @@
-# OTouch リファレンスマニュアル
-Version Alpha 2.201910021907 対応  
+# OQtouch リファレンスマニュアル
+Version Alpha 3.201910031905 対応  
 © 2019 夢寐郎
 
 ## ◆ メソッド一覧
@@ -92,15 +92,15 @@ Version Alpha 2.201910021907 対応
 
 <a name="AddTargetObject"></a>
 
-# OTouch.AddTargetObject()
+# OQtouch.AddTargetObject()
 
 ### ◇ 構文
-<em>otouch</em>.AddTargetObject(<em>someGameObject</em>)
+<em>oqtouch</em>.AddTargetObject(<em>someGameObject</em>)
 
 ### ◇ 説明
 メソッド。  
 左、もしくは右手側のレーザーポインタに反応させるオブジェクトの登録をします。  
-追加されたオブジェクトに [OTouch.LLaserOver](#LLaserOver) または [OTouch.RLaserOver](#RLaserOver) のイベントが発生すると、バイブレーションが実行されます（初期値）。
+追加されたオブジェクトに [OQtouch.LLaserOver](#LLaserOver) または [OQtouch.RLaserOver](#RLaserOver) のイベントが発生すると、バイブレーションが実行されます（初期値）。
 
 ### ◇ 例文
 ```
@@ -111,18 +111,18 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.EnabledLaserL = true;
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.EnabledLaserL = true;
 
         //レーザーポインタで選択するオブジェクトの登録
-        _otouch.AddTargetObject(GameObject.Find("Button1"));
-        _otouch.AddTargetObject(GameObject.Find("Button2"));
-        _otouch.AddTargetObject(GameObject.Find("Button3"));
+        _oqt.AddTargetObject(GameObject.Find("Button1"));
+        _oqt.AddTargetObject(GameObject.Find("Button2"));
+        _oqt.AddTargetObject(GameObject.Find("Button3"));
 
-        _otouch.LLaserDown += LLaserDownHandler;
+        _oqt.LLaserDown += LLaserDownHandler;
 
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
     }
 
     private void LLaserDownHandler(GameObject arg) {
@@ -132,23 +132,23 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.RemoveTargetObject()](#RemoveTargetObject)  
-[OTouch.TargetObjects](#TargetObjects)  
-[OTouch.LLaserDown](#LLaserDown)  
-[OTouch.RLaserDown](#RLaserDown)  
-[OTouch.LLaserOver](#LLaserOver)  
-[OTouch.RLaserOver](#RLaserOver)  
-[OTouch.IsVibration](#IsVibration)  
+[OQtouch.RemoveTargetObject()](#RemoveTargetObject)  
+[OQtouch.TargetObjects](#TargetObjects)  
+[OQtouch.LLaserDown](#LLaserDown)  
+[OQtouch.RLaserDown](#RLaserDown)  
+[OQtouch.LLaserOver](#LLaserOver)  
+[OQtouch.RLaserOver](#RLaserOver)  
+[OQtouch.IsVibration](#IsVibration)  
 
 ***
 
 <a name="ADown"></a>
 
-# OTouch.ADown
+# OQtouch.ADown
 
 ### ◇ 構文
-<em>otouch</em>.ADown += <em>SomeMethodHandler</em>  
-<em>otouch</em>.ADown -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.ADown += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.ADown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -163,11 +163,11 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _otouch.ADown += ADownHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _oqt.ADown += ADownHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void ADownHandler() { // イベントハンドラ
@@ -178,18 +178,18 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.AUp](#AUp)  
-[OTouch.ARawTouch](#ARawTouch)  
+[OQtouch.AUp](#AUp)  
+[OQtouch.ARawTouch](#ARawTouch)  
 
 ***
 
 <a name="ARawTouch"></a>
 
-# OTouch.ARawTouch
+# OQtouch.ARawTouch
 
 ### ◇ 構文
-<em>otouch</em>.ARawTouch += <em>SomeMethodHandler</em>  
-<em>otouch</em>.ARawTouch -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.ARawTouch += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.ARawTouch -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -204,11 +204,11 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _otouch.ARawTouch += ARawTouchHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _oqt.ARawTouch += ARawTouchHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void ARawTouchHandler() { // イベントハンドラ
@@ -219,18 +219,18 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.ADown](#ADown)  
-[OTouch.AUp](#AUp)  
+[OQtouch.ADown](#ADown)  
+[OQtouch.AUp](#AUp)  
 
 ***
 
 <a name="AUp"></a>
 
-# OTouch.AUp
+# OQtouch.AUp
 
 ### ◇ 構文
-<em>otouch</em>.AUp += <em>SomeMethodHandler</em>  
-<em>otouch</em>.AUp -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.AUp += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.AUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -245,11 +245,11 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _otouch.AUp += AUpHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _oqt.AUp += AUpHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void AUpHandler() { // イベントハンドラ
@@ -260,18 +260,18 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.ADown](#ADown)  
-[OTouch.ARawTouch](#ARawTouch)  
+[OQtouch.ADown](#ADown)  
+[OQtouch.ARawTouch](#ARawTouch)  
 
 ***
 
 <a name="BDown"></a>
 
-# OTouch.BDown
+# OQtouch.BDown
 
 ### ◇ 構文
-<em>otouch</em>.BDown += <em>SomeMethodHandler</em>  
-<em>otouch</em>.BDown -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.BDown += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.BDown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -286,11 +286,11 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _otouch.BDown += BDownHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _oqt.BDown += BDownHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void BDownHandler() { // イベントハンドラ
@@ -301,18 +301,18 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.BUp](#BUp)  
-[OTouch.BRawTouch](#BRawTouch)  
+[OQtouch.BUp](#BUp)  
+[OQtouch.BRawTouch](#BRawTouch)  
 
 ***
 
 <a name="BRawTouch"></a>
 
-# OTouch.BRawTouch
+# OQtouch.BRawTouch
 
 ### ◇ 構文
-<em>otouch</em>.BRawTouch += <em>SomeMethodHandler</em>  
-<em>otouch</em>.BRawTouch -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.BRawTouch += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.BRawTouch -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -327,11 +327,11 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _otouch.BRawTouch += BRawTouchHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _oqt.BRawTouch += BRawTouchHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void BRawTouchHandler() { // イベントハンドラ
@@ -342,18 +342,18 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.BDown](#BDown)  
-[OTouch.BUp](#BUp)  
+[OQtouch.BDown](#BDown)  
+[OQtouch.BUp](#BUp)  
 
 ***
 
 <a name="BUp"></a>
 
-# OTouch.BUp
+# OQtouch.BUp
 
 ### ◇ 構文
-<em>otouch</em>.BUp += <em>SomeMethodHandler</em>  
-<em>otouch</em>.BUp -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.BUp += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.BUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -368,11 +368,11 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _otouch.BUp += BUpHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _oqt.BUp += BUpHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void BUpHandler() { // イベントハンドラ
@@ -383,17 +383,17 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.BDown](#BDown)  
-[OTouch.BRawTouch](#BRawTouch)  
+[OQtouch.BDown](#BDown)  
+[OQtouch.BRawTouch](#BRawTouch)  
 
 ***
 
 <a name="EnabledLaserL"></a>
 
-# OTouch.EnabledLaserL
+# OQtouch.EnabledLaserL
 
 ### ◇ 構文
-<em>otouch</em>.EnabledLaserL
+<em>oqtouch</em>.EnabledLaserL
 
 ### ◇ 説明
 プロパティ。  
@@ -408,25 +408,25 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.EnabledLaserL = true;
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.EnabledLaserL = true;
     }
 }
 ```
 
 ### ◇ 参照
 [レーザーポインタの準備](https://github.com/mubirou/Unity3D/blob/master/oculustouch/doc/start.md#LaserPointer)  
-[OTouch.EnabledLaserR](#EnabledLaserR)  
+[OQtouch.EnabledLaserR](#EnabledLaserR)  
 
 ***
 
 <a name="EnabledLaserR"></a>
 
-# OTouch.EnabledLaserR
+# OQtouch.EnabledLaserR
 
 ### ◇ 構文
-<em>otouch</em>.EnabledLaserR
+<em>oqtouch</em>.EnabledLaserR
 
 ### ◇ 説明
 プロパティ。  
@@ -441,25 +441,25 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _otouch.EnabledLaserR = true;
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _oqt.EnabledLaserR = true;
     }
 }
 ```
 
 ### ◇ 参照
 [レーザーポインタの準備](https://github.com/mubirou/Unity3D/blob/master/oculustouch/doc/start.md#LaserPointer)  
-[OTouch.EnabledLaserL](#EnabledLaserL)  
+[OQtouch.EnabledLaserL](#EnabledLaserL)  
 
 ***
 
 <a name="IsLHandTriggerDown"></a>
 
-# OTouch.IsLHandTriggerDown
+# OQtouch.IsLHandTriggerDown
 
 ### ◇ 構文
-<em>otouch</em>.IsLHandTriggerDown
+<em>oqtouch</em>.IsLHandTriggerDown
 
 ### ◇ 説明
 プロパティ。  
@@ -471,17 +471,17 @@ public class GameManager : MonoBehaviour {
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
-    private OTouch _otouch;
+    private OQtouch _oqt;
     private Console _console; //DEBUG用
 
     void Start() {
-        _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     void Update() {
-        if (_otouch.IsLHandTriggerDown ) {
+        if (_oqt.IsLHandTriggerDown ) {
             _console.Log("左中指トリガー↓"); //DEBUG用
         }
     }
@@ -489,18 +489,18 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.IsRHandTriggerDown](#IsRHandTriggerDown)  
-[OTouch.LHandTriggerDown](#LHandTriggerDown)  
-[OTouch.LHandTrigger](#LHandTrigger)  
+[OQtouch.IsRHandTriggerDown](#IsRHandTriggerDown)  
+[OQtouch.LHandTriggerDown](#LHandTriggerDown)  
+[OQtouch.LHandTrigger](#LHandTrigger)  
 
 ***
 
 <a name="IsLIndexTriggerDown"></a>
 
-# OTouch.IsLIndexTriggerDown
+# OQtouch.IsLIndexTriggerDown
 
 ### ◇ 構文
-<em>otouch</em>.IsLIndexTriggerDown
+<em>oqtouch</em>.IsLIndexTriggerDown
 
 ### ◇ 説明
 プロパティ。  
@@ -512,17 +512,17 @@ public class GameManager : MonoBehaviour {
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
-    private OTouch _otouch;
+    private OQtouch _oqt;
     private Console _console; //DEBUG用
 
     void Start() {
-        _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     void Update() {
-        if (_otouch.IsLThumbstickMove) {
+        if (_oqt.IsLThumbstickMove) {
             _console.Log("左親指スティック↻"); //DEBUG用
         }
     }
@@ -530,18 +530,18 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.IsLIndexTriggerDown](#IsRIndexTriggerDown)  
-[OTouch.LIndexTriggerDown](#LIndexTriggerDown)  
-[OTouch.LIndexTrigger](#LIndexTrigger)  
+[OQtouch.IsLIndexTriggerDown](#IsRIndexTriggerDown)  
+[OQtouch.LIndexTriggerDown](#LIndexTriggerDown)  
+[OQtouch.LIndexTrigger](#LIndexTrigger)  
 
 ***
 
 <a name="IsLThumbstickMove"></a>
 
-# OTouch.IsLThumbstickMove
+# OQtouch.IsLThumbstickMove
 
 ### ◇ 構文
-<em>otouch</em>.IsLThumbstickMove
+<em>oqtouch</em>.IsLThumbstickMove
 
 ### ◇ 説明
 プロパティ。  
@@ -553,17 +553,17 @@ public class GameManager : MonoBehaviour {
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
-    private OTouch _otouch;
+    private OQtouch _oqt;
     private Console _console; //DEBUG用
 
     void Start() {
-        _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     void Update() {
-        if (_otouch.IsLThumbstickMove) {
+        if (_oqt.IsLThumbstickMove) {
             _console.Log("左親指スティック↻"); //DEBUG用
         }
     }
@@ -571,20 +571,20 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.IsRThumbstickMove](#IsRThumbstickMove)  
-[OTouch.LThumbstickUpDown](#LThumbstickUpDown)  
-[OTouch.LThumbstickDownDown](#LThumbstickDownDown)  
-[OTouch.LThumbstickLeftDown](#LThumbstickLeftDown)  
-[OTouch.LThumbstickRightDown](#LThumbstickRightDown)  
+[OQtouch.IsRThumbstickMove](#IsRThumbstickMove)  
+[OQtouch.LThumbstickUpDown](#LThumbstickUpDown)  
+[OQtouch.LThumbstickDownDown](#LThumbstickDownDown)  
+[OQtouch.LThumbstickLeftDown](#LThumbstickLeftDown)  
+[OQtouch.LThumbstickRightDown](#LThumbstickRightDown)  
 
 ***
 
 <a name="IsRHandTriggerDown"></a>
 
-# OTouch.IsRHandTriggerDown
+# OQtouch.IsRHandTriggerDown
 
 ### ◇ 構文
-<em>otouch</em>.IsRHandTriggerDown
+<em>oqtouch</em>.IsRHandTriggerDown
 
 ### ◇ 説明
 プロパティ。  
@@ -596,18 +596,18 @@ public class GameManager : MonoBehaviour {
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
-    private OTouch _otouch;
+    private OQtouch _oqt;
     private Console _console; //DEBUG用
 
     void Start() {
-        _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     void Update() {
-        if (_otouch.IsRHandTriggerDown ) {
+        if (_oqt.IsRHandTriggerDown ) {
             _console.Log("右中指トリガー↓"); //DEBUG用
         }
     }
@@ -615,18 +615,18 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.IsLHandTriggerDown](#IsLHandTriggerDown)  
-[OTouch.RHandTriggerDown](#RHandTriggerDown)  
-[OTouch.RHandTrigger](#RHandTrigger)  
+[OQtouch.IsLHandTriggerDown](#IsLHandTriggerDown)  
+[OQtouch.RHandTriggerDown](#RHandTriggerDown)  
+[OQtouch.RHandTrigger](#RHandTrigger)  
 
 ***
 
 <a name="IsRIndexTriggerDown"></a>
 
-# OTouch.IsRIndexTriggerDown
+# OQtouch.IsRIndexTriggerDown
 
 ### ◇ 構文
-<em>otouch</em>.IsRIndexTriggerDown
+<em>oqtouch</em>.IsRIndexTriggerDown
 
 ### ◇ 説明
 プロパティ。  
@@ -638,18 +638,18 @@ public class GameManager : MonoBehaviour {
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
-    private OTouch _otouch;
+    private OQtouch _oqt;
     private Console _console; //DEBUG用
 
     void Start() {
-        _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     void Update() {
-        if (_otouch.IsRIndexTriggerDown) {
+        if (_oqt.IsRIndexTriggerDown) {
             _console.Log("右中指トリガー↓"); //DEBUG用
         }
     }
@@ -657,17 +657,17 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.IsLIndexTriggerDown](#IsLIndexTriggerDown)  
-[OTouch.RIndexTriggerDown](#RIndexTriggerDown)  
+[OQtouch.IsLIndexTriggerDown](#IsLIndexTriggerDown)  
+[OQtouch.RIndexTriggerDown](#RIndexTriggerDown)  
 
 ***
 
 <a name="IsRThumbstickMove"></a>
 
-# OTouch.IsRThumbstickMove
+# OQtouch.IsRThumbstickMove
 
 ### ◇ 構文
-<em>otouch</em>.IsRThumbstickMove
+<em>oqtouch</em>.IsRThumbstickMove
 
 ### ◇ 説明
 プロパティ。  
@@ -679,18 +679,18 @@ public class GameManager : MonoBehaviour {
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
-    private OTouch _otouch;
+    private OQtouch _oqt;
     private Console _console; //DEBUG用
 
     void Start() {
-        _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     void Update() {
-        if (_otouch.IsRThumbstickMove) {
+        if (_oqt.IsRThumbstickMove) {
             _console.Log("右親指スティック↻"); //DEBUG用
         }
     }
@@ -698,24 +698,24 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.IsLThumbstickMove](#IsLThumbstickMove)  
-[OTouch.RThumbstickUpDown](#RThumbstickUpDown)  
-[OTouch.RThumbstickDownDown](#RThumbstickDownDown)  
-[OTouch.RThumbstickLeftDown](#RThumbstickLeftDown)  
-[OTouch.RThumbstickRightDown](#RThumbstickRightDown)  
+[OQtouch.IsLThumbstickMove](#IsLThumbstickMove)  
+[OQtouch.RThumbstickUpDown](#RThumbstickUpDown)  
+[OQtouch.RThumbstickDownDown](#RThumbstickDownDown)  
+[OQtouch.RThumbstickLeftDown](#RThumbstickLeftDown)  
+[OQtouch.RThumbstickRightDown](#RThumbstickRightDown)  
 
 ***
 
 <a name="IsVibration"></a>
 
-# OTouch.IsVibration
+# OQtouch.IsVibration
 
 ### ◇ 構文
-<em>otouch</em>.IsVibration
+<em>oqtouch</em>.IsVibration
 
 ### ◇ 説明
 プロパティ。  
-[OTouch.LLaserOver](#LLaserOver) や [OTouch.RLaserOver](#RLaserOver) 時のバイブレーションを有効にするか否かを示すブール値。
+[OQtouch.LLaserOver](#LLaserOver) や [OQtouch.RLaserOver](#RLaserOver) 時のバイブレーションを有効にするか否かを示すブール値。
 
 ### ◇ 例文
 ```
@@ -724,28 +724,28 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.EnabledLaserL = true;
-        _otouch.AddTargetObject(GameObject.Find("Button1"));
-        _otouch.IsVibration = false;
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.EnabledLaserL = true;
+        _oqt.AddTargetObject(GameObject.Find("Button1"));
+        _oqt.IsVibration = false;
     }
 }
 ```
 
 ### ◇ 参照
-[OTouch.AddTargetObject()](#AddTargetObject)  
-[OTouch.LLaserOver](#LLaserOver)  
-[OTouch.RLaserOver](#RLaserOver)  
+[OQtouch.AddTargetObject()](#AddTargetObject)  
+[OQtouch.LLaserOver](#LLaserOver)  
+[OQtouch.RLaserOver](#RLaserOver)  
 
 ***
 
 <a name="L"></a>
 
-# OTouch.L
+# OQtouch.L
 
 ### ◇ 構文
-<em>otouch</em>.L
+<em>oqtouch</em>.L
 
 ### ◇ 説明
 プロパティ。  
@@ -753,26 +753,26 @@ Oculus Touch コントローラー（左手側）の動きに連動する GameOb
 
 ### ◇ 例文
 ```
-OTouch _otouch = GetComponent<OTouch>();
-_otouch.L = GameObject.Find("OculusTouchL");
+OQtouch _oqt = GetComponent<OQtouch>();
+_oqt.L = GameObject.Find("OculusTouchL");
 ```
 
 ### ◇ 参照
-[OTouch.R](#R)
+[OQtouch.R](#R)
 
 ***
 
 <a name="LHandTrigger"></a>
 
-# OTouch.LHandTrigger
+# OQtouch.LHandTrigger
 
 ### ◇ 構文
-<em>otouch</em>.LHandTrigger
+<em>oqtouch</em>.LHandTrigger
 
 ### ◇ 説明
 プロパティ。  
 「左中指トリガーを押しているトリガー量」（0〜1 まで小数点以下15桁表示）。読み取り専用。  
-0〜100までの整数値を求める場合、Math.Round((<em>otouch</em>.LHandTrigger*100)) とします。
+0〜100までの整数値を求める場合、Math.Round((<em>oqtouch</em>.LHandTrigger*100)) とします。
 
 ### ◇ 例文
 ```
@@ -780,36 +780,36 @@ _otouch.L = GameObject.Find("OculusTouchL");
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
-    private OTouch _otouch;
+    private OQtouch _oqt;
     private Console _console; //DEBUG用
 
     void Start() {
-        _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     void Update() {
-        if (_otouch.IsLHandTriggerDown ) {
-            _console.Log(_otouch.LHandTrigger.ToString());
+        if (_oqt.IsLHandTriggerDown ) {
+            _console.Log(_oqt.LHandTrigger.ToString());
         }
     }
 }
 ```
 
 ### ◇ 参照
-[OTouch.RHandTrigger](#RHandTrigger)  
-[OTouch.IsLHandTriggerDown](#IsLHandTriggerDown)  
+[OQtouch.RHandTrigger](#RHandTrigger)  
+[OQtouch.IsLHandTriggerDown](#IsLHandTriggerDown)  
 
 ***
 
 <a name="LHandTriggerDown"></a>
 
-# OTouch.LHandTriggerDown
+# OQtouch.LHandTriggerDown
 
 ### ◇ 構文
-<em>otouch</em>.LHandTriggerDown += <em>SomeMethodHandler</em>  
-<em>otouch</em>.LHandTriggerDown -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.LHandTriggerDown += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.LHandTriggerDown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -824,10 +824,10 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.LHandTriggerDown += LHandTriggerDownHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.LHandTriggerDown += LHandTriggerDownHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void LHandTriggerDownHandler() { // イベントハンドラ
@@ -838,19 +838,19 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.RHandTriggerDown](#RHandTriggerDown)  
-[OTouch.LHandTriggerUp](#LHandTriggerUp)  
-[OTouch.IsLHandTriggerDown](#IsLHandTriggerDown)  
+[OQtouch.RHandTriggerDown](#RHandTriggerDown)  
+[OQtouch.LHandTriggerUp](#LHandTriggerUp)  
+[OQtouch.IsLHandTriggerDown](#IsLHandTriggerDown)  
 
 ***
 
 <a name="LHandTriggerUp"></a>
 
-# OTouch.LHandTriggerUp
+# OQtouch.LHandTriggerUp
 
 ### ◇ 構文
-<em>otouch</em>.LHandTriggerUp += <em>SomeMethodHandler</em>  
-<em>otouch</em>.LHandTriggerUp -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.LHandTriggerUp += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.LHandTriggerUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -865,10 +865,10 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.LHandTriggerUp += LHandTriggerUpHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.LHandTriggerUp += LHandTriggerUpHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void LHandTriggerUpHandler() { // イベントハンドラ
@@ -879,22 +879,22 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.RHandTriggerUp](#RHandTriggerUp)  
-[OTouch.LHandTriggerDown](#LHandTriggerDown)  
+[OQtouch.RHandTriggerUp](#RHandTriggerUp)  
+[OQtouch.LHandTriggerDown](#LHandTriggerDown)  
 
 ***
 
 <a name="LIndexTrigger"></a>
 
-# OTouch.LIndexTrigger
+# OQtouch.LIndexTrigger
 
 ### ◇ 構文
-<em>otouch</em>.LIndexTrigger
+<em>oqtouch</em>.LIndexTrigger
 
 ### ◇ 説明
 プロパティ。  
 「左人差し指トリガーを押しているトリガー量」（0〜1 まで小数点以下15桁表示）。読み取り専用。  
-0〜100までの整数値を求める場合、Math.Round((<em>otouch</em>.LIndexTrigger*100)) とします。
+0〜100までの整数値を求める場合、Math.Round((<em>oqtouch</em>.LIndexTrigger*100)) とします。
 
 ### ◇ 例文
 ```
@@ -902,18 +902,18 @@ public class GameManager : MonoBehaviour {
 using UnityEngine;
 
 public class GameManager : MonoBehaviour{
-    private OTouch _otouch;
+    private OQtouch _oqt;
     private Console _console; //DEBUG用
 
     void Start() {
-        _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     void Update() {
-        if (_otouch.IsLIndexTriggerDown) {
-            _console.Log(_otouch.LIndexTrigger.ToString());
+        if (_oqt.IsLIndexTriggerDown) {
+            _console.Log(_oqt.LIndexTrigger.ToString());
         }
     }
 }
@@ -921,18 +921,18 @@ public class GameManager : MonoBehaviour{
 ```
 
 ### ◇ 参照
-[OTouch.RIndexTrigger](#RIndexTrigger)  
-[OTouch.IsLIndexTriggerDown](#IsLIndexTriggerDown)  
+[OQtouch.RIndexTrigger](#RIndexTrigger)  
+[OQtouch.IsLIndexTriggerDown](#IsLIndexTriggerDown)  
 
 ***
 
 <a name="LIndexTriggerDown"></a>
 
-# OTouch.LIndexTriggerDown
+# OQtouch.LIndexTriggerDown
 
 ### ◇ 構文
-<em>otouch</em>.LIndexTriggerDown += <em>SomeMethodHandler</em>  
-<em>otouch</em>.LIndexTriggerDown -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.LIndexTriggerDown += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.LIndexTriggerDown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -947,10 +947,10 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.LIndexTriggerDown += LIndexTriggerDownHandler; //イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.LIndexTriggerDown += LIndexTriggerDownHandler; //イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void LIndexTriggerDownHandler() { //イベントハンドラ
@@ -961,19 +961,19 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.RIndexTriggerDown](#RIndexTriggerDown)  
-[OTouch.LIndexTriggerUp](#LIndexTriggerUp)  
-[OTouch.IsLIndexTriggerDown](#IsLIndexTriggerDown)  
+[OQtouch.RIndexTriggerDown](#RIndexTriggerDown)  
+[OQtouch.LIndexTriggerUp](#LIndexTriggerUp)  
+[OQtouch.IsLIndexTriggerDown](#IsLIndexTriggerDown)  
 
 ***
 
 <a name="LIndexTriggerRawNearTouch"></a>
 
-# OTouch.LIndexTriggerRawNearTouch
+# OQtouch.LIndexTriggerRawNearTouch
 
 ### ◇ 構文
-<em>otouch</em>.LIndexTriggerRawNearTouch += <em>SomeMethodHandler</em>  
-<em>otouch</em>.LIndexTriggerRawNearTouch -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.LIndexTriggerRawNearTouch += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.LIndexTriggerRawNearTouch -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -988,10 +988,10 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.LIndexTriggerRawNearTouch += LIndexTriggerRawNearTouchHandler; //イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.LIndexTriggerRawNearTouch += LIndexTriggerRawNearTouchHandler; //イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void LIndexTriggerRawNearTouchHandler() { //イベントハンドラ
@@ -1002,18 +1002,18 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.RIndexTriggerRawNearTouch](#RIndexTriggerRawNearTouch)  
-[OTouch.LIndexTriggerRawTouch ](#LIndexTriggerRawTouch)  
+[OQtouch.RIndexTriggerRawNearTouch](#RIndexTriggerRawNearTouch)  
+[OQtouch.LIndexTriggerRawTouch ](#LIndexTriggerRawTouch)  
 
 ***
 
 <a name="LIndexTriggerRawTouch"></a>
 
-# OTouch.LIndexTriggerRawTouch
+# OQtouch.LIndexTriggerRawTouch
 
 ### ◇ 構文
-<em>otouch</em>.LIndexTriggerRawTouch += <em>SomeMethodHandler</em>  
-<em>otouch</em>.LIndexTriggerRawTouch -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.LIndexTriggerRawTouch += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.LIndexTriggerRawTouch -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -1028,10 +1028,10 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.LIndexTriggerRawTouch += LIndexTriggerRawTouchHandler; //イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.LIndexTriggerRawTouch += LIndexTriggerRawTouchHandler; //イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void LIndexTriggerRawTouchHandler() { //イベントハンドラ
@@ -1042,18 +1042,18 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.RIndexTriggerRawTouch](#RIndexTriggerRawTouch)  
-[OTouch.LIndexTriggerRawNearTouch](#LIndexTriggerRawNearTouch)  
+[OQtouch.RIndexTriggerRawTouch](#RIndexTriggerRawTouch)  
+[OQtouch.LIndexTriggerRawNearTouch](#LIndexTriggerRawNearTouch)  
 
 ***
 
 <a name="LIndexTriggerUp"></a>
 
-# OTouch.LIndexTriggerUp
+# OQtouch.LIndexTriggerUp
 
 ### ◇ 構文
-<em>otouch</em>.LIndexTriggerUp += <em>SomeMethodHandler</em>  
-<em>otouch</em>.LIndexTriggerUp -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.LIndexTriggerUp += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.LIndexTriggerUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -1068,10 +1068,10 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.LIndexTriggerUp += LIndexTriggerUpHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.LIndexTriggerUp += LIndexTriggerUpHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void LIndexTriggerUpHandler() { // イベントハンドラ
@@ -1082,21 +1082,21 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.RIndexTriggerUp](#RIndexTriggerUp)  
-[OTouch.LIndexTriggerDown](#LIndexTriggerDown)  
+[OQtouch.RIndexTriggerUp](#RIndexTriggerUp)  
+[OQtouch.LIndexTriggerDown](#LIndexTriggerDown)  
 
 ***
 
 <a name="LLaserDown"></a>
 
-# OTouch.LLaserDown
+# OQtouch.LLaserDown
 
 ### ◇ 構文
-<em>otouch</em>.LLaserDown
+<em>oqtouch</em>.LLaserDown
 
 ### ◇ 説明
 イベント。 
-[OTouch.AddTargetObject()](#AddTargetObject) 等で登録済みのオブジェクトを「左手側のレーザーポインタで押した時」（左人差し指トリガーを押した時）のイベントハンドラの登録や削除を行うことができます。
+[OQtouch.AddTargetObject()](#AddTargetObject) 等で登録済みのオブジェクトを「左手側のレーザーポインタで押した時」（左人差し指トリガーを押した時）のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
 ```
@@ -1107,20 +1107,20 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
 
         //レーザーポインタの表示
-        _otouch.EnabledLaserL = true;
+        _oqt.EnabledLaserL = true;
 
         //レーザーポインタで選択するオブジェクトの登録
-        _otouch.AddTargetObject(GameObject.Find("Button1"));
+        _oqt.AddTargetObject(GameObject.Find("Button1"));
 
         //イベントハンドラの登録
-        _otouch.LLaserDown += LLaserDownHandler;
+        _oqt.LLaserDown += LLaserDownHandler;
 
         //DEBUG用
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
     }
 
     //イベントハンドラ
@@ -1131,25 +1131,25 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.RLaserDown](#RLaserDown)  
-[OTouch.LLaserUp](#LLaserUp)  
-[OTouch.LLaserUpOutside](#LLaserUpOutside)  
-[OTouch.LLaserOver](#LLaserOver)  
-[OTouch.LLaserOut](#LLaserOut)  
-[OTouch.AddTargetObject()](#AddTargetObject)
+[OQtouch.RLaserDown](#RLaserDown)  
+[OQtouch.LLaserUp](#LLaserUp)  
+[OQtouch.LLaserUpOutside](#LLaserUpOutside)  
+[OQtouch.LLaserOver](#LLaserOver)  
+[OQtouch.LLaserOut](#LLaserOut)  
+[OQtouch.AddTargetObject()](#AddTargetObject)
 
 ***
 
 <a name="LLaserOut"></a>
 
-# OTouch.LLaserOut
+# OQtouch.LLaserOut
 
 ### ◇ 構文
-<em>otouch</em>.LLaserOut
+<em>oqtouch</em>.LLaserOut
 
 ### ◇ 説明
 イベント。 
-[OTouch.AddTargetObject()](#AddTargetObject) 等で登録済みのオブジェクトから「左手側のレーザーポインタが出た時」のイベントハンドラの登録や削除を行うことができます。
+[OQtouch.AddTargetObject()](#AddTargetObject) 等で登録済みのオブジェクトから「左手側のレーザーポインタが出た時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
 ```
@@ -1160,20 +1160,20 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
 
         //レーザーポインタの表示
-        _otouch.EnabledLaserL = true;
+        _oqt.EnabledLaserL = true;
 
         //レーザーポインタで選択するオブジェクトの登録
-        _otouch.AddTargetObject(GameObject.Find("Button1"));
+        _oqt.AddTargetObject(GameObject.Find("Button1"));
 
         //イベントハンドラの登録
-        _otouch.LLaserOut += LLaserOutHandler;
+        _oqt.LLaserOut += LLaserOutHandler;
 
         //DEBUG用
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
     }
 
     //イベントハンドラ
@@ -1184,25 +1184,25 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.RLaserOut](#RLaserOut)  
-[OTouch.LLaserOver](#LLaserOver)  
-[OTouch.LLaserDown](#LLaserDown)  
-[OTouch.LLaserUp](#LLaserUp)  
-[OTouch.LLaserUpOutside](#LLaserUpOutside)  
-[OTouch.AddTargetObject()](#AddTargetObject)  
+[OQtouch.RLaserOut](#RLaserOut)  
+[OQtouch.LLaserOver](#LLaserOver)  
+[OQtouch.LLaserDown](#LLaserDown)  
+[OQtouch.LLaserUp](#LLaserUp)  
+[OQtouch.LLaserUpOutside](#LLaserUpOutside)  
+[OQtouch.AddTargetObject()](#AddTargetObject)  
 
 ***
 
 <a name="LLaserOver"></a>
 
-# OTouch.LLaserOver
+# OQtouch.LLaserOver
 
 ### ◇ 構文
-<em>otouch</em>.LLaserOver
+<em>oqtouch</em>.LLaserOver
 
 ### ◇ 説明
 イベント。 
-[OTouch.AddTargetObject()](#AddTargetObject) 等で登録済みのオブジェクトを「左手側のレーザーポインタでヒットした時」のイベントハンドラの登録や削除を行うことができます。
+[OQtouch.AddTargetObject()](#AddTargetObject) 等で登録済みのオブジェクトを「左手側のレーザーポインタでヒットした時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
 ```
@@ -1213,20 +1213,20 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
 
         //レーザーポインタの表示
-        _otouch.EnabledLaserL = true;
+        _oqt.EnabledLaserL = true;
 
         //レーザーポインタで選択するオブジェクトの登録
-        _otouch.AddTargetObject(GameObject.Find("Button1"));
+        _oqt.AddTargetObject(GameObject.Find("Button1"));
 
         //イベントハンドラの登録
-        _otouch.LLaserOver += LLaserOverHandler;
+        _oqt.LLaserOver += LLaserOverHandler;
 
         //DEBUG用
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
     }
 
     //イベントハンドラ
@@ -1237,26 +1237,26 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.RLaserOver](#RLaserOver)  
-[OTouch.LLaserOut](#LLaserOut)  
-[OTouch.LLaserDown](#LLaserDown)  
-[OTouch.LLaserUp](#LLaserUp)  
-[OTouch.LLaserUpOutside](#LLaserUpOutside)  
-[OTouch.AddTargetObject()](#AddTargetObject)  
-[OTouch.IsVibration](#IsVibration)  
+[OQtouch.RLaserOver](#RLaserOver)  
+[OQtouch.LLaserOut](#LLaserOut)  
+[OQtouch.LLaserDown](#LLaserDown)  
+[OQtouch.LLaserUp](#LLaserUp)  
+[OQtouch.LLaserUpOutside](#LLaserUpOutside)  
+[OQtouch.AddTargetObject()](#AddTargetObject)  
+[OQtouch.IsVibration](#IsVibration)  
 
 ***
 
 <a name="LLaserUp"></a>
 
-# OTouch.LLaserUp
+# OQtouch.LLaserUp
 
 ### ◇ 構文
-<em>otouch</em>.LLaserUp
+<em>oqtouch</em>.LLaserUp
 
 ### ◇ 説明
 イベント。 
-[OTouch.AddTargetObject()](#AddTargetObject) 等で登録済みのオブジェクトを [OTouch.RLaserDown](#RLaserDown) 後、「同じオブジェクトの領域で左人差し指トリガーを離した時」のイベントハンドラの登録や削除を行うことができます。
+[OQtouch.AddTargetObject()](#AddTargetObject) 等で登録済みのオブジェクトを [OQtouch.RLaserDown](#RLaserDown) 後、「同じオブジェクトの領域で左人差し指トリガーを離した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
 ```
@@ -1267,20 +1267,20 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
 
         //レーザーポインタの表示
-        _otouch.EnabledLaserL = true;
+        _oqt.EnabledLaserL = true;
 
         //レーザーポインタで選択するオブジェクトの登録
-        _otouch.AddTargetObject(GameObject.Find("Button1"));
+        _oqt.AddTargetObject(GameObject.Find("Button1"));
 
         //イベントハンドラの登録
-        _otouch.LLaserUp += LLaserUpHandler;
+        _oqt.LLaserUp += LLaserUpHandler;
 
         //DEBUG用
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
     }
 
     //イベントハンドラ
@@ -1291,25 +1291,25 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.RLaserUp](#RLaserUp)  
-[OTouch.LLaserDown](#LLaserDown)  
-[OTouch.LLaserUpOutside](#LLaserUpOutside)  
-[OTouch.LLaserOver](#LLaserOver)  
-[OTouch.LLaserOut](#LLaserOut)  
-[OTouch.AddTargetObject()](#AddTargetObject)
+[OQtouch.RLaserUp](#RLaserUp)  
+[OQtouch.LLaserDown](#LLaserDown)  
+[OQtouch.LLaserUpOutside](#LLaserUpOutside)  
+[OQtouch.LLaserOver](#LLaserOver)  
+[OQtouch.LLaserOut](#LLaserOut)  
+[OQtouch.AddTargetObject()](#AddTargetObject)
 
 ***
 
 <a name="LLaserUpOutside"></a>
 
-# OTouch.LLaserUpOutside
+# OQtouch.LLaserUpOutside
 
 ### ◇ 構文
-<em>otouch</em>.LLaserUpOutside
+<em>oqtouch</em>.LLaserUpOutside
 
 ### ◇ 説明
 イベント。 
-[OTouch.AddTargetObject()](#AddTargetObject) 等で登録済みのオブジェクトを [OTouch.RLaserDown](#RLaserDown) 後、「選択したオブジェクトの領域外で左人差し指トリガーを離した時」のイベントハンドラの登録や削除を行うことができます。
+[OQtouch.AddTargetObject()](#AddTargetObject) 等で登録済みのオブジェクトを [OQtouch.RLaserDown](#RLaserDown) 後、「選択したオブジェクトの領域外で左人差し指トリガーを離した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
 ```
@@ -1320,20 +1320,20 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
 
         //レーザーポインタの表示
-        _otouch.EnabledLaserL = true;
+        _oqt.EnabledLaserL = true;
 
         //レーザーポインタで選択するオブジェクトの登録
-        _otouch.AddTargetObject(GameObject.Find("Button1"));
+        _oqt.AddTargetObject(GameObject.Find("Button1"));
 
         //イベントハンドラの登録
-        _otouch.LLaserUpOutside += LLaserUpOutsideHandler;
+        _oqt.LLaserUpOutside += LLaserUpOutsideHandler;
 
         //DEBUG用
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
     }
 
     //イベントハンドラ
@@ -1344,22 +1344,22 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.RLaserUpOutside](#RLaserUpOutside)  
-[OTouch.LLaserUp](#LLaserUp)  
-[OTouch.LLaserDown](#LLaserDown)  
-[OTouch.LLaserOver](#LLaserOver)  
-[OTouch.LLaserOut](#LLaserOut)  
-[OTouch.AddTargetObject()](#AddTargetObject)
+[OQtouch.RLaserUpOutside](#RLaserUpOutside)  
+[OQtouch.LLaserUp](#LLaserUp)  
+[OQtouch.LLaserDown](#LLaserDown)  
+[OQtouch.LLaserOver](#LLaserOver)  
+[OQtouch.LLaserOut](#LLaserOut)  
+[OQtouch.AddTargetObject()](#AddTargetObject)
 
 ***
 
 <a name="LThumbstickDown"></a>
 
-# OTouch.LThumbstickDown
+# OQtouch.LThumbstickDown
 
 ### ◇ 構文
-<em>otouch</em>.LThumbstickDown += <em>SomeMethodHandler</em>  
-<em>otouch</em>.LThumbstickDown -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.LThumbstickDown += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.LThumbstickDown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -1374,10 +1374,10 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.LThumbstickDown += LThumbstickDownHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.LThumbstickDown += LThumbstickDownHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void LThumbstickDownHandler() { // イベントハンドラ
@@ -1388,19 +1388,19 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.RThumbstickDown](#RThumbstickDown)  
-[OTouch.LThumbstickUp](#LThumbstickUp)  
-[OTouch.LThumbstickRawTouch](#LThumbstickRawTouch)  
+[OQtouch.RThumbstickDown](#RThumbstickDown)  
+[OQtouch.LThumbstickUp](#LThumbstickUp)  
+[OQtouch.LThumbstickRawTouch](#LThumbstickRawTouch)  
 
 ***
 
 <a name="LThumbstickDownDown"></a>
 
-# OTouch.LThumbstickDownDown
+# OQtouch.LThumbstickDownDown
 
 ### ◇ 構文
-<em>otouch</em>.LThumbstickDownDown += <em>SomeMethodHandler</em>  
-<em>otouch</em>.LThumbstickDownDown -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.LThumbstickDownDown += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.LThumbstickDownDown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -1415,10 +1415,10 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.LThumbstickDownDown += LThumbstickDownDownHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.LThumbstickDownDown += LThumbstickDownDownHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void LThumbstickDownDownHandler() { // イベントハンドラ
@@ -1429,21 +1429,21 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.RThumbstickDownDown](#RThumbstickDownDown)  
-[OTouch.LThumbstickDownUp](#LThumbstickDownUp)  
-[OTouch.LThumbstickUpDown](#LThumbstickUpDown)  
-[OTouch.LThumbstickLeftDown](#LThumbstickLeftDown)  
-[OTouch.LThumbstickRightDown](#LThumbstickRightDown)  
+[OQtouch.RThumbstickDownDown](#RThumbstickDownDown)  
+[OQtouch.LThumbstickDownUp](#LThumbstickDownUp)  
+[OQtouch.LThumbstickUpDown](#LThumbstickUpDown)  
+[OQtouch.LThumbstickLeftDown](#LThumbstickLeftDown)  
+[OQtouch.LThumbstickRightDown](#LThumbstickRightDown)  
 
 ***
 
 <a name="LThumbstickDownUp"></a>
 
-# OTouch.LThumbstickDownUp
+# OQtouch.LThumbstickDownUp
 
 ### ◇ 構文
-<em>otouch</em>.LThumbstickDownUp += <em>SomeMethodHandler</em>  
-<em>otouch</em>.LThumbstickDownUp -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.LThumbstickDownUp += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.LThumbstickDownUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -1458,10 +1458,10 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.LThumbstickDownUp += LThumbstickDownUpHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.LThumbstickDownUp += LThumbstickDownUpHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void LThumbstickDownUpHandler() { // イベントハンドラ
@@ -1472,21 +1472,21 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.RThumbstickDownUp](#RThumbstickDownUp)  
-[OTouch.LThumbstickDownDown](#LThumbstickDownDown)  
-[OTouch.LThumbstickUpUp](#LThumbstickUpUp)  
-[OTouch.LThumbstickLeftUp](#LThumbstickLeftUp)  
-[OTouch.LThumbstickRightUp](#LThumbstickRightUp)  
+[OQtouch.RThumbstickDownUp](#RThumbstickDownUp)  
+[OQtouch.LThumbstickDownDown](#LThumbstickDownDown)  
+[OQtouch.LThumbstickUpUp](#LThumbstickUpUp)  
+[OQtouch.LThumbstickLeftUp](#LThumbstickLeftUp)  
+[OQtouch.LThumbstickRightUp](#LThumbstickRightUp)  
 
 ***
 
 <a name="LThumbstickLeftDown"></a>
 
-# OTouch.LThumbstickLeftDown
+# OQtouch.LThumbstickLeftDown
 
 ### ◇ 構文
-<em>otouch</em>.LThumbstickLeftDown += <em>SomeMethodHandler</em>  
-<em>otouch</em>.LThumbstickLeftDown -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.LThumbstickLeftDown += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.LThumbstickLeftDown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -1501,10 +1501,10 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.LThumbstickLeftDown += LThumbstickLeftDownHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.LThumbstickLeftDown += LThumbstickLeftDownHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void LThumbstickLeftDownHandler() { // イベントハンドラ
@@ -1515,21 +1515,21 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.RThumbstickLeftDown](#RThumbstickLeftDown)  
-[OTouch.LThumbstickLeftUp](#LThumbstickLeftUp)  
-[OTouch.LThumbstickUpDown](#LThumbstickUpDown)  
-[OTouch.LThumbstickDownDown](#LThumbstickDownDown)  
-[OTouch.LThumbstickRightDown](#LThumbstickRightDown)  
+[OQtouch.RThumbstickLeftDown](#RThumbstickLeftDown)  
+[OQtouch.LThumbstickLeftUp](#LThumbstickLeftUp)  
+[OQtouch.LThumbstickUpDown](#LThumbstickUpDown)  
+[OQtouch.LThumbstickDownDown](#LThumbstickDownDown)  
+[OQtouch.LThumbstickRightDown](#LThumbstickRightDown)  
 
 ***
 
 <a name="LThumbstickLeftUp"></a>
 
-# OTouch.LThumbstickLeftUp
+# OQtouch.LThumbstickLeftUp
 
 ### ◇ 構文
-<em>otouch</em>.LThumbstickLeftUp += <em>SomeMethodHandler</em>  
-<em>otouch</em>.LThumbstickLeftUp -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.LThumbstickLeftUp += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.LThumbstickLeftUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -1544,10 +1544,10 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.LThumbstickLeftUp += LThumbstickLeftUpHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.LThumbstickLeftUp += LThumbstickLeftUpHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void LThumbstickLeftUpHandler() { // イベントハンドラ
@@ -1558,21 +1558,21 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.RThumbstickLeftUp](#RThumbstickLeftUp)  
-[OTouch.LThumbstickLeftDown](#LThumbstickLeftDown)  
-[OTouch.LThumbstickUpUp](#LThumbstickUpUp)  
-[OTouch.LThumbstickDownUp](#LThumbstickDownUp)  
-[OTouch.LThumbstickRightUp](#LThumbstickRightUp)  
+[OQtouch.RThumbstickLeftUp](#RThumbstickLeftUp)  
+[OQtouch.LThumbstickLeftDown](#LThumbstickLeftDown)  
+[OQtouch.LThumbstickUpUp](#LThumbstickUpUp)  
+[OQtouch.LThumbstickDownUp](#LThumbstickDownUp)  
+[OQtouch.LThumbstickRightUp](#LThumbstickRightUp)  
 
 ***
 
 <a name="LThumbstickRawTouch"></a>
 
-# OTouch.LThumbstickRawTouch
+# OQtouch.LThumbstickRawTouch
 
 ### ◇ 構文
-<em>otouch</em>.LThumbstickRawTouch += <em>SomeMethodHandler</em>  
-<em>otouch</em>.LThumbstickRawTouch -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.LThumbstickRawTouch += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.LThumbstickRawTouch -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -1587,10 +1587,10 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.LThumbstickRawTouch += LThumbstickRawTouchHandler; //イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.LThumbstickRawTouch += LThumbstickRawTouchHandler; //イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void LThumbstickRawTouchHandler() { //イベントハンドラ
@@ -1601,18 +1601,18 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.RThumbstickRawTouch](#RThumbstickRawTouch)  
-[OTouch.LThumbstickDown](#LThumbstickDown)  
+[OQtouch.RThumbstickRawTouch](#RThumbstickRawTouch)  
+[OQtouch.LThumbstickDown](#LThumbstickDown)  
 
 ***
 
 <a name="LThumbstickRightDown"></a>
 
-# OTouch.LThumbstickRightDown
+# OQtouch.LThumbstickRightDown
 
 ### ◇ 構文
-<em>otouch</em>.LThumbstickRightDown += <em>SomeMethodHandler</em>  
-<em>otouch</em>.LThumbstickRightDown -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.LThumbstickRightDown += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.LThumbstickRightDown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -1627,10 +1627,10 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.LThumbstickRightDown += LThumbstickRightDownHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.LThumbstickRightDown += LThumbstickRightDownHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void LThumbstickRightDownHandler() { // イベントハンドラ
@@ -1641,21 +1641,21 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.RThumbstickRightDown](#RThumbstickRightDown)  
-[OTouch.LThumbstickRightUp](#LThumbstickRightUp)  
-[OTouch.LThumbstickUpDown](#LThumbstickUpDown)  
-[OTouch.LThumbstickDownDown](#LThumbstickDownDown)  
-[OTouch.LThumbstickLeftDown](#LThumbstickLeftDown)  
+[OQtouch.RThumbstickRightDown](#RThumbstickRightDown)  
+[OQtouch.LThumbstickRightUp](#LThumbstickRightUp)  
+[OQtouch.LThumbstickUpDown](#LThumbstickUpDown)  
+[OQtouch.LThumbstickDownDown](#LThumbstickDownDown)  
+[OQtouch.LThumbstickLeftDown](#LThumbstickLeftDown)  
 
 ***
 
 <a name="LThumbstickRightUp"></a>
 
-# OTouch.LThumbstickRightUp
+# OQtouch.LThumbstickRightUp
 
 ### ◇ 構文
-<em>otouch</em>.LThumbstickRightUp += <em>SomeMethodHandler</em>  
-<em>otouch</em>.LThumbstickRightUp -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.LThumbstickRightUp += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.LThumbstickRightUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -1670,10 +1670,10 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.LThumbstickRightUp += LThumbstickRightUpHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.LThumbstickRightUp += LThumbstickRightUpHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void LThumbstickRightUpHandler() { // イベントハンドラ
@@ -1684,20 +1684,20 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.RThumbstickRightUp](#RThumbstickRightUp)  
-[OTouch.LThumbstickRightDown](#LThumbstickRightDown)  
-[OTouch.LThumbstickUpUp](#LThumbstickUpUp)  
-[OTouch.LThumbstickDownUp](#LThumbstickDownUp)  
-[OTouch.LThumbstickLeftUp](#LThumbstickLeftUp)  
+[OQtouch.RThumbstickRightUp](#RThumbstickRightUp)  
+[OQtouch.LThumbstickRightDown](#LThumbstickRightDown)  
+[OQtouch.LThumbstickUpUp](#LThumbstickUpUp)  
+[OQtouch.LThumbstickDownUp](#LThumbstickDownUp)  
+[OQtouch.LThumbstickLeftUp](#LThumbstickLeftUp)  
 
 ***
 
 <a name="LThumbstickRotate"></a>
 
-# OTouch.LThumbstickRotate 
+# OQtouch.LThumbstickRotate 
 
 ### ◇ 構文
-<em>otouch</em>.LThumbstickRotate
+<em>oqtouch</em>.LThumbstickRotate
 
 ### ◇ 説明
 プロパティ。  
@@ -1709,36 +1709,36 @@ public class GameManager : MonoBehaviour {
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
-    private OTouch _otouch;
+    private OQtouch _oqt;
     private Console _console; //DEBUG用
 
     void Start() {
-        _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     void Update() {
-        if (_otouch.IsLThumbstickMove) { //左親指スティックを動かしている時
-            _console.Log(_otouch.LThumbstickRotate.ToString());
+        if (_oqt.IsLThumbstickMove) { //左親指スティックを動かしている時
+            _console.Log(_oqt.LThumbstickRotate.ToString());
         }
     }
 }
 ```
 
 ### ◇ 参照
-[OTouch.RThumbstickRotate](#RThumbstickRotate)  
-[OTouch.IsLThumbstickMove](#IsLThumbstickMove)  
+[OQtouch.RThumbstickRotate](#RThumbstickRotate)  
+[OQtouch.IsLThumbstickMove](#IsLThumbstickMove)  
 
 ***
 
 <a name="LThumbstickUp"></a>
 
-# OTouch.LThumbstickUp
+# OQtouch.LThumbstickUp
 
 ### ◇ 構文
-<em>otouch</em>.LThumbstickUp += <em>SomeMethodHandler</em>  
-<em>otouch</em>.LThumbstickUp -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.LThumbstickUp += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.LThumbstickUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -1753,10 +1753,10 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.LThumbstickUp += LThumbstickUpHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.LThumbstickUp += LThumbstickUpHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void LThumbstickUpHandler() { // イベントハンドラ
@@ -1767,18 +1767,18 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.RThumbstickUp](#RThumbstickUp)  
-[OTouch.LThumbstickDown](#LThumbstickDown)  
+[OQtouch.RThumbstickUp](#RThumbstickUp)  
+[OQtouch.LThumbstickDown](#LThumbstickDown)  
 
 ***
 
 <a name="LThumbstickUpDown"></a>
 
-# OTouch.LThumbstickUpDown
+# OQtouch.LThumbstickUpDown
 
 ### ◇ 構文
-<em>otouch</em>.LThumbstickUpDown += <em>SomeMethodHandler</em>  
-<em>otouch</em>.LThumbstickUpDown -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.LThumbstickUpDown += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.LThumbstickUpDown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -1793,10 +1793,10 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.LThumbstickUpDown += LThumbstickUpDownHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.LThumbstickUpDown += LThumbstickUpDownHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void LThumbstickUpDownHandler() { // イベントハンドラ
@@ -1807,21 +1807,21 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.RThumbstickUpDown](#RThumbstickUpDown)  
-[OTouch.LThumbstickUpUp](#LThumbstickUpUp)  
-[OTouch.LThumbstickDownDown](#LThumbstickDownDown)  
-[OTouch.LThumbstickLeftDown](#LThumbstickLeftDown)  
-[OTouch.LThumbstickRightDown](#LThumbstickRightDown)  
+[OQtouch.RThumbstickUpDown](#RThumbstickUpDown)  
+[OQtouch.LThumbstickUpUp](#LThumbstickUpUp)  
+[OQtouch.LThumbstickDownDown](#LThumbstickDownDown)  
+[OQtouch.LThumbstickLeftDown](#LThumbstickLeftDown)  
+[OQtouch.LThumbstickRightDown](#LThumbstickRightDown)  
 
 ***
 
 <a name="LThumbstickUpUp"></a>
 
-# OTouch.LThumbstickUpUp
+# OQtouch.LThumbstickUpUp
 
 ### ◇ 構文
-<em>otouch</em>.LThumbstickUpUp += <em>SomeMethodHandler</em>  
-<em>otouch</em>.LThumbstickUpUp -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.LThumbstickUpUp += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.LThumbstickUpUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -1836,10 +1836,10 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.LThumbstickUpUp += LThumbstickUpUpHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.LThumbstickUpUp += LThumbstickUpUpHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void LThumbstickUpUpHandler() { // イベントハンドラ
@@ -1850,20 +1850,20 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.RThumbstickUpUp](#RThumbstickUpUp)  
-[OTouch.LThumbstickUpDown](#LThumbstickUpDown)  
-[OTouch.LThumbstickDownUp](#LThumbstickDownUp)  
-[OTouch.LThumbstickLeftUp](#LThumbstickLeftUp)  
-[OTouch.LThumbstickRightUp](#LThumbstickRightUp)  
+[OQtouch.RThumbstickUpUp](#RThumbstickUpUp)  
+[OQtouch.LThumbstickUpDown](#LThumbstickUpDown)  
+[OQtouch.LThumbstickDownUp](#LThumbstickDownUp)  
+[OQtouch.LThumbstickLeftUp](#LThumbstickLeftUp)  
+[OQtouch.LThumbstickRightUp](#LThumbstickRightUp)  
 
 ***
 
 <a name="R"></a>
 
-# OTouch.R
+# OQtouch.R
 
 ### ◇ 構文
-<em>otouch</em>.R
+<em>oqtouch</em>.R
 
 ### ◇ 説明
 プロパティ。  
@@ -1871,21 +1871,21 @@ Oculus Touch コントローラー（右手側）の動きに連動する GameOb
 
 ### ◇ 例文
 ```
-OTouch _otouch = GetComponent<OTouch>();
-_otouch.R = GameObject.Find("OculusTouchR");
+OQtouch _oqt = GetComponent<OQtouch>();
+_oqt.R = GameObject.Find("OculusTouchR");
 ```
 
 ### ◇ 参照
-[OTouch.L](#L)
+[OQtouch.L](#L)
 
 ***
 
 <a name="RemoveTargetObject"></a>
 
-# OTouch.RemoveTargetObject()
+# OQtouch.RemoveTargetObject()
 
 ### ◇ 構文
-<em>otouch</em>.RemoveTargetObject(<em>someGameObject</em>)
+<em>oqtouch</em>.RemoveTargetObject(<em>someGameObject</em>)
 
 ### ◇ 説明
 メソッド。  
@@ -1897,48 +1897,48 @@ _otouch.R = GameObject.Find("OculusTouchR");
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
-    private OTouch _otouch;
+    private OQtouch _oqt;
     private Console _console; //DEBUG用
 
     void Start() {
-        _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.EnabledLaserL = true;
+        _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.EnabledLaserL = true;
 
         //レーザーポインタで選択するオブジェクトの登録
-        _otouch.AddTargetObject(GameObject.Find("Button1"));
-        _otouch.AddTargetObject(GameObject.Find("Button2"));
-        _otouch.AddTargetObject(GameObject.Find("Button3"));
+        _oqt.AddTargetObject(GameObject.Find("Button1"));
+        _oqt.AddTargetObject(GameObject.Find("Button2"));
+        _oqt.AddTargetObject(GameObject.Find("Button3"));
 
-        _otouch.LLaserDown += LLaserDownHandler;
+        _oqt.LLaserDown += LLaserDownHandler;
 
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
     }
 
     private void LLaserDownHandler(GameObject arg) {
         _console.Log("左レーザーが" + arg.name + "を↓");
-        _otouch.RemoveTargetObject(arg); //一度選択したものは選べなくする場合
+        _oqt.RemoveTargetObject(arg); //一度選択したものは選べなくする場合
     }
 }
 ```
 
 ### ◇ 参照
-[OTouch.AddTargetObject()](#AddTargetObject)  
-[OTouch.TargetObjects](#TargetObjects)  
+[OQtouch.AddTargetObject()](#AddTargetObject)  
+[OQtouch.TargetObjects](#TargetObjects)  
 
 ***
 
 <a name="RHandTrigger"></a>
 
-# OTouch.RHandTrigger
+# OQtouch.RHandTrigger
 
 ### ◇ 構文
-<em>otouch</em>.RHandTrigger
+<em>oqtouch</em>.RHandTrigger
 
 ### ◇ 説明
 プロパティ。  
 「右中指トリガーを押しているトリガー量」（0〜1 まで小数点以下15桁表示）。読み取り専用。  
-0〜100までの整数値を求める場合、Math.Round((<em>otouch</em>.RHandTrigger*100)) とします。
+0〜100までの整数値を求める場合、Math.Round((<em>oqtouch</em>.RHandTrigger*100)) とします。
 
 ### ◇ 例文
 ```
@@ -1946,37 +1946,37 @@ public class GameManager : MonoBehaviour {
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
-    private OTouch _otouch;
+    private OQtouch _oqt;
     private Console _console; //DEBUG用
 
     void Start() {
-        _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     void Update() {
-        if (_otouch.IsRHandTriggerDown ) {
-            _console.Log(_otouch.RHandTrigger.ToString());
+        if (_oqt.IsRHandTriggerDown ) {
+            _console.Log(_oqt.RHandTrigger.ToString());
         }
     }
 }
 ```
 
 ### ◇ 参照
-[OTouch.LHandTrigger](#LHandTrigger)  
-[OTouch.IsRHandTriggerDown](#IsRHandTriggerDown)  
+[OQtouch.LHandTrigger](#LHandTrigger)  
+[OQtouch.IsRHandTriggerDown](#IsRHandTriggerDown)  
 
 ***
 
 <a name="RHandTriggerDown"></a>
 
-# OTouch.RHandTriggerDown
+# OQtouch.RHandTriggerDown
 
 ### ◇ 構文
-<em>otouch</em>.RHandTriggerDown += <em>SomeMethodHandler</em>  
-<em>otouch</em>.RHandTriggerDown -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.RHandTriggerDown += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.RHandTriggerDown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -1991,11 +1991,11 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _otouch.RHandTriggerDown += RHandTriggerDownHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _oqt.RHandTriggerDown += RHandTriggerDownHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void RHandTriggerDownHandler() { // イベントハンドラ
@@ -2006,19 +2006,19 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.LHandTriggerDown](#LHandTriggerDown)  
-[OTouch.RHandTriggerUp](#RHandTriggerUp)  
-[OTouch.IsRHandTriggerDown](#IsRHandTriggerDown)  
+[OQtouch.LHandTriggerDown](#LHandTriggerDown)  
+[OQtouch.RHandTriggerUp](#RHandTriggerUp)  
+[OQtouch.IsRHandTriggerDown](#IsRHandTriggerDown)  
 
 ***
 
 <a name="RHandTriggerUp"></a>
 
-# OTouch.RHandTriggerUp
+# OQtouch.RHandTriggerUp
 
 ### ◇ 構文
-<em>otouch</em>.RHandTriggerUp += <em>SomeMethodHandler</em>  
-<em>otouch</em>.RHandTriggerUp -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.RHandTriggerUp += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.RHandTriggerUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -2033,11 +2033,11 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _otouch.RHandTriggerUp += RHandTriggerUpHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _oqt.RHandTriggerUp += RHandTriggerUpHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void RHandTriggerUpHandler() { // イベントハンドラ
@@ -2048,22 +2048,22 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.LHandTriggerUp](#LHandTriggerUp)  
-[OTouch.RHandTriggerDown](#RHandTriggerDown)  
+[OQtouch.LHandTriggerUp](#LHandTriggerUp)  
+[OQtouch.RHandTriggerDown](#RHandTriggerDown)  
 
 ***
 
 <a name="RIndexTrigger"></a>
 
-# OTouch.RIndexTrigger
+# OQtouch.RIndexTrigger
 
 ### ◇ 構文
-<em>otouch</em>.RIndexTrigger
+<em>oqtouch</em>.RIndexTrigger
 
 ### ◇ 説明
 プロパティ。  
 「右人差し指トリガーを押しているトリガー量」（0〜1 まで小数点以下15桁表示）。読み取り専用。  
-0〜100までの整数値を求める場合、Math.Round((<em>otouch</em>.RIndexTrigger*100)) とします。
+0〜100までの整数値を求める場合、Math.Round((<em>oqtouch</em>.RIndexTrigger*100)) とします。
 
 ### ◇ 例文
 ```
@@ -2071,37 +2071,37 @@ public class GameManager : MonoBehaviour {
 using UnityEngine;
 
 public class GameManager : MonoBehaviour{
-    private OTouch _otouch;
+    private OQtouch _oqt;
     private Console _console; //DEBUG用
 
     void Start() {
-        _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     void Update() {
-        if (_otouch.IsRIndexTriggerDown) {
-            _console.Log(_otouch.RIndexTrigger.ToString());
+        if (_oqt.IsRIndexTriggerDown) {
+            _console.Log(_oqt.RIndexTrigger.ToString());
         }
     }
 }
 ```
 
 ### ◇ 参照
-[OTouch.LIndexTrigger](#LIndexTrigger)  
-[OTouch.IsRIndexTriggerDown](#IsRIndexTriggerDown)  
+[OQtouch.LIndexTrigger](#LIndexTrigger)  
+[OQtouch.IsRIndexTriggerDown](#IsRIndexTriggerDown)  
 
 ***
 
 <a name="RIndexTriggerDown"></a>
 
-# OTouch.RIndexTriggerDown
+# OQtouch.RIndexTriggerDown
 
 ### ◇ 構文
-<em>otouch</em>.RIndexTriggerDown += <em>SomeMethodHandler</em>  
-<em>otouch</em>.RIndexTriggerDown -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.RIndexTriggerDown += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.RIndexTriggerDown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -2116,11 +2116,11 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _otouch.RIndexTriggerDown += RIndexTriggerDownHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _oqt.RIndexTriggerDown += RIndexTriggerDownHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void RIndexTriggerDownHandler() { // イベントハンドラ
@@ -2131,19 +2131,19 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.LIndexTriggerDown](#LIndexTriggerDown)  
-[OTouch.RIndexTriggerUp](#RIndexTriggerUp)  
-[OTouch.IsRIndexTriggerDown](#IsRIndexTriggerDown)  
+[OQtouch.LIndexTriggerDown](#LIndexTriggerDown)  
+[OQtouch.RIndexTriggerUp](#RIndexTriggerUp)  
+[OQtouch.IsRIndexTriggerDown](#IsRIndexTriggerDown)  
 
 ***
 
 <a name="RIndexTriggerRawNearTouch"></a>
 
-# OTouch.RIndexTriggerRawNearTouch
+# OQtouch.RIndexTriggerRawNearTouch
 
 ### ◇ 構文
-<em>otouch</em>.RIndexTriggerRawNearTouch += <em>SomeMethodHandler</em>  
-<em>otouch</em>.RIndexTriggerRawNearTouch -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.RIndexTriggerRawNearTouch += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.RIndexTriggerRawNearTouch -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -2158,11 +2158,11 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _otouch.RIndexTriggerRawNearTouch += RIndexTriggerRawNearTouchHandler; //イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _oqt.RIndexTriggerRawNearTouch += RIndexTriggerRawNearTouchHandler; //イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void RIndexTriggerRawNearTouchHandler() { //イベントハンドラ
@@ -2173,18 +2173,18 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.LIndexTriggerRawNearTouch](#LIndexTriggerRawNearTouch)  
-[OTouch.RIndexTriggerRawTouch ](#RIndexTriggerRawTouch)  
+[OQtouch.LIndexTriggerRawNearTouch](#LIndexTriggerRawNearTouch)  
+[OQtouch.RIndexTriggerRawTouch ](#RIndexTriggerRawTouch)  
 
 ***
 
 <a name="RIndexTriggerRawTouch"></a>
 
-# OTouch.RIndexTriggerRawTouch
+# OQtouch.RIndexTriggerRawTouch
 
 ### ◇ 構文
-<em>otouch</em>.RIndexTriggerRawTouch += <em>SomeMethodHandler</em>  
-<em>otouch</em>.RIndexTriggerRawTouch -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.RIndexTriggerRawTouch += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.RIndexTriggerRawTouch -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -2199,11 +2199,11 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _otouch.RIndexTriggerRawTouch += RIndexTriggerRawTouchHandler; //イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _oqt.RIndexTriggerRawTouch += RIndexTriggerRawTouchHandler; //イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void RIndexTriggerRawTouchHandler() { //イベントハンドラ
@@ -2214,18 +2214,18 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.LIndexTriggerRawTouch](#LIndexTriggerRawTouch)  
-[OTouch.RIndexTriggerRawNearTouch](#RIndexTriggerRawNearTouch)  
+[OQtouch.LIndexTriggerRawTouch](#LIndexTriggerRawTouch)  
+[OQtouch.RIndexTriggerRawNearTouch](#RIndexTriggerRawNearTouch)  
 
 ***
 
 <a name="RIndexTriggerUp"></a>
 
-# OTouch.RIndexTriggerUp
+# OQtouch.RIndexTriggerUp
 
 ### ◇ 構文
-<em>otouch</em>.RIndexTriggerUp += <em>SomeMethodHandler</em>  
-<em>otouch</em>.RIndexTriggerUp -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.RIndexTriggerUp += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.RIndexTriggerUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -2240,11 +2240,11 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _otouch.RIndexTriggerUp += RIndexTriggerUpHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _oqt.RIndexTriggerUp += RIndexTriggerUpHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void RIndexTriggerUpHandler() { // イベントハンドラ
@@ -2255,21 +2255,21 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.LIndexTriggerUp](#LIndexTriggerUp)  
-[OTouch.RIndexTriggerDown](#RIndexTriggerDown)  
+[OQtouch.LIndexTriggerUp](#LIndexTriggerUp)  
+[OQtouch.RIndexTriggerDown](#RIndexTriggerDown)  
 
 ***
 
 <a name="RLaserDown"></a>
 
-# OTouch.RLaserDown
+# OQtouch.RLaserDown
 
 ### ◇ 構文
-<em>otouch</em>.RLaserDown
+<em>oqtouch</em>.RLaserDown
 
 ### ◇ 説明
 イベント。 
-[OTouch.AddTargetObject()](#AddTargetObject) 等で登録済みのオブジェクトを「右手側のレーザーポインタで押した時」（右人差し指トリガーを押した時）のイベントハンドラの登録や削除を行うことができます。
+[OQtouch.AddTargetObject()](#AddTargetObject) 等で登録済みのオブジェクトを「右手側のレーザーポインタで押した時」（右人差し指トリガーを押した時）のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
 ```
@@ -2280,21 +2280,21 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
 
         //レーザーポインタの表示
-        _otouch.EnabledLaserR = true;
+        _oqt.EnabledLaserR = true;
 
         //レーザーポインタで選択するオブジェクトの登録
-        _otouch.AddTargetObject(GameObject.Find("Button1"));
+        _oqt.AddTargetObject(GameObject.Find("Button1"));
 
         //イベントハンドラの登録
-        _otouch.RLaserDown += RLaserDownHandler;
+        _oqt.RLaserDown += RLaserDownHandler;
 
         //DEBUG用
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
     }
 
     //イベントハンドラ
@@ -2305,25 +2305,25 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.LLaserDown](#LLaserDown)  
-[OTouch.RLaserUp](#RLaserUp)  
-[OTouch.RLaserUpOutside](#RLaserUpOutside)  
-[OTouch.RLaserOver](#RLaserOver)  
-[OTouch.RLaserOut](#RLaserOut)  
-[OTouch.AddTargetObject()](#AddTargetObject)
+[OQtouch.LLaserDown](#LLaserDown)  
+[OQtouch.RLaserUp](#RLaserUp)  
+[OQtouch.RLaserUpOutside](#RLaserUpOutside)  
+[OQtouch.RLaserOver](#RLaserOver)  
+[OQtouch.RLaserOut](#RLaserOut)  
+[OQtouch.AddTargetObject()](#AddTargetObject)
 
 ***
 
 <a name="RLaserOut"></a>
 
-# OTouch.RLaserOut
+# OQtouch.RLaserOut
 
 ### ◇ 構文
-<em>otouch</em>.RLaserOut
+<em>oqtouch</em>.RLaserOut
 
 ### ◇ 説明
 イベント。 
-[OTouch.AddTargetObject()](#AddTargetObject) 等で登録済みのオブジェクトから「右手側のレーザーポインタがアウトした（領域から出た）時」のイベントハンドラの登録や削除を行うことができます。
+[OQtouch.AddTargetObject()](#AddTargetObject) 等で登録済みのオブジェクトから「右手側のレーザーポインタがアウトした（領域から出た）時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
 ```
@@ -2334,22 +2334,22 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
 
         //レーザーポインタの表示
-        _otouch.EnabledLaserL = true;
-        _otouch.EnabledLaserR = true;
+        _oqt.EnabledLaserL = true;
+        _oqt.EnabledLaserR = true;
 
         //レーザーポインタで選択するオブジェクトの登録
-        _otouch.AddTargetObject(GameObject.Find("Button1"));
+        _oqt.AddTargetObject(GameObject.Find("Button1"));
 
         //イベントハンドラの登録
-        _otouch.RLaserOut += RLaserOutHandler;
+        _oqt.RLaserOut += RLaserOutHandler;
 
         //DEBUG用
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
     }
 
     //イベントハンドラ
@@ -2360,25 +2360,25 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.LLaserOut](#LLaserOut)  
-[OTouch.RLaserOver](#RLaserOver)  
-[OTouch.RLaserDown](#RLaserDown)  
-[OTouch.RLaserUp](#RLaserUp)  
-[OTouch.RLaserUpOutside](#RLaserUpOutside)  
-[OTouch.AddTargetObject()](#AddTargetObject)
+[OQtouch.LLaserOut](#LLaserOut)  
+[OQtouch.RLaserOver](#RLaserOver)  
+[OQtouch.RLaserDown](#RLaserDown)  
+[OQtouch.RLaserUp](#RLaserUp)  
+[OQtouch.RLaserUpOutside](#RLaserUpOutside)  
+[OQtouch.AddTargetObject()](#AddTargetObject)
 
 ***
 
 <a name="RLaserOver"></a>
 
-# OTouch.RLaserOver
+# OQtouch.RLaserOver
 
 ### ◇ 構文
-<em>otouch</em>.RLaserOver
+<em>oqtouch</em>.RLaserOver
 
 ### ◇ 説明
 イベント。 
-[OTouch.AddTargetObject()](#AddTargetObject) 等で登録済みのオブジェクトを「右手側のレーザーポインタでヒット」した時のイベントハンドラの登録や削除を行うことができます。
+[OQtouch.AddTargetObject()](#AddTargetObject) 等で登録済みのオブジェクトを「右手側のレーザーポインタでヒット」した時のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
 ```
@@ -2389,22 +2389,22 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
 
         //レーザーポインタの表示
-        _otouch.EnabledLaserL = true;
-        _otouch.EnabledLaserR = true;
+        _oqt.EnabledLaserL = true;
+        _oqt.EnabledLaserR = true;
 
         //レーザーポインタで選択するオブジェクトの登録
-        _otouch.AddTargetObject(GameObject.Find("Button1"));
+        _oqt.AddTargetObject(GameObject.Find("Button1"));
 
         //イベントハンドラの登録
-        _otouch.RLaserOver += RLaserOverHandler;
+        _oqt.RLaserOver += RLaserOverHandler;
 
         //DEBUG用
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
     }
 
     //イベントハンドラ
@@ -2415,26 +2415,26 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.LLaserOver](#LLaserOver)  
-[OTouch.RLaserOut](#RLaserOut)  
-[OTouch.RLaserDown](#RLaserDown)  
-[OTouch.RLaserUp](#RLaserUp)  
-[OTouch.RLaserUpOutside](#RLaserUpOutside)  
-[OTouch.AddTargetObject()](#AddTargetObject)  
-[OTouch.IsVibration](#IsVibration)  
+[OQtouch.LLaserOver](#LLaserOver)  
+[OQtouch.RLaserOut](#RLaserOut)  
+[OQtouch.RLaserDown](#RLaserDown)  
+[OQtouch.RLaserUp](#RLaserUp)  
+[OQtouch.RLaserUpOutside](#RLaserUpOutside)  
+[OQtouch.AddTargetObject()](#AddTargetObject)  
+[OQtouch.IsVibration](#IsVibration)  
 
 ***
 
 <a name="RLaserUp"></a>
 
-# OTouch.RLaserUp
+# OQtouch.RLaserUp
 
 ### ◇ 構文
-<em>otouch</em>.RLaserUp
+<em>oqtouch</em>.RLaserUp
 
 ### ◇ 説明
 イベント。 
-[OTouch.AddTargetObject()](#AddTargetObject) 等で登録済みのオブジェクトを [OTouch.RLaserDown](#RLaserDown) 後、「同じオブジェクトの領域で右人差し指トリガーを離した時」のイベントハンドラの登録や削除を行うことができます。
+[OQtouch.AddTargetObject()](#AddTargetObject) 等で登録済みのオブジェクトを [OQtouch.RLaserDown](#RLaserDown) 後、「同じオブジェクトの領域で右人差し指トリガーを離した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
 ```
@@ -2445,22 +2445,22 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
 
         //レーザーポインタの表示
-        _otouch.EnabledLaserL = true;
-        _otouch.EnabledLaserR = true;
+        _oqt.EnabledLaserL = true;
+        _oqt.EnabledLaserR = true;
 
         //レーザーポインタで選択するオブジェクトの登録
-        _otouch.AddTargetObject(GameObject.Find("Button1"));
+        _oqt.AddTargetObject(GameObject.Find("Button1"));
 
         //イベントハンドラの登録
-        _otouch.RLaserUp += RLaserUpHandler;
+        _oqt.RLaserUp += RLaserUpHandler;
 
         //DEBUG用
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
     }
 
     //イベントハンドラ
@@ -2471,25 +2471,25 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.LLaserUp](#LLaserUp)  
-[OTouch.RLaserDown](#RLaserDown)  
-[OTouch.RLaserUpOutside](#RLaserUpOutside)  
-[OTouch.RLaserOver](#RLaserOver)  
-[OTouch.RLaserOut](#RLaserOut)  
-[OTouch.AddTargetObject()](#AddTargetObject)
+[OQtouch.LLaserUp](#LLaserUp)  
+[OQtouch.RLaserDown](#RLaserDown)  
+[OQtouch.RLaserUpOutside](#RLaserUpOutside)  
+[OQtouch.RLaserOver](#RLaserOver)  
+[OQtouch.RLaserOut](#RLaserOut)  
+[OQtouch.AddTargetObject()](#AddTargetObject)
 
 ***
 
 <a name="RLaserUpOutside"></a>
 
-# OTouch.RLaserUpOutside
+# OQtouch.RLaserUpOutside
 
 ### ◇ 構文
-<em>otouch</em>.RLaserUpOutside
+<em>oqtouch</em>.RLaserUpOutside
 
 ### ◇ 説明
 イベント。 
-[OTouch.AddTargetObject()](#AddTargetObject) 等で登録済みのオブジェクトを [OTouch.RLaserDown](#RLaserDown) 後、「選択したオブジェクトの領域外で右人差し指トリガーを離した時」のイベントハンドラの登録や削除を行うことができます。
+[OQtouch.AddTargetObject()](#AddTargetObject) 等で登録済みのオブジェクトを [OQtouch.RLaserDown](#RLaserDown) 後、「選択したオブジェクトの領域外で右人差し指トリガーを離した時」のイベントハンドラの登録や削除を行うことができます。
 
 ### ◇ 例文
 ```
@@ -2500,22 +2500,22 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchL");
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchL");
 
         //レーザーポインタの表示
-        _otouch.EnabledLaserL = true;
-        _otouch.EnabledLaserR = true;
+        _oqt.EnabledLaserL = true;
+        _oqt.EnabledLaserR = true;
 
         //レーザーポインタで選択するオブジェクトの登録
-        _otouch.AddTargetObject(GameObject.Find("Button1"));
+        _oqt.AddTargetObject(GameObject.Find("Button1"));
 
         //イベントハンドラの登録
-        _otouch.RLaserUpOutside += RLaserUpOutsideHandler;
+        _oqt.RLaserUpOutside += RLaserUpOutsideHandler;
 
         //DEBUG用
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>();
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
     }
 
     //イベントハンドラ
@@ -2526,22 +2526,22 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.LLaserUpOutside](#LLaserUpOutside)  
-[OTouch.RLaserUp](#RLaserUp)  
-[OTouch.RLaserDown](#RLaserDown)  
-[OTouch.RLaserOver](#RLaserOver)  
-[OTouch.RLaserOut](#RLaserOut)  
-[OTouch.AddTargetObject()](#AddTargetObject)
+[OQtouch.LLaserUpOutside](#LLaserUpOutside)  
+[OQtouch.RLaserUp](#RLaserUp)  
+[OQtouch.RLaserDown](#RLaserDown)  
+[OQtouch.RLaserOver](#RLaserOver)  
+[OQtouch.RLaserOut](#RLaserOut)  
+[OQtouch.AddTargetObject()](#AddTargetObject)
 
 ***
 
 <a name="RThumbstickDown"></a>
 
-# OTouch.RThumbstickDown
+# OQtouch.RThumbstickDown
 
 ### ◇ 構文
-<em>otouch</em>.RThumbstickDown += <em>SomeMethodHandler</em>  
-<em>otouch</em>.RThumbstickDown -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.RThumbstickDown += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.RThumbstickDown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -2556,11 +2556,11 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _otouch.RThumbstickDown += RThumbstickDownHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _oqt.RThumbstickDown += RThumbstickDownHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void RThumbstickDownHandler() { // イベントハンドラ
@@ -2571,19 +2571,19 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.LThumbstickDown](#LThumbstickDown)  
-[OTouch.RThumbstickUp](#RThumbstickUp)  
-[OTouch.RThumbstickRawTouch](#RThumbstickRawTouch)  
+[OQtouch.LThumbstickDown](#LThumbstickDown)  
+[OQtouch.RThumbstickUp](#RThumbstickUp)  
+[OQtouch.RThumbstickRawTouch](#RThumbstickRawTouch)  
 
 ***
 
 <a name="RThumbstickDownDown"></a>
 
-# OTouch.RThumbstickDownDown
+# OQtouch.RThumbstickDownDown
 
 ### ◇ 構文
-<em>otouch</em>.RThumbstickDownDown += <em>SomeMethodHandler</em>  
-<em>otouch</em>.RThumbstickDownDown -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.RThumbstickDownDown += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.RThumbstickDownDown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -2598,11 +2598,11 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _otouch.RThumbstickDownDown += RThumbstickDownDownHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _oqt.RThumbstickDownDown += RThumbstickDownDownHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void RThumbstickDownDownHandler() { // イベントハンドラ
@@ -2613,21 +2613,21 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.LThumbstickDownDown](#LThumbstickDownDown)  
-[OTouch.RThumbstickDownUp](#RThumbstickDownUp)  
-[OTouch.RThumbstickUpDown](#RThumbstickUpDown)  
-[OTouch.RThumbstickLeftDown](#RThumbstickLeftDown)  
-[OTouch.RThumbstickRightDown](#RThumbstickRightDown)  
+[OQtouch.LThumbstickDownDown](#LThumbstickDownDown)  
+[OQtouch.RThumbstickDownUp](#RThumbstickDownUp)  
+[OQtouch.RThumbstickUpDown](#RThumbstickUpDown)  
+[OQtouch.RThumbstickLeftDown](#RThumbstickLeftDown)  
+[OQtouch.RThumbstickRightDown](#RThumbstickRightDown)  
 
 ***
 
 <a name="RThumbstickDownUp"></a>
 
-# OTouch.RThumbstickDownUp
+# OQtouch.RThumbstickDownUp
 
 ### ◇ 構文
-<em>otouch</em>.RThumbstickDownUp += <em>SomeMethodHandler</em>  
-<em>otouch</em>.RThumbstickDownUp -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.RThumbstickDownUp += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.RThumbstickDownUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -2642,11 +2642,11 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _otouch.RThumbstickDownUp += RThumbstickDownUpHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _oqt.RThumbstickDownUp += RThumbstickDownUpHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void RThumbstickDownUpHandler() { // イベントハンドラ
@@ -2657,21 +2657,21 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.LThumbstickDownUp](#LThumbstickDownUp)  
-[OTouch.RThumbstickDownDown](#RThumbstickDownDown)  
-[OTouch.RThumbstickUpUp](#RThumbstickUpUp)  
-[OTouch.RThumbstickLeftUp](#RThumbstickLeftUp)  
-[OTouch.RThumbstickRightUp](#RThumbstickRightUp)  
+[OQtouch.LThumbstickDownUp](#LThumbstickDownUp)  
+[OQtouch.RThumbstickDownDown](#RThumbstickDownDown)  
+[OQtouch.RThumbstickUpUp](#RThumbstickUpUp)  
+[OQtouch.RThumbstickLeftUp](#RThumbstickLeftUp)  
+[OQtouch.RThumbstickRightUp](#RThumbstickRightUp)  
 
 ***
 
 <a name="RThumbstickLeftDown"></a>
 
-# OTouch.RThumbstickLeftDown
+# OQtouch.RThumbstickLeftDown
 
 ### ◇ 構文
-<em>otouch</em>.RThumbstickLeftDown += <em>SomeMethodHandler</em>  
-<em>otouch</em>.RThumbstickLeftDown -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.RThumbstickLeftDown += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.RThumbstickLeftDown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -2686,11 +2686,11 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _otouch.RThumbstickLeftDown += RThumbstickLeftDownHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _oqt.RThumbstickLeftDown += RThumbstickLeftDownHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void RThumbstickLeftDownHandler() { // イベントハンドラ
@@ -2701,21 +2701,21 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.LThumbstickLeftDown](#LThumbstickLeftDown)  
-[OTouch.RThumbstickLeftUp](#RThumbstickLeftUp)  
-[OTouch.RThumbstickUpDown](#RThumbstickUpDown)  
-[OTouch.RThumbstickDownDown](#RThumbstickDownDown)  
-[OTouch.RThumbstickRightDown](#RThumbstickRightDown)  
+[OQtouch.LThumbstickLeftDown](#LThumbstickLeftDown)  
+[OQtouch.RThumbstickLeftUp](#RThumbstickLeftUp)  
+[OQtouch.RThumbstickUpDown](#RThumbstickUpDown)  
+[OQtouch.RThumbstickDownDown](#RThumbstickDownDown)  
+[OQtouch.RThumbstickRightDown](#RThumbstickRightDown)  
 
 ***
 
 <a name="RThumbstickLeftUp"></a>
 
-# OTouch.RThumbstickLeftUp
+# OQtouch.RThumbstickLeftUp
 
 ### ◇ 構文
-<em>otouch</em>.RThumbstickLeftUp += <em>SomeMethodHandler</em>  
-<em>otouch</em>.RThumbstickLeftUp -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.RThumbstickLeftUp += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.RThumbstickLeftUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -2730,11 +2730,11 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _otouch.RThumbstickLeftUp += RThumbstickLeftUpHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _oqt.RThumbstickLeftUp += RThumbstickLeftUpHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void RThumbstickLeftUpHandler() { // イベントハンドラ
@@ -2745,21 +2745,21 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.LThumbstickLeftUp](#LThumbstickLeftUp)  
-[OTouch.RThumbstickLeftDown](#RThumbstickLeftDown)  
-[OTouch.RThumbstickUpUp](#RThumbstickUpUp)  
-[OTouch.RThumbstickDownUp](#RThumbstickDownUp)  
-[OTouch.RThumbstickRightUp](#RThumbstickRightUp)  
+[OQtouch.LThumbstickLeftUp](#LThumbstickLeftUp)  
+[OQtouch.RThumbstickLeftDown](#RThumbstickLeftDown)  
+[OQtouch.RThumbstickUpUp](#RThumbstickUpUp)  
+[OQtouch.RThumbstickDownUp](#RThumbstickDownUp)  
+[OQtouch.RThumbstickRightUp](#RThumbstickRightUp)  
 
 ***
 
 <a name="RThumbstickRawTouch"></a>
 
-# OTouch.RThumbstickRawTouch
+# OQtouch.RThumbstickRawTouch
 
 ### ◇ 構文
-<em>otouch</em>.RThumbstickRawTouch += <em>SomeMethodHandler</em>  
-<em>otouch</em>.RThumbstickRawTouch -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.RThumbstickRawTouch += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.RThumbstickRawTouch -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -2774,11 +2774,11 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _otouch.RThumbstickRawTouch += RThumbstickRawTouchHandler; //イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _oqt.RThumbstickRawTouch += RThumbstickRawTouchHandler; //イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void RThumbstickRawTouchHandler() { //イベントハンドラ
@@ -2789,18 +2789,18 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.LThumbstickRawTouch](#LThumbstickRawTouch)  
-[OTouch.RThumbstickDown](#RThumbstickDown)  
+[OQtouch.LThumbstickRawTouch](#LThumbstickRawTouch)  
+[OQtouch.RThumbstickDown](#RThumbstickDown)  
 
 ***
 
 <a name="RThumbstickRightDown"></a>
 
-# OTouch.RThumbstickRightDown
+# OQtouch.RThumbstickRightDown
 
 ### ◇ 構文
-<em>otouch</em>.RThumbstickRightDown += <em>SomeMethodHandler</em>  
-<em>otouch</em>.RThumbstickRightDown -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.RThumbstickRightDown += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.RThumbstickRightDown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -2815,11 +2815,11 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _otouch.RThumbstickRightDown += RThumbstickRightDownHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _oqt.RThumbstickRightDown += RThumbstickRightDownHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void RThumbstickRightDownHandler() { // イベントハンドラ
@@ -2830,21 +2830,21 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.LThumbstickRightDown](#LThumbstickRightDown)  
-[OTouch.RThumbstickRightUp](#RThumbstickRightUp)  
-[OTouch.RThumbstickUpDown](#RThumbstickUpDown)  
-[OTouch.RThumbstickDownDown](#RThumbstickDownDown)  
-[OTouch.RThumbstickLeftDown](#RThumbstickLeftDown)  
+[OQtouch.LThumbstickRightDown](#LThumbstickRightDown)  
+[OQtouch.RThumbstickRightUp](#RThumbstickRightUp)  
+[OQtouch.RThumbstickUpDown](#RThumbstickUpDown)  
+[OQtouch.RThumbstickDownDown](#RThumbstickDownDown)  
+[OQtouch.RThumbstickLeftDown](#RThumbstickLeftDown)  
 
 ***
 
 <a name="RThumbstickRightUp"></a>
 
-# OTouch.RThumbstickRightUp
+# OQtouch.RThumbstickRightUp
 
 ### ◇ 構文
-<em>otouch</em>.RThumbstickRightUp += <em>SomeMethodHandler</em>  
-<em>otouch</em>.RThumbstickRightUp -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.RThumbstickRightUp += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.RThumbstickRightUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -2859,11 +2859,11 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _otouch.RThumbstickRightUp += RThumbstickRightUpHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _oqt.RThumbstickRightUp += RThumbstickRightUpHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void RThumbstickRightUpHandler() { // イベントハンドラ
@@ -2874,20 +2874,20 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.LThumbstickRightUp](#LThumbstickRightUp)  
-[OTouch.RThumbstickRightDown](#RThumbstickRightDown)  
-[OTouch.RThumbstickUpUp](#RThumbstickUpUp)  
-[OTouch.RThumbstickDownUp](#RThumbstickDownUp)  
-[OTouch.RThumbstickLeftUp](#RThumbstickLeftUp)  
+[OQtouch.LThumbstickRightUp](#LThumbstickRightUp)  
+[OQtouch.RThumbstickRightDown](#RThumbstickRightDown)  
+[OQtouch.RThumbstickUpUp](#RThumbstickUpUp)  
+[OQtouch.RThumbstickDownUp](#RThumbstickDownUp)  
+[OQtouch.RThumbstickLeftUp](#RThumbstickLeftUp)  
 
 ***
 
 <a name="RThumbstickRotate"></a>
 
-# OTouch.RThumbstickRotate 
+# OQtouch.RThumbstickRotate 
 
 ### ◇ 構文
-<em>otouch</em>.RThumbstickRotate
+<em>oqtouch</em>.RThumbstickRotate
 
 ### ◇ 説明
 プロパティ。  
@@ -2899,37 +2899,37 @@ public class GameManager : MonoBehaviour {
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
-    private OTouch _otouch;
+    private OQtouch _oqt;
     private Console _console; //DEBUG用
 
     void Start() {
-        _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     void Update() {
-        if (_otouch.IsRThumbstickMove) { //右親指スティックを動かしている時
-            _console.Log(_otouch.RThumbstickRotate.ToString());
+        if (_oqt.IsRThumbstickMove) { //右親指スティックを動かしている時
+            _console.Log(_oqt.RThumbstickRotate.ToString());
         }
     }
 }
 ```
 
 ### ◇ 参照
-[OTouch.LThumbstickRotate](#LThumbstickRotate)  
-[OTouch.IsRThumbstickMove](#IsRThumbstickMove)  
+[OQtouch.LThumbstickRotate](#LThumbstickRotate)  
+[OQtouch.IsRThumbstickMove](#IsRThumbstickMove)  
 
 ***
 
 <a name="RThumbstickUp"></a>
 
-# OTouch.RThumbstickUp
+# OQtouch.RThumbstickUp
 
 ### ◇ 構文
-<em>otouch</em>.RThumbstickUp += <em>SomeMethodHandler</em>  
-<em>otouch</em>.RThumbstickUp -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.RThumbstickUp += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.RThumbstickUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -2944,11 +2944,11 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _otouch.RThumbstickUp += RThumbstickUpHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _oqt.RThumbstickUp += RThumbstickUpHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void RThumbstickUpHandler() { // イベントハンドラ
@@ -2959,18 +2959,18 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.LThumbstickUp](#LThumbstickUp)  
-[OTouch.RThumbstickDown](#RThumbstickDown)  
+[OQtouch.LThumbstickUp](#LThumbstickUp)  
+[OQtouch.RThumbstickDown](#RThumbstickDown)  
 
 ***
 
 <a name="RThumbstickUpDown"></a>
 
-# OTouch.RThumbstickUpDown
+# OQtouch.RThumbstickUpDown
 
 ### ◇ 構文
-<em>otouch</em>.RThumbstickUpDown += <em>SomeMethodHandler</em>  
-<em>otouch</em>.RThumbstickUpDown -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.RThumbstickUpDown += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.RThumbstickUpDown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -2985,11 +2985,11 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _otouch.RThumbstickUpDown += RThumbstickUpDownHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _oqt.RThumbstickUpDown += RThumbstickUpDownHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void RThumbstickUpDownHandler() { // イベントハンドラ
@@ -3000,21 +3000,21 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.LThumbstickUpDown](#LThumbstickUpDown)  
-[OTouch.RThumbstickUpUp](#RThumbstickUpUp)  
-[OTouch.RThumbstickDownDown](#RThumbstickDownDown)  
-[OTouch.RThumbstickLeftDown](#RThumbstickLeftDown)  
-[OTouch.RThumbstickRightDown](#RThumbstickRightDown)  
+[OQtouch.LThumbstickUpDown](#LThumbstickUpDown)  
+[OQtouch.RThumbstickUpUp](#RThumbstickUpUp)  
+[OQtouch.RThumbstickDownDown](#RThumbstickDownDown)  
+[OQtouch.RThumbstickLeftDown](#RThumbstickLeftDown)  
+[OQtouch.RThumbstickRightDown](#RThumbstickRightDown)  
 
 ***
 
 <a name="RThumbstickUpUp"></a>
 
-# OTouch.RThumbstickUpUp
+# OQtouch.RThumbstickUpUp
 
 ### ◇ 構文
-<em>otouch</em>.RThumbstickUpUp += <em>SomeMethodHandler</em>  
-<em>otouch</em>.RThumbstickUpUp -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.RThumbstickUpUp += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.RThumbstickUpUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 イベント。  
@@ -3029,11 +3029,11 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.R = GameObject.Find("OculusTouchR");
-        _otouch.RThumbstickUpUp += RThumbstickUpUpHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _oqt.RThumbstickUpUp += RThumbstickUpUpHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void RThumbstickUpUpHandler() { // イベントハンドラ
@@ -3044,21 +3044,21 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.LThumbstickUpUp](#LThumbstickUpUp)  
-[OTouch.RThumbstickUpDown](#RThumbstickUpDown)  
-[OTouch.RThumbstickDownUp](#RThumbstickDownUp)  
-[OTouch.RThumbstickLeftUp](#RThumbstickLeftUp)  
-[OTouch.RThumbstickRightUp](#RThumbstickRightUp)  
+[OQtouch.LThumbstickUpUp](#LThumbstickUpUp)  
+[OQtouch.RThumbstickUpDown](#RThumbstickUpDown)  
+[OQtouch.RThumbstickDownUp](#RThumbstickDownUp)  
+[OQtouch.RThumbstickLeftUp](#RThumbstickLeftUp)  
+[OQtouch.RThumbstickRightUp](#RThumbstickRightUp)  
 
 ***
 
 <a name="StartDown"></a>
 
-# OTouch.StartDown
+# OQtouch.StartDown
 
 ### ◇ 構文
-<em>otouch</em>.StartDown += <em>SomeMethodHandler</em>  
-<em>otouch</em>.StartDown -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.StartDown += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.StartDown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 「メニューボタン（Xボタンの下）を押した時」のイベントハンドラの登録や削除を行うことができます。
@@ -3072,10 +3072,10 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.StartDown += StartDownHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.StartDown += StartDownHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void StartDownHandler() { // イベントハンドラ
@@ -3086,17 +3086,17 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.StartUp](#StartUp)  
+[OQtouch.StartUp](#StartUp)  
 
 ***
 
 <a name="StartUp"></a>
 
-# OTouch.StartUp
+# OQtouch.StartUp
 
 ### ◇ 構文
-<em>otouch</em>.StartUp += <em>SomeMethodHandler</em>  
-<em>otouch</em>.StartUp -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.StartUp += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.StartUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 「メニューボタン（Xボタンの下）を押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
@@ -3110,10 +3110,10 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.StartUp += StartUpHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.StartUp += StartUpHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void StartUpHandler() { // イベントハンドラ
@@ -3124,57 +3124,57 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.StartDown](#StartDown)  
+[OQtouch.StartDown](#StartDown)  
 
 ***
 
 <a name="TargetObjects"></a>
 
-# OTouch.TargetObjects
+# OQtouch.TargetObjects
 
 ### ◇ 構文
-<em>otouch</em>.TargetObjects
+<em>oqtouch</em>.TargetObjects
 
 ### ◇ 説明
 プロパティ。  
 左、もしくは右手側のレーザーポインタに反応させるオブジェクト（GameObject）のリスト。  
 登録するには次の２つの方法があります。  
-① [OTouch.AddTargetObject()](#AddTargetObject) を使う  
-② [OTouch.TargetObjects](#TargetObjects) プロパティに[動的配列](https://github.com/mubirou/HelloWorld/blob/master/languages/C%23Unity/C%23Unity_reference.md#%E5%8B%95%E7%9A%84%E9%85%8D%E5%88%97%EF%BC%88List%EF%BC%89) を代入する  
+① [OQtouch.AddTargetObject()](#AddTargetObject) を使う  
+② [OQtouch.TargetObjects](#TargetObjects) プロパティに[動的配列](https://github.com/mubirou/HelloWorld/blob/master/languages/C%23Unity/C%23Unity_reference.md#%E5%8B%95%E7%9A%84%E9%85%8D%E5%88%97%EF%BC%88List%EF%BC%89) を代入する  
 
 ### ◇ 例文（一つずつ登録する方法）
 ```
-OTouch _otouch = GetComponent<OTouch>();
+OQtouch _oqt = GetComponent<OQtouch>();
 
 //一つずつ登録する場合
-_otouch.AddTargetObject(GameObject.Find("Button1"));
-_otouch.AddTargetObject(GameObject.Find("Button2"));
-_otouch.AddTargetObject(GameObject.Find("Button3"));
+_oqt.AddTargetObject(GameObject.Find("Button1"));
+_oqt.AddTargetObject(GameObject.Find("Button2"));
+_oqt.AddTargetObject(GameObject.Find("Button3"));
 
-foreach (GameObject value in _otouch.TargetObjects) {
+foreach (GameObject value in _oqt.TargetObjects) {
     Debug.Log(value.name); //"Button1"→"Button2"→"Button3"
 }
 ```
 
 ### ◇ 例文（一度に複数登録する方法）
 ```
-OTouch _otouch = GetComponent<OTouch>();
+OQtouch _oqt = GetComponent<OQtouch>();
 
 // 一度に複数のオブジェクトを登録する場合
-_otouch.TargetObjects = new System.Collections.Generic.List<GameObject>() {
+_oqt.TargetObjects = new System.Collections.Generic.List<GameObject>() {
     GameObject.Find("Button1"),
     GameObject.Find("Button2"),
     GameObject.Find("Button3")
 };
 
-foreach (GameObject value in _otouch.TargetObjects) {
+foreach (GameObject value in _oqt.TargetObjects) {
     Debug.Log(value.name); //"Button1"→"Button2"→"Button3"
 }
 ```
 
 ### ◇ 参照
-[OTouch.AddTargetObject()](#AddTargetObject)  
-[OTouch.RemoveTargetObject()](#RemoveTargetObject)  
+[OQtouch.AddTargetObject()](#AddTargetObject)  
+[OQtouch.RemoveTargetObject()](#RemoveTargetObject)  
 [動的配列](https://github.com/mubirou/HelloWorld/blob/master/languages/C%23Unity/C%23Unity_reference.md#%E5%8B%95%E7%9A%84%E9%85%8D%E5%88%97%EF%BC%88List%EF%BC%89)  
 
 ***
@@ -3182,11 +3182,11 @@ foreach (GameObject value in _otouch.TargetObjects) {
 
 <a name="XDown"></a>
 
-# OTouch.XDown
+# OQtouch.XDown
 
 ### ◇ 構文
-<em>otouch</em>.XDown += <em>SomeMethodHandler</em>  
-<em>otouch</em>.XDown -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.XDown += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.XDown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 「Xボタンを押した時」のイベントハンドラの登録や削除を行うことができます。
@@ -3200,10 +3200,10 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.XDown += XDownHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.XDown += XDownHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void XDownHandler() { // イベントハンドラ
@@ -3214,18 +3214,18 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.XUp](#XUp)  
-[OTouch.XRawTouch](#XRawTouch)  
+[OQtouch.XUp](#XUp)  
+[OQtouch.XRawTouch](#XRawTouch)  
 
 ***
 
 <a name="XRawTouch"></a>
 
-# OTouch.XRawTouch
+# OQtouch.XRawTouch
 
 ### ◇ 構文
-<em>otouch</em>.XRawTouch += <em>SomeMethodHandler</em>  
-<em>otouch</em>.XRawTouch -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.XRawTouch += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.XRawTouch -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 「Xボタンに触れた時」（触れている間ではなく、最初に触れた瞬間）のイベントハンドラの登録や削除を行うことができます。
@@ -3239,10 +3239,10 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.XRawTouch += XRawTouchHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.XRawTouch += XRawTouchHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void XRawTouchHandler() { // イベントハンドラ
@@ -3253,18 +3253,18 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.XDown](#XDown)  
-[OTouch.XUp](#XUp)  
+[OQtouch.XDown](#XDown)  
+[OQtouch.XUp](#XUp)  
 
 ***
 
 <a name="XUp"></a>
 
-# OTouch.XUp
+# OQtouch.XUp
 
 ### ◇ 構文
-<em>otouch</em>.XUp += <em>SomeMethodHandler</em>  
-<em>otouch</em>.XUp -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.XUp += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.XUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 「Xボタンを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
@@ -3278,10 +3278,10 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.XUp += XUpHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.XUp += XUpHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void XUpHandler() { // イベントハンドラ
@@ -3292,18 +3292,18 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.XDown](#XDown)  
-[OTouch.XRawTouch](#XRawTouch)  
+[OQtouch.XDown](#XDown)  
+[OQtouch.XRawTouch](#XRawTouch)  
 
 ***
 
 <a name="YDown"></a>
 
-# OTouch.YDown
+# OQtouch.YDown
 
 ### ◇ 構文
-<em>otouch</em>.YDown += <em>SomeMethodHandler</em>  
-<em>otouch</em>.YDown -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.YDown += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.YDown -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 「Yボタンを押した時」のイベントハンドラの登録や削除を行うことができます。
@@ -3317,10 +3317,10 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.YDown += YDownHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.YDown += YDownHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void YDownHandler() { // イベントハンドラ
@@ -3331,18 +3331,18 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.YUp](#YUp)  
-[OTouch.YRawTouch](#YRawTouch)  
+[OQtouch.YUp](#YUp)  
+[OQtouch.YRawTouch](#YRawTouch)  
 
 ***
 
 <a name="YRawTouch"></a>
 
-# OTouch.YRawTouch
+# OQtouch.YRawTouch
 
 ### ◇ 構文
-<em>otouch</em>.YRawTouch += <em>SomeMethodHandler</em>  
-<em>otouch</em>.YRawTouch -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.YRawTouch += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.YRawTouch -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 「Yボタンに触れた時」（触れている間ではなく、最初に触れた瞬間）のイベントハンドラの登録や削除を行うことができます。
@@ -3356,10 +3356,10 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.YRawTouch += YRawTouchHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.YRawTouch += YRawTouchHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void YRawTouchHandler() { // イベントハンドラ
@@ -3370,18 +3370,18 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.YDown](#YDown)  
-[OTouch.YUp](#YUp)  
+[OQtouch.YDown](#YDown)  
+[OQtouch.YUp](#YUp)  
 
 ***
 
 <a name="YUp"></a>
 
-# OTouch.YUp
+# OQtouch.YUp
 
 ### ◇ 構文
-<em>otouch</em>.YUp += <em>SomeMethodHandler</em>  
-<em>otouch</em>.YUp -= <em>SomeMethodHandler</em>
+<em>oqtouch</em>.YUp += <em>SomeMethodHandler</em>  
+<em>oqtouch</em>.YUp -= <em>SomeMethodHandler</em>
 
 ### ◇ 説明
 「Yボタンを押した後、離した時」のイベントハンドラの登録や削除を行うことができます。
@@ -3395,10 +3395,10 @@ public class GameManager : MonoBehaviour {
     private Console _console; //DEBUG用
 
     void Start() {
-        OTouch _otouch = GetComponent<OTouch>();
-        _otouch.L = GameObject.Find("OculusTouchL");
-        _otouch.YUp += YUpHandler; // イベントハンドラの登録
-        _console = _otouch.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+        OQtouch _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.YUp += YUpHandler; // イベントハンドラの登録
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
     private void YUpHandler() { // イベントハンドラ
@@ -3409,5 +3409,5 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OTouch.YDown](#YDown)  
-[OTouch.YRawTouch](#YRawTouch)  
+[OQtouch.YDown](#YDown)  
+[OQtouch.YRawTouch](#YRawTouch)  

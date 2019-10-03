@@ -1,8 +1,8 @@
-# OTouch スタート
+# OQtouch スタート
 Version Alpha 1.201909192008 対応  
 © 2019 夢寐郎
 
-## ◆ OTouch の準備
+## ◆ OQtouch の準備
 1. [開発環境](https://github.com/mubirou/Unity3D/tree/master/oculustouch)を準備する
 1. GameManager オブジェクトの作成  
 	1. [GameObject]-[Create Empty] を選択（空の GameObject の作成）
@@ -16,18 +16,18 @@ Version Alpha 1.201909192008 対応
 	1. [Hierarchy]-[GameManager]（GameObject）-[Inspector] を開く
 	1. [Project]-[Assets]-[GameManager]（C# スクリプト）を上記の [Inspector] エリアにドラッグ＆ドロップ  
 
-1. OTouch クラスのアタッチ
-	1. [OTouch.cs](https://raw.githubusercontent.com/mubirou/Unity3D/master/oculustouch/OTouch.cs) ファイルをプロジェクト内の Assets フォルダ内に保存
-	1. [Project]-[Assets]-[OTouch]（C# スクリプト）を上記の [Inspector] エリアにドラッグ＆ドロップ  
+1. OQtouch クラスのアタッチ
+	1. [OQtouch.cs](https://raw.githubusercontent.com/mubirou/Unity3D/master/oculustouch/OQtouch.cs) ファイルをプロジェクト内の Assets フォルダ内に保存
+	1. [Project]-[Assets]-[OQtouch]（C# スクリプト）を上記の [Inspector] エリアにドラッグ＆ドロップ  
 
-1. OTouch を使ったミニマルな GameManager（C# スクリプト）
+1. OQtouch を使ったミニマルな GameManager（C# スクリプト）
 	```
 	//GameManager.cs
 	using UnityEngine;
 
 	public class GameManager : MonoBehaviour {
 		void Start() {
-			OTouch _otouch = GetComponent<OTouch>();
+			OQtouch _otouch = GetComponent<OQtouch>();
 			_otouch.R = GameObject.Find("OculusTouchR");
 		}
 	}
@@ -55,7 +55,7 @@ Version Alpha 1.201909192008 対応
         private Console _console;
 
         void Start() {
-            OTouch _otouch = GetComponent<OTouch>();
+            OQtouch _otouch = GetComponent<OQtouch>();
             _otouch.L = GameObject.Find("OculusTouchL");
             _otouch.LIndexTriggerDown += LIndexTriggerDownHandler;
 
@@ -74,7 +74,7 @@ Version Alpha 1.201909192008 対応
 <a name="LaserPointer"></a>
 
 ## ◆ レーザーポインタの準備（任意）
-* [OTouch.EnabledLaserL](https://github.com/mubirou/Unity3D/blob/master/oculustouch/doc/reference.md#EnabledLaserL)、[OTouch.EnabledLaserR](https://github.com/mubirou/Unity3D/blob/master/oculustouch/doc/reference.md#EnabledLaserR) を使用する前に必要になります
+* [OQtouch.EnabledLaserL](https://github.com/mubirou/Unity3D/blob/master/oculustouch/doc/reference.md#EnabledLaserL)、[OQtouch.EnabledLaserR](https://github.com/mubirou/Unity3D/blob/master/oculustouch/doc/reference.md#EnabledLaserR) を使用する前に必要になります
 
 1. マテリアルの作成
 	1. [Window]-[General]-[Project]-[+]-[Material] を選択
