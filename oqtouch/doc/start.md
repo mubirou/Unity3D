@@ -3,7 +3,7 @@ Version Alpha 3.201910031905 対応
 © 2019 夢寐郎
 
 ## ◆ OQtouch の準備
-1. [開発環境](https://github.com/mubirou/Unity3D/tree/master/oculustouch)を準備する
+1. [開発環境](https://github.com/mubirou/Unity3D/tree/master/oqtouch)を準備する
 1. GameManager オブジェクトの作成  
 	1. [GameObject]-[Create Empty] を選択（空の GameObject の作成）
 	1. 名前を "GameObject"→"GameManager" に変更  
