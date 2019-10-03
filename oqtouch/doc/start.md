@@ -17,7 +17,7 @@ Version Alpha 3.201910031905 対応
 	1. [Project]-[Assets]-[GameManager]（C# スクリプト）を上記の [Inspector] エリアにドラッグ＆ドロップ  
 
 1. OQtouch クラスのアタッチ
-	1. [OQtouch.cs](https://raw.githubusercontent.com/mubirou/Unity3D/master/oculustouch/OQtouch.cs) ファイルをプロジェクト内の Assets フォルダ内に保存
+	1. [OQtouch.cs](https://raw.githubusercontent.com/mubirou/Unity3D/master/oqtouch/OQtouch.cs) ファイルをプロジェクト内の Assets フォルダ内に保存
 	1. [Project]-[Assets]-[OQtouch]（C# スクリプト）を上記の [Inspector] エリアにドラッグ＆ドロップ  
 
 1. OQtouch を使ったミニマルな GameManager（C# スクリプト）
