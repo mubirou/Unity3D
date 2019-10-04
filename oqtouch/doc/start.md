@@ -5,9 +5,13 @@ Version Alpha 3.201910031905 対応
 ## ◆ OQtouch の準備
 1. [開発環境](https://github.com/mubirou/Unity3D/tree/master/oqtouch)を準備する  
 	* [Unity Hub for Linux](https://forum.unity.com/threads/unity-hub-v2-0-0-release.677485/) を利用する場合、ダウンロード後に端末（ターミナル）で次の処理を行い、パーミッションを変更する必要があります
-	```
-	$ chmod 755 UnityHub.AppImage
-	```
+		```
+		$ chmod 755 UnityHub.AppImage
+		```
+	* Unity Hub for Linux を使って Unity をインストールした後は、UnityHub.AppImage をゴミ箱に入れて OS を再起動、端末（ターミナル）で次の処理を行い、Unity を起動します
+		```
+		$ Unity/Editor/2020.1.0a7/Editor/Unity
+		```
 	
 1. GameManager オブジェクトの作成  
 	1. [GameObject]-[Create Empty] を選択（空の GameObject の作成）
