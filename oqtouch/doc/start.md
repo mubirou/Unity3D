@@ -3,7 +3,12 @@ Version Alpha 3.201910031905 対応
 © 2019 夢寐郎
 
 ## ◆ OQtouch の準備
-1. [開発環境](https://github.com/mubirou/Unity3D/tree/master/oqtouch)を準備する
+1. [開発環境](https://github.com/mubirou/Unity3D/tree/master/oqtouch)を準備する  
+	* [Unity Hub for Linux](https://forum.unity.com/threads/unity-hub-v2-0-0-release.677485/) を利用する場合、ダウンロード後…
+	```
+	$ chmod 755 UnityHub.AppImage
+	```
+	でパーミッション変更をすることで起動できるようになります
 1. GameManager オブジェクトの作成  
 	1. [GameObject]-[Create Empty] を選択（空の GameObject の作成）
 	1. 名前を "GameObject"→"GameManager" に変更  
