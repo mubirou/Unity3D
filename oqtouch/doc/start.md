@@ -23,6 +23,14 @@ Version Alpha 3.201910031905 対応
 		* [Update Spatializer Plugins] → [Delete new plugin]
 
 ***
+
+1. カメラの変更  
+	1. [Hierarchy]-[MainCamera] を削除
+	1. [Project]-[Assets]-[Oculus]-[VR]-[Prefabs]-[OVRCameraRig] を [Hierarchy] にドラッグ
+	1. [Inspector]-[Transform] の値を次の通りに変更  
+		* X：0
+		* Y：2.5
+		* Z：-6
 	
 1. GameManager オブジェクトの作成  
 	1. [GameObject]-[Create Empty] を選択（空の GameObject の作成）
