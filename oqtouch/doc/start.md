@@ -22,7 +22,7 @@ Version Alpha 3.201910031905 対応
 		* [API Update Required] → [No Thanks]
 		* [Update Spatializer Plugins] → [Delete new plugin]
 
-1. [Create empty project] から新規プロジェクトを作成
+***
 	
 1. GameManager オブジェクトの作成  
 	1. [GameObject]-[Create Empty] を選択（空の GameObject の作成）
