@@ -1,9 +1,9 @@
 ﻿/***************************************************************************
- * OQtouch Alpha 3.201910031905
+ * OQtouch Alpha 3.20191004.2248
  * © 2019 夢寐郎
  ***************************************************************************/
-using System.Collections;
-using System.Collections.Generic;
+//using System.Collections;
+using System.Collections.Generic; //for List
 using UnityEngine;
 using System; //for Math
 
@@ -129,7 +129,7 @@ public class OQtouch : MonoBehaviour {
     private bool _isVibration = true; //バイブーションの有効化
 
     //レーザーポインタが反応するGameObjectのリスト
-    public List<GameObject> _targetObjects = new List<GameObject>(); //本来はprivate
+    private List<GameObject> _targetObjects = new List<GameObject>();
 
     //①デリゲート宣言
     public delegate void BodyDelegate(); //OculusTouch本体ボタン用
@@ -220,8 +220,8 @@ public class OQtouch : MonoBehaviour {
     private GameObject _hitObjectR = null;
 
     //レーザーで選択した（LaserMouseDown）したオブジェクト
-    private GameObject _selectObjectL = null; //NEW
-    private GameObject _selectObjectR = null; //NEW
+    private GameObject _selectObjectL = null;
+    private GameObject _selectObjectR = null;
 
     //レーザービーム用
     private Ray _rayL;
@@ -230,8 +230,6 @@ public class OQtouch : MonoBehaviour {
     private RaycastHit _hitInfoR;
     private float _lineWidth1 = 0.007f;
     private float _lineWidth2 = 0.0005f;
-    //private bool _isLLaserDown = false;
-    //private bool _isRLaserDown = false;
     
     void Start() {
         GameObject _ovrCameraRig = GameObject.Find("OVRCameraRig");
@@ -273,17 +271,15 @@ public class OQtouch : MonoBehaviour {
                     _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth1;
                     _lineRendererR.startWidth = _lineRendererR.endWidth = _lineWidth2;
                 }
-                //_isRLaserDown = false; //逆（右）のレーザーの≒MouseDownを解除
                 _hitObjectL = HitTestL(true); //ヒットテスト
                 if (_hitObjectL != null) {
                     if (IsTargetObject(_hitObjectL)) {
-                        if (LLaserDown != null) LLaserDown(_hitObjectL); //イベント発生 20191001
+                        if (LLaserDown != null) LLaserDown(_hitObjectL); //イベント発生
                         _selectObjectL = _hitObjectL; //選択したオブジェクトを記録 NEW
                     }
-                    //_isLLaserDown = true;
                 }
             }
-            LIndexTriggerDown(); //if文の後ろ?
+            LIndexTriggerDown();
         }
         if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger)) {
             _isRIndexTriggerDown = true;
@@ -293,43 +289,39 @@ public class OQtouch : MonoBehaviour {
                     _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth2;
                     _lineRendererR.startWidth = _lineRendererR.endWidth = _lineWidth1;
                 }
-                //_isLLaserDown = false; //逆（右）のレーザーの≒MouseDownを解除
                 _hitObjectR = HitTestR(true); //ヒットテスト
                 if (_hitObjectR != null) {
                     if (IsTargetObject(_hitObjectR)) {
-                        if (RLaserDown != null) RLaserDown(_hitObjectR); //イベント発生 20191001
+                        if (RLaserDown != null) RLaserDown(_hitObjectR); //イベント発生
                         _selectObjectR = _hitObjectR; //選択したオブジェクトを記録 NEW
                     }
-                    //_isRLaserDown = true;
                 }
             }
-            RIndexTriggerDown(); //if文の後ろ?
+            RIndexTriggerDown();
         }
         //人差し指トリガー（Up）
         if (OVRInput.GetUp(OVRInput.RawButton.LIndexTrigger)) {
             _isLIndexTriggerDown = false;
-            if (LIndexTriggerUp != null) LIndexTriggerUp(); //20191001
-            if (HitTestL(false) == _selectObjectL) { //ヒットテスト NEW
+            if (LIndexTriggerUp != null) LIndexTriggerUp();
+            if (HitTestL(false) == _selectObjectL) { //ヒットテスト
                 if (IsTargetObject(_hitObjectL)) {
-                    if (LLaserUp != null) LLaserUp(_selectObjectL); //≒MouseUp, Click 20191001
+                    if (LLaserUp != null) LLaserUp(_selectObjectL); //≒MouseUp, Click
                 }
             } else {
-                if (LLaserUpOutside != null) LLaserUpOutside(_selectObjectL); //≒MouseUpOutside 20191001
+                if (LLaserUpOutside != null) LLaserUpOutside(_selectObjectL); //≒MouseUpOutside
             }
-            //_isLLaserDown = false;
             _selectObjectL = null;
         }
         if (OVRInput.GetUp(OVRInput.RawButton.RIndexTrigger)) {
             _isRIndexTriggerDown = false;
-            if (RIndexTriggerUp != null) RIndexTriggerUp(); //20191001
-            if (HitTestR(false) == _selectObjectR) { //ヒットテスト NEW
+            if (RIndexTriggerUp != null) RIndexTriggerUp();
+            if (HitTestR(false) == _selectObjectR) { //ヒットテスト
                 if (IsTargetObject(_hitObjectR)) {
-                    if (RLaserUp != null) RLaserUp(_selectObjectR); //≒MouseUp, Click 20191001
+                    if (RLaserUp != null) RLaserUp(_selectObjectR); //≒MouseUp, Click
                 }
             } else {
-                if (RLaserUpOutside != null) RLaserUpOutside(_selectObjectR); //≒MouseUpOutside 20191001
+                if (RLaserUpOutside != null) RLaserUpOutside(_selectObjectR); //≒MouseUpOutside
             }
-            //_isRLaserDown = false;
             _selectObjectR = null;
         }
 
@@ -574,10 +566,10 @@ public class OQtouch : MonoBehaviour {
         return null;
     }
     private void StopVibrationL() {
-        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch); //END
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
     }
     private void StopVibrationR() {
-        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch); //END
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
     }
 
     //=====================================
