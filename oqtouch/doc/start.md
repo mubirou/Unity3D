@@ -12,6 +12,9 @@ Version Alpha 3.201910031905 対応
 		```
 		$ Unity/Editor/2020.1.0a7/Editor/Unity
 		```
+	* [Oculus Integration](https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022) を Unity の [Window]-[Asset Store] からインストールする場合、上記の UnityHub.AppImage をゴミ箱から出す必要があります
+
+1. [Create empty project] から新規プロジェクトを作成
 	
 1. GameManager オブジェクトの作成  
 	1. [GameObject]-[Create Empty] を選択（空の GameObject の作成）
