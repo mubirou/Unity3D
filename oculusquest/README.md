@@ -142,7 +142,6 @@ $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb start-server
 
 1. Oculus Quest 上のメニューから [ナビゲーション]-[ライブラリ]-[提供元不明アプリ] を再表示し、削除されているのを確認
 
-
 実行環境：Ubuntu 18.04.2 LTS、Unity 2018.3.0f2 Personal、Oculus Quest  
 作成者：夢寐郎  
 作成日：2019年06月17日  
@@ -167,13 +166,20 @@ $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb start-server
     ……
     ```
     ```
-    $ sudo gedit /etc/udev/rules.d/51-android.rules →テキストエディタ起動（2へ続く）
+    $ sudo gedit /etc/udev/rules.d/51-android.rules →テキストエディタ起動（2.へ続く）
     ```
 
-1. テキストエディタで次の行を記述
+1. テキストエディタで次の行を記述し保存
     ```
     SUBSYSTEM=="usb", ATTR{idVendor}=="2833", MODE="0666", GROUP="plugdev"
     ```
+
+1. Oculus Quest を USB 接続して確認（認識しない場合 OS を再起動）  
+
+実行環境：Ubuntu 18.04.3 Oculus Quest 9.0  
+作成者：夢寐郎  
+作成日：2019年10月06日  
+
 
 <a name="OculusTouchのイロハ"></a>
 # <b>Oculus Touchのイロハ</b>
