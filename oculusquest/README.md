@@ -170,6 +170,10 @@ $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb start-server
     $ sudo gedit /etc/udev/rules.d/51-android.rules →テキストエディタ起動
     ```
 
+1. テキストエディタで次の行を記述
+    ```
+    SUBSYSTEM=="usb", ATTR{idVendor}=="2833", MODE="0666", GROUP="plugdev"
+    ```
 
 <a name="OculusTouchのイロハ"></a>
 # <b>Oculus Touchのイロハ</b>
