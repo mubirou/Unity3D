@@ -167,7 +167,7 @@ $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb start-server
     ……
     ```
     ```
-    $ sudo gedit /etc/udev/rules.d/51-android.rules →テキストエディタ起動
+    $ sudo gedit /etc/udev/rules.d/51-android.rules →テキストエディタ起動（2へ続く）
     ```
 
 1. テキストエディタで次の行を記述
