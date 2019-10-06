@@ -167,7 +167,7 @@ $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb start-server
     ……
     ```
     ```
-    $ sudo gedit /etc/udev/rules.d/51-android.rules →パスワード要求後テキストエディタ起動
+    $ sudo gedit /etc/udev/rules.d/51-android.rules →テキストエディタ起動
     ```
 
 
