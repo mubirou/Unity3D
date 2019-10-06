@@ -154,13 +154,11 @@ $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb start-server
 ### Oculus Quest の USB デバイス ID を調べる
 
 1. 端末（ターミナル）で次の処理を行う  
-    1. 
     ```
     $ adb devices
     List of devices attached
     XXXXXXXXXXXXXX	no permissions .... ←認識に失敗している
     ```
-    2.  
     ```
     $ lsusb
     Bus 002 Device 002: ID XXXX:XXXX XXXX
@@ -168,7 +166,6 @@ $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb start-server
     Bus 003 Device 076: ID 2833:0186  ←"2833"がOculusQuestのID（USBの抜差しで判明）
     ……
     ```
-    3.  
     ```
     $ sudo gedit /etc/udev/rules.d/51-android.rules →パスワード要求後テキストエディタ起動
     ```
