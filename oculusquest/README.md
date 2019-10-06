@@ -5,6 +5,7 @@
 * [MACアドレスの取得](#MACアドレスの取得)
 * [ビルドの基本](#ビルドの基本)
 * [提供元不明アプリの削除方法](#提供元不明アプリの削除方法)
+* [PCと接続できない場合](#PCと接続できない場合)
 * [OculusTouchのイロハ](#OculusTouchのイロハ)
 ***
 
@@ -145,6 +146,31 @@ $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb start-server
 実行環境：Ubuntu 18.04.2 LTS、Unity 2018.3.0f2 Personal、Oculus Quest  
 作成者：夢寐郎  
 作成日：2019年06月17日  
+
+
+<a name="PCと接続できない場合"></a>
+# <b>PCと接続できない場合</b>
+
+### Oculus Quest の USB デバイス ID を調べる
+
+1. 端末（ターミナル）で次の処理を行う  
+    1. 
+    ```
+    $ adb devices
+    List of devices attached
+    XXXXXXXXXXXXXX	no permissions .... ←認識に失敗している
+    ```
+    2.  
+    ```
+    $ lsusb
+    Bus 002 Device 002: ID XXXX:XXXX XXXX
+    ……
+    Bus 003 Device 076: ID 2833:0186  ←"2833"がOculusQuestのID（USBの抜差しで判明）
+    ……
+    ```
+    3.  
+    ```
+    ```
 
 
 <a name="OculusTouchのイロハ"></a>
