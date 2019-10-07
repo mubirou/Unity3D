@@ -1,5 +1,5 @@
 ﻿/***************************************************************************
- * OQtouch Alpha 3.20191004.2248
+ * OQtouch Alpha 4
  * © 2019 夢寐郎
  ***************************************************************************/
 //using System.Collections;
@@ -137,7 +137,7 @@ public class OQtouch : MonoBehaviour {
     public delegate void DebugDelegate(string arg); //DEBUG用
 
     //===================================================
-    // イベントハンドラを格納するデリゲート（現在48個）
+    // イベントハンドラを格納するデリゲート
     //===================================================
     //人差し指トリガー（Down、Up）
     public event BodyDelegate LIndexTriggerDown;
@@ -594,7 +594,7 @@ public class OQtouch : MonoBehaviour {
         set {
             _oculusTouchL = value;
 
-            //コントローラーのレーザーポイントを表示する ???
+            //コントローラーのレーザーポイントを表示する（要修正）
             _lineRendererL = _oculusTouchL.GetComponent<LineRenderer>();
             _lineRendererL.enabled = true;
             if (_oculusTouchR == null) { //Rを使わない場合
@@ -611,7 +611,7 @@ public class OQtouch : MonoBehaviour {
             _oculusTouchR = value;
             _activeController = "right";
             
-            //コントローラーのレーザーポイントを表示する ???
+            //コントローラーのレーザーポイントを表示する（要修正）
             _lineRendererR = _oculusTouchR.GetComponent<LineRenderer>();
             _lineRendererR.enabled = true;
             if (_oculusTouchL != null) {
@@ -732,7 +732,7 @@ public class OQtouch : MonoBehaviour {
         set {
             _enabledLaserR = value;
             if (_enabledLaserR) {
-                //コントローラーのレーザーポイントを表示する ???
+                //コントローラーのレーザーポイントを表示する（要修正）
                 _lineRendererR = _oculusTouchR.GetComponent<LineRenderer>();
                 _lineRendererR.enabled = true;
                 if (_oculusTouchL != null) {
