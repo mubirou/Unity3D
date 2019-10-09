@@ -12,7 +12,7 @@ Version Alpha 3.201910031905 対応
 		```
 		$ Unity/Editor/2020.1.0a7/Editor/Unity
 		```
-	* [Oculus Integration](https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022) を Unity の [Window]-[Asset Store] からインストールする場合、上記の UnityHub.AppImage をゴミ箱から出す必要があります
+	* [Oculus Integration](https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022) を Unity の [Window]-[Asset Store] からインストールする場合、上記の UnityHub.AppImage をゴミ箱から出す必要があります（要検証）
 	* Oculus Integration をインストール後にエラーが発生する場合次のフォルダを一度全て削除します
 		* Assets/Oculus/VR/Script/
 		* Assets/Oculus/VR/Editor/
