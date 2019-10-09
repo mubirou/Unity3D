@@ -46,7 +46,7 @@ Version Alpha 3.201910031905 対応
 
 1. OQtouch クラスのアタッチ
 	1. [OQtouch.cs](https://raw.githubusercontent.com/mubirou/Unity3D/master/oqtouch/OQtouch.cs) ファイルをプロジェクト内の Assets フォルダ内に保存
-	1. [Project]-[Assets]-[OQtouch]（C# スクリプト）を上記の GameManager オブジェクトの [Inspector] エリアにドラッグ＆ドロップ  
+	1. [Project]-[Assets]-[OQtouch]（C# スクリプト）を上記の GameManager オブジェクト（空の GameObject）の [Inspector] エリアにドラッグ＆ドロップ  
 
 1. 左右の Oculus Touch コントローラーの動きに連動する GameObject を作成し名前を、"OculusTouchL" および "OculusTouchR" とする
 
