@@ -1,5 +1,5 @@
 ﻿/***************************************************************************
- * OQtouch Alpha 4
+ * OQtouch Alpha 5 RC 20191011.1337
  * © 2019 夢寐郎
  ***************************************************************************/
 //using System.Collections;
@@ -122,7 +122,7 @@ public class OQtouch : MonoBehaviour {
     private LineRenderer _lineRendererR = null;
 
     //アクティブなコントローラ
-    private string _activeController = "right";
+    private string _activeController; // = "right";
     //バイブレーション
     private bool _isVibrationL = false;
     private bool _isVibrationR = false;
@@ -265,7 +265,8 @@ public class OQtouch : MonoBehaviour {
         //人差し指トリガー（Down）
         if (OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger)) {
             _isLIndexTriggerDown = true;
-            _activeController = "left";
+            //_activeController = "left";
+            ActiveController("left");
             if (_enabledLaserL) { //レーザービームを表示している場合
                 if (_lineRendererR != null) { //Rを表示中の時
                     _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth1;
@@ -283,7 +284,8 @@ public class OQtouch : MonoBehaviour {
         }
         if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger)) {
             _isRIndexTriggerDown = true;
-            _activeController = "right";
+            //_activeController = "right";
+            ActiveController("right");
             if (_enabledLaserR) { //レーザービームを表示している場合
                 if (_lineRendererL != null) { //Lを表示中の時
                     _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth2;
@@ -572,6 +574,15 @@ public class OQtouch : MonoBehaviour {
         OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
     }
 
+    private void ActiveController(string arg) {
+        _activeController = arg;
+        if (arg == "left") {
+            if (_lineRendererL != null) _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth1;
+        } else if (arg == "right") {
+            if (_lineRendererR != null) _lineRendererR.startWidth = _lineRendererR.endWidth = _lineWidth1;
+        }
+    }
+
     //=====================================
     // Public Method
     //=====================================
@@ -593,15 +604,28 @@ public class OQtouch : MonoBehaviour {
         get { return _oculusTouchL; }
         set {
             _oculusTouchL = value;
+            //_activeController= "left";
+            ActiveController("left");
 
-            //コントローラーのレーザーポイントを表示する（要修正）
-            _lineRendererL = _oculusTouchL.GetComponent<LineRenderer>();
-            _lineRendererL.enabled = true;
-            if (_oculusTouchR == null) { //Rを使わない場合
-                _activeController = "left";
-                _lineRendererL.startWidth = _lineRendererL.endWidth = 0.0f;
-            } else { //Rを使う場合
-                _lineRendererL.startWidth = _lineRendererL.endWidth = 0.0f;
+            if (_enabledLaserL) {
+                //コントローラーのレーザーポイントを表示する ???
+                _lineRendererL = _oculusTouchL.GetComponent<LineRenderer>();
+                if (_lineRendererL != null) {
+                    _lineRendererL.enabled = true;
+                    if (_oculusTouchR == null) { //Rを使わない場合
+                        //_activeController = "left";
+                        ActiveController("left");
+                        _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth1;
+                    } else { //Rを使う場合
+                        if (_lineRendererR != null) {
+                            _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth2;
+                        } else { //Rはあるがレーザーはなしの場合
+                            _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth1;
+                        }
+                    }
+                } else {
+                    _enabledLaserL = false;
+                }
             }
         }
     }
@@ -609,15 +633,22 @@ public class OQtouch : MonoBehaviour {
         get { return _oculusTouchR; }
         set {
             _oculusTouchR = value;
-            _activeController = "right";
+            //_activeController = "right";
+            ActiveController("right");
             
-            //コントローラーのレーザーポイントを表示する（要修正）
-            _lineRendererR = _oculusTouchR.GetComponent<LineRenderer>();
-            _lineRendererR.enabled = true;
-            if (_oculusTouchL != null) {
-                _lineRendererL.startWidth = _lineRendererL.endWidth = 0.0f;
+            if (_enabledLaserR) {
+                //コントローラーのレーザーポイントを表示する（要修正）
+                _lineRendererR = _oculusTouchR.GetComponent<LineRenderer>();
+                if (_lineRendererR != null) {
+                    _lineRendererR.enabled = true;
+                    if (_oculusTouchL != null) {
+                        _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth2;
+                    }
+                    _lineRendererR.startWidth = _lineRendererR.endWidth = _lineWidth1;
+                } else {
+                    _enabledLaserR = false;
+                }
             }
-            _lineRendererR.startWidth = _lineRendererR.endWidth = 0.0f;
         }
     }
     public double LIndexTrigger {
@@ -717,12 +748,17 @@ public class OQtouch : MonoBehaviour {
             if (_enabledLaserL) {
                 //コントローラーのレーザーポイントを表示する ???
                 _lineRendererL = _oculusTouchL.GetComponent<LineRenderer>();
-                _lineRendererL.enabled = true;
-                if (_oculusTouchR == null) { //Rを使わない場合
-                    _activeController = "left";
-                    _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth1;
-                } else { //Rを使う場合
-                    _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth2;
+                if (_lineRendererL != null) {
+                    _lineRendererL.enabled = true;
+                    if (_oculusTouchR == null) { //Rを使わない場合
+                        //_activeController = "left";
+                        ActiveController("left");
+                        _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth1;
+                    } else { //Rを使う場合
+                        _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth2;
+                    }
+                } else {
+                    _enabledLaserL = false;
                 }
             }
             }
@@ -734,11 +770,15 @@ public class OQtouch : MonoBehaviour {
             if (_enabledLaserR) {
                 //コントローラーのレーザーポイントを表示する（要修正）
                 _lineRendererR = _oculusTouchR.GetComponent<LineRenderer>();
-                _lineRendererR.enabled = true;
-                if (_oculusTouchL != null) {
-                    _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth2;
+                if (_lineRendererR != null) {
+                    _lineRendererR.enabled = true;
+                    if (_oculusTouchL != null) {
+                        _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth2;
+                    }
+                    _lineRendererR.startWidth = _lineRendererR.endWidth = _lineWidth1;
+                } else {
+                    _enabledLaserR = false;
                 }
-                _lineRendererR.startWidth = _lineRendererR.endWidth = _lineWidth1;
             }
             }
     }
