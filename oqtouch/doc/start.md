@@ -12,7 +12,7 @@ Version Alpha 3.201910031905 対応
 		```
 		$ Unity/Editor/2020.1.0a7/Editor/Unity
 		```
-	* [Oculus Integration](https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022) を Unity の [Window]-[Asset Store] からインストール（Oculus / **VR のみ**）
+	* [Oculus Integration](https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022) を Unity の [Window]-[Asset Store] からインストール（Oculus / **VR** のみ）
 
 ***
 
