@@ -152,8 +152,7 @@ $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb start-server
 
 ### Oculus Quest の USB デバイス ID を調べる
 
-1. 端末（ターミナル）で次の処理を行う  
-    （この処理だけで接続できる場合もあります）
+1. 端末（ターミナル）で次の処理を行う（この処理だけで接続できる場合もあります）  
     ```
     $ adb devices
     List of devices attached
