@@ -28,7 +28,7 @@ Version Alpha 3.201910031905 対応
 	1. [GameObject]-[Create Empty] を選択
 	1. 名前を "GameObject"→"GameManager" に変更  
 
-1. GameManager クラス（C# ファイル）の作成
+1. GameManager クラス（C# スクリプト）の作成
 	1. [Project]-[Assets] フォルダを選択した状態で [Assets]-[Create]-[C# Script] を選択
 	1. 名前を "NewBehaviourScript"→"GameManager" に変更
 
@@ -42,7 +42,8 @@ Version Alpha 3.201910031905 対応
 
 1. 左右の Oculus Touch コントローラーの動きに連動する GameObject を作成し名前を、"OculusTouchL" および "OculusTouchR" とする
 
-1. OQtouch を使ったミニマルな GameManager（C# スクリプト）
+1. GameManager（C#）を変更  
+	（易化のサンプルは OQtouch を使ったミニマル版）
 	```
 	//GameManager.cs
 	using UnityEngine;
