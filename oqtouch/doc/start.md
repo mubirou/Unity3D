@@ -29,7 +29,7 @@ Version Alpha 3.201910031905 対応
 	1. 名前を "GameObject"→"GameManager" に変更  
 
 1. GameManager クラス（C# ファイル）の作成
-	1. [Assets]-[Create]-[C# Script] を選択
+	1. [Project]-[Assets] フォルダを選択した状態で [Assets]-[Create]-[C# Script] を選択
 	1. 名前を "NewBehaviourScript"→"GameManager" に変更
 
 1. GameManager クラスのアタッチ
