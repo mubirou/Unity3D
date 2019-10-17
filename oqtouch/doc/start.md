@@ -24,12 +24,12 @@ Version Alpha 3.201910031905 対応
 		* Y：2.5
 		* Z：-6
 	
-1. GameManager オブジェクトの作成  
-	1. [GameObject]-[Create Empty] を選択（空の GameObject の作成）
+1. GameManager オブジェクト（空の GameObject）の作成  
+	1. [GameObject]-[Create Empty] を選択
 	1. 名前を "GameObject"→"GameManager" に変更  
 
-1. GameManager クラスの作成
-	1. [Assets]-[Create]-[C# Script] を選択（ C# スクリプトを作成）
+1. GameManager クラス（C# ファイル）の作成
+	1. [Assets]-[Create]-[C# Script] を選択
 	1. 名前を "NewBehaviourScript"→"GameManager" に変更
 
 1. GameManager クラスのアタッチ
