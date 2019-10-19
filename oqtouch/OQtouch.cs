@@ -1,5 +1,5 @@
 ﻿/***************************************************************************
- * OQtouch Alpha 5 RC 20191011.1337
+ * OQtouch Alpha 5 RC 20191017.1627
  * © 2019 夢寐郎
  ***************************************************************************/
 //using System.Collections;
@@ -213,7 +213,7 @@ public class OQtouch : MonoBehaviour {
     public event LaserDelegate RLaserUpOutside;
 
     //DEBUG用
-    public event DebugDelegate Log;
+    //public event DebugDelegate Log;
 
     //ヒットしたオブジェクト（レーザーがヒットしたオブジェクト）
     private GameObject _hitObjectL = null;
