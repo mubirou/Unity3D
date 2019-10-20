@@ -650,7 +650,7 @@ public class GameManager : MonoBehaviour {
 
     void Update() {
         if (_oqt.IsRIndexTriggerDown) {
-            _console.Log("右中指トリガー↓"); //DEBUG用
+            _console.Log("右人差し指トリガー↓"); //DEBUG用
         }
     }
 }
