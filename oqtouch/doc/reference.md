@@ -567,7 +567,9 @@ public class GameManager : MonoBehaviour {
     void Start() {
         _oqt = GetComponent<OQtouch>();
         _oqt.L = GameObject.Find("OculusTouchL");
-        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+
+        //DEBUG用
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
     }
 
     void Update () {
@@ -608,7 +610,9 @@ public class GameManager : MonoBehaviour {
     void Start() {
         _oqt = GetComponent<OQtouch>();
         _oqt.L = GameObject.Find("OculusTouchL");
-        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+
+        //DEBUG用
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
     }
 
     void Update () {
@@ -649,7 +653,9 @@ public class GameManager : MonoBehaviour {
     void Start() {
         _oqt = GetComponent<OQtouch>();
         _oqt.L = GameObject.Find("OculusTouchL");
-        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+
+        //DEBUG用
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
     }
 
     void Update() {
@@ -692,7 +698,9 @@ public class GameManager : MonoBehaviour {
     void Start() {
         _oqt = GetComponent<OQtouch>();
         _oqt.L = GameObject.Find("OculusTouchL");
-        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+
+        //DEBUG用
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
     }
 
     void Update () {
@@ -733,7 +741,9 @@ public class GameManager : MonoBehaviour {
     void Start() {
         _oqt = GetComponent<OQtouch>();
         _oqt.L = GameObject.Find("OculusTouchL");
-        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+
+        //DEBUG用
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
     }
 
     void Update () {
@@ -858,7 +868,9 @@ public class GameManager : MonoBehaviour {
         _oqt = GetComponent<OQtouch>();
         _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.R = GameObject.Find("OculusTouchR");
-        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+
+        //DEBUG用
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
     }
 
     void Update () {
@@ -900,7 +912,9 @@ public class GameManager : MonoBehaviour {
         _oqt = GetComponent<OQtouch>();
         _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.R = GameObject.Find("OculusTouchR");
-        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+
+        //DEBUG用
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
     }
 
     void Update () {
@@ -942,7 +956,9 @@ public class GameManager : MonoBehaviour {
         _oqt = GetComponent<OQtouch>();
         _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.R = GameObject.Find("OculusTouchR");
-        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+
+        //DEBUG用
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
     }
 
     void Update() {
@@ -986,7 +1002,9 @@ public class GameManager : MonoBehaviour {
         _oqt = GetComponent<OQtouch>();
         _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.R = GameObject.Find("OculusTouchR");
-        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+
+        //DEBUG用
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
     }
 
     void Update () {
@@ -1028,7 +1046,9 @@ public class GameManager : MonoBehaviour {
         _oqt = GetComponent<OQtouch>();
         _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.R = GameObject.Find("OculusTouchR");
-        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+
+        //DEBUG用
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
     }
 
     void Update () {
