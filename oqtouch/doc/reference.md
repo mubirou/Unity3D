@@ -544,6 +544,54 @@ public class GameManager : MonoBehaviour {
 
 ***
 
+<a name="IsLThumbstickDownDown"></a>
+
+# OQtouch.IsLThumbstickDownDown
+
+### ◇ 構文
+<em>oqtouch</em>.IsLThumbstickDownDown
+
+### ◇ 説明
+プロパティ。  
+「左親指スティックを下に倒している」か否かを示すブール値（読み取り専用）。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private OQtouch _oqt;
+    private Console _console;
+
+    void Start() {
+        _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    void Update () {
+        // 左用
+        if (_oqt.IsLThumbstickUpDown) {
+            _console.Log("左↑");
+        } else if (_oqt.IsLThumbstickDownDown) {
+            _console.Log("左↓");
+        } else if (_oqt.IsLThumbstickLeftDown) {
+            _console.Log("左←");
+        } else if (_oqt.IsLThumbstickRightDown) {
+            _console.Log("左→");
+        }
+    }
+}
+```
+
+### ◇ 参照
+[OQtouch.IsLThumbstickUpDown](#IsLThumbstickDownDown)  
+[OQtouch.IsLThumbstickLeftDown](#IsLThumbstickLeftDown)  
+[OQtouch.IsLThumbstickRightDown](#IsLThumbstickRightDown)  
+
+***
+
 <a name="IsLThumbstickMove"></a>
 
 # OQtouch.IsLThumbstickMove
