@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour {
     private OQtouch _oqt;
     private GameObject _piece0;
     private List<GameObject> _pieceList;
-    private uint _pieceNum = 100;
+    private uint _pieceNum = 100; //追従させるオブジェクトの個数
     private Console _console;
 
     void Start() {
