@@ -571,15 +571,8 @@ public class GameManager : MonoBehaviour {
     }
 
     void Update () {
-        // 左用
-        if (_oqt.IsLThumbstickUpDown) {
-            _console.Log("左↑");
-        } else if (_oqt.IsLThumbstickDownDown) {
-            _console.Log("左↓");
-        } else if (_oqt.IsLThumbstickLeftDown) {
-            _console.Log("左←");
-        } else if (_oqt.IsLThumbstickRightDown) {
-            _console.Log("左→");
+        if (_oqt.IsLThumbstickDownDown) {
+            _console.Log("左親指スティックを下に倒している");
         }
     }
 }
@@ -619,15 +612,8 @@ public class GameManager : MonoBehaviour {
     }
 
     void Update () {
-        // 左用
-        if (_oqt.IsLThumbstickUpDown) {
-            _console.Log("左↑");
-        } else if (_oqt.IsLThumbstickDownDown) {
-            _console.Log("左↓");
-        } else if (_oqt.IsLThumbstickLeftDown) {
-            _console.Log("左←");
-        } else if (_oqt.IsLThumbstickRightDown) {
-            _console.Log("左→");
+        if (_oqt.IsLThumbstickLeftDown) {
+            _console.Log("左親指スティックを左に倒している");
         }
     }
 }
@@ -710,15 +696,8 @@ public class GameManager : MonoBehaviour {
     }
 
     void Update () {
-        // 左用
-        if (_oqt.IsLThumbstickUpDown) {
-            _console.Log("左↑");
-        } else if (_oqt.IsLThumbstickDownDown) {
-            _console.Log("左↓");
-        } else if (_oqt.IsLThumbstickLeftDown) {
-            _console.Log("左←");
-        } else if (_oqt.IsLThumbstickRightDown) {
-            _console.Log("左→");
+        if (_oqt.IsLThumbstickRightDown) {
+            _console.Log("左親指スティックを右に倒している");
         }
     }
 }
@@ -758,15 +737,8 @@ public class GameManager : MonoBehaviour {
     }
 
     void Update () {
-        // 左用
         if (_oqt.IsLThumbstickUpDown) {
-            _console.Log("左↑");
-        } else if (_oqt.IsLThumbstickDownDown) {
-            _console.Log("左↓");
-        } else if (_oqt.IsLThumbstickLeftDown) {
-            _console.Log("左←");
-        } else if (_oqt.IsLThumbstickRightDown) {
-            _console.Log("左→");
+            _console.Log("左親指スティックを上に倒している");
         }
     }
 }
@@ -890,14 +862,8 @@ public class GameManager : MonoBehaviour {
     }
 
     void Update () {
-        if (_oqt.IsRThumbstickUpDown) {
-            _console.Log("右↑");
-        } else if (_oqt.IsRThumbstickDownDown) {
-            _console.Log("右↓");
-        } else if (_oqt.IsRThumbstickLeftDown) {
-            _console.Log("右←");
-        } else if (_oqt.IsRThumbstickRightDown) {
-            _console.Log("右→");
+        if (_oqt.IsRThumbstickDownDown) {
+            _console.Log("右親指スティックを下に倒している");
         }
     }
 }
@@ -938,14 +904,8 @@ public class GameManager : MonoBehaviour {
     }
 
     void Update () {
-        if (_oqt.IsRThumbstickUpDown) {
-            _console.Log("右↑");
-        } else if (_oqt.IsRThumbstickDownDown) {
-            _console.Log("右↓");
-        } else if (_oqt.IsRThumbstickLeftDown) {
-            _console.Log("右←");
-        } else if (_oqt.IsRThumbstickRightDown) {
-            _console.Log("右→");
+        if (_oqt.IsRThumbstickLeftDown) {
+            _console.Log("右親指スティックを左に倒している");
         }
     }
 }
@@ -1030,14 +990,8 @@ public class GameManager : MonoBehaviour {
     }
 
     void Update () {
-        if (_oqt.IsRThumbstickUpDown) {
-            _console.Log("右↑");
-        } else if (_oqt.IsRThumbstickDownDown) {
-            _console.Log("右↓");
-        } else if (_oqt.IsRThumbstickLeftDown) {
-            _console.Log("右←");
-        } else if (_oqt.IsRThumbstickRightDown) {
-            _console.Log("右→");
+        if (_oqt.IsRThumbstickRightDown) {
+            _console.Log("右親指スティックを右に倒している");
         }
     }
 }
@@ -1079,13 +1033,7 @@ public class GameManager : MonoBehaviour {
 
     void Update () {
         if (_oqt.IsRThumbstickUpDown) {
-            _console.Log("右↑");
-        } else if (_oqt.IsRThumbstickDownDown) {
-            _console.Log("右↓");
-        } else if (_oqt.IsRThumbstickLeftDown) {
-            _console.Log("右←");
-        } else if (_oqt.IsRThumbstickRightDown) {
-            _console.Log("右→");
+            _console.Log("右親指スティックを上に倒している");
         }
     }
 }
