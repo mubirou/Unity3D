@@ -1,5 +1,5 @@
 ﻿/******************************************************************
- * OQtouch Alpha 5
+ * OQtouch Alpha 6 RC 20191023.1650
  * © 2019 夢寐郎
  ****************************************************************/
 //using System.Collections;
@@ -17,10 +17,18 @@ using System; //for Math
  *      IsVibration
  *      IsLHandTriggerDown（Read Only）
  *      IsLIndexTriggerDown（Read Only）
+ *      IsLThumbstickDownDown（Read Only） // NEW
+ *      IsLThumbstickLeftDown（Read Only） // NEW
  *      IsLThumbstickMove（Read Only）
+ *      IsLThumbstickRightDown（Read Only） // NEW
+ *      IsLThumbstickUpDown（Read Only） // NEW
  *      IsRHandTriggerDown（Read Only）
  *      IsRIndexTriggerDown（Read Only）
+ *      IsRThumbstickDownDown（Read Only） // NEW
+ *      IsRThumbstickLeftDown（Read Only） // NEW
  *      IsRThumbstickMove（Read Only）
+ *      IsRThumbstickRightDown（Read Only） // NEW
+ *      IsRThumbstickUpDown（Read Only） // NEW
  *      L
  *      LHandTrigger（Read Only）
  *      LIndexTrigger（Read Only）
@@ -93,7 +101,7 @@ using System; //for Math
  *      YUp
  *
  ****************************************************************/
- 
+
 public class OQtouch : MonoBehaviour {
     private GameObject _oculusTouchL = null;
     private GameObject _oculusTouchR = null;
@@ -372,34 +380,66 @@ public class OQtouch : MonoBehaviour {
         //親指スティック上下左右（↓）
         if (OVRInput.GetDown(OVRInput.RawButton.LThumbstickUp)) {
             _isLThumbstickUpDown = true;
+            //バグ回避
+            _isLThumbstickDownDown = false;
+            _isLThumbstickLeftDown = false;
+            _isLThumbstickRightDown = false;
             LThumbstickUpDown();
         }
         if (OVRInput.GetDown(OVRInput.RawButton.LThumbstickDown)) {
             _isLThumbstickDownDown = true;
+            //バグ回避
+            _isLThumbstickUpDown = false;
+            _isLThumbstickLeftDown = false;
+            _isLThumbstickRightDown = false;
             LThumbstickDownDown();
         }
         if (OVRInput.GetDown(OVRInput.RawButton.LThumbstickLeft)) {
             _isLThumbstickLeftDown = true;
+            //バグ回避
+            _isLThumbstickUpDown = false;
+            _isLThumbstickDownDown = false;
+            _isLThumbstickRightDown = false;
             LThumbstickLeftDown();
         }
         if (OVRInput.GetDown(OVRInput.RawButton.LThumbstickRight)) {
             _isLThumbstickRightDown = true;
+            //バグ回避
+            _isLThumbstickUpDown = false;
+            _isLThumbstickDownDown = false;
+            _isLThumbstickLeftDown = false;
             LThumbstickRightDown();
         }
         if (OVRInput.GetDown(OVRInput.RawButton.RThumbstickUp)) {
             _isRThumbstickUpDown = true;
+            //バグ回避
+            _isRThumbstickDownDown = false;
+            _isRThumbstickLeftDown = false;
+            _isRThumbstickRightDown = false;
             RThumbstickUpDown();
         }
         if (OVRInput.GetDown(OVRInput.RawButton.RThumbstickDown)) {
             _isRThumbstickDownDown = true;
+            //バグ回避
+            _isRThumbstickUpDown = false;
+            _isRThumbstickLeftDown = false;
+            _isRThumbstickRightDown = false;
             RThumbstickDownDown();
         }
         if (OVRInput.GetDown(OVRInput.RawButton.RThumbstickLeft)) {
             _isRThumbstickLeftDown = true;
+            //バグ回避
+            _isRThumbstickUpDown = false;
+            _isRThumbstickDownDown = false;
+            _isRThumbstickRightDown = false;
             RThumbstickLeftDown();
         }
         if (OVRInput.GetDown(OVRInput.RawButton.RThumbstickRight)) {
             _isRThumbstickRightDown = true;
+            //バグ回避
+            _isRThumbstickUpDown = false;
+            _isRThumbstickDownDown = false;
+            _isRThumbstickLeftDown = false;
             RThumbstickRightDown();
         }
 
@@ -677,6 +717,38 @@ public class OQtouch : MonoBehaviour {
     }
     public bool IsRHandTriggerDown {
         get { return _isRHandTriggerDown; }
+        private set {} //Read Only
+    }
+    public bool IsLThumbstickDownDown { // NEW
+        get { return _isLThumbstickDownDown; }
+        private set {} //Read Only
+    }
+    public bool IsLThumbstickLeftDown { // NEW
+        get { return _isLThumbstickLeftDown; }
+        private set {} //Read Only
+    }
+    public bool IsLThumbstickRightDown { // NEW
+        get { return _isLThumbstickRightDown; }
+        private set {} //Read Only
+    }
+    public bool IsLThumbstickUpDown { // NEW
+        get { return _isLThumbstickUpDown; }
+        private set {} //Read Only
+    }
+    public bool IsRThumbstickDownDown { // NEW
+        get { return _isRThumbstickDownDown; }
+        private set {} //Read Only
+    }
+    public bool IsRThumbstickLeftDown { // NEW
+        get { return _isRThumbstickLeftDown; }
+        private set {} //Read Only
+    }
+    public bool IsRThumbstickRightDown { // NEW
+        get { return _isRThumbstickRightDown; }
+        private set {} //Read Only
+    }
+    public bool IsRThumbstickUpDown { // NEW
+        get { return _isRThumbstickUpDown; }
         private set {} //Read Only
     }
 
