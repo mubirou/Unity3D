@@ -1,5 +1,5 @@
 # OQtouch リファレンスマニュアル
-Version Alpha 5 対応  
+Version Alpha 6 RC 20191023.1650 対応  
 © 2019 夢寐郎
 
 ## ◆ メソッド一覧
@@ -13,10 +13,18 @@ Version Alpha 5 対応
 * [IsVibration](#IsVibration) : LLaserOver/RLaserOver時のバイブレーションの有効化
 * [IsLHandTriggerDown](#IsLHandTriggerDown) : 左中指トリガーを押しているか否か
 * [IsLIndexTriggerDown](#IsLIndexTriggerDown) : 左人差し指トリガーを押しているか否か
+* [IsLThumbstickDownDown](#IsLThumbstickDownDown) : 左親指スティックを下に倒しているか否か
+* [IsLThumbstickLeftDown](#IsLThumbstickLeftDown) : 左親指スティックを左に倒しているか否か
 * [IsLThumbstickMove](#IsLThumbstickMove) : 左親指スティックを動かしているか否か
+* [IsLThumbstickRightDown](#IsLThumbstickRightDown) : 左親指スティックを右に倒しているか否か
+* [IsLThumbstickUpDown](#IsLThumbstickUpDown) : 左親指スティックを上に倒しているか否か
 * [IsRHandTriggerDown](#IsRHandTriggerDown) : 右中指トリガーを押しているか否か
 * [IsRIndexTriggerDown](#IsRIndexTriggerDown) : 右人差し指トリガーを押しているか否か
+* [IsRThumbstickDownDown](#IsRThumbstickDownDown) : 右親指スティックを下に倒しているか否か
+* [IsRThumbstickLeftDown](#IsRThumbstickLeftDown) : 右親指スティックを左に倒しているか否か
 * [IsRThumbstickMove](#IsRThumbstickMove) : 左親指スティックを動かしているか否か
+* [IsRThumbstickRightDown](#IsRThumbstickRightDown) : 右親指スティックを右に倒しているか否か
+* [IsRThumbstickUpDown](#IsRThumbstickUpDown) : 右親指スティックを上に倒しているか否か
 * [L](#L) : 左手側の Oculus Touch コントローラーの動きに連動する GameObject を指定
 * [LHandTrigger](#LHandTrigger) : 左中指トリガーを押しているトリガー量（0〜1まで小数点以下15桁表示）
 * [LIndexTrigger](#LIndexTrigger) : 左人差し指トリガーを押しているトリガー量（0〜1まで小数点以下15桁表示）
@@ -576,6 +584,54 @@ public class GameManager : MonoBehaviour {
 [OQtouch.LThumbstickDownDown](#LThumbstickDownDown)  
 [OQtouch.LThumbstickLeftDown](#LThumbstickLeftDown)  
 [OQtouch.LThumbstickRightDown](#LThumbstickRightDown)  
+
+***
+
+<a name="IsLThumbstickUpDown"></a>
+
+# OQtouch.IsLThumbstickUpDown
+
+### ◇ 構文
+<em>oqtouch</em>.IsLThumbstickUpDown
+
+### ◇ 説明
+プロパティ。  
+「左親指スティックを下に倒している」か否かを示すブール値（読み取り専用）。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private OQtouch _oqt;
+    private Console _console;
+
+    void Start() {
+        _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    void Update () {
+        // 左用
+        if (_oqt.IsLThumbstickUpDown) {
+            _console.Log("左↑");
+        } else if (_oqt.IsLThumbstickDownDown) {
+            _console.Log("左↓");
+        } else if (_oqt.IsLThumbstickLeftDown) {
+            _console.Log("左←");
+        } else if (_oqt.IsLThumbstickRightDown) {
+            _console.Log("左→");
+        }
+    }
+}
+```
+
+### ◇ 参照
+[OQtouch.IsLThumbstickDownDown](#IsLThumbstickDownDown)  
+[OQtouch.IsLThumbstickLeftDown](#IsLThumbstickLeftDown)  
+[OQtouch.IsLThumbstickRightDown](#IsLThumbstickRightDown)  
 
 ***
 
