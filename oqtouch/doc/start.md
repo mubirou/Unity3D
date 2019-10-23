@@ -1,4 +1,4 @@
-# OQtouch スタート
+# OQtouch スタート（検証中）
 Version Alpha 3.201910031905 対応  
 © 2019 夢寐郎
 
