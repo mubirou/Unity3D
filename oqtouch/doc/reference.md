@@ -586,7 +586,7 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-[OQtouch.IsLThumbstickUpDown](#IsLThumbstickDownDown)  
+[OQtouch.IsLThumbstickUpDown](#IsLThumbstickUpDown)  
 [OQtouch.IsLThumbstickLeftDown](#IsLThumbstickLeftDown)  
 [OQtouch.IsLThumbstickRightDown](#IsLThumbstickRightDown)  
 
@@ -680,6 +680,54 @@ public class GameManager : MonoBehaviour {
 [OQtouch.LThumbstickDownDown](#LThumbstickDownDown)  
 [OQtouch.LThumbstickLeftDown](#LThumbstickLeftDown)  
 [OQtouch.LThumbstickRightDown](#LThumbstickRightDown)  
+
+***
+
+<a name="IsLThumbstickRightDown"></a>
+
+# OQtouch.IsLThumbstickRightDown
+
+### ◇ 構文
+<em>oqtouch</em>.IsLThumbstickRightDown
+
+### ◇ 説明
+プロパティ。  
+「左親指スティックを右に倒している」か否かを示すブール値（読み取り専用）。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private OQtouch _oqt;
+    private Console _console;
+
+    void Start() {
+        _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    void Update () {
+        // 左用
+        if (_oqt.IsLThumbstickUpDown) {
+            _console.Log("左↑");
+        } else if (_oqt.IsLThumbstickDownDown) {
+            _console.Log("左↓");
+        } else if (_oqt.IsLThumbstickLeftDown) {
+            _console.Log("左←");
+        } else if (_oqt.IsLThumbstickRightDown) {
+            _console.Log("左→");
+        }
+    }
+}
+```
+
+### ◇ 参照
+[OQtouch.IsLThumbstickUpDown](#IsLThumbstickUpDown)  
+[OQtouch.IsLThumbstickDownDown](#IsLThumbstickDownDown)  
+[OQtouch.IsLThumbstickLeftDown](#IsLThumbstickLeftDown)  
 
 ***
 
@@ -811,6 +859,102 @@ public class GameManager : MonoBehaviour {
 ### ◇ 参照
 [OQtouch.IsLIndexTriggerDown](#IsLIndexTriggerDown)  
 [OQtouch.RIndexTriggerDown](#RIndexTriggerDown)  
+
+***
+
+<a name="IsRThumbstickDownDown"></a>
+
+# OQtouch.IsRThumbstickDownDown
+
+### ◇ 構文
+<em>oqtouch</em>.IsRThumbstickDownDown
+
+### ◇ 説明
+プロパティ。  
+「右親指スティックを下に倒している」か否かを示すブール値（読み取り専用）。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private OQtouch _oqt;
+    private Console _console;
+
+    void Start() {
+        _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    void Update () {
+        if (_oqt.IsRThumbstickUpDown) {
+            _console.Log("右↑");
+        } else if (_oqt.IsRThumbstickDownDown) {
+            _console.Log("右↓");
+        } else if (_oqt.IsRThumbstickLeftDown) {
+            _console.Log("右←");
+        } else if (_oqt.IsRThumbstickRightDown) {
+            _console.Log("右→");
+        }
+    }
+}
+```
+
+### ◇ 参照
+[OQtouch.IsRThumbstickUpDown](#IsRThumbstickUpDown)  
+[OQtouch.IsRThumbstickLeftDown](#IsRThumbstickLeftDown)  
+[OQtouch.IsRThumbstickRightDown](#IsRThumbstickRightDown)  
+
+***
+
+<a name="IsRThumbstickLeftDown"></a>
+
+# OQtouch.IsRThumbstickLeftDown
+
+### ◇ 構文
+<em>oqtouch</em>.IsRThumbstickLeftDown
+
+### ◇ 説明
+プロパティ。  
+「右親指スティックを左に倒している」か否かを示すブール値（読み取り専用）。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private OQtouch _oqt;
+    private Console _console;
+
+    void Start() {
+        _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    void Update () {
+        if (_oqt.IsRThumbstickUpDown) {
+            _console.Log("右↑");
+        } else if (_oqt.IsRThumbstickDownDown) {
+            _console.Log("右↓");
+        } else if (_oqt.IsRThumbstickLeftDown) {
+            _console.Log("右←");
+        } else if (_oqt.IsRThumbstickRightDown) {
+            _console.Log("右→");
+        }
+    }
+}
+```
+
+### ◇ 参照
+[OQtouch.IsRThumbstickUpDown](#IsRThumbstickUpDown)  
+[OQtouch.IsRThumbstickDownDown](#IsRThumbstickDownDown)  
+[OQtouch.IsRThumbstickRightDown](#IsRThumbstickRightDown)  
 
 ***
 
