@@ -762,16 +762,16 @@ public class GameManager : MonoBehaviour {
 
 ***
 
-<a name="IsRThumbstickDownDown"></a>
+<a name="IsRThumbstickUpDown"></a>
 
-# OQtouch.IsRThumbstickDownDown
+# OQtouch.IsRThumbstickUpDown
 
 ### ◇ 構文
-<em>oqtouch</em>.IsRThumbstickDownDown
+<em>oqtouch</em>.IsRThumbstickUpDown
 
 ### ◇ 説明
 プロパティ。  
-「右親指スティックを下に倒している」か否かを示すブール値（読み取り専用）。
+「右親指スティックを上に倒している」か否かを示すブール値（読み取り専用）。
 
 ### ◇ 例文
 ```
