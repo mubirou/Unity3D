@@ -1002,6 +1002,54 @@ public class GameManager : MonoBehaviour {
 
 ***
 
+<a name="IsRThumbstickRightDown"></a>
+
+# OQtouch.IsRThumbstickRightDown
+
+### ◇ 構文
+<em>oqtouch</em>.IsRThumbstickRightDown
+
+### ◇ 説明
+プロパティ。  
+「右親指スティックを右に倒している」か否かを示すブール値（読み取り専用）。
+
+### ◇ 例文
+```
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    private OQtouch _oqt;
+    private Console _console;
+
+    void Start() {
+        _oqt = GetComponent<OQtouch>();
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
+        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
+    }
+
+    void Update () {
+        if (_oqt.IsRThumbstickUpDown) {
+            _console.Log("右↑");
+        } else if (_oqt.IsRThumbstickDownDown) {
+            _console.Log("右↓");
+        } else if (_oqt.IsRThumbstickLeftDown) {
+            _console.Log("右←");
+        } else if (_oqt.IsRThumbstickRightDown) {
+            _console.Log("右→");
+        }
+    }
+}
+```
+
+### ◇ 参照
+[OQtouch.IsRThumbstickUpDown](#IsRThumbstickUpDown)  
+[OQtouch.IsRThumbstickDownDown](#IsRThumbstickDownDown)  
+[OQtouch.IsRThumbstickLeftDown](#IsRThumbstickLeftDown)  
+
+***
+
 <a name="IsRThumbstickUpDown"></a>
 
 # OQtouch.IsRThumbstickUpDown
