@@ -1,13 +1,13 @@
-﻿/***************************************************************************
- * OQtouch Alpha 5 RC 20191017.1627
+﻿/******************************************************************
+ * OQtouch Alpha 5
  * © 2019 夢寐郎
- ***************************************************************************/
+ ****************************************************************/
 //using System.Collections;
 using System.Collections.Generic; //for List
 using UnityEngine;
 using System; //for Math
 
-/******************************************************************************
+/******************************************************************
  * OQtouch Class
  *  <Public Method>
  *      AddTargetObject(GameObject)
@@ -92,7 +92,7 @@ using System; //for Math
  *      YRawTouch
  *      YUp
  *
- *****************************************************************************/
+ ****************************************************************/
  
 public class OQtouch : MonoBehaviour {
     private GameObject _oculusTouchL = null;
@@ -238,9 +238,9 @@ public class OQtouch : MonoBehaviour {
         _rightHandAnchor = _trackingSpace.transform.Find("RightHandAnchor").gameObject;
     }
 
-    /*****************************************************************************
+    /**************************************************************
      * OculucTouch.Update()
-     *****************************************************************************/
+     ************************************************************/
     void Update() {
         if (_oculusTouchL != null) { //左側
             //位置
@@ -284,7 +284,6 @@ public class OQtouch : MonoBehaviour {
         }
         if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger)) {
             _isRIndexTriggerDown = true;
-            //_activeController = "right";
             ActiveController("right");
             if (_enabledLaserR) { //レーザービームを表示している場合
                 if (_lineRendererL != null) { //Lを表示中の時
@@ -456,9 +455,9 @@ public class OQtouch : MonoBehaviour {
         if (OVRInput.GetDown(OVRInput.RawNearTouch.LIndexTrigger)) LIndexTriggerRawNearTouch();
         if (OVRInput.GetDown(OVRInput.RawNearTouch.RIndexTrigger)) RIndexTriggerRawNearTouch();
 
-        //===========================================================
+        //========================================================
         //レーザー（左）表示
-        //===========================================================
+        //========================================================
         if (_enabledLaserL) {
             _rayL = new Ray(_oculusTouchL.transform.position, _oculusTouchL.transform.forward);
             _lineRendererL.SetPosition(0, _rayL.origin);
@@ -474,9 +473,9 @@ public class OQtouch : MonoBehaviour {
             }
         }
 
-        //===========================================================
+        //========================================================
         //レーザー（右）表示
-        //===========================================================
+        //========================================================
         if (_enabledLaserR) {
             _rayR = new Ray(_oculusTouchR.transform.position, _oculusTouchR.transform.forward);
             _lineRendererR.SetPosition(0, _rayR.origin);
@@ -604,7 +603,6 @@ public class OQtouch : MonoBehaviour {
         get { return _oculusTouchL; }
         set {
             _oculusTouchL = value;
-            //_activeController= "left";
             ActiveController("left");
 
             if (_enabledLaserL) {
@@ -613,7 +611,6 @@ public class OQtouch : MonoBehaviour {
                 if (_lineRendererL != null) {
                     _lineRendererL.enabled = true;
                     if (_oculusTouchR == null) { //Rを使わない場合
-                        //_activeController = "left";
                         ActiveController("left");
                         _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth1;
                     } else { //Rを使う場合
@@ -633,7 +630,6 @@ public class OQtouch : MonoBehaviour {
         get { return _oculusTouchR; }
         set {
             _oculusTouchR = value;
-            //_activeController = "right";
             ActiveController("right");
             
             if (_enabledLaserR) {
@@ -751,7 +747,6 @@ public class OQtouch : MonoBehaviour {
                 if (_lineRendererL != null) {
                     _lineRendererL.enabled = true;
                     if (_oculusTouchR == null) { //Rを使わない場合
-                        //_activeController = "left";
                         ActiveController("left");
                         _lineRendererL.startWidth = _lineRendererL.endWidth = _lineWidth1;
                     } else { //Rを使う場合

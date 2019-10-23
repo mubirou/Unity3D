@@ -1,5 +1,5 @@
 # OQtouch リファレンスマニュアル
-Version Alpha 5 RC 20191017.1627 対応  
+Version Alpha 5 対応  
 © 2019 夢寐郎
 
 ## ◆ メソッド一覧
