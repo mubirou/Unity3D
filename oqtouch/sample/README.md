@@ -77,4 +77,4 @@ public class GameManager : MonoBehaviour {
 
 実行環境：Unity 2020.1.0a9、Oculus Quest 10.0、Oculus Integration 1.41、OQtouch Alpha 5、Ubuntu 18.04.3 LTS  
 作成者：夢寐郎  
-作成日：2019年10月23日
+作成日：2019年10月23日  
