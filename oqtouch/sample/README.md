@@ -26,7 +26,6 @@ public class GameManager : MonoBehaviour {
     private GameObject _piece0;
     private List<GameObject> _pieceList;
     private uint _pieceNum = 100; //追従させるオブジェクトの個数
-    private Console _console;
 
     void Start() {
         _oqt = GetComponent<OQtouch>();
@@ -48,11 +47,10 @@ public class GameManager : MonoBehaviour {
 
     void Update () {
         if (_oqt.IsRIndexTriggerDown) {
-            
             Vector3 _RPos = _oqt.R.transform.position;
             _piece0.transform.position = _RPos;
 
-            for (int i=1; i<=_pieceNum; i++) { //iはfor文内のみ有効（1,2,...,_pieceNum）
+            for (int i=1; i<=_pieceNum; i++) {
                 GameObject _thePiece = _pieceList[i];
                 GameObject _frontPiece = _pieceList[i-1];
                 
@@ -63,7 +61,7 @@ public class GameManager : MonoBehaviour {
                 //角度
                 _thePiece.transform.LookAt(_frontPiece.transform);
 
-                //追従させる（角度付きの場合）
+                //追従させる
                 Vector3 _thePos = _thePiece.transform.position;
                 _thePos.x += _disX/8;
                 _thePos.y += _disY/8;
