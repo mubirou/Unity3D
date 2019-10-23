@@ -32,7 +32,6 @@ public class GameManager : MonoBehaviour {
 		_oqt.R = GameObject.Find("OculusTouchR");
 
         _piece0 = GameObject.Find("piece");
-		//_mainCamera = Camera.main.GetComponent<Camera>();
 		_pieceList = new List<GameObject>();
 		_pieceList.Add(_piece0);
 		for (int i=1; i<=_pieceNum; i++) { //2つ目以降のpieceを動的配列に格納
@@ -69,10 +68,6 @@ public class GameManager : MonoBehaviour {
                 _thePos.y += _disY/8;
                 _thePos.z += _disZ/8; //+0.4f;
                 _thePiece.transform.position = _thePos;
-
-                //追従させる（角度固定の場合）
-                //Vector3 _addPoint = new Vector3(_disX/4, _disY/4, _disZ/5+0.4f);
-                //_thePiece.transform.Translate(_addPoint);
             }
         }
     }
