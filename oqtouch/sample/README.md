@@ -23,27 +23,27 @@ using System.Collections.Generic; //Listに必要
 public class GameManager : MonoBehaviour {
     private OQtouch _oqt;
     private GameObject _piece0;
-	private List<GameObject> _pieceList;
-	private uint _pieceNum = 100;
+    private List<GameObject> _pieceList;
+    private uint _pieceNum = 100;
     private Console _console;
 
-	void Start() {
-		_oqt = GetComponent<OQtouch>();
-		_oqt.R = GameObject.Find("OculusTouchR");
+    void Start() {
+        _oqt = GetComponent<OQtouch>();
+        _oqt.R = GameObject.Find("OculusTouchR");
 
         _piece0 = GameObject.Find("piece");
-		_pieceList = new List<GameObject>();
-		_pieceList.Add(_piece0);
-		for (int i=1; i<=_pieceNum; i++) { //2つ目以降のpieceを動的配列に格納
-			GameObject _thePiece = Instantiate(
-				_piece0,
-				_piece0.transform.position,
-				_piece0.transform.rotation
-			);
-			_pieceList.Add(_thePiece);
+        _pieceList = new List<GameObject>();
+        _pieceList.Add(_piece0);
+        for (int i=1; i<=_pieceNum; i++) { //2つ目以降のpieceを動的配列に格納
+            GameObject _thePiece = Instantiate(
+                _piece0,
+                _piece0.transform.position,
+                _piece0.transform.rotation
+            );
+            _pieceList.Add(_thePiece);
         }
-		_piece0.SetActive (false); //先頭を見えなくする
-	}
+        _piece0.SetActive (false); //先頭を見えなくする
+    }
 
     void Update () {
         if (_oqt.IsRIndexTriggerDown) {
