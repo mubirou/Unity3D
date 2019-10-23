@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour {
                 Vector3 _thePos = _thePiece.transform.position;
                 _thePos.x += _disX/8;
                 _thePos.y += _disY/8;
-                _thePos.z += _disZ/8; //+0.4f;
+                _thePos.z += _disZ/8;
                 _thePiece.transform.position = _thePos;
             }
         }
