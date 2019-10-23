@@ -84,7 +84,8 @@ Version Alpha 3.201910031905 対応
 
             //入れ子状態のConsoleをさがす
             _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
-        }
+			//_console.Log("Start()内では使えない"); //要注意
+		}
 
         private void LIndexTriggerDownHandler() {
             _console.Log("右人差し指トリガー↓");
