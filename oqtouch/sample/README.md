@@ -88,8 +88,7 @@ public class GameManager : MonoBehaviour {
 # 002 ドローン
 
 ### ◇ 解説
-左右の Oculus Touch コントローラーの親指スティックを上下左右させることでドローン（GameObject）を操作するための基本スクリプト。
-このサンプルでは[モード2](https://viva-drone.com/drone-transmitter-mode1-mode2/)を採用。
+左右の Oculus Touch コントローラーの親指スティックを上下左右させることでドローン（GameObject）を操作するための基本スクリプト。このサンプルでは[モード2](https://viva-drone.com/drone-transmitter-mode1-mode2/)を採用。
 
 ### ◇ スクリプト（参考）
 ```
