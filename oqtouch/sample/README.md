@@ -108,24 +108,24 @@ public class GameManager : MonoBehaviour {
 
     void Update () {
         // 左用
-        if (_oqt.IsLThumbstickUpDown) { //上昇（左↑）
+        if (_oqt.IsLThumbstickUpDown) { //上昇（↑）
             _drone.transform.Translate(0, 0.01f, 0);
-        } else if (_oqt.IsLThumbstickDownDown) { //下降（左↓）
+        } else if (_oqt.IsLThumbstickDownDown) { //下降（↓）
             _drone.transform.Translate(0, -0.01f, 0);
-        } else if (_oqt.IsLThumbstickLeftDown) { //左回り（左←）
+        } else if (_oqt.IsLThumbstickLeftDown) { //左回り（←）
             _drone.transform.Rotate(new Vector3(0, -1, 0));
-        } else if (_oqt.IsLThumbstickRightDown) { //右回り（左→）
+        } else if (_oqt.IsLThumbstickRightDown) { //右回り（→）
             _drone.transform.Rotate(new Vector3(0, 1 ,0));
         }
 
         // 右用
-        if (_oqt.IsRThumbstickUpDown) { //前進（右↑）
+        if (_oqt.IsRThumbstickUpDown) { //前進（↑）
             _drone.transform.Translate(0, 0, 0.01f);
-        } else if (_oqt.IsRThumbstickDownDown) { //後退（右↓）
+        } else if (_oqt.IsRThumbstickDownDown) { //後退（↓）
             _drone.transform.Translate(0, 0, -0.01f);
-        } else if (_oqt.IsRThumbstickLeftDown) { //左進（右←）
+        } else if (_oqt.IsRThumbstickLeftDown) { //左進（←）
             _drone.transform.Translate(-0.01f, 0, 0);
-        } else if (_oqt.IsRThumbstickRightDown) { //右進（右→）
+        } else if (_oqt.IsRThumbstickRightDown) { //右進（→）
             _drone.transform.Translate(0.01f, 0, 0);
         }
     }
