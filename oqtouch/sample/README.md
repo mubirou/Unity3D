@@ -103,11 +103,7 @@ public class GameManager : MonoBehaviour {
         _oqt = GetComponent<OQtouch>();
         _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.R = GameObject.Find("OculusTouchR");
-
         _drone = GameObject.Find("drone");
-
-        //DEBUG用
-        _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
     }
 
     void Update () {
