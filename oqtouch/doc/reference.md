@@ -530,15 +530,15 @@ public class GameManager : MonoBehaviour {
     }
 
     void Update() {
-        if (_oqt.IsLThumbstickMove) {
-            _console.Log("左親指スティック↻"); //DEBUG用
+        if (_oqt.IsLIndexTriggerDown) {
+            _console.Log("左人差し指トリガー↓"); //DEBUG用
         }
     }
 }
 ```
 
 ### ◇ 参照
-[OQtouch.IsLIndexTriggerDown](#IsRIndexTriggerDown)  
+[OQtouch.IsRIndexTriggerDown](#IsRIndexTriggerDown)  
 [OQtouch.LIndexTriggerDown](#LIndexTriggerDown)  
 [OQtouch.LIndexTrigger](#LIndexTrigger)  
 
