@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.L = "OculusTouchL";
         _oqt.EnabledLaserL = true;
         _oqt.AddTargetObject(GameObject.Find("Button1"));
         _oqt.IsVibration = false;
@@ -24,8 +24,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = GameObject.Find("OculusTouchL");
-        _oqt.R = GameObject.Find("OculusTouchR");
+        _oqt.L = "OculusTouchL";
+        _oqt.R = "OculusTouchR";
 
         //レーザーポインタの表示
         _oqt.EnabledLaserL = true;

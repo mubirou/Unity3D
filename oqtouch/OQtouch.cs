@@ -1,7 +1,8 @@
 ﻿/******************************************************************
- * OQtouch Alpha 6 (20191104.1208)
+ * OQtouch Alpha 6 RC 20191105.1846
  * © 2019 夢寐郎
  ****************************************************************/
+//using System.Collections;
 using System.Collections.Generic; //for List
 using UnityEngine;
 using System; //for Math
@@ -16,18 +17,18 @@ using System; //for Math
  *      IsVibration
  *      IsLHandTriggerDown（Read Only）
  *      IsLIndexTriggerDown（Read Only）
- *      IsLThumbstickDownDown（Read Only）
- *      IsLThumbstickLeftDown（Read Only）
+ *      IsLThumbstickDownDown（Read Only） // NEW
+ *      IsLThumbstickLeftDown（Read Only） // NEW
  *      IsLThumbstickMove（Read Only）
- *      IsLThumbstickRightDown（Read Only）
- *      IsLThumbstickUpDown（Read Only）
+ *      IsLThumbstickRightDown（Read Only） // NEW
+ *      IsLThumbstickUpDown（Read Only） // NEW
  *      IsRHandTriggerDown（Read Only）
  *      IsRIndexTriggerDown（Read Only）
- *      IsRThumbstickDownDown（Read Only）
- *      IsRThumbstickLeftDown（Read Only）
+ *      IsRThumbstickDownDown（Read Only） // NEW
+ *      IsRThumbstickLeftDown（Read Only） // NEW
  *      IsRThumbstickMove（Read Only）
- *      IsRThumbstickRightDown（Read Only）
- *      IsRThumbstickUpDown（Read Only）
+ *      IsRThumbstickRightDown（Read Only） // NEW
+ *      IsRThumbstickUpDown（Read Only） // NEW
  *      L
  *      LHandTrigger（Read Only）
  *      LIndexTrigger（Read Only）
@@ -638,10 +639,10 @@ public class OQtouch : MonoBehaviour {
     //=====================================
     // Public Variables
     //=====================================
-    public GameObject L {
-        get { return _oculusTouchL; }
+    public string L {
+        get { return _oculusTouchL.name; }
         set {
-            _oculusTouchL = value;
+            _oculusTouchL = GameObject.Find(value); //value;
             ActiveController("left");
 
             if (_enabledLaserL) {
@@ -665,10 +666,10 @@ public class OQtouch : MonoBehaviour {
             }
         }
     }
-    public GameObject R {
-        get { return _oculusTouchR; }
+    public string R {
+        get { return _oculusTouchR.name; }
         set {
-            _oculusTouchR = value;
+            _oculusTouchR = GameObject.Find(value); //value;
             ActiveController("right");
             
             if (_enabledLaserR) {
@@ -718,35 +719,35 @@ public class OQtouch : MonoBehaviour {
         get { return _isRHandTriggerDown; }
         private set {} //Read Only
     }
-    public bool IsLThumbstickDownDown {
+    public bool IsLThumbstickDownDown { // NEW
         get { return _isLThumbstickDownDown; }
         private set {} //Read Only
     }
-    public bool IsLThumbstickLeftDown {
+    public bool IsLThumbstickLeftDown { // NEW
         get { return _isLThumbstickLeftDown; }
         private set {} //Read Only
     }
-    public bool IsLThumbstickRightDown {
+    public bool IsLThumbstickRightDown { // NEW
         get { return _isLThumbstickRightDown; }
         private set {} //Read Only
     }
-    public bool IsLThumbstickUpDown {
+    public bool IsLThumbstickUpDown { // NEW
         get { return _isLThumbstickUpDown; }
         private set {} //Read Only
     }
-    public bool IsRThumbstickDownDown {
+    public bool IsRThumbstickDownDown { // NEW
         get { return _isRThumbstickDownDown; }
         private set {} //Read Only
     }
-    public bool IsRThumbstickLeftDown {
+    public bool IsRThumbstickLeftDown { // NEW
         get { return _isRThumbstickLeftDown; }
         private set {} //Read Only
     }
-    public bool IsRThumbstickRightDown {
+    public bool IsRThumbstickRightDown { // NEW
         get { return _isRThumbstickRightDown; }
         private set {} //Read Only
     }
-    public bool IsRThumbstickUpDown {
+    public bool IsRThumbstickUpDown { // NEW
         get { return _isRThumbstickUpDown; }
         private set {} //Read Only
     }

@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         _oqt = GetComponent<OQtouch>();
-        _oqt.R = GameObject.Find("OculusTouchR");
+        _oqt.R = "OculusTouchR";
 
         _piece0 = GameObject.Find("piece");
         _pieceList = new List<GameObject>();
@@ -101,8 +101,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         _oqt = GetComponent<OQtouch>();
-        _oqt.L = GameObject.Find("OculusTouchL");
-        _oqt.R = GameObject.Find("OculusTouchR");
+        _oqt.L = "OculusTouchL";
+        _oqt.R = "OculusTouchR";
         _drone = GameObject.Find("drone");
     }
 
