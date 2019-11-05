@@ -8,5 +8,6 @@
 * [Unity サンプル](https://github.com/mubirou/Unity/tree/master/sample)
 * [Oculus Quest 対応](https://github.com/mubirou/Unity/tree/master/oculusquest)
 * [OQtouch（自作ライブラリ）](https://github.com/mubirou/Unity/tree/master/oqtouch)
+* [UObject（自作ライブラリ）](https://github.com/mubirou/Unity/tree/master/uobject)
 
 © 2018-2019 夢寐郎
