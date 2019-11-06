@@ -1,6 +1,6 @@
 ﻿//UObject.cs
 /******************************************************************
- * UObject Alpha 1 RC 20191105.2157
+ * UObject Alpha 1 RC 20191106.1837
  * © 2019 夢寐郎
  ****************************************************************/
 using System.Collections.Generic; //for List
@@ -16,11 +16,12 @@ public class UObject : MonoBehaviour {
     void Update() {
     }
 
+    //==================
+    // Public Property
+    //==================
     public string Name {
         get { return _gameObject.name; }
-        set {
-            _gameObject = GameObject.Find(value); //value;
-        }
+        set { _gameObject = GameObject.Find(value); }
     }
 
     public bool UseGravity {
@@ -28,6 +29,17 @@ public class UObject : MonoBehaviour {
         set { _gameObject.GetComponent<Rigidbody>().useGravity = value; }
     }
 
+    public float Y {
+        get { return _gameObject.transform.position.y; }
+        set {
+            Vector3 _pos = _gameObject.transform.position;
+            _gameObject.transform.position = new Vector3(_pos.x, value, _pos.z);
+        }
+    }
+
+    //================
+    // Public Method
+    //================
     public GameObject GetChild(string arg) {
         return _gameObject.transform.Find(arg).gameObject;
     }
