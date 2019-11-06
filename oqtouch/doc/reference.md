@@ -1,5 +1,5 @@
 # OQtouch リファレンスマニュアル
-Version Alpha 7 RC 20191105.1846 対応  
+Version Alpha 8 RC 20191106.2123 対応  
 © 2019 夢寐郎
 
 ## ◆ メソッド一覧
@@ -1109,7 +1109,7 @@ public class GameManager : MonoBehaviour {
 
 ### ◇ 説明
 プロパティ。  
-Oculus Touch コントローラー（左手側）の動きに連動する GameObject の名前（string 型）を指定したり、調べることができます。
+Oculus Touch コントローラー（左手側）の動きに連動する GameObject を指定したり、調べることができます。
 
 ### ◇ 例文
 ```
@@ -2227,7 +2227,7 @@ public class GameManager : MonoBehaviour {
 
 ### ◇ 説明
 プロパティ。  
-Oculus Touch コントローラー（右手側）の動きに連動する GameObject の名前（string 型）を指定したり、調べることができます。
+Oculus Touch コントローラー（右手側）の動きに連動する GameObject を指定したり、調べることができます。
 
 ### ◇ 例文
 ```
