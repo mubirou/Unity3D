@@ -120,7 +120,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.EnabledLaserL = true;
 
         //レーザーポインタで選択するオブジェクトの登録
@@ -172,8 +172,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
         _oqt.ADown += ADownHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -213,8 +213,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
         _oqt.ARawTouch += ARawTouchHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -254,8 +254,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
         _oqt.AUp += AUpHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -295,8 +295,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
         _oqt.BDown += BDownHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -336,8 +336,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
         _oqt.BRawTouch += BRawTouchHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -377,8 +377,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
         _oqt.BUp += BUpHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -417,7 +417,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.EnabledLaserL = true;
     }
 }
@@ -450,7 +450,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.R = "OculusTouchR";
+        _oqt.R = GameObject.Find("OculusTouchR");
         _oqt.EnabledLaserR = true;
     }
 }
@@ -484,7 +484,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
@@ -525,7 +525,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
@@ -566,7 +566,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
 
         //DEBUG用
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
@@ -609,7 +609,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
 
         //DEBUG用
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
@@ -652,7 +652,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
 
         //DEBUG用
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
@@ -697,7 +697,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
 
         //DEBUG用
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
@@ -740,7 +740,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
 
         //DEBUG用
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
@@ -783,8 +783,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
@@ -825,8 +825,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
@@ -866,8 +866,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
 
         //DEBUG用
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
@@ -910,8 +910,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
 
         //DEBUG用
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
@@ -954,8 +954,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
 
         //DEBUG用
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
@@ -1000,8 +1000,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
 
         //DEBUG用
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
@@ -1044,8 +1044,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
 
         //DEBUG用
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>();
@@ -1085,7 +1085,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.EnabledLaserL = true;
         _oqt.AddTargetObject(GameObject.Find("Button1"));
         _oqt.IsVibration = false;
@@ -1114,7 +1114,7 @@ Oculus Touch コントローラー（左手側）の動きに連動する GameOb
 ### ◇ 例文
 ```
 OQtouch _oqt = GetComponent<OQtouch>();
-_oqt.L = "OculusTouchL";
+_oqt.L = GameObject.Find("OculusTouchL");
 ```
 
 ### ◇ 参照
@@ -1145,7 +1145,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
@@ -1185,7 +1185,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.LHandTriggerDown += LHandTriggerDownHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -1226,7 +1226,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.LHandTriggerUp += LHandTriggerUpHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -1267,7 +1267,7 @@ public class GameManager : MonoBehaviour{
 
     void Start() {
         _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
@@ -1308,7 +1308,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.LIndexTriggerDown += LIndexTriggerDownHandler; //イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -1349,7 +1349,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.LIndexTriggerRawNearTouch += LIndexTriggerRawNearTouchHandler; //イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -1389,7 +1389,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.LIndexTriggerRawTouch += LIndexTriggerRawTouchHandler; //イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -1429,7 +1429,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.LIndexTriggerUp += LIndexTriggerUpHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -1468,7 +1468,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
 
         //レーザーポインタの表示
         _oqt.EnabledLaserL = true;
@@ -1521,7 +1521,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
 
         //レーザーポインタの表示
         _oqt.EnabledLaserL = true;
@@ -1574,7 +1574,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
 
         //レーザーポインタの表示
         _oqt.EnabledLaserL = true;
@@ -1628,7 +1628,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
 
         //レーザーポインタの表示
         _oqt.EnabledLaserL = true;
@@ -1681,7 +1681,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
 
         //レーザーポインタの表示
         _oqt.EnabledLaserL = true;
@@ -1735,7 +1735,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.LThumbstickDown += LThumbstickDownHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -1776,7 +1776,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.LThumbstickDownDown += LThumbstickDownDownHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -1819,7 +1819,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.LThumbstickDownUp += LThumbstickDownUpHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -1862,7 +1862,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.LThumbstickLeftDown += LThumbstickLeftDownHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -1905,7 +1905,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.LThumbstickLeftUp += LThumbstickLeftUpHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -1948,7 +1948,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.LThumbstickRawTouch += LThumbstickRawTouchHandler; //イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -1988,7 +1988,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.LThumbstickRightDown += LThumbstickRightDownHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -2031,7 +2031,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.LThumbstickRightUp += LThumbstickRightUpHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -2074,7 +2074,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
@@ -2114,7 +2114,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.LThumbstickUp += LThumbstickUpHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -2154,7 +2154,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.LThumbstickUpDown += LThumbstickUpDownHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -2197,7 +2197,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.LThumbstickUpUp += LThumbstickUpUpHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -2232,7 +2232,7 @@ Oculus Touch コントローラー（右手側）の動きに連動する GameOb
 ### ◇ 例文
 ```
 OQtouch _oqt = GetComponent<OQtouch>();
-_oqt.R = "OculusTouchR";
+_oqt.R = GameObject.Find("OculusTouchR");
 ```
 
 ### ◇ 参照
@@ -2262,7 +2262,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.EnabledLaserL = true;
 
         //レーザーポインタで選択するオブジェクトの登録
@@ -2311,8 +2311,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
@@ -2352,8 +2352,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
         _oqt.RHandTriggerDown += RHandTriggerDownHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -2394,8 +2394,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
         _oqt.RHandTriggerUp += RHandTriggerUpHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -2436,8 +2436,8 @@ public class GameManager : MonoBehaviour{
 
     void Start() {
         _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
@@ -2477,8 +2477,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
         _oqt.RIndexTriggerDown += RIndexTriggerDownHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -2519,8 +2519,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
         _oqt.RIndexTriggerRawNearTouch += RIndexTriggerRawNearTouchHandler; //イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -2560,8 +2560,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
         _oqt.RIndexTriggerRawTouch += RIndexTriggerRawTouchHandler; //イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -2601,8 +2601,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
         _oqt.RIndexTriggerUp += RIndexTriggerUpHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -2641,8 +2641,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
 
         //レーザーポインタの表示
         _oqt.EnabledLaserR = true;
@@ -2695,8 +2695,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
 
         //レーザーポインタの表示
         _oqt.EnabledLaserL = true;
@@ -2750,8 +2750,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
 
         //レーザーポインタの表示
         _oqt.EnabledLaserL = true;
@@ -2806,8 +2806,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
 
         //レーザーポインタの表示
         _oqt.EnabledLaserL = true;
@@ -2861,7 +2861,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.R = GameObject.Find("OculusTouchL");
 
         //レーザーポインタの表示
@@ -2917,8 +2917,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
         _oqt.RThumbstickDown += RThumbstickDownHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -2959,8 +2959,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
         _oqt.RThumbstickDownDown += RThumbstickDownDownHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -3003,8 +3003,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
         _oqt.RThumbstickDownUp += RThumbstickDownUpHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -3047,8 +3047,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
         _oqt.RThumbstickLeftDown += RThumbstickLeftDownHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -3091,8 +3091,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
         _oqt.RThumbstickLeftUp += RThumbstickLeftUpHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -3135,8 +3135,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
         _oqt.RThumbstickRawTouch += RThumbstickRawTouchHandler; //イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -3176,8 +3176,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
         _oqt.RThumbstickRightDown += RThumbstickRightDownHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -3220,8 +3220,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
         _oqt.RThumbstickRightUp += RThumbstickRightUpHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -3264,8 +3264,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
 
@@ -3305,8 +3305,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
         _oqt.RThumbstickUp += RThumbstickUpHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -3346,8 +3346,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
         _oqt.RThumbstickUpDown += RThumbstickUpDownHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -3390,8 +3390,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
-        _oqt.R = "OculusTouchR";
+        _oqt.L = GameObject.Find("OculusTouchL");
+        _oqt.R = GameObject.Find("OculusTouchR");
         _oqt.RThumbstickUpUp += RThumbstickUpUpHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -3433,7 +3433,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.StartDown += StartDownHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -3471,7 +3471,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.StartUp += StartUpHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -3561,7 +3561,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.XDown += XDownHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -3600,7 +3600,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.XRawTouch += XRawTouchHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -3639,7 +3639,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.XUp += XUpHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -3678,7 +3678,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.YDown += YDownHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -3717,7 +3717,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.YRawTouch += YRawTouchHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }
@@ -3756,7 +3756,7 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         OQtouch _oqt = GetComponent<OQtouch>();
-        _oqt.L = "OculusTouchL";
+        _oqt.L = GameObject.Find("OculusTouchL");
         _oqt.YUp += YUpHandler; // イベントハンドラの登録
         _console = _oqt.L.transform.Find("Console").gameObject.GetComponent<Console>(); //DEBUG用
     }

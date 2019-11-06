@@ -51,7 +51,7 @@ Version Alpha 3.201910031905 対応
     public class GameManager : MonoBehaviour {
         void Start() {
             OQtouch _oqt = GetComponent<OQtouch>();
-            _oqt.R = "OculusTouchR";
+            _oqt.R = GameObject.Find("OculusTouchR");
         }
     }
     ```
@@ -79,7 +79,7 @@ Version Alpha 3.201910031905 対応
 
         void Start() {
             OQtouch _oqt = GetComponent<OQtouch>();
-            _oqt.L = "OculusTouchL";
+            _oqt.L = GameObject.Find("OculusTouchL");
             _oqt.LIndexTriggerDown += LIndexTriggerDownHandler;
 
             //入れ子状態のConsoleをさがす
