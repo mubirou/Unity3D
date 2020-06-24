@@ -90,7 +90,7 @@
 1. [Project]-[Model001] 内のモデルを [Hierarchy] にドラッグ＆ドロップ。
 1. 必要に応じて色を変更するなど行います。
 
-![002](https://mubirou.github.io/Unity/introduction/jpg/002.jpg)
+![002](https://mubirou.github.io/Unity3D/introduction/jpg/002.jpg)
 
 実行環境：Unity 2017.2 Personal、Blender 2.79、Ubuntu 16.04 LTS  
 作成者：夢寐郎  
@@ -119,7 +119,7 @@
 
 |No.|内容|頁数|WebGL|.apk|参考サイト|作成日|
 |:--|:--|:--:|:--:|:--:|:--:|:--:|
-|01|天地創造。（プログラムレス）|33〜76|[●](https://mubirou.github.io/Unity/introduction/html/004_01/index.html)|－|[●](https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-32351)|2018-05-23|
+|01|天地創造。（プログラムレス）|33〜76|[●](https://mubirou.github.io/Unity3D/introduction/html/004_01/index.html)|－|[●](https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-32351)|2018-05-23|
 |02|[考え方と構造。](#考え方と構造。)|77〜112|－|－|－|2018-07-08|
 |03|[世界を構成するもの。](#世界を構成するもの。)|113〜164|－|－|－|2018-07-10|
 |04|[スクリプト基礎知識。](#スクリプト基礎知識。)|165〜258|－|－|－|2018-07-17|
@@ -512,7 +512,7 @@
     ③ Unityの左下に [Build Completed with a result of 'Succeeded'] と表示されたら成功  
     ④ 上記で指定した場所に xxx.apk が生成されたのを確認  
     ⑤ Android端末上に生成されたアプリを選択し、再生されたら成功!!  
-    ※ xxx.apk の[ダウンロード](https://mubirou.github.io/Unity/introduction/apk/007.apk)（Android端末へのインストール用）  
+    ※ xxx.apk の[ダウンロード](https://mubirou.github.io/Unity3D/introduction/apk/007.apk)（Android端末へのインストール用）  
 
 実行環境：Unity 2019.1 Personal、Ubuntu 18.04 LTS、Android 9.0  
 作成者：夢寐郎  
@@ -598,15 +598,15 @@
 |001|[Unityのエディション](#Unityのエディション)|004|－|－|－|[●](https://store.unity.com/ja)|2018-06-29|
 |002|[Asset Store保存場所](#AssetStore保存場所)|007|－|－|－|－|2018-06-29|
 |003|[Editorの設定](#Editorの設定)|008|－|－|－|－|2018-12-10|
-|004|[マテリアルに画像を指定](#マテリアルに画像を指定)|022･023|－|[●](https://mubirou.github.io/Unity/introduction/apk/009_004.apk)|－|－|2018-06-29|
+|004|[マテリアルに画像を指定](#マテリアルに画像を指定)|022･023|－|[●](https://mubirou.github.io/Unity3D/introduction/apk/009_004.apk)|－|－|2018-06-29|
 |005|[空の背景の変更](#空の背景の変更)|028|－|－|－|－|2018-07-01|
-|006|[床を鏡のようにする](#床を鏡のようにする)|031|－|[●](https://mubirou.github.io/Unity/introduction/apk/009_006.apk)|－|[●](http://corevale.com/unity/923)|2018-07-02|
+|006|[床を鏡のようにする](#床を鏡のようにする)|031|－|[●](https://mubirou.github.io/Unity3D/introduction/apk/009_006.apk)|－|[●](http://corevale.com/unity/923)|2018-07-02|
 |007|[Planeに動画を表示](#Planeに動画を表示)|032|－|－|－|－|2018-07-02|
 |008|[ボールに重力を持たせる](#ボールに重力を持たせる)|030･033|－|－|－|－|2018-07-02|
 |009|[オブジェクトの透明化](#オブジェクトの透明化)|033|－|－|－|－|2018-07-02|
-|010|[クリックした位置にPrefabを表示](#クリックした位置にPrefabを表示)|034|－|[●](https://mubirou.github.io/Unity/introduction/apk/009_010.apk)|－|－|2018-07-03|
-|011|[MouseOverで色を変える](#MouseOverで色を変える)|035|－|[●](https://mubirou.github.io/Unity/introduction/apk/009_011.apk)|－|－|2018-07-04|
-|012|[オブジェクトをクリックで落下](#オブジェクトをクリックで落下)|036|－|[●](https://mubirou.github.io/Unity/introduction/apk/009_012.apk)|－|－|2018-07-04|
+|010|[クリックした位置にPrefabを表示](#クリックした位置にPrefabを表示)|034|－|[●](https://mubirou.github.io/Unity3D/introduction/apk/009_010.apk)|－|－|2018-07-03|
+|011|[MouseOverで色を変える](#MouseOverで色を変える)|035|－|[●](https://mubirou.github.io/Unity3D/introduction/apk/009_011.apk)|－|－|2018-07-04|
+|012|[オブジェクトをクリックで落下](#オブジェクトをクリックで落下)|036|－|[●](https://mubirou.github.io/Unity3D/introduction/apk/009_012.apk)|－|－|2018-07-04|
 
 <a name="Unityのエディション"></a>
 ### 001 Unityのエディション
@@ -836,9 +836,9 @@
     ```
 
 1. Blenderで針をモデリングする（ProjectのAssetsフォルダに保存）
-    * 秒針（[secondHand.blend](https://mubirou.github.io/Unity/introduction/blend/secondHand.blend))
-    * 分針（[minuteHand.blend](https://mubirou.github.io/Unity/introduction/blend/minuteHand.blend))
-    * 時針（[hourHand.blend](https://mubirou.github.io/Unity/introduction/blend/hourHand.blend)）
+    * 秒針（[secondHand.blend](https://mubirou.github.io/Unity3D/introduction/blend/secondHand.blend))
+    * 分針（[minuteHand.blend](https://mubirou.github.io/Unity3D/introduction/blend/minuteHand.blend))
+    * 時針（[hourHand.blend](https://mubirou.github.io/Unity3D/introduction/blend/hourHand.blend)）
 
 1. Sceneビューに針を配置（Positionのみ変更／秒針が一番上）
 
@@ -895,7 +895,7 @@
     }
     ```
 
-1. Blenderで文字盤（[dial.blend](https://mubirou.github.io/Unity/introduction/blend/secondHand.blend)）をモデリングする（ProjectのAssetsフォルダに保存）
+1. Blenderで文字盤（[dial.blend](https://mubirou.github.io/Unity3D/introduction/blend/secondHand.blend)）をモデリングする（ProjectのAssetsフォルダに保存）
 
 1. [出力](#出力)の設定
 
@@ -908,7 +908,7 @@
 1. 縦持ち限定にする（Android端末）  
     [Edit]-[Project Settings]-[Player]-[Resolution and Presentation]-[Default Orientation] の値を「Auto Rotation」→「Portrait」に変更
 
-完成プロジェクトを[ダウンロード](https://mubirou.github.io/Unity/introduction/project/010.zip)
+完成プロジェクトを[ダウンロード](https://mubirou.github.io/Unity3D/introduction/project/010.zip)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
@@ -920,9 +920,9 @@
 # <b>011 Drop Hole</b>
 
 1. [Inkscape](https://inkscape.org)で平面素材（橋）を作成
-（[bridge.svg](https://mubirou.github.io/Unity/introduction/svg/bridge.svg)）
+（[bridge.svg](https://mubirou.github.io/Unity3D/introduction/svg/bridge.svg)）
 
-1. Blenderで上記を読込み加工（[floor.blend](https://mubirou.github.io/Unity/introduction/blend/floor.blend)）
+1. Blenderで上記を読込み加工（[floor.blend](https://mubirou.github.io/Unity3D/introduction/blend/floor.blend)）
     * [ファイル]-[インポート]-[Scalable Vector Graphics（.svg）]
     * [編集モード]-[拡大縮小]
     * [マテリアル]の変更
@@ -933,7 +933,7 @@
     * [ブーリアン]を使い[円柱]でゴール地点に穴を空ける
     * [マテリアル]を使い配色
     * [Camera]、[Lamp]等の不要物を削除
-    * [ファイル]-[エクスポート]-[**FBX（.fbx）**]で出力（[floor.fbx](https://mubirou.github.io/Unity/introduction/fbx/floor.fbx)）
+    * [ファイル]-[エクスポート]-[**FBX（.fbx）**]で出力（[floor.fbx](https://mubirou.github.io/Unity3D/introduction/fbx/floor.fbx)）
 
 1. Unityで上記を読込み作業
     * プロジェクトの[Assets]フォルダに上記のfbxファイルを保存
@@ -1050,7 +1050,7 @@
 
 1. [出力](#出力)して確認
 
-完成プロジェクトを[ダウンロード](https://mubirou.github.io/Unity/introduction/project/011.zip)
+完成プロジェクトを[ダウンロード](https://mubirou.github.io/Unity3D/introduction/project/011.zip)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
@@ -1249,7 +1249,7 @@
 
 1. [再生]ボタンを押すか、[出力](#出力)して確認
 
-完成プロジェクトを[ダウンロード](https://mubirou.github.io/Unity/introduction/project/012.zip)
+完成プロジェクトを[ダウンロード](https://mubirou.github.io/Unity3D/introduction/project/012.zip)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 18.0.4.1 LTS、Android 8.0  
 作成者：夢寐郎  
@@ -1259,8 +1259,8 @@
 <a name="013"></a>
 # <b>013 Mouse Stalker</b>
 
-1. Blenderで適当なオブジェクトを作成（[piece.blend](https://mubirou.github.io/Unity/introduction/blend/piece.blend)）
-    * [ファイル]-[エクスポート]-[**FBX（.fbx）**]で出力（[piece.fbx](https://mubirou.github.io/Unity/introduction/fbx/piece.fbx)）
+1. Blenderで適当なオブジェクトを作成（[piece.blend](https://mubirou.github.io/Unity3D/introduction/blend/piece.blend)）
+    * [ファイル]-[エクスポート]-[**FBX（.fbx）**]で出力（[piece.fbx](https://mubirou.github.io/Unity3D/introduction/fbx/piece.fbx)）
 
 1. Unityで上記を読込み作業
     * プロジェクトの[Assets]フォルダに上記のfbxファイルを保存
@@ -1348,7 +1348,7 @@
 
 1. [再生]ボタンを押すか、[出力](#出力)して確認
 
-完成プロジェクトを[ダウンロード](https://mubirou.github.io/Unity/introduction/project/013.zip)
+完成プロジェクトを[ダウンロード](https://mubirou.github.io/Unity3D/introduction/project/013.zip)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 18.0.4.1 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
@@ -1358,12 +1358,12 @@
 <a name="014"></a>
 # <b>014 UFO Shooting</b>
 
-1. BlenderでUFOを作成（[ufo.blend](https://mubirou.github.io/Unity/introduction/blend/ufo.blend)）
+1. BlenderでUFOを作成（[ufo.blend](https://mubirou.github.io/Unity3D/introduction/blend/ufo.blend)）
     * [ファイル]-[エクスポート]-[**FBX（.fbx）**]で出力（
-    [piece.fbx](https://mubirou.github.io/Unity/introduction/fbx/ufo.fbx)）
+    [piece.fbx](https://mubirou.github.io/Unity3D/introduction/fbx/ufo.fbx)）
 
-1. Blenderでミサイルを作成（[missile.blend](https://mubirou.github.io/Unity/introduction/blend/missile.blend)）
-    * [ファイル]-[エクスポート]-[**FBX（.fbx）**]で出力（[piece.fbx](https://mubirou.github.io/Unity/introduction/fbx/missile.fbx)）
+1. Blenderでミサイルを作成（[missile.blend](https://mubirou.github.io/Unity3D/introduction/blend/missile.blend)）
+    * [ファイル]-[エクスポート]-[**FBX（.fbx）**]で出力（[piece.fbx](https://mubirou.github.io/Unity3D/introduction/fbx/missile.fbx)）
 
 1. Unityで上記を読込み作業
     * プロジェクトの[Assets]フォルダに上記のfbxファイルを保存
@@ -1664,9 +1664,9 @@
 
 1. [再生]ボタンを押すか、[出力](#出力)して確認
 
-※完成したAndroid用インストーラ（apkファイル）は[こちら](https://mubirou.github.io/Unity/introduction/apk/014.apk)
+※完成したAndroid用インストーラ（apkファイル）は[こちら](https://mubirou.github.io/Unity3D/introduction/apk/014.apk)
 
-※完成プロジェクトを[ダウンロード](https://mubirou.github.io/Unity/introduction/project/014.zip)
+※完成プロジェクトを[ダウンロード](https://mubirou.github.io/Unity3D/introduction/project/014.zip)
 
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
@@ -1713,11 +1713,11 @@
     * [Animation]ウインドウ内の[Create]ボタンをクリック（名前は"AnimationCubeAll"）
     * [AddProperty]-[Cube1]-[Transform]-[Position]-[+]を選択  
 
-    ![015_1](https://mubirou.github.io/Unity/introduction/jpg/015_1.jpg)
+    ![015_1](https://mubirou.github.io/Unity3D/introduction/jpg/015_1.jpg)
 
     * 同様にCube②〜⑦も設定  
 
-    ![015_2](https://mubirou.github.io/Unity/introduction/jpg/015_2.jpg)
+    ![015_2](https://mubirou.github.io/Unity3D/introduction/jpg/015_2.jpg)
 
 1. Animationの設定
     * [Animation]ウインドウ上部にある録音ボタン[<font color="Red">●</font>]を選択
@@ -1725,13 +1725,13 @@
     * [Animation]-[Cube1:Position]-[Position.y]を選択
     * カーブ上のポイントを選択し[右クリック]-[Broken]に変更して適当に調整
 
-    ![015_3](https://mubirou.github.io/Unity/introduction/jpg/015_3.jpg)
+    ![015_3](https://mubirou.github.io/Unity3D/introduction/jpg/015_3.jpg)
 
     * [Animation]ウインドウの再生ボタン[▶]で確認しながら調整を繰返す
     * 同様にCube②〜⑦も設定
     * タイミングをずらすなどして演出  
 
-    ![015_4](https://mubirou.github.io/Unity/introduction/jpg/015_4.jpg)
+    ![015_4](https://mubirou.github.io/Unity3D/introduction/jpg/015_4.jpg)
 
 ## Timeline版
 
@@ -1743,29 +1743,29 @@
     * [Timeline]ウインドウ内の[Create]ボタンをクリック（名前は"CubeAllTimeline"のまま）
     * [Hierarychy]-[CubeAll]-[Cube1]を[Timeline]上にドラッグ＆ドロップ  
 
-    ![015_5](https://mubirou.github.io/Unity/introduction/jpg/015_5.jpg)
+    ![015_5](https://mubirou.github.io/Unity3D/introduction/jpg/015_5.jpg)
 
     * 最初からあった[CubeAll(Animator)]は今回は削除
 
 1. Timelineの設定
     * [Timeline]ウインドウ上の[Cube1]の録音ボタン[<font color="Red">●</font>]を押して適当に調整（カーブボタンを使って微調整）  
 
-    ![015_6](https://mubirou.github.io/Unity/introduction/jpg/015_6.jpg)
+    ![015_6](https://mubirou.github.io/Unity3D/introduction/jpg/015_6.jpg)
 
     * 同様にCube②〜⑦も設定（カーブ以外は同時に調整可能）
     * [Cube1]のシーケンス上で[右クリック]-[**ConvertToClipTrack]で「アニメーションクリップ」に変換（Cube②〜⑦も同様）  
 
-    ![015_7](https://mubirou.github.io/Unity/introduction/jpg/015_7.jpg)
+    ![015_7](https://mubirou.github.io/Unity3D/introduction/jpg/015_7.jpg)
 
     * タイミングをずらすなどして演出（シーケンスのコピーも可）  
 
-    ![015_8](https://mubirou.github.io/Unity/introduction/jpg/015_8.jpg)
+    ![015_8](https://mubirou.github.io/Unity3D/introduction/jpg/015_8.jpg)
 
     * ループさせる場合は[Hierarchy]-[CubeAll]-[Inspector]-[PlayableDirector]-[WrapMode]を[Loop]にする
 
 
-※完成したプロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/015_1.zip)（Animation版）
-と[こちら](https://mubirou.github.io/Unity/introduction/project/015_2.zip)（Timeline版）
+※完成したプロジェクトは[こちら](https://mubirou.github.io/Unity3D/introduction/project/015_1.zip)（Animation版）
+と[こちら](https://mubirou.github.io/Unity3D/introduction/project/015_2.zip)（Timeline版）
 
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
@@ -1779,7 +1779,7 @@
     * [『ブレンダーからはじめよう!／原田大輔著』](https://amzn.to/2vzog2t)を参考に、アクション（①Stop ②Walk ③Run）付きの[ロボット（.blend）](https://mubirou.github.io/Blender/introduction/blend/013_011.blend)を作成
     * Unityで読込んだ際に不要な、地面（平面）･Lamp･Camera･Worldを削除
     * [ファイル]-[エクスポート]-[**FBX（.fbx）**]で出力（
-    [robot.fbx](https://mubirou.github.io/Unity/introduction/fbx/robot.fbx)）
+    [robot.fbx](https://mubirou.github.io/Unity3D/introduction/fbx/robot.fbx)）
 
 1. Unityにロボットを読込む
     * プロジェクトの[Assets]フォルダに上記のfbxファイルを保存
@@ -1829,7 +1829,7 @@
     ※[→]を選択後[Delete]ボタンで削除可能
     * 下図のように①Armature|Stop ②Armature|Run ③Armature|Run を双方向で連結させる
 
-    ![016_1](https://mubirou.github.io/Unity/introduction/jpg/016_1.jpg)
+    ![016_1](https://mubirou.github.io/Unity3D/introduction/jpg/016_1.jpg)
 
     * [Hierarchy]-[robot]を選択した状態で再生ボタン[▶]で動作確認  
     ※①Stop ②Walk ③Run が連続して実行されるはずです
@@ -1887,7 +1887,7 @@
         * ①Stop ②Walk 間の [→] を選択し [Inspector]-[**Conditions**]-[+] を選択（以下同様）
         * [**isWalk**]：**true**
         * [**isRun**]：false  
-        ![016_2](https://mubirou.github.io/Unity/introduction/jpg/016_2.jpg)
+        ![016_2](https://mubirou.github.io/Unity3D/introduction/jpg/016_2.jpg)
     
     1. ②Walk→③Run
         * [**isWalk**]：false
@@ -1991,7 +1991,7 @@
     * [Hierarchy]-[Canvas]-[Button_Stop]-[Inspector]-[Button]-[OnClick()]-[+]を選択
     * [None（Object）]-[⦿]→[**Sceneタブ**]-[Button_Stop]をダブルクリック
     * [NoFunction]→[StopButton]-[OnClick]を選択（**StopButton.OnClick**と表示される）  
-    ![016_3](https://mubirou.github.io/Unity/introduction/jpg/016_3.jpg)
+    ![016_3](https://mubirou.github.io/Unity3D/introduction/jpg/016_3.jpg)
 
 1. OnClick()メソッドの有効化（WALKボタン用）
     * [Hierarchy]-[Canvas]-[Button_Walk]-[Inspector]-[Button]-[OnClick()]-[+]を選択
@@ -2015,9 +2015,9 @@
 
 1. [再生]ボタンを押すか、[出力](#出力)して確認
 
-※完成インストールファイル（Android用.apkファイル）は[こちら](https://mubirou.github.io/Unity/introduction/apk/016.apk)
+※完成インストールファイル（Android用.apkファイル）は[こちら](https://mubirou.github.io/Unity3D/introduction/apk/016.apk)
 
-※完成プロジェクトを[ダウンロード](https://mubirou.github.io/Unity/introduction/project/016.zip)
+※完成プロジェクトを[ダウンロード](https://mubirou.github.io/Unity3D/introduction/project/016.zip)
 
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
@@ -2029,7 +2029,7 @@
 
 #### ◆FBXファイルの読み込み
 
-1. [Blenderで作成](https://github.com/mubirou/Blender/tree/master/introduction#016_003)した人間型の[.fbx](https://mubirou.github.io/Unity/introduction/fbx/human.fbx)ファイルをUnityの[Assets]フォルダにコピーする
+1. [Blenderで作成](https://github.com/mubirou/Blender/tree/master/introduction#016_003)した人間型の[.fbx](https://mubirou.github.io/Unity3D/introduction/fbx/human.fbx)ファイルをUnityの[Assets]フォルダにコピーする
 
 #### ◆人間型オブジェクトのHumanoid化
 
@@ -2037,13 +2037,13 @@
 1. [Project]-[Assets]-[human]を選択
 1. [Inspector]-[Rig]-[AnimationType]を[Generic]→[Humanoid]に変更
 1. [Apply]（適用）を選択→[Configure...]を選択  
-    ![017_1](https://mubirou.github.io/Unity/introduction/jpg/017_1.jpg)  
+    ![017_1](https://mubirou.github.io/Unity3D/introduction/jpg/017_1.jpg)  
     ※Blenderと名前が一致していれば上図の通りになります  
     ※今回は[Head][LeftHand][RightHand]は省略
 1. [Muscles&Settings]を選択し各スライダーバーを動かしてポージングできれば成功  
-    ![017_2](https://mubirou.github.io/Unity/introduction/jpg/017_2.jpg)  
+    ![017_2](https://mubirou.github.io/Unity3D/introduction/jpg/017_2.jpg)  
 
-※参考プロジェクトは[こちら](https://mubirou.github.io/Unity/introduction/project/017.zip)
+※参考プロジェクトは[こちら](https://mubirou.github.io/Unity3D/introduction/project/017.zip)
 
 実行環境：Unity 2018.2 Personal、Ubuntu 18.0.4 LTS、Blender 2.79、Android 8.0  
 作成者：夢寐郎  
