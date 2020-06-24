@@ -62,7 +62,7 @@
     * 1x1の平面（2個の三角形で構成）。
     * 画像や動画の再生などに利用。  
 
-![001](https://mubirou.github.io/Unity/introduction/jpg/001.jpg)
+![001](https://mubirou.github.io/Unity3D/introduction/jpg/001.jpg)
 
 実行環境：Unity 2017.2 Personal、Ubuntu 16.04 LTS  
 作成者：夢寐郎  
