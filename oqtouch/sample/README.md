@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### ◇ 参照
-・[Android アプリ版](https://github.com/mubirou/Unity3D/tree/master/introduction#013)（[参考画像](https://www.instagram.com/p/BpRHoOAhn1S/)）  
+・[Android アプリ版](https://github.com/mubirou/Unity3D/tree/master/introduction#013)  
 ・[HTML5 Canvas 版](https://mubirou.github.io/CanvasLite/examples/html/006.html)  
 
 実行環境：Unity 2020.1.0a9、Oculus Quest 10.0、Oculus Integration 1.41（VRのみ）、[OQtouch](https://github.com/mubirou/Unity3D/tree/master/oqtouch) Alpha 5、Ubuntu 18.04.3 LTS  
