@@ -9,8 +9,7 @@
 ***
 
 <a name="2110001"></a>
-<span style="font-size: 200%; color: red;">赤くて大きい文字</span>
-# <b>public vs SerializeField</b>
+2110001 # <b>public vs SerializeField</b>
 
 1. publicの場合
     ```c#
