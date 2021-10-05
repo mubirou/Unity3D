@@ -11,9 +11,7 @@
 <a name="2110001"></a>
 # <b>public vs SerializeField</b>
 
-### public vs SerializeField
-
-1. publicの場合(Unity独自挙動)
+### publicの場合(Unity独自挙動)
     ```c#
     using UnityEngine;
 
@@ -28,7 +26,7 @@
     * インスペクタ上で設定したものが優先.
     * 外のクラスからアクセス可能(OOP的にはNG).
 
-1. SerializeFieldの場合
+### SerializeFieldの場合
     ```c#
     using UnityEngine;
 
@@ -43,7 +41,7 @@
     * publicの場合と挙動は同じ.
     * アクセス修飾子の省略時はprivate扱い.
 
-1. 結論
+### 結論
     「同じクラスからのみアクセス可能、かつインスペクタ上で値が変更可能」という、第4のアクセス修飾子として考えてよい.
     ```c#
     public string _hoge1 = "mubirou";
