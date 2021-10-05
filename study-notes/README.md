@@ -11,8 +11,8 @@
 <a name="2110001"></a>
 # <b>public vs SerializeField</b>
 
-### publicの場合(Unity独自挙動)
-    ```c#
+1. publicの場合(Unity独自挙動)
+    ```
     using UnityEngine;
 
     public class MyClass : MonoBehaviour {
@@ -24,10 +24,10 @@
     }
     ```
     * インスペクタ上で設定したものが優先.
-    * 外のクラスからアクセス可能(OOP的にはNG).
+    * 外部クラスからアクセス可能(OOP的にはNG).
 
-### SerializeFieldの場合
-    ```c#
+2. SerializeFieldの場合
+    ```
     using UnityEngine;
 
     public class MyClass : MonoBehaviour {
@@ -38,18 +38,9 @@
         }
     }
     ```
-    * publicの場合と挙動は同じ.
-    * アクセス修飾子の省略時はprivate扱い.
+    * 外部クラスからアクセス不可以外はpublicの場合と同じ.
+    * 「同じクラスからのみアクセス可能、かつインスペクタ上で値が変更可能」という、第4のアクセス修飾子として考えてよい(privateを明示しても同じ).
 
-### 結論
-    「同じクラスからのみアクセス可能、かつインスペクタ上で値が変更可能」という、第4のアクセス修飾子として考えてよい.
-    
-    ```c#
-    public string _hoge1 = "mubirou";
-    protected string _hoge2 = "mubirou";
-    [SerializeField] string _hoge3 = "mubirou";
-    private string _hoge1 = "mubirou";
-    ```
     ※参照:『Unityの教科書2021』(P108)
 
 実行環境：Windows 10、Unity 2021.1  
