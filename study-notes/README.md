@@ -43,6 +43,7 @@
 
 ### 結論
     「同じクラスからのみアクセス可能、かつインスペクタ上で値が変更可能」という、第4のアクセス修飾子として考えてよい.
+    
     ```c#
     public string _hoge1 = "mubirou";
     protected string _hoge2 = "mubirou";
