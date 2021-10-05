@@ -9,7 +9,6 @@
 ***
 
 <a name="2110001"></a>
-2110001  
 # <b>public vs SerializeField</b>
 
 1. publicの場合
