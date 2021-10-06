@@ -54,6 +54,35 @@
 更新日：2021年10月07日
 
 
+<a name="2110002"></a>
+# <b>〇秒待機してから実行</b>
+
+* コールチンとWaitForSecondsを利用。
+* サンプルは「〇秒待機してから一度だけ実行する」場合。
+
+```c#
+using UnityEngine;
+using System.Collections; //IEnumeratorに必要
+
+public class MyClass : MonoBehaviour {
+    void Start() {
+        StartCoroutine(Coroutine1(3.5f));
+    }
+
+    IEnumerator Coroutine1(float arg) { //引数はオプション
+        yield return new WaitForSeconds(arg);
+
+        //〇秒後に実行したい処理を記述
+        Debug.Log(Time.time); //-> 3.500929
+    }
+}
+```
+
+実行環境：Windows 10、Unity 2021.1  
+作成者：夢寐郎  
+作成日：2021年10月07日  
+
+
 <a name="2110001"></a>
 # <b>xxxx</b>
 
@@ -65,5 +94,6 @@
 実行環境：Windows 10、Unity 2021.1  
 作成者：夢寐郎  
 作成日：2021年10月XX日  
+
 
 © 2021 夢寐郎
