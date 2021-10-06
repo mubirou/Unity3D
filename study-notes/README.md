@@ -60,6 +60,19 @@
 * コールチンとWaitForSecondsを利用。
 * サンプルは「〇秒待機してから一度だけ実行する」場合。
 
+* 文法
+```c#
+using System.Collections; //IEnumeratorに必要
+
+StartCoroutine(Hoge());
+
+IEnumerator Hobe() {
+    yield return new WaitForSeconds(〇);
+
+    //〇秒後に実行したい処理
+}
+```
+
 ```c#
 using UnityEngine;
 using System.Collections; //IEnumeratorに必要
@@ -72,7 +85,7 @@ public class MyClass : MonoBehaviour {
     IEnumerator Coroutine1(float arg) { //引数はオプション
         yield return new WaitForSeconds(arg);
 
-        //〇秒後に実行したい処理を記述
+        //〇秒後に実行したい処理
         Debug.Log(Time.time); //-> 3.500929
     }
 }
