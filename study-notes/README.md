@@ -63,9 +63,9 @@
 （文法）
 ```c#
 using System.Collections; //IEnumeratorに必要
-………
+
 StartCoroutine(Hoge());
-………
+
 IEnumerator Hoge() {
     yield return new WaitForSeconds(〇);
     //〇秒後に実行したい処理
