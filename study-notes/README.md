@@ -60,7 +60,7 @@
 * コールチンの基本的な操作とWaitForSecondsを利用。
 * サンプルは「〇秒待機してから一度だけ実行する」場合。
 
-（文法）
+（構文）
 ```c#
 using System.Collections; //IEnumeratorに必要
 
