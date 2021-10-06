@@ -60,19 +60,19 @@
 * コールチンとWaitForSecondsを利用。
 * サンプルは「〇秒待機してから一度だけ実行する」場合。
 
-* 文法
+（文法）
 ```c#
 using System.Collections; //IEnumeratorに必要
-
+………
 StartCoroutine(Hoge());
-
-IEnumerator Hobe() {
+………
+IEnumerator Hoge() {
     yield return new WaitForSeconds(〇);
-
     //〇秒後に実行したい処理
 }
 ```
 
+（SAMPLE）
 ```c#
 using UnityEngine;
 using System.Collections; //IEnumeratorに必要
