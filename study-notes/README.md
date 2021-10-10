@@ -96,6 +96,72 @@ public class MyClass : MonoBehaviour {
 作成日：2021年10月07日  
 
 
+<a name="2110003"></a>
+# <b>～作成中です～</b>
+
+```c#
+//SharedData.cs
+using UnityEngine;
+
+[CreateAssetMenu(fileName = "XXX", menuName = "ScriptableObjects/SharedData")]
+public class SharedData : ScriptableObject {
+    [SerializeField] string _lastName; //苗字
+    [SerializeField] PersonalData[] _family = new PersonalData[4]; //家族
+
+    public string LastName {
+        get { return _lastName; }
+        private set {}
+    }
+
+    public PersonalData[] Family {
+        get { return _family; }
+        private set {}
+    }
+}
+
+[System.Serializable]
+public class PersonalData { //個人データ
+    //public等にしてもインスペクタ上で設定不可（値ば見える場合は有）
+    private string _firstName; //名前
+    private int _age; //年齢
+
+    public string FirstName {
+        get { return _firstName; }
+        set { _firstName = value; }
+    }
+
+    public int Age {
+        get { return _age; }
+        set { _age = value; }
+    }
+}
+```
+
+```c#
+//Cube0.cs
+using UnityEngine;
+
+public class Cube0 : MonoBehaviour {
+    [SerializeField] SharedData _familyData; //ScriptableObject
+
+    void Awake() {
+        _familyData.Family[0].FirstName = "Ichiro";
+        _familyData.Family[0].Age = 10;
+    }
+
+    void Start() {
+        Debug.Log(_familyData.LastName); //-> "Suzuki"
+        Debug.Log(_familyData.Family[0].FirstName); //-> "Ichiro"
+        Debug.Log(_familyData.Family[0].Age); //-> 10
+    }
+}
+```
+
+実行環境：Windows 10、Unity 2021.1  
+作成者：夢寐郎  
+作成日：2021年10月XX日  
+
+
 <a name="2110001"></a>
 # <b>xxxx</b>
 
