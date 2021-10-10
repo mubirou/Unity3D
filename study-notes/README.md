@@ -121,7 +121,7 @@ public class SharedData : ScriptableObject {
 
 [System.Serializable]
 public class PersonalData { //個人データ
-    //public等にしてもインスペクタ上で設定不可（値ば見える場合は有）
+    //public等にしてもインスペクタ上で設定不可（値が見える場合は有）
     private string _firstName; //名前
     private int _age; //年齢
 
