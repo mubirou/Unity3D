@@ -5,7 +5,7 @@
 |No.|内容|No.|内容|No.|内容|
 |:--|:--|:--|:--|:--|:--|
 |[2110001](#2110001)|public vs SerializeField|[2110002](#2110002)|〇秒待機してから実行|[2110003](#2110003)|ScriptableObjectの基本|
-|[2110004](#2110004)|〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇|[2110005](#2110005)|〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇|[2110006](#2110006)|〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇|
+|[2110004](#2110004)|シーン遷移|[2110005](#2110005)|〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇|[2110006](#2110006)|〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇|
 ***
 
 <a name="2110001"></a>
@@ -164,6 +164,59 @@ UnityEditor.AssetDatabase.SaveAssets();
 実行環境：Windows 10、Unity 2021.1  
 作成者：夢寐郎  
 作成日：2021年10月11日  
+
+
+<a name="2110004"></a>
+# <b>シーン遷移</b>
+
+1. MainScene.unityの作成  
+    1. [File]-[Save As]で"MainScene.unity"を保存。
+    1. [GameObject]-[UI]-[Button]でボタンを作成。名前は"Button1"に変更。
+    1. [GameObject]-[Create Empty]で"空のGameObject"を作成。名前は"GameManager"に変更。
+    1. [Assets]-[Create]-[C# Script]で"GameManager.cs"を作成。
+    1. "GameManager.cs"を記述。
+        ```c#
+        using UnityEngine;
+
+        public class GameManager : MonoBehaviour {
+            void Start() {}
+            void Update() {}
+            public void ButtonClick() {
+                Debug.Log("GameManager.ButtonClick()");
+            }
+        }
+        ```
+    1. "GameManger"（GameObject）に"GameManager.cs"をアタッチ。
+    1. "Button1"の[Inspector]-[Button]-[On Click()]-[+]-[None(Object)]に"GameManager"（GameObject）をドラッグ＆ドロップ。
+    1. [No Function]-[GameManager]-[ButtonClick()]を選択。
+    1. 再生テスト。[Button]をクリックして[Console]に"GameManager.ButtonClick()"と出力されたら成功。
+
+1. EndScene.unityの作成
+    1. [File]-[New Scene]-[Basic(Built-in)]-[Create]で新しいシーンを作成。
+    1. [File]-[Save As]で"EndScene.unity"を保存。
+    1. 終了画面を作成。
+
+1. シーン遷移のコードを記述
+    1. "GameManager.cs"を変更。
+    ```c#
+    using UnityEngine;
+    using UnityEngine.SceneManagement; //SceneManagerに必要（スペル注意）
+
+    public class GameManager : MonoBehaviour {
+        void Start() {}
+        void Update() {}
+        public void ButtonClick() {
+            SceneManager.LoadScene("EndScene");
+        }
+    }
+    ```
+1. シーンの登録
+    1. [File]-[Build Setting]-[Scenes Build]のエリアに[Project]-[Assets]内の"MainScene"と"EndScene"をドラッグ＆ドロップ（順序が重要）。
+    1. [Build And Run]または[File]-[Open Scene]-"MainScene.unity"を開き[再生]して動作確認。
+
+実行環境：Windows 10、Unity 2021.1  
+作成者：夢寐郎  
+作成日：2021年10月12日  
 
 
 <a name="2110001"></a>
