@@ -97,69 +97,63 @@ public class MyClass : MonoBehaviour {
 
 
 <a name="2110003"></a>
-# <b>～作成中です～</b>
+# <b>ScriptableObjectの基本</b>
 
 ```c#
-//SharedData.cs
+//SharedObject.cs（ScriptableObject＝C#本P137下,148）
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "XXX", menuName = "ScriptableObjects/SharedData")]
-public class SharedData : ScriptableObject {
-    [SerializeField] string _lastName; //苗字
-    [SerializeField] PersonalData[] _family = new PersonalData[4]; //家族
+[CreateAssetMenu(fileName = "XXX", menuName = "ScriptableObjects/SharedObject")]
+public class SharedObject : ScriptableObject {
+    //ScriptableObjectに保管したいデータ（Editor上でのみ記憶）
+    [SerializeField] int _score; //Inspector上で上書き可能（再生中も可）
 
-    public string LastName {
-        get { return _lastName; }
-        private set {}
-    }
-
-    public PersonalData[] Family {
-        get { return _family; }
-        private set {}
-    }
-}
-
-[System.Serializable]
-public class PersonalData { //個人データ
-    //public等にしてもインスペクタ上で設定不可（値が見える場合は有）
-    private string _firstName; //名前
-    private int _age; //年齢
-
-    public string FirstName {
-        get { return _firstName; }
-        set { _firstName = value; }
-    }
-
-    public int Age {
-        get { return _age; }
-        set { _age = value; }
+    //外部からの保管データへのアクセス用（setter/getter）
+    public int Score {
+        get { return _score; }
+        set { _score = value; }
     }
 }
 ```
 
 ```c#
-//Cube0.cs
+//GameManager.cs（GameManager＝空のGameObjectにアタッチ）
 using UnityEngine;
 
-public class Cube0 : MonoBehaviour {
-    [SerializeField] SharedData _familyData; //ScriptableObject
+public class GameManager : MonoBehaviour {
+    //Inspactor上でScriptableObjectのインスタンスを選択（C#本P148）
+    [SerializeField] SharedObject _sharedObject;
 
-    void Awake() {
-        _familyData.Family[0].FirstName = "Ichiro";
-        _familyData.Family[0].Age = 10;
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            //ScriptableObjectに保管されているデータを変更
+            _sharedObject.Score ++;
+        }
     }
+}
+```
 
-    void Start() {
-        Debug.Log(_familyData.LastName); //-> "Suzuki"
-        Debug.Log(_familyData.Family[0].FirstName); //-> "Ichiro"
-        Debug.Log(_familyData.Family[0].Age); //-> 10
+```c#
+//Cube1.cs（Cube1＝GameObjectにアタッチ）
+using UnityEngine;
+
+public class Cube1 : MonoBehaviour {
+    //Inspactor上でScriptableObjectのインスタンスを選択（C#本P148）
+    [SerializeField] SharedObject _sharedObject;
+
+    void Update() {
+        //ScriptableObjectに保管されているデータを取得
+        int _score = _sharedObject.Score;
+
+        //取得したScriptableObjectの値を活用例
+        transform.position = new Vector3(_score*0.1f, 0, 0);
     }
 }
 ```
 
 実行環境：Windows 10、Unity 2021.1  
 作成者：夢寐郎  
-作成日：2021年10月XX日  
+作成日：2021年10月11日  
 
 
 <a name="2110001"></a>
