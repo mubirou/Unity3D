@@ -152,7 +152,7 @@ public class Cube1 : MonoBehaviour {
 ```
 （注意）  
 * Unity Editor上では保存されるがビルドした場合は保存されない。
-* Unity Editor上でもScriptableObjectの値を変更した後で次の処理をしないと、Unity Editor再起動時には値が保存されない。
+* Unity Editor上でもScriptableObjectの値を変更した後（上記の場合「_sharedObject.Score ++;」の直後）で次の処理をしないと、Unity Editor再起動時には値が保存されない。
 ```c#
 #if UNITY_EDITOR
 UnityEditor.EditorUtility.SetDirty(_sharedObject);
