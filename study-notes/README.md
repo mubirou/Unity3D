@@ -150,6 +150,8 @@ public class Cube1 : MonoBehaviour {
     }
 }
 ```
+（注意）  
+* XXXX
 
 実行環境：Windows 10、Unity 2021.1  
 作成者：夢寐郎  
