@@ -151,7 +151,15 @@ public class Cube1 : MonoBehaviour {
 }
 ```
 （注意）  
-* XXXX
+* Unity Editor上では保存されるがビルドした場合は保存されない。
+* Unity Editor上でもScriptableObjectの値を変更した後で次の処理をしないと、Unity Editor再起動時には値が保存されない。
+```c#
+#if UNITY_EDITOR
+UnityEditor.EditorUtility.SetDirty(_sharedObject);
+UnityEditor.AssetDatabase.SaveAssets();
+#endif
+```
+* Unity Editor上で保存されることがデメリットとなることもある。
 
 実行環境：Windows 10、Unity 2021.1  
 作成者：夢寐郎  
