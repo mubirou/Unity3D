@@ -267,11 +267,10 @@ UnityEditor.AssetDatabase.SaveAssets();
     int _sample2 = PlayerPrefs.GetFloat("sample2");
     int _sample3 = PlayerPrefs.GetString("sample3");
     ```
-    未保存の場合…  
-    * PlayerPrefs.GetInt("xxx"): 0（int型）  
-    * PlayerPrefs.GetFloat("xxx): 0（float型）  
-    * PlayerPrefs.GetString("xxx): ""（string型）  
-    …が返る。  
+    未保存の場合は以下の値が返る
+    * PlayerPrefs.GetInt("xxx")：0（int型）  
+    * PlayerPrefs.GetFloat("xxx)：0（float型）  
+    * PlayerPrefs.GetString("xxx)：""（string型）  
 
     * 値の保存
     ```c#
