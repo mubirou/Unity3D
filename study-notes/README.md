@@ -150,7 +150,7 @@ public class Cube1 : MonoBehaviour {
     }
 }
 ```
-（注意）  
+（備考）  
 * Unity Editor上では保存されるがビルドした場合は保存されない。
 * Unity Editor上でもScriptableObjectの値を変更した後（上記の場合「_sharedObject.Score ++;」の直後）で次の処理をしないと、Unity Editor再起動時には値が保存されない。
 ```c#
@@ -160,10 +160,12 @@ UnityEditor.AssetDatabase.SaveAssets();
 #endif
 ```
 * Unity Editor上で保存されることがデメリットとなることもある。
+* [シーン遷移](#2110004)時でもデータを渡すことが可能。
 
 実行環境：Windows 10、Unity 2021.1  
 作成者：夢寐郎  
 作成日：2021年10月11日  
+更新日：2021年10月12日 シーン遷移時の記述を追加
 
 
 <a name="2110004"></a>
