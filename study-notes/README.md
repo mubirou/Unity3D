@@ -210,9 +210,10 @@ UnityEditor.AssetDatabase.SaveAssets();
         }
     }
     ```
-1. シーンの登録
-    1. [File]-[Build Setting]-[Scenes Build]のエリアに[Project]-[Assets]内の"MainScene"と"EndScene"をドラッグ＆ドロップ（順序が重要）。
-    1. [Build And Run]または[File]-[Open Scene]-"MainScene.unity"を開き[再生]して動作確認。
+1. 動作確認
+    1. [Project]-[MainScene]をダブルクリック。
+    1. [再生]して[Button]をクリックして"EndScene"に遷移すれば成功！
+    ※ビルド時は [File]-[Build Setting]-[Scenes Build]のエリアに[Project]-[Assets]内の"MainScene"と"EndScene"をドラッグ＆ドロップが必要（順序が重要）。
 
 実行環境：Windows 10、Unity 2021.1  
 作成者：夢寐郎  
