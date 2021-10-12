@@ -275,7 +275,7 @@ UnityEditor.AssetDatabase.SaveAssets();
     * 値の保存
     ```c#
     PlayerPrefs.SetInt("sample1", 100);
-    PlayerPrefs.SetFloat("sample1", 100f);
+    PlayerPrefs.SetFloat("sample1", 100.0f);
     PlayerPrefs.SetString("sample1", "ABC");
     ```
 
