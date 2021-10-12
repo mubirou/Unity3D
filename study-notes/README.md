@@ -5,7 +5,7 @@
 |No.|内容|No.|内容|No.|内容|
 |:--|:--|:--|:--|:--|:--|
 |[2110001](#2110001)|public vs SerializeField|[2110002](#2110002)|コールチン|[2110003](#2110003)|ScriptableObjectの基本|
-|[2110004](#2110004)|シーン遷移|[2110005](#2110005)|〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇|[2110006](#2110006)|〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇|
+|[2110004](#2110004)|シーン遷移|[2110005](#2110005)|staticクラス|[2110006](#2110006)|〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇|
 ***
 
 <a name="2110001"></a>
@@ -216,6 +216,41 @@ UnityEditor.AssetDatabase.SaveAssets();
     1. [Project]-[MainScene]をダブルクリック。
     1. [再生]して[Button]をクリックして"EndScene"に遷移すれば成功！
     ※ビルド時は [File]-[Build Setting]-[Scenes Build]のエリアに[Project]-[Assets]内の"MainScene"と"EndScene"をドラッグ＆ドロップが必要（順序が重要）。
+
+実行環境：Windows 10、Unity 2021.1  
+作成者：夢寐郎  
+作成日：2021年10月12日  
+
+
+<a name="2110005"></a>
+# <b>staticクラス</b>
+
+1. 特徴
+    1. 複数のクラスから利用可能な「共有データ」（変更可能）が作れる。
+    1. [シーン遷移](#2110004)時でもデータを渡すことが可能。
+    1. GameObjectにアタッチ等しなくてよい。
+    1. 利用はどこからでも可能。
+    1. staticとすることでインスタンスを生成しないことを明示できる。  
+    （プロパティやメソッドも全てstaticにする必要がある）
+
+1. 記述方法
+    ```c#
+    //Shared.cs
+    public static class Shared {
+        public static int Score = 100;
+        public static string Hello(string arg) {
+            return "Hello," + arg + "!" ;
+        }
+    }
+    ```
+    ※Debug.Log等を使う場合は「using UnityEngine;」等が必要。
+
+1. 利用方法（どこからでも可能）
+    ```c#
+    Shared.Score --;
+    Debug.Log(Shared.Score); //-> 99
+    Debug.Log(Shared.Hello("MUBIROU")); //-> "Hello,MUBIROU!"
+    ```
 
 実行環境：Windows 10、Unity 2021.1  
 作成者：夢寐郎  
