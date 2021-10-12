@@ -245,7 +245,7 @@ UnityEditor.AssetDatabase.SaveAssets();
     ```
     ※Debug.Log等を使う場合は「using UnityEngine;」等が必要。
 
-1. 利用方法（どこからでも可能）
+1. 利用方法（複数シーンを含めどこからでも可能）
     ```c#
     Shared.Score --;
     Debug.Log(Shared.Score); //-> 99
