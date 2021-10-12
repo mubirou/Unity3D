@@ -257,7 +257,7 @@ UnityEditor.AssetDatabase.SaveAssets();
 作成日：2021年10月12日  
 
 
-<a name="2110001"></a>
+<a name="2110006"></a>
 # <b>PlayerPrefsの基本</b>
 
 * 基本構文
@@ -267,10 +267,10 @@ UnityEditor.AssetDatabase.SaveAssets();
     int _sample2 = PlayerPrefs.GetFloat("sample2");
     int _sample3 = PlayerPrefs.GetString("sample3");
     ```
-    未保存の場合…
-    PlayerPrefs.GetInt("xxx"): 0（int型）
-    PlayerPrefs.GetFloat("xxx): 0（float型）
-    PlayerPrefs.GetString("xxx): ""（string型）
+    未保存の場合…  
+    * PlayerPrefs.GetInt("xxx"): 0（int型）  
+    * PlayerPrefs.GetFloat("xxx): 0（float型）  
+    * PlayerPrefs.GetString("xxx): ""（string型）  
     …が返る。  
 
     * 値の保存
