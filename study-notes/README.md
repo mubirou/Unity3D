@@ -261,7 +261,7 @@ UnityEditor.AssetDatabase.SaveAssets();
 # <b>PlayerPrefsの基本</b>
 
 * 基本構文
-    * 値の読み取り
+    * 値の読取り
     ```c#
     int _sample1 = PlayerPrefs.GetInt("sample1");
     int _sample2 = PlayerPrefs.GetFloat("sample2");
@@ -290,7 +290,7 @@ UnityEditor.AssetDatabase.SaveAssets();
         private int _score = 0;
 
         void Start() {
-            _score = PlayerPrefs.GetInt("score");
+            _score = PlayerPrefs.GetInt("score"); //読取り
             _text = GameObject.Find("Text1").GetComponent<Text>();
             _text.text = _score.ToString("D3");
         }
@@ -298,14 +298,25 @@ UnityEditor.AssetDatabase.SaveAssets();
         public void ButtonClick() {
             _score ++;
             _text.text = _score.ToString("D3");
-            PlayerPrefs.SetInt("score", _score);
+            PlayerPrefs.SetInt("score", _score); //保存
         }
     }
     ```
 
+* 注意
+    * OnDestroy()で保存をすると保存できない場合がある（Androidアプリ時）
+    ```c#
+    void OnDestroy() {
+        PlayerPrefs.SetInt("sample", 100);
+    }
+    ```
+
+実行環境：Windows 10、Unity 2021.1、Android 11
+作成者：夢寐郎  
+作成日：2021年10月13日  
 
 
-<a name="2110001"></a>
+<a name="211000X"></a>
 # <b>xxxx</b>
 
 ### xxxxxx
