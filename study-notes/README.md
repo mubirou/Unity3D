@@ -5,7 +5,7 @@
 |No.|内容|No.|内容|No.|内容|
 |:--|:--|:--|:--|:--|:--|
 |[2110001](#2110001)|public vs SerializeField|[2110002](#2110002)|コールチン|[2110003](#2110003)|ScriptableObjectの基本|
-|[2110004](#2110004)|シーン遷移|[2110005](#2110005)|staticクラス|[2110006](#2110006)|〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇|
+|[2110004](#2110004)|シーン遷移|[2110005](#2110005)|staticクラス|[2110006](#2110006)|PlayerPrefsの基本|
 ***
 
 <a name="2110001"></a>
@@ -255,6 +255,55 @@ UnityEditor.AssetDatabase.SaveAssets();
 実行環境：Windows 10、Unity 2021.1  
 作成者：夢寐郎  
 作成日：2021年10月12日  
+
+
+<a name="2110001"></a>
+# <b>PlayerPrefsの基本</b>
+
+* 基本構文
+    * 値の読み取り
+    ```c#
+    int _sample1 = PlayerPrefs.GetInt("sample1");
+    int _sample2 = PlayerPrefs.GetFloat("sample2");
+    int _sample3 = PlayerPrefs.GetString("sample3");
+    ```
+    未保存の場合…
+    PlayerPrefs.GetInt("xxx"): 0（int型）
+    PlayerPrefs.GetFloat("xxx): 0（float型）
+    PlayerPrefs.GetString("xxx): ""（string型）
+    …が返る。  
+
+    * 値の保存
+    ```c#
+    PlayerPrefs.SetInt("sample1", 100);
+    PlayerPrefs.SetFloat("sample1", 100f);
+    PlayerPrefs.SetString("sample1", "ABC");
+    ```
+
+* サンプルコード  
+    ```c#
+    //GameManager.cs
+    using UnityEngine;
+    using UnityEngine.UI; //Textに必要
+
+    public class GameManager : MonoBehaviour {
+        private Text _text;
+        private int _score = 0;
+
+        void Start() {
+            _score = PlayerPrefs.GetInt("score");
+            _text = GameObject.Find("Text1").GetComponent<Text>();
+            _text.text = _score.ToString("D3");
+        }
+        
+        public void ButtonClick() {
+            _score ++;
+            _text.text = _score.ToString("D3");
+            PlayerPrefs.SetInt("score", _score);
+        }
+    }
+    ```
+
 
 
 <a name="2110001"></a>
