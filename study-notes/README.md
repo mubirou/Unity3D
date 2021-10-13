@@ -367,7 +367,7 @@ UnityEditor.AssetDatabase.SaveAssets();
     }
     ```
 
-実行環境：Windows 10、Unity 2021.1  
+実行環境：Windows 10、Unity 2021.1、Android 11  
 作成者：夢寐郎  
 作成日：2021年10月14日  
 
