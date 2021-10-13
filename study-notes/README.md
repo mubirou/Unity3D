@@ -321,7 +321,7 @@ UnityEditor.AssetDatabase.SaveAssets();
 # <b>PlayerPrefs(2)</b>
 
 * 解説  
-    [PlayerPrefs(1)](#2110006)のようなint･float･string型といったシンプルな値ではなく複雑なデータを保存する場合、クラスをシリアライズして保存する。
+    [PlayerPrefs(1)](#2110006)のようなint･float･string型といったシンプルな値ではなく複雑なデータを保存する場合、クラスをシリアライズして保存する。（Android端末、PC Standaloneで動作確認済）
 
 * サンプルコード
     ```c#
