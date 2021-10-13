@@ -4,13 +4,16 @@
 
 |No.|内容|No.|内容|No.|内容|
 |:--|:--|:--|:--|:--|:--|
-|[2110001](#2110001)|public vs SerializeField|[2110002](#2110002)|コールチン|[2110003](#2110003)|ScriptableObjectの基本|
+|[2110001](#2110001)|SerializeField|[2110002](#2110002)|コールチン|[2110003](#2110003)|ScriptableObject(1)|
 |[2110004](#2110004)|シーン遷移|[2110005](#2110005)|staticクラス|[2110006](#2110006)|PlayerPrefs(1)|
 |[2110007](#2110007)|PlayerPrefs(2)|||||
 ***
 
 <a name="2110001"></a>
-# <b>public vs SerializeField</b>
+# <b>SerializeField</b>
+
+* 解説  
+    インスペクタ上で変数の値を設定できる方法の比較（public vs SerializeField）。
 
 1. publicの場合
     ```c#
@@ -98,7 +101,7 @@ public class MyClass : MonoBehaviour {
 
 
 <a name="2110003"></a>
-# <b>ScriptableObjectの基本</b>
+# <b>ScriptableObject(1)</b>
 
 ```c#
 //SharedObject.cs（ScriptableObject＝C#本P137下,148）
