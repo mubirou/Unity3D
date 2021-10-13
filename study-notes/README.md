@@ -5,7 +5,8 @@
 |No.|内容|No.|内容|No.|内容|
 |:--|:--|:--|:--|:--|:--|
 |[2110001](#2110001)|public vs SerializeField|[2110002](#2110002)|コールチン|[2110003](#2110003)|ScriptableObjectの基本|
-|[2110004](#2110004)|シーン遷移|[2110005](#2110005)|staticクラス|[2110006](#2110006)|PlayerPrefsの基本|
+|[2110004](#2110004)|シーン遷移|[2110005](#2110005)|staticクラス|[2110006](#2110006)|PlayerPrefs(1)|
+|[2110007](#2110006)|PlayerPrefs(2)|||||
 ***
 
 <a name="2110001"></a>
@@ -258,7 +259,7 @@ UnityEditor.AssetDatabase.SaveAssets();
 
 
 <a name="2110006"></a>
-# <b>PlayerPrefsの基本</b>
+# <b>PlayerPrefs(1)</b>
 
 * 基本構文
     * 値の読取り
@@ -304,25 +305,77 @@ UnityEditor.AssetDatabase.SaveAssets();
     ```
 
 * 注意
-    * OnDestroy()で保存をすると保存できない場合がある（Androidアプリ時）
+    * 次のようにOnDestroy()で保存をすると保存できない場合がある（Androidアプリ時）
     ```c#
     void OnDestroy() {
         PlayerPrefs.SetInt("sample", 100);
     }
     ```
 
-実行環境：Windows 10、Unity 2021.1、Android 11
+実行環境：Windows 10、Unity 2021.1、Android 11  
 作成者：夢寐郎  
 作成日：2021年10月13日  
 
 
-<a name="211000X"></a>
-# <b>xxxx</b>
+<a name="2110007"></a>
+# <b>PlayerPrefs(2)</b>
 
-### xxxxxx
+* 解説  
+    [PlayerPrefs(1)](#2110006)のようなint･float･string型といったシンプルな値ではなく複雑なデータを保存する場合、クラスをシリアライズして保存する。
 
-1. xxxx  
-    1. xxxx
+* サンプルコード
+    ```c#
+    //GameManager.cs
+    using UnityEngine;
+
+    public class GameManager : MonoBehaviour {
+        void Start() {
+            string _string = PlayerPrefs.GetString("user8"); //読み取り
+            if (_string != "") { //最初はデータなし
+                User _user = JsonUtility.FromJson<User>(_string); //JSON->object
+                Debug.Log(_user.Name); //-> "mubirou"
+                Debug.Log(_user.Age); //-> 54
+            } else {
+                Debug.Log("NO DATA");
+            }
+        }
+        
+        void Update() {
+            if (Input.GetMouseButtonDown(0)) {
+                User _user = new User();
+                string _json = JsonUtility.ToJson(_user); //Object->JSON
+                PlayerPrefs.SetString("user8", _json); //保存
+            }
+        }
+    }
+
+    //保存するクラス
+    [System.Serializable] //シリアライズ
+    public class User {
+        [SerializeField] string _name = "mubirou";
+        [SerializeField] int _age = 54;
+
+        public string Name {
+            get { return _name; }
+            set { _name = value; }
+        }
+
+        public int Age {
+            get { return _age; }
+            set { _age = value; }
+        }
+    }
+    ```
+
+実行環境：Windows 10、Unity 2021.1  
+作成者：夢寐郎  
+作成日：2021年10月14日  
+
+
+<a name="2110008"></a>
+# <b>XXXXX</b>
+
+* XXX
 
 実行環境：Windows 10、Unity 2021.1  
 作成者：夢寐郎  
