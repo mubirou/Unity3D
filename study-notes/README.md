@@ -2,7 +2,7 @@
 
 ### <b>index</b>
 
-[SerializeField](#2110001)、[コールチン](#2110002)、[ScriptableObject(1)](#2110003)、[シーン遷移](#2110004)、[staticクラス](#2110005)、[PlayerPrefs(1)](#2110006)、[PlayerPrefs(2)](#2110007)、[継承](#2110008)
+[SerializeField](#2110001)、[コールチン](#2110002)、[ScriptableObject(1)](#2110003)、[シーン遷移](#2110004)、[staticクラス](#2110005)、[PlayerPrefs(1)](#2110006)、[PlayerPrefs(2)](#2110007)、[継承](#2110008)、[C#スクリプトのテンプレート](#2110009)
 ***
 
 <a name="2110001"></a>
@@ -426,6 +426,28 @@ UnityEditor.AssetDatabase.SaveAssets();
 
 
 <a name="2110009"></a>
+# <b>C#スクリプトのテンプレート</b>
+
+* Windowsの場合  
+    C:\Program Files\Unity\Hub\Editor\2021.1.25f1\Editor\Data\Resources\ScriptTemplates\81-C# Script-NewBehaviourScript.cs.txt  
+    ```c#
+    using UnityEngine;
+
+    #ROOTNAMESPACEBEGIN#
+    public class #SCRIPTNAME# : MonoBehaviour {
+        void Start() {}
+
+        void Update() {}
+    }
+    #ROOTNAMESPACEEND#
+    ```
+
+実行環境：Windows 10、Unity 2021.1.25f1  
+作成者：夢寐郎  
+作成日：2021年10月16日  
+
+
+<a name="2110010"></a>
 # <b>XXXXX</b>
 
 * XXX
