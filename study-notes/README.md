@@ -2,7 +2,7 @@
 
 ### <b>index</b>
 
-[publicとSerializeField](#2110001) | [コールチン](#2110002) | [ScriptableObject(1)](#2110003) | [シーン遷移](#2110004) | [staticクラス](#2110005) | [PlayerPrefs(1)](#2110006) | [PlayerPrefs(2)](#2110007) | [継承](#2110008) | [C#スクリプトのテンプレート](#2110009) | [委譲とInterface](#2110010)
+[publicとSerializeField](#2110001) | [コールチン](#2110002) | [ScriptableObject](#2110003) | [シーン遷移](#2110004) | [staticクラス](#2110005) | [PlayerPrefs(1)](#2110006) | [PlayerPrefs(2)](#2110007) | [継承](#2110008) | [C#スクリプトのテンプレート](#2110009) | [委譲とInterface](#2110010)
 ***
 
 <a name="2110001"></a>
@@ -97,7 +97,7 @@ public class MyClass : MonoBehaviour {
 
 
 <a name="2110003"></a>
-# <b>ScriptableObject(1)</b>
+# <b>ScriptableObject</b>
 
 ```c#
 //SharedObject.cs（ScriptableObject＝C#本P137下,148）
