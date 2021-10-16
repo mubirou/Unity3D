@@ -379,6 +379,8 @@ UnityEditor.AssetDatabase.SaveAssets();
 <a name="2110008"></a>
 # <b>継承</b>
 
+似たような機能に[委譲](#2110010)がある。  
+
 * スーパークラス（基本クラス･基底クラス･ベースクラス･親クラス）
     ```c#
     //SuperClass.cs（アタッチは不要）
