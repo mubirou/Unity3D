@@ -490,7 +490,7 @@ UnityEditor.AssetDatabase.SaveAssets();
     //Cube1.cs（GameObject＝Cube1にアタッチ）
     using UnityEngine;
 
-    public class Cube1 : MonoBehaviour, ISomethingClass {
+    public class Cube1 : MonoBehaviour, ISomethingClass { //インターフェースの実装
         private SomethingClass _class;
 
         void Awake() {
