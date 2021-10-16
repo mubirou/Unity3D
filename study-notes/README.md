@@ -381,7 +381,7 @@ UnityEditor.AssetDatabase.SaveAssets();
 
 * スーパークラス（基本クラス･基底クラス･ベースクラス･親クラス）
     ```c#
-    //BaseClass.cs（アタッチは不要）
+    //SuperClass.cs（アタッチは不要）
     using UnityEngine; //MonoBehaviourに必要
 
     //多重継承不可のためここでMonoBehaviourを継承する必要がある
@@ -393,7 +393,7 @@ UnityEditor.AssetDatabase.SaveAssets();
         //protected＝同じクラスおよび派生クラス内でのみアクセス可能
         //protectedにするとで継承されることを暗示
         protected void SomethingMethod() { //publicでもよい
-            Debug.Log("BaseClass.SomethingMethod()");
+            Debug.Log("SuperClass.SomethingMethod()");
         }
 
         //private変数用のgetter/setter
