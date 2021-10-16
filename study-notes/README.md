@@ -2,7 +2,7 @@
 
 ### <b>index</b>
 
-[SerializeField](#2110001)、[コールチン](#2110002)、[ScriptableObject(1)](#2110003)、[シーン遷移](#2110004)、[staticクラス](#2110005)、[PlayerPrefs(1)](#2110006)、[PlayerPrefs(2)](#2110007)
+[SerializeField](#2110001)、[コールチン](#2110002)、[ScriptableObject(1)](#2110003)、[シーン遷移](#2110004)、[staticクラス](#2110005)、[PlayerPrefs(1)](#2110006)、[PlayerPrefs(2)](#2110007)、[継承](#2110008)
 ***
 
 <a name="2110001"></a>
@@ -372,6 +372,60 @@ UnityEditor.AssetDatabase.SaveAssets();
 
 
 <a name="2110008"></a>
+# <b>継承</b>
+
+* スーパークラス（基本クラス･基底クラス･ベースクラス･親クラス）
+    ```c#
+    //BaseClass.cs（アタッチは不要）
+    using UnityEngine; //MonoBehaviourに必要
+
+    //多重継承不可のためここでMonoBehaviourを継承する必要がある
+    public class SuperClass : MonoBehaviour { //publicのみ可能
+        //派生クラスをアタッチしたGameObjectのインスペクタ上で個別に設定可能
+        //個別に設定しない場合はprivateアクセス修飾子を使う
+        [SerializeField] string _name; //privateは省略（第4のアクセス修飾子にする為）
+
+        //protected＝同じクラスおよび派生クラス内でのみアクセス可能
+        //protectedにするとで継承されることを暗示
+        protected void SomethingMethod() { //publicでもよい
+            Debug.Log("BaseClass.SomethingMethod()");
+        }
+
+        //private変数用のgetter/setter
+        protected string Name { //publicでもよい
+            get { return _name; }
+            set { _name = value; }
+        }
+    }
+    ```
+    ＜Unity独自機能＞  
+    1. publicまたは[SerializeField]にすることでインスペクタ上でインスタンス毎に異なる値を設定できる。
+    1. GameObjectにアタッチするスクリプトは必ずMonoBehaviourクラスを継承する必要がある、かつC#は多重継承ができないためにスーパークラスでMonoBehaviourクラスを継承する必要がある。
+    1. MonoBehaviourクラスやDebug.Log()を利用するには「using UnityEngine;」という名前空間を定義する必要がる。
+
+* サブクラス（派生クラス･子クラス）
+    ```c#
+    //Cube1.cs（GameObject＝Cube1にアタッチ）
+    using UnityEngine;
+
+    public class Cube1 : SuperClass {
+        void Start() {
+            //thisは省略可
+            Debug.Log(this.Name); //プロパティの取得
+            this.Name = "Hoge"; //プロパティの変更
+            this.SomethingMethod(); //メソッドの実行
+        }
+
+        void Update() {}
+    }
+    ```
+
+実行環境：Windows 10、Unity 2021.1  
+作成者：夢寐郎  
+作成日：2021年10月16日  
+
+
+<a name="2110009"></a>
 # <b>XXXXX</b>
 
 * XXX
@@ -379,6 +433,5 @@ UnityEditor.AssetDatabase.SaveAssets();
 実行環境：Windows 10、Unity 2021.1  
 作成者：夢寐郎  
 作成日：2021年10月XX日  
-
 
 © 2021 夢寐郎
