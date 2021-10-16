@@ -2,7 +2,7 @@
 
 ### <b>index</b>
 
-[SerializeField](#2110001) / [コールチン](#2110002) / [ScriptableObject(1)](#2110003) / [シーン遷移](#2110004) / [staticクラス](#2110005) / [PlayerPrefs(1)](#2110006) / [PlayerPrefs(2)](#2110007) / [継承](#2110008) / [C#スクリプトのテンプレート](#2110009)
+[SerializeField](#2110001) / [コールチン](#2110002) / [ScriptableObject(1)](#2110003) / [シーン遷移](#2110004) / [staticクラス](#2110005) / [PlayerPrefs(1)](#2110006) / [PlayerPrefs(2)](#2110007) / [継承](#2110008) / [C#スクリプトのテンプレート](#2110009) / [委譲とInterface](#2110010)
 ***
 
 <a name="2110001"></a>
@@ -450,6 +450,93 @@ UnityEditor.AssetDatabase.SaveAssets();
 実行環境：Windows 10、Unity 2021.1.25f1  
 作成者：夢寐郎  
 作成日：2021年10月16日  
+
+
+<a name="2110010"></a>
+# <b>委譲とInterface</b>
+
+* 解説  
+    [継承](#2110008)の代わりに使用。インタフェースと併用することが多い。
+
+* 利用したいクラス
+    ```c#
+    //SomethingClass.cs（アタッチ不要）
+    using UnityEngine; //Debug.Log()用
+
+    class SomethingClass {
+        private string _name = "mubirou";
+
+        public void SomethingMethod() {
+            Debug.Log("SomethingClass.SomethingMethod()");
+        }
+
+        public string Name {
+            get { return _name; }
+            set { _name = value; }
+        }
+    }
+    ```
+
+* 利用したいクラス用のインタフェース
+    ```c#
+    //ISomethingClass.cs（アタッチ不要）
+    public interface ISomethingClass {
+        void SomethingMethod();
+        string Name { get; set; }
+    }
+    ```
+
+* 委譲を引受けるクラス
+    ```c#
+    //Cube1.cs（GameObject＝Cube1にアタッチ）
+    using UnityEngine;
+
+    public class Cube1 : MonoBehaviour, ISomethingClass {
+        private SomethingClass _class;
+
+        void Awake() {
+            _class = new SomethingClass(); //委譲開始！
+        }
+
+        void Start() {}
+
+        void Update() {}
+
+        public void SomethingMethod() { //インターフェースにより必須
+            _class.SomethingMethod();
+        }
+
+        public string Name { //インターフェースにより必須
+            get { return _class.Name; }
+            set { _class.Name = value; }
+        }
+    }
+    ```
+
+* 外部クラスからの操作
+    ```c#
+    //GameManager.cs（空のGameObject"GameManager"にアタッチ）
+    using UnityEngine;
+
+    public class GameManager : MonoBehaviour {
+        private Cube1 _cube1; //GameObject(Cube1)にアタッチしたCube1.cs
+
+        void Awake() {
+            _cube1 = GameObject.Find("Cube1").GetComponent<Cube1>();
+        }
+
+        void Start() {
+            _cube1.SomethingMethod(); //->"SomethingClass.SomethingMethod()"
+            Debug.Log(_cube1.Name); //->"mubirou"
+        }
+
+        void Update() {}
+    }
+    ```
+
+実行環境：Windows 10、Unity 2021.1  
+作成者：夢寐郎  
+作成日：2021年10月17日  
 
 
 <a name="2110010"></a>
