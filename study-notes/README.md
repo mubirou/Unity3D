@@ -2,11 +2,11 @@
 
 ### <b>index</b>
 
-[SerializeField](#2110001) | [コールチン](#2110002) | [ScriptableObject(1)](#2110003) | [シーン遷移](#2110004) | [staticクラス](#2110005) | [PlayerPrefs(1)](#2110006) | [PlayerPrefs(2)](#2110007) | [継承](#2110008) | [C#スクリプトのテンプレート](#2110009) | [委譲とInterface](#2110010)
+[publicとSerializeField](#2110001) | [コールチン](#2110002) | [ScriptableObject(1)](#2110003) | [シーン遷移](#2110004) | [staticクラス](#2110005) | [PlayerPrefs(1)](#2110006) | [PlayerPrefs(2)](#2110007) | [継承](#2110008) | [C#スクリプトのテンプレート](#2110009) | [委譲とInterface](#2110010)
 ***
 
 <a name="2110001"></a>
-# <b>SerializeField</b>
+# <b>publicとSerializeField</b>
 
 * 解説  
     インスペクタ上で変数の値を設定できる方法の比較（public vs SerializeField）。
