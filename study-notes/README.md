@@ -244,7 +244,7 @@ UnityEditor.AssetDatabase.SaveAssets();
     }
     ```
     ※Debug.Log等を使う場合は「using UnityEngine;」等が必要。  
-    ※定数にする場合は「static」の代わりに「**const**」を使う（値を変更しようとするとエラーが発生する）。
+    ※定数にする場合は「static」の代わりに「**const**」を使う（この場合、値を変更しようとするとエラーが発生する）。
     ```c#
     public const int Score = 100;
     ```
