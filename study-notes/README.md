@@ -231,7 +231,7 @@ UnityEditor.AssetDatabase.SaveAssets();
     1. GameObjectにアタッチ等しなくてよい。
     1. 利用はどこからでも可能。
     1. staticとすることでインスタンスを生成しないことを明示できる。  
-    （プロパティやメソッドも全てstaticにする必要がある）
+    （プロパティやメソッドも全てstaticまたはconstにする必要がある）
 
 1. 記述方法
     ```c#
@@ -243,7 +243,11 @@ UnityEditor.AssetDatabase.SaveAssets();
         }
     }
     ```
-    ※Debug.Log等を使う場合は「using UnityEngine;」等が必要。
+    ※Debug.Log等を使う場合は「using UnityEngine;」等が必要。  
+    ※定数にする場合は「static」の代わりに「const」を使う（値を変更しようとするとエラーが発生する）。
+    ```c#
+    public const int Score = 100;
+    ```
 
 1. 利用方法（複数シーンを含めどこからでも可能）
     ```c#
@@ -255,6 +259,7 @@ UnityEditor.AssetDatabase.SaveAssets();
 実行環境：Windows 10、Unity 2021.1  
 作成者：夢寐郎  
 作成日：2021年10月12日  
+更新日：2021年10月16日 constを追加
 
 
 <a name="2110006"></a>
