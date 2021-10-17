@@ -9,6 +9,6 @@
 * [Oculus Quest 対応](https://github.com/mubirou/Unity/tree/master/oculusquest)
 * [OQtouch（自作ライブラリ）](https://github.com/mubirou/Unity/tree/master/oqtouch)
 * [UObject（自作ライブラリ）](https://github.com/mubirou/Unity/tree/master/uobject)
-* [study-notes](https://github.com/mubirou/Unity/tree/master/study-notes)
+* [Study-Notes](https://github.com/mubirou/Unity/tree/master/study-notes)
 
 © 2018-2021 夢寐郎
