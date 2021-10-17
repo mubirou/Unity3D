@@ -99,6 +99,8 @@ public class MyClass : MonoBehaviour {
 <a name="2110003"></a>
 # <b>ScriptableObject</b>
 
+サンプルはScriptableObject（SharedObject.cs）をGameManager.csとCube1.csの2箇所で共有しています。
+
 ```c#
 //SharedObject.cs（ScriptableObject＝C#本P137下,148）
 using UnityEngine;
