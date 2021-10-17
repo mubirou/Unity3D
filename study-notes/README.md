@@ -555,7 +555,7 @@ UnityEditor.AssetDatabase.SaveAssets();
         * 「static struct」は恐らく不可。  
         ※その他、メソッドの定義、return文、private変数、getter/setter等も可能。
     * 名前空間（using UnityEngine;など）を定義すればDebug.Log()等も利用可能。
-    * ちなみに「UnityEngine.Vecto3」の内部はクラスではなく構造体。
+    * ちなみに「UnityEngine.Vector3」の内部はクラスではなく構造体。
 
 * 構造体のサンプル
     ```c#
