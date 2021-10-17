@@ -575,7 +575,7 @@ UnityEditor.AssetDatabase.SaveAssets();
     }
     ```
 
-* 構造体の利用法（newを使う場合）
+* 構造体の利用法➀（newを使う場合）
     ```c#
     Pos3 _pos3 = new Pos3(100f,80f,60f);
     
@@ -584,7 +584,7 @@ UnityEditor.AssetDatabase.SaveAssets();
     Debug.Log(_pos3.x); //-> 99
     ```
 
-* 構造体の利用法（newを使わない場合）
+* 構造体の利用法➁（newを使わない場合）
     ```c#
     Pos3 _pos3;
     _pos3.x = 100f;
