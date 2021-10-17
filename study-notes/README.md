@@ -553,7 +553,7 @@ UnityEditor.AssetDatabase.SaveAssets();
         * プロパティ宣言と同時の初期化は不可。
         * コンストラクタを定義する場合は引数が必須（コンストラクタは必須ではない）。
         * 「static struct」は恐らく不可。  
-    ※その他、メソッドの定義、return文、private変数、getter/setterも可能。
+        ※その他、メソッドの定義、return文、private変数、getter/setter等も可能。
     * 名前空間（using UnityEngine;など）を定義すればDebug.Log()等も利用可能。
     * UnityEngine.Vecto3の内部はクラスではなく構造体。
 
