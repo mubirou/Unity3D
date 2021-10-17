@@ -1,4 +1,4 @@
-# study-notes
+# Study-Notes
 
 ### <b>index</b>
 
