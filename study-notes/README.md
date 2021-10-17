@@ -2,7 +2,7 @@
 
 ### <b>index</b>
 
-[publicとSerializeField](#2110001) | [コールチン](#2110002) | [ScriptableObject](#2110003) | [シーン遷移](#2110004) | [staticクラス](#2110005) | [PlayerPrefs(1)](#2110006) | [PlayerPrefs(2)](#2110007) | [継承](#2110008) | [C#スクリプトのテンプレート](#2110009) | [委譲とInterface](#2110010)
+[publicとSerializeField](#2110001) | [コールチン](#2110002) | [ScriptableObject](#2110003) | [シーン遷移](#2110004) | [staticクラス](#2110005) | [PlayerPrefs(1)](#2110006) | [PlayerPrefs(2)](#2110007) | [継承](#2110008) | [C#スクリプトのテンプレート](#2110009) | [委譲とInterface](#2110010) | [構造体](#2110011)
 ***
 
 <a name="2110001"></a>
@@ -540,7 +540,68 @@ UnityEditor.AssetDatabase.SaveAssets();
 作成日：2021年10月17日  
 
 
-<a name="2110010"></a>
+<a name="2110011"></a>
+# <b>構造体</b>
+
+* 解説  
+    * クラスに比べ制限が多いが軽量のオブジェクトとして扱うのに適する。
+    * 構造体はクラスのような「参照型」ではなく「値型」データ。
+    * 構造体を収めた変数は直接、オブジェクト（構造体）の「実体」を表す。
+    * オブジェクトを生成する度に構造体のコピー？が生成される。つまり参照ではなく実体ではあるが「静的（static）」なものではない。
+    * 構文はクラスとほぼ同じ。但し以下の違いがある。
+        * 継承は不可（Interfaceの実装は可能）。
+        * プロパティ宣言と同時の初期化は不可。
+        * コンストラクタを定義する場合は引数が必須（コンストラクタは必須ではない）。
+        * 「static struct」は恐らく不可。  
+        その他、メソッドの定義、return文、private変数、getter/setterも可能。
+    * 名前空間（using UnityEngine;など）を定義すればDebug.Log()等も利用可能。
+    * UnityEngine.Vecto3の内部はクラスではなく構造体。
+
+* 構造体のサンプル
+    ```c#
+    //Pos3.cs
+    struct Pos3 {
+        //プロパティ宣言
+        public float x;
+        public float y;
+        public float z;
+        
+        //コンストラクタ
+        public Pos3(float x, float y, float z) {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+        }
+    }
+    ```
+
+* 構造体の利用法（newを使う場合）
+    ```c#
+    Pos3 _pos3 = new Pos3(100f,80f,60f);
+    
+    Debug.Log(_pos3.x); //-> 100
+    _pos3.x --;
+    Debug.Log(_pos3.x); //-> 99
+    ```
+
+* 構造体の利用法（newを使わない場合）
+    ```c#
+    Pos3 _pos3;
+    _pos3.x = 100f;
+    _pos3.y = 80f;
+    _pos3.z = 60f;
+
+    Debug.Log(_pos3.x); //-> 100
+    _pos3.x --;
+    Debug.Log(_pos3.x); //-> 99
+    ```
+
+実行環境：Windows 10、Unity 2021.1  
+作成者：夢寐郎  
+作成日：2021年10月18日  
+
+
+<a name="2110012"></a>
 # <b>XXXXX</b>
 
 * XXX
