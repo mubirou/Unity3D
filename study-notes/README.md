@@ -267,6 +267,8 @@ UnityEditor.AssetDatabase.SaveAssets();
 <a name="2110006"></a>
 # <b>PlayerPrefs(1)</b>
 
+簡単なデータをローカル上に保存する方法。データベース不要。オフラインで利用可能。
+
 * 基本構文
     * 値の読取り
     ```c#
