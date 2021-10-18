@@ -1,8 +1,8 @@
-# Study-Notes 2021
+# study-notes
 
 ### <b>index</b>
 
-| [publicとSerializeField](#2110001) | [コールチン](#2110002) | [ScriptableObject](#2110003) | [シーン遷移](#2110004) | [staticクラス](#2110005) | [PlayerPrefs(1)](#2110006) | [PlayerPrefs(2)](#2110007) | [継承](#2110008) | [C#スクリプトのテンプレート](#2110009) | [委譲とInterface](#2110010) | [構造体](#2110011) |
+| [publicとSerializeField](#2110001) | [コールチン](#2110002) | [ScriptableObject](#2110003) | [シーン遷移](#2110004) | [staticクラス](#2110005) | [PlayerPrefs(1)](#2110006) | [PlayerPrefs(2)](#2110007) | [継承](#2110008) | [C#スクリプトのテンプレート](#2110009) | [委譲とInterface](#2110010) | [構造体](#2110011) | [列挙型](#2110012) |
 ***
 
 <a name="2110001"></a>
@@ -606,6 +606,92 @@ UnityEditor.AssetDatabase.SaveAssets();
 
 
 <a name="2110012"></a>
+# <b>列挙型</b>
+
+* 解説  
+    * 複数の定数をひとつにまとめておくことができる型。
+    * コンテンツのステータス（状態）を表すものとして、文字列（重い）や数値（判りにくい）の代わりとして利用すると良い。
+    * 列挙型の値に何かを代入するものではなく、逆にこの値を任意の変数に代入して利用。
+    * 内部の値は数値である。  
+        ```c#
+        using UnityEngine;
+
+        public class GameManager : MonoBehaviour {
+            private enum Hoge { FUGA, PIYO, FOO }
+
+            void Start() {
+                Debug.Log((int)Hoge.FUGA); //-> 0
+                Debug.Log((int)Hoge.PIYO); //-> 1
+                Debug.Log((int)Hoge.FOO); //-> 2
+            }
+        }
+        ```
+
+* サンプル➀（特定の場所で利用する方法） 
+    ```c#
+    //GameManager.cs
+    using UnityEngine;
+
+    public class GameManager : MonoBehaviour {
+        private enum Anim { PLAY, PAUSE, STOP }
+        private Anim _status;
+
+        void Start() {
+        _status  = Anim.PLAY;
+        }
+
+        void Update() {
+            if (_status == Anim.PLAY) {
+                //状態は再生（PLAY）の時に実行したい処理
+            } else if (_status == Anim.PAUSE) {
+                //状態は再生（PAUSE）の時に実行したい処理
+            } else if (_status == Anim.STOP) {
+            //状態は再生（STOP）の時に実行したい処理
+            }
+        }
+    }
+    ```
+
+* サンプル➁（どこからでも利用できる方法）
+    * 外部ファイルとして一括定義
+        ```c#
+        //Enum.cs（ファイル名は任意）
+        enum Anim {
+            PLAY,
+            PAUSE,
+            STOP
+        }
+
+        enum Color {
+            RED,
+            GREEN,
+            BLUE
+        }
+        ```
+
+    * 利用方法
+        ```c#
+        //GameManager.cs
+        using UnityEngine;
+
+        public class GameManager : MonoBehaviour {
+            void Start() {
+                Debug.Log(Anim.PLAY); //PLAY（Anim型）
+                Debug.Log(Anim.PAUSE); //PAUSE（Anim型）
+                Debug.Log(Anim.STOP); //STOP（Anim型）
+                Debug.Log(Color.RED); //RED（Color型）
+                Debug.Log(Color.GREEN); //GREEN（Color型）
+                Debug.Log(Color.BLUE); //BLUE（Color型）
+            }
+        }
+        ```
+
+実行環境：Windows 10、Unity 2021.1  
+作成者：夢寐郎  
+作成日：2021年10月19日  
+
+
+<a name="2110013"></a>
 # <b>XXXXX</b>
 
 * XXX
