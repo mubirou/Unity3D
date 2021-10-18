@@ -627,7 +627,7 @@ UnityEditor.AssetDatabase.SaveAssets();
         }
         ```
 
-* サンプル➀（特定の場所で利用する方法） 
+* サンプル➀（特定の場所で利用する場合） 
     ```c#
     //GameManager.cs
     using UnityEngine;
@@ -652,7 +652,7 @@ UnityEditor.AssetDatabase.SaveAssets();
     }
     ```
 
-* サンプル➁（どこからでも利用できる方法）
+* サンプル➁（いろいろな場所で利用する場合）
     * 定義方法（外部ファイルとして一括定義）
         ```c#
         //Enum.cs（ファイル名は任意）
@@ -669,7 +669,7 @@ UnityEditor.AssetDatabase.SaveAssets();
         }
         ```
 
-    * 利用方法
+    * 利用方法（どこからでも利用可能）
         ```c#
         //GameManager.cs
         using UnityEngine;
