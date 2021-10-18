@@ -169,7 +169,7 @@ UnityEditor.AssetDatabase.SaveAssets();
 実行環境：Windows 10、Unity 2021.1  
 作成者：夢寐郎  
 作成日：2021年10月11日  
-更新日：2021年10月12日 シーン遷移時の記述を追加
+更新日：2021年10月12日 シーン遷移時の記述を追加  
 [[TOP]](#TOP)
 
 
