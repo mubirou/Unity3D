@@ -724,8 +724,7 @@ UnityEditor.AssetDatabase.SaveAssets();
 * 放出量
     * [Inspector]-[Particle System]-[✓Emmision]を次の通りに設定 
         * [Rate over Time]：0（初期値10）
-        * [Bursts]-[+]
-            * [Count]：50（初期値30）
+        * [Bursts]-[+]-[Count]：50（初期値30）
     
 * 瞬間的に放出
     1. [Inspector]-[Particle System]-[Duration]を"5"→"0.3"に変更（余韻）
