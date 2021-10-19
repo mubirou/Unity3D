@@ -717,27 +717,27 @@ UnityEditor.AssetDatabase.SaveAssets();
 * 粒子の色と不透明度  
     [Inspector]-[Particle System]-[Start Color]-[A]を"1"→"0.4"に変更
 
-* 球状に放出する
-    1. [Inspector]-[Particle System]-[✓Shape]-[Shape]を"Cone"→"Sphere"に変更
-    1. [Inspector]-[Particle System]-[✓Shape]-[Radius]（上から3番目）を"1"→"0.1
+* 球状に放出する  
+    [Inspector]-[Particle System]-[✓Shape]-[Shape]を"Cone"→"Sphere"に変更  
+    [Inspector]-[Particle System]-[✓Shape]-[Radius]（上から3番目）を"1"→"0.1
     "に変更（粒子のサイズ／オプション）
 
 * 重力の適用
     [Inspector]-[Particle System]-[Gravity Modifier]を"0"→"0.2"に変更
 
-* 放出量
-    * [Inspector]-[Particle System]-[✓Emmision]を次の通りに設定 
-        * [Rate over Time]：0（初期値10）
-        * [Bursts]-[+]-[Count]：60（初期値30）
+* 放出量  
+    [Inspector]-[Particle System]-[✓Emmision]を次の通りに設定   
+    ・[Rate over Time]：0（初期値10）  
+    ・[Bursts]-[+]-[Count]：60（初期値30）
     
-* 瞬間的に放出
-    1. [Inspector]-[Particle System]-[Duration]を"5"→"0.3"に変更（余韻）
-    1. [Inspector]-[Particle System]-[Start Lifetime]を"5"→"0.5"に変更（放出時間）
+* 瞬間的に放出  
+    [Inspector]-[Particle System]-[Duration]を"5"→"0.3"に変更（余韻）  
+    [Inspector]-[Particle System]-[Start Lifetime]を"5"→"0.5"に変更（放出時間）
 
-* フェードアウト
-    1. [Inspector]-[Particle System]-[Size over Lifetim]を✓
-    1. [Inspector]最下部にある[Particle System Curves]を下から上に広げる（わかりづらい）
-    1. 減衰カーブを選択（微調整可能）
+* フェードアウト  
+    [Inspector]-[Particle System]-[Size over Lifetim]を✓  
+    [Inspector]最下部にある[Particle System Curves]を下から上に広げる（わかりづらい）  
+    減衰カーブを選択（微調整可能）
 
 * ループ再生の中止  
     [Inspector]-[Particle System]-[✓Looping]の✓を外す
