@@ -729,11 +729,39 @@ UnityEditor.AssetDatabase.SaveAssets();
     1. [Inspector]-[Particle System]-[Duration]を"5"→"1"に変更
     1. [Inspector]-[Particle System]-[Start Lifetime]を"5"→"1"に変更
 
-* 
+* フェードアウト
+    1. [Inspector]-[Particle System]-[Size over Lifetim]を✓
+    1. [Inspector]最下部にある[Particle System Curves]を下から上に広げる（わかりづらい）
+    1. 減衰カーブを選択（調整）
+
+* ループ再生と最初の再生を中止
+    1. [Inspector]-[Particle System]-[✓Looping]の✓を外す
+    1. [Inspector]-[Particle System]-[✓Play On Awake]の✓を外す
+
+
+* コードの記述
+    ```c#
+    //GameManager.cs（空のGameObject"GameManager"にアタッチ）
+    using UnityEngine;
+
+    public class GameManager : MonoBehaviour {
+        private GameObject _sphere;
+
+        void Start() {
+            _sphere = GameObject.Find("Sphere");
+        }
+
+        void Update() {
+            if (Input.GetKeyDown(KeyCode.Space)) {
+                _sphere.GetComponent<ParticleSystem>().Play();
+            }
+        }
+    }
+    ```
 
 実行環境：Windows 10、Unity 2021.1  
 作成者：夢寐郎  
-作成日：2021年10月XX日  
+作成日：2021年10月20日  
 [[TOP]](#TOP)
 
 
