@@ -721,24 +721,26 @@ UnityEditor.AssetDatabase.SaveAssets();
     1. [Inspector]-[Particle System]-[✓Shape]-[Radius]（上から3番目）を"1"→"0.01
     "に変更
 
-    1. [Inspector]-[Particle System]-[✓Emmision]を次の通りに設定。  
+* 放出量
+    * [Inspector]-[Particle System]-[✓Emmision]を次の通りに設定 
         * [Rate over Time]：0（初期値10）
         * [Bursts]-[+]
-            * [Time]：0（初期値0.0）
             * [Count]：50（初期値30）
     
-* 瞬間的に放出する
-    1. [Inspector]-[Particle System]-[Duration]を"5"→"1"に変更
-    1. [Inspector]-[Particle System]-[Start Lifetime]を"5"→"1"に変更
+* 瞬間的に放出
+    1. [Inspector]-[Particle System]-[Duration]を"5"→"0.3"に変更（余韻）
+    1. [Inspector]-[Particle System]-[Start Lifetime]を"5"→"0.5"に変更（放出時間）
 
 * フェードアウト
     1. [Inspector]-[Particle System]-[Size over Lifetim]を✓
     1. [Inspector]最下部にある[Particle System Curves]を下から上に広げる（わかりづらい）
-    1. 減衰カーブを選択（調整）
+    1. 減衰カーブを選択（微調整可能）
 
-* ループ再生と最初の再生を中止
-    1. [Inspector]-[Particle System]-[✓Looping]の✓を外す
-    1. [Inspector]-[Particle System]-[✓Play On Awake]の✓を外す
+* ループ再生の中止  
+    [Inspector]-[Particle System]-[✓Looping]の✓を外す
+
+* 最初の再生を中止  
+    [Inspector]-[Particle System]-[✓Play On Awake]の✓を外す
 
 
 * コードの記述
