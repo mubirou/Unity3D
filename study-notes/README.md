@@ -714,7 +714,7 @@ UnityEditor.AssetDatabase.SaveAssets();
 * 粒子を白色（ボケ付）にする  
     [Inspector]-[Particle System]-[✓Renderer]（一番下）-[Material]（上から3番目）-[⦿]-[Default-Particle]を選択
 
-* 粒子の色と不透明度
+* 粒子の色と不透明度  
     [Inspector]-[Particle System]-[Start Color]-[A]を"1"→"0.4"に変更
 
 * 球状に放出する
