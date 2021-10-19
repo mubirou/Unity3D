@@ -702,7 +702,27 @@ UnityEditor.AssetDatabase.SaveAssets();
 作成日：2021年10月19日  
 [[TOP]](#TOP)
 
+
 <a name="2110013"></a>
+# <b>ParticleSystem</b>
+
+* GameObjectにParticle Systemをアタッチ
+    1. 任意をGameObjectを選択。
+    1. [Inspector]-[Add Component]-[Effects]-[Particle System]を選択。
+    1. デフォルトのマゼンタ色のパーティクルが発生。
+
+* 各種設定
+    1. [Inspector]-[Particle System]-[Renderer]（一番下）をクリック。
+    1. [Renderer]の詳細が表示される。
+    1. [Material]（上から3番目）-[⦿]-
+
+実行環境：Windows 10、Unity 2021.1  
+作成者：夢寐郎  
+作成日：2021年10月XX日  
+[[TOP]](#TOP)
+
+
+<a name="2110014"></a>
 # <b>XXXXX</b>
 
 * XXX
