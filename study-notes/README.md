@@ -708,13 +708,11 @@ UnityEditor.AssetDatabase.SaveAssets();
 
 初期設定では使いにくいParticleSystemの設定を変更して活用できるようにする
 
-* GameObjectにParticle Systemをアタッチ
-    1. [任意のGameObject]-[Inspector]-[Add Component]-[Effects]-[Particle System]を選択。
-    1. デフォルトのマゼンタ色のパーティクルが発生。
+* GameObjectにParticle Systemをアタッチ  
+    [任意のGameObject]-[Inspector]-[Add Component]-[Effects]-[Particle System]を選択（デフォルトは矩形のマゼンタ色）
 
-* パーティクルを白色にする
-    1. [Inspector]-[Particle System]-[✓Renderer]（一番下）-[Material]（上から3番目）-[⦿]-[Default-Particle]を選択。
-    1. パーティクルがボケた丸形の白色に変化。
+* パーティクルを白色（ボケ付）にする  
+    [Inspector]-[Particle System]-[✓Renderer]（一番下）-[Material]（上から3番目）-[⦿]-[Default-Particle]を選択
 
 * 球状に放出する
     1. [Inspector]-[Particle System]-[✓Shape]-[Shape]を"Cone"→"Sphere"に変更
