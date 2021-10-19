@@ -2,7 +2,7 @@
 
 ### <b>index</b>
 
-| [publicとSerializeField](#2110001) | [コールチン](#2110002) | [ScriptableObject](#2110003) | [シーン遷移](#2110004) | [staticクラス](#2110005) | [PlayerPrefs(1)](#2110006) | [PlayerPrefs(2)](#2110007) | [継承](#2110008) | [C#スクリプトのテンプレート](#2110009) | [委譲とInterface](#2110010) | [構造体](#2110011) | [列挙型](#2110012) |
+| [publicとSerializeField](#2110001) | [コールチン](#2110002) | [ScriptableObject](#2110003) | [シーン遷移](#2110004) | [staticクラス](#2110005) | [PlayerPrefs(1)](#2110006) | [PlayerPrefs(2)](#2110007) | [継承](#2110008) | [C#スクリプトのテンプレート](#2110009) | [委譲とInterface](#2110010) | [構造体](#2110011) | [列挙型](#2110012) | [ParticleSystem](#2110013) |
 ***
 
 <a name="2110001"></a>
@@ -705,6 +705,8 @@ UnityEditor.AssetDatabase.SaveAssets();
 
 <a name="2110013"></a>
 # <b>ParticleSystem</b>
+
+初期設定では使いにくいParticleSystemの設定を変更して活用できるようにする
 
 * GameObjectにParticle Systemをアタッチ
     1. [任意のGameObject]-[Inspector]-[Add Component]-[Effects]-[Particle System]を選択。
