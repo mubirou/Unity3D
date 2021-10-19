@@ -707,14 +707,29 @@ UnityEditor.AssetDatabase.SaveAssets();
 # <b>ParticleSystem</b>
 
 * GameObjectにParticle Systemをアタッチ
-    1. 任意をGameObjectを選択。
-    1. [Inspector]-[Add Component]-[Effects]-[Particle System]を選択。
+    1. [任意のGameObject]-[Inspector]-[Add Component]-[Effects]-[Particle System]を選択。
     1. デフォルトのマゼンタ色のパーティクルが発生。
 
-* 各種設定
-    1. [Inspector]-[Particle System]-[Renderer]（一番下）をクリック。
-    1. [Renderer]の詳細が表示される。
-    1. [Material]（上から3番目）-[⦿]-
+* パーティクルを白色にする
+    1. [Inspector]-[Particle System]-[✓Renderer]（一番下）-[Material]（上から3番目）-[⦿]-[Default-Particle]を選択。
+    1. パーティクルがボケた丸形の白色に変化。
+
+* 球状に放出する
+    1. [Inspector]-[Particle System]-[✓Shape]-[Shape]を"Cone"→"Sphere"に変更
+    1. [Inspector]-[Particle System]-[✓Shape]-[Radius]（上から3番目）を"1"→"0.01
+    "に変更
+
+    1. [Inspector]-[Particle System]-[✓Emmision]を次の通りに設定。  
+        * [Rate over Time]：0（初期値10）
+        * [Bursts]-[+]
+            * [Time]：0（初期値0.0）
+            * [Count]：50（初期値30）
+    
+* 瞬間的に放出する
+    1. [Inspector]-[Particle System]-[Duration]を"5"→"1"に変更
+    1. [Inspector]-[Particle System]-[Start Lifetime]を"5"→"1"に変更
+
+* 
 
 実行環境：Windows 10、Unity 2021.1  
 作成者：夢寐郎  
