@@ -780,8 +780,8 @@ UnityEditor.AssetDatabase.SaveAssets();
     ※[Warning]ダイアログが表示されたら[Yes]  
     ※旧来のAPIを使いたい場合は **[Edit]-[Project Settings]-[Player]-[Other Settings]-[Active Input Handling]-[Input Manager(Old)]** もしくは **[Both]**（両方使えるようにする）を選択
 
-1. Input System設定ファイルの作成（要調査）
-    [Edit]-[Project Settings]-[Input System Package]-[Create settings asset]
+1. Input System設定ファイルの作成（要調査）  
+    **[Edit]-[Project Settings]-[Input System Package]-[Create settings asset]**
 
 実行環境：Windows 10、Unity 2021.1（Input System 1.0.2）  
 作成者：夢寐郎  
