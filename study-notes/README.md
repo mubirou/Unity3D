@@ -783,6 +783,74 @@ UnityEditor.AssetDatabase.SaveAssets();
 1. Input System設定ファイルの作成（要調査）  
     **[Edit]-[Project Settings]-[Input System Package]-[Create settings asset]**
 
+* キー入力  
+    ```c#
+    //GameManager.cs（空のGameObject"GameManager"にアタッチ）
+    using UnityEngine;
+    using UnityEngine.InputSystem; //Keyboardに必要
+
+    public class GameManager : MonoBehaviour {
+        private Keyboard _key; //キーボードの状態
+
+        void Start() {
+            _key = Keyboard.current;
+        }
+
+        void Update() {
+            //[Space]キーを押した時
+            if (_key.spaceKey.wasPressedThisFrame) {
+                Debug.Log("Space↓");
+            }
+
+            //[Space]キーを押し続けている時
+            if (_key.spaceKey.isPressed) {
+                Debug.Log("Space↓↓");
+            }
+            
+            //[Space]キーを離した時
+            if (_key.spaceKey.wasReleasedThisFrame) {
+                Debug.Log("SPECE↑");
+            }
+        }
+    }
+    ```
+
+* マウス入力
+    ```c#
+    //GameManager.cs（空のGameObject"GameManager"にアタッチ）
+    using UnityEngine;
+    using UnityEngine.InputSystem; //Mouseに必要
+
+    public class GameManager : MonoBehaviour {
+        private Mouse _mouse; //マウスの状態
+
+        void Start() {
+            _mouse = Mouse.current;
+        }
+
+        void Update() {
+            //マウスボタン関連
+            if (_mouse.leftButton.wasPressedThisFrame) {
+                Debug.Log("MouseL↓"); //マウス左ボタンを押した時の処理
+            }
+            if (_mouse.leftButton.isPressed) {
+                Debug.Log("MouseL↓↓"); //マウス左ボタンを押し続けている時の処理
+            }
+            if (_mouse.leftButton.wasReleasedThisFrame) {
+                Debug.Log("MouseL↑"); //マウス左ボタンを離した時の処理
+            }
+
+            //マウスポインタの座標
+            Vector2 _mousePos = _mouse.position.ReadValue();
+            Debug.Log(_mousePos.x + ":" + _mousePos.y);
+
+            //マウスポインタの前フレームからの移動距離
+            Vector2 _mouseDelta = _mouse.delta.ReadValue();
+            Debug.Log(_mouseDelta.x + ":" + _mouseDelta.y);
+        }
+    }
+    ```
+
 実行環境：Windows 10、Unity 2021.1（Input System 1.0.2）  
 作成者：夢寐郎  
 作成日：2021年10月XX日  
