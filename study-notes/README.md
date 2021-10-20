@@ -777,7 +777,7 @@ UnityEditor.AssetDatabase.SaveAssets();
 
 1. Input Systemのインストール  
     [Window]-[Package Manager]-[Packages:]-[Unity Registry]-[Input System]-[Install]  
-    （[Warning]ダイアログが表示されたら[Yes]）
+    ※[Warning]ダイアログが表示されたら[Yes]
 
 1. xxxx
 
