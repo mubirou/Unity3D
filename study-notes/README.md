@@ -777,11 +777,12 @@ UnityEditor.AssetDatabase.SaveAssets();
 
 1. Input Systemのインストール  
     [Window]-[Package Manager]-[Packages:]-[Unity Registry]-[Input System]-[Install]  
-    ※[Warning]ダイアログが表示されたら[Yes]
+    ※[Warning]ダイアログが表示されたら[Yes]  
+    ※旧来のAPIを使いたい場合は[Edit]-[Project Settings]-[Player]-[Other Settings]-[Active Input Handling]-[Input Manager(Old)]もしくは[Both]（両方使えるようにする）を選択
 
 1. xxxx
 
-実行環境：Windows 10、Unity 2021.1  
+実行環境：Windows 10、Unity 2021.1（Input System 1.0.2）  
 作成者：夢寐郎  
 作成日：2021年10月XX日  
 [[TOP]](#TOP)
