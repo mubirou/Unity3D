@@ -775,6 +775,21 @@ UnityEditor.AssetDatabase.SaveAssets();
 <a name="2110014"></a>
 # <b>XXXXX</b>
 
+1. Input Systemのインストール
+    [Window]-[Package Manager]-[Packages:]-[Unity Registry]-[Input System]-[Install]  
+    （[Warning]ダイアログが表示されたら[Yes]）
+
+1. xxxx
+
+実行環境：Windows 10、Unity 2021.1  
+作成者：夢寐郎  
+作成日：2021年10月XX日  
+[[TOP]](#TOP)
+
+
+<a name="2110015"></a>
+# <b>XXXXX</b>
+
 * XXX
 
 実行環境：Windows 10、Unity 2021.1  
