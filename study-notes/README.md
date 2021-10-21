@@ -817,7 +817,7 @@ UnityEditor.AssetDatabase.SaveAssets();
     ＜その他のキー入力＞  
     * aKey～zKey（アルファベントキー）
     * upArrowKey～leftArrowKey（矢印キー）ほか  
-    （参考）[Unity InputSystem入門(1)](https://note.com/npaka/n/nde6965c8b5d0)
+    * 参考サイト：[Unity InputSystem入門（1）](https://note.com/npaka/n/nde6965c8b5d0)
 
 * マウス入力
     ```c#
