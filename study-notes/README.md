@@ -817,7 +817,7 @@ UnityEditor.AssetDatabase.SaveAssets();
     ＜その他のキー入力＞  
     * aKey～zKey（アルファベントキー）
     * upArrowKey～leftArrowKey（矢印キー）ほか  
-    * 参考サイト：[Unity InputSystem入門（1）](https://note.com/npaka/n/nde6965c8b5d0)
+    * 参考サイト：[Unity InputSystem入門（1）](https://note.com/npaka/n/nde6965c8b5d0#iWQx9)
 
 * マウス入力
     ```c#
@@ -858,10 +858,12 @@ UnityEditor.AssetDatabase.SaveAssets();
     * leftButton（マウスの左ボタン）
     * rightButton（マウスの右ボタン）
     * middleButton（マウスの中央ボタン）他
+    * 参考サイト：[Unity InputSystem入門（1）](https://note.com/npaka/n/nde6965c8b5d0#85dSg)
+
 
 実行環境：Windows 10、Unity 2021.1（Input System 1.0.2）  
 作成者：夢寐郎  
-作成日：2021年10月XX日  
+作成日：2021年10月21日  
 [[TOP]](#TOP)
 
 
