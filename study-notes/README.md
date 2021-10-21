@@ -870,7 +870,7 @@ UnityEditor.AssetDatabase.SaveAssets();
 <a name="2110015"></a>
 # <b>ToString()（この項目は編集中です）</b>
 
-### Int32.ToString()メソッド  
+1. **Int32.ToString()**メソッド  
 サンプル：現在の時刻を"hh:mm:ss"形式で表示する  
 ```c#
 //GameManager.cs（空のGameObject"GameManager"にアタッチ）
@@ -888,7 +888,7 @@ public class GameManager : MonoBehaviour {
 }
 ```
 
-### Int32.ToString("xx")メソッド  
+1. **Int32.ToString("xx")**メソッド  
 サンプル：現在の時刻を"hh:mm:ss"形式で表示する
 ```c#
 //GameManager.cs（空のGameObject"GameManager"にアタッチ）
@@ -907,7 +907,7 @@ public class GameManager : MonoBehaviour {
 ```
 参考サイト：[docs.microsoft.com](https://docs.microsoft.com/ja-jp/dotnet/api/system.int32.tostring?view=net-5.0#System_Int32_ToString_System_String_)
 
-### DateTime.ToString("XX")メソッド  
+1. **DateTime.ToString("XX")**メソッド  
 サンプル：現在の時刻を"hh:mm:ss"形式で表示する  
 ```c#
     using UnityEngine;
