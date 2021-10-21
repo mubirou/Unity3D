@@ -773,7 +773,7 @@ UnityEditor.AssetDatabase.SaveAssets();
 
 
 <a name="2110014"></a>
-# <b>Input System（この項目は編集中です）</b>
+# <b>Input System</b>
 
 1. Input Systemのインストール  
     **[Window]-[Package Manager]-[Packages:]-[Unity Registry]-[Input System]-[Install]**  
