@@ -2,7 +2,7 @@
 
 ### <b>index</b>
 
-| [publicとSerializeField](#2110001) | [コールチン](#2110002) | [ScriptableObject](#2110003) | [シーン遷移](#2110004) | [staticクラス](#2110005) | [PlayerPrefs(1)](#2110006) | [PlayerPrefs(2)](#2110007) | [継承](#2110008) | [C#スクリプトのテンプレート](#2110009) | [委譲とInterface](#2110010) | [構造体](#2110011) | [列挙型](#2110012) | [ParticleSystem](#2110013) | [Input System](#2110014) |
+| [publicとSerializeField](#2110001) | [コールチン](#2110002) | [ScriptableObject](#2110003) | [シーン遷移](#2110004) | [staticクラス](#2110005) | [PlayerPrefs(1)](#2110006) | [PlayerPrefs(2)](#2110007) | [継承](#2110008) | [C#スクリプトのテンプレート](#2110009) | [委譲とInterface](#2110010) | [構造体](#2110011) | [列挙型](#2110012) | [ParticleSystem](#2110013) | [Input System](#2110014) | [ToString()](#2110015) |
 ***
 
 <a name="2110001"></a>
@@ -868,6 +868,68 @@ UnityEditor.AssetDatabase.SaveAssets();
 
 
 <a name="2110015"></a>
+# <b>ToString()（この項目は編集中です）</b>
+
+### Int32.ToString()メソッド  
+サンプル：現在の時刻を"hh:mm:ss"形式で表示する  
+
+```c#
+//GameManager.cs（空のGameObject"GameManager"にアタッチ）
+using UnityEngine;
+using System; //DateTimeに必要
+
+public class GameManager : MonoBehaviour {
+    void Start() {
+        DateTime _now = DateTime.Now;
+        string _h = (_now.Hour < 10) ? "0" + _now.Hour : _now.Hour.ToString();
+        string _m = (_now.Minute < 10) ? "0" + _now.Minute : _now.Minute.ToString();
+        string _s = (_now.Second < 10) ? "0" + _now.Second : _now.Second.ToString();
+        Debug.Log(_h + ":" + _m + ":" + _s); //"07:08:09"
+    }
+}
+```
+
+### (Int32.ToString("xx")メソッド  
+サンプル：現在の時刻を"hh:mm:ss"形式で表示する
+```c#
+//GameManager.cs（空のGameObject"GameManager"にアタッチ）
+using UnityEngine;
+using System; //DateTimeに必要
+
+public class GameManager : MonoBehaviour {
+    void Start() {
+        DateTime _now = DateTime.Now;
+        string _h = _now.Hour.ToString("D2");
+        string _m = _now.Minute.ToString("D2");
+        string _s = _now.Second.ToString("D2");
+        Debug.Log(_h + ":" + _m + ":" + _s); //"07:08:09"
+    }
+}
+```
+参考サイト：[docs.microsoft.com](https://docs.microsoft.com/ja-jp/dotnet/api/system.int32.tostring?view=net-5.0#System_Int32_ToString_System_String_)
+
+### DateTime.ToString("XX")メソッド  
+サンプル：現在の時刻を"hh:mm:ss"形式で表示する  
+```c#
+    using UnityEngine;
+using System; //DateTimeに必要
+
+public class GameManager : MonoBehaviour {
+    void Start() {
+        Debug.Log(DateTime.Now.ToString("HH:mm:ss")); //"07:08:09"
+    }
+}
+```
+参考サイト：[docs.microsoft.com](https://docs.microsoft.com/ja-jp/dotnet/api/system.datetime.tostring?view=net-5.0#System_DateTime_ToString_System_String_)
+
+
+実行環境：Windows 10、Unity 2021.1  
+作成者：夢寐郎  
+作成日：2021年10月XX日  
+[[TOP]](#TOP)
+
+
+<a name="2110016"></a>
 # <b>XXXXX</b>
 
 * XXX
