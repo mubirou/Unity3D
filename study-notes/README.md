@@ -949,7 +949,7 @@ public class GameManager : MonoBehaviour {
 
 1. 
 
-実行環境：Windows 10、Unity 2021.1、Xiaomi Redmi Note 9T(Android 11)  
+実行環境：Windows 10、Unity 2021.1、Xiaomi Redmi Note 9T (Android 11)  
 作成者：夢寐郎  
 作成日：2021年10月XX日  
 [[TOP]](#TOP)
