@@ -950,7 +950,7 @@ public class GameManager : MonoBehaviour {
 1. Android SDK･NDK･JDKの確認
     1. [Unity Hub](https://unity3d.com/jp/get-unity/download)を起動
     1. インストール済Unityの右肩の三点をクリック
-    1. [モジュールを加える]-[Platforms]-[✓Android Build Support]-[**✓Android SDK & NDK Tools**]および[**✓OpenJDK**]を確認
+    1. [モジュールを加える]-[Platforms]-[✓Android Build Support]-[**✓Android SDK & NDK Tools**]および[**✓OpenJDK**]を確認  
     ※無効にする場合  
     [Unity]-[Edit]-[Preferences]-[External Tools]-[Android]の以下の✓を外す  
         1. ✓**JDK** Installed with Unity (recommended)
