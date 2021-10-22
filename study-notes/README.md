@@ -957,6 +957,9 @@ public class GameManager : MonoBehaviour {
     (2) ✓**Android JDK** Installed with Unity (recommended)  
     (3) ✓**Android NDK** Installed with Unity (recommended)
 
+1. シーンの追加  
+    [File]-[Build Settings]-[Scenes In Build]のエリアに[Project]-[Assets]-[Scenes]からシーンをドラッグ＆ドロップ（順序が重要）
+
 実行環境：Windows 10、Unity 2021.1、Xiaomi Redmi Note 9T (Android 11)  
 作成者：夢寐郎  
 作成日：2021年10月XX日  
