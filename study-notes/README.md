@@ -871,7 +871,7 @@ UnityEditor.AssetDatabase.SaveAssets();
 # <b>ToString()（この項目は編集中です）</b>
 
 ### Int32.ToString()メソッド  
-サンプル：現在の時刻を"hh:mm:ss"形式で表示する  
+サンプル（現在の時刻を"hh:mm:ss"形式で表示）  
 ```c#
 //GameManager.cs（空のGameObject"GameManager"にアタッチ）
 using UnityEngine;
@@ -889,14 +889,15 @@ public class GameManager : MonoBehaviour {
 ```
 
 ### Int32.ToString("xx")メソッド  
-サンプル：現在の時刻を"hh:mm:ss"形式で表示する
+サンプル➀（整数表示で指定桁数に満たない場合は左側に"0"を挿入）
 ```c#
-//GameManager.cs（空のGameObject"GameManager"にアタッチ）
+//GameManager.cs
 using UnityEngine;
 using System; //DateTimeに必要
 
 public class GameManager : MonoBehaviour {
     void Start() {
+        //現在の時刻を"hh:mm:ss"形式で表示
         DateTime _now = DateTime.Now;
         string _h = _now.Hour.ToString("D2");
         string _m = _now.Minute.ToString("D2");
@@ -905,16 +906,32 @@ public class GameManager : MonoBehaviour {
     }
 }
 ```
+
+サンプル➁（小数点以下の桁数の指定）
+```c#
+//GameManager.cs
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    void Start() {
+        Debug.Log((12.3456).ToString("F3")); //-> "12.346"（四捨五入される）
+        Debug.Log((12).ToString("F3")); //-> "12.000"
+    }
+}
+```
+
 参考サイト：[docs.microsoft.com](https://docs.microsoft.com/ja-jp/dotnet/api/system.int32.tostring?view=net-5.0#System_Int32_ToString_System_String_)
 
 ### DateTime.ToString("XX")メソッド  
-サンプル：現在の時刻を"hh:mm:ss"形式で表示する  
+サンプル（時刻を"hh:mm:ss"形式で表示）  
 ```c#
-    using UnityEngine;
+//GameManager.cs
+using UnityEngine;
 using System; //DateTimeに必要
 
 public class GameManager : MonoBehaviour {
     void Start() {
+        //現在の時刻を"hh:mm:ss"形式で表示
         Debug.Log(DateTime.Now.ToString("HH:mm:ss")); //"07:08:09"
     }
 }
@@ -923,7 +940,7 @@ public class GameManager : MonoBehaviour {
 
 実行環境：Windows 10、Unity 2021.1  
 作成者：夢寐郎  
-作成日：2021年10月XX日  
+作成日：2021年10月22日  
 [[TOP]](#TOP)
 
 
