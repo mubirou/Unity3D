@@ -922,7 +922,7 @@ public class GameManager : MonoBehaviour {
 
 参考サイト：[docs.microsoft.com](https://docs.microsoft.com/ja-jp/dotnet/api/system.int32.tostring?view=net-5.0#System_Int32_ToString_System_String_)
 
-### DateTime.ToString("XX")メソッド  
+### DateTime.ToString("xx")メソッド  
 サンプル（時刻を"hh:mm:ss"形式で表示）  
 ```c#
 //GameManager.cs
