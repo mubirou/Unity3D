@@ -963,7 +963,11 @@ public class GameManager : MonoBehaviour {
     * 複数ある場合は順序が重要
     * 1つの場合は[Add Open Scenes]を選択でも可
     
-1. XXX
+1. プラットフォームをAndroidに変更
+    1. [File]-[Build Settings]を開く
+    1. [Platform]-[Android]-[Switch Platform]を選択
+
+1. XXXX
 
 実行環境：Windows 10、Unity 2021.1、Xiaomi Redmi Note 9T (Android 11)  
 作成者：夢寐郎  
