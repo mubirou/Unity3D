@@ -967,7 +967,12 @@ public class GameManager : MonoBehaviour {
     1. [File]-[Build Settings]を開く
     1. [Platform]-[Android]-[Switch Platform]を選択
 
-1. XXXX
+1. プロジェクトの設定
+    1. [File]-[Build Settings]-[Player Settings]を選択
+    1. [Player]の以下を設定  
+        (1) Company Name : mubirou  
+        (2) Product Name :（Android端末上のアプリ名）  
+    1. アイコンXXXXX
 
 実行環境：Windows 10、Unity 2021.1、Xiaomi Redmi Note 9T (Android 11)  
 作成者：夢寐郎  
