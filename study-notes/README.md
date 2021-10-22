@@ -947,7 +947,8 @@ public class GameManager : MonoBehaviour {
 <a name="2110016"></a>
 # <b>Androidビルド（この項目は書きかけです）</b>
 
-1. 
+1. Android SDK･NDKのインストール
+    1. [Unity Hub](https://unity3d.com/jp/get-unity/download)を起動
 
 実行環境：Windows 10、Unity 2021.1、Xiaomi Redmi Note 9T (Android 11)  
 作成者：夢寐郎  
