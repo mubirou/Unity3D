@@ -953,8 +953,8 @@ public class GameManager : MonoBehaviour {
     1. [モジュールを加える]-[Platforms]-[✓Android Build Support]-[**✓Android SDK & NDK Tools**]および[**✓OpenJDK**]を確認
     * 無効にする場合  
     [Unity]-[Edit]-[Preferences]-[External Tools]-[Android]の以下の✓を外す  
-    (1) ✓**JDK** Installed with Unity (recommended)
-    (2) ✓**Android JDK** Installed with Unity (recommended)
+    (1) ✓**JDK** Installed with Unity (recommended)  
+    (2) ✓**Android JDK** Installed with Unity (recommended)  
     (3) ✓**Android NDK** Installed with Unity (recommended)
 
 実行環境：Windows 10、Unity 2021.1、Xiaomi Redmi Note 9T (Android 11)  
