@@ -958,7 +958,8 @@ public class GameManager : MonoBehaviour {
     (3) ✓**Android NDK** Installed with Unity (recommended)
 
 1. シーンの追加  
-    [File]-[Build Settings]-[Scenes In Build]のエリアに[Project]-[Assets]-[Scenes]からシーンをドラッグ＆ドロップ  
+    1. [File]-[Build Settings]-[Scenes In Build]エリアを確認
+    1. [Project]-[Assets]-[Scenes]からシーンをドラッグ＆ドロップ  
     * 複数ある場合は順序が重要
     * 1つの場合は[Add Open Scenes]を選択でも可
     
