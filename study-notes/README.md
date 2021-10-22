@@ -956,7 +956,7 @@ public class GameManager : MonoBehaviour {
 
 
 <a name="2110017"></a>
-# <b></b>
+# <b>XXXXX</b>
 
 * XXX
 
