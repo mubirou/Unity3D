@@ -950,7 +950,7 @@ public class GameManager : MonoBehaviour {
 1. Android SDK･NDK･JDKの確認
     1. [Unity Hub](https://unity3d.com/jp/get-unity/download)を起動
     1. インストール済Unityの右肩の三点をクリック
-    1. [モジュールを加える]-[Platforms]-[✓Android Build Support]-[✓**Android SDK & NDK Tools**]および[✓**OpenJDK**]を確認
+    1. [モジュールを加える]-[Platforms]-[✓Android Build Support]-[**✓Android SDK & NDK Tools**]および[**✓OpenJDK**]を確認
 
 実行環境：Windows 10、Unity 2021.1、Xiaomi Redmi Note 9T (Android 11)  
 作成者：夢寐郎  
