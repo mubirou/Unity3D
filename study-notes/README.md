@@ -962,7 +962,7 @@ public class GameManager : MonoBehaviour {
 
 実行環境：Windows 10、Unity 2021.1  
 作成者：夢寐郎  
-作成日：2021年10月XX日  
+作成日：202X年XX月XX日  
 [[TOP]](#TOP)
 
 © 2021 夢寐郎
