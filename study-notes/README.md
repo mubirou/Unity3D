@@ -1002,7 +1002,7 @@ Android実機テストに必要な最低限のビルド設定。
 <a name="2110017"></a>
 # <b>処理速度計測</b>
 
-* Stopwatchクラスを利用
+1. Stopwatchクラスを利用する方法
     ```c#
     //GameManager.cs（空のGameObject"GameManager"にアタッチ）
     using UnityEngine;
@@ -1024,7 +1024,7 @@ Android実機テストに必要な最低限のビルド設定。
     * UnityEngine.Debug()とSystem.Diagnostics.Debug()が衝突するため上記のように記述するか、new System.Diagnostics.Stopwatch()とする必要がある  
     参考サイト：[Microsoft Ignite](https://docs.microsoft.com/ja-jp/dotnet/api/system.diagnostics.stopwatch?view=net-5.0)  
 
-* 
+2. DateTime.Ticksプロパティを利用する方法
     ```c#
     //GameManager.cs
     using UnityEngine;
