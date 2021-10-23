@@ -1021,12 +1021,30 @@ Android実機テストに必要な最低限のビルド設定。
         }
     }
     ```
-    * UnityEngine.Debug()とSystem.Diagnostics.Debug()が衝突するため上記のように記述するか、new System.Diagnostics.Stopwatch()とする必要がある
-    参考サイト：[Microsoft Ignite](https://docs.microsoft.com/ja-jp/dotnet/api/system.diagnostics.stopwatch?view=net-5.0)
+    * UnityEngine.Debug()とSystem.Diagnostics.Debug()が衝突するため上記のように記述するか、new System.Diagnostics.Stopwatch()とする必要がある  
+    参考サイト：[Microsoft Ignite](https://docs.microsoft.com/ja-jp/dotnet/api/system.diagnostics.stopwatch?view=net-5.0)  
+
+* 
+    ```c#
+    //GameManager.cs
+    using UnityEngine;
+    using System; //DateTimeに必要
+
+    public class GameManager : MonoBehaviour {
+        void Start() {
+            long _start = DateTime.Now.Ticks; //100ナノ秒単位（精度は10ミリ秒）
+            for (long i=0; i<1000000000; i++) { //10億回繰り返す場合…
+                //速度計測したい処理
+            }
+            Debug.Log((DateTime.Now.Ticks - _start)/10000000f); //0.2513274（秒）
+        }
+    }
+    ```
+    参考サイト：[Microsoft Ignite](https://docs.microsoft.com/ja-jp/dotnet/api/system.datetime.ticks?view=net-5.0)
 
 実行環境：Windows 10、Unity 2021.1  
 作成者：夢寐郎  
-作成日：202X年XX月XX日  
+作成日：2021年10月23日  
 [[TOP]](#TOP)
 
 
