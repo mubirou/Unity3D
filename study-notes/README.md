@@ -964,7 +964,7 @@ Android実機テスト用の最低限のビルド設定
     1. [Platform]-[Android]-[Switch Platform]を選択
 
 1. プロジェクトの設定
-    1. 事前に[プロジェクト]-[Assets]内にアイコン用ファイル（432x432pxの.png）を用意
+    1. 事前に[プロジェクト]-[Assets]内にアイコン用ファイル（**432x432px**の**.png**）を用意
     1. [File]-[Build Settings]-[Player Settings]を選択
     1. [Player]の以下を設定  
         (1) **Company Name** : mubirou（初期値はDefaultCompany）  
