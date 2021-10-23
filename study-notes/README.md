@@ -952,7 +952,7 @@ Android実機テストに必要な最低限のビルド設定。
 1. Android SDK･NDK･JDKの確認
     1. [Unity Hub](https://unity3d.com/jp/get-unity/download)を起動
     1. インストール済Unityの右肩の縦三点をクリック
-    1. [モジュールを加える]-[Platforms]-[✓Android Build Support]-[**✓Android SDK & NDK Tools**]および[**✓OpenJDK**]を確認
+    1. [モジュールを加える]-[Platforms]-[✓Android Build Support]-[✓Android SDK & NDK Tools]および[✓OpenJDK]を確認
 
 1. シーンの追加  
     1. [File]-[Build Settings]-[Scenes In Build]エリアを確認
