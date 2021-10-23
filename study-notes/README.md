@@ -969,9 +969,8 @@ Android実機テスト用の最低限のビルド設定
     1. [Player]の以下を設定  
         (1) **Company Name** : mubirou（初期値はDefaultCompany）  
         (2) Product Name :（Android端末上のアプリ名＝初期値はプロジェクト名）  
-         * (1)(2)は[Other Settings]-[Identification]-[Package Name]に反映  
         (3) Version : 0.1（Android端末上で確認可能）  
-        (4) Default Icon : 上記の432x432pxの.pngを選択
+        (4) Default Icon : 上記の432x432pxの.pngを選択  
 
 1. スマホの開発者向け設定
     1. [設定]-[デバイス情報]-[すべての仕様]-[MIMUバージョン]を8回連打 
