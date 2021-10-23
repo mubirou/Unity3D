@@ -975,7 +975,7 @@ Android実機テストに必要な最低限のビルド設定。
         (1) Portrait : 縦  
         (2) Portrait Upside Down : 縦（反対向き）  
         (3) Landscape Right : 横（右回転）  
-        (4) Landscape Left : 横（左回転）
+        (4) Landscape Left : 横（左回転）  
         (5) Auto Rotation : 自動
 
 1. スマホの開発者向け設定
