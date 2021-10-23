@@ -985,9 +985,7 @@ Android実機テスト用の最低限のビルド設定
     1. [File]-[Build Settings]-[Build And Run]を選択
     1. 任意のファイル名（.apk）を付け保存
     1. Android端末上に[USB経由でこのアプリをインストールしますか？]と表示されたら[インストール]を選択
-    1. Android端末上でアプリが起動すれば成功    mubirou（.apk）
-
-    [USB経由でインストール]
+    1. Android端末上でアプリが起動すれば成功！
 
 実行環境：Windows 10、Unity 2021.1、Xiaomi Redmi Note 9T (Android 11)  
 作成者：夢寐郎  
