@@ -947,36 +947,53 @@ public class GameManager : MonoBehaviour {
 <a name="2110016"></a>
 # <b>Androidビルド（この項目は書きかけです）</b>
 
+Android実機テスト用の最低限のビルド設定
+
 1. Android SDK･NDK･JDKの確認
     1. [Unity Hub](https://unity3d.com/jp/get-unity/download)を起動
     1. インストール済Unityの右肩の縦三点をクリック
     1. [モジュールを加える]-[Platforms]-[✓Android Build Support]-[**✓Android SDK & NDK Tools**]および[**✓OpenJDK**]を確認
-    * Android SDK･NDK･JDKを無効にする場合  
-    [Unity]-[Edit]-[Preferences]-[External Tools]-[Android]の以下の✓を外す  
-    (1) ✓**JDK** Installed with Unity (recommended)  
-    (2) ✓**Android JDK** Installed with Unity (recommended)  
-    (3) ✓**Android NDK** Installed with Unity (recommended)
 
 1. シーンの追加  
     1. [File]-[Build Settings]-[Scenes In Build]エリアを確認
-    1. [Project]-[Assets]-[Scenes]からシーンをドラッグ＆ドロップ  
-    * 複数ある場合は順序が重要
-    * 1つの場合は[Add Open Scenes]を選択でも可
+    1. [Project]-[Assets]から必要なシーンをドラッグ＆ドロップ  
+    * 複数ある場合は順序が重要（1番上のシーンが最初に再生される）
     
 1. プラットフォームをAndroidに変更
     1. [File]-[Build Settings]を開く
     1. [Platform]-[Android]-[Switch Platform]を選択
 
 1. プロジェクトの設定
+    1. 事前に[プロジェクト]-[Assets]内にアイコン用ファイル（432x432pxの.png）を用意
     1. [File]-[Build Settings]-[Player Settings]を選択
     1. [Player]の以下を設定  
-        (1) Company Name : mubirou  
-        (2) Product Name :（Android端末上のアプリ名）  
-    1. アイコンXXXXX
+        (1) **Company Name** : mubirou（初期値はDefaultCompany）  
+        (2) Product Name :（Android端末上のアプリ名＝初期値はプロジェクト名）  
+         * (1)(2)は[Other Settings]-[Identification]-[Package Name]に反映  
+        (3) Version : 0.1（Android端末上で確認可能）  
+        (4) Default Icon : 上記の432x432pxの.pngを選択
+
+1. スマホの開発者向け設定
+    1. [設定]-[デバイス情報]-[すべての仕様]-[MIMUバージョン]を8回連打 
+    1. [設定]-[追加設定]-[開発者向けオプション]-[USBデバッグ]と[USB経由でインストール]をON
+    [開発者向けオプション]をONにする
+    1. [✓私は起こりうるリスクを認識し、その結果として起こりうる結果を自発的に受け入れます。]-[OK]
+
+1. スマホとPCを接続
+    1. USBケーブルで接続
+    1. [ファイル転送/Android Auto]を✓
+
+1. ビルド
+    1. [File]-[Build Settings]-[Build And Run]を選択
+    1. 任意のファイル名（.apk）を付け保存
+    1. Android端末上に[USB経由でこのアプリをインストールしますか？]と表示されたら[インストール]を選択
+    1. Android端末上でアプリが起動すれば成功    mubirou（.apk）
+
+    [USB経由でインストール]
 
 実行環境：Windows 10、Unity 2021.1、Xiaomi Redmi Note 9T (Android 11)  
 作成者：夢寐郎  
-作成日：2021年10月XX日  
+作成日：2021年10月23日  
 [[TOP]](#TOP)
 
 
