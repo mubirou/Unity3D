@@ -971,6 +971,12 @@ Android実機テストに必要な最低限のビルド設定。
         (2) Product Name : Android端末上のアプリ名（初期値はプロジェクト名）  
         (3) Version : 0.1（Android端末上で確認可能）  
         (4) Default Icon : 上記の432x432pxの.pngを選択  
+    1. [Player]-[Resolution and Presentation]-[Orientation]-[Default Orientation]を次の中から選択  
+        (1) Portrait : 縦  
+        (2) Portrait Upside Down : 縦（反対向き）  
+        (3) Landscape Right : 横（右回転）  
+        (4) Landscape Left : 横（左回転）
+        (5) Auto Rotation : 自動
 
 1. スマホの開発者向け設定
     1. [設定]-[デバイス情報]-[すべての仕様]-[MIMUバージョン]を8回連打 
