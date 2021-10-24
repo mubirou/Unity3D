@@ -1074,7 +1074,7 @@ Android実機テストに必要な最低限のビルド設定。
         }
     }
     ```
-    * 処理速度結果：約0.3秒
+    * 処理速度結果：約**0.3**秒
     * 結果：2（double型）以下全て同結果
 
 1. Vector2.magnitudeを利用する方法
@@ -1083,7 +1083,7 @@ Android実機テストに必要な最低限のビルド設定。
     float  _b = 1f;
     _result = new Vector2(_a, _b).magnitude;
     ```
-    * 処理速度結果：約2.5秒
+    * 処理速度結果：約**2.5**秒
     * 処理速度を求める場合は「Math.Sqrt()」を使うべき
 
 1. UnityEngine.Mathfを利用する方法
@@ -1092,7 +1092,7 @@ Android実機テストに必要な最低限のビルド設定。
     float _b = 1f;
     _result = Mathf.Sqrt(_a*_a + _b*_b);
     ```
-    * 処理速度結果：約4.2秒
+    * 処理速度結果：約**4.2**秒
     * 「UnityEngine.Mathf」は「System.Math」より遅い
 
 1. Math.Pow()を利用する方法
@@ -1101,7 +1101,7 @@ Android実機テストに必要な最低限のビルド設定。
     double _b = 1;
     _result = Math.Sqrt(Math.Pow(_a,2) + Math.Pow(_b,2));
     ```
-    * 処理速度結果：約7.0秒
+    * 処理速度結果：約**7.0**秒
     * 「Math.Pow()」を使った二乗は非常に遅い
 
 実行環境：Windows 10、Unity 2021.1  
