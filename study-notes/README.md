@@ -1062,17 +1062,18 @@ Android実機テストに必要な最低限のビルド設定。
             long _start = DateTime.Now.Ticks;
             double _result = 0;
             for (long i=0; i<100000000; i++) {
-                //↓ここの内容のみ異なる
+                //↓この３行のみ異なる
                 double _x = (double)Math.Sqrt(3); //√3
                 double _y = 1f; //1
                 _result = Math.Sqrt(_x*_x + _y*_y);
-                //↑ここまでの内容のみ異なる
             }
-            Debug.Log((DateTime.Now.Ticks - _start)/10000000f); //->0.3021907（秒）
-            Debug.Log(_result); //->2（double型）
+            Debug.Log((DateTime.Now.Ticks - _start)/10000000f);
+            Debug.Log(_result);
         }
     }
     ```
+    * 処理速度結果：0.3021907（秒）
+    * 結果：2（double型）以下全て同結果
 
 1. Vector2.magnitudeを利用する方法
     ```c#
