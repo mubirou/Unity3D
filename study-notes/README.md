@@ -1049,7 +1049,7 @@ Android実機テストに必要な最低限のビルド設定。
 
 
 <a name="2110018"></a>
-# <b>三平方の定理（編集中の項目です）</b>
+# <b>三平方の定理</b>
 
 三辺の長さが1:2:√3の直角三角形を三平方の定理で確認する
 
@@ -1066,7 +1066,7 @@ Android実機テストに必要な最低限のビルド設定。
             for (long i=0; i<100000000; i++) {
                 //↓この３行のみ異なる
                 double _a = (double)Math.Sqrt(3); //√3
-                double _b = 1f; //1
+                double _b = 1; //1
                 _result = Math.Sqrt(_a*_a + _b*_b);
             }
             Debug.Log((DateTime.Now.Ticks - _start)/10000000f);
@@ -1098,7 +1098,7 @@ Android実機テストに必要な最低限のビルド設定。
 1. Math.Pow()を利用する方法
     ```c#
     double _a = (double)Math.Sqrt(3);
-    double _b = 1f;
+    double _b = 1;
     _result = Math.Sqrt(Math.Pow(_a,2) + Math.Pow(_b,2));
     ```
     * 処理速度結果：約7.0秒
@@ -1106,7 +1106,7 @@ Android実機テストに必要な最低限のビルド設定。
 
 実行環境：Windows 10、Unity 2021.1  
 作成者：夢寐郎  
-作成日：2021年10月XX日  
+作成日：2021年10月24日  
 [[TOP]](#TOP)
 
 
