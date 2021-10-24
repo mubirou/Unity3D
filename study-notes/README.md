@@ -1053,7 +1053,7 @@ Android実機テストに必要な最低限のビルド設定。
 
 三辺の長さが1:2:√3の直角三角形を三平方の定理で確認する
 
-1. Math.Sqrt()を利用する方法
+1. Math.Sqrt(a*a+b*b)を利用する方法
     ```c#
     //GameManager.cs
     using UnityEngine;
