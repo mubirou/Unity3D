@@ -2,7 +2,7 @@
 
 ### <b>index</b>
 
-| [publicとSerializeField](#2110001) | [コールチン](#2110002) | [ScriptableObject](#2110003) | [シーン遷移](#2110004) | [staticクラス](#2110005) | [PlayerPrefs(1)](#2110006) | [PlayerPrefs(2)](#2110007) | [継承](#2110008) | [C#スクリプトのテンプレート](#2110009) | [委譲とInterface](#2110010) | [構造体](#2110011) | [列挙型](#2110012) | [ParticleSystem](#2110013) | [Input System](#2110014) | [ToString()](#2110015) | [Androidビルド](#2110016) | [処理速度計測](#2110017) |
+| [publicとSerializeField](#2110001) | [コールチン](#2110002) | [ScriptableObject](#2110003) | [シーン遷移](#2110004) | [staticクラス](#2110005) | [PlayerPrefs(1)](#2110006) | [PlayerPrefs(2)](#2110007) | [継承](#2110008) | [C#スクリプトのテンプレート](#2110009) | [委譲とInterface](#2110010) | [構造体](#2110011) | [列挙型](#2110012) | [ParticleSystem](#2110013) | [Input System](#2110014) | [ToString()](#2110015) | [Androidビルド](#2110016) | [処理速度計測](#2110017) | [三平方の定理](#2110018) |
 ***
 
 <a name="2110001"></a>
@@ -1049,6 +1049,65 @@ Android実機テストに必要な最低限のビルド設定。
 
 
 <a name="2110018"></a>
+# <b>三平方の定理（編集中の項目です）</b>
+
+1. Math.Sqrt()を利用する方法
+    ```c#
+    //GameManager.cs
+    using UnityEngine;
+    using System; //DateTimeに必要
+
+    public class GameManager : MonoBehaviour {
+        void Start() {
+            long _start = DateTime.Now.Ticks;
+            double _result = 0;
+            for (long i=0; i<100000000; i++) {
+                //↓ここの内容のみ異なる
+                double _x = (double)Math.Sqrt(3); //√3
+                double _y = 1f; //1
+                _result = Math.Sqrt(_x*_x + _y*_y);
+                //↑ここまでの内容のみ異なる
+            }
+            Debug.Log((DateTime.Now.Ticks - _start)/10000000f); //->0.3021907（秒）
+            Debug.Log(_result); //->2（double型）
+        }
+    }
+    ```
+
+1. Vector2.magnitudeを利用する方法
+    ```c#
+    float  _x = (float)Math.Sqrt(3);
+    float  _y = 1f;
+    _result = new Vector2(_x, _y).magnitude;
+    ```
+    * 処理速度結果：2.526268（秒）
+    * 処理速度を求める場合は「Math.Sqrt()」を使うべき
+
+1. UnityEngine.Mathfを利用する方法
+    ```c#
+    float _x = (float)Mathf.Sqrt(3);
+    float _y = 1f;
+    _result = Mathf.Sqrt(_x*_x + _y*_y);
+    ```
+    * 処理速度結果：4.225761（秒）
+    * 「UnityEngine.Mathf」は「System.Math」より遅い
+
+1. Math.Pow()を利用する方法
+    ```c#
+    double _x = (double)Math.Sqrt(3);
+    double _y = 1f;
+    _result = Math.Sqrt(Math.Pow(_x,2) + Math.Pow(_y,2));
+    ```
+    * 処理速度結果：7.046805（秒）
+    * 「Math.Pow()」を使った二乗は非常に遅い
+
+実行環境：Windows 10、Unity 2021.1  
+作成者：夢寐郎  
+作成日：2021年10月XX日  
+[[TOP]](#TOP)
+
+
+<a name="2110019"></a>
 # <b>XXXXX</b>
 
 * XXX
