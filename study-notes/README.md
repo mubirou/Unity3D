@@ -1065,9 +1065,9 @@ Android実機テストに必要な最低限のビルド設定。
             double _result = 0;
             for (long i=0; i<100000000; i++) {
                 //↓この３行のみ異なる
-                double _x = (double)Math.Sqrt(3); //√3
-                double _y = 1f; //1
-                _result = Math.Sqrt(_x*_x + _y*_y);
+                double _a = (double)Math.Sqrt(3); //√3
+                double _b = 1f; //1
+                _result = Math.Sqrt(_a*_a + _b*_b);
             }
             Debug.Log((DateTime.Now.Ticks - _start)/10000000f);
             Debug.Log(_result);
@@ -1079,27 +1079,27 @@ Android実機テストに必要な最低限のビルド設定。
 
 1. Vector2.magnitudeを利用する方法
     ```c#
-    float  _x = (float)Math.Sqrt(3);
-    float  _y = 1f;
-    _result = new Vector2(_x, _y).magnitude;
+    float  _a = (float)Math.Sqrt(3);
+    float  _b = 1f;
+    _result = new Vector2(_a, _b).magnitude;
     ```
     * 処理速度結果：約2.5秒
     * 処理速度を求める場合は「Math.Sqrt()」を使うべき
 
 1. UnityEngine.Mathfを利用する方法
     ```c#
-    float _x = (float)Mathf.Sqrt(3);
-    float _y = 1f;
-    _result = Mathf.Sqrt(_x*_x + _y*_y);
+    float _a = (float)Mathf.Sqrt(3);
+    float _b = 1f;
+    _result = Mathf.Sqrt(_a*_a + _b*_b);
     ```
     * 処理速度結果：約4.2秒
     * 「UnityEngine.Mathf」は「System.Math」より遅い
 
 1. Math.Pow()を利用する方法
     ```c#
-    double _x = (double)Math.Sqrt(3);
-    double _y = 1f;
-    _result = Math.Sqrt(Math.Pow(_x,2) + Math.Pow(_y,2));
+    double _a = (double)Math.Sqrt(3);
+    double _b = 1f;
+    _result = Math.Sqrt(Math.Pow(_a,2) + Math.Pow(_b,2));
     ```
     * 処理速度結果：約7.0秒
     * 「Math.Pow()」を使った二乗は非常に遅い
