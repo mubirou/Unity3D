@@ -27,8 +27,7 @@
 1. コンピュータ（Ubuntu）と Oculus Quest を Oculs Link 対応のケーブルを使って USB 接続  
     （Quest 画面に「データへのアクセスを許可」と表示されたら「許可する」を選択）
 
-（以下過去に Ubuntu で行った処理）
-1. Ubuntu の端末上で次の処理を行う  
+（以下過去に Ubuntu の「端末」上で行った処理）
     ```
     $ adb version ←インストールされているか確認
     …
