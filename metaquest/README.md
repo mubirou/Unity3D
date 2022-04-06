@@ -40,22 +40,22 @@
 
 1. Quest を[開発者モード](#開発者モード)にする  
 
-1. コンピュータ（WWindows）と Quest を Oculus Link 対応ケーブルを使って USB 接続  
+1. コンピュータ（Windows）と Quest を Oculus Link 対応ケーブルを使って USB 接続  
     （Quest 画面に「データへのアクセスを許可」と表示されたら「許可する」を選択）
 1. Unity のメニューから [File]-[Build Settings] を選ぶ
 1. [Add Open Scenes] を押してビルドするシーンを登録
 1. [Platform] を [Android] に変更し [Switch Platform] をクリック
-1. [Play Settings] を選択
-1. [Publishing Settings] を次の通りに設定  
-    1. [KeystoreManager...] を選択
-    1. [Keystore...]-[CreateNew]-[Anywhere] を選択
-    1. 名前を "**mubirou.keystore**" 等に変更
-    1. [KeystoreManager] に戻り次の通りに設定し [AddKey] をクリック  
-        * Password：XXXX
-        * Confirm password：XXXX
+1. [Play Settings]-[Publishing Settings] を次の通りに設定  
+    1. [Keystore Manager...] を選択
+    1. [Keystore...]-[Create New]-[Anywhere] を選択
+    1. 名前を "**mubirou.keystore**" 等に変更し「保存」
+    1. [Keystore Manager] に戻り次の通りに設定し [Add Key] をクリック  
+        * Password：XXXXXX
+        * Confirm password：XXXXXX
         * Alias：mubirou（任意）
-        * Password：XXXX
-        * Confirm password：XXXX
+        * Password：XXXXXX
+        * Confirm password：XXXXXX
+    1. [Select...] から上記を選択し [Path] [Password] [Alias] を入力
 1. [Player] を次の通りに設定  
     * Product Name：**saple001**（アプリ名･Quest上に表示）
 1. [OtherSEttings] を次の通りに設定  
