@@ -26,7 +26,7 @@
     1. [Oculusアプリ]-[デバイス]→[このヘッドセットについて] を選択
     1. "MACアドレス" に表示される XX:XX:XX:XX:XX:XX が Quest の MAC アドレス
 
-実行環境：Windows 10、Quest（初代）、Oculusアプリ 156  
+実行環境：Windows 10、Meta Quest、Oculusアプリ 156.0  
 作成者：夢寐郎  
 作成日：2019年06月07日  
 更新日：2022年04月06日 Windows対応  
