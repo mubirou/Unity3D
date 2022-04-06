@@ -1,4 +1,4 @@
-# Quest 対応
+# Meta Quest 対応
 
 ### <b>INDEX</b>
 
