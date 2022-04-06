@@ -33,6 +33,7 @@
 更新日：2022年04月06日 Windows対応  
 
 
+## この項目は書きかけです
 <a name="ビルドの基本"></a>
 # <b>ビルドの基本</b>
 
@@ -58,7 +59,7 @@
     1. [Select...] から上記を選択し [Path] [Password] [Alias] を入力
 1. [Player] を次の通りに設定  
     * Product Name：**saple001**（アプリ名･Quest上に表示）
-1. [OtherSEttings] を次の通りに設定  
+1. [Other Settings] を次の通りに設定  
     * Package Name：**com.mubiorou.sample001**（これでアプリを識別･Quest上に表示）
     * Minimum API Level：Android 4.4 "KitKat"（API level 19）
 1. [XRSettings] を次の通りに設定
