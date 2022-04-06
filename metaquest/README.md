@@ -19,12 +19,12 @@
 1. Quest を開発モードにする  
     1. Quest の電源を入れ、スマホの Bluetooth をオン
     1. スマホ上の [Oculusアプリ](https://bit.ly/2KuxKEu) を起動
-    1. [デバイス]アイコンから Quest と"接続"
-    1. [デバイス]-[開発者モード] をオンにする
+    1. [Oculusアプリ]-[デバイス]から Quest と"接続"
+    1. [Oculusアプリ]-[デバイス]-[開発者モード] をオンにする
 
 1. MACアドレスの取得
     1. [Oculusアプリ]-[デバイス]→[このヘッドセットについて] を選択
-    1. [MACアドレス] に表示される XX:XX:XX:XX:XX:XX がQuestのMACアドレス
+    1. "MACアドレス" に表示される XX:XX:XX:XX:XX:XX が Quest の MAC アドレス
 
 実行環境：Windows 10、Quest（初代）、Oculusアプリ 156  
 作成者：夢寐郎  
