@@ -1,4 +1,4 @@
-# Oculus Quest 対応
+# Quest 対応
 
 ### <b>INDEX</b>
 
