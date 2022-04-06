@@ -244,4 +244,4 @@ $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb start-server
 作成者：夢寐郎  
 作成日：2019年07月22日  
 
-© 2019 夢寐郎
+© 2019-2022 夢寐郎
