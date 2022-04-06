@@ -13,7 +13,7 @@
 <a name="MACアドレスの取得"></a>
 # <b>MACアドレスの取得</b>
 
-### MACアドレスの取得①
+### MACアドレスの取得➀
 
 1. Oculus デベロッパー登録をする  
     https://dashboard.oculus.com/
@@ -24,29 +24,9 @@
     1. [デバイス]アイコンから Quest と"接続"
     1. [デバイス]-[開発者モード] をオンにする
 
-1. コンピュータ（Ubuntu）と Oculus Quest を Oculs Link 対応のケーブルを使って USB 接続  
-    （Quest 画面に「データへのアクセスを許可」と表示されたら「許可する」を選択）
-
-（以下過去に Ubuntu の「端末」上で行った処理）
-    ```
-    $ adb version ←インストールされているか確認
-    …
-    $ adb devices  ←コンピュータに接続されているデバイスを確認
-    List of devices attached
-    XXXXXXXXXXXXXX device ←ケーブルを抜差してQuestであることを突き止める
-
-    $ adb -s XXXXXXXXXXXXXX shell ip addr show wlan0
-    ……
-    link/ether XX:XX:XX:XX:XX:XX brd ff:ff:ff:ff:ff:ff
-    ↑XX:XX:XX:XX:XX:XX がQuestのMACアドレス
-    ```
-
-### MACアドレスの取得②
-
-1. Play ストアから [Oculus](https://play.google.com/store/apps/details?id=com.oculus.twilight) アプリをダウンロード
-1. [Oculus] アプリを起動→[デバイス]→対象の Quest を選択し接続
-1. [デバイス]→[このヘッドセットについて] を選択
-1. [MACアドレス] に表示される XX:XX:XX:XX:XX:XX がQuestのMACアドレス
+1. MACアドレスの取得
+    1. [Oculusアプリ]-[デバイス]→[このヘッドセットについて] を選択
+    1. [MACアドレス] に表示される XX:XX:XX:XX:XX:XX がQuestのMACアドレス
 
 実行環境：Windows 10、Quest（初代）、Oculusアプリ 156  
 作成者：夢寐郎  
