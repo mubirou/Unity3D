@@ -18,14 +18,16 @@
 1. Oculus デベロッパー登録をする  
     https://dashboard.oculus.com/
 
-1. Oculus Quest を開発モードにする  
+1. Quest を開発モードにする  
+    1. Quest の電源を入れ、スマホの Bluetooth をオン
     1. スマホ上の [Oculusアプリ](https://bit.ly/2KuxKEu) を起動
-    1. [設定] を選び「近くにあります」という表示される "Oculus Quest XXX…" を選択し接続
-    1. [設定]-[その他の設定]-[開発者モード] を ON にする
+    1. [デバイス]アイコンから Quest と"接続"
+    1. [デバイス]-[開発者モード] をオンにする
 
-1. コンピュータ（Ubuntu）と Oculus Quest を USB 接続  
-    （Oculus Quest 画面に英語で「このコンピュータを信頼するか？」という主旨の表示）
+1. コンピュータ（Ubuntu）と Oculus Quest を Oculs Link 対応のケーブルを使って USB 接続  
+    （Quest 画面に「データへのアクセスを許可」と表示されたら「許可する」を選択）
 
+（以下過去に Ubuntu で行った処理）
 1. Ubuntu の端末上で次の処理を行う  
     ```
     $ adb version ←インストールされているか確認
@@ -43,14 +45,14 @@
 ### MACアドレスの取得②
 
 1. Play ストアから [Oculus](https://play.google.com/store/apps/details?id=com.oculus.twilight) アプリをダウンロード
-1. [Oculus] アプリを起動→[⚙設定]→対象の Oculus Quest を選択し接続
-1. 接続済みの Oculus Quest をタップ→ [...その他の設定]→[このヘッドセットについて] を選択
+1. [Oculus] アプリを起動→[デバイス]→対象の Quest を選択し接続
+1. [デバイス]→[このヘッドセットについて] を選択
 1. [MACアドレス] に表示される XX:XX:XX:XX:XX:XX がQuestのMACアドレス
 
-実行環境：Ubuntu 18.04.2 LTS、Oculus Quest、Android 9.0.1、Oculus 25.0  
+実行環境：Windows 10、Quest（初代）、Oculusアプリ 156  
 作成者：夢寐郎  
 作成日：2019年06月07日  
-更新日：2019年06月28日 MACアドレスの取得②を追加  
+更新日：2022年04月06日 Windows対応  
 
 
 <a name="ビルドの基本"></a>
@@ -114,7 +116,7 @@ $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb kill-server
 $ /home/（ユーザ名）/Android/Sdk/platform-tools/adb start-server
 ```
 
-実行環境：Ubuntu 18.04.2 LTS、Unity 2019.1.0f2 Personal、Oculus Quest
+実行環境：Ubuntu 18.04.2 LTS、Unity 2019.1.0f2 Personal、Oculus Quest  
 作成者：夢寐郎  
 作成日：2019年06月07日  
 更新日：2019年07月19日 KeyStore作成関連事項を追記
