@@ -13,8 +13,6 @@
 <a name="MACアドレスの取得"></a>
 # <b>MACアドレスの取得</b>
 
-### MACアドレスの取得➀
-
 1. Oculus デベロッパー登録をする  
     https://dashboard.oculus.com/
 
