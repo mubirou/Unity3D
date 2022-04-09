@@ -9,8 +9,8 @@
 # <b>publicとSerializeField</b>
 
 * 解説  
-    インスペクタ上で変数の値を設定できる方法の比較（public vs SerializeField）。
-🖊🖊
+    インスペクタ上で変数の値を設定できる方法の比較（public vs SerializeField）。  
+
 1. publicの場合
     ```c#
     using UnityEngine;
