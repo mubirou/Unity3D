@@ -1136,7 +1136,16 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド
         └ ✓**Android SDK & NDK Tools**
         └ ✓**OpenJDK**
 
-* 
+* プロジェクトの作成
+    1. [Unity Hub]を起動
+    1. [プルジェクト]-[新しいプロジェクト]を選択
+    1. エディターバージョンを選択
+    1. [VR]を選択
+  
+    1. Platform を **Android** にする 
+        [File]-[Build Settings]-[Platform]-[Android]-[Switch Platform]
+    
+
 
 参考：[FRAME SYNTESIS](https://framesynthesis.jp/tech/unity/oculusquest/)  
 実行環境：Windows 10、Unity 2022.1.0b15、  
