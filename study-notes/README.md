@@ -1139,9 +1139,10 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド
 * プロジェクトの作成  
     1. [Unity Hub]を起動
     1. [プルジェクト]-[新しいプロジェクト]を選択
-    1. エディターバージョンを選択
-    1. [VR]を選択
-  
+    1. エディターバージョンを上記のものにする
+    1. [VR（コア）]を選択
+    1. [プロジェクト名][保存場所]を設定して[プロジェクトを作成]
+
 * プラットフォームを**Android**に変更  
     [File]-[Build Settings]-[Platform]-[Android]-[Switch Platform]
 
@@ -1154,6 +1155,10 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド
 * レンダリングのカラースペースが**Linear**か確認  
     [File]-[Build Settings]-[Player Settings]-[Player]-[Other Settings]-[Rendering]-[Color Space]-[Linear]
 
+* グラフィックAPIを**OpenGLES3**にする（要確認）  
+    [File]-[Build Settings]-[Player Settings]-[Player]-[Other Settings]-[Auto Graphics API]をオフ
+    [File]-[Build Settings]-[Player Settings]-[Player]-[Graphics APIs]-[OpenGLES3]
+
 * **Oculus Integration**をインポートする  
     1. [Window]-[Asset Store]
     1. Search for assets: Oculus Integration
@@ -1161,7 +1166,7 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド
 
 
 参考：[FRAME SYNTESIS](https://framesynthesis.jp/tech/unity/oculusquest/)  
-実行環境：Windows 10、Unity 2022.1.0b15、  
+実行環境：Windows 10、Unity 2022.1.0b15、Oculus Integration 38.0  
 作成者：夢寐郎  
 作成日：202X年XX月XX日  
 [[TOP]](#TOP)
