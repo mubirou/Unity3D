@@ -1154,6 +1154,11 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド
 * レンダリングのカラースペースが**Linear**か確認  
     [File]-[Build Settings]-[Player Settings]-[Player]-[Other Settings]-[Rendering]-[Color Space]-[Linear]
 
+* **Oculus Integration**をインポートする  
+    1. [Window]-[Asset Store]
+    1. Search for assets: Oculus Integration
+    1. [Open in Unity]-[Download]-[Import]-[Import]
+
 
 参考：[FRAME SYNTESIS](https://framesynthesis.jp/tech/unity/oculusquest/)  
 実行環境：Windows 10、Unity 2022.1.0b15、  
