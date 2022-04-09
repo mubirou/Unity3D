@@ -1132,9 +1132,9 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド
     1. Unity Hubを起動
     1. [インストール]-[エディターをインストール]-[プレリリース]-[ベータ]から最新のベータ版を[インストール]
     1. 途中「モジュールを加える」画面で以下のモジュールを追加  
-        ✓**Android Build Support**  
-        └ ✓**Android SDK & NDK Tools**  
-        └ ✓**OpenJDK**  
+        **✓Android Build Support**  
+        └ **✓Android SDK & NDK Tools**  
+        └ **✓OpenJDK**  
 
 * プロジェクトの作成
     1. [Unity Hub]を起動
