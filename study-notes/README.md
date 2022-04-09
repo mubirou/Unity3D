@@ -1151,6 +1151,9 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド
 * テクスチャの圧縮形式を**ASTC**に変更  
     [File]-[Build Settings]-[Player Settings]-[Player]-[Other Settings]-[Texture compression format]-[ASTC]
 
+* レンダリングのカラースペースが**Linear**か確認  
+    [File]-[Build Settings]-[Player Settings]-[Player]-[Other Settings]-[Rendering]-[Color Space]-[Linear]
+
 
 参考：[FRAME SYNTESIS](https://framesynthesis.jp/tech/unity/oculusquest/)  
 実行環境：Windows 10、Unity 2022.1.0b15、  
