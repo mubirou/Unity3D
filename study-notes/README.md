@@ -1121,7 +1121,9 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド
     1. [メニュー]-[デバイス]でQuestと接続
     1. 引き続き[開発者モード]をオンにする
 
-* XXX
+* QuestとWindowsパソコンを接続  
+    1. [Oculus Link対応ケーブル](https://www.amazon.co.jp/gp/product/B01MZIPYPY/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)を用意
+    1. 
 
 参考：[FRAME SYNTESIS](https://framesynthesis.jp/tech/unity/oculusquest/)  
 実行環境：Windows 10、Unity 202X.X、  
