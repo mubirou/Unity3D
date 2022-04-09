@@ -1142,7 +1142,7 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド
     1. エディターバージョンを選択
     1. [VR]を選択
   
-    1. Platform を **Android** にする 
+    1. Platform を **Android** にする  
         [File]-[Build Settings]-[Platform]-[Android]-[Switch Platform]
     
 
