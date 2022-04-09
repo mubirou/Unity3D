@@ -1145,7 +1145,7 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド
 1. プラットフォームを**Android**にする  
     [File]-[Build Settings]-[Platform]-[Android]-[Switch Platform]
 
-1. プラグインプロバイダーを**Oculus**にする
+1. プラグインプロバイダーを**Oculus**にする  
     [File]-[Build Settings]-[Player Settings]-[XR Plug-in Management]-[Oculus]
 
 
