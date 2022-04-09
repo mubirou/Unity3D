@@ -1,4 +1,4 @@
-# Study Notes 2021 <a name="TOP"></a>
+# Study Notes <a name="TOP"></a>
 
 ### <b>index</b>
 
