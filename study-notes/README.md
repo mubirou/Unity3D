@@ -1123,10 +1123,23 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド
 
 * QuestとWindowsパソコンを接続  
     1. [Oculus Link対応ケーブル](https://www.amazon.co.jp/gp/product/B01MZIPYPY/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)を用意
-    1. 
+    1. 上記のケーブルでQuest本体とWindowsパソコンを接続
+    1. Quest本体の画面上に「**データへのアクセスを許可**（接続したデバイスが、このヘッドセットのファイルにアクセスできるようになります。」と表示されたら「許可する」を選択
+    1. 引き続きQuest本体の画面上に「**Oculus Linkをオンにする**（QuestがPCに接続されている状態でRiftのアプリにアクセスしてください。いつでもクイック設定でオンまたはオフにできます。」と表示された「オンにする」を選択
+
+* Unityのインストール  
+    1. [Unity Hub](https://unity3d.com/jp/get-unity/download)をダウンロード＆インストール
+    1. Unity Hubを起動
+    1. [インストール]-[エディターをインストール]-[プレリリース]-[ベータ]から最新のベータ版を[インストール]
+    1. 途中「モジュールを加える」画面で以下のモジュールを追加  
+        ✓**Android Build Support**
+        └ ✓**Android SDK & NDK Tools**
+        └ ✓**OpenJDK**
+
+* 
 
 参考：[FRAME SYNTESIS](https://framesynthesis.jp/tech/unity/oculusquest/)  
-実行環境：Windows 10、Unity 202X.X、  
+実行環境：Windows 10、Unity 2022.1.0b15、  
 作成者：夢寐郎  
 作成日：202X年XX月XX日  
 [[TOP]](#TOP)
