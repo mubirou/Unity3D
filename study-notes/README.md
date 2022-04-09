@@ -1115,10 +1115,14 @@ Android実機テストに必要な最低限のビルド設定。
 
 Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド
 
-* Quest
+* Questを開発者モードにする
+1. Quest本体の電源を入れ、AndroidスマホのBluetoothをオン
+1. Androidスマホにインストールした[Oculusアプリ](https://play.google.com/store/apps/details?id=com.oculus.twilight&hl=ja)を起動
+1. [メニュー]-[デバイス]でQuestと接続
+1. 引き続き[開発者モード]をオンにする
 
 参考：[FRAME SYNTESIS](https://framesynthesis.jp/tech/unity/oculusquest/)  
-実行環境：Windows 10、Unity 2021.1  
+実行環境：Windows 10、Unity 202X.X、  
 作成者：夢寐郎  
 作成日：202X年XX月XX日  
 [[TOP]](#TOP)
