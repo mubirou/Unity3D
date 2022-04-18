@@ -1147,7 +1147,7 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド
     [File]-[Build Settings]-[Platform]-[Android]-[Switch Platform]
 
 * プラグインプロバイダーを**Oculus**にする  
-    [File]-[Build Settings]-[Player Settings]-[XR Plug-in Management]-[Oculus]
+    [File]-[Build Settings]-[Player Settings]-[XR Plug-in Management]-[Windows, Mac, Linux settings]および[Android settings]-[Oculus]
 
 * テクスチャの圧縮形式を**ASTC**に変更  
     [File]-[Build Settings]-[Player Settings]-[Player]-[Other Settings]-[Texture compression format]-[ASTC]
