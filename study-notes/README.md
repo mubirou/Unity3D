@@ -1143,7 +1143,15 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド
 
 1. グラフィックAPIを**Vulkan**にする  
     1. [File]-[Build Settings]-[Player Settings]-[Player]-[Other Settings]-[Auto Graphics API]の✓を外す
-    1. [File]-[Build Settings]-[Player Settings]-[Player]-[Graphics APIs]-[OpenGLES3]を削除し[**Vulkan**]のみ残す
+    1. [File]-[Build Settings]-[Player Settings]-[Player]-[Graphics APIs]-[OpenGLES3]を削除し[**Vulkan**]のみ残す  
+
+1. プラグインプロバイダーを**Oculus**にする  
+    [File]-[Build Settings]-[Player Settings]-[XR Plug-in Management]-[Windows, Mac, Linux settings]タブおよび[Android settings]タブで[Oculus]に✓を入れる
+
+1. **Oculus Integration**をインポートする  
+    1. [Window]-[Asset Store]を開く
+    1. Search for assets: Oculus Integration
+    1. [Open in Unity]-[Download]-[Import]-[Import]
 
 * Questを開発者モードにする  
     1. Quest本体の電源を入れ、AndroidスマホのBluetoothをオン
