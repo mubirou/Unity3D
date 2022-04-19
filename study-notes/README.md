@@ -1140,8 +1140,8 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド
     参考：[developer.oculus.com](https://developer.oculus.com/documentation/unity/unity-conf-settings/#build-settings)
 
 1. テクスチャの圧縮形式が**ASTC**か確認＆変更  
-    * 上記の設定でASTCに変更されていない場合の処理
-    * [File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]タブ-[Other Settings]-[Texture compression format]-[**ASTC**]に変更
+    1. 上記の設定でASTCに変更されているか以下で確認＆変更
+    1. [File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]タブ-[Other Settings]-[Texture compression format]-[**ASTC**]に変更
 
 1. グラフィックAPIを**Vulkan**にする  
     1. [File]-[Build Settings]-[Player Settings]-[Player]-[Other Settings]-[Auto Graphics API]の✓を外す
