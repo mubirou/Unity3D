@@ -1113,7 +1113,7 @@ Android実機テストに必要な最低限のビルド設定。
 <a name="2204001"></a>
 # <b>VRビルド</b>
 
-Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド
+Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド方法  
 
 1. Unityのインストール  
     1. [Unity Hubをダウンロード](https://unity3d.com/jp/get-unity/download)＆インストール
