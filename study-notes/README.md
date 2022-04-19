@@ -1136,7 +1136,7 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド
     1. [File]-[Build Settings]-[Platform]-[**Android**]する
     1. 引き続き[Texture Compression]を[**ASTC**]に変更
     1. [Switch Platform]を選択  
-    参考:[developer.oculus.com] (https://developer.oculus.com/documentation/unity/unity-conf-settings/#build-settings)
+    参考:[developer.oculus.com](https://developer.oculus.com/documentation/unity/unity-conf-settings/#build-settings)
 
 * Questを開発者モードにする  
     1. Quest本体の電源を入れ、AndroidスマホのBluetoothをオン
