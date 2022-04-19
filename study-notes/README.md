@@ -1158,7 +1158,11 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド
     1. [Open in Unity]を選び[Unity Editorを開く]を選択
     1. [Download]-[Import]-[Import]を続けて選択（しばらく時間がかかります）
 
-* Questを開発者モードにする  
+～以下、Questおよびスマホ上での作業～  
+
+## 以下検証中
+
+1. Questを開発者モードにする  
     1. Quest本体の電源を入れ、AndroidスマホのBluetoothをオン
     1. Androidスマホにインストールした[Oculusアプリ](https://play.google.com/store/apps/details?id=com.oculus.twilight&hl=ja)を起動
     1. [メニュー]-[デバイス]でQuestと接続
