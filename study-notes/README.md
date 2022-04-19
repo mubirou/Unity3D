@@ -1153,11 +1153,11 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド
     [File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]タブ-[Other Settings]-[Texture compression format]-[ASTC]
 
 * レンダリングのカラースペースが**Linear**か確認  
-    [File]-[Build Settings]-[Player Settings]-[Player]-[Other Settings]-[Rendering]-[Color Space]-[Linear]
+    [File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]タブ-[Other Settings]-[Rendering]-[Color Space]-[Linear]
 
-* グラフィックAPIを**OpenGLES3**にする（要確認）  
+* グラフィックAPIを**Vulkan**にする（要確認）  
     [File]-[Build Settings]-[Player Settings]-[Player]-[Other Settings]-[Auto Graphics API]をオフ
-    [File]-[Build Settings]-[Player Settings]-[Player]-[Graphics APIs]-[OpenGLES3]
+    [File]-[Build Settings]-[Player Settings]-[Player]-[Graphics APIs]-[Vulkan]のみ残す
 
 * **Oculus Integration**をインポートする  
     1. [Window]-[Asset Store]
