@@ -1153,7 +1153,7 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド方法
 
 1. **Oculus Integration**をインポートする  
     1. [Window]-[Asset Store]を開く
-    1. [Search for assets]に"Oculus Integration"と入力し検索
+    1. [Search for assets]に"**Oculus Integration**"と入力し検索
     1. [**Oculus Integration**]を選択
     1. [Open in Unity]を選び[Unity Editorを開く]を選択
     1. [Download]-[Import]-[Import]を続けて選択（しばらく時間がかかります）
