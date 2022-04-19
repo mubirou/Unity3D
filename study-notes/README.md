@@ -1139,6 +1139,10 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド
 
     参考：[developer.oculus.com](https://developer.oculus.com/documentation/unity/unity-conf-settings/#build-settings)
 
+1. テクスチャの圧縮形式が**ASTC**か確認  
+    * 上記の設定でASTCに変更されていない場合の処理
+    * [File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]タブ-[Other Settings]-[Texture compression format]-[ASTC]に変更
+
 * Questを開発者モードにする  
     1. Quest本体の電源を入れ、AndroidスマホのBluetoothをオン
     1. Androidスマホにインストールした[Oculusアプリ](https://play.google.com/store/apps/details?id=com.oculus.twilight&hl=ja)を起動
