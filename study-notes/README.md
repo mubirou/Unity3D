@@ -1139,7 +1139,7 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド方法
     1. 引き続き[Texture Compression]を[**ASTC**]に変更
     1. [Switch Platform]を選択  
 
-1. テクスチャの圧縮形式が**ASTC**か確認＆変更  
+1. テクスチャの圧縮形式が**ASTC**か確認（変更）  
     1. 上記の設定でASTCに変更されているか以下で確認＆変更
     1. [File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]タブ-[Other Settings]-[Texture compression format]-[**ASTC**]に変更
 
