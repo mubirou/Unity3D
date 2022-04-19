@@ -1124,7 +1124,7 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド
         └ **✓Android SDK & NDK Tools**  
         └ **✓OpenJDK**  
 
-1. プロジェクトの作成（Unity上の作業）  
+1. プロジェクトの作成
     1. [Unity Hub]を起動
     1. [プルジェクト]-[新しいプロジェクト]を選択
     1. エディターバージョンを上記でインストールしたものにする
@@ -1132,7 +1132,9 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド
     1. [プロジェクト名][保存場所]を設定して[プロジェクトを作成]
     1. [GameObject]-[3D Object]-[Cube]でテスト用の立方体を作成
 
-1. プラットフォームを**Android**に変更（Unity上の作業）  
+～以下、Unity上での作業～  
+
+1. プラットフォームを**Android**に変更
     1. [File]-[Build Settings]-[Platform]-[**Android**]する
     1. 引き続き[Texture Compression]を[**ASTC**]に変更
     1. [Switch Platform]を選択  
