@@ -1133,7 +1133,9 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド
     1. [GameObject]-[3D Object]-[Cube]でテスト用の立方体を作成
 
 1. プラットフォームを**Android**に変更（Unity上の作業）  
-    [File]-[Build Settings]-[Platform]-[Android]-[Switch Platform]
+    1. [File]-[Build Settings]-[Platform]-[**Android**]する
+    1. 引き続き[Texture Compression]を[**ASTC**]に変更
+    1. [Switch Platform]を選択
 
 * Questを開発者モードにする  
     1. Quest本体の電源を入れ、AndroidスマホのBluetoothをオン
