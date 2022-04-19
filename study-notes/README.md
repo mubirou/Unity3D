@@ -1150,8 +1150,10 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド
 
 1. **Oculus Integration**をインポートする  
     1. [Window]-[Asset Store]を開く
-    1. Search for assets: Oculus Integration
-    1. [Open in Unity]-[Download]-[Import]-[Import]
+    1. [Search for assets]に"Oculus Integration"と入力し検索
+    1. [Oculus Integration]を選択
+    1. [Open in Unity]を選び[Unity Editorを開く]を選択
+    1. [Download]-[Import]-[Import]を続けて選択（しばらく時間がかかります）
 
 * Questを開発者モードにする  
     1. Quest本体の電源を入れ、AndroidスマホのBluetoothをオン
