@@ -1124,12 +1124,13 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド
         └ **✓Android SDK & NDK Tools**  
         └ **✓OpenJDK**  
 
-2. プロジェクトの作成  
+1. プロジェクトの作成  
     1. [Unity Hub]を起動
     1. [プルジェクト]-[新しいプロジェクト]を選択
     1. エディターバージョンを上記でインストールしたものにする
     1. [VR（コア）]を選択
     1. [プロジェクト名][保存場所]を設定して[プロジェクトを作成]
+    1. [GameObject]-[3D Object]-[Cube]でテスト用のオブジェクトを作成
 
 * Questを開発者モードにする  
     1. Quest本体の電源を入れ、AndroidスマホのBluetoothをオン
