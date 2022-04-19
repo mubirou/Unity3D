@@ -1131,7 +1131,6 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド
     1. [VR（コア）]を選択
     1. [プロジェクト名][保存場所]を設定して[プロジェクトを作成]
 
-
 * Questを開発者モードにする  
     1. Quest本体の電源を入れ、AndroidスマホのBluetoothをオン
     1. Androidスマホにインストールした[Oculusアプリ](https://play.google.com/store/apps/details?id=com.oculus.twilight&hl=ja)を起動
@@ -1183,7 +1182,8 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド
 
 
 参考：[FRAME SYNTESIS](https://framesynthesis.jp/tech/unity/oculusquest/)  
-実行環境：Windows 10、Unity 2022.1.0b15、Oculus Integration 38.0  
+実行環境：**Windows 10**、i7-9750H、64GB、GeForce RTX2070  
+Unity Hub 3.1.1、**Unity 2022.1**.0b16、Oculus Integration 38.0  
 作成者：夢寐郎  
 作成日：202X年XX月XX日  
 [[TOP]](#TOP)
