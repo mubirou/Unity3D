@@ -1144,8 +1144,8 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド
     * [File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]タブ-[Other Settings]-[Texture compression format]-[**ASTC**]に変更
 
 1. グラフィックAPIを**Vulkan**にする  
-    1. [File]-[Build Settings]-[Player Settings]-[Player]-[Other Settings]-[Auto Graphics API]をオフ
-    1. [File]-[Build Settings]-[Player Settings]-[Player]-[Graphics APIs]-[Vulkan]のみ残す
+    1. [File]-[Build Settings]-[Player Settings]-[Player]-[Other Settings]-[Auto Graphics API]の✓を外す
+    1. [File]-[Build Settings]-[Player Settings]-[Player]-[Graphics APIs]-[OpenGLES3]を削除し[**Vulkan**]のみ残す
 
 * Questを開発者モードにする  
     1. Quest本体の電源を入れ、AndroidスマホのBluetoothをオン
