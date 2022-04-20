@@ -1184,7 +1184,20 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド方法
     1. [File]-[Build Settings]-[Build And Run]を押す
     1. ファイル名（〇〇.apk）を付ける（名前は任意）  
     （初回のビルドは非常に時間がかかります）
-    1. XXXX
+    1. Quest本体に"MADE WITH Unity"と表示されコンテンツが再生されれば成功
+
+～PC用Oculus Appの準備～
+
+1. [oculus.com/setup](https://www.oculus.com/setup/)から[QUEST2 PCアプリをダウンロード]を選択
+1. ダウンロードした OculusSetup.exe をダブルクリックしインストール
+1. [Windows]-[Oculus]-[Oculus]でOculus Appを起動
+1. [デバイス設定]で[QuestとTouch]が認識されているのを確認
+
+～再びQuest上で設定～
+
+1. Quest上のUIの[デスクトップ]アイコン（右から2番目）をTouchを使って選択し[モニター〇]（Unityが起動しているPCモニター）を選択
+1. PC上のマウスカーソルを動かすと、Quest上のPC画面上でも動作するのを確認
+1. Unityでコンテンツを再生するとQuest上でもリアルタイムで再生されれば成功
 
 
 参考：[FRAME SYNTESIS](https://framesynthesis.jp/tech/unity/oculusquest/)  
