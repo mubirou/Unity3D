@@ -1164,13 +1164,13 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド方法
 
 ～以下、Questおよびスマホ上での作業～  
 
-## 以下検証中
-
 1. Questを開発者モードにする  
     1. Quest本体の電源を入れ、AndroidスマホのBluetoothをオン
     1. Androidスマホにインストールした[Oculusアプリ](https://play.google.com/store/apps/details?id=com.oculus.twilight&hl=ja)を起動
     1. [メニュー]-[デバイス]でQuestと接続
     1. 引き続き[開発者モード]をオンにする
+
+## 以下検証中
 
 * QuestとWindowsパソコンを接続  
     1. [Oculus Link対応ケーブル](https://www.amazon.co.jp/gp/product/B01MZIPYPY/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)を用意
