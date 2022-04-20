@@ -1113,6 +1113,8 @@ Android実機テストに必要な最低限のビルド設定。
 <a name="2204001"></a>
 # <b>VRビルド</b>
 
+## この項目は書きかけです
+
 Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド方法  
 
 1. Unityのインストール  
@@ -1170,51 +1172,11 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド方法
     1. [メニュー]-[デバイス]でQuestと接続
     1. 引き続き[開発者モード]をオンにする
 
-## 以下検証中
-
-* QuestとWindowsパソコンを接続  
+1. QuestとWindowsパソコンを接続  
     1. [Oculus Link対応ケーブル](https://www.amazon.co.jp/gp/product/B01MZIPYPY/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)を用意
     1. 上記のケーブルでQuest本体とWindowsパソコンを接続
     1. Quest本体の画面上に「**データへのアクセスを許可**（接続したデバイスが、このヘッドセットのファイルにアクセスできるようになります。」と表示されたら「許可する」を選択
     1. 引き続きQuest本体の画面上に「**Oculus Linkをオンにする**（QuestがPCに接続されている状態でRiftのアプリにアクセスしてください。いつでもクイック設定でオンまたはオフにできます。」と表示された「オンにする」を選択
-
-* Unityのインストール  
-    1. [Unity Hub](https://unity3d.com/jp/get-unity/download)をダウンロード＆インストール
-    1. Unity Hubを起動
-    1. [インストール]-[エディターをインストール]-[プレリリース]-[ベータ]から最新のベータ版を[インストール]
-    1. 途中「モジュールを加える」画面で以下のモジュールを追加  
-        **✓Android Build Support**  
-        └ **✓Android SDK & NDK Tools**  
-        └ **✓OpenJDK**  
-
-* プロジェクトの作成  
-    1. [Unity Hub]を起動
-    1. [プルジェクト]-[新しいプロジェクト]を選択
-    1. エディターバージョンを上記のものにする
-    1. [VR（コア）]を選択
-    1. [プロジェクト名][保存場所]を設定して[プロジェクトを作成]
-
-* プラットフォームを**Android**に変更  
-    [File]-[Build Settings]-[Platform]-[Android]-[Switch Platform]
-
-* プラグインプロバイダーを**Oculus**にする  
-    [File]-[Build Settings]-[Player Settings]-[XR Plug-in Management]-[Windows, Mac, Linux settings]タブおよび[Android settings]タブ-[Oculus]
-
-* テクスチャの圧縮形式を**ASTC**に変更  
-    [File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]タブ-[Other Settings]-[Texture compression format]-[ASTC]
-
-* レンダリングのカラースペースが**Linear**か確認  
-    [File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]タブ-[Other Settings]-[Rendering]-[Color Space]-[Linear]
-
-* グラフィックAPIを**Vulkan**にする（要確認）  
-    [File]-[Build Settings]-[Player Settings]-[Player]-[Other Settings]-[Auto Graphics API]をオフ
-    [File]-[Build Settings]-[Player Settings]-[Player]-[Graphics APIs]-[Vulkan]のみ残す
-
-* **Oculus Integration**をインポートする  
-    1. [Window]-[Asset Store]
-    1. Search for assets: Oculus Integration
-    1. [Open in Unity]-[Download]-[Import]-[Import]
-
 
 参考：[FRAME SYNTESIS](https://framesynthesis.jp/tech/unity/oculusquest/)  
 参考：[developer.oculus.com](https://developer.oculus.com/documentation/unity/unity-conf-settings/#build-settings)  
