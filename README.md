@@ -9,6 +9,6 @@
 * [Meta Quest 対応](https://github.com/mubirou/Unity/tree/master/metaquest)
 * [OQtouch（自作ライブラリ）](https://github.com/mubirou/Unity/tree/master/oqtouch)
 * [UObject（自作ライブラリ）](https://github.com/mubirou/Unity/tree/master/uobject)
-* [Unity Study Notes](https://github.com/mubirou/Unity/tree/master/study-notes)
+* [🖊 Unity Study Notes](https://github.com/mubirou/Unity/tree/master/study-notes)
 
 © 2018-2022 夢寐郎
