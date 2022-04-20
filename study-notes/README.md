@@ -1178,6 +1178,15 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド方法
     1. Quest本体の画面上に「**データへのアクセスを許可**（接続したデバイスが、このヘッドセットのファイルにアクセスできるようになります。」と表示されたら「許可する」を選択
     1. 引き続きQuest本体の画面上に「**Oculus Linkをオンにする**（QuestがPCに接続されている状態でRiftのアプリにアクセスしてください。いつでもクイック設定でオンまたはオフにできます。」と表示された「オンにする」を選択
 
+～再びUnity上での作業～ 
+
+1. ビルド
+    1. [File]-[Build Settings]-[Build And Run]を押す
+    1. ファイル名（〇〇.apk）を付ける（名前は任意）  
+    （初回のビルドは非常に時間がかかります）
+    1. XXXX
+
+
 参考：[FRAME SYNTESIS](https://framesynthesis.jp/tech/unity/oculusquest/)  
 参考：[developer.oculus.com](https://developer.oculus.com/documentation/unity/unity-conf-settings/#build-settings)  
 実行環境：**Windows 10**、i7-9750H、64GB、GeForce RTX2070  
