@@ -1115,7 +1115,11 @@ Android実機テストに必要な最低限のビルド設定。
 
 ## この項目は書きかけです
 
-Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド方法  
+* 以下のものを準備します
+    * Meta Quest（初代も可能） 
+    * [Oculus Link対応ケーブル](https://www.amazon.co.jp/gp/product/B01MZIPYPY/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
+    * Windows 10 パソコン
+    * Unity（Windows版）
 
 ### Unity のインストール～制作準備
 
