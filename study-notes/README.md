@@ -1138,7 +1138,8 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド方法
     ～しばらく時間がかかります～
 
 1. 最低限のコンテンツ作成（仮のオブジェクトを配置）  
-    1. [GameObject]-[3D Object]-[Cube]でテスト用の立方体を作成（任意）
+    1. [GameObject]-[3D Object]-[Cube]でテスト用の立方体を作成
+    1. [Inspector]-[Transform]-[Position]のX,Y,Zをそれぞれ2に変更
     1. [File]-[Build Settings]-[Add Open Scenes]で[Scenes In Build]にシーンを追加
 
 1. プラットフォームを**Android**に変更
