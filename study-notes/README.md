@@ -1118,7 +1118,8 @@ Android実機テストに必要な最低限のビルド設定。
 Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド方法  
 
 1. Unityのインストール  
-    1. [Unity Hub をダウンロード](https://unity3d.com/jp/get-unity/download)＆インストール
+    1. [Unity Hub をダウンロード](https://unity3d.com/jp/get-unity/download)を選択し UnityHubSetup.exe をダウンロード
+    1. ダウンロードした UnityHubSetup.exe をダブルクリックし指示に従いインストール
     1. Unity Hubを起動
     1. [インストール]-[エディターをインストール]-[プレリリース]-[ベータ]から最新のベータ版を選択し[インストール]
     1. 途中「モジュールを加える」画面で以下のモジュールを追加  
