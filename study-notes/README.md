@@ -1152,6 +1152,7 @@ Android実機テストに必要な最低限のビルド設定。
     1. 引き続き[File]-[Build Settings]-[Platform]-[**Android**]する
     1. 引き続き[Texture Compression]を[**ASTC**]に変更
     1. [Switch Platform]ボタンを押す  
+    ～すこし時間がかかります～
 
 1. テクスチャの圧縮形式が**ASTC**か確認（＆変更）  
     1. 上記の設定でASTCに変更されているか以下で確認＆変更
