@@ -1186,7 +1186,8 @@ Android実機テストに必要な最低限のビルド設定。
 ### Oculus Linkの準備
 
 1. [oculus.com/setup](https://www.oculus.com/setup/)から[QUEST2 PCアプリをダウンロード]を選択
-1. ダウンロードした OculusSetup.exe をダブルクリックしインストール
+1. ダウンロードした OculusSetup.exe をダブルクリックしインストール  
+～しばらく時間がかかります～
 1. [Windows]-[Oculus]-[Oculus]でOculus Appを起動
 1. [デバイス設定]で[QuestとTouch]が認識されているのを確認
 
@@ -1197,21 +1198,18 @@ Android実機テストに必要な最低限のビルド設定。
     1. 引き続きQuest本体の画面上に「**Oculus Linkをオンにする**（QuestがPCに接続されている状態でRiftのアプリにアクセスしてください。いつでもクイック設定でオンまたはオフにできます。」と表示された「オンにする」を選択
     * PC上にQuestと接続した時の動作の指示を求められた場合は「何もしない」を選択します
 
-～再びUnity上での作業～ 
-
-1. ビルド
-    1. [File]-[Build Settings]-[Build And Run]を押す
-    1. ファイル名（〇〇.apk）を付ける（名前は任意）  
-    （初回のビルドは非常に時間がかかります）
-    1. Quest本体に"MADE WITH Unity"と表示されコンテンツが再生されれば成功
-
-
-
-～再びQuest上で設定～
+### Unity⇔Questの連動再生
 
 1. Quest上のUIの[デスクトップ]アイコン（右から2番目）をTouchを使って選択し[モニター〇]（Unityが起動しているPCモニター）を選択
 1. PC上のマウスカーソルを動かすと、Quest上のPC画面上でも動作するのを確認
 1. Unityでコンテンツを再生するとQuest上でもリアルタイムで再生されれば成功
+
+### 通常のビルド方法
+
+1. [File]-[Build Settings]-[Build And Run]を押す
+1. ファイル名（〇〇.apk）を付ける（名前は任意）  
+（初回のビルドは非常に時間がかかります）
+1. Quest本体に"MADE WITH Unity"と表示されコンテンツが再生されれば成功
 
 
 参考：[FRAME SYNTESIS](https://framesynthesis.jp/tech/unity/oculusquest/)  
