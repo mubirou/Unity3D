@@ -1155,7 +1155,7 @@ Android実機テストに必要な最低限のビルド設定。
     ～すこし時間がかかります～
 
 1. テクスチャの圧縮形式が**ASTC**か確認（＆変更）  
-    1. 上記の設定でASTCに変更されているか以下で確認＆変更
+    1. 上記の設定でASTCに変更されているか以下で確認（恐らく変更されていないので変更）
     1. [File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Texture compression format]-[**ASTC**]に変更
 
 1. グラフィックAPIを**Vulkan**にする  
