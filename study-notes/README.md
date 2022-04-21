@@ -1177,12 +1177,18 @@ Android実機テストに必要な最低限のビルド設定。
     1. [Project]-[Assets]-[Oculus]が追加されたのを確認
 
 ### HMD（Meta Quest）+ スマホの準備作業  
+ 
+1. Quest本体の電源を入れ、AndroidスマホのBluetoothをオン
+1. Androidスマホにインストールした[Oculusアプリ](https://play.google.com/store/apps/details?id=com.oculus.twilight&hl=ja)を起動
+1. [メニュー]-[デバイス]でQuestと接続
+1. 引き続き[開発者モード]をオンにする
 
-1. Questを開発者モードにする  
-    1. Quest本体の電源を入れ、AndroidスマホのBluetoothをオン
-    1. Androidスマホにインストールした[Oculusアプリ](https://play.google.com/store/apps/details?id=com.oculus.twilight&hl=ja)を起動
-    1. [メニュー]-[デバイス]でQuestと接続
-    1. 引き続き[開発者モード]をオンにする
+### Oculus Linkの準備
+
+1. [oculus.com/setup](https://www.oculus.com/setup/)から[QUEST2 PCアプリをダウンロード]を選択
+1. ダウンロードした OculusSetup.exe をダブルクリックしインストール
+1. [Windows]-[Oculus]-[Oculus]でOculus Appを起動
+1. [デバイス設定]で[QuestとTouch]が認識されているのを確認
 
 1. QuestとWindowsパソコンを接続  
     1. [Oculus Link対応ケーブル](https://www.amazon.co.jp/gp/product/B01MZIPYPY/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)を用意
@@ -1199,12 +1205,7 @@ Android実機テストに必要な最低限のビルド設定。
     （初回のビルドは非常に時間がかかります）
     1. Quest本体に"MADE WITH Unity"と表示されコンテンツが再生されれば成功
 
-～PC用Oculus Appの準備～
 
-1. [oculus.com/setup](https://www.oculus.com/setup/)から[QUEST2 PCアプリをダウンロード]を選択
-1. ダウンロードした OculusSetup.exe をダブルクリックしインストール
-1. [Windows]-[Oculus]-[Oculus]でOculus Appを起動
-1. [デバイス設定]で[QuestとTouch]が認識されているのを確認
 
 ～再びQuest上で設定～
 
