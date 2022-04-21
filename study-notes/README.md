@@ -1128,6 +1128,7 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド方法
         **✓Android Build Support**  
         └ **✓Android SDK & NDK Tools**  
         └ **✓OpenJDK**  
+    ～しばらく時間がかかります～
 
 1. プロジェクトの作成
     1. [Unity Hub]を起動
