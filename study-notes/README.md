@@ -1175,7 +1175,7 @@ Android実機テストに必要な最低限のビルド設定。
     ～しばらく時間がかかります☕～
     1. [Project]-[Assets]-[Oculus]が追加されたのを確認
 
-## HMD（Meta Quest）+ スマホの準備作業  
+### HMD（Meta Quest）+ スマホの準備作業  
 
 1. Questを開発者モードにする  
     1. Quest本体の電源を入れ、AndroidスマホのBluetoothをオン
