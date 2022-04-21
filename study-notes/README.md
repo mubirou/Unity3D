@@ -1143,7 +1143,7 @@ Meta Quest + Oculus Link + Unity によるVRコンテンツのビルド方法
     1. [File]-[Build Settings]-[Add Open Scenes]ボタンを押して[Scenes In Build]に現在のシーンを追加
 
 1. プラットフォームを**Android**に変更
-    1. [File]-[Build Settings]-[Platform]-[**Android**]する
+    1. 引き続き[File]-[Build Settings]-[Platform]-[**Android**]する
     1. 引き続き[Texture Compression]を[**ASTC**]に変更
     1. [Switch Platform]を選択  
 
