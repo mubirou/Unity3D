@@ -1164,7 +1164,7 @@ Android実機テストに必要な最低限のビルド設定。
 
 1. プラグインプロバイダーを**Oculus**にする  
     1. [File]-[Build Settings]-[Player Settings]-[XR Plug-in Management]-[Windows, Mac, Linux settings]（パソコンのアイコン）タブを選択し[**Oculus**]に✓を入れる
-    1. 同様に[Android settings]タブを選択し[**Oculus**]に✓を入れる
+    1. 同様に[Android settings]（Androidのアイコン）タブを選択し[**Oculus**]に✓を入れる
 
 1. **Oculus Integration**をインポートする  
     1. [Window]-[Asset Store]を開く
