@@ -1170,7 +1170,7 @@ Android実機テストに必要な最低限のビルド設定。
     1. [Window]-[Asset Store]を開く
     1. [Search for assets]に"**Oculus Integration**"と入力し検索
     1. 検索された[**Oculus Integration**]を選択
-    1. [Open in Unity]ボタンを押し[Unity Editorを開く]を選択
+    1. [Open in Unity]ボタンを押し[Unity Editor を開く]を選択
     1. [Download]-[Import]-[Import]を続けて選択（しばらく時間がかかります）
     1. [Project]-[Assets]-[Oculus]が追加されたのを確認
 
