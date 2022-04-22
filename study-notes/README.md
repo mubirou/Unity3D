@@ -1189,7 +1189,7 @@ Android実機テストに必要な最低限のビルド設定。
 1. [oculus.com/setup](https://www.oculus.com/setup/)から[QUEST2 PCアプリをダウンロード]を選択
 1. ダウンロードした OculusSetup.exe をダブルクリックしインストール  
 ～しばらく時間がかかります☕～
-1. [Windows]-[Oculus]-[Oculus]でOculus Appを起動
+1. [Windows]-[Oculus]-[Oculus]で**Oculus App**を起動
 1. [デバイス設定]で[QuestとTouch]が認識されているのを確認
 
 1. QuestとWindowsパソコンを接続  
