@@ -1145,7 +1145,8 @@ Android実機テストに必要な最低限のビルド設定。
 
 1. 最低限のコンテンツ作成（仮のオブジェクトを配置）  
     1. [GameObject]-[3D Object]-[Cube]でテスト用の立方体を作成
-    1. [Inspector]-[Transform]-[Position]のX,Y,Zをそれぞれ「1」に変更
+    1. [Inspector]-[Transform]-[Position]のX,Y,Zをそれぞれ「1」に変更  
+    ※カメラの位置は（x:0, Y:1.36144, Z:0）
     1. [File]-[Build Settings]-[Add Open Scenes]ボタンを押して[Scenes In Build]にシーンを追加
 
 1. プラットフォームを**Android**に変更
