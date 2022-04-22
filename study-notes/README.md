@@ -1120,7 +1120,7 @@ Android実機テストに必要な最低限のビルド設定。
     * Windows 10 Pro（i7-9750H、64GB、GeForce RTX2070 8GB）
     * Unity 2022.1 ベータ版（Windows版）
     * [Oculus Link 対応ケーブル](https://www.amazon.co.jp/gp/product/B01MZIPYPY/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
-    ※下記の Oculus App の[USBテスト]で対応か確認可
+    ※下記の Oculusアプリ の[USBテスト]で対応か確認可
     * スマートフォン（Android 11）
 
 ### Unity のインストール～制作準備
@@ -1190,7 +1190,7 @@ Android実機テストに必要な最低限のビルド設定。
 1. [oculus.com/setup](https://www.oculus.com/setup/)から[QUEST2 PCアプリをダウンロード]を選択
 1. ダウンロードした OculusSetup.exe をダブルクリックしインストール  
 ～しばらく時間がかかります☕～
-1. [Windows]-[Oculus]-[Oculus]で**Oculus App**を起動
+1. [Windows]-[Oculus]-[Oculus]で**Oculusアプリ**を起動
 1. [デバイス設定]で[QuestとTouch]が認識されているのを確認
 
 1. QuestとWindowsパソコンを接続  
