@@ -1115,10 +1115,10 @@ Android実機テストに必要な最低限のビルド設定。
 
 ## この項目は書きかけです
 
-* 以下のものを準備します
-    * Meta Quest（ここでは初代を使用） 
-    * Windows 10 パソコン
-    * Unity（Windows版）
+* 検証環境
+    * Meta Quest v38（初代）
+    * Windows 10 Pro（i7-9750H、64GB、GeForce RTX2070 8GB）
+    * Unity 2022.1（Windows版）
     * [Oculus Link対応ケーブル](https://www.amazon.co.jp/gp/product/B01MZIPYPY/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
     * スマートホン（ここではAndroidを使用）
 
