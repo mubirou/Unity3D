@@ -1186,13 +1186,6 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
     1. [Inspector]-[Transform]-[Position] の X,Y,Z をそれぞれ -1,0.5,1 に変更  
     1. [File]-[Build Settings]-[Add Open Scenes] ボタンを押して[Scenes In Build] にシーンを追加
 
-### HMD（Meta Quest）+ スマホの準備作業（不要？）  
- 
-1. Quest本体の電源を入れ、AndroidスマホのBluetoothをオン
-1. Androidスマホにインストールした[Oculusアプリ](https://play.google.com/store/apps/details?id=com.oculus.twilight&hl=ja)を起動
-1. [メニュー]-[デバイス]でQuestと接続
-1. 引き続き[開発者モード]をオンにする
-
 ### Oculus Linkの準備
 
 1. **Oculusアプリ**の用意
@@ -1203,7 +1196,7 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
 
 1. QuestとWindowsパソコンを接続  
     1. [Oculus Link対応ケーブル](https://www.amazon.co.jp/gp/product/B01MZIPYPY/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)を用意
-    1. 上記のケーブルで Quest 本体と Windows パソコンを接続
+    1. Quest 本体の電源を入れて上記のケーブルで Quest と Windows パソコンを接続
     1. Quest 本体の画面上に「**データへのアクセスを許可**（接続したデバイスが、このヘッドセットのファイルにアクセスできるようになります。」と表示されたら「許可する」を選択
     1. 引き続き Quest 本体の画面上に「**Oculus Linkをオンにする**（QuestがPCに接続されている状態でRiftのアプリにアクセスしてください。いつでもクイック設定でオンまたはオフにできます。」と表示された「オンにする」を選択
     * PC上にQuestと接続した時の動作の指示を求められた場合は「何もしない」を選択します
