@@ -1205,7 +1205,8 @@ Android実機テストに必要な最低限のビルド設定。
 
 1. Quest上のUIの[デスクトップ]アイコン（右から2番目）をTouchを使って選択し[モニター〇]（Unityが起動しているPCモニター）を選択
 1. PC上のマウスカーソルを動かすと、Quest上のPC画面上でも動作するのを確認
-1. Unityでコンテンツを再生するとQuest上でもリアルタイムで再生されれば成功！
+1. Unityでコンテンツを再生するとQuest上でもリアルタイムで再生されれば成功！  
+（参考）Quest 上に黒い矩形が表示される場合の回避策は[こちら](https://ja.letmeknow.ch/how-fix-oculus-link-black-screen-2021-guide)
 
 ### 通常のビルド方法
 
