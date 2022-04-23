@@ -1238,7 +1238,8 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
     1. Unity エディタの [Window]-[Package Manager] を開く
     1. Packages: Unity Registry を選択し **AR Foundation** を検索
     1. [AR Foundation] を選択し [Install]
-    1. [Project]-[Packages]-[AR Foundation] が追加されたのを確認
+    1. [Project]-[Packages]-[AR Foundation] が追加されたのを確認  
+    * AR Foundation のほかにも必要に応じてパッケージをインストールします
 
 1. グラフィック API を **Vulkan** に設定  
     1. Unity エディタの [Edit]-[Project Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Rendering]-[Auto Graphics API] の✓を外す
