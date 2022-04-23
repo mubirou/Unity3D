@@ -1154,6 +1154,13 @@ Android実機テストに必要な最低限のビルド設定。
     1. 引き続き [File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Rendering]-[Auto Graphics API] の✓を外す
     1. 表示された [Graphics APIs] のうち [OpenGLES3] を削除し [**Vulkan**] のみ残す  
 
+
+1. スクリプティングバックエンドを **Mono** にする
+    1. [File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Configuration]-[Scripting Backend] を [**Mono**] に設定  
+    1. 同様に [Windows, Mac, Linux settings]（パソコンのアイコン）タブ-[Other Settings]-[Configuration]-[Scripting Backend] を [**Mono**] に設定  
+    【注意】Oculus にアプリを提出する場合は Mono ではなく **IL2CPP** / **ARM64** に設定してビルドする必要があります（[参考](https://framesynthesis.jp/tech/unity/oculusquest/)）
+
+
 1. プラグインプロバイダーを **Oculus** にする  
     1. [File]-[Build Settings]-[Player Settings]-[XR Plug-in Management] を選択し [Install XR Plugin Management] ボタンを押す  
     1. [XR Plug-in Management] 画面で [Windows, Mac, Linux settings]（パソコンのアイコン）タブ、[Android settings]（Androidのアイコン）タブ、それぞれで [**Oculus**] に✓を入れる
@@ -1166,13 +1173,17 @@ Android実機テストに必要な最低限のビルド設定。
     1. [Download]→[Import]→[Import] と続けて選択  
     ～しばらく時間がかかります☕～  
     ※途中 [OpenXR Backend] ダイアログが表示されたら [Cancel] を選択
-    1. [Project]-[Assets]-[Oculus]が追加されたのを確認
+    1. [Project]-[Assets]-[Oculus] が追加されたのを確認
+
+1. VR 用カメラの設置
+    1. [Hierarchy]-[SampleScene]-[Main Camera] を削除
+    1. [Project]-[Assets]-[Oculus]-[VR]-[Prefabs]-[OVRCameraRig] を [Hierarchy] にドラッグ＆ドロップ
+    1. [Inspector]-[Tranform]-[Position] を Y:1.59 に変更
 
 1. 最低限のコンテンツ作成（仮のオブジェクトを配置）  
-    1. [GameObject]-[3D Object]-[Cube]でテスト用の立方体を作成
-    1. [Inspector]-[Transform]-[Position]のX,Y,Zをそれぞれ「1」に変更  
-    ※カメラ位置の初期値は（x:0, Y:1.36144, Z:0）
-    1. [File]-[Build Settings]-[Add Open Scenes]ボタンを押して[Scenes In Build]にシーンを追加
+    1. [GameObject]-[3D Object]-[Cube] でテスト用の立方体を作成
+    1. [Inspector]-[Transform]-[Position] の X,Y,Z をそれぞれ 1,0.5,1 に変更  
+    1. [File]-[Build Settings]-[Add Open Scenes] ボタンを押して[Scenes In Build] にシーンを追加
 
 ### HMD（Meta Quest）+ スマホの準備作業  
  
