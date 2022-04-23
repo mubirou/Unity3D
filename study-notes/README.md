@@ -1141,7 +1141,7 @@ Android実機テストに必要な最低限のビルド設定。
     ～しばらく時間がかかります～
 
 1. プラットフォームを **Android** に変更  
-    引き続き [File]-[Build Settings]-[Platform]-[**Android**] して [Switch Platform] ボタンを押す  
+    Unity 上に開かれたプロジェクトで [File]-[Build Settings]-[Platform]-[**Android**] に変更して [Switch Platform] ボタンを押す  
     ～すこし時間がかかります～
 
 1. テクスチャの圧縮形式を **ASTC** に設定  
