@@ -1154,7 +1154,7 @@ Android実機テストに必要な最低限のビルド設定。
     1. 引き続き[File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Rendering]-[Auto Graphics API]の✓を外す
     1. 表示された [Graphics APIs] のうち [OpenGLES3] を削除し [**Vulkan**] のみ残す  
 
-1. プラグインプロバイダーを**Oculus**にする  
+1. プラグインプロバイダーを **Oculus** にする  
     1. [File]-[Build Settings]-[Player Settings]-[XR Plug-in Management]-[Windows, Mac, Linux settings]（パソコンのアイコン）タブを選択し[**Oculus**]に✓を入れる
     1. 同様に[Android settings]（Androidのアイコン）タブを選択し[**Oculus**]に✓を入れる
 
