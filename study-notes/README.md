@@ -1113,6 +1113,8 @@ Android実機テストに必要な最低限のビルド設定。
 <a name="2204001"></a>
 # <b>Oculus Link</b>
 
+Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エディタを使用して、毎回ビルドする必要なしで Quest および Unity エディタ上で VR コンテンツが再生可能です
+
 * 検証環境
     * Meta Quest（初代）v38
     * Windows 10 Pro（i7-9750H、64GB、GeForce RTX2070 8GB）
@@ -1121,7 +1123,7 @@ Android実機テストに必要な最低限のビルド設定。
 
 ### Unity のインストール～制作準備
 
-1. Unity のインストール  
+1. Unity エディタのインストール  
     1. [Unity Hub をダウンロード](https://unity3d.com/jp/get-unity/download)を選択し UnityHubSetup.exe をダウンロード
     1. ダウンロードした UnityHubSetup.exe をダブルクリックし指示に従いインストール
     1. Unity Hub を起動
@@ -1141,7 +1143,7 @@ Android実機テストに必要な最低限のビルド設定。
     ～しばらく時間がかかります～
 
 1. プラットフォームを **Android** に変更  
-    Unity 上に開かれたプロジェクトで [File]-[Build Settings]-[Platform]-[**Android**] に変更して [Switch Platform] ボタンを押す  
+    Unity エディタ上に開かれたプロジェクトで [File]-[Build Settings]-[Platform]-[**Android**] に変更して [Switch Platform] ボタンを押す  
     ～すこし時間がかかります～
 
 1. テクスチャの圧縮形式を **ASTC** に設定（初期値?）  
@@ -1158,7 +1160,7 @@ Android実機テストに必要な最低限のビルド設定。
     【注意】Oculus にアプリを提出する場合は Mono ではなく **IL2CPP** / **ARM64** に設定してビルドする必要があるなど注意が必要です（[参考](https://framesynthesis.jp/tech/unity/oculusquest/)）
 
 1. アラート⚠を消す（気持ちが悪いので^^;）
-    1. 1. 引き続き [File]-[Build Settings]-[Player Settings]-[Player]-[Windows, Mac, Linux settings]（パソコンのアイコン）タブ-[Other Settings]-[Mac App Store Options]-[Override Default bundle Identifier] を✓する
+    引き続き [File]-[Build Settings]-[Player Settings]-[Player]-[Windows, Mac, Linux settings]（パソコンのアイコン）タブ-[Other Settings]-[Mac App Store Options]-[Override Default bundle Identifier] を✓する
 
 1. プラグインプロバイダーを **Oculus** にする  
     1. [File]-[Build Settings]-[Player Settings]-[XR Plug-in Management] を選択し [Install XR Plugin Management] ボタンを押す  
@@ -1181,7 +1183,7 @@ Android実機テストに必要な最低限のビルド設定。
 
 1. 最低限のコンテンツ作成（仮のオブジェクトを配置）  
     1. [GameObject]-[3D Object]-[Cube] でテスト用の立方体を作成
-    1. [Inspector]-[Transform]-[Position] の X,Y,Z をそれぞれ 1,0.5,1 に変更  
+    1. [Inspector]-[Transform]-[Position] の X,Y,Z をそれぞれ -1,0.5,1 に変更  
     1. [File]-[Build Settings]-[Add Open Scenes] ボタンを押して[Scenes In Build] にシーンを追加
 
 ### HMD（Meta Quest）+ スマホの準備作業（不要？）  
@@ -1216,10 +1218,9 @@ Android実機テストに必要な最低限のビルド設定。
 
 
 参考：[FRAME SYNTESIS](https://framesynthesis.jp/tech/unity/oculusquest/)  
-参考：[developer.oculus.com](https://developer.oculus.com/documentation/unity/unity-conf-settings/#build-settings)  
 実行環境：**Windows 10**、**Unity 2022.1**.0b16、Meta Quest（初代）  
 作成者：夢寐郎  
-作成日：202X年XX月XX日  
+作成日：2022年04月23日  
 [[TOP]](#TOP)
 
 
