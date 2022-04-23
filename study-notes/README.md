@@ -1158,7 +1158,7 @@ Android実機テストに必要な最低限のビルド設定。
 1. スクリプティングバックエンドを **Mono** にする
     1. [File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Configuration]-[Scripting Backend] を [**Mono**] に設定  
     1. 同様に [Windows, Mac, Linux settings]（パソコンのアイコン）タブ-[Other Settings]-[Configuration]-[Scripting Backend] を [**Mono**] に設定  
-    【注意】Oculus にアプリを提出する場合は Mono ではなく **IL2CPP** / **ARM64** に設定してビルドする必要があります（[参考](https://framesynthesis.jp/tech/unity/oculusquest/)）
+    【注意】Oculus にアプリを提出する場合は Mono ではなく **IL2CPP** / **ARM64** に設定してビルドする必要があるなど注意が必要です（[参考](https://framesynthesis.jp/tech/unity/oculusquest/)）
 
 
 1. プラグインプロバイダーを **Oculus** にする  
