@@ -1181,7 +1181,7 @@ Android実機テストに必要な最低限のビルド設定。
     1. [Inspector]-[Transform]-[Position] の X,Y,Z をそれぞれ 1,0.5,1 に変更  
     1. [File]-[Build Settings]-[Add Open Scenes] ボタンを押して[Scenes In Build] にシーンを追加
 
-### HMD（Meta Quest）+ スマホの準備作業  
+### HMD（Meta Quest）+ スマホの準備作業（不要？）  
  
 1. Quest本体の電源を入れ、AndroidスマホのBluetoothをオン
 1. Androidスマホにインストールした[Oculusアプリ](https://play.google.com/store/apps/details?id=com.oculus.twilight&hl=ja)を起動
