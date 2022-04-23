@@ -1188,16 +1188,16 @@ Android実機テストに必要な最低限のビルド設定。
 ### Oculus Linkの準備
 
 1. **Oculusアプリ**の用意
-    1. Windows上で[oculus.com/setup](https://www.oculus.com/setup/)から[OCULUS QUEST]（初代の場合）の[ソフトウェアをダウンロード]を選択  
-    【注意】"Quest 2"の場合は[QUEST 2]の[QUEST2 PCアプリをダウンロード]を選択します
+    1. Windows 上で [oculus.com/setup](https://www.oculus.com/setup/) から [OCULUS QUEST]（初代の場合）の [ソフトウェアをダウンロード] を選択  
+    【注意】"**Quest 2**"の場合は [QUEST 2] の [QUEST2 PCアプリをダウンロード] を選択します
     1. ダウンロードした OculusSetup.exe をダブルクリックしインストール  
     ～しばらく時間がかかります☕～
 
 1. QuestとWindowsパソコンを接続  
     1. [Oculus Link対応ケーブル](https://www.amazon.co.jp/gp/product/B01MZIPYPY/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)を用意
-    1. 上記のケーブルでQuest本体とWindowsパソコンを接続
-    1. Quest本体の画面上に「**データへのアクセスを許可**（接続したデバイスが、このヘッドセットのファイルにアクセスできるようになります。」と表示されたら「許可する」を選択
-    1. 引き続きQuest本体の画面上に「**Oculus Linkをオンにする**（QuestがPCに接続されている状態でRiftのアプリにアクセスしてください。いつでもクイック設定でオンまたはオフにできます。」と表示された「オンにする」を選択
+    1. 上記のケーブルで Quest 本体と Windows パソコンを接続
+    1. Quest 本体の画面上に「**データへのアクセスを許可**（接続したデバイスが、このヘッドセットのファイルにアクセスできるようになります。」と表示されたら「許可する」を選択
+    1. 引き続き Quest 本体の画面上に「**Oculus Linkをオンにする**（QuestがPCに接続されている状態でRiftのアプリにアクセスしてください。いつでもクイック設定でオンまたはオフにできます。」と表示された「オンにする」を選択
     * PC上にQuestと接続した時の動作の指示を求められた場合は「何もしない」を選択します
     1. [Windows]-[Oculus]-[Oculus]で**Oculusアプリ**を起動し、[デバイス設定]で[QuestとTouch]が認識されているのを確認
 
