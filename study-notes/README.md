@@ -1151,12 +1151,12 @@ Android実機テストに必要な最低限のビルド設定。
     [File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Texture compression format]-[**ASTC**] に設定
 
 1. グラフィック API を **Vulkan** にする  
-    1. 引き続き[File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Rendering]-[Auto Graphics API]の✓を外す
+    1. 引き続き [File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Rendering]-[Auto Graphics API] の✓を外す
     1. 表示された [Graphics APIs] のうち [OpenGLES3] を削除し [**Vulkan**] のみ残す  
 
 1. プラグインプロバイダーを **Oculus** にする  
-    1. [File]-[Build Settings]-[Player Settings]-[XR Plug-in Management]-[Windows, Mac, Linux settings]（パソコンのアイコン）タブを選択し[**Oculus**]に✓を入れる
-    1. 同様に[Android settings]（Androidのアイコン）タブを選択し[**Oculus**]に✓を入れる
+    1. [File]-[Build Settings]-[Player Settings]-[XR Plug-in Management] を選択し [Install XR Plugin Management] ボタンを押す  
+    1. [XR Plug-in Management] 画面で [Windows, Mac, Linux settings]（パソコンのアイコン）タブ、[Android settings]（Androidのアイコン）タブ、それぞれで [**Oculus**] に✓を入れる
 
 1. **Oculus Integration**をインポートする  
     1. [Window]-[Asset Store]を開く
