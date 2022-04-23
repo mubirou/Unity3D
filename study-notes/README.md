@@ -1143,12 +1143,12 @@ Android実機テストに必要な最低限のビルド設定。
     1. [プロジェクト名]と[保存場所]を設定して[プロジェクトを作成]ボタンを押す  
     ～しばらく時間がかかります～
 
-1. プラットフォームを**Android**に変更  
+1. プラットフォームを **Android** に変更  
     引き続き [File]-[Build Settings]-[Platform]-[**Android**] して [Switch Platform] ボタンを押す  
     ～すこし時間がかかります～
 
-1. テクスチャの圧縮形式が**ASTC**に変更  
-    [File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Texture compression format]-[**ASTC**]に変更
+1. テクスチャの圧縮形式を **ASTC** に設定  
+    [File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Texture compression format]-[**ASTC**]に設定
 
 1. グラフィックAPIを**Vulkan**にする  
     1. 引き続き[File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Auto Graphics API]の✓を外す
