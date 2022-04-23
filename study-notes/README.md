@@ -1282,10 +1282,10 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
 1. Android 端末上でアプリが起動し、右斜め上方に 30cm 四方の立方体が表示されれば成功！
 
 参考：[ONETECH](https://onetech.jp/blog/ar-foundation-12090#Android)  
-実行環境：Windows 10、**Unity 2022.1**.0b16、AR Foundation 4.2.2  
+実行環境：Windows 10、Unity 2022.1.0b16、AR Foundation 4.2.2  
 Xiaomi Redmi Note 9T（Android 11）  
 作成者：夢寐郎  
-作成日：202X年XX月XX日  
+作成日：2022年04月24日  
 [[TOP]](#TOP)
 
 
