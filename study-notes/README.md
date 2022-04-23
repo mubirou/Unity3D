@@ -1211,7 +1211,7 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
 
 
 参考：[FRAME SYNTESIS](https://framesynthesis.jp/tech/unity/oculusquest/)  
-実行環境：**Windows 10**、**Unity 2022.1**.0b16、Meta Quest（初代）  
+実行環境：**Windows 10**、**Unity 2022.1**.0b16、Meta Quest（初代）v.38  
 作成者：夢寐郎  
 作成日：2022年04月23日  
 [[TOP]](#TOP)
