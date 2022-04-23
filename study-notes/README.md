@@ -2,7 +2,7 @@
 
 ### <b>index</b>
 
-| [publicとSerializeField](#2110001) | [コールチン](#2110002) | [ScriptableObject](#2110003) | [シーン遷移](#2110004) | [staticクラス](#2110005) | [PlayerPrefs(1)](#2110006) | [PlayerPrefs(2)](#2110007) | [継承](#2110008) | [C#スクリプトのテンプレート](#2110009) | [委譲とInterface](#2110010) | [構造体](#2110011) | [列挙型](#2110012) | [ParticleSystem](#2110013) | [Input System](#2110014) | [ToString()](#2110015) | [Androidビルド](#2110016) | [処理速度計測](#2110017) | [三平方の定理](#2110018) | [Oculus Link](#2204001) | [ARCore](#2204002) |
+| [publicとSerializeField](#2110001) | [コールチン](#2110002) | [ScriptableObject](#2110003) | [シーン遷移](#2110004) | [staticクラス](#2110005) | [PlayerPrefs(1)](#2110006) | [PlayerPrefs(2)](#2110007) | [継承](#2110008) | [C#スクリプトのテンプレート](#2110009) | [委譲とInterface](#2110010) | [構造体](#2110011) | [列挙型](#2110012) | [ParticleSystem](#2110013) | [Input System](#2110014) | [ToString()](#2110015) | [Androidビルド](#2110016) | [処理速度計測](#2110017) | [三平方の定理](#2110018) | [Oculus Link](#2204001) | [AR Foundation](#2204002) |
 ***
 
 <a name="2110001"></a>
@@ -1218,9 +1218,19 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
 
 
 <a name="2204002"></a>
-# <b>ARCore</b>
+# <b>AR Foundation</b>
 
-* XXX
+1. プロジェクトの作成
+    1. [Unity Hub] を起動
+    1. [プルジェクト]-[新しいプロジェクト] を選択
+    1. エディターバージョンを上記でインストールしたものにする
+    1. [**3D**（コア）] を選択
+    1. [プロジェクト名] と [保存場所] を設定して [プロジェクトを作成] ボタンを押す  
+    ～しばらく時間がかかります～
+
+1. プラットフォームを **Android** に変更  
+    Unity エディタ上に開かれたプロジェクトで [File]-[Build Settings]-[Platform]-[**Android**] に変更して [Switch Platform] ボタンを押す  
+    ～すこし時間がかかります～
 
 実行環境：Windows 10、**Unity 2022.1**.0b16、Xiaomi Redmi Note 9T（Android 11）  
 作成者：夢寐郎  
