@@ -1264,18 +1264,19 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
 ### 以降未編集
 
 1. スマホの開発者向け設定
-    1. [設定]-[デバイス情報]-[MIMUバージョン]を8回連打 
-    1. [設定]-[追加設定]-[開発者向けオプション]-[USBデバッグ]と[USB経由でインストール]をON
+    1. [設定]-[デバイス情報]-[MIMUバージョン] を8回連打 
+    1. [設定]-[追加設定]-[開発者向けオプション]-[USBデバッグ]と[USB経由でインストール] をON
     1. [✓私は起こりうるリスクを認識し、その結果として起こりうる結果を自発的に受け入れます]-[OK]
 
 1. スマホとPCを接続
     1. USBケーブルで接続
     1. [ファイル転送/Android Auto]を✓
+    1. [USBデバッグを許可しますか？] で [OK]
 
 1. ビルド
-    1. [File]-[Build Settings]-[Build And Run]を選択
+    1. [File]-[Build Settings]-[Build And Run] を選択
     1. 任意のファイル名（.apk）を付け保存
-    1. Android端末上に[USB経由でこのアプリをインストールしますか？]と表示されたら[インストール]を選択
+    1. Android端末上に [USB経由でこのアプリをインストールしますか？] と表示されたら [インストール] を選択
     1. Android端末上でアプリが起動すれば成功！
 
 参考：[ONETECH](https://onetech.jp/blog/ar-foundation-12090#Android)  
