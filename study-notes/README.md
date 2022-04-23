@@ -2,7 +2,7 @@
 
 ### <b>index</b>
 
-| [publicとSerializeField](#2110001) | [コールチン](#2110002) | [ScriptableObject](#2110003) | [シーン遷移](#2110004) | [staticクラス](#2110005) | [PlayerPrefs(1)](#2110006) | [PlayerPrefs(2)](#2110007) | [継承](#2110008) | [C#スクリプトのテンプレート](#2110009) | [委譲とInterface](#2110010) | [構造体](#2110011) | [列挙型](#2110012) | [ParticleSystem](#2110013) | [Input System](#2110014) | [ToString()](#2110015) | [Androidビルド](#2110016) | [処理速度計測](#2110017) | [三平方の定理](#2110018) | [Oculus Link](#2204001) | [AR Foundation](#2204002) |
+| [publicとSerializeField](#2110001) | [コールチン](#2110002) | [ScriptableObject](#2110003) | [シーン遷移](#2110004) | [staticクラス](#2110005) | [PlayerPrefs(1)](#2110006) | [PlayerPrefs(2)](#2110007) | [継承](#2110008) | [C#スクリプトのテンプレート](#2110009) | [委譲とInterface](#2110010) | [構造体](#2110011) | [列挙型](#2110012) | [ParticleSystem](#2110013) | [Input System](#2110014) | [ToString()](#2110015) | [Androidビルド](#2110016) | [処理速度計測](#2110017) | [三平方の定理](#2110018) | [Oculus Link](#2204001) | [ARCore](#2204002) |
 ***
 
 <a name="2110001"></a>
@@ -1218,7 +1218,7 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
 
 
 <a name="2204002"></a>
-# <b>AR Foundation</b>
+# <b>ARCore</b>
 
 ### この項目は書きかけです
 
@@ -1245,7 +1245,11 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
     1. 表示された [Graphics APIs] のうち [Vulkan] を削除し [**OpenGLES3**] のみ残す  
 
 1. ターゲットレベルを **API level 24** に設定
-    1. 引き続き [File]-[Edit]-[Player Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Identification]-[Minimum API Level] を [Android 5.1 'Lollipop'(API level 22)]→[**Android 7.0 'Nougat'(API level 24)**] に変更
+    1. 引き続き [Edit]-[Project Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Identification]-[Minimum API Level] を [Android 5.1 'Lollipop'(API level 22)]→[**Android 7.0 'Nougat'(API level 24)**] に変更
+
+1. プラグインプロバイダーを **ARCore** にする  
+    1. [Edit]-[Project Settings]-[XR Plug-in Management] を選択し [Install XR Plugin Management] ボタンを押す  
+    1. [XR Plug-in Management] 画面で [Android settings]（Androidのアイコン）タブを選択し [**ARCore**] に✓を入れる
 
 実行環境：Windows 10、**Unity 2022.1**.0b16、Xiaomi Redmi Note 9T（Android 11）  
 作成者：夢寐郎  
