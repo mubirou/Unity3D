@@ -1173,7 +1173,7 @@ Android実機テストに必要な最低限のビルド設定。
 
 1. VR 用カメラの設置
     1. [Hierarchy]-[SampleScene]-[Main Camera] を削除
-    1. [Project]-[Assets]-[Oculus]-[VR]-[Prefabs]-[OVRCameraRig] を [Hierarchy] にドラッグ＆ドロップ
+    1. [Project]-[Assets]-[Oculus]-[VR]-[Prefabs]-[**OVRCameraRig**] を [Hierarchy] にドラッグ＆ドロップ
     1. [Inspector]-[Tranform]-[Position] を Y:1.59 に変更（"VR"テンプレートの場合 Y:1.36144）
 
 1. 最低限のコンテンツ作成（仮のオブジェクトを配置）  
