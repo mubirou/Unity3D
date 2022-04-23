@@ -1175,7 +1175,7 @@ Android実機テストに必要な最低限のビルド設定。
     1. [Open in Unity]ボタンを押し[Unity Editor を開く]を選択
     1. [Download]→[Import]→[Import]と続けて選択  
     ～しばらく時間がかかります☕～  
-    【要調査】途中「OpenXR Backend」ダイアログが表示されたら「Use OpenXR」を選択
+    【要調査】途中「OpenXR Backend」ダイアログが表示されたら「Cancel」を選択
     1. [Project]-[Assets]-[Oculus]が追加されたのを確認
 
 ### HMD（Meta Quest）+ スマホの準備作業  
