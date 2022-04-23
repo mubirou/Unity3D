@@ -1159,7 +1159,7 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
     1. 同様に [Windows, Mac, Linux settings]（パソコンのアイコン）タブ-[Other Settings]-[Configuration]-[Scripting Backend] を [**Mono**] に設定  
     【注意】Oculus にアプリを提出する場合は Mono ではなく **IL2CPP** / **ARM64** に設定してビルドする必要があるなど注意が必要です（[参考](https://framesynthesis.jp/tech/unity/oculusquest/)）
 
-1. アラート⚠を消す（気持ちが悪いので^^;）
+1. アラート⚠を消す（気持ちが悪いので^^;）  
     引き続き [File]-[Build Settings]-[Player Settings]-[Player]-[Windows, Mac, Linux settings]（パソコンのアイコン）タブ-[Other Settings]-[Mac App Store Options]-[Override Default bundle Identifier] を✓する
 
 1. プラグインプロバイダーを **Oculus** にする  
