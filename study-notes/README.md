@@ -1150,7 +1150,7 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
     引き続き [File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Texture compression format]-[**ASTC**] に設定  
     📖 ASTC とは：Adaptive Scalable Texture Compression の略. 画像圧縮フォーマット. フルカラー＋アルファチャネルのほか輝度や法線にも対応.
 
-1. グラフィック API を **Vulkan** にする  
+1. グラフィック API を **Vulkan** に設定  
     1. 引き続き [File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Rendering]-[Auto Graphics API] の✓を外す
     1. 表示された [Graphics APIs] のうち [OpenGLES3] を削除し [**Vulkan**] のみ残す  
 
@@ -1220,6 +1220,8 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
 <a name="2204002"></a>
 # <b>AR Foundation</b>
 
+### この項目は書きかけです
+
 1. プロジェクトの作成
     1. [Unity Hub] を起動
     1. [プルジェクト]-[新しいプロジェクト] を選択
@@ -1231,6 +1233,19 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
 1. プラットフォームを **Android** に変更  
     Unity エディタ上に開かれたプロジェクトで [File]-[Build Settings]-[Platform]-[**Android**] に変更して [Switch Platform] ボタンを押す  
     ～すこし時間がかかります～
+
+1. AR Foundation のインストール
+    1. Unity エディタの [Window]-[Package Manager] を開く
+    1. Packages: Unity Registry を選択し **AR Foundation** を検索
+    1. [AR Foundation] を選択し [Install]
+    1. [Project]-[Packages]-[AR Foundation] が追加されたのを確認
+
+1. グラフィック API を **Vulkan** に設定  
+    1. Unity エディタの [Edit]-[Project Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Rendering]-[Auto Graphics API] の✓を外す
+    1. 表示された [Graphics APIs] のうち [Vulkan] を削除し [**OpenGLES3**] のみ残す  
+
+1. ターゲットレベルを **API level 24** に設定
+    1. 引き続き [File]-[Edit]-[Player Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Identification]-[Minimum API Level] を [Android 5.1 'Lollipop'(API level 22)]→[**Android 7.0 'Nougat'(API level 24)**] に変更
 
 実行環境：Windows 10、**Unity 2022.1**.0b16、Xiaomi Redmi Note 9T（Android 11）  
 作成者：夢寐郎  
