@@ -1144,18 +1144,21 @@ Android実機テストに必要な最低限のビルド設定。
     Unity 上に開かれたプロジェクトで [File]-[Build Settings]-[Platform]-[**Android**] に変更して [Switch Platform] ボタンを押す  
     ～すこし時間がかかります～
 
-1. テクスチャの圧縮形式を **ASTC** に設定  
-    引き続き [File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Texture compression format]-[**ASTC**] に設定（初期値）  
+1. テクスチャの圧縮形式を **ASTC** に設定（初期値?）  
+    引き続き [File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Texture compression format]-[**ASTC**] に設定  
     📖 ASTC とは：Adaptive Scalable Texture Compression の略. 画像圧縮フォーマット. フルカラー＋アルファチャネルのほか輝度や法線にも対応.
 
 1. グラフィック API を **Vulkan** にする  
     1. 引き続き [File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Rendering]-[Auto Graphics API] の✓を外す
     1. 表示された [Graphics APIs] のうち [OpenGLES3] を削除し [**Vulkan**] のみ残す  
 
-1. スクリプティングバックエンドを **Mono** にする
+1. スクリプティングバックエンドを **Mono** に設定（初期値?）
     1. 引き続き [File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Configuration]-[Scripting Backend] を [**Mono**] に設定  
     1. 同様に [Windows, Mac, Linux settings]（パソコンのアイコン）タブ-[Other Settings]-[Configuration]-[Scripting Backend] を [**Mono**] に設定  
     【注意】Oculus にアプリを提出する場合は Mono ではなく **IL2CPP** / **ARM64** に設定してビルドする必要があるなど注意が必要です（[参考](https://framesynthesis.jp/tech/unity/oculusquest/)）
+
+1. アラート⚠を消す（気持ちが悪いので^^;）
+    1. 1. 引き続き [File]-[Build Settings]-[Player Settings]-[Player]-[Windows, Mac, Linux settings]（パソコンのアイコン）タブ-[Other Settings]-[Mac App Store Options]-[Override Default bundle Identifier] を✓する
 
 1. プラグインプロバイダーを **Oculus** にする  
     1. [File]-[Build Settings]-[Player Settings]-[XR Plug-in Management] を選択し [Install XR Plugin Management] ボタンを押す  
