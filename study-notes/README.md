@@ -1159,13 +1159,13 @@ Android実機テストに必要な最低限のビルド設定。
     1. [XR Plug-in Management] 画面で [Windows, Mac, Linux settings]（パソコンのアイコン）タブ、[Android settings]（Androidのアイコン）タブ、それぞれで [**Oculus**] に✓を入れる
 
 1. **Oculus Integration**をインポートする  
-    1. [Window]-[Asset Store]を開く
-    1. [Search for assets]に"**Oculus Integration**"と入力し検索
-    1. 検索された[**Oculus Integration**]を選択
-    1. [Open in Unity]ボタンを押し[Unity Editor を開く]を選択
-    1. [Download]→[Import]→[Import]と続けて選択  
+    1. [Window]-[Asset Store] を開く
+    1. [Search for assets] に"**Oculus Integration**"と入力し検索
+    1. 検索された [**Oculus Integration**] を選択
+    1. [Open in Unity] ボタンを押し [Unity Editor を開く] を選択
+    1. [Download]→[Import]→[Import] と続けて選択  
     ～しばらく時間がかかります☕～  
-    【要調査】途中「OpenXR Backend」ダイアログが表示されたら「Cancel」を選択
+    ※途中 [OpenXR Backend] ダイアログが表示されたら [Cancel] を選択
     1. [Project]-[Assets]-[Oculus]が追加されたのを確認
 
 1. 最低限のコンテンツ作成（仮のオブジェクトを配置）  
