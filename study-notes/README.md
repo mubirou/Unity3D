@@ -1187,7 +1187,7 @@ Android実機テストに必要な最低限のビルド設定。
 
 ### Oculus Linkの準備
 
-1. Oculusアプリの用意
+1. **Oculusアプリ**の用意
     1. Windows上で[oculus.com/setup](https://www.oculus.com/setup/)から[OCULUS QUEST]（初代の場合）の[ソフトウェアをダウンロード]を選択  
     【注意】"Quest 2"の場合は[QUEST 2]の[QUEST2 PCアプリをダウンロード]を選択します
     1. ダウンロードした OculusSetup.exe をダブルクリックしインストール  
