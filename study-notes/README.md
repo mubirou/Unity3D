@@ -1220,7 +1220,7 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
 <a name="2204002"></a>
 # <b>ARCore</b>
 
-### この項目は書きかけです
+### Unity プロジェクトの準備
 
 1. プロジェクトの作成
     1. [Unity Hub] を起動
@@ -1258,10 +1258,11 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
 1. 最低限のコンテンツ作成（仮のオブジェクトを配置）  
     1. [GameObject]-[3D Object]-[Cube] でテスト用の立方体を作成
     1. 作成した Cube を [Hierarchy]-[AR Session Origin] の子（"AR Camera"と同階層）に移動 
-    1. [Inspector]-[Transform]-[Position] の X, Y, Z をそれぞれ -1, 0.5, -1 に変更  
+    1. [Inspector]-[Transform]-[Position] の X, Y, Z をそれぞれ 0.3, 0.3, 1 に変更  
+    1. [Inspector]-[Transform]-[Scale] の X, Y, Z をそれぞれ 0.3 に変更
     1. [File]-[Build Settings]-[Add Open Scenes] ボタンを押して[Scenes In Build] にシーンを追加
 
-### 以降未編集
+### スマートフォンの準備
 
 1. スマホの開発者向け設定
     1. [設定]-[デバイス情報]-[MIMUバージョン] を8回連打 
@@ -1273,11 +1274,12 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
     1. [ファイル転送/Android Auto]を✓
     1. [USBデバッグを許可しますか？] で [OK]
 
-1. ビルド
-    1. [File]-[Build Settings]-[Build And Run] を選択
-    1. 任意のファイル名（.apk）を付け保存
-    1. Android端末上に [USB経由でこのアプリをインストールしますか？] と表示されたら [インストール] を選択
-    1. Android端末上でアプリが起動すれば成功！
+### ビルド
+
+1. [File]-[Build Settings]-[Build And Run] を選択
+1. 任意のファイル名（.apk）を付け保存
+1. Android 端末上に [USB経由でインストール] と表示されたら [インストール] を選択
+1. Android 端末上でアプリが起動し、右斜め上方に 30cm 四方の立方体が表示されれば成功！
 
 参考：[ONETECH](https://onetech.jp/blog/ar-foundation-12090#Android)  
 実行環境：Windows 10、**Unity 2022.1**.0b16、Xiaomi Redmi Note 9T（Android 11）  
