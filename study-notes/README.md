@@ -2,7 +2,7 @@
 
 ### <b>index</b>
 
-| [publicとSerializeField](#2110001) | [コールチン](#2110002) | [ScriptableObject](#2110003) | [シーン遷移](#2110004) | [staticクラス](#2110005) | [PlayerPrefs(1)](#2110006) | [PlayerPrefs(2)](#2110007) | [継承](#2110008) | [C#スクリプトのテンプレート](#2110009) | [委譲とInterface](#2110010) | [構造体](#2110011) | [列挙型](#2110012) | [ParticleSystem](#2110013) | [Input System](#2110014) | [ToString()](#2110015) | [Androidビルド](#2110016) | [処理速度計測](#2110017) | [三平方の定理](#2110018) | [VRビルド](#2204001) |
+| [publicとSerializeField](#2110001) | [コールチン](#2110002) | [ScriptableObject](#2110003) | [シーン遷移](#2110004) | [staticクラス](#2110005) | [PlayerPrefs(1)](#2110006) | [PlayerPrefs(2)](#2110007) | [継承](#2110008) | [C#スクリプトのテンプレート](#2110009) | [委譲とInterface](#2110010) | [構造体](#2110011) | [列挙型](#2110012) | [ParticleSystem](#2110013) | [Input System](#2110014) | [ToString()](#2110015) | [Androidビルド](#2110016) | [処理速度計測](#2110017) | [三平方の定理](#2110018) | [Oculus Link](#2204001) |
 ***
 
 <a name="2110001"></a>
@@ -1111,7 +1111,7 @@ Android実機テストに必要な最低限のビルド設定。
 
 
 <a name="2204001"></a>
-# <b>VRビルド</b>
+# <b>Oculus Link</b>
 
 ## この項目は書きかけです
 
@@ -1121,7 +1121,6 @@ Android実機テストに必要な最低限のビルド設定。
     * Unity 2022.1 ベータ版（Windows版）
     * [Oculus Link 対応ケーブル](https://www.amazon.co.jp/gp/product/B01MZIPYPY/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
     ※下記の Oculusアプリ の[USBテスト]で対応か確認可
-    * スマートフォン（Android 11）
 
 ### Unity のインストール～制作準備
 
@@ -1140,25 +1139,16 @@ Android実機テストに必要な最低限のビルド設定。
     1. [Unity Hub]を起動
     1. [プルジェクト]-[新しいプロジェクト]を選択
     1. エディターバージョンを上記でインストールしたものにする
-    1. [**VR**（コア）]を選択 ← 2019.4 LTSから追加
+    1. [**3D**（コア）]を選択（あえて"VR"は選択しない）
     1. [プロジェクト名]と[保存場所]を設定して[プロジェクトを作成]ボタンを押す  
     ～しばらく時間がかかります～
 
-1. 最低限のコンテンツ作成（仮のオブジェクトを配置）  
-    1. [GameObject]-[3D Object]-[Cube]でテスト用の立方体を作成
-    1. [Inspector]-[Transform]-[Position]のX,Y,Zをそれぞれ「1」に変更  
-    ※カメラ位置の初期値は（x:0, Y:1.36144, Z:0）
-    1. [File]-[Build Settings]-[Add Open Scenes]ボタンを押して[Scenes In Build]にシーンを追加
-
-1. プラットフォームを**Android**に変更
-    1. 引き続き[File]-[Build Settings]-[Platform]-[**Android**]する
-    1. 引き続き[Texture Compression]を[**ASTC**]に変更
-    1. [Switch Platform]ボタンを押す  
+1. プラットフォームを**Android**に変更  
+    引き続き [File]-[Build Settings]-[Platform]-[**Android**] して [Switch Platform] ボタンを押す  
     ～すこし時間がかかります～
 
-1. テクスチャの圧縮形式が**ASTC**か確認（＆変更）  
-    1. 上記の設定でASTCに変更されているか以下で確認（恐らく変更されていないので変更）
-    1. [File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Texture compression format]-[**ASTC**]に変更
+1. テクスチャの圧縮形式が**ASTC**に変更  
+    [File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Texture compression format]-[**ASTC**]に変更
 
 1. グラフィックAPIを**Vulkan**にする  
     1. 引き続き[File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Auto Graphics API]の✓を外す
@@ -1177,6 +1167,12 @@ Android実機テストに必要な最低限のビルド設定。
     ～しばらく時間がかかります☕～  
     【要調査】途中「OpenXR Backend」ダイアログが表示されたら「Cancel」を選択
     1. [Project]-[Assets]-[Oculus]が追加されたのを確認
+
+1. 最低限のコンテンツ作成（仮のオブジェクトを配置）  
+    1. [GameObject]-[3D Object]-[Cube]でテスト用の立方体を作成
+    1. [Inspector]-[Transform]-[Position]のX,Y,Zをそれぞれ「1」に変更  
+    ※カメラ位置の初期値は（x:0, Y:1.36144, Z:0）
+    1. [File]-[Build Settings]-[Add Open Scenes]ボタンを押して[Scenes In Build]にシーンを追加
 
 ### HMD（Meta Quest）+ スマホの準備作業  
  
@@ -1207,13 +1203,6 @@ Android実機テストに必要な最低限のビルド設定。
 1. PC上のマウスカーソルを動かすと、Quest上のPC画面上でも動作するのを確認
 1. Unityでコンテンツを再生するとQuest上でもリアルタイムで再生されれば成功！  
 （参考）Quest 上に黒い矩形が表示される場合の回避策は[こちら](https://ja.letmeknow.ch/how-fix-oculus-link-black-screen-2021-guide)
-
-### 通常のビルド方法
-
-1. [File]-[Build Settings]-[Build And Run]を押す
-1. ファイル名（〇〇.apk）を付ける（名前は任意）  
-（初回のビルドは非常に時間がかかります）
-1. Quest本体に"MADE WITH Unity"と表示されコンテンツが再生されれば成功
 
 
 参考：[FRAME SYNTESIS](https://framesynthesis.jp/tech/unity/oculusquest/)  
