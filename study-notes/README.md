@@ -1113,7 +1113,7 @@ Android実機テストに必要な最低限のビルド設定。
 <a name="2204001"></a>
 # <b>Oculus Link</b>
 
-Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エディタを使用して、毎回ビルドする必要なしで Quest および Unity エディタ上で VR コンテンツが連動再生できます
+Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エディタを使用して、毎回ビルドする必要なしで Quest および Unity エディタ上で VR コンテンツが同時再生できます
 
 * 検証環境
     * Meta Quest（初代）v38
@@ -1202,7 +1202,7 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
     * PC上にQuestと接続した時の動作の指示を求められた場合は「何もしない」を選択します
     1. [Windows]-[Oculus]-[Oculus]で**Oculusアプリ**を起動し、[デバイス設定]で[QuestとTouch]が認識されているのを確認
 
-### Unity ⇔ Quest の連動再生
+### Unity + Quest の同時再生
 
 1. Quest上のUIの[デスクトップ]アイコン（右から2番目）をTouchを使って選択し[モニター〇]（Unityが起動しているPCモニター）を選択
 1. PC上のマウスカーソルを動かすと、Quest上のPC画面上でも動作するのを確認
