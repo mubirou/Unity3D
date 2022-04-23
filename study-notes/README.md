@@ -1251,6 +1251,9 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
     1. [Edit]-[Project Settings]-[XR Plug-in Management] を選択し [Install XR Plugin Management] ボタンを押す  
     1. [XR Plug-in Management] 画面で [Android settings]（Androidのアイコン）タブを選択し [**ARCore**] に✓を入れる
 
+1. Unity エディタで [GameObject]-[XR]-[**AR Session Origin**] および [**AR Session**] を追加
+
+
 実行環境：Windows 10、**Unity 2022.1**.0b16、Xiaomi Redmi Note 9T（Android 11）  
 作成者：夢寐郎  
 作成日：202X年XX月XX日  
