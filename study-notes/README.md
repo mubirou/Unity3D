@@ -1252,7 +1252,7 @@ Android スマホ + Unity エディタ + [**ARCore**](https://developers.google.
     1. [Inspector]-[Transform]-[Scale] の X, Y, Z をそれぞれ 0.3 に変更
     1. [File]-[Build Settings]-[Add Open Scenes] ボタンを押して[Scenes In Build] にシーンを追加  
 
-    📝 [**AR**（コア）] テンプレートを利用すると [GameObject]-[XR]-[AR Session Origin] 等の作成や [Main Camera] の削除が省略できます
+    📝 [**AR**（コア）] テンプレートを利用すると [GameObject]-[XR]-[AR Session Origin] 等の追加や [Main Camera] の削除が省略できます
 
 ### スマートフォンの準備
 
