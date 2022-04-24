@@ -1178,7 +1178,10 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
     1. [Project]-[Assets]-[Oculus] が追加されたのを確認
 
     ※既に一度ダウンロード済の場合は上記の代わりに次の処理を行います  
-    1. [Window]-[Package Manager]
+    1. [Window]-[Package Manager] を開く
+    1. 左上の [Packages] を [In Project]→[My Assets] に変更
+    1. "**Oculus Integration**"と入力し検索
+    1. 検索された [**Oculus Integration**] を選択
 
 1. VR 用カメラの設置
     1. [Hierarchy]-[SampleScene]-[Main Camera] を削除
