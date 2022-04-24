@@ -1191,7 +1191,7 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
 
 1. 最低限のコンテンツ作成（仮のオブジェクトを配置）  
     1. [GameObject]-[3D Object]-[Cube] でテスト用の立方体を作成
-    1. [Inspector]-[Transform]-[Position] の X,Y,Z をそれぞれ -1,0.5,1 に変更  
+    1. [Inspector]-[Transform]-[Position] の X, Y, Z をそれぞれ -1, 0.5, 1 に変更  
     1. [File]-[Build Settings]-[Add Open Scenes] ボタンを押して[Scenes In Build] にシーンを追加
 
 ### Oculus Linkの準備
