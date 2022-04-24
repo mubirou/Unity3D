@@ -1245,6 +1245,9 @@ Android スマホ + Unity エディタ + [**ARCore**](https://developers.google.
     1. [Edit]-[Project Settings]-[XR Plug-in Management] を選択
     1. [XR Plug-in Management] 画面で [Android settings]（Androidのアイコン）タブを選択し [**ARCore**] に✓を入れる
 
+1. アラート⚠を消す（気持ちが悪いので^^;）  
+    引き続き [File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Identification]-[Override Default bundle Identifier] の✓を外す
+
 1. 最低限のコンテンツ作成（仮のオブジェクトを配置）  
     1. [GameObject]-[3D Object]-[Cube] でテスト用の立方体を作成
     1. 作成した Cube を [Hierarchy]-[**AR Session Origin**] の子（"**AR Camera**"と同階層）に移動 
@@ -1253,9 +1256,6 @@ Android スマホ + Unity エディタ + [**ARCore**](https://developers.google.
     1. [File]-[Build Settings]-[Add Open Scenes] ボタンを押して[Scenes In Build] にシーンを追加  
 
     📝 [**AR**（コア）] テンプレートを利用すると [GameObject]-[XR]-[AR Session Origin] 等の追加や [Main Camera] の削除が省略できます  
-
-1. アラート⚠を消す（気持ちが悪いので^^;）  
-    引き続き [File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Identification]-[Override Default bundle Identifier] の✓を外す
 
 ### スマートフォンの準備
 
