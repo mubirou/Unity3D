@@ -1245,7 +1245,7 @@ Android スマホ + Unity エディタ + AR Core（実際には AR Foundation �
     参考：[ONETECH](https://onetech.jp/blog/ar-foundation-12090#Android)、[XR Legacy Input Helpers](https://github.com/needle-mirror/com.unity.xr.legacyinputhelpers/releases/tag/2.1.9)  
 
     📖 [**AR Foundation**](https://unity.com/ja/unity/features/arfoundation) とは  
-    Unity が開発. [ARKit](https://developer.apple.com/jp/augmented-reality/arkit/)、[**ARCore**](https://developers.google.com/ar)、[Magic Leap](https://resources.magicleap.com/ja-jp)、[HoloLens](https://www.microsoft.com/ja-jp/hololens) の差異を意識することなく開発が行える AR 開発用のフレームワーク  
+    Unity が開発した [ARKit](https://developer.apple.com/jp/augmented-reality/arkit/)、[**ARCore**](https://developers.google.com/ar)、[Magic Leap](https://resources.magicleap.com/ja-jp)、[HoloLens](https://www.microsoft.com/ja-jp/hololens) の差異を意識することなく開発が行える AR 開発用のフレームワーク  
 
 1. グラフィック API を **OpenGLES3** に設定  
     1. Unity エディタの [Edit]-[Project Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Rendering]-[Auto Graphics API] の✓を外す
