@@ -1212,9 +1212,9 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
 
 ### Unity + Quest の同時再生
 
-1. Quest上のUIの[デスクトップ]アイコン（右から2番目）をTouchを使って選択し[モニター〇]（Unityが起動しているPCモニター）を選択
-1. PC上のマウスカーソルを動かすと、Quest上のPC画面上でも動作するのを確認
-1. Unityでコンテンツを再生するとQuest上でもリアルタイムで再生されれば成功！  
+1. Quest 上の UI の[デスクトップ]アイコン（右から2番目）を Touch を使って選択し[モニター〇]（Unityが起動しているPCモニター）を選択
+1. PC 上のマウスカーソルを動かすと、Quest 上の PC 画面上でも動作するのを確認
+1. Unity でコンテンツを再生すると Quest 上でもリアルタイムで再生されれば成功！  
 （参考）Quest 上に黒い矩形が表示される場合の回避策は[こちら](https://ja.letmeknow.ch/how-fix-oculus-link-black-screen-2021-guide)
 
 
@@ -1296,8 +1296,6 @@ Android スマホ + Unity エディタ + [**ARCore**](https://developers.google.
 
 Meta Quest の空間上に [Oculus Touch](https://www.oculus.com/accessories/quest/?locale=ja_JP) を表示します
 
-### この項目は書きかけです
-
 1. [Oculus Link](#2204001) の設定をおこなう
 1. [Hierarchy]-[OVRCameraRig]-[Inspector]-[OVR Manager]-[Target Devices] を確認（初期値は [Quest] [Quest 2] 両方に✓） 
 1. 引き続き [Hierarchy]-[OVRCameraRig]-[Inspector]-[OVR Manager]-[Display]-[Color Gamut] を [Rift_CV1]→[Quest] に変更
@@ -1306,11 +1304,12 @@ Meta Quest の空間上に [Oculus Touch](https://www.oculus.com/accessories/que
     * [Hierarchy]-[SampleScene]-[OVRCameraRig]-[TrackingSpace]-[RightHandAnchor]-[**RightControllerAnchor**]
 1. 上記で配置した [Hierarchy]-[SampleScene]-[OVRCameraRig]-[TrackingSpace]-[**Left**HandAnchor]-[**Left**ControllerAnchor]-[**OVRControllerPrefab**] の [Inspector]-[OVR Controller Helper (Script)]-[Controller] を [None]→[**L Touch**] に変更
 1. 同様に ...[**Right**HandAnchor]-[**Right**ControllerAnchor]-[**OVRControllerPrefab**] を [**R Touch**] に変更
+1. 再生すると Quest コントローラー（ボタンも動く）が表示されれば成功！
 
 参考：[ちりつもぶろぐ](https://chiritsumo-blog.com/quest-unity-controller/)（旧バージョン対応）  
 実行環境：Windows 10、Unity 2022.1.0b16、Meta Quest（初代）v.38  
 作成者：夢寐郎  
-作成日：2022年04月XX日  
+作成日：2022年04月24日  
 [[TOP]](#TOP)
 
 
