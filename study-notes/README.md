@@ -1148,7 +1148,7 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
 
 1. テクスチャの圧縮形式を **ASTC** に設定（初期値?）  
     引き続き [File]-[Build Settings]-[Player Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Texture compression format]-[**ASTC**] に設定  
-    
+
     📖 ASTC とは：Adaptive Scalable Texture Compression の略. 画像圧縮フォーマット. フルカラー＋アルファチャネルのほか輝度や法線にも対応.
 
 1. グラフィック API を **Vulkan** に設定  
@@ -1176,6 +1176,9 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
     ～しばらく時間がかかります☕～  
     ※途中 [OpenXR Backend] ダイアログが表示されたら [Cancel] を選択
     1. [Project]-[Assets]-[Oculus] が追加されたのを確認
+
+    ※既に一度ダウンロード済の場合は上記の代わりに次の処理を行います  
+    1. [Window]-[Package Manager]
 
 1. VR 用カメラの設置
     1. [Hierarchy]-[SampleScene]-[Main Camera] を削除
