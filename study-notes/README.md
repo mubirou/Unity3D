@@ -1241,7 +1241,7 @@ Android スマホ + Unity エディタ + AR Core（実際には AR Foundation �
     1. Packages: Unity Registry を選択し **AR Foundation** を検索
     1. [AR Foundation] を選択し [Install]
     1. [Project]-[Packages]-[AR Foundation] が追加されたのを確認  
-    * AR Foundation のほかにも必要に応じてパッケージをインストールします  
+    * AR Foundation のほかにも必要に応じてパッケージをインストールします（参考:[ONETECH](https://onetech.jp/blog/ar-foundation-12090#Android)、[XR Legacy Input Helpers](https://github.com/needle-mirror/com.unity.xr.legacyinputhelpers/releases/tag/2.1.9)）  
 
     📖 [**AR Foundation**](https://unity.com/ja/unity/features/arfoundation) とは  
     Unity が開発. [ARKit](https://developer.apple.com/jp/augmented-reality/arkit/)、[**ARCore**](https://developers.google.com/ar)、[Magic Leap](https://resources.magicleap.com/ja-jp)、[HoloLens](https://www.microsoft.com/ja-jp/hololens) の差異を意識することなく開発が行える AR 開発用のフレームワーク  
