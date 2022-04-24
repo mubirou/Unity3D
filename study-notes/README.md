@@ -1232,7 +1232,7 @@ Android スマホ + Unity エディタ + [**ARCore**](https://developers.google.
     1. [プロジェクト名] と [保存場所] を設定して [プロジェクトを作成] ボタンを押す  
     ～しばらく時間がかかります～
 
-    📝 [**AR**（コア）] テンプレートを利用すると [Package Manager]（Packages:Unity Registry）で [**AR Foundation**](https://unity.com/ja/unity/features/arfoundation) のインストール等が不要になります
+    📝 [**AR**（コア）] テンプレートを利用すると [Package Manager]（Packages:Unity Registry）で [**AR Foundation**](https://unity.com/ja/unity/features/arfoundation) 等のインストールが省略できます
 
     📖 [**AR Foundation**](https://unity.com/ja/unity/features/arfoundation) とは  
     Unity が開発した [ARKit](https://developer.apple.com/jp/augmented-reality/arkit/)、[**ARCore**](https://developers.google.com/ar)、[Magic Leap](https://resources.magicleap.com/ja-jp)、[HoloLens](https://www.microsoft.com/ja-jp/hololens) の差異を意識することなく開発が行える AR 開発用のフレームワーク  
@@ -1250,7 +1250,9 @@ Android スマホ + Unity エディタ + [**ARCore**](https://developers.google.
     1. 作成した Cube を [Hierarchy]-[**AR Session Origin**] の子（"**AR Camera**"と同階層）に移動 
     1. [Inspector]-[Transform]-[Position] の X, Y, Z をそれぞれ 0.3, 0.3, 1 に変更  
     1. [Inspector]-[Transform]-[Scale] の X, Y, Z をそれぞれ 0.3 に変更
-    1. [File]-[Build Settings]-[Add Open Scenes] ボタンを押して[Scenes In Build] にシーンを追加
+    1. [File]-[Build Settings]-[Add Open Scenes] ボタンを押して[Scenes In Build] にシーンを追加  
+
+    📝 [**AR**（コア）] テンプレートを利用すると [GameObject]-[XR]-[AR Session Origin] 等の作成や [Main Camera] の削除が省略できます
 
 ### スマートフォンの準備
 
