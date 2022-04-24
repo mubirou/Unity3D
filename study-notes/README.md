@@ -1292,14 +1292,19 @@ Android スマホ + Unity エディタ + [**ARCore**](https://developers.google.
 
 
 <a name="2204003"></a>
-# <b>Questコントローラーの表示</b>
+# <b>Questコントローラー表示</b>
 
 Meta Quest の空間上に [Oculus Touch](https://www.oculus.com/accessories/quest/?locale=ja_JP) を表示します
 
 ### この項目は書きかけです
 
 1. [Oculus Link](#2204001) の設定をおこなう
-1. 
+1. [Hierarchy]-[OVRCameraRig]-[Inspector]-[OVR Manager]-[Target Devices] を確認（初期値は [Quest] [Quest 2] 両方に✓） 
+1. 引き続き [Hierarchy]-[OVRCameraRig]-[Inspector]-[OVR Manager]-[Display]-[Color Gamut] を [Rift_CV1]→[Quest] に変更
+1. [Project]-[Oculus]-[VR]-[Prefabs]-[**OVRControllerPrefab**] を次の GameObject にドラッグ＆ドロップ  
+    * [Hierarchy]-[SampleScene]-[OVRCameraRig]-[TrackingSpace]-[LeftHandAnchor]-[**LeftControllerAnchor**]
+    * [Hierarchy]-[SampleScene]-[OVRCameraRig]-[TrackingSpace]-[RightHandAnchor]-[**RightControllerAnchor**]
+1. XXX
 
 実行環境：Windows 10、Unity 2022.1.0b16、Meta Quest（初代）v.38  
 作成者：夢寐郎  
