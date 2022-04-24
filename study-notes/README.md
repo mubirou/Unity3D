@@ -1187,7 +1187,7 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
 1. VR 用カメラの設置
     1. [Hierarchy]-[SampleScene]-[Main Camera] を削除
     1. [Project]-[Assets]-[Oculus]-[VR]-[Prefabs]-[**OVRCameraRig**] を [Hierarchy] にドラッグ＆ドロップ
-    1. [Inspector]-[Tranform]-[Position] を Y:1.59 に変更（"VR"テンプレートの場合 Y:1.36144）
+    1. [OVRCameraRig] を選択した状態で [Inspector]-[Tranform]-[Position] を Y:1.59 に変更（"VR"テンプレートの場合 Y:1.36144）
 
 1. 最低限のコンテンツ作成（仮のオブジェクトを配置）  
     1. [GameObject]-[3D Object]-[Cube] でテスト用の立方体を作成
