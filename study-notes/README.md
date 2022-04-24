@@ -1306,6 +1306,7 @@ Meta Quest の空間上に [Oculus Touch](https://www.oculus.com/accessories/que
     * [Hierarchy]-[SampleScene]-[OVRCameraRig]-[TrackingSpace]-[RightHandAnchor]-[**RightControllerAnchor**]
 1. XXX
 
+参考：[ちりつもぶろぐ](https://chiritsumo-blog.com/quest-unity-controller/)（旧バージョン対応）  
 実行環境：Windows 10、Unity 2022.1.0b16、Meta Quest（初代）v.38  
 作成者：夢寐郎  
 作成日：2022年04月XX日  
