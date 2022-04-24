@@ -1232,7 +1232,7 @@ Android スマホ + Unity エディタ + AR Core（実際には [AR Foundation](
     1. [プロジェクト名] と [保存場所] を設定して [プロジェクトを作成] ボタンを押す  
     ～しばらく時間がかかります～
 
-    📝 [**AR**（コア）]テンプレートを利用すると [Package Manager]（Packages:Unity Registry）で [**AR Foundation**](https://unity.com/ja/unity/features/arfoundation) のインストール等が不要になります
+    📝 [**AR**（コア）] テンプレートを利用すると [Package Manager]（Packages:Unity Registry）で [**AR Foundation**](https://unity.com/ja/unity/features/arfoundation) のインストール等が不要になります
 
     📖 [**AR Foundation**](https://unity.com/ja/unity/features/arfoundation) とは  
     Unity が開発した [ARKit](https://developer.apple.com/jp/augmented-reality/arkit/)、[**ARCore**](https://developers.google.com/ar)、[Magic Leap](https://resources.magicleap.com/ja-jp)、[HoloLens](https://www.microsoft.com/ja-jp/hololens) の差異を意識することなく開発が行える AR 開発用のフレームワーク  
