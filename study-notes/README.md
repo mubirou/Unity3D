@@ -1220,7 +1220,7 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
 <a name="2204002"></a>
 # <b>ARCore</b>
 
-Android スマホ + Unity エディタ + AR Core（実際には AR Foundation を利用）による AR コンテンツ制作  
+Android スマホ + Unity エディタ + AR Core（実際には AR Foundation を利用）による AR コンテンツ制作超入門  
 
 ### Unity プロジェクトの準備
 
