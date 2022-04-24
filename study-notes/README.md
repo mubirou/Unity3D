@@ -1242,7 +1242,7 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
     * AR Foundation のほかにも必要に応じてパッケージをインストールします  
 
     📖 [**AR Foundation**](https://unity.com/ja/unity/features/arfoundation) とは  
-    Unity が開発. [**ARKit**](https://developer.apple.com/jp/augmented-reality/arkit/)、[**ARCore**](https://developers.google.com/ar)、[Magic Leap](https://resources.magicleap.com/ja-jp)、[HoloLens](https://www.microsoft.com/ja-jp/hololens) の差異を意識することなく開発が行える AR 開発用のフレームワーク  
+    Unity が開発. [ARKit](https://developer.apple.com/jp/augmented-reality/arkit/)、[**ARCore**](https://developers.google.com/ar)、[Magic Leap](https://resources.magicleap.com/ja-jp)、[HoloLens](https://www.microsoft.com/ja-jp/hololens) の差異を意識することなく開発が行える AR 開発用のフレームワーク  
 
 1. グラフィック API を **Vulkan** に設定  
     1. Unity エディタの [Edit]-[Project Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Rendering]-[Auto Graphics API] の✓を外す
