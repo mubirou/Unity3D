@@ -1300,8 +1300,8 @@ Meta Quest の空間上に [Oculus Touch](https://www.oculus.com/accessories/que
 1. [Hierarchy]-[SampleScene]-[OVRCameraRig]-[Inspector]-[OVR Manager (Script)]-[**Target Devices**] を確認（初期値は [**Quest**] [Quest 2] 両方に✓） 
 1. 引き続き [Hierarchy]-[SampleScene]-[OVRCameraRig]-[Inspector]-[OVR Manager (Script)]-[Display]-[**Color Gamut**] を [Rift_CV1]→[**Quest**] に変更
 1. [Project]-[Assets]-[Oculus]-[VR]-[Prefabs]-[**OVRControllerPrefab**] を次の2つの GameObject にドラッグ＆ドロップ  
-    * [Hierarchy]-[SampleScene]-[OVRCameraRig]-[TrackingSpace]-[LeftHandAnchor]-[**LeftControllerAnchor**]
-    * [Hierarchy]-[SampleScene]-[OVRCameraRig]-[TrackingSpace]-[RightHandAnchor]-[**RightControllerAnchor**]
+    * [Hierarchy]-[SampleScene]-[OVRCameraRig]-[TrackingSpace]-[**Left**HandAnchor]-[**LeftControllerAnchor**]
+    * [Hierarchy]-[SampleScene]-[OVRCameraRig]-[TrackingSpace]-[**Right**HandAnchor]-[**RightControllerAnchor**]
 1. 上記で配置した [Hierarchy]-[SampleScene]-[OVRCameraRig]-[TrackingSpace]-[**Left**HandAnchor]-[**Left**ControllerAnchor]-[**OVRControllerPrefab**] の [Inspector]-[OVR Controller Helper (Script)]-[Controller] を [None]→[**L Touch**] に変更
 1. 同様に ...[**Right**HandAnchor]-[**Right**ControllerAnchor]-[**OVRControllerPrefab**] を [**R Touch**] に変更
 1. 再生すると Quest コントローラー（ボタンも動く）が表示されれば成功！
