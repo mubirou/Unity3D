@@ -1228,39 +1228,22 @@ Android スマホ + Unity エディタ + AR Core（実際には AR Foundation �
     1. [Unity Hub] を起動
     1. [プルジェクト]-[新しいプロジェクト] を選択
     1. エディターバージョンを上記でインストールしたものにする
-    1. [**3D**（コア）] を選択（ここでは"AR"は選択しない）
+    1. [**AR**（コア）] を選択
     1. [プロジェクト名] と [保存場所] を設定して [プロジェクトを作成] ボタンを押す  
     ～しばらく時間がかかります～
+
+    📝 AR テンプレートを利用すると [Package Manager]（Packages:Unity Registry）で **AR Foundation** のインストール等が不要になります
+
+    📖 [**AR Foundation**](https://unity.com/ja/unity/features/arfoundation) とは  
+    Unity が開発した [ARKit](https://developer.apple.com/jp/augmented-reality/arkit/)、[**ARCore**](https://developers.google.com/ar)、[Magic Leap](https://resources.magicleap.com/ja-jp)、[HoloLens](https://www.microsoft.com/ja-jp/hololens) の差異を意識することなく開発が行える AR 開発用のフレームワーク  
 
 1. プラットフォームを **Android** に変更  
     Unity エディタ上に開かれたプロジェクトで [File]-[Build Settings]-[Platform]-[**Android**] に変更して [Switch Platform] ボタンを押す  
     ～すこし時間がかかります～
 
-1. **AR Foundation** のインストール
-    1. Unity エディタの [Window]-[Package Manager] を開く
-    1. Packages: Unity Registry を選択し **AR Foundation** を検索
-    1. [AR Foundation] を選択し [Install]
-    1. [Project]-[Packages]-[AR Foundation] が追加されたのを確認  
-    * AR Foundation のほかにも必要に応じてパッケージをインストールします  
-    参考：[ONETECH](https://onetech.jp/blog/ar-foundation-12090#Android)、[XR Legacy Input Helpers](https://github.com/needle-mirror/com.unity.xr.legacyinputhelpers/releases/tag/2.1.9)  
-
-    📖 [**AR Foundation**](https://unity.com/ja/unity/features/arfoundation) とは  
-    Unity が開発した [ARKit](https://developer.apple.com/jp/augmented-reality/arkit/)、[**ARCore**](https://developers.google.com/ar)、[Magic Leap](https://resources.magicleap.com/ja-jp)、[HoloLens](https://www.microsoft.com/ja-jp/hololens) の差異を意識することなく開発が行える AR 開発用のフレームワーク  
-
-1. グラフィック API を **OpenGLES3** に設定  
-    1. Unity エディタの [Edit]-[Project Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Rendering]-[Auto Graphics API] の✓を外す
-    1. 表示された [Graphics APIs] のうち [Vulkan] を削除し [**OpenGLES3**] のみ残す  
-
-1. ターゲットレベルを **API level 24** に設定
-    1. 引き続き [Edit]-[Project Settings]-[Player]-[Android settings]（Androidのアイコン）タブ-[Other Settings]-[Identification]-[Minimum API Level] を [Android 5.1 'Lollipop'(API level 22)]→[**Android 7.0 'Nougat'(API level 24)**] に変更
-
 1. プラグインプロバイダーを **ARCore** にする  
-    1. [Edit]-[Project Settings]-[XR Plug-in Management] を選択し [Install XR Plugin Management] ボタンを押す  
+    1. [Edit]-[Project Settings]-[XR Plug-in Management] を選択
     1. [XR Plug-in Management] 画面で [Android settings]（Androidのアイコン）タブを選択し [**ARCore**] に✓を入れる
-
-1. AR 用カメラなどの設定
-    1. Unity エディタで [GameObject]-[XR]-[**AR Session Origin**] および [**AR Session**] を追加
-    1. [Hierarchy]-[Main Camera] を削除
 
 1. 最低限のコンテンツ作成（仮のオブジェクトを配置）  
     1. [GameObject]-[3D Object]-[Cube] でテスト用の立方体を作成
