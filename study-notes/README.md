@@ -1241,7 +1241,7 @@ Android スマホ + Unity エディタ + [**ARCore**](https://developers.google.
     Unity エディタ上に開かれたプロジェクトで [File]-[Build Settings]-[Platform]-[**Android**] に変更して [Switch Platform] ボタンを押す  
     ～すこし時間がかかります～
 
-1. プラグインプロバイダーを **ARCore** にする  
+1. プラグインプロバイダーを [**ARCore**](https://developers.google.com/ar) にする  
     1. [Edit]-[Project Settings]-[XR Plug-in Management] を選択
     1. [XR Plug-in Management] 画面で [Android settings]（Androidのアイコン）タブを選択し [**ARCore**] に✓を入れる
 
