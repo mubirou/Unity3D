@@ -1305,7 +1305,7 @@ Meta Quest の空間上に [Oculus Touch](https://www.oculus.com/accessories/que
     * [Hierarchy]-[SampleScene]-[OVRCameraRig]-[TrackingSpace]-[LeftHandAnchor]-[**LeftControllerAnchor**]
     * [Hierarchy]-[SampleScene]-[OVRCameraRig]-[TrackingSpace]-[RightHandAnchor]-[**RightControllerAnchor**]
 1. 上記で配置した [Hierarchy]-[SampleScene]-[OVRCameraRig]-[TrackingSpace]-[**Left**HandAnchor]-[**Left**ControllerAnchor]-[**OVRControllerPrefab**] の [Inspector]-[OVR Controller Helper (Script)]-[Controller] を [None]→[**L Touch**] に変更
-1. 同様に
+1. 同様に ...[**Right**HandAnchor]-[**Right**ControllerAnchor]-[**OVRControllerPrefab**] を [**R Touch**] に変更
 
 参考：[ちりつもぶろぐ](https://chiritsumo-blog.com/quest-unity-controller/)（旧バージョン対応）  
 実行環境：Windows 10、Unity 2022.1.0b16、Meta Quest（初代）v.38  
