@@ -1301,7 +1301,7 @@ Meta Quest の空間上に [Oculus Touch](https://www.oculus.com/accessories/que
 1. [Oculus Link](#2204001) の設定をおこなう
 1. [Hierarchy]-[OVRCameraRig]-[Inspector]-[OVR Manager]-[Target Devices] を確認（初期値は [Quest] [Quest 2] 両方に✓） 
 1. 引き続き [Hierarchy]-[OVRCameraRig]-[Inspector]-[OVR Manager]-[Display]-[Color Gamut] を [Rift_CV1]→[Quest] に変更
-1. [Project]-[Oculus]-[VR]-[Prefabs]-[**OVRControllerPrefab**] を次の GameObject にドラッグ＆ドロップ  
+1. [Project]-[Oculus]-[VR]-[Prefabs]-[**OVRControllerPrefab**] を次の２つの GameObject にドラッグ＆ドロップ  
     * [Hierarchy]-[SampleScene]-[OVRCameraRig]-[TrackingSpace]-[LeftHandAnchor]-[**LeftControllerAnchor**]
     * [Hierarchy]-[SampleScene]-[OVRCameraRig]-[TrackingSpace]-[RightHandAnchor]-[**RightControllerAnchor**]
 1. XXX
