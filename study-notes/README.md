@@ -1298,6 +1298,7 @@ Meta Quest の空間上に [Oculus Touch](https://www.oculus.com/accessories/que
 
 ### この項目は書きかけです
 
+1. [Oculus Link](#2204001) の設定をおこなう
 1. 
 
 実行環境：Windows 10、Unity 2022.1.0b16、Meta Quest（初代）v.38  
