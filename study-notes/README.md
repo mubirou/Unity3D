@@ -1308,7 +1308,7 @@ Meta Quest の空間上に [Oculus Touch](https://www.oculus.com/accessories/que
 1. 同様に ...[**Right**HandAnchor]-[**Right**ControllerAnchor]-[**OVRControllerPrefab**] を [**R Touch**] に変更
 1. 再生すると Quest コントローラー（ボタンも動く）が表示されれば成功！
 
-### コントローラーから値の取得
+### コントローラーの入力を取得
 
 1. [GameObject]-[Create Empty]で空の GameObject を作成（名前は GameManager に変更）
 1. [Assets]-[Create]-[C# Script]で GameManager.cs を作成して以下の通りに記述
@@ -1349,7 +1349,7 @@ public class GameManager : MonoBehaviour {
 実行環境：Windows 10、Unity 2022.1.0b16、Meta Quest（初代）v.38  
 作成者：夢寐郎  
 作成日：2022年04月24日  
-更新日：2022年04月25日  
+更新日：2022年04月25日 コントローラーの入力を取得を追加  
 [[TOP]](#TOP)
 
 
