@@ -1311,39 +1311,39 @@ Meta Quest の空間上に [Oculus Touch](https://www.oculus.com/accessories/que
 ### コントローラーの入力を取得
 
 1. [GameObject]-[Create Empty]で空の GameObject を作成（名前は GameManager に変更）
-1. [Assets]-[Create]-[C# Script]で GameManager.cs を作成して以下の通りに記述
-```c#
-using UnityEngine;
+1. [Assets]-[Create]-[C# Script]で GameManager.cs を作成して以下の通りに記述  
+    ```c#
+    using UnityEngine;
 
-public class GameManager : MonoBehaviour {
-    void Update() {
-        if (OVRInput.Get(OVRInput.RawButton.A)) {
-            Debug.Log("Aボタン↓");
-        }
-        if (OVRInput.Get(OVRInput.RawButton.B)) {
-            Debug.Log("Bボタン↓");
-        }
-        if(OVRInput.Get(OVRInput.RawButton.X)) {
-            Debug.Log("Xボタン↓");
-        }
-        if (OVRInput.Get(OVRInput.RawButton.Y)) {
-            Debug.Log("Yボタン↓");
-        }
-        if (OVRInput.Get(OVRInput.RawButton.RIndexTrigger)) {
-            Debug.Log("右人差し指トリガー↓");
-        }
-        if (OVRInput.Get(OVRInput.RawButton.RHandTrigger)) {
-            Debug.Log("右中指トリガー↓");
-        }
-        if (OVRInput.Get(OVRInput.RawButton.LIndexTrigger)) {
-            Debug.Log("左人差し指トリガー↓");
-        }
-        if (OVRInput.Get(OVRInput.RawButton.LHandTrigger)) {
-            Debug.Log("左中指トリガー↓");
+    public class GameManager : MonoBehaviour {
+        void Update() {
+            if (OVRInput.Get(OVRInput.RawButton.A)) {
+                Debug.Log("Aボタン↓");
+            }
+            if (OVRInput.Get(OVRInput.RawButton.B)) {
+                Debug.Log("Bボタン↓");
+            }
+            if(OVRInput.Get(OVRInput.RawButton.X)) {
+                Debug.Log("Xボタン↓");
+            }
+            if (OVRInput.Get(OVRInput.RawButton.Y)) {
+                Debug.Log("Yボタン↓");
+            }
+            if (OVRInput.Get(OVRInput.RawButton.RIndexTrigger)) {
+                Debug.Log("右人差し指トリガー↓");
+            }
+            if (OVRInput.Get(OVRInput.RawButton.RHandTrigger)) {
+                Debug.Log("右中指トリガー↓");
+            }
+            if (OVRInput.Get(OVRInput.RawButton.LIndexTrigger)) {
+                Debug.Log("左人差し指トリガー↓");
+            }
+            if (OVRInput.Get(OVRInput.RawButton.LHandTrigger)) {
+                Debug.Log("左中指トリガー↓");
+            }
         }
     }
-}
-```
+    ```
 1. [Oculus Link](#2204001) で Quest と同時に再生されている Unity エディタの Console 上に上記の Debug.Log() の値が出力されれば成功！
 
 参考：[ちりつもぶろぐ](https://chiritsumo-blog.com/quest-unity-controller/)（旧バージョン対応）  
