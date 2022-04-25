@@ -1296,6 +1296,8 @@ Android スマホ + Unity エディタ + [**ARCore**](https://developers.google.
 
 Meta Quest の空間上に [Oculus Touch](https://www.oculus.com/accessories/quest/?locale=ja_JP) を表示します
 
+### コントローラーの表示
+
 1. [Oculus Link](#2204001) の設定をおこなう
 1. [Hierarchy]-[SampleScene]-[OVRCameraRig]-[Inspector]-[OVR Manager (Script)]-[**Target Devices**] を確認（初期値は [**Quest**] [Quest 2] 両方に✓） 
 1. 引き続き [Hierarchy]-[SampleScene]-[OVRCameraRig]-[Inspector]-[OVR Manager (Script)]-[Display]-[**Color Gamut**] を [Rift_CV1]→[**Quest**] に変更
@@ -1306,10 +1308,48 @@ Meta Quest の空間上に [Oculus Touch](https://www.oculus.com/accessories/que
 1. 同様に ...[**Right**HandAnchor]-[**Right**ControllerAnchor]-[**OVRControllerPrefab**] を [**R Touch**] に変更
 1. 再生すると Quest コントローラー（ボタンも動く）が表示されれば成功！
 
+### コントローラーから値の取得
+
+1. [GameObject]-[Create Empty]で空の GameObject を作成（名前は GameManager に変更）
+1. [Assets]-[Create]-[C# Script]で GameManager.cs を作成して以下の通りに記述
+```c#
+using UnityEngine;
+
+public class GameManager : MonoBehaviour {
+    void Update() {
+        if (OVRInput.Get(OVRInput.RawButton.A)) {
+            Debug.Log("Aボタン↓");
+        }
+        if (OVRInput.Get(OVRInput.RawButton.B)) {
+            Debug.Log("Bボタン↓");
+        }
+        if(OVRInput.Get(OVRInput.RawButton.X)) {
+            Debug.Log("Xボタン↓");
+        }
+        if (OVRInput.Get(OVRInput.RawButton.Y)) {
+            Debug.Log("Yボタン↓");
+        }
+        if (OVRInput.Get(OVRInput.RawButton.RIndexTrigger)) {
+            Debug.Log("右人差し指トリガー↓");
+        }
+        if (OVRInput.Get(OVRInput.RawButton.RHandTrigger)) {
+            Debug.Log("右中指トリガー↓");
+        }
+        if (OVRInput.Get(OVRInput.RawButton.LIndexTrigger)) {
+            Debug.Log("左人差し指トリガー↓");
+        }
+        if (OVRInput.Get(OVRInput.RawButton.LHandTrigger)) {
+            Debug.Log("左中指トリガー↓");
+        }
+    }
+}
+```
+
 参考：[ちりつもぶろぐ](https://chiritsumo-blog.com/quest-unity-controller/)（旧バージョン対応）  
 実行環境：Windows 10、Unity 2022.1.0b16、Meta Quest（初代）v.38  
 作成者：夢寐郎  
 作成日：2022年04月24日  
+更新日：2022年04月25日  
 [[TOP]](#TOP)
 
 
