@@ -1344,7 +1344,7 @@ Meta Quest の空間上に [Oculus Touch](https://www.oculus.com/accessories/que
         }
     }
     ```
-1. [Oculus Link](#2204001) で Quest と同時に再生されている Unity エディタの Console 上に上記の Debug.Log() の値が出力されれば成功！（上記以外にも「ボタンタッチ」や「アナログスティック値」等も取得可能）  
+1. [Oculus Link](#2204001) によって Quest と同時に再生されている Unity エディタの Console 上に上記の Debug.Log() の値が出力されれば成功！（上記以外にも「ボタンタッチ」や「アナログスティック値」等も取得可能）  
 
 参考：[ちりつもぶろぐ](https://chiritsumo-blog.com/quest-unity-controller/)（旧バージョン対応）  
 実行環境：Windows 10、Unity 2022.1.0b16、Meta Quest（初代）v.38  
