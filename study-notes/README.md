@@ -1357,9 +1357,11 @@ Meta Quest の空間上に [Oculus Touch](https://www.oculus.com/accessories/que
 <a name="220400"></a>
 # <b>ハンドトラッキング</b>
 
+### この項目は書きかけです
+
 Meta Quest の空間上に手を表示します
 
-### コントローラーの表示
+### 手の表示
 
 1. [Oculus Link](#2204001) の設定をおこなう
 1. [Hierarchy]-[SampleScene]-[OVRCameraRig]-[Inspector]-[OVR Manager (Script)]-[**Target Devices**] を確認（初期値は [**Quest**] [Quest 2] 両方に✓） 
