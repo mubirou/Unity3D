@@ -1376,6 +1376,11 @@ Meta Quest の空間上に手を表示します
 1. 同様に ...[**Right**HandAnchor]-[**Right**ControllerAnchor]-[**OVRHandPrefab**] の上記と同じ3箇所を [**Hand Right**] にする
 1. 再生すると手が表示されれば成功！
 
+### 手の色の変更
+
+1. [Assets]-[Create]-[Material]-[Albedo] を任意の色に設定
+1. [Hierarchy]-[SampleScene]-[OVRCameraRig]-[TrackingSpace]-[**Left**HandAnchor]-[**Left**ControllerAnchor]-[**OVRHandPrefab**] の [Inspector] の [Skinned Mesh Renderer]-[Materials] を [BasicHandMaterial] から上記で作成したマテリアルに変更
+
 参考：[
 アップフロンティア株式会社](https://note.com/upfrontier/n/n2c85abdce9d0)  
 実行環境：Windows 10、Unity 2022.1.0b16、Meta Quest（初代）v.38  
