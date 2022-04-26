@@ -1354,4 +1354,38 @@ Meta Quest の空間上に [Oculus Touch](https://www.oculus.com/accessories/que
 [[TOP]](#TOP)
 
 
+<a name="220400"></a>
+# <b>ハンドトラッキング</b>
+
+Meta Quest の空間上に手を表示します
+
+### コントローラーの表示
+
+1. [Oculus Link](#2204001) の設定をおこなう
+1. [Hierarchy]-[SampleScene]-[OVRCameraRig]-[Inspector]-[OVR Manager (Script)]-[**Target Devices**] を確認（初期値は [**Quest**] [Quest 2] 両方に✓） 
+1. 引き続き [Hierarchy]-[SampleScene]-[OVRCameraRig]-[Inspector]-[OVR Manager (Script)]-[Display]-[**Color Gamut**] を [Rift_CV1]→[**Quest**] に変更
+1. [Project]-[Assets]-[Oculus]-[VR]-[Prefabs]-[**OVRHandPrefab**] を次の2つの GameObject にドラッグ＆ドロップ  
+    * [Hierarchy]-[SampleScene]-[OVRCameraRig]-[TrackingSpace]-[**Left**HandAnchor]-[**LeftControllerAnchor**]
+    * [Hierarchy]-[SampleScene]-[OVRCameraRig]-[TrackingSpace]-[**Right**HandAnchor]-[**RightControllerAnchor**]
+1. 上記で配置した [Hierarchy]-[SampleScene]-[OVRCameraRig]-[TrackingSpace]-[**Left**HandAnchor]-[**Left**ControllerAnchor]-[**OVRControllerPrefab**] の [Inspector]-[OVR Controller Helper (Script)]-[Controller] を [None]→[**L Touch**] に変更
+1. 同様に ...[**Right**HandAnchor]-[**Right**ControllerAnchor]-[**OVRControllerPrefab**] を [**R Touch**] に変更
+1. 再生すると Quest コントローラー（ボタンも動く）が表示されれば成功！
+
+実行環境：Windows 10、Unity 2022.1.0b16、Meta Quest（初代）v.38  
+作成者：夢寐郎  
+作成日：2022年0X月XX日  
+[[TOP]](#TOP)
+
+
+<a name="220X00X"></a>
+# <b>XXXXXXX</b>
+
+XXXXXXXX
+
+実行環境：Windows 10、Unity 2022.1.0b16、Meta Quest（初代）v.38  
+作成者：夢寐郎  
+作成日：2022年0X月XX日  
+[[TOP]](#TOP)
+
+
 © 2021-2022 夢寐郎
