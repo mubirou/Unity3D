@@ -1369,8 +1369,8 @@ Meta Quest の空間上に手を表示します
 1. [Project]-[Assets]-[Oculus]-[VR]-[Prefabs]-[**OVRHandPrefab**] を次の2つの GameObject にドラッグ＆ドロップ  
     * [Hierarchy]-[SampleScene]-[OVRCameraRig]-[TrackingSpace]-[**Left**HandAnchor]-[**LeftControllerAnchor**]
     * [Hierarchy]-[SampleScene]-[OVRCameraRig]-[TrackingSpace]-[**Right**HandAnchor]-[**RightControllerAnchor**]
-1. 上記で配置した [Hierarchy]-[SampleScene]-[OVRCameraRig]-[TrackingSpace]-[**Left**HandAnchor]-[**Left**ControllerAnchor]-[**OVRControllerPrefab**] の [Inspector]-[OVR Controller Helper (Script)]-[Controller] を [None]→[**L Touch**] に変更
-1. 同様に ...[**Right**HandAnchor]-[**Right**ControllerAnchor]-[**OVRControllerPrefab**] を [**R Touch**] に変更
+1. 上記で配置した [Hierarchy]-[SampleScene]-[OVRCameraRig]-[TrackingSpace]-[**Left**HandAnchor]-[**Left**ControllerAnchor]-[**OVRHandPrefab**] の [Inspector]-[OVR Controller Helper (Script)]-[Controller] を [None]→[**L Touch**] に変更
+1. 同様に ...[**Right**HandAnchor]-[**Right**ControllerAnchor]-[**OVRHandPrefab**] を [**R Touch**] に変更
 1. 再生すると Quest コントローラー（ボタンも動く）が表示されれば成功！
 
 実行環境：Windows 10、Unity 2022.1.0b16、Meta Quest（初代）v.38  
