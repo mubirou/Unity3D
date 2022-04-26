@@ -1373,7 +1373,7 @@ Meta Quest の空間上に手を表示します
     ➀ [OVR Hand (Script)]-[Hand Type]  
     ➁ [OVR Skeleton (Script)]-[Skeleton Type]  
     ➂ [OVR Mesh (Script)]-[Mesh Type]  
-1. 同様に ...[**Right**HandAnchor]-[**Right**ControllerAnchor]-[**OVRHandPrefab**] の各項目を [**Hand Right**] にする
+1. 同様に ...[**Right**HandAnchor]-[**Right**ControllerAnchor]-[**OVRHandPrefab**] の上記と同じ3箇所を [**Hand Right**] にする
 1. 再生すると手が表示されれば成功！
 
 実行環境：Windows 10、Unity 2022.1.0b16、Meta Quest（初代）v.38  
