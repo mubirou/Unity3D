@@ -1378,7 +1378,7 @@ Meta Quest の空間上に手を表示します
 
 ### 手の色の変更
 
-1. [Assets]-[Create]-[Material]-[Albedo] を任意の色に設定（名前は"HandColor#FFFFFF"などにする）
+1. [Assets]-[Create]-[Material]-[Albedo] を "F4BE9B"（肌色）に設定（名前は"HandColor#F4BE9B"などにする）
 1. [Hierarchy]-[SampleScene]-[OVRCameraRig]-[TrackingSpace]-[**Left**HandAnchor]-[**Left**ControllerAnchor]-[**OVRHandPrefab**] の [Inspector] の [Skinned Mesh Renderer]-[Materials] を [BasicHandMaterial] から上記で作成したマテリアルに変更
 
 参考：[
