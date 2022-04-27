@@ -1383,11 +1383,16 @@ Meta Quest の空間上に手を表示します
 
 ### サンプルテスト（参考）
 
+＜HandsInteractionTrainScene＞  
 1. [Project]-[Assets]-[Oculus]-[SampleFramework]-[Usage]-[HandsInteractionTrainScene] を [Hierarchy] にドラッグ＆ドロップ
 1. 他のシーンを [Remove Scene] する
 1. [Hierarchy]-[OVRCameraRig]-[OVRCameraRig]-[Inspector]-[OVR Manager]-[Hand Tracking Support] を [Controllers Only]→[Hands Only] に変更
 1. [▶] ボタンを押す
 参考：[公式の解説](https://developer.oculus.com/documentation/unity/unity-sf-handtracking/)  
+
+＜HandTest＞
+1. [Project]-[Assets]-[Oculus]-[VR]-[Scenes]-[HandTest] を [Hierarchy] にドラッグ＆ドロップ
+1. 他のシーンを [Remove Scene] する
 
 
 参考：[アップフロンティア株式会社](https://note.com/upfrontier/n/n2c85abdce9d0)  
