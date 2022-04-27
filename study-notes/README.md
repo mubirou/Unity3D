@@ -1381,8 +1381,7 @@ Meta Quest の空間上に手を表示します
 1. [Assets]-[Create]-[Material]-[Albedo] を "F4BE9B"（肌色）に設定（名前は"HandColor#F4BE9B"などにする）
 1. [Hierarchy]-[SampleScene]-[OVRCameraRig]-[TrackingSpace]-[**Left**HandAnchor]-[**Left**ControllerAnchor]-[**OVRHandPrefab**] の [Inspector] の [Skinned Mesh Renderer]-[Materials] を [BasicHandMaterial] から上記で作成したマテリアルに変更
 
-参考：[
-アップフロンティア株式会社](https://note.com/upfrontier/n/n2c85abdce9d0)  
+参考：[アップフロンティア株式会社](https://note.com/upfrontier/n/n2c85abdce9d0)  
 実行環境：Windows 10、Unity 2022.1.0b16、Meta Quest（初代）v.38  
 作成者：夢寐郎  
 作成日：2022年04月XX日  
