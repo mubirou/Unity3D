@@ -1423,7 +1423,7 @@ VR･ARの各種デバイスやアプリケーションの仕様を標準化す�
     ✓ 🔎**Right**、**XRI Default Right Controller**  
 👆わかりにくいので [FRAME SYNTESIS](https://framesynthesis.jp/tech/unity/xr/) の「シーンにカメラリグを作成する」を参照して下さい  
 
-📝 なんかやる  
+📝 カメラやコントローラーやら追加  
 1. [GameObject]-[XR]-[XR Origin(Action-based)] を実行  
 1. [Hierarchy]-[Sample Scene] が以下の通りになる  
     * Directional Light  
@@ -1434,6 +1434,10 @@ VR･ARの各種デバイスやアプリケーションの仕様を標準化す�
             * LeftHand Controller  
             * RightHAnd Controller 
 
+📝 なんかやる  
+1. [GameObeject]-[Create Empty] で空の GameObject を作成（名前は"InputActionManager"に変更）
+1. 上記の GameObject を選択し [Inspector]-[Add Component]-[**Input**]-[**Input Action Manager**] を選択  
+1. XXXX
 
 
 参考：[FRAME SYNTESIS](https://framesynthesis.jp/tech/unity/xr/)  
