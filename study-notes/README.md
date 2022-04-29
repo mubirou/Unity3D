@@ -1411,8 +1411,12 @@ VR･ARの各種デバイスやアプリケーションの仕様を標準化す�
 
 📝 XXX
 
-実行環境：Windows 10、Unity 2022.1.0b16  
-Oculus Integration 39.0、Meta Quest（初代）v.38  
+1. [3D](コア)プロジェクトを作成
+1. [Package Manager]-[Unity Registry]-[XR Interaction Toolkit]を [Install]
+1. 
+
+実行環境：Windows 10、Unity 2022.1.0b16、Meta Quest（初代）v.38  
+  
 作成者：夢寐郎  
 作成日：2022年0X月XX日  
 [[TOP]](#TOP)
