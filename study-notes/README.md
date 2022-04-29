@@ -1439,8 +1439,9 @@ VR･ARの各種デバイスやアプリケーションの仕様を標準化す�
 1. 引き続き [Inspector]-[Add Component]-[**Input**]-[**Input Action Manager**] を選択  
 1. 引き続き [**✓Input Action Manager**]-[Action Assets]-[+]-[**XR Default Input Actions**] を選択
 
-📝 [FRAME SYNTESIS](https://framesynthesis.jp/tech/unity/xr/) の「OpenXR Pluginのセットアップ」をやる
-1. XXXX
+📝 なんかやる
+1. [Project Settings]-[XR Plugin Management]-[**Install XR Plugin Management] を選択  
+1. あとは [FRAME SYNTESIS](https://framesynthesis.jp/tech/unity/xr/) の「Oculus LinkおよびSteamVRで実行できるようにする」の通りにする
 
 
 参考：[FRAME SYNTESIS](https://framesynthesis.jp/tech/unity/xr/)  
