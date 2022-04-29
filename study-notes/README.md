@@ -1425,7 +1425,7 @@ VR･ARの各種デバイスやアプリケーションの仕様を標準化す�
 
 📝 なんかやる  
 1. [GameObject]-[XR]-[XR Origin(Action-based)] を実行  
-1. [Hierarchy] が以下の通りになる  
+1. [Hierarchy]-[Sample Scene] が以下の通りになる  
     * Directional Light  
     * XR Interation Manager  
     * XR Origin  
