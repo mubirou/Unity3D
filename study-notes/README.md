@@ -1128,7 +1128,9 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
 * [Player]-[Other Settings]-[Rendering]-[Auto Graphics API] : ✓を外す（"**Vulkan**"のみ残す）  
 * [Project Settings]-[XR Plug-in Management]-[Android] : **Oculus**
 * [Project Settings]-[XR Plug-in Management]-[Windows,...] : **Oculus**
-* **Oculus Integration 39.0**（April 28, 2022）
+* **Oculus Integration 39.0**（April 28, 2022）  
+
+================================================  
 
 * 検証環境
     * Meta Quest（初代）v38
