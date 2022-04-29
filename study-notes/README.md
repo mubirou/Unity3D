@@ -1402,12 +1402,13 @@ Oculus Integration 38.0、Meta Quest（初代）v.38
 
 
 <a name="2204005"></a>
-# <b>レーザーポインター</b>
+# <b>OpenXR SDK</b>
 
-1. [Oculus Link](#2204001) と [Questコントローラー表示](#2204003) の設定を行う
-1. 
+📖 [OpenXR](https://www.khronos.org/openxr/) とは  
+Oculusは2021年7月に正式対応を発表（独自SDKは2022年8月で終了）.
 
-実行環境：Windows 10、Unity 2022.1.0b16、Meta Quest（初代）v.38  
+実行環境：Windows 10、Unity 2022.1.0b16  
+Oculus Integration 39.0、Meta Quest（初代）v.38  
 作成者：夢寐郎  
 作成日：2022年0X月XX日  
 [[TOP]](#TOP)
