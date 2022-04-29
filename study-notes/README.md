@@ -1415,7 +1415,7 @@ VR･ARの各種デバイスやアプリケーションの仕様を標準化す�
 1. 同じ画面上で [**Starter Assets**] と [**XR Device Simulator**] を [Import]
 
 📝 シーンにカメラリグを作成する
-1. [Project Settings]-[Preset Manager]-🔎"XR Controller (Action-based)"と入力し [Add Default Preset] を押す
+1. [Project Settings]-[**Preset Manager**]-🔎"**XR Controller (Action-based)**"と入力し [Add Default Preset] を押す
 1. 別の何かを選択後再度 [Project Settings]-[Preset Manager] を選ぶ
 1. [ActionBasedController]（UnityEngine.XR.Interaction.Toolkit.ActionBasedController）で [Filter] と [Preset] を次の通りに設定  
     ✓ 🔎**Left**、**XRI Default Left Controller**  
