@@ -1415,8 +1415,8 @@ VR･ARの各種デバイスやアプリケーションの仕様を標準化す�
 1. [Package Manager]-[Unity Registry]-[**XR Interaction Toolkit**] を [Install]
 1. 
 
+参考：[FRAME SYNTESIS](https://framesynthesis.jp/tech/unity/xr/)  
 実行環境：Windows 10、Unity 2022.1.0b16、Meta Quest（初代）v.38  
-  
 作成者：夢寐郎  
 作成日：2022年0X月XX日  
 [[TOP]](#TOP)
