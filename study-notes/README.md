@@ -1412,7 +1412,7 @@ VR･ARの各種デバイスやアプリケーションの仕様を標準化す�
 📝 XXX
 
 1. [3D](コア)プロジェクトを作成
-1. [Package Manager]-[Unity Registry]-[XR Interaction Toolkit]を [Install]
+1. [Package Manager]-[Unity Registry]-[**XR Interaction Toolkit**] を [Install]
 1. 
 
 実行環境：Windows 10、Unity 2022.1.0b16、Meta Quest（初代）v.38  
