@@ -1393,15 +1393,22 @@ Meta Quest の空間上に手を表示します
 1. [▶] ボタンを押す  
 参考：[公式の解説](https://developer.oculus.com/documentation/unity/unity-sf-handtracking/)  
 
-＜HandTest＞
-1. [Project]-[Assets]-[Oculus]-[VR]-[Scenes]-[**HandTest**] を [Hierarchy] にドラッグ＆ドロップ
-1. 他のシーンを [Remove Scene] する
-
-
 参考：[アップフロンティア株式会社](https://note.com/upfrontier/n/n2c85abdce9d0)  
+実行環境：Windows 10、Unity 2022.1.0b16  
+Oculus Integration 38.0、Meta Quest（初代）v.38  
+作成者：夢寐郎  
+作成日：2022年04月28日  
+[[TOP]](#TOP)
+
+
+<a name="2204005"></a>
+# <b>レーザーポインター</b>
+
+XXXXXXXX
+
 実行環境：Windows 10、Unity 2022.1.0b16、Meta Quest（初代）v.38  
 作成者：夢寐郎  
-作成日：2022年04月XX日  
+作成日：2022年0X月XX日  
 [[TOP]](#TOP)
 
 
