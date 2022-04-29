@@ -1113,6 +1113,8 @@ Android実機テストに必要な最低限のビルド設定。
 <a name="2204001"></a>
 # <b>Oculus Link</b>
 
+### この項目は書きかけです
+
 Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エディタを使用して、毎回ビルドする必要なしで Quest および Unity エディタ上で VR コンテンツが同時再生できます
 
 
