@@ -1315,6 +1315,7 @@ Meta Quest の空間上に [Oculus Touch](https://www.oculus.com/accessories/que
 1. [GameObject]-[Create Empty]で空の GameObject を作成（名前は GameManager に変更）
 1. [Assets]-[Create]-[C# Script]で GameManager.cs を作成して以下の通りに記述  
     ```c#
+    // GameManager.cs
     using UnityEngine;
 
     public class GameManager : MonoBehaviour {
