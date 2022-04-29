@@ -1436,7 +1436,7 @@ VR･ARの各種デバイスやアプリケーションの仕様を標準化す�
 
 📝 なんかやる  
 1. [GameObeject]-[Create Empty] を選択（名前は"InputActionManager"に変更）
-1. 上記の GameObject を選択し [Inspector]-[Add Component]-[**Input**]-[**Input Action Manager**] を選択  
+1. 引き続き [Inspector]-[Add Component]-[**Input**]-[**Input Action Manager**] を選択  
 1. XXXX
 
 
