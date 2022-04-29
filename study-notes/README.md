@@ -1409,14 +1409,14 @@ Oculus Integration 38.0、Meta Quest（初代）v.38
 📖 [OpenXR](https://www.khronos.org/openxr/) とは  
 VR･ARの各種デバイスやアプリケーションの仕様を標準化するために2017年に取組みが開始され2019年7月に「OpenXR 1.0」が公開. Oculus（現Meta）は2021年7月に正式対応を発表（独自SDKは2022年8月で終了）.　
 
-📝 XXX
-
+📝 プロジェクト作成～XR Interaction Toolkit のインストール
 1. [3D](コア)プロジェクトを作成
 1. [Package Manager]-[Unity Registry]-[**XR Interaction Toolkit**] を [Install]
-1. 
+1. 同じ画面上で [Starter Assets] と [XR Device Simulator] を [Import]
 
 参考：[FRAME SYNTESIS](https://framesynthesis.jp/tech/unity/xr/)  
 実行環境：Windows 10、Unity 2022.1.0b16、Meta Quest（初代）v.38  
+XR Interaction Toolkit 2.0.1  
 作成者：夢寐郎  
 作成日：2022年0X月XX日  
 [[TOP]](#TOP)
