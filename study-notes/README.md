@@ -1412,7 +1412,7 @@ VR･ARの各種デバイスやアプリケーションの仕様を標準化す�
 📝 プロジェクト作成～XR Interaction Toolkit のインストール
 1. [3D](コア)プロジェクトを作成
 1. [Package Manager]-[Unity Registry]-[**XR Interaction Toolkit**] を [Install]
-1. 同じ画面上で [Starter Assets] と [XR Device Simulator] を [Import]
+1. 同じ画面上で [**Starter Assets**] と [**XR Device Simulator**] を [Import]
 
 参考：[FRAME SYNTESIS](https://framesynthesis.jp/tech/unity/xr/)  
 実行環境：Windows 10、Unity 2022.1.0b16、Meta Quest（初代）v.38  
