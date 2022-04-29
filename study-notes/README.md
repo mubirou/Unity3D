@@ -1414,13 +1414,27 @@ VR･ARの各種デバイスやアプリケーションの仕様を標準化す�
 1. [Package Manager]-[Unity Registry]-[**XR Interaction Toolkit**] を [Install]
 1. 同じ画面上で [**Starter Assets**] と [**XR Device Simulator**] を [Import]
 
-📝 シーンにカメラリグを作成する
+📝 シーンにカメラリグを作成する  
+（コンポーネントの初期設定の変更）
 1. [Project Settings]-[**Preset Manager**] で🔎"**XR Controller (Action-based)**"と入力し [Add Default Preset] を押す
 1. 別の何かを選択後再度 [Project Settings]-[Preset Manager] を選ぶ
 1. [ActionBasedController]（UnityEngine.XR.Interaction.Toolkit.ActionBasedController）で [Filter] と [Preset] を次の通りに設定  
     ✓ 🔎**Left**、**XRI Default Left Controller**  
     ✓ 🔎**Right**、**XRI Default Right Controller**  
 👆わかりにくいので [FRAME SYNTESIS](https://framesynthesis.jp/tech/unity/xr/) の「シーンにカメラリグを作成する」を参照して下さい  
+
+📝 なんかやる  
+1. [GameObject]-[XR]-[XR Origin(Action-based)] を実行  
+1. [Hierarchy] が以下の通りになる  
+    SampleScene  
+    　├ Directional Light  
+    　├ XR Interation Manager  
+    　└ XR Origin  
+      　└ Camera Offset  
+    　    ├ Main Camera  
+        　├ LeftHand Controller  
+        　└ RightHAnd Controller  
+
 
 
 参考：[FRAME SYNTESIS](https://framesynthesis.jp/tech/unity/xr/)  
