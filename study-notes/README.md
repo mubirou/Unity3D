@@ -1407,7 +1407,7 @@ Oculus Integration 38.0、Meta Quest（初代）v.38
 ### この項目は書きかけです
 
 📖 [OpenXR](https://www.khronos.org/openxr/) とは  
-Oculusは2021年7月に正式対応を発表（独自SDKは2022年8月で終了）.
+VR･AR の各種デバイスやアプリケーションの仕様を標準化するために2017年に取組みが開始され2019年7月に「OpenXR 1.0」が公開. Oculusは2021年7月に正式対応を発表（独自SDKは2022年8月で終了）.　
 
 実行環境：Windows 10、Unity 2022.1.0b16  
 Oculus Integration 39.0、Meta Quest（初代）v.38  
