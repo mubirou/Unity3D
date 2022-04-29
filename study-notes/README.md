@@ -1125,8 +1125,7 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
 * Platform : **Android**
 * [Player]-[Other Settings]-[Texture compression format] : **ASTC**
 * [Player]-[Other Settings]-[Identification] : ✓を外す
-* [Player]-[Other Settings]-[Rendering]-[Auto Graphics API] : ✓を外す  
-（"**Vulkan**"のみ残す）  
+* [Player]-[Other Settings]-[Rendering]-[Auto Graphics API] : ✓を外す（"**Vulkan**"のみ残す）  
 
 
 * 検証環境
