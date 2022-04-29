@@ -1414,6 +1414,12 @@ VR･ARの各種デバイスやアプリケーションの仕様を標準化す�
 1. [Package Manager]-[Unity Registry]-[**XR Interaction Toolkit**] を [Install]
 1. 同じ画面上で [**Starter Assets**] と [**XR Device Simulator**] を [Import]
 
+📝 なんか設定
+1. [Project Settings]-[Preset Manager]-🔎"XR Controller (Action-based)"と入力し [Add Default Preset] を押す
+1. 別の何かを選択後再度 [Project Settings]-[Preset Manager] を選ぶ
+1. 
+
+
 参考：[FRAME SYNTESIS](https://framesynthesis.jp/tech/unity/xr/)  
 実行環境：Windows 10、Unity 2022.1.0b16、Meta Quest（初代）v.38  
 XR Interaction Toolkit 2.0.1  
