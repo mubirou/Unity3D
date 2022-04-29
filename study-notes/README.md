@@ -1427,13 +1427,13 @@ VR･ARの各種デバイスやアプリケーションの仕様を標準化す�
 1. [GameObject]-[XR]-[XR Origin(Action-based)] を実行  
 1. [Hierarchy] が以下の通りになる  
     SampleScene  
-    　├ Directional Light  
-    　├ XR Interation Manager  
-    　└ XR Origin  
-      　└ Camera Offset  
-    　    ├ Main Camera  
-        　├ LeftHand Controller  
-        　└ RightHAnd Controller  
+        ├ Directional Light  
+        ├ XR Interation Manager  
+        └ XR Origin  
+            └ Camera Offset  
+                ├ Main Camera  
+                ├ LeftHand Controller  
+                └ RightHAnd Controller  
 
 
 
