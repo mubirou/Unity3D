@@ -1404,7 +1404,8 @@ Oculus Integration 38.0、Meta Quest（初代）v.38
 <a name="2204005"></a>
 # <b>レーザーポインター</b>
 
-XXXXXXXX
+1. [Oculus Link](#2204001) と [Questコントローラー表示](#2204003) の設定を行う
+1. 
 
 実行環境：Windows 10、Unity 2022.1.0b16、Meta Quest（初代）v.38  
 作成者：夢寐郎  
