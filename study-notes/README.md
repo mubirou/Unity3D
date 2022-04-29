@@ -1115,6 +1115,18 @@ Android実機テストに必要な最低限のビルド設定。
 
 Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エディタを使用して、毎回ビルドする必要なしで Quest および Unity エディタ上で VR コンテンツが同時再生できます
 
+
+* Unity Hub 3.1.2.0
+* Unity エディター 2022.1.0b16
+* Windows 10 Pro（バージョン 21H1）
+* VR（コア）
+* Platform : **Android**
+* [Player]-[Other Settings]-[Texture compression format] : **ASTC**
+* [Player]-[Other Settings]-[Identification] : ✓を外す
+* [Player]-[Other Settings]-[Rendering]-[Auto Graphics API] : ✓を外す  
+（"**Vulkan**"のみ残す）  
+
+
 * 検証環境
     * Meta Quest（初代）v38
     * Windows 10 Pro（i7-9750H、64GB、GeForce RTX2070 8GB）
