@@ -1204,7 +1204,7 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
 
 1. QuestとWindowsパソコンを接続  
     1. [Oculus Link対応ケーブル](https://www.amazon.co.jp/gp/product/B01MZIPYPY/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)を用意  
-    （Anker 以外の[ケーブル](https://www.amazon.co.jp/gp/product/B0C61PQ43C/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1)でも可能）  
+    （純正、Anker 以外の[ケーブル](https://www.amazon.co.jp/gp/product/B0C61PQ43C/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1)でも可能）  
     1. Quest 本体の電源を入れて上記のケーブルで Quest と Windows パソコンを接続
     1. Quest 本体の画面上に「**データへのアクセスを許可**（接続したデバイスが、このヘッドセットのファイルにアクセスできるようになります。」と表示されたら「許可する」を選択
     1. 引き続き Quest 本体の画面上に「**Oculus Linkをオンにする**（QuestがPCに接続されている状態でRiftのアプリにアクセスしてください。いつでもクイック設定でオンまたはオフにできます。」と表示された「オンにする」を選択
@@ -1224,7 +1224,7 @@ Meta Quest + Oculus Link + Oculus アプリ（Windows版のみ）+ Unity エデ�
 Oculus Integration 39.0、Meta Quest（初代）v.38  
 作成者：夢寐郎  
 作成日：2022年04月23日  
-更新日：2023年10月12日 Anker 以外ケーブルを追加  
+更新日：2023年10月12日 Anker 以外もケーブルを追加  
 [[TOP]](#TOP)
 
 
